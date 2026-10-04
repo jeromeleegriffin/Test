@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "brainVersion": "C",
+      "updated": "2026-10-04",
+      "browse": "versions/C/index.html",
+      "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-04_C_MASTER_BRAIN.zip",
+      "sha256": "7bdca0dac017147b2e12d6c5d38c66ccb9b34bc2757c0adf60dedc59d6937dc1"
+    }
+  ],
+  "unavailablePreviousVersions": [
+    "A",
+    "B"
+  ]
+}
