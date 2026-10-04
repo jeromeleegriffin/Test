@@ -1,6 +1,7 @@
 {
-  "id": "NOT-STAGED",
-  "name": "NO CANDIDATE STAGED",
-  "url": "../builds/NOT-STAGED/",
-  "source": "placeholder - Grok replaces this atomically when staging a candidate"
+  "id": "TABLE-20261004-001",
+  "name": "TABLE-ONLY portrait table",
+  "url": "../builds/TABLE-20261004-001/",
+  "zip": "../artifacts/Rook_TABLE-20261004-001_LOCKED.zip",
+  "sha256": "de1d7b5e0e5985ca4b83c992f52c48c6b28a9f4373804dfd144d4738ab01a7af"
 }
