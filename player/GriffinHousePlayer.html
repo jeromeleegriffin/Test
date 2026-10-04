@@ -15,6 +15,7 @@ h1{text-align:center;font-size:21px;letter-spacing:.12em;font-weight:500;margin:
 button{width:100%;border-radius:12px;padding:14px 12px;font:inherit;letter-spacing:.06em;cursor:pointer}.main{background:var(--gold);color:#1a140c;border:0;font-weight:700}.alt{background:transparent;color:var(--cream);border:1px solid var(--line)}
 button:disabled{opacity:.45}.small{font-size:12px;color:#b7a888;line-height:1.45}.status{font-family:system-ui,sans-serif;font-size:13px;line-height:1.45;white-space:pre-wrap;word-break:break-word}.ok{color:#bde5b9}.bad{color:var(--bad)}input[type=file]{position:absolute;left:-9999px}
 #stage{position:fixed;inset:0;background:#000;display:none;flex-direction:column}#stage.on{display:flex}.bar{height:calc(48px + env(safe-area-inset-top));padding:env(safe-area-inset-top) 8px 0;display:flex;align-items:center;gap:8px;background:rgba(13,28,20,.96);border-bottom:1px solid var(--line);z-index:5}.bar button{width:auto;padding:7px 10px;font-size:12px;background:transparent;color:var(--gold);border:1px solid var(--line)}.title{flex:1;text-align:center;font-size:12px;letter-spacing:.1em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}iframe{flex:1;width:100%;border:0;background:#111}
+.brain-link{display:block;text-align:center;text-decoration:none;border-radius:10px;padding:10px;margin-top:8px;font-size:12px;letter-spacing:.05em}
 </style>
 </head>
 <body>
@@ -26,6 +27,15 @@ button:disabled{opacity:.45}.small{font-size:12px;color:#b7a888;line-height:1.45
 <p class="small">Normal workflow. Grok builds/stages directly in the Test repository. The Player reads one tiny latest-build pointer, then opens that exact uniquely staged build. You do not download or re-upload the candidate.</p>
 <div id="latestStatus" class="status"></div>
 <div id="approvalPanel" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)"><button class="alt" id="lock">LOCK THIS BUILD</button><p class="small">Locking re-checks the exact current build identity. Only a locked build can be downloaded or approved.</p><div id="lockStatus" class="status"></div><div id="lockedActions" style="display:none;margin-top:10px"><button class="alt" id="download">DOWNLOAD LOCKED ZIP</button><button class="alt" id="approve" style="margin-top:8px">APPROVE LOCKED BUILD</button><p class="small">The ZIP is the exact staged candidate archive published with its SHA-256. Approval creates a promotion handoff; neither button deploys production.</p><div id="approvalStatus" class="status"></div></div></div>
+</div>
+<div class="card" id="projectBrain">
+<h2 style="font-size:16px;letter-spacing:.08em;margin:0 0 8px;color:var(--gold)">PROJECT BRAIN</h2>
+<div id="brainStatus" class="status" role="status">Checking current Brain…</div>
+<div id="brainActions" hidden style="margin-top:12px;display:none">
+<a class="alt brain-link" id="brainOpen">OPEN PROJECT BRAIN</a>
+<a class="alt brain-link" id="brainHistory">HISTORY</a>
+<a class="alt brain-link" id="brainBackup" download>DOWNLOAD BACKUP</a>
+</div><button class="alt" id="brainRetry" hidden style="margin-top:10px">RETRY</button>
 </div>
 <div class="card">
 <button class="alt" id="pick">OPEN ZIP — FALLBACK</button>
@@ -189,4 +199,5 @@ purgePlayerCaches().catch(()=>{});
 if(sessionStorage.getItem('ghp-reload')){sessionStorage.removeItem('ghp-reload');setStatus('Player ready. Old ZIP-preview state purged.');}
 })();
 </script>
+<script src="../brain/brain-reader.js"></script><script>Brain.player();</script>
 </body></html>
