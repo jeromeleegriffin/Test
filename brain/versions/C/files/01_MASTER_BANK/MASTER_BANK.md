@@ -1,0 +1,402 @@
+# GRIFFIN HOUSE OF ROOKS — MASTER BANK
+Version: 2026-10-04 C
+Scope: WHOLE PROJECT BANK — design + gameplay UX + visual system + implementation + workflow + runtime + future ideas.
+
+## 0. REQUIRED COMPANION RULES
+Read `00_START_HERE/JEROME_OPERATING_RULES.md` before acting. Those rules are part of the Bank.
+
+## 1. PROJECT NORTH STAR
+Griffin House of Rooks is a four-player Rook trick-taking game optimized for phones. The product direction is:
+PLAY FIRST -> DISCOVER LATER.
+New players should get to the table with minimal friction. Advanced settings/features are discoverable later.
+The House should feel premium, physical and atmospheric rather than like a conventional HTML game.
+Visual philosophy: QUIETLY PREMIUM MOST OF THE TIME -> FLASH ONLY WHEN SOMETHING DESERVES IT.
+Ask: "What event earned this effect?"
+Physical-table information should live on believable physical objects whenever practical instead of floating UI.
+
+## 2. AUTHORITY ORDER
+When evidence conflicts:
+1. Jerome's latest explicit decision.
+2. Actual physical-phone/runtime evidence.
+3. Exact exported/measured production geometry.
+4. Latest approved/banked production asset/reference.
+5. This Master Bank.
+6. Older handoffs/concept art.
+7. Aesthetic guess.
+SOURCE CORRECT != BUILD CORRECT != RUNTIME CORRECT.
+Actual diff and runtime evidence win.
+
+## 3. UNIVERSAL STATIC-ASSET CONSTRUCTION RULE — HARD BANK
+ALL NEW STATIC PHYSICAL/VISUAL OBJECTS use the PREMIUM BID BOX CONSTRUCTION STANDARD.
+Physical/manufactured objects must be finished visual objects/assets with believable material, thickness, surfaces, edges/bevels, joints/hardware where appropriate, lighting, highlights, shadows, depth and mass.
+CSS/code may position, register, scale, mask, animate, interact with and integrate finished artwork.
+CSS borders, gradients, shadows, pseudo-elements, outlines or geometric decoration must NOT substitute for primary artwork of a physical object.
+PHYSICAL OBJECT MEANS PHYSICAL OBJECT.
+Premium Bid Box is the quality/construction precedent.
+
+Dynamic exception:
+Scores, names, XP/levels, bid values, timers, state indicators, responsive/live text, interaction states, highlights, generated information and animation/state logic remain programmatic where appropriate.
+Hybrid construction is preferred where appropriate: a finished physical object can carry live HTML/CSS content.
+Do not use code to crudely draw artwork that should be a finished asset.
+Do not bake changing information into static artwork when it needs to remain dynamic.
+
+Visible material surfaces that belong to a physical object belong to the object treatment too. Example: a premium physical table should not be a beautiful asset rail wrapped around a crude CSS felt oval merely because the CSS color is acceptable.
+
+## 4. TABLE — CURRENT BANK
+Primary visual authority: `02_VISUAL_REFERENCES/01_TABLE_MASTER_PLAYER_PERSPECTIVE.png`.
+
+Latest critical correction:
+The table must be viewed from the SEATED PLAYER'S PERSPECTIVE, not as a perfectly flat/top-down/orthographic HTML oval.
+Near/player rail should appear larger/heavier/closer.
+Side rails should recede.
+Far/partner rail should appear narrower/farther.
+Felt plane should visually recede/compress toward the partner.
+Front edge should reveal real vertical apron/face and some underside/depth.
+Lighting/shadows reinforce perspective and mass.
+DO NOT apply a perspective transform to the entire gameplay container; cards, hitboxes, Bid Box, avatars and recovered coordinates must remain undistorted. The finished table artwork carries the perspective illusion underneath protected gameplay geometry.
+
+Physical table requirements:
+- broad polished dark walnut/mahogany rail;
+- furniture-grade rounded top;
+- dimensional inner lip/bevel;
+- one thin restrained aged-brass inset/inlay;
+- vertical/apron face and dark underside;
+- real mass/depth;
+- realistic restrained wood grain;
+- deep House-blue professional speed cloth;
+- smooth/fine weave/low nap, not fuzzy/velvet/shag;
+- felt is visibly recessed and belongs to the finished physical table treatment;
+- warm library/firelight-compatible material response.
+
+Center Griffin:
+Permanent faint Griffin on felt. Complete mark must fit entirely under one normally positioned real production played Rook card with small safety margin. Runtime evidence showed 002's Griffin still too large despite source claiming 46px; diagnose actual rendering source before modifying. No special routine fade required.
+
+TABLE-001: runtime worked, visually REJECTED. CSS rail read as concentric colored outlines.
+TABLE-002: visually REJECTED. Still read as a decorated flat oval. It confirmed that "more CSS rail" is the wrong construction method.
+Do not iterate either rejected construction method.
+
+## 5. PREMIUM BID BOX — FROZEN QUALITY AUTHORITY
+Reference: `02_VISUAL_REFERENCES/02_PREMIUM_BID_BOX_AUTHORITY.png`.
+Approved visual. Do not recreate/substitute/redesign.
+Artwork frozen; live typography/scaling/registration/interaction plumbing may change when authorized.
+It is the universal construction-quality precedent for new physical assets.
+Existing Bid Box/Bid Dock geometry remains protected during unrelated work.
+Bid Box disappears after bidding as designed.
+Do not invent a physical connector between Bid Box and future card holder.
+
+## 6. CARD HOLDER / TRAY — BANKED, NOT YET INTEGRATED
+Future separate physical object.
+Direction:
+- low/shallow footprint;
+- dark polished wood;
+- warm/thin aged-brass edge;
+- recessed dark card bed/channel;
+- dimensional bevel/highlight/shadow;
+- rounded;
+- cards remain dominant;
+- clean top edge;
+- NO protruding Griffin crest/figurine/emblem/ornament.
+Preserve actual card positions/spacing/behavior/AUTO MAP when implemented.
+Historically expected visible felt gap between Bid Box and holder; do not move existing protected elements to "fix" empty/reserved space.
+No connector/bridge/pedestal/filler.
+Before implementation, reconstruct appearance around actual locked gameplay/card geometry; do not start with one giant fixed tray image if that would fight responsive/real geometry.
+
+## 7. TRUMP STAMP — BANKED
+Physical ink-pad case with four recessed wells/pads: GREEN | RED | YELLOW | BLACK.
+Realistic sponge/felt pads, 3/4 physical construction, dark wood + restrained brass.
+Small substantial realistic wooden/brass hand stamp in right-side cradle, separate movable asset.
+Case stationary; stamp movable.
+No "STAMP THE TRUMP" clutter in final current direction. `CHOOSE TRUMP` should feel physically integrated around brass collar/ring.
+Lid: real thickness, recessed underside, two believable brass hinges, correct opening angle/footprint.
+Bottom/player avatar fades while selector occupies reserved interaction area and returns afterward; no layout reflow.
+Ceremony: select well -> pad reacts -> stamp lifts -> dips -> travels to felt -> stamps Griffin -> returns -> lid closes -> apparatus fades -> avatar returns. Roughly 1.5–2 seconds with overlap; speed modes may shorten/skip.
+Gameplay remains authority: visual ceremony observes trump state; never decides/stores/enforces/delays legality.
+Reduced-motion can skip.
+Same existing faint felt Griffin changes to trump treatment; NO added RED/GREEN/YELLOW/BLACK/TRUMP word on felt.
+Black may require burnished/crushed/near-black material response to remain visible.
+Reference concept board is included, but written bank controls where older concept text differs.
+
+## 8. CARD BACK — APPROVED
+Reference: `02_VISUAL_REFERENCES/03_APPROVED_CARD_BACK_133PCT.png`.
+Black/near-black textured stock.
+One thin warm-gold perimeter keyline.
+Large negative space.
+One centered gold Griffin, embossed/foil-like.
+Griffin enlarged approximately 33% from prior candidate.
+Centered/proportions unchanged.
+No extra ornament/damask/corner decoration/additional border.
+Integration occurs as a separate controlled job, not piggybacked on table work.
+
+## 9. BACKGROUND / HOUSE ENVIRONMENT — LOCKED DIRECTION
+Warm dark-wood library.
+Central fireplace.
+Black raven portrait left.
+Red raven portrait right.
+Polished bare wood floor.
+No chair.
+No rugs.
+Reference image included as environment/material reference. Do not let generated-reference inaccuracies override explicit locked composition.
+
+## 10. LAST TRICK / LAST 3 — BANKED UX
+Remove current visible portrait `#portraitLast3Btn` / "Last 3" pill when this feature is implemented.
+Portrait center trick area becomes interaction:
+after completed trick clears, tapping empty center temporarily restores immediately previous trick; tap again or outside dismisses.
+Use restrained one-time discovery hint after an early completed trick.
+Landscape treatment can differ later; gameplay landscape is currently frozen.
+
+## 11. TRUMP HAND MARKING / SORTING
+Sorting logic HANDS OFF.
+Existing/default sorting remains authority.
+Banked visual grouping: 3px gap after contiguous leading trump group.
+Trump marking: small restrained gold corner tick + raised/embossed index.
+NO trump star.
+Do not change sorting order to implement visual grouping.
+
+## 12. SHOOT THE MOON
+Final graphic direction: CLASSIC SINGLE CRESCENT + SMALL FOUR-POINT STAR.
+Existing working button controls size/position/behavior/timing/geometry.
+Do not move/resize during unrelated work.
+
+## 13. XP / HOUSE LEVEL / AVATAR PROGRESSION
+House Level = experience/time, not skill/rank.
+XP/Level should be visible on table when system is enabled.
+When enabled for everyone: perform legacy migration/credit once, prevent double credit, present retrospective awards using retained local stats where possible.
+Avatar frame progression is earned standing:
+crafted and restrained, brass -> richer/double -> engraving -> small laurel/Griffin -> milestones.
+Static physical frames follow Premium Bid Box construction standard.
+
+## 14. NEW-PLAYER EXPERIENCE
+Principle: PLAY FIRST -> DISCOVER LATER.
+Avoid landing-page button overload.
+New users should reach table quickly; Play Offline/instant path should be obvious.
+Minimal identity flow: name -> Enter House -> table.
+Random/default animal identity acceptable; deeper avatar choice discoverable later.
+Start Game obvious.
+Experience More later.
+Leave Room must remain available on all levels.
+Wife/new-player testing showed visible money/number progression helped retention; XP/Level should be understandable.
+Training hand was disliked.
+Chat is unnecessary for bot players.
+
+Known hosted R712 UX issues to fix separately:
+- avatar selection is buried/conditionally exposed through Play With Friends/waiting-room flow;
+- Play With Friends intermittently requires repeated taps.
+Do not mix these into unrelated visual-asset jobs.
+
+## 15. EXPERIENCE MORE / HOUSE ROOMS
+Banked direction: table recedes and reveals a small set of destinations, ideally one phone screen:
+- My House / My Look;
+- Progress & Awards;
+- House Rules;
+- Play With Friends;
+- Table & Sound;
+- maybe More.
+Navigation should remain consistent.
+Feedback optional/local/no nagging/telemetry by default.
+
+## 16. SPEED CONTROL
+Exactly one permanent compact control beside Griffin/Raven score:
+1x | 3x | MAX.
+Remove/avoid duplicate menu speed controls.
+Verified engine timing in R705 approximately:
+1x ~104 sec; 3x ~37 sec; MAX ~11 sec.
+Do not redesign working speed engine during visual work.
+
+## 17. AUTHORITATIVE PORTRAIT GEOMETRY — PROTECT
+Table: L36.8 T107.4 R323.2 B542.32 W286.4 H434.93.
+Table felt: L28.8 T97 R331.2 B551.12 W302.4 H454.12.
+TOP/PARTNER avatar final: L137.11 T120.85 W80 H80.
+BOTTOM/ME avatar final: L135.97 T430.90 W80 H80.
+LEFT avatar final: L10.76 T271.61 W75.2 H75.2.
+RIGHT avatar final: L274.04 T271.61 W75.2 H75.2.
+TOP name final: L93.2 T125.65 W201.6 H81.91.
+BOTTOM name final: L90.2 T424.51 W201.6 H81.91.
+Historical Last3 pill final: L282.88 T88.66 W51.82 H28 (future portrait pill removal is separately banked).
+Long-name test: "Jerome Griff".
+Do not casually move recovered geometry for aesthetic convenience.
+
+## 18. LANDSCAPE — FROZEN
+GAMEPLAY LANDSCAPE IS HANDS OFF until Jerome explicitly opens a separate landscape project.
+Do not repair/redesign/optimize/resize/reposition/beautify landscape during portrait work.
+Old Bid Box appearance observed in landscape is logged for future landscape project; do not fix during portrait table work.
+
+## 19. RUNTIME / VERSION AUTHORITY
+Current protected clean baseline: R712.
+Authoritative archive: `Rook712_RUNTIME_TRUTH_SEAT_REPAIR_PENDING_WINDOWS_RUNTIME(1).zip`.
+SHA-256: fb36cb316802aafd81b64e6acb23e208894225277d58b83664e008f307d1584c.
+Hosted clean R712 full-hand physical-phone smoke test PASSED.
+3:08 screen recording demonstrated multiple hands/tricks at MAX, four seats, Jerome avatar, cards, trick collection, score updates, menu, Raven Wins, continuation without obvious crash/lock.
+This proves demonstrated path, not every feature.
+
+Do not resurrect localhost:8000 as normal testing infrastructure.
+Hosted GitHub Pages staging + Griffin House Player is the proven direction.
+
+## 20. GRIFFIN HOUSE PLAYER / STAGING
+Permanent Player:
+https://jeromeleegriffin.github.io/Test/player/GriffinHousePlayer.html
+Normal candidate workflow:
+design/build/verify -> stage unique `/builds/<id>/` -> exact ZIP `/artifacts/` -> SHA -> update `latest.json` LAST -> physical phone test.
+At most one active candidate build after replacement is proven.
+Never silently borrow missing runtime files from root/old candidate.
+Promotion principle: promote exact tested artifact, never rebuild from instructions.
+Player itself does not hold GitHub credentials or deploy production.
+
+## 21. TOOL / LABOR DIVISION
+ChatGPT main chat = design/control/review/banking/read-only investigation.
+ChatGPT Work = substantial build/file/runtime/browser/multi-step asset and integration labor when available.
+Grok = GitHub WRITE/DELIVERY hand when needed: commit/push/delete/stage/deploy exact prepared work. Grok should NOT be used as the design studio merely because it can write GitHub.
+Read-only GitHub diagnosis should be done here first where practical.
+For substantial Grok handoffs, label clearly:
+GROK — READ ONLY / WRITE REQUIRED / MIXED.
+Minimize Grok rounds by finishing design/build decisions before handing it a write job.
+
+## 22. FAILED-FIX / CHANGE DISCIPLINE
+FAILED FIX rule: remove/restore/rediagnose/replace; never layer on failed patch.
+One-file job unexpectedly changes two files: STOP.
+Trust actual diff.
+Production is off limits for experiments.
+Do not clear physical-phone data/service worker casually.
+Do not redesign working systems during runtime repair.
+Before asset work compare implementation METHOD against banked method, not merely desired appearance.
+If physical-object request is being implemented as CSS-only decorative art: STOP.
+
+## 23. RESERVED SPACE RULE
+Never "fix" empty space until checking whether it is reserved for a banked-but-not-yet-integrated component.
+Do not move protected elements to compensate for incomplete composition.
+
+## 24. TABLE-003 NEXT JOB — NOT YET BUILT
+Do NOT use the previously prepared Grok 003 handoff; it was superseded before sending.
+Next table attempt should be a ChatGPT Work build/design job first, not Grok design work.
+It must start from clean R712 and use:
+- actual finished physical table object/asset construction;
+- player-seat perspective;
+- physical felt treatment;
+- protected gameplay geometry underneath/overlaid without perspective distortion;
+- center Griffin runtime diagnosis;
+- portrait only;
+- Bid Box/cards/seats/controls/gameplay untouched;
+- no card-holder integration;
+- no connector/filler.
+After Work result is reviewed/accepted, Grok may be used only to push/stage exact prepared result.
+
+## 25. IMPORTANT REJECTED / SUPERSEDED IDEAS
+- CSS-drawn luxury table rail: REJECTED.
+- Flat/top-down table presentation as premium target: REJECTED.
+- Concentric decorative rail bands: REJECTED.
+- Moving Bid Box/cards to fill lower empty area: REJECTED.
+- Inventing connector between Bid Box and future card holder: REJECTED.
+- Large visible center Griffin: REJECTED; must fit under one played card.
+- Trump star: REJECTED.
+- Trump word/label added to felt Griffin: REJECTED.
+- Full-table trump-color transformation: REJECTED.
+- Protruding Griffin ornament on card holder: REJECTED.
+- Grok as routine designer/builder: SUPERSEDED; use Work for substantial build labor, Grok primarily for GitHub writes.
+
+## 26. MASTER BANK MAINTENANCE RULE
+When Jerome says "Give me an updated Master Bank":
+- do not make a narrow handoff;
+- update the WHOLE PROJECT BANK;
+- include new banked ideas even if not implemented;
+- include new visual authorities/screenshots/evidence where relevant;
+- include new geometry/version/runtime facts;
+- include failures and why they failed when that prevents repetition;
+- mark superseded decisions;
+- preserve useful historical evidence;
+- create one ZIP usable in a completely new chat;
+- the new ZIP becomes the preferred continuity package.
+
+The Master Bank is not a substitute for authoritative source code/build artifacts. It is the durable decision/design/context authority that travels with the project.
+
+## 27. ADDITIONAL BANKED DETAILS
+
+### Spinner / waiting rotation
+Preserve exact names: 1) Rook Card Flip 2) Griffin Gold Sweep 3) Rook Flight 4) Crest Build 5) Card Shuffle Swirl 6) Wing Sweep 7) Ring Draw.
+
+### Results
+Win page should use actual team names, not generic A/B. Biggest Tricks direction: only two biggest with animation; Griffin icon opacity about 15% lower. Message Table removed.
+
+### Mapper
+Keep existing mapper/layout tool: PICK, PARENT, CHILD, MOVE, RESIZE, STEP, RESET, DONE, MORE, docking; draggable panel. Export/import should preserve selector, X/Y, width/height, scale, original/final rect, inline styles. Historical storage key `ghc611LayoutV2`. Exact exported mapper values beat aesthetic guesses. Previously requested future helpers include unhide all, lock all, snap lines; copy-value can act as snap.
+
+### Long-name test
+Use `Jerome Griff` as standard stress test across seats. Preserve balanced center/hang behavior; do not casually shrink/move established name geometry.
+
+### Physical UI
+Ask: `What physical object at the table would naturally carry this information?` Prefer believable table objects over floating chrome while keeping dynamic information live.
+
+### Background artifact lesson
+Earlier apparent table dots were traced to a chair-arm/background artifact. Locked environment excludes chair/rugs and keeps polished bare floor.
+
+### Unity future
+A Rook Unity port remains a later goal after HTML/JS maturity. Do not let Unity experiments override current web-game authority.
+
+## 28. TABLE PERSPECTIVE BREAKTHROUGH — BANKED 2026-10-04
+
+### Why this matters
+TABLE-001 and TABLE-002 were major visual disappointments because the game still read as the same flat HTML oval even after decorative rail work. The breakthrough is not "make the oval prettier"; it is to make the physical furniture read from the local player's viewpoint.
+
+### New visual target
+Reference: `02_VISUAL_REFERENCES/08_TABLE_PERSPECTIVE_BREAKTHROUGH_BANKED_DIRECTION.png`.
+
+BANKED qualities:
+- player-seat / slightly elevated seated viewpoint;
+- rich walnut/mahogany wood grain;
+- thick rounded furniture-grade near rail;
+- restrained aged-brass inset;
+- visible front apron/vertical face and some underside;
+- side rails visibly recede;
+- far rail reads slightly narrower/farther away;
+- recessed deep-blue felt;
+- real furniture mass, depth, reflections and warm House lighting.
+
+Do NOT copy invented UI/cards/text from generated concepts. They are perspective/furniture references only.
+
+### Perspective amount — SUBTLE IS THE TARGET
+Jerome explicitly concluded that ANY meaningful departure from dead-flat is a major improvement; extreme perspective is unnecessary.
+Current target is a SUBTLE, slightly elevated player perspective:
+- enough that near rail is visibly thicker than far rail;
+- enough that sides gently recede;
+- enough front apron to read as physical furniture;
+- still overhead enough to preserve card readability and usable phone playing area.
+We are NOT trying to simulate a literal first-person seated camera.
+We are using controlled perspective cues to eliminate the flat HTML-table appearance while preserving the playable overhead view.
+
+The angle comparison sheet is retained as `09_TABLE_ANGLE_COMPARISON_STUDY.png`. Its subtle end is the preferred direction; the purpose of the sheet is comparison, not UI authority.
+
+### Cards / gameplay-plane safety
+Do NOT perspective-transform the entire game container.
+Existing cards, hitboxes, Bid Box, avatars, names, scores, controls and protected gameplay coordinates remain stable/undistorted.
+First implementation test should place REAL untouched R712 gameplay over the new physical table artwork.
+Only if center played cards visibly clash with the perspective after phone testing should a separate visual-only center-card treatment be investigated. Do not preemptively alter card gameplay/geometry.
+
+### Real crowded-state authority
+Reference: `11_CURRENT_REAL_PORTRAIT_BIDBOX_ACTIVE_AUTHORITY.jpg`.
+This is high-value REAL runtime evidence and must be consulted when designing/integrating the new table.
+It records actual portrait composition with:
+- Premium Bid Box active;
+- real bottom card area/hand;
+- top/left/right player positions;
+- score/speed header;
+- Last 3;
+- center card/trick region;
+- current table footprint and available vertical space.
+
+The new table artwork MUST adapt around this real composition.
+Do NOT move the Premium Bid Box or protected gameplay geometry merely to make perspective artwork fit.
+Particular risk: near/front rail/apron must not consume so much vertical space that it crowds the Bid Box or player's hand.
+If conflict occurs, reduce the perspective/rail intrusion; gameplay geometry wins.
+
+### Generated-image classification
+`08_TABLE_PERSPECTIVE_BREAKTHROUGH_BANKED_DIRECTION.png`: BANKED for table angle/material/furniture direction; generated UI contents are not authority.
+`09_TABLE_ANGLE_COMPARISON_STUDY.png`: BANKED as comparison evidence; subtle-angle direction preferred.
+`10_TABLE_GENERATION_REJECTED_INVENTED_UI.png`: REJECTED as production reference because it invented too much game UI/content. Retained deliberately as a failure example so the mistake is not repeated.
+
+### Next reference-image rule
+Future generated table mockups should use the real runtime screenshot/composition as authority and alter essentially the physical table/viewing treatment rather than inventing a replacement game interface.
+
+## 29. MASTER BANK CONTINUITY — BANK BEFORE RISK
+The Master Bank is the whole portable project brain, including how Jerome and ChatGPT work together.
+Because exact context-loss/compression timing cannot be predicted, ChatGPT must proactively flag a needed Master Bank update once meaningful new project knowledge has accumulated, before another major phase piles on.
+Jerome has explicitly authorized proactive Master Bank maintenance when flagged.
+The Bank should carry high-value screenshots/evidence automatically when they establish real geometry/state/problems.
+Newest Master Bank supersedes older Master Banks and should remain self-contained.
