@@ -113,9 +113,13 @@ async function loadLatest(){
   if(!r.ok)throw Error('latest.json returned HTTP '+r.status);
   const m=await r.json();
   if(!m||typeof m.url!=='string'||typeof m.id!=='string')throw Error('Latest-build pointer is invalid.');
-  const u=new URL(m.url,location.origin);
-  const allowed=new URL('../builds/',location.href).pathname;
-  if(u.origin!==location.origin||!u.pathname.startsWith(allowed))throw Error('Latest-build pointer is outside the isolated Test builds area.');
+  const u=new URL(m.url,location.href);
+  const prefix='/Test/builds/';
+  if(u.origin!==location.origin||!u.pathname.startsWith(prefix))throw Error('Latest-build pointer is outside the isolated Test builds area.');
+  const seg=(u.pathname.slice(prefix.length).split('/').filter(Boolean)[0]||'');
+  let decoded=seg;
+  try{decoded=decodeURIComponent(seg);}catch(e){throw Error('Latest-build pointer is outside the isolated Test builds area.');}
+  if(!seg||decoded==='.'||decoded==='..'||decoded.indexOf('/')>=0||decoded.indexOf('\\')>=0||decoded.indexOf('%')>=0)throw Error('Latest-build pointer is outside the isolated Test builds area.');
   u.searchParams.set('ghbuild',m.id); u.searchParams.set('fresh',Date.now());
   currentBuild={id:m.id,name:m.name||m.id,url:u.href,zip:m.zip||'',sha256:m.sha256||''};
   latestStatus.textContent='CURRENT TEST BUILD: '+currentBuild.id+'\n'+currentBuild.name; latestStatus.className='status ok';
