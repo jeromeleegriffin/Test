@@ -1,34 +1,24 @@
-GRIFFIN HOUSE PLAYER v5 — DIRECT-TO-TEST / ONE TAP
+GRIFFIN HOUSE PLAYER v6 — DIRECT TEST + EXACT-BUILD APPROVAL
 
-NORMAL WORKFLOW — NO BUILD ZIP PASSES THROUGH JEROME'S PHONE
-1. Jerome gives Grok the task prompt/specification only.
-2. Grok starts from the proven clean R712 baseline in JeromeLeeGriffin/Test.
-3. Grok creates a NEW unique /builds/<id>/ candidate directory.
-4. Grok applies ONLY the authorized change inside that new directory.
-5. Grok verifies scope/diff and candidate completeness.
-6. Grok updates /player/latest.json LAST.
-7. Jerome opens the bookmarked Player and taps LOAD LATEST TEST BUILD.
+NORMAL FLOW
+1. Grok builds a unique candidate directly from protected Test root R712.
+2. Grok stages it under /builds/<unique-id>/ and updates /player/latest.json LAST.
+3. Jerome opens Player and taps LOAD LATEST TEST BUILD.
+4. Player visibly identifies the exact build ID from latest.json and opens that unique build.
+5. After physical-phone testing passes, Jerome returns HOME and taps APPROVE THIS BUILD.
+6. Player re-fetches latest.json with no-store. If the ID changed, approval is BLOCKED.
+7. If identity still matches, Player copies a Grok promotion handoff for that exact tested ID.
+8. APPROVE never writes to GitHub and never deploys production itself.
 
-Jerome does NOT normally download a candidate ZIP, find it in Downloads, or upload it to Grok.
-The ZIP button remains emergency fallback only for candidates that exist only as files.
+PROMOTION PRINCIPLE
+Promote the exact tested candidate. Do not recreate/rebuild an approved candidate from instructions.
+The Grok handoff requires identity verification, rollback protection, exact-artifact promotion, production verification, and STOP on unexpected differences.
 
-HARD RUNTIME-TRUTH RULES
-- Root /Test/ remains the clean R712 baseline.
-- Every candidate gets a never-reused unique /builds/<id>/ URL.
-- latest.json points to exactly one candidate and is changed LAST.
-- No missing file may be borrowed from root or another candidate.
-- No candidate may be repaired by mixing versions.
-- If an authorized one-file job changes another runtime file: STOP.
-- Production is never touched.
-- Landscape remains frozen unless explicitly authorized.
-- Bid Box/gameplay remain frozen unless explicitly authorized.
-- Candidate URL is a preview/verification lane; acceptance still depends on actual phone runtime evidence.
+SINGLE-ACTIVE-BUILD RULE
+Root /Test/ = protected clean R712 baseline.
+/player/ = permanent Player.
+/builds/ = at most one active candidate after successful replacement cleanup.
+A new candidate is fully staged and verified before latest.json changes. The previous working candidate is retained until the new pointer is proven. Then obsolete candidate directories are deleted. Failed replacement never destroys the current working candidate.
 
 PERMANENT PLAYER URL
 https://jeromeleegriffin.github.io/Test/player/GriffinHousePlayer.html
-
-GROK ROLE
-Grok is the GitHub deployment/build hand. ChatGPT remains the design/control/review side.
-For normal jobs Jerome pastes a compact task prompt into Grok; Grok makes the candidate directly
-from the proven Test baseline, stages it, verifies it, and updates latest.json. No candidate ZIP
-handoff is required unless the task depends on a unique binary asset Grok does not already have.

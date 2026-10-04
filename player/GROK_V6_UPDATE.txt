@@ -1,0 +1,1 @@
+Update the already-installed /player/ launcher from v5 to the supplied v6 files only. Do not touch root R712, /builds/, latest.json candidate state, or production. Verify actual diff is limited to authorized /player/ files. v6 adds exact-build approval handoff only; APPROVE THIS BUILD must not itself deploy or write to GitHub.
