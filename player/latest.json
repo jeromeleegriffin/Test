@@ -1,7 +1,7 @@
 {
-  "id": "TABLE-20261004-001",
-  "name": "TABLE-ONLY portrait table",
-  "url": "../builds/TABLE-20261004-001/",
-  "zip": "../artifacts/Rook_TABLE-20261004-001_LOCKED.zip",
-  "sha256": "de1d7b5e0e5985ca4b83c992f52c48c6b28a9f4373804dfd144d4738ab01a7af"
+  "id": "TABLE-20261004-002",
+  "name": "TABLE-ONLY portrait wood rail",
+  "url": "../builds/TABLE-20261004-002/",
+  "zip": "../artifacts/Rook_TABLE-20261004-002.zip",
+  "sha256": "c7e4534e61e592f9f65f89922e2aa8365cfe0e2183a1e5100abe4daef18dfbd1"
 }
