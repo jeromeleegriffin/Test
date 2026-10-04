@@ -39,7 +39,7 @@ button:disabled{opacity:.45}.small{font-size:12px;color:#b7a888;line-height:1.45
 </div>
 <div class="card small"><b>Rule:</b> Grok creates/stages exactly one candidate directly from the clean Test baseline under a unique <code>/Test/builds/&lt;id&gt;/</code> path and updates <code>/Test/player/latest.json</code>. The Player never guesses a build and never falls back to an older one. Production is never opened.</div>
 </main>
-<section id="stage"><div class="bar"><button id="back">HOME</button><div class="title" id="title">HOUSE OF ROOKS</div><button id="fresh">FRESH</button></div><iframe id="frame" sandbox="allow-scripts allow-forms allow-modals allow-pointer-lock allow-downloads" allow="fullscreen; clipboard-read; clipboard-write"></iframe></section>
+<section id="stage"><div class="bar"><button id="back">HOME</button><div class="title" id="title">HOUSE OF ROOKS</div><button id="fresh">FRESH</button></div><iframe id="frame" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-pointer-lock allow-downloads" allow="fullscreen; clipboard-read; clipboard-write"></iframe></section>
 <script>
 (()=>{
 const TEST_URL='https://jeromeleegriffin.github.io/Test/';
