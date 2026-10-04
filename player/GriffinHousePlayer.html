@@ -25,7 +25,7 @@ button:disabled{opacity:.45}.small{font-size:12px;color:#b7a888;line-height:1.45
 <button class="main" id="latest">LOAD LATEST TEST BUILD</button>
 <p class="small">Normal workflow. Grok builds/stages directly in the Test repository. The Player reads one tiny latest-build pointer, then opens that exact uniquely staged build. You do not download or re-upload the candidate.</p>
 <div id="latestStatus" class="status"></div>
-<div id="approvalPanel" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)"><button class="alt" id="approve">APPROVE THIS BUILD</button><p class="small">Creates a promotion handoff for the exact build ID currently selected by latest.json. This button does NOT deploy production.</p><div id="approvalStatus" class="status"></div></div>
+<div id="approvalPanel" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)"><button class="alt" id="lock">LOCK THIS BUILD</button><p class="small">Locking re-checks the exact current build identity. Only a locked build can be downloaded or approved.</p><div id="lockStatus" class="status"></div><div id="lockedActions" style="display:none;margin-top:10px"><button class="alt" id="download">DOWNLOAD LOCKED ZIP</button><button class="alt" id="approve" style="margin-top:8px">APPROVE LOCKED BUILD</button><p class="small">The ZIP is the exact staged candidate archive published with its SHA-256. Approval creates a promotion handoff; neither button deploys production.</p><div id="approvalStatus" class="status"></div></div></div>
 </div>
 <div class="card">
 <button class="alt" id="pick">OPEN ZIP — FALLBACK</button>
@@ -47,7 +47,7 @@ const LATEST_URL=new URL('./latest.json',location.href).href;
 const CACHE_PREFIX='gh-rook-player-v3-';
 const RUN_PREFIX=new URL('./__ghplayer_run__/',location.href).pathname;
 const $=id=>document.getElementById(id), home=$('home'), stage=$('stage'), frame=$('frame'), status=$('zipStatus'), latestStatus=$('latestStatus');
-let lastRun='', activeCache='', currentBuild=null;
+let lastRun='', activeCache='', currentBuild=null, lockedBuild=null;
 function setStatus(s,bad=false){status.textContent=s;status.className='status '+(bad?'bad':'ok')}
 function show(url,title){$('title').textContent=title;home.style.display='none';stage.classList.add('on');frame.src=url}
 async function purgePlayerCaches(keep=''){const ks=await caches.keys();await Promise.all(ks.filter(k=>k.startsWith(CACHE_PREFIX)&&k!==keep).map(k=>caches.delete(k)));}
@@ -106,7 +106,7 @@ async function stageZip(file){
 }
 
 async function loadLatest(){
- latestStatus.textContent='CHECKING LATEST BUILD…'; latestStatus.className='status'; currentBuild=null; $('approvalPanel').style.display='none';
+ latestStatus.textContent='CHECKING LATEST BUILD…'; latestStatus.className='status'; currentBuild=null; lockedBuild=null; $('approvalPanel').style.display='none'; $('lockedActions').style.display='none'; $('lockStatus').textContent='';
  await destroyRun();
  try{
   const r=await fetch(LATEST_URL+'?t='+Date.now(),{cache:'no-store',credentials:'same-origin'});
@@ -117,7 +117,7 @@ async function loadLatest(){
   const allowed=new URL('../builds/',location.href).pathname;
   if(u.origin!==location.origin||!u.pathname.startsWith(allowed))throw Error('Latest-build pointer is outside the isolated Test builds area.');
   u.searchParams.set('ghbuild',m.id); u.searchParams.set('fresh',Date.now());
-  currentBuild={id:m.id,name:m.name||m.id,url:u.href};
+  currentBuild={id:m.id,name:m.name||m.id,url:u.href,zip:m.zip||'',sha256:m.sha256||''};
   latestStatus.textContent='CURRENT TEST BUILD: '+currentBuild.id+'\n'+currentBuild.name; latestStatus.className='status ok';
   $('approvalPanel').style.display='block';
   show(u.href,'TEST '+currentBuild.id);
@@ -125,21 +125,56 @@ async function loadLatest(){
 }
 
 
+async function lockCurrent(){
+ const out=$('lockStatus'); lockedBuild=null; $('lockedActions').style.display='none';
+ if(!currentBuild){out.textContent='STOP — No exact current build identity is loaded.';out.className='status bad';return;}
+ try{
+  const r=await fetch(LATEST_URL+'?lock='+Date.now(),{cache:'no-store',credentials:'same-origin'});
+  if(!r.ok)throw Error('latest.json returned HTTP '+r.status);
+  const m=await r.json();
+  if(!m||m.id!==currentBuild.id)throw Error('Latest build changed since this test opened. Reload and retest before locking.');
+  if(typeof m.zip!=='string'||!m.zip||typeof m.sha256!=='string'||!/^[a-f0-9]{64}$/i.test(m.sha256))throw Error('This build has no verified downloadable ZIP/SHA-256. Do not lock it.');
+  const z=new URL(m.zip,location.origin);
+  const allowed=new URL('../artifacts/',location.href).pathname;
+  if(z.origin!==location.origin||!z.pathname.startsWith(allowed)||!z.pathname.toLowerCase().endsWith('.zip'))throw Error('Locked ZIP pointer is outside the approved Test artifacts area.');
+  const zr=await fetch(z.href+'?verify='+Date.now(),{method:'HEAD',cache:'no-store',credentials:'same-origin'});
+  if(!zr.ok)throw Error('Locked ZIP is not reachable (HTTP '+zr.status+').');
+  lockedBuild={id:m.id,name:m.name||m.id,zip:z.href,sha256:m.sha256.toLowerCase()};
+  out.textContent='LOCKED: '+lockedBuild.id+'\nSHA-256: '+lockedBuild.sha256;out.className='status ok';
+  $('lockedActions').style.display='block';
+ }catch(err){out.textContent='STOP — '+(err.message||String(err));out.className='status bad';}
+}
+
+async function downloadLocked(){
+ const out=$('lockStatus');
+ if(!lockedBuild){out.textContent='STOP — Lock the exact tested build first.';out.className='status bad';return;}
+ try{
+  const r=await fetch(LATEST_URL+'?download='+Date.now(),{cache:'no-store',credentials:'same-origin'});
+  if(!r.ok)throw Error('latest.json returned HTTP '+r.status);
+  const m=await r.json();
+  if(!m||m.id!==lockedBuild.id||String(m.sha256||'').toLowerCase()!==lockedBuild.sha256)throw Error('Build identity changed after locking. Download blocked.');
+  const a=document.createElement('a');a.href=lockedBuild.zip+'?ghlock='+encodeURIComponent(lockedBuild.id);a.download='';document.body.appendChild(a);a.click();a.remove();
+  out.textContent='LOCKED: '+lockedBuild.id+'\nDOWNLOAD STARTED\nSHA-256: '+lockedBuild.sha256;out.className='status ok';
+ }catch(err){out.textContent='STOP — '+(err.message||String(err));out.className='status bad';}
+}
+
 async function approveCurrent(){
  const out=$('approvalStatus');
- if(!currentBuild){out.textContent='STOP — No exact current build identity is loaded.';out.className='status bad';return;}
+ if(!lockedBuild){out.textContent='STOP — Lock the exact tested build before approval.';out.className='status bad';return;}
  try{
   const r=await fetch(LATEST_URL+'?approve='+Date.now(),{cache:'no-store',credentials:'same-origin'});
   if(!r.ok)throw Error('latest.json returned HTTP '+r.status);
   const m=await r.json();
-  if(!m||m.id!==currentBuild.id)throw Error('Latest build changed since this test opened. Reload and retest before approval.');
-  const prompt=`GRIFFIN HOUSE OF ROOKS — PROMOTE EXACT TESTED BUILD\n\nAPPROVED PHYSICAL-PHONE TEST BUILD ID:\n${currentBuild.id}\n\nBUILD NAME:\n${currentBuild.name}\n\nPROMOTION RULES:\n- Promote ONLY this exact already-staged candidate.\n- Do NOT rebuild it from instructions.\n- First verify /player/latest.json still points to build ID ${currentBuild.id}.\n- Verify the candidate directory and deployed candidate correspond to that exact ID.\n- If identity does not match, STOP.\n- Preserve a rollback point for the current production version before promotion.\n- Do NOT mix files from root R712, another candidate, or another version.\n- Promote the exact tested artifact to the production Griffin House of Rooks repository using the established protected production procedure.\n- After promotion, verify production deployment/runtime identity.\n- Do not delete the Test candidate until production verification succeeds.\n- If any unexpected diff, missing file, permission problem, or identity mismatch appears, STOP without repairing forward and report it.\n\nJerome has approved this exact build from the physical-phone test. Production promotion is authorized only for this build ID.`;
+  if(!m||m.id!==lockedBuild.id||String(m.sha256||'').toLowerCase()!==lockedBuild.sha256)throw Error('Latest build changed since it was locked. Reload, retest, and lock again before approval.');
+  const prompt=`GRIFFIN HOUSE OF ROOKS — PROMOTE EXACT TESTED BUILD\n\nAPPROVED PHYSICAL-PHONE TEST BUILD ID:\n${lockedBuild.id}\n\nBUILD NAME:\n${lockedBuild.name}\n\nPROMOTION RULES:\n- Promote ONLY this exact already-staged candidate.\n- Do NOT rebuild it from instructions.\n- First verify /player/latest.json still points to build ID ${lockedBuild.id}.\n- Verify the candidate directory and deployed candidate correspond to that exact ID.\n- If identity does not match, STOP.\n- Preserve a rollback point for the current production version before promotion.\n- Do NOT mix files from root R712, another candidate, or another version.\n- Promote the exact tested artifact to the production Griffin House of Rooks repository using the established protected production procedure.\n- After promotion, verify production deployment/runtime identity.\n- Do not delete the Test candidate until production verification succeeds.\n- If any unexpected diff, missing file, permission problem, or identity mismatch appears, STOP without repairing forward and report it.\n\nJerome has approved this exact build from the physical-phone test. Production promotion is authorized only for this build ID.`;
   await navigator.clipboard.writeText(prompt);
   out.textContent='APPROVAL HANDOFF COPIED — '+currentBuild.id+'\nPaste it into Grok. Nothing was deployed by this button.';out.className='status ok';
  }catch(err){out.textContent='STOP — '+(err.message||String(err));out.className='status bad';}
 }
 
 $('latest').onclick=loadLatest;
+$('lock').onclick=lockCurrent;
+$('download').onclick=downloadLocked;
 $('approve').onclick=approveCurrent;
 $('pick').onclick=()=>$('zip').click();
 $('zip').onchange=e=>{const f=e.target.files&&e.target.files[0];e.target.value='';if(f)stageZip(f).catch(err=>setStatus(err.message||String(err),true))};

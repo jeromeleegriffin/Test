@@ -1,0 +1,1 @@
+Update only /player/ from v6 to supplied v7. Preserve live latest.json. v7 requires each future candidate deployment to publish an exact candidate ZIP under /artifacts/ plus its SHA-256, then include zip and sha256 in latest.json. Do not stage a candidate during Player installation. Root R712 and production remain untouched.
