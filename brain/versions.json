@@ -1,6 +1,13 @@
 {
   "versions": [
     {
+      "brainVersion": "D",
+      "updated": "2026-10-05",
+      "browse": "versions/D/index.html",
+      "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-05_D_MASTER_BRAIN.zip",
+      "sha256": "7f91e79c046904acaa51d44915609bbbc5408bbb00a6aa1d3bf874f39911365f"
+    },
+    {
       "brainVersion": "C",
       "updated": "2026-10-04",
       "browse": "versions/C/index.html",

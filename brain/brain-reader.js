@@ -68,7 +68,7 @@ window.Brain = (() => {
       }
       if (Array.isArray(h.unavailablePreviousVersions) && h.unavailablePreviousVersions.length) {
         const p = document.createElement('p');
-        p.textContent = 'Earlier checkpoints ' + h.unavailablePreviousVersions.join(', ') + ' are recorded in C’s changelog. Their frozen packages are not included here.'; host.append(p);
+        p.textContent = 'Earlier checkpoints ' + h.unavailablePreviousVersions.join(', ') + ' are recorded in the Master Bank changelog. Their frozen packages are not included here.'; host.append(p);
       }
     } catch(e) { host.replaceChildren(); failure(e); }
   }
