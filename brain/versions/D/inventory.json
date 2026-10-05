@@ -1,0 +1,132 @@
+{
+  "brainVersion": "D",
+  "zipSha256": "7f91e79c046904acaa51d44915609bbbc5408bbb00a6aa1d3bf874f39911365f",
+  "previousFrozenVersion": "C",
+  "missingSourcesNotInvented": [
+    "TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png",
+    "TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png",
+    "SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png"
+  ],
+  "files": [
+    {
+      "path": "00_START_HERE/FILE_MANIFEST.md",
+      "bytes": 3551,
+      "sha256": "2bee630312b1748e4f91888959d4620bb938792323a491f1d4c05c1177cdae2e"
+    },
+    {
+      "path": "00_START_HERE/00_READ_FIRST_GRIFFIN_HOUSE_RECOVERY.md",
+      "bytes": 8853,
+      "sha256": "a272f6c143e97af14add5702073b474780d94b4b1d6a8f428a78b676e9d2361e"
+    },
+    {
+      "path": "00_START_HERE/JEROME_OPERATING_RULES.md",
+      "bytes": 8102,
+      "sha256": "d40a9a335bac38c4f59cf998d7cb0087919480939683bc07c1c3033b44c61e34"
+    },
+    {
+      "path": "00_START_HERE/START_HERE.md",
+      "bytes": 1072,
+      "sha256": "1e716afb58e14ba26c4b307bbfea05bb27b4aa7384eb6e8d7b527b5ebe6c6ad8"
+    },
+    {
+      "path": "01_MASTER_BANK/AUTHORITY_INDEX.md",
+      "bytes": 4919,
+      "sha256": "262c8b647a78204d7a44ccac7abb4bb84bdc6b2507aa52678fd6d5fe3f21ce80"
+    },
+    {
+      "path": "01_MASTER_BANK/CHANGE_LOG.md",
+      "bytes": 2965,
+      "sha256": "88a5ca4b1234996e40d1a5970d1ffb14b47dba36561af5cd6883d8c2c1f2fe2e"
+    },
+    {
+      "path": "01_MASTER_BANK/MASTER_BANK.md",
+      "bytes": 28076,
+      "sha256": "877892e050e20f600c688b8fda15398c9bf439209a035c4bb8885b7070f01d09"
+    },
+    {
+      "path": "01_MASTER_BANK/MISSING_AUTHORITY_SOURCES_2026-10-05.md",
+      "bytes": 1286,
+      "sha256": "87f5355febd2d55b6794336a4e42c6f8fd456c8dc3a79c967c79c9e696c5ed27"
+    },
+    {
+      "path": "01_MASTER_BANK/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt",
+      "bytes": 4578,
+      "sha256": "4bcc4f1f1c147a99e7292675cdfb3acd7fd13a596077eaa560a5dce48ebb1847"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/01_TABLE_MASTER_PLAYER_PERSPECTIVE.png",
+      "bytes": 2199994,
+      "sha256": "2c9bf9a6223dbcbd2b7f9aa73de33bf1a84b7bfaaffc745c9b2587743e04a764"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/02_PREMIUM_BID_BOX_AUTHORITY.png",
+      "bytes": 1796689,
+      "sha256": "a46e9fa7e98bab3c7c19bd2f34f0f7dcfd798356b2557a5ad96d3b0db3cb9bf2"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/03_APPROVED_CARD_BACK_133PCT.png",
+      "bytes": 2305664,
+      "sha256": "0c631917b589471cb84583f28b59bba67eeb4036f294d6065492b8c92412d45d"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/04_TRUMP_STAMP_CONCEPT_BOARD.png",
+      "bytes": 2087810,
+      "sha256": "d23493b56004e319934e163d35b939f091914e71b323249af0d111e33db4df2c"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/05_LIBRARY_BACKGROUND_REFERENCE.png",
+      "bytes": 2144386,
+      "sha256": "4eacdb7850817f05c1b59930c9c4b285b876b87018cd7f11476b5147dc5ef854"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/06_PLAYER_PERSPECTIVE_INTERFACE_STUDY.png",
+      "bytes": 2355814,
+      "sha256": "badcab1bbdc338d511518e810b3623188f7350a429d044c5a3809b23753739a7"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/07_TABLE_002_RUNTIME_REJECTED_FLAT_HTML_LOOK.jpg",
+      "bytes": 93006,
+      "sha256": "66d040415d2b896e0ab508843c0a7d74ece07c8492ed685c3449b42dd05f44a9"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/08_TABLE_PERSPECTIVE_BREAKTHROUGH_BANKED_DIRECTION.png",
+      "bytes": 2071698,
+      "sha256": "0b9ba26e4af50f5eb60862ad4f6e3195a690c7cb9405e6d8df31d5237006a58f"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/09_TABLE_ANGLE_COMPARISON_STUDY.png",
+      "bytes": 2330942,
+      "sha256": "e18501392d48b513cd6d2b7dadd9a745c4677ad3e45256a4fa64e8be81194737"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/10_TABLE_GENERATION_REJECTED_INVENTED_UI.png",
+      "bytes": 2152734,
+      "sha256": "1210978e0019f542d2738080ee6715e23999840450e73ec5c55e85156daef891"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/11_CURRENT_REAL_PORTRAIT_BIDBOX_ACTIVE_AUTHORITY.jpg",
+      "bytes": 271879,
+      "sha256": "1e79b8e222e242db7b0542512e718619b5e73ced3d7b9168b3d6b232971c8fe6"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/90_HISTORICAL_EXTENSIVE_HANDOFF.md",
+      "bytes": 32505,
+      "sha256": "482488a4e9f761430994f98a46d47fc45374bb937ef9d3ea6d43e4ec0309492b"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/91_FULL_HANDOFF_2026-09-30.md",
+      "bytes": 20998,
+      "sha256": "4a502ac0dd677c3c0c8c159e543629d5eb91f074f9334fe2c3f86a84ad26749e"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/92_PROJECT_HISTORY.md",
+      "bytes": 14177,
+      "sha256": "f9ad86383ab5afe834d53abaf14c9b46c871d6a6faa5a269c4cee8b196496296"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/93_POST_BRAIN_C_RECOVERY_HANDOFF_2026-10-05.md",
+      "bytes": 38594,
+      "sha256": "bb97b22a01db31cfc64ddb5aa1225a26fd322d485fdc96f6bf1435ce78697bf6"
+    }
+  ]
+}
