@@ -1,0 +1,1 @@
+Original R706 bid function checks passed: +/-5, bounds, same live amount, BID/PASS, legitimate195, actual Moon dialog confirm/back, negative ceiling, option140 and 20 repeated auctions. These are VM tests, not bot games.

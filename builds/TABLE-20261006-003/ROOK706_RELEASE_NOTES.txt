@@ -1,0 +1,6 @@
+ROOK706 — RUNTIME LAYOUT / MOBILE REPAIR
+
+Complete project based on the supplied Rook705 build.
+Permanent match-score/speed header; functional existing LAYOUT editor; shared ornate bid owner; phone clearance and self-contained approved bid art.
+R705 speed governor, game rules, AI, scoring and all artwork retained.
+See Rook706_VERIFICATION_REPORT.md and docs/rook706-runtime-tests for runtime evidence and scope.

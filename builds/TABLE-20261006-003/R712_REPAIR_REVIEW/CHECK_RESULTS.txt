@@ -1,0 +1,31 @@
+verify.py
+{
+  "changed_files": [
+    "game.js",
+    "style.css",
+    "hor-version.js",
+    "approved-bid-portrait.js",
+    "sw.js",
+    "index.html"
+  ],
+  "syntax": "PASS all root JS",
+  "local_html_references": "PASS",
+  "shell_paths": "PASS",
+  "runtime_versions": "PASS",
+  "menu_handler_byte_identical": true,
+  "landscape_css_unchanged": true,
+  "approved_artwork_byte_identical": true,
+  "all_other_baseline_files_byte_identical": true,
+  "browser_runtime": "NOT AVAILABLE",
+  "physical_phone": "PENDING",
+  "geometry_coexistence": "PENDING runtime inspection"
+}
+
+test-bidding.cjs
+Original R706 bid function checks passed: +/-5, bounds, same live amount, BID/PASS, legitimate195, actual Moon dialog confirm/back, negative ceiling, option140 and 20 repeated auctions. These are VM tests, not bot games.
+
+test-adapter.cjs
+Adapter identity, one surface, 20 repeated hide/reopen/orientation cycles, landscape unwrap, trump teardown and observer settling: passed
+
+runtime-vm.cjs
+PASS real source VM: menu open/close/reopen, settings owner unchanged, landscape menu/relocation parity, portrait no seat writes; SW install/activation, scoped retirement, offline shell/art, full-path fallback, identity reply, precache failure rejection. No browser/phone rendering tested.

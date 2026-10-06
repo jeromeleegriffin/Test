@@ -1,0 +1,84 @@
+ROOK711 — HAMBURGER REPAIR PENDING WINDOWS RUNTIME
+
+START: Rook710_PORTRAIT_BIDBOX_INTEGRATION_PENDING_RUNTIME.zip
+Input SHA256: 7aa7f75cc740dad48afb1dae5b3d5f1a8cbe2f5b1a02fb859f9db9c8b5afa3d6
+Candidate only. No deployment or authoritative-baseline declaration.
+
+SOURCE ROOT CAUSE (HIGH CONFIDENCE)
+#btnToggleTopOpts is the single existing button, inside .in-game-leave,
+with classes icon-btn top-opts-toggle leave-menu-btn.
+bindClick assigns its onclick directly during game.js evaluation after the DOM.
+The inherited handler toggles #topBar.opts-collapsed, changes the glyph/title,
+and writes rookTopOptsCollapsed. It never calls the existing menu opener.
+#topBar starts opts-collapsed AND score-collapsed. style.css explicitly hides
+body.in-game #topBar.score-collapsed, independently of opts-collapsed, and
+hides its toolbar under score-collapsed. Therefore a received hamburger click
+cannot reveal the menu on the normal collapsed table. This is a mechanically
+established source defect, not a verified diagnosis of every physical tap.
+
+REGRESSION EVIDENCE
+All 201 recovered R706 manifest files were reconstructed from R710 unchanged
+files plus the supplied index.html.BASELINE; each hash matched the supplied
+BASELINE_SHA256.json. The only modified existing file from R706 to R710 is
+index.html (two adapter inclusions). Four runtime files are added: portrait
+CSS, portrait JS, blank Bid Box PNG, asset map (four added files total).
+See BASELINE_COMPARISON.json for the exact list and R706_to_R710.patch.
+The handler, menu open/close functions, initialization, and hiding rules are
+identical to clean R706. The source defect predates the Bid Box integration;
+physical R706 failure was not runtime reproduced. No R708/R709 used.
+
+COMPLETE MENU PATH
+openHostOptionsModal moves the existing dialog to document.body, removes
+hidden, sets aria-hidden=false and body.modal-open, synchronizes existing
+options and selects the settings pane. No new modal is created.
+closeHostOptionsModal adds hidden, sets aria-hidden=true and removes modal-open.
+Done is globally bound via bindClick(closeHostOptionsBtn), independently of
+waiting-room setup. wireHostOptionsModal also wires Done and backdrop dismissal
+when invoked by waiting-room rendering. No new close behavior added.
+Quick sound delegates to btnMute; Stats/Rules close then delegate to originals.
+
+INPUT / OVERLAY / INITIALIZATION INVESTIGATION
+The wrapper has pointer-events:none and its hamburger child explicitly has
+pointer-events:auto. Existing wrapper z-index is 2147483646, menu overlay
+2147483500. Actual stacking contexts and hit-testing remain unverified.
+Portrait CSS of the Bid Box is scoped to decisionConsole and descendants;
+art/surface are pointer-events:none, live bid buttons auto. Adapter observes
+only decisionConsole, moves only its child nodes and never clones or binds
+the hamburger. The R706 presentation initializer reparents topBar and the
+bid portal, not the hamburger. No second hamburger ID or later handler
+assignment was found in loaded source. game.js loads after the existing DOM;
+portrait adapter loads later and initializes at DOMContentLoaded.
+The inherited bot long-press capture listener can swallow a click only while
+its shown flag is true; it is unchanged and is not needed to explain the
+normal received-click defect. Fullscreen game overlays, stored mapper offsets,
+DOM initialization errors and ancestor stacking could independently affect
+physical input; this repair does not speculate about those possibilities.
+
+SMALLEST REPAIR
+Only game.js changed: eight lines inserted at the start of the existing handler.
+In portrait, toggle the existing hostOptionsModal using the existing open/close
+functions and return. All original landscape handler statements stay exact.
+No CSS, HTML, artwork, positioning, duplicate controls or click zones changed.
+Review documentation is the only added material.
+
+SOURCE CHECKS — PASS
+JavaScript syntax check.
+201 baseline file SHA256 checks; exact R706 -> R710 diff generated.
+Extracted real handler VM: portrait open/close/reopen; initially open close.
+Portrait leaves topBar classes and collapse persistence unchanged.
+Original landscape handler body exact; landscape VM outcome parity.
+Exact R710 -> R711 comparison: game.js is the sole changed existing file.
+All other starting files byte-identical, including Bid Box CSS/JS/assets,
+style.css, HTML, bots, rules, sorting, cards, speed, geometry, data and SW.
+These checks are source/VM checks, not browser runtime or bot-game tests.
+
+RUNTIME STATUS: PENDING WINDOWS / PHYSICAL PHONE
+No cloud browser runtime occurred. No gameplay PASS is claimed.
+On the isolated candidate, test normal-table hamburger open, Done close,
+reopen, existing menu controls and availability before/during/after bidding.
+Check +/-5, BID, PASS, existing Shoot-the-Moon, card play and several normal
+interactions after closing. Check speed, table/avatar geometry and no blocking
+overlay. Run normal bot play if available. Landscape source is preserved;
+landscape runtime parity is pending. Preserve phone data/cache; do not deploy.
+If a tap still does nothing, the minimum next observation is whether the tap
+reaches the button and whether hostOptionsModal loses hidden after that tap.

@@ -1,0 +1,1 @@
+PASS: syntax, baseline hashes, extracted-handler VM checks, exact landscape branch, protected-file byte parity. Browser runtime and bot gameplay NOT RUN.

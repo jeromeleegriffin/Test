@@ -1,0 +1,17 @@
+--- R710/game.js
++++ R711/game.js
+@@ -13881,6 +13881,14 @@
+ })();
+ 
+ bindClick('btnToggleTopOpts', () => {
++  // Portrait: the collapsed top bar is hidden; use the existing menu owner.
++  // Keep the inherited landscape toggle path exactly as it was in R710.
++  if (window.matchMedia('(orientation: portrait)').matches) {
++    const menu = $('hostOptionsModal');
++    if (menu && !menu.classList.contains('hidden')) closeHostOptionsModal();
++    else openHostOptionsModal();
++    return;
++  }
+   const bar = $('topBar');
+   const btn = $('btnToggleTopOpts');
+   if (!bar) return;

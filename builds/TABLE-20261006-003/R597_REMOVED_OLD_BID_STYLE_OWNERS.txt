@@ -1,0 +1,130 @@
+.felt-bid-dock
+.felt-bid-dock.hidden
+.felt-bid-dock .felt-bid-name
+.felt-bid-dock .bid-meta
+.felt-bid-dock .bid-stepper
+.felt-bid-dock .bid-value
+.felt-bid-dock .btn
+.felt-bid-dock .bid-buttons
+.felt-bid-dock
+.felt-bid-dock,
+.lt-felt-bid
+.felt-bid-dock
+.felt-bid-dock .felt-bid-name,
+.lt-felt-bid .felt-bid-name
+.felt-bid-dock .bid-meta,
+.lt-felt-bid .bid-meta
+.felt-bid-dock .bid-value,
+.lt-felt-bid .bid-value
+.felt-bid-dock
+.felt-bid-dock .felt-bid-name
+.felt-bid-dock .bid-value
+.felt-bid-dock .btn
+.felt-bid-dock .bid-buttons
+.felt-bid-dock
+.felt-bid-dock .felt-bid-name
+.felt-bid-dock .bid-meta
+.felt-bid-dock .bid-stepper
+.felt-bid-dock .bid-value
+.felt-bid-dock .btn
+.felt-bid-dock .bid-buttons
+#feltBidDock.felt-bid-dock
+#feltBidDock.sol-studio-managed
+#feltBidDock .felt-bid-name
+#feltBidDock .bid-value
+#feltBidDock .btn
+#feltBidDock.felt-bid-dock,
+  #feltBidDock.felt-bid-dock.sol-studio-managed
+#feltBidDock.felt-bid-dock,
+  #feltBidDock.felt-bid-dock.sol-studio-managed,
+  #feltBidDock.rook550-bid-authority
+#feltBidDock.felt-bid-dock,
+  #feltBidDock.felt-bid-dock.sol-studio-managed,
+  #feltBidDock.rook550-bid-authority
+#feltBidDock .felt-bid-name
+#feltBidDock.felt-bid-dock.rook550-bid-authority
+#feltBidDock .felt-bid-name, #feltBidDock .bid-meta
+#feltBidDock .bid-stepper
+#feltBidDock .bid-buttons
+#feltBidDock .bid-value
+#feltBidDock .btn
+#feltBidDock .bid-stepper .btn
+#feltBidDock .bid-buttons .btn
+body.hor-bid-theme-classic #feltBidDock .bid-value
+body.hor-bid-theme-classic #feltBidDock .btn
+body.hor-bid-theme-classic #feltBidDock .btn.primary
+body.hor-bid-theme-classic #feltBidDock .btn.danger
+body.hor-bid-theme-royal #feltBidDock .bid-value
+body.hor-bid-theme-royal #feltBidDock .btn
+body.hor-bid-theme-royal #feltBidDock .bid-stepper .btn
+body.hor-bid-theme-royal #feltBidDock .bid-buttons .btn
+body.hor-bid-theme-royal #feltBidDock .btn.primary
+body.hor-bid-theme-modern #feltBidDock .bid-value
+body.hor-bid-theme-modern #feltBidDock .btn
+body.hor-bid-theme-modern #feltBidDock .btn.primary
+body.hor-bid-theme-modern #feltBidDock .btn.danger
+body.hor-bid-theme-coin #feltBidDock .bid-value
+body.hor-bid-theme-coin #feltBidDock .bid-stepper .btn
+body.hor-bid-theme-coin #feltBidDock .bid-buttons .btn
+body.hor-bid-theme-coin #feltBidDock .btn.primary
+body.hor-bid-theme-low #feltBidDock .bid-value
+body.hor-bid-theme-low #feltBidDock .btn
+body.hor-bid-theme-low #feltBidDock .bid-stepper .btn
+body.hor-bid-theme-low #feltBidDock .bid-buttons .btn
+body.hor-bid-theme-low #feltBidDock .btn.primary
+body.hor-bid-theme-signature #feltBidDock .bid-value
+body.hor-bid-theme-signature #feltBidDock .btn
+body.hor-bid-theme-signature #feltBidDock .bid-stepper .btn
+body.hor-bid-theme-signature #feltBidDock .bid-buttons .btn
+body.hor-bid-theme-signature #feltBidDock .btn.primary
+body.hor-bid-theme-signature #feltBidDock .btn.danger
+body[class*="hor-bid-theme-"] #feltBidDock
+body[class*="hor-bid-theme-"] #feltBidDock .btn
+body[class*="hor-bid-theme-"] #feltBidDock.felt-bid-dock.rook550-bid-authority
+body.hor-bid-theme-classic #feltBidDock.felt-bid-dock.rook550-bid-authority
+body.hor-bid-theme-royal #feltBidDock.felt-bid-dock.rook550-bid-authority
+body.hor-bid-theme-modern #feltBidDock.felt-bid-dock.rook550-bid-authority
+body.hor-bid-theme-coin #feltBidDock.felt-bid-dock.rook550-bid-authority
+body.hor-bid-theme-low #feltBidDock.felt-bid-dock.rook550-bid-authority
+body.hor-bid-theme-signature #feltBidDock.felt-bid-dock.rook550-bid-authority
+#feltBidDock.felt-bid-dock.rook550-bid-authority
+#feltBidDock .bid-console-title
+#feltBidDock .bid-console-title img
+#feltBidDock .bid-stepper
+#feltBidDock .bid-stepper .btn
+#feltBidDock .bid-value
+#feltBidDock .bid-buttons
+#feltBidDock #bidConfirm
+#feltBidDock #bidPassBtn
+#feltBidDock .bid-buttons
+#feltBidDock #bidPassBtn
+#feltBidDock.felt-bid-dock.rook550-bid-authority
+#feltBidDock .bid-buttons
+#feltBidDock #bidConfirm,#feltBidDock #bidPassBtn
+#feltBidDock #bidPassBtn
+#feltBidDock.felt-bid-dock.rook550-bid-authority
+#feltBidDock .felt-bid-name,#feltBidDock .bid-meta
+#feltBidDock .bid-console-title
+#feltBidDock .bid-console-title img
+#feltBidDock .bid-stepper
+#feltBidDock #bidMinus,#feltBidDock #bidPlus
+#feltBidDock .bid-value
+#feltBidDock .bid-buttons
+#feltBidDock #bidConfirm,#feltBidDock #bidPassBtn
+#feltBidDock #bidConfirm
+#feltBidDock #bidPassBtn
+#feltBidDock.felt-bid-dock.rook550-bid-authority
+#feltBidDock .bid-buttons
+#feltBidDock #bidConfirm,#feltBidDock #bidPassBtn
+#feltBidDock.felt-bid-dock.rook550-bid-authority
+#feltBidDock.felt-bid-dock.rook550-bid-authority::before,
+#feltBidDock.felt-bid-dock.rook550-bid-authority::after
+#feltBidDock.felt-bid-dock.rook550-bid-authority::before
+#feltBidDock.felt-bid-dock.rook550-bid-authority::after
+#feltBidDock .bid-console-title
+#feltBidDock .bid-console-title img
+#feltBidDock .bid-stepper
+#feltBidDock #bidMinus,#feltBidDock #bidPlus
+#feltBidDock .bid-value
+#feltBidDock .bid-buttons
+#feltBidDock #bidConfirm,#feltBidDock #bidPassBtn

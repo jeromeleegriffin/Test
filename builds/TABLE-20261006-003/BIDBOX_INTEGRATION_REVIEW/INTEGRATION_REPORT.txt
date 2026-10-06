@@ -1,0 +1,118 @@
+ROOK710 — PORTRAIT APPROVED BID BOX INTEGRATION CANDIDATE
+PENDING WINDOWS/PHONE RUNTIME VERIFICATION
+
+AUTHORITY
+Executed README_FIRST.txt and WORK_PROMPT.txt from
+GRIFFIN_ROOK_BIDBOX_INTEGRATION_HANDOFF.zip.
+Only game source: clean-R706 inside its INPUTS/R707_CLEAN_RECOVERY_CHECKPOINT(1).zip.
+Only artwork: its INPUTS/Approved_BidBox_STANDALONE_ASSET.zip, approved/frozen.
+Both input ZIP SHA256 values match INPUT_SHA256.txt. Preserved inputs unchanged.
+No R708/R709 code was imported or used. No production changes, push or deployment.
+
+ACTUAL RUNTIME FILE SET
+Modified: index.html — adds one stylesheet link and one presentation script.
+Added: approved-bid-portrait.css — portrait-only live control registration/typography.
+Added: approved-bid-portrait.js — wraps/unwraps actual original DOM nodes in portrait.
+Added: assets/bidbox-approved/bidbox_complete_blank.png — exact frozen native asset.
+Added: assets/bidbox-approved/asset_map.json — exact supplied opening map.
+No existing file except index.html changed. No original file deleted.
+The candidate review folder and README are delivery documentation, not runtime changes.
+
+GAMEPLAY / CONTROL OWNERS
+Entire game.js remains byte-for-byte identical, including showBidUI, suggested
+bid closure, sync, decrement/increment onclick bodies, submitBid, hostProcessBid,
+Moon eligibility, existing Moon declaration/confirmation/back-down path, bid exits
+and all existing event owners. Rules, timing, speeds, persistence and sorting unchanged.
+The adapter moves nodes; it never clones or attaches handlers to the live buttons.
+The existing R706 code remains the only owner of bidding state and commit decisions.
+Normal BID mirrors the same current value. PASS remains submitBid(0).
+At a legitimate 195 it remains a normal BID. At eligible maxBid() the existing
+Moon label/button opens the existing declaration gate. No second path is added.
+Default options yield 200; other options can yield another maxBid(). Negative team
+score keeps the existing maxBid()-5 ceiling. Back Down resumes at maxBid()-5.
+
+FROZEN ART REGISTRATION
+Native 701x290 PNG is used as delivered; it was neither regenerated nor altered.
+The clean R706 outer decisionConsole dimensions/anchor/aspect ratio are inherited.
+That outer rectangle is observed by R706 to place the bottom seat, so changing it
+would risk an avatar regression. No integration CSS sets its width, height, top,
+bottom, padding, border, transform, aspect ratio or margins.
+The inner cabinet fits uniformly inside that inherited rectangle. Because its
+aspect ratio differs from the old artwork, it has unused space at either side.
+The cabinet itself is not stretched. Its Griffins, laurels, rim, faces and lip
+retain the approved proportions. Every live rectangle uses that one 701x290
+registration plane. Existing ornaments/background overlays are suppressed only
+while this portrait surface is active, avoiding a duplicate old Bid Box.
+Fonts match the cream serif direction; no physical artwork is drawn with CSS.
+
+Touch rectangles cover the live physical control cells and extend slightly into
+noninteractive neighboring hardware vertically. They do not overlap each other.
+Calculated heights across tested 320/360/390/430/600px portrait widths: approximately
+37/42/45/50/50 CSS pixels. At 320px they are below a 44px preference; actual touch
+comfort and alignment must be checked on the phone. Enlargement that changes the
+outer dock geometry was intentionally not introduced. Keyboard focus rings remain.
+
+MOON PRESENTATION
+The existing Moon dialog is appended to body below the high bid host in stacking
+order. Portrait surface visibility and pointer events yield while that dialog
+exists. The measured outer dock remains present, keeping seat geometry inputs
+stable. Original dialog creation, buttons and submitBid confirmation are unchanged.
+No Moon overlay is fabricated and no hidden duplicate normal bid controls are added.
+
+LANDSCAPE LOCK
+Every rule in the new stylesheet is inside orientation:portrait.
+The adapter removes its artwork wrapper/class whenever portrait is false,
+restoring the same original node order and identities. It does not call showBidUI,
+change rules, set layout styles or implement a landscape presentation.
+Baseline style.css and game.js remain exact. Landscape retains the inherited R706
+behavior and artwork, including existing flaws. Orientation cycles were tested in
+a DOM fixture; actual browser layout parity remains pending.
+
+OTHER PROTECTIONS
+No card holder/tray, hand sizing, artwork, trump gap, trump star, sorting, avatars,
+table geometry, speed, scoring, menus, settings, player data, cache/SW, version truth
+or deployment configuration changed. The root pointer events are disabled only for
+this portrait surface, then enabled on its actual live buttons; empty background
+areas no longer capture input. Menu handlers are untouched; working menu behavior
+has not been proved by a browser test. Source preservation alone is not that proof.
+
+EXECUTED VERIFICATION
+1. Input archive integrity and exact handoff SHA256 values.
+2. Final modified/new/deleted file allowlist and every protected baseline hash.
+3. Entire game.js, rules.js, style.css, sw.js and hor-version.js exact comparisons.
+4. Frozen native PNG and asset-map byte hashes.
+5. CSS syntax and all-rule portrait media containment; no dock geometry overrides.
+6. Actual original R706 bid function in a VM: +/-5, legal bounds, synchronized amount,
+   normal BID/PASS, legitimate195, negative-score ceiling, option-dependent Moon140,
+   original Moon dialog creation, original confirmation and Back Down callbacks.
+7. Twenty repeated VM auctions, without amount drift.
+8. Adapter DOM fixture: same live nodes/handlers, one portrait surface, twenty
+   hide/reopen/portrait-landscape cycles, exact landscape unwrapping, trump teardown,
+   and idempotent observer callbacks without a mutation loop.
+9. Five portrait scaling fixtures: one uniform scale, aligned mapped regions,
+   nonoverlapping touch cells and unchanged outer rectangle inputs.
+10. Final archive integrity and candidate runtime manifest verification.
+
+NOT EXECUTED
+Browser game rendering, physical touch, real hamburger/menu behavior, measured
+avatar/table positions, full bot hands/games, scoring progression and equivalent
+Windows/phone runtime tests. No installed local Chromium/Chrome/Firefox was available.
+No browser installation, production access or preserved phone-state change occurred.
+VM repeated-auction fixtures are not represented as complete bot hands/games.
+
+ROLLBACK / CHECKPOINT
+Review includes original index.html, exact added-runtime-file list, baseline full
+SHA256 manifest, cumulative integration overlay and final actual diff.
+A fresh clean-R706 from the preserved handoff checkpoint plus the integration
+overlay reproduces this runtime candidate. The overlay is for recovery by an agent,
+not an instruction asking Jerome to manually alter game files.
+Before-integration checkpoint consists of that preserved exact R707 input archive
+and baseline manifest. To return this isolated candidate to baseline, restore the
+saved original index.html and remove only the four listed added runtime files.
+All other original bytes already match the baseline. No authoritative baseline
+has been replaced. Candidate promotion awaits Windows/phone verification.
+
+IDENTIFICATION
+Package/folder is Rook710. Protected in-game build/cache/version markers and page
+branding remain inherited from R706. Verify the candidate folder, asset filename
+and README rather than expecting those markers to change.

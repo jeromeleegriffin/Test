@@ -1,0 +1,22 @@
+ROOK710 — WINDOWS/PHONE RUNTIME CHECKLIST
+Use the extracted isolated candidate with your existing working test-launch method.
+No manual code changes, construction or asset assembly are needed.
+Keep production and the preserved affected phone session untouched.
+
+[ ] Fresh portrait load and real offline game: frozen cabinet appears during bidding.
+[ ] -5 / +5 use existing limits; center value and BID amount stay synchronized.
+[ ] Normal BID and PASS work; legitimate195 remains bid-able.
+[ ] Eligible Moon amount opens the existing confirmation page; Back Down and final
+    Moon confirmation both work. Negative-score ceiling remains authoritative.
+[ ] One live Bid Box only; cabinet and controls disappear after bidding.
+[ ] Hamburger/menu opens normally, including while bidding; empty art margins do
+    not block input. Cards remain selectable; table/avatars/names are not displaced.
+[ ] Check 320/360/390px portrait widths: artwork is uniformly scaled and typography,
+    control alignment and touch targets remain usable.
+[ ] Play or record several complete bot hands/games. Check repeated bidding,
+    normal trick progression, scoring and existing speed functionality.
+[ ] Rotate to landscape: inherited R706 presentation/behavior remains. Rotate back:
+    one approved portrait cabinet returns. Do not repair landscape as part of this job.
+
+Report failures with viewport, game phase, amount and screenshot/recording.
+Status remains PENDING WINDOWS/PHONE RUNTIME VERIFICATION until these checks pass.

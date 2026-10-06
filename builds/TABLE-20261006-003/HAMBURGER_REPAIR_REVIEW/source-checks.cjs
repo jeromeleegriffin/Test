@@ -1,0 +1,10 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const original=fs.readFileSync('start/game.js','utf8'),repaired=fs.readFileSync('Rook711/game.js','utf8');
+function handler(s){const a=s.indexOf("bindClick('btnToggleTopOpts', () => {");const z=s.indexOf('\n(function restoreTopOpts()',a);return s.slice(a,z).trim();}
+function run(src,portrait,shown=false){const set=new Set(shown?[]:['hidden']);const barSet=new Set(['opts-collapsed','score-collapsed']);let cb,opens=0,closes=0,writes=0;const btn={textContent:'☰',title:'Show / hide options'};const menu={classList:{contains:n=>set.has(n)}};const bar={classList:{toggle(n){if(barSet.has(n)){barSet.delete(n);return false;}barSet.add(n);return true;}}};const context={bindClick:(id,fn)=>{assert.equal(id,'btnToggleTopOpts');cb=fn;},$:id=>({hostOptionsModal:menu,topBar:bar,btnToggleTopOpts:btn})[id],window:{matchMedia:q=>{assert.equal(q,'(orientation: portrait)');return {matches:portrait}}},openHostOptionsModal(){opens++;set.delete('hidden')},closeHostOptionsModal(){closes++;set.add('hidden')},localStorage:{setItem(){writes++}}};vm.runInNewContext(handler(src),context);cb();cb();cb();return {opens,closes,writes,bar:[...barSet],btn};}
+assert.deepEqual(run(original,false),run(repaired,false));
+assert.deepEqual(run(original,true),run(original,false));
+const p=run(repaired,true);assert.equal(p.opens,2);assert.equal(p.closes,1);assert.equal(p.writes,0);assert.deepEqual(p.bar,['opts-collapsed','score-collapsed']);
+assert.equal(run(repaired,true,true).closes,2);
+const inherited=handler(repaired).slice(handler(repaired).indexOf("  const bar = $('topBar');"));assert.equal(inherited,handler(original).slice(handler(original).indexOf("  const bar = $('topBar');")));
+console.log('PASS: extracted real handler, portrait open/close/reopen, already-open close, no portrait top-bar/storage mutation, original landscape body exact, landscape VM outcome parity. These are source/VM checks; no DOM, hit-testing or browser runtime verified.');

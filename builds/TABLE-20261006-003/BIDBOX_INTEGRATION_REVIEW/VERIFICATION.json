@@ -1,0 +1,245 @@
+{
+  "status": "PENDING_WINDOWS_PHONE_RUNTIME_VERIFICATION",
+  "changedExistingFiles": [
+    "index.html"
+  ],
+  "newRuntimeFiles": [
+    "approved-bid-portrait.css",
+    "approved-bid-portrait.js",
+    "assets/bidbox-approved/asset_map.json",
+    "assets/bidbox-approved/bidbox_complete_blank.png"
+  ],
+  "allOtherBaselineFiles": "byte-for-byte identical",
+  "frozenArtAndMap": "exact supplied bytes",
+  "portraitOnlyCSS": "all rules enclosed in single orientation:portrait media query",
+  "dockGeometry": "no new declaration for dimensions, position, margins, border, padding, aspect ratio or transforms",
+  "geometryChecks": [
+    {
+      "viewportWidth": 320,
+      "inheritedDock": [
+        312,
+        107.6728624535316
+      ],
+      "containedArt": [
+        260.27129855146774,
+        107.6728624535316
+      ],
+      "uniformScale": 0.3712857325983848,
+      "touchHeight": 37.12857325983848,
+      "targets": {
+        "minus": {
+          "left": 38.8593513652096,
+          "top": 27.103858479682092,
+          "width": 55.32157415715934,
+          "height": 37.12857325983848
+        },
+        "plus": {
+          "left": 217.4477887450327,
+          "top": 27.103858479682092,
+          "width": 54.57900269196257,
+          "height": 37.12857325983848
+        },
+        "amount": {
+          "left": 125.74021279323165,
+          "top": 36.386001794641714,
+          "width": 61.63343161133188,
+          "height": 20.420715292911165
+        },
+        "bid": {
+          "left": 38.8593513652096,
+          "top": 65.34628893731573,
+          "width": 117.3262915010896,
+          "height": 37.12857325983848
+        },
+        "pass": {
+          "left": 166.2103576464556,
+          "top": 65.34628893731573,
+          "width": 105.81643379053968,
+          "height": 37.12857325983848
+        }
+      }
+    },
+    {
+      "viewportWidth": 360,
+      "inheritedDock": [
+        352,
+        121.47707558859975
+      ],
+      "containedArt": [
+        293.6394137503739,
+        121.47707558859975
+      ],
+      "uniformScale": 0.4188864675468957,
+      "touchHeight": 41.88864675468957,
+      "targets": {
+        "minus": {
+          "left": 43.84131948895441,
+          "top": 30.578712130923385,
+          "width": 62.41408366448746,
+          "height": 41.88864675468957
+        },
+        "plus": {
+          "left": 245.32571037901124,
+          "top": 30.578712130923385,
+          "width": 61.57631072939367,
+          "height": 41.88864675468957
+        },
+        "amount": {
+          "left": 141.860752894928,
+          "top": 41.05087381959578,
+          "width": 69.53515361278468,
+          "height": 23.03875571507926
+        },
+        "bid": {
+          "left": 43.84131948895441,
+          "top": 73.72401828825365,
+          "width": 132.36812374481903,
+          "height": 41.88864675468957
+        },
+        "pass": {
+          "left": 187.51937785753964,
+          "top": 73.72401828825365,
+          "width": 119.38264325086527,
+          "height": 41.88864675468957
+        }
+      }
+    },
+    {
+      "viewportWidth": 390,
+      "inheritedDock": [
+        382,
+        131.83023543990086
+      ],
+      "containedArt": [
+        318.66550014955345,
+        131.83023543990086
+      ],
+      "uniformScale": 0.45458701875827884,
+      "touchHeight": 45.458701875827884,
+      "targets": {
+        "minus": {
+          "left": 47.577795581763034,
+          "top": 33.18485236935435,
+          "width": 67.73346579498354,
+          "height": 45.458701875827884
+        },
+        "plus": {
+          "left": 266.2341516044952,
+          "top": 33.18485236935435,
+          "width": 66.824291757467,
+          "height": 45.458701875827884
+        },
+        "amount": {
+          "left": 153.9511579712003,
+          "top": 44.54952783831133,
+          "width": 75.46144511387429,
+          "height": 25.002286031705335
+        },
+        "bid": {
+          "left": 47.577795581763034,
+          "top": 80.00731530145707,
+          "width": 143.64949792761612,
+          "height": 45.458701875827884
+        },
+        "pass": {
+          "left": 203.50114301585268,
+          "top": 80.00731530145707,
+          "width": 129.55730034610946,
+          "height": 45.458701875827884
+        }
+      }
+    },
+    {
+      "viewportWidth": 430,
+      "inheritedDock": [
+        420,
+        144.9442379182156
+      ],
+      "containedArt": [
+        350.3652095885143,
+        144.9442379182156
+      ],
+      "uniformScale": 0.49980771695936416,
+      "touchHeight": 49.98077169593642,
+      "targets": {
+        "minus": {
+          "left": 52.310665299320604,
+          "top": 36.485963338033585,
+          "width": 74.47134982694526,
+          "height": 49.98077169593642
+        },
+        "plus": {
+          "left": 292.71817715677474,
+          "top": 36.485963338033585,
+          "width": 73.47173439302654,
+          "height": 49.98077169593642
+        },
+        "amount": {
+          "left": 169.2656710678118,
+          "top": 48.981156262017684,
+          "width": 82.96808101525446,
+          "height": 27.489424432765027
+        },
+        "bid": {
+          "left": 52.310665299320604,
+          "top": 87.9661581848481,
+          "width": 157.93923855915907,
+          "height": 49.98077169593642
+        },
+        "pass": {
+          "left": 223.7447122163825,
+          "top": 87.9661581848481,
+          "width": 142.44519933341877,
+          "height": 49.98077169593642
+        }
+      }
+    },
+    {
+      "viewportWidth": 600,
+      "inheritedDock": [
+        420,
+        144.9442379182156
+      ],
+      "containedArt": [
+        350.3652095885143,
+        144.9442379182156
+      ],
+      "uniformScale": 0.49980771695936416,
+      "touchHeight": 49.98077169593642,
+      "targets": {
+        "minus": {
+          "left": 52.310665299320604,
+          "top": 36.485963338033585,
+          "width": 74.47134982694526,
+          "height": 49.98077169593642
+        },
+        "plus": {
+          "left": 292.71817715677474,
+          "top": 36.485963338033585,
+          "width": 73.47173439302654,
+          "height": 49.98077169593642
+        },
+        "amount": {
+          "left": 169.2656710678118,
+          "top": 48.981156262017684,
+          "width": 82.96808101525446,
+          "height": 27.489424432765027
+        },
+        "bid": {
+          "left": 52.310665299320604,
+          "top": 87.9661581848481,
+          "width": 157.93923855915907,
+          "height": 49.98077169593642
+        },
+        "pass": {
+          "left": 223.7447122163825,
+          "top": 87.9661581848481,
+          "width": 142.44519933341877,
+          "height": 49.98077169593642
+        }
+      }
+    }
+  ],
+  "runtimeBrowserTests": "not executed; no installed browser available",
+  "botHandsOrGames": "not executed"
+}

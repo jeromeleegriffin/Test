@@ -1,0 +1,31 @@
+R712 — RUNTIME TRUTH + PORTRAIT LOCKED BOTTOM SEAT
+Candidate only. No deployment. Physical Windows/phone acceptance pending.
+
+START: exact supplied Rook711_HAMBURGER_REPAIR_PENDING_WINDOWS_RUNTIME(2).zip. Attachment suffix is a copy suffix. Its included R710_to_R711 patch and actual game.js contain the physically approved portrait hamburger repair. Approved Bid Box image present. Baseline hash manifest preserved before edits. No reconstruction from R706/R708/R709.
+
+ESTABLISHED: R711 retained R706 page/version/cache identity. SW omitted approved portrait adapter/CSS/art/map; suppressed addAll failures and could activate with an incomplete shell. Cache fallback used only filename, losing asset directories. Activation deleted every other cache, including unrelated caches. These are source-confirmed coherence defects. A packaged image existing does not prove the server supplied it. Exact cause of the observed phone failed image fetch (404, network failure, stale serving, extraction/path issue) remains UNPROVEN without that runtime response. This repair supplies coherent references/precaching; it does not claim to have diagnosed the physical server.
+
+IDENTIFIERS: page BUILD/HOR_PAGE_BUILD 706 -> 712; game APP_VERSION page-derived/fallback706 -> fixed712 plus HOR_SCRIPT_BUILD; HOR_LIVE_VERSION/HOR_BUILD 706 ->712; GHR_BUILD Rook706 ->Rook712. hor-version.js is now actually loaded by HTML. HTML script/CSS and existing image query revisions 650/706 ->712. Portrait CSS/adapter and Bid Box PNG receive v=712. SW registration sw.js?v=706 ->sw.js?v=712. SW cache house-of-rooks-v706 ->house-of-rooks-v712; explicit worker BUILD712. Historical r706 DOM/state/property names retained.
+
+SW: shell query entries agree with HTML; portrait adapter, CSS, PNG, map and queried wait-art included. All shell paths exist locally. Precache failure rejects installation instead of activating a partial shell. Existing network-first code/HTML policy retained; versioned PNG is network-first with exact offline fallback. Query-stripped fallback retains full URL directory instead of leaf-only lookup. Retirement limited to other house-of-rooks-v[digits] application generations; unrelated caches and player profile/progression data untouched. No storage reset or automatic reload introduced.
+
+TRUTH: existing v label uses APP_VERSION712. Developer console can evaluate:
+await HORRuntimeTruth()
+It reports page, actual script, marker, actual worker reply/cache, controller URL and coherent boolean. True requires all values712/cachev712. False when no controller or an older worker is still active; never automatically clears data or refreshes an active hand. This is a diagnostic, not an update UI.
+
+SEAT: removed the original portrait body.r706-bid-open #slot-me fixed/top/transform rule. The existing --r706-human-top measurement writes now execute ONLY in the inherited landscape branch, whose calculation is preserved. Portrait bidding no longer owns seat position. Normal seat/avatar/name rules, dimensions and table coordinates unchanged. r706-bid-open remains for inherited nest behavior; no nest algorithm redesigned. Rendering coexistence/overlap remains a physical-runtime gate. If locked-seat/Bid Box overlap remains, stop for evidence rather than move protected geometry.
+
+EXACT EXISTING FILES CHANGED (six):
+index.html — build/query identity, load marker script.
+game.js — fixed script identity and portrait-isolated seat ownership removal.
+style.css — delete only the portrait seat relocation block.
+hor-version.js — markers plus small read-only runtime-truth function.
+sw.js — cache identity, shell assets, strict install, scoped retirement, directory-safe fallback, identity response.
+approved-bid-portrait.js — PNG URL revision only.
+All other supplied files byte-identical, including approved PNG/map/portrait CSS, card assets, rules, bots, settings, speed, scoring, hand/table styling. Proven R711 hamburger handler and menu open/close/settings owners byte-identical. Landscape CSS byte-identical; landscape menu and seat-calculation VM parity pass. Global build/SW identity necessarily applies to both orientations; no landscape geometry or layout repair performed. No premium card back installed. Existing 3px-gap/card behavior preserved as supplied; no new gap work.
+
+VERIFICATION: all root JavaScript syntax; local HTML references; shell paths; version consistency; exact six-file diff; every other baseline file hash; real extracted menu open/close/reopen VM; settings owners unchanged; landscape branch parity; portrait relocation no-write VM; actual SW install/activate/fetch/message VM, scoped retirement, offline shell/PNG, full-path fallback, failure rejection; actual bidding/Moon production functions +/-5/bounds/BID/PASS/195/200/negative ceiling/option140/20 auctions; adapter node/handler identity, 20 hide/reopen/orientation cycles and teardown.
+
+NOT VERIFIED: no executable browser available. No browser render/hit-testing, bot games, actual server response, physical phone, locked-seat coexistence, or landscape rendering claimed. Existing tests are VM fixtures rather than a real browser cache/network. Source/reference correctness alone does not promote this candidate.
+
+PHYSICAL ACCEPTANCE: identity712 and truth coherence; approved art loads; bottom seat stays in its normal locked position; hamburger open/close/reopen/settings; minus/plus/BID/PASS and transition; dock disappears; playable cards; no table/landscape regression. Do not clear player data. This package is NOT authoritative until Jerome verifies it.

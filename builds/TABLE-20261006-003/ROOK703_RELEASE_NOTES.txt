@@ -1,0 +1,11 @@
+Rook703 — SINGLE AUTHORITATIVE SPEED CONTROL
+
+Baseline: Rook702_SPEED_GOVERNOR_REPAIR
+
+Fix:
+- Removed the legacy Settings-menu speed control from the DOM.
+- Removed the old Rook693 duplicate quick-speed buttons from the DOM.
+- Kept exactly one visible speed control: score-line 1x / 3x / MAX.
+- Changed the central pace painter to update that authoritative score-line control directly.
+- Preserved Rook702 timing-governor repair and all unrelated gameplay/UI.
+- Layout button remains separate and unchanged.

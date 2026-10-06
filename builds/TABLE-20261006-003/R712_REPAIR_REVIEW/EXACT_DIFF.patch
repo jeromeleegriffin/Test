@@ -1,0 +1,325 @@
+--- R711/game.js
++++ R712/game.js
+@@ -7,7 +7,8 @@
+ // It's exchanged during the join handshake so a stale host or joiner (e.g.
+ // one still running old cached JS) gets caught and auto-updated instead of
+ // silently failing or behaving unpredictably against a mismatched peer.
+-const APP_VERSION = String(window.HOR_PAGE_BUILD || '706');
++const APP_VERSION = '712';
++window.HOR_SCRIPT_BUILD = APP_VERSION;
+ 
+ function horThisIndex() {
+   try {
+@@ -15237,12 +15238,16 @@
+       if(bidding){
+         const seat=document.getElementById('slot-me');
+         const box=dock.getBoundingClientRect();
+-        // Containment and translated avatar/name descendants extend beyond
+-        // the slot's box. Measure their visual bottom in the containing block.
+-        document.body.style.setProperty('--r706-human-top','0px');
+-        const parts=seat?[seat,...seat.querySelectorAll('.seat-avatar,.name,.bid-badge')]:[];
+-        const bottom=Math.max(0,...parts.filter(e=>getComputedStyle(e).display!=='none').map(e=>e.getBoundingClientRect().bottom));
+-        document.body.style.setProperty('--r706-human-top',(box.top-bottom-8)+'px');
++        // Portrait bidding never owns the locked human seat position.
++        // Preserve the inherited landscape measurement path.
++        if(!matchMedia('(orientation:portrait)').matches){
++          // Containment and translated avatar/name descendants extend beyond
++          // the slot's box. Measure their visual bottom in the containing block.
++          document.body.style.setProperty('--r706-human-top','0px');
++          const parts=seat?[seat,...seat.querySelectorAll('.seat-avatar,.name,.bid-badge')]:[];
++          const bottom=Math.max(0,...parts.filter(e=>getComputedStyle(e).display!=='none').map(e=>e.getBoundingClientRect().bottom));
++          document.body.style.setProperty('--r706-human-top',(box.top-bottom-8)+'px');
++        }
+         try{positionSeatBidBadges();positionSeatLeadTags();positionBotThinkingAtSeat();}catch(e){}
+         document.body.style.setProperty('--r706-nest-rise','0px');
+         document.body.style.setProperty('--r706-nest-scale','1');
+--- R711/style.css
++++ R712/style.css
+@@ -15861,9 +15861,6 @@
+  #matchHeader706 #scoreSpeed701{gap:3px!important}
+  #matchHeader706 #scoreSpeed701 button{min-width:28px!important;padding:1px 5px!important;font-size:.65rem!important}
+ }
+-@media(orientation:portrait){
+- body.r706-bid-open #slot-me{position:fixed!important;top:var(--r706-human-top)!important;bottom:auto!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;margin:0!important}
+-}
+ /* The approved alpha art travels with CSS, so offline/partial image caches
+    cannot expose only the black live digits and detached green BID overlay. */
+ body.in-game #decisionConsole.decision-mode-bid:not(.hidden)::before{
+--- R711/hor-version.js
++++ R712/hor-version.js
+@@ -1,6 +1,18 @@
+-// Griffin House of Rooks — live build marker
+-window.HOR_LIVE_VERSION = 706;
+-window.HOR_BUILD = 706;
+-
+-// Rook706 package marker
+-window.GHR_BUILD = window.GHR_BUILD || "Rook706";
++// Griffin House of Rooks — R712 runtime marker, no gameplay ownership.
++window.HOR_LIVE_VERSION = 712;
++window.HOR_BUILD = 712;
++window.GHR_BUILD = "Rook712";
++window.HORRuntimeTruth = async function () {
++  const controller = navigator.serviceWorker && navigator.serviceWorker.controller;
++  const worker = controller ? await new Promise(resolve => {
++    const channel = new MessageChannel();
++    const timer = setTimeout(() => resolve(null), 2000);
++    channel.port1.onmessage = e => { clearTimeout(timer); channel.port1.close(); resolve(e.data); };
++    controller.postMessage({type:'HOR_BUILD_QUERY'}, [channel.port2]);
++  }) : null;
++  return {page:window.HOR_PAGE_BUILD, script:window.HOR_SCRIPT_BUILD,
++    marker:window.HOR_BUILD, worker, controller:controller && controller.scriptURL,
++    coherent:window.HOR_PAGE_BUILD === '712' && window.HOR_SCRIPT_BUILD === '712' &&
++      window.HOR_BUILD === 712 && !!worker && worker.build === '712' &&
++      worker.cache === 'house-of-rooks-v712'};
++};
+--- R711/approved-bid-portrait.js
++++ R712/approved-bid-portrait.js
+@@ -28,7 +28,7 @@
+           surface.setAttribute('aria-label', 'Place your bid');
+           const art = document.createElement('img');
+           art.className = 'approved-bid-art';
+-          art.src = 'assets/bidbox-approved/bidbox_complete_blank.png';
++          art.src = 'assets/bidbox-approved/bidbox_complete_blank.png?v=712';
+           art.alt = '';
+           art.setAttribute('aria-hidden', 'true');
+           art.draggable = false;
+--- R711/sw.js
++++ R712/sw.js
+@@ -2,38 +2,48 @@
+  * Author: Jerome Griffin
+  * Copyright (c) 2026 Jerome Griffin / Griffin House
+  */
+-const CACHE = 'house-of-rooks-v706';
++const BUILD = '712';
++const CACHE = 'house-of-rooks-v712';
+ const SHELL = [
+   './',
+   './index.html',
+   './shuffle-statistics.html',
+   './rules.js',
+-  './rules.js?v=599',
++  './rules.js?v=712',
+   './bots.js',
+-  './bots.js?v=599',
++  './bots.js?v=712',
+   './game.js',
+-  './game.js?v=706',
++  './game.js?v=712',
+   './sol-diagnostics.js',
+-  './sol-diagnostics.js?v=706',
++  './sol-diagnostics.js?v=712',
+   './rook510-avatars.js',
+-  './rook510-avatars.js?v=599',
++  './rook510-avatars.js?v=712',
+   './rook510.css',
+-  './rook510.css?v=599',
++  './rook510.css?v=712',
+   './polish.js',
+-  './polish.js?v=599',
++  './polish.js?v=712',
+   './progression.js',
+-  './progression.js?v=599',
++  './progression.js?v=712',
+   './style.css',
+-  './style.css?v=706',
++  './style.css?v=712',
+   './hor-version.js',
++  './hor-version.js?v=712',
++  './approved-bid-portrait.js?v=712',
++  './approved-bid-portrait.css?v=712',
++  './assets/bidbox-approved/bidbox_complete_blank.png?v=712',
++  './assets/bidbox-approved/asset_map.json',
++  './assets/images/wait-nest-portrait.jpg?v=712',
++  './assets/images/wait-trump-portrait.jpg?v=712',
++  './assets/images/wait-nest-landscape.jpg?v=712',
++  './assets/images/wait-trump-landscape.jpg?v=712',
+   './assets/images/splash-battle.png',
+   './assets/images/wait-nest-portrait.jpg',
+   './assets/images/wait-trump-portrait.jpg',
+   './assets/images/wait-nest-landscape.jpg',
+   './assets/images/wait-trump-landscape.jpg',
+   './assets/images/apple-touch-icon.png',
+-  './assets/images/griffin-icon.png?v=599',
+-  './assets/images/cardback-griffin-clean.jpg?v=599',
++  './assets/images/griffin-icon.png?v=712',
++  './assets/images/cardback-griffin-clean.jpg?v=712',
+   './assets/images/icon-192-maskable.png',
+   './assets/images/icon-512-maskable.png',
+   './manifest.json',
+@@ -157,30 +167,35 @@
+   './assets/images/avatar-willow.svg',
+   './assets/images/avatar-wolf.svg',
+   './assets/images/cardback-aftermath.jpg',
+-  './rook512-room.js','./rook512-room.js?v=599',
+-  './rook513.css','./rook513.css?v=599','./rook513.js','./rook513.js?v=599',
+-  './rook514.css','./rook514.css?v=599','./rook518-trump.css','./rook518-trump.css?v=599','./assets/images/room-card-club-514.jpg','./assets/images/avatar-jerome.png',
++  './rook512-room.js','./rook512-room.js?v=712',
++  './rook513.css','./rook513.css?v=712','./rook513.js','./rook513.js?v=712',
++  './rook514.css','./rook514.css?v=712','./rook518-trump.css','./rook518-trump.css?v=712','./assets/images/room-card-club-514.jpg','./assets/images/avatar-jerome.png',
+ ];
+ self.addEventListener('install', (e) => {
+-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL).catch(() => {})).then(() => self.skipWaiting()));
++  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
+ });
+ self.addEventListener('activate', (e) => {
+   e.waitUntil(
+-    caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
++    caches.keys().then((keys) => Promise.all(keys.filter((k) => /^house-of-rooks-v\d+$/.test(k) && k !== CACHE).map((k) => caches.delete(k))))
+       .then(() => self.clients.claim())
+   );
+ });
+ function cacheLookup(request) {
+   const url = new URL(request.url);
+-  const leaf = url.pathname.split('/').pop();
+-  return caches.open(CACHE).then((c) =>
+-    c.match(request).then((hit) => {
+-      if (hit) return hit;
+-      if (!leaf) return c.match('./index.html');
+-      return c.match('./' + leaf);
+-    })
+-  );
++  url.search = '';
++  url.hash = '';
++  return caches.open(CACHE).then(async c => {
++    const hit = await c.match(request);
++    if (hit) return hit;
++    if (url.pathname.endsWith('/')) return c.match(new URL('index.html', url).href);
++    return c.match(url.href);
++  });
+ }
++self.addEventListener('message', e => {
++  if (e.data && e.data.type === 'HOR_BUILD_QUERY' && e.ports[0]) {
++    e.ports[0].postMessage({build:BUILD, cache:CACHE});
++  }
++});
+ 
+ self.addEventListener('fetch', (e) => {
+   if (e.request.method !== 'GET') return;
+--- R711/index.html
++++ R712/index.html
+@@ -16,7 +16,7 @@
+     (function () {
+       // Rook522: remember the build only. Service-worker activation owns updates.
+       // Never redirect/reload here: competing page + SW reload paths caused loops.
+-      var BUILD = '706';
++      var BUILD = '712';
+       window.HOR_PAGE_BUILD = BUILD;
+       try { localStorage.setItem('horBuild', BUILD); } catch (e) {}
+     })();
+@@ -24,10 +24,11 @@
+ <link href="manifest.json" rel="manifest"/>
+ <link href="assets/images/icon-192.png" rel="icon"/>
+ <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+-<link href="style.css?v=706" rel="stylesheet"/>
+-<link href="rook510.css?v=650" rel="stylesheet"/>
+-<link href="rook513.css?v=650" rel="stylesheet"/>
+-<link href="rook518-trump.css?v=650" rel="stylesheet"/>
++<script src="hor-version.js?v=712"></script>
++<link href="style.css?v=712" rel="stylesheet"/>
++<link href="rook510.css?v=712" rel="stylesheet"/>
++<link href="rook513.css?v=712" rel="stylesheet"/>
++<link href="rook518-trump.css?v=712" rel="stylesheet"/>
+ <script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.5/dist/peerjs.min.js"></script>
+ <style>
+     /* Emergency layout if style.css fails to load — joiners still see a usable page */
+@@ -98,7 +99,7 @@
+ /* Old speed surfaces stay suppressed. */
+ .hor-speed-menu-setting,#horGameSpeed,#ghTopTools693 .gh-top-tools-label,#ghTopTools693 [data-gh-speed]{display:none!important;}
+ </style>
+-<link rel="stylesheet" href="approved-bid-portrait.css">
++<link rel="stylesheet" href="approved-bid-portrait.css?v=712">
+ </head>
+ <body class="theme-classic cardback-griffin room-theme-midnight">
+ <div id="matchHeader706" aria-label="Match score and game speed"><div class="scores" id="scoreRow">
+@@ -131,8 +132,8 @@
+ <div class="lt-decor lt-corner lt-tl"><img alt="" class="rook-ui-bird" src="assets/images/cardback-raven.jpg"/></div>
+ <div class="lt-decor lt-corner lt-tr"><img alt="" class="rook-ui-bird" src="assets/images/cardback-raven.jpg"/></div>
+ <div aria-live="polite" class="lt-wait-banner hidden" id="ltKittyWait">
+-<img alt="" class="lt-wait-art" id="ltWaitArtNest" src="assets/images/wait-nest-landscape.jpg?v=650"/>
+-<img alt="" class="lt-wait-art" id="ltWaitArtTrump" src="assets/images/wait-trump-landscape.jpg?v=650"/>
++<img alt="" class="lt-wait-art" id="ltWaitArtNest" src="assets/images/wait-nest-landscape.jpg?v=712"/>
++<img alt="" class="lt-wait-art" id="ltWaitArtTrump" src="assets/images/wait-trump-landscape.jpg?v=712"/>
+ <div class="lt-wait-veil"></div>
+ <div class="lt-wait-copy">
+ <div class="lt-wait-kicker" id="ltWaitKicker">The nest is open</div>
+@@ -181,7 +182,7 @@
+ <!-- Lobby Screen -->
+ <div class="screen" id="lobby">
+ <div class="header lobby-header">
+-<img alt="" class="lobby-mark" src="assets/images/griffin-icon.png?v=650"/>
++<img alt="" class="lobby-mark" src="assets/images/griffin-icon.png?v=712"/>
+ <div class="lobby-header-copy">
+ <h1>House of Rooks</h1>
+ <p class="subtitle">A four-player partnership table</p>
+@@ -285,7 +286,7 @@
+ <!-- Invite welcome — shared link already has a room code -->
+ <div class="screen hidden" id="welcome">
+ <div class="header waiting-header welcome-header">
+-<img alt="" class="waiting-crest" height="56" src="assets/images/griffin-icon.png?v=650" width="56"/>
++<img alt="" class="waiting-crest" height="56" src="assets/images/griffin-icon.png?v=712" width="56"/>
+ <div class="waiting-header-copy">
+ <h1>Welcome to table <span id="welcomeCode"></span></h1>
+ <p id="welcomeLead">A friend shared this table with you.</p>
+@@ -329,7 +330,7 @@
+ <!-- Waiting Room — open table -->
+ <div class="screen hidden" id="waiting">
+ <div class="header waiting-header">
+-<img alt="" class="waiting-crest" height="56" src="assets/images/griffin-icon.png?v=650" width="56"/>
++<img alt="" class="waiting-crest" height="56" src="assets/images/griffin-icon.png?v=712" width="56"/>
+ <div class="waiting-header-copy">
+ <h1>Table <span id="displayCode"></span></h1>
+ <p id="speakCodeLine">Share this code. Friends tap an open seat to sit.</p>
+@@ -863,8 +864,8 @@
+ <div aria-label="Widow" class="widow-spread hidden" id="widowSpread"></div>
+ <div class="bot-thinking hidden" id="botThinking">Thinking…</div>
+ <div aria-live="polite" class="pt-wait-banner hidden" id="ptWaitBanner">
+-<img alt="" class="pt-wait-art" id="ptWaitArtNest" src="assets/images/wait-nest-portrait.jpg?v=650"/>
+-<img alt="" class="pt-wait-art" id="ptWaitArtTrump" src="assets/images/wait-trump-portrait.jpg?v=650"/>
++<img alt="" class="pt-wait-art" id="ptWaitArtNest" src="assets/images/wait-nest-portrait.jpg?v=712"/>
++<img alt="" class="pt-wait-art" id="ptWaitArtTrump" src="assets/images/wait-trump-portrait.jpg?v=712"/>
+ <div class="pt-wait-veil"></div>
+ <div class="pt-wait-copy">
+ <div class="pt-wait-kicker" id="ptWaitKicker">House of Rooks</div>
+@@ -1174,16 +1175,16 @@
+       paintInstall();
+     })();
+   </script>
+-<script src="rules.js?v=650"></script>
+-<script src="bots.js?v=650"></script>
+-<script src="game.js?v=706"></script>
+-<script src="sol-diagnostics.js?v=706"></script>
+-<script src="rook510-avatars.js?v=650"></script>
+-<script src="rook512-room.js?v=650"></script>
+-<script src="rook513.js?v=650"></script>
+-<script src="polish.js?v=650"></script>
++<script src="rules.js?v=712"></script>
++<script src="bots.js?v=712"></script>
++<script src="game.js?v=712"></script>
++<script src="sol-diagnostics.js?v=712"></script>
++<script src="rook510-avatars.js?v=712"></script>
++<script src="rook512-room.js?v=712"></script>
++<script src="rook513.js?v=712"></script>
++<script src="polish.js?v=712"></script>
+ <!-- Dormant career/achievement framework. Master switch is OFF in progression.js. -->
+-<script src="progression.js?v=650"></script>
++<script src="progression.js?v=712"></script>
+ <div id="horBootError"></div>
+ <script>
+     window.addEventListener('error', function (ev) {
+@@ -1197,7 +1198,7 @@
+   </script>
+ <script>
+     if ('serviceWorker' in navigator) {
+-      navigator.serviceWorker.register('sw.js?v=706', { updateViaCache: 'none' })
++      navigator.serviceWorker.register('sw.js?v=712', { updateViaCache: 'none' })
+         .then(function (reg) { try { reg.update(); } catch (e) {} })
+         .catch(() => {});
+       // Rook522: do not reload on controllerchange. The new worker takes control
+@@ -1209,6 +1210,6 @@
+     // network-first loading for HTML/JS/CSS, and updates are picked up on the
+     // next normal navigation. Force Refresh remains a manual escape hatch.
+   </script>
+-<script src="approved-bid-portrait.js"></script>
++<script src="approved-bid-portrait.js?v=712"></script>
+ </body>
+ </html>

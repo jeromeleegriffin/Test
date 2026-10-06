@@ -1,0 +1,49 @@
+ROOK705 — BROWSER-VERIFIED SPEED REPAIR
+
+Source: the supplied Rook704_FIXED_SINGLE_SPEED_LOCATION(1).zip.
+
+Confirmed runtime causes:
+1. The detached legacy mapper queried its own controls through document.querySelector,
+   threw on null.style, and aborted game.js BEFORE speed click handlers were registered.
+2. The collapsed top bar disabled pointer events on the direct-child speed group.
+3. Landscape uses ltScoreBar, while the only speed group remained in the portrait bar.
+4. Nest reveal and some claim/end-hand waits and CSS animations bypassed game pace.
+5. The package labelled 704 still declared v701 in its page, asset URLs, worker and marker.
+
+Fix:
+- Query detached mapper controls through their actual owning subtree.
+- Exactly one physical 1x/3x/MAX group and one click owner.
+- Move ONLY that group to scoreRow (portrait) or ltScoreBar (landscape).
+- Keep it clickable and beside the score, collapsed or expanded.
+- Initialize saved pace, body CSS pacing and selected button together.
+- Scale the identified presentation waits and matching animations; retain 1x behavior.
+- Give this package consistent v705 identity without clearing saved player statistics.
+
+Browser results:
+- 48 scoreboard/toolbar/menu/viewport combinations: one group in every state.
+- 54 real pointer clicks across nine viewport sizes and both scoreboard states: pass.
+- Same DOM object survives orientation changes; exactly one click handler per button.
+- Six visual themes x two mapper panel states x six dock states: one group throughout.
+- Reload persistence and human decision waiting at MAX: pass.
+- Real full hand through dealing, bidding, discard, trump, play, score and live rotation: pass.
+- Identical 40-card play sequence and final scores at all three settings:
+  1x 102.213 seconds; 3x 34.809 seconds; MAX 5.978 seconds.
+- Zero page exceptions/console errors in the final full-hand run.
+
+Reproduction limit:
+The supplied clean ZIP did NOT reproduce two simultaneous 1x/3x/MAX groups.
+It contained exactly one group, visible in portrait and hidden in landscape.
+No second visible control owner was found, so no duplicate creator is invented here.
+The fixed build's singleton is verified in the tested states. An older or mixed
+served build is a possibility, not a demonstrated explanation for prior screenshots.
+
+Scope:
+Runtime changes: game.js, style.css, index.html, sw.js, hor-version.js.
+VERIFY_BUILD.py now checks the existing decisionConsole trump owner instead of
+requiring the already-retired actionPanel trump owner. No trump UI behavior changed.
+Rules, AI decisions, scoring, card assets, avatars, backgrounds and other UI are preserved.
+Network multiplayer was not exercised; computer scheduling measurements are local-host
+Offline Practice runs. Computer decisions are executed by the host, as before.
+
+Upload/extract this full package as usual. The start screen must read v705.
+See docs/rook705-browser-tests/REPORT.md for ownership, traces, hashes and evidence.

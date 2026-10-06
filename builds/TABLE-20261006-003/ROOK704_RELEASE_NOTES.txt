@@ -1,0 +1,8 @@
+ROOK704 — FIXED SINGLE SPEED LOCATION
+
+- Starts from Rook703_SINGLE_SPEED_AUTHORITY.
+- Moves scoreSpeed701 OUT of expandable #scoreRow.
+- scoreSpeed701 is now a direct child of #topBar with one fixed top-right position.
+- Expanding/collapsing the match scoreboard can no longer move speed controls to a second visual location.
+- Preserves Rook702 speed-governor repair and Rook703 legacy speed removal.
+- No gameplay, bidding, avatar, table, card, or score logic changed.

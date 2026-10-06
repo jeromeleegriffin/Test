@@ -1,0 +1,12 @@
+{
+  "baseline_files_verified": 201,
+  "changed": [
+    "index.html"
+  ],
+  "added_runtime": [
+    "approved-bid-portrait.css",
+    "approved-bid-portrait.js",
+    "assets/bidbox-approved/bidbox_complete_blank.png",
+    "assets/bidbox-approved/asset_map.json"
+  ]
+}

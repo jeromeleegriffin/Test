@@ -1,0 +1,21 @@
+THREE-PHASE PREFLIGHT — COMPLETED BEFORE EDITING
+1. Owners: showBidUI suggested closure and sync own the current amount. Existing
+bidMinus/bidPlus onclick handlers change it +/-5 within auctionNextMin/ceiling.
+bidConfirm calls submitBid or the existing showApprovedMoonDeclaration gate.
+bidPassBtn calls submitBid(0). hideActionPanel/finishBidding hide and clear dock.
+No game.js change is planned. No cloned buttons, duplicate bid state or Moon path.
+2. Expected modifications: index.html loads portrait adapter CSS/JS; new CSS/JS;
+exact native blank cabinet PNG and asset map copied into assets/bidbox-approved/.
+All existing game/logic/style files remain exact. Landscape styling is enclosed
+in orientation:portrait; adapter unwraps its DOM when not portrait.
+Protected R706 observer positions bottom seat using decisionConsole rectangle.
+Changing that rectangle would risk avatar displacement, so it is left unchanged.
+3. Native 701x290 artwork is contained uniformly in inherited 1614/557 dock box.
+A single native-coordinate surface supplies the artwork and all control rectangles.
+No width/height/top/bottom/transform declaration is applied to the dock itself.
+Only paint and pointer routing are replaced in portrait. Live control touch regions
+cover each physical cell; no duplicate invisible control exists beneath a live one.
+While existing Moon dialog is open, only portrait inner surface yields visibility
+and input; root rectangle and Moon confirmation/commit engine stay unchanged.
+Rollback baseline manifest saved. Original index.html saved before editing.
+No R708/R709 code is consulted or imported for this integration.

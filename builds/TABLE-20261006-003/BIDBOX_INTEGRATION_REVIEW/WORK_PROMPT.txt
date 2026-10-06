@@ -1,0 +1,212 @@
+GRIFFIN HOUSE OF ROOKS — APPROVED BID BOX INTEGRATION
+CONTROLLED ISOLATED CANDIDATE
+
+You have been given ONE handoff bundle containing exactly two authoritative inputs:
+
+1. R707_CLEAN_RECOVERY_CHECKPOINT(1).zip
+   This contains the clean recovered R706 source. It is the ONLY game source allowed for this job.
+
+2. Approved_BidBox_STANDALONE_ASSET.zip
+   This is the APPROVED AND FROZEN Bid Box visual asset package.
+
+FIRST read README_FIRST.txt and inspect both input packages.
+
+============================================================
+GOAL
+============================================================
+
+Create a NEW ISOLATED CANDIDATE that installs the approved Bid Box presentation into clean R706 while preserving the existing working bidding/game logic.
+
+This is an INTEGRATION job, NOT a Bid Box design job.
+
+The approved artwork is frozen.
+Do not redesign it, redraw it, regenerate it, modernize it, simplify it, or substitute a CSS recreation.
+
+Use the supplied production asset(s) as the visual shell and map the EXISTING live bidding state/actions into the supplied dynamic openings.
+
+============================================================
+THREE-PHASE PREFLIGHT — REQUIRED BEFORE EDITING
+============================================================
+
+PHASE 1 — GOAL / OWNERSHIP CHECK
+- Identify the existing R706 owners for current bid value, -5, +5, BID, PASS, bid completion, and Shoot-the-Moon flow.
+- Confirm the new artwork will be presentation only.
+- Existing gameplay/state remains authoritative.
+- Do not create duplicate bidding logic or a second Moon path.
+
+PHASE 2 — BOUNDARY / RISK CHECK
+- Determine exactly which files truly require modification.
+- LANDSCAPE MODE IS HANDS OFF. Preserve clean R706 landscape behavior exactly, including existing ugliness.
+- Do not accept a portrait implementation that changes landscape. Isolate portrait behavior instead.
+- Do not touch card holder/tray, cards, sorting, 3px trump gap, trump stars, avatars, table geometry, speed engine, scoring, unrelated menus, or unrelated polish.
+- Do not use R708 or R709 code.
+- Do not deploy or modify production.
+
+PHASE 3 — EXECUTION / FAILURE CHECK
+- Determine how the native 701x290 asset will scale uniformly in portrait without stretching or independent region drift.
+- Derive all live-control rectangles from the SAME scale/registration basis as the cabinet.
+- Preserve usable touch targets without visually altering the approved cabinet.
+- Identify the safest way to keep the existing Shoot-the-Moon state/commit path authoritative.
+- Establish rollback/diff checkpoints before editing.
+- If implementation would require changing protected systems or landscape behavior, STOP rather than working around the boundary.
+
+After this preflight, proceed automatically if the boundaries can be honored. Do not stop merely to give a routine progress report.
+
+============================================================
+VISUAL ASSET RULES
+============================================================
+
+The Bid Box package is APPROVED/FROZEN.
+
+Preserve:
+- cabinet
+- Griffins
+- laurels
+- brass/gold construction
+- recesses
+- proportions
+- lower lip
+- control-face appearance
+- overall composition
+
+Native production artwork is 701 x 290 px.
+The 3x file is an upscaled convenience export and adds no detail. Prefer the native asset as the source.
+
+The production shell has blank live-content areas. Use the supplied asset map/opening information.
+
+Live content may include:
+- -5
+- current amount
+- +5
+- BID/current bid text as required by existing R706 behavior
+- PASS
+
+Live typography may be tuned to visually belong inside the approved artwork, but do not redesign the physical cabinet.
+
+Scale the cabinet UNIFORMLY in portrait. Never independently stretch individual visual regions.
+
+============================================================
+GAMEPLAY OWNERSHIP — HARD RULE
+============================================================
+
+The existing R706 engine owns all bidding behavior.
+
+The new Bid Box must NOT decide, store, delay, enforce, or duplicate bidding state.
+
+Existing R706 must continue to own:
+- bid increments/decrements
+- legal bid limits
+- current bid
+- bid submission
+- pass
+- 195 behavior when legitimate
+- 200 / Shoot-the-Moon eligibility
+- Moon confirmation/commit path
+- turn/game progression
+
+Presentation observes and invokes the existing owners only.
+
+Do NOT create a pretty Moon control layered over a separate functional Moon control.
+Do NOT leave duplicate normal Bid Boxes underneath overlays.
+Do NOT solve a visual problem by rewriting game rules.
+
+============================================================
+LANDSCAPE — ABSOLUTE LOCK
+============================================================
+
+LANDSCAPE MODE = HANDS OFF.
+
+Do not:
+- fix it
+- beautify it
+- resize it
+- reposition it
+- optimize it
+- clean up its media queries
+- make the new Bid Box responsive into landscape
+
+Preserve clean R706 landscape behavior exactly.
+
+The new premium Bid Box integration is PORTRAIT-ONLY.
+If a proposed CSS/DOM change would alter landscape, isolate the portrait implementation instead.
+If that cannot be done safely, STOP and report the blocker.
+
+============================================================
+IMPLEMENTATION DISCIPLINE
+============================================================
+
+Start ONLY from clean-R706 inside R707_CLEAN_RECOVERY_CHECKPOINT(1).zip.
+
+Create a fresh isolated candidate. Do not modify the supplied checkpoint in place.
+
+Before editing:
+- preserve hashes/diff baseline
+- identify expected file set
+
+During editing:
+- make the smallest coherent integration
+- do not opportunistically clean unrelated code
+- do not layer patches over failed approaches
+
+FAILED FIX RULE:
+If an approach fails or creates collateral behavior, remove/restore it, re-diagnose from the clean checkpoint, and replace it cleanly. Do not accumulate overrides.
+
+If an unexpected third/unrelated file changes, STOP and inspect the actual diff before continuing.
+
+============================================================
+REQUIRED VERIFICATION
+============================================================
+
+Where the environment supports runtime/browser testing, verify the actual game rather than source inspection alone.
+
+At minimum verify:
+- normal bidding presentation
+- -5 works through existing logic
+- +5 works through existing logic
+- BID works through existing logic
+- PASS works through existing logic
+- current amount stays synchronized with actual state
+- legitimate 195 behavior is preserved
+- 200/Shoot-the-Moon flow uses the existing functional path
+- no duplicate Moon/normal bidding controls
+- touch targets are usable
+- hamburger/menu behavior remains working
+- surrounding table layout is not displaced
+- multiple portrait widths scale proportionally
+- several complete bot hands/games if the existing build supports automated/normal bot play
+- no regression in bidding after repeated hands
+
+LANDSCAPE VERIFICATION IS NOT A LANDSCAPE REDESIGN TASK.
+Only confirm via diff/source/runtime evidence that clean R706 landscape behavior was not changed by this candidate. Do not fix anything ugly there.
+
+Compare the final candidate against clean R706 and report the ACTUAL diff.
+
+============================================================
+DELIVERABLE
+============================================================
+
+Return:
+1. the isolated integration candidate ZIP
+2. exact changed-file list
+3. actual diff summary
+4. verification report with what was actually executed vs. what still requires Jerome's Windows/phone runtime test
+5. rollback/checkpoint information
+6. clear status: PENDING WINDOWS/PHONE RUNTIME VERIFICATION unless you truly executed equivalent runtime testing
+
+Do NOT deploy.
+Do NOT push.
+Do NOT modify production.
+Do NOT declare a new authoritative baseline.
+Do NOT begin the card-holder project.
+
+STOP after the Bid Box integration candidate and verification package are complete.
+
+============================================================
+SUCCESS CONDITION
+============================================================
+
+The approved Bid Box appears as the portrait bidding presentation while the CLEAN R706 bidding engine remains the authority and unrelated game behavior remains unchanged.
+
+The artwork must still look like the approved frozen Bid Box.
+The game must still behave like clean R706.
+Landscape must remain exactly inherited from clean R706.

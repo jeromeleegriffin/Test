@@ -1,0 +1,21 @@
+{
+  "changed_files": [
+    "game.js",
+    "style.css",
+    "hor-version.js",
+    "approved-bid-portrait.js",
+    "sw.js",
+    "index.html"
+  ],
+  "syntax": "PASS all root JS",
+  "local_html_references": "PASS",
+  "shell_paths": "PASS",
+  "runtime_versions": "PASS",
+  "menu_handler_byte_identical": true,
+  "landscape_css_unchanged": true,
+  "approved_artwork_byte_identical": true,
+  "all_other_baseline_files_byte_identical": true,
+  "browser_runtime": "NOT AVAILABLE",
+  "physical_phone": "PENDING",
+  "geometry_coexistence": "PENDING runtime inspection"
+}
