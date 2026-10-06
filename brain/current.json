@@ -1,13 +1,13 @@
 {
   "project": "Griffin House of Rooks",
-  "brainVersion": "F",
+  "brainVersion": "G",
   "status": "CURRENT",
   "updated": "2026-10-06",
-  "browse": "versions/F/index.html",
-  "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-06_F_MASTER_BRAIN.zip",
-  "sha256": "8f5cb482838bc84657ac59c9a198614eb68409e96ca40f93a3b485e98a67a523",
-  "document": "versions/F/files/01_MASTER_BANK/GRIFFIN_HOUSE_MASTER_BRAIN_DELTA_2026-10-06.txt",
-  "manifest": "versions/F/inventory.json",
+  "browse": "versions/G/index.html",
+  "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-06_G_MASTER_BRAIN.zip",
+  "sha256": "a975ba27774c30003df88497638ff5443dcd0d4d884572fb186e8c4ebd12bf61",
+  "document": "versions/G/files/01_MASTER_BANK/PREMIUM_BIRD_CARD_PIXEL_LOCK_2026-10-06.txt",
+  "manifest": "versions/G/inventory.json",
   "history": "history.html",
-  "previousVersion": "E"
+  "previousVersion": "F"
 }
