@@ -1,0 +1,25 @@
+MISSING AUTHORITY SOURCES — CLOSED 2026-10-05 — BRAIN E
+Status: VERIFIED / PRESENT.
+
+The seven named sources were supplied in GROK_FINAL_MASTER_BRAIN_ASSET_VERIFICATION_PACKAGE_2026-10-05-1 and match the supplied SHA-256 manifest. Bytes were copied exactly. They were not regenerated.
+
+| File | Status | SHA-256 |
+| --- | --- | --- |
+| 02_VISUAL_REFERENCES/TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png | VERIFIED / PRESENT — physical table/environment authority; not invented UI | e4765964c1112dac9bfbeeff0e7d4cfe489441e13c3780a8fd3b5f26949d143b |
+| 02_VISUAL_REFERENCES/TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png | VERIFIED / PRESENT — left is real-runtime calibration; right is environment reference only | 362d8eef7a3599c9dc4b9ac0c139fdaf29e64f8898d7e846e99d16c439801f57 |
+| 02_VISUAL_REFERENCES/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png | VERIFIED / PRESENT — seated-character physical integration; not gameplay/UI | 0537f1fd1735f087395288bd9c7aa9544727d02a0ad3c2d58d945926a360be31 |
+| 01_MASTER_BANK/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt | VERIFIED / PRESENT — exact supplied construction authority | b405602e809b1ce470c92aa7189f78d3d7e03448a622061aeb18cdcf62dd2d89 |
+| 01_MASTER_BANK/TABLE003_FINAL_PLAYED_CARD_PRESENTATION_AUTHORITY_2026-10-05.txt | VERIFIED / PRESENT — locked played-card presentation | acd911ee9f97228e40f94b0e08cd049ba8ff3de0e9dca43730c65d6c9bc55a53 |
+| 01_MASTER_BANK/GRIFFIN_HOUSE_TABLE003_PLAYED_CARD_SIZE_STUDY_REVIEW.zip | VERIFIED / PRESENT — size-study evidence | bc3d40835165c1a71449b0a57efd15fb76f3ef50e2181270f5a8a509c7273c01 |
+| 01_MASTER_BANK/NEXT_ROLL_REMOVE_YOUR_PARTNER_2026-10-05.txt | VERIFIED / PRESENT — NEXT AUTHORIZED ROLL / NOT IMPLEMENTED | dd3fed897f77310bcfc0b9e97023769a90d3bed8eef9fc04812103eab12e2dfe |
+
+
+## 2026-10-06 — premium bird-card masters not supplied
+These files were named as owner-approved full-card masters. They were not attached and were not found in the Test repository. They were not invented or regenerated.
+
+- crimson_raven_two_card.png
+  Claimed SHA-256 (UNVERIFIED, owner-supplied, not computed here): 0dd8032896a12567441c1c304dd8f80d7f4abde63f4e4e92a25314e9b74995df
+  Intended status: LOCKED full-card master art for the Red 2 bird. Not a crowded-hand display proof.
+- ornate_crimson_eyed_raven_emblem.png
+  Claimed SHA-256 (UNVERIFIED, owner-supplied, not computed here): bb3e44f409167fca9d1d54f95f37fa826b2c9d229fe814fe74dc6a4955139ba9
+  Intended status: LOCKED full-card master art for the black bird. No wordmark. Not a crowded-hand display proof.

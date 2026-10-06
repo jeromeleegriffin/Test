@@ -1,0 +1,9 @@
+CARD ASSET PLAN — 2026-10-05
+Status: BANKED / NOT IMPLEMENTED / NOT DEPLOYED
+
+- Future premium cards are built as one master asset/system, then deck faces are generated consistently.
+- Do not artistically build every number independently.
+- Special templates only where genuinely needed (Rook/bird, card back).
+- Premium artwork must fit the approved played-card physical envelope.
+- Materially changing aspect ratio requires visual revalidation.
+- No poker suits / generic casino identity.

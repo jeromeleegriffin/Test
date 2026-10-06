@@ -1,0 +1,50 @@
+# AUTHORITY INDEX — MASTER BRAIN E
+Updated: 2026-10-05
+Supersedes Brain D as current only after pointer publication.
+Brain D and Brain C remain frozen.
+
+Status vocabulary:
+LOCKED, BANKED, PROTECTED, NOT IMPLEMENTED, NOT DEPLOYED, NEXT AUTHORIZED ROLL, PENDING VERIFICATION, EVIDENCE ONLY, SUPERSEDED, REJECTED.
+
+Visual authority is not runtime authority.
+Actual pixels / actual photos trump code.
+
+## Current written authority
+
+| File | Status | Scope | Not authority for |
+| --- | --- | --- | --- |
+| 01_MASTER_BANK/GRIFFIN_HOUSE_MASTER_BRAIN_CHECKPOINT_2026-10-05.txt | CURRENT CHECKPOINT | 2026-10-05 recovery state | missing pixels; deployment proof |
+| 01_MASTER_BANK/TABLE003_FINAL_PLAYED_CARD_PRESENTATION_AUTHORITY_2026-10-05.txt | LOCKED VISUAL PRESENTATION / NOT IMPLEMENTED / NOT DEPLOYED | played-card size, perspective, toss, orientations | Bid Box; production |
+| 01_MASTER_BANK/CARD_ASSET_PLAN_2026-10-05.txt | BANKED / NOT IMPLEMENTED | future premium card system | current faces |
+| 01_MASTER_BANK/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt | LOCKED CONSTRUCTION | seated-player layering | missing visual master |
+| 01_MASTER_BANK/NEXT_ROLL_REMOVE_YOUR_PARTNER_2026-10-05.txt | NEXT AUTHORIZED ROLL / NOT IMPLEMENTED | visible label only | partner logic |
+| 01_MASTER_BANK/ACTUAL_PIXELS_OVERRIDE_CODE_RULE_2026-10-05.txt | CURRENT PROCESS | pixels beat code | inventing missing pixels |
+| 01_MASTER_BANK/MARK_RETURN_PACKAGE_ZIP_ONLY_RULE_2026-10-05.txt | CURRENT PROCESS | Mark delivery | game changes |
+| 01_MASTER_BANK/NEW_CHAT_MASTER_BRAIN_STARTUP_RULE_2026-10-05.txt | CURRENT PROCESS | fresh chat | skipping the Brain |
+| 01_MASTER_BANK/GRIFFIN_HOUSE_NEW_CHAT_HANDOFF_2026-10-05.txt | CURRENT HANDOFF | next Zoey | substitute for the Brain |
+| MASTER_BANK.md section 31 | CURRENT WRITTEN ADDITION | E delta | replacement of frozen D |
+
+## Verified present — exact supplied bytes
+
+| File | Status | SHA-256 |
+| --- | --- | --- |
+| 02_VISUAL_REFERENCES/TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png | VERIFIED / PRESENT table/environment authority | e4765964c1112dac9bfbeeff0e7d4cfe489441e13c3780a8fd3b5f26949d143b |
+| 02_VISUAL_REFERENCES/TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png | VERIFIED / PRESENT; left runtime, right reference only | 362d8eef7a3599c9dc4b9ac0c139fdaf29e64f8898d7e846e99d16c439801f57 |
+| 02_VISUAL_REFERENCES/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png | VERIFIED / PRESENT seated-character direction | 0537f1fd1735f087395288bd9c7aa9544727d02a0ad3c2d58d945926a360be31 |
+| 01_MASTER_BANK/GRIFFIN_HOUSE_TABLE003_PLAYED_CARD_SIZE_STUDY_REVIEW.zip | VERIFIED / PRESENT size-study evidence | bc3d40835165c1a71449b0a57efd15fb76f3ef50e2181270f5a8a509c7273c01 |
+| 01_MASTER_BANK/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt | VERIFIED / PRESENT exact construction text | b405602e809b1ce470c92aa7189f78d3d7e03448a622061aeb18cdcf62dd2d89 |
+| 01_MASTER_BANK/TABLE003_FINAL_PLAYED_CARD_PRESENTATION_AUTHORITY_2026-10-05.txt | VERIFIED / PRESENT locked presentation | acd911ee9f97228e40f94b0e08cd049ba8ff3de0e9dca43730c65d6c9bc55a53 |
+| 01_MASTER_BANK/NEXT_ROLL_REMOVE_YOUR_PARTNER_2026-10-05.txt | VERIFIED / PRESENT next roll text; not implemented | dd3fed897f77310bcfc0b9e97023769a90d3bed8eef9fc04812103eab12e2dfe |
+
+## Retained from D/C
+Brain C and Brain D visual references remain in this package with their prior labels.
+They are historical or supporting. They are not substitutes for the missing 2026-10-05 masters.
+
+
+## 2026-10-06 F additions
+| File | Status | Scope | Not authority for |
+| --- | --- | --- | --- |
+| 01_MASTER_BANK/GRIFFIN_HOUSE_MASTER_BRAIN_DELTA_2026-10-06.txt | CURRENT WRITTEN CONTINUITY | owner decisions after Brain E | implementation or deployment; missing bird-card pixels |
+| crimson_raven_two_card.png | LOCKED ART DIRECTION — PIXELS PENDING VERIFICATION | Red 2 full-card master | crowded-hand display; claimed hash not computed here |
+| ornate_crimson_eyed_raven_emblem.png | LOCKED ART DIRECTION — PIXELS PENDING VERIFICATION | black bird full-card master | crowded-hand display; claimed hash not computed here |
+| seated-player studies after E | DESIGN/REFERENCE ONLY | placement/scale/occlusion conclusion | final character identity; runtime pixels |

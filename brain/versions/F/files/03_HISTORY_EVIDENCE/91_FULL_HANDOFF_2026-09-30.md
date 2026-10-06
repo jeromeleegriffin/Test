@@ -1,0 +1,555 @@
+# GRIFFIN HOUSE OF ROOKS --- FULL INCLUSIVE HANDOFF
+
+## Continuity checkpoint --- 2026-09-30
+
+This file is intended to be pasted/uploaded into a new ChatGPT chat so
+development can continue without losing the current state, rules,
+failures, approved designs, or diagnostic plan.
+
+------------------------------------------------------------------------
+
+# 1. PROJECT
+
+Production HTML/web card game: **Griffin House of Rooks**.
+
+Repository: https://github.com/jeromeleegriffin/Griffin-House-of-Rooks/
+
+Live game: https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/
+
+User/developer: Jerome Griffin.
+
+Collaboration style: - Work concretely; do not spend turns merely
+acknowledging. - Screenshot/video-first diagnosis. - Visual mockups
+before major visual implementation when appropriate. - Casual/direct
+collaboration is fine. - "The working screen wins." - Do not claim a
+visual fix worked from source assertions alone. - Do not claim a ZIP
+exists unless it was actually created and verified.
+
+------------------------------------------------------------------------
+
+# 2. CRITICAL ENGINEERING RULES
+
+## Surgical hands, wide-angle eyes
+
+When inspecting a screenshot, video, build, ZIP, code, or UI: - Review
+the full visible/structural context. - Separate confirmed findings from
+suspicions. - Protect known-working behavior. - Mention useful adjacent
+findings, but do not silently implement unrelated changes.
+
+## Build authorization
+
+Changes are BANKED until Jerome says: - ROLL - ROLL IT - BUILD IT - MAKE
+THE ZIP or unmistakable equivalent.
+
+When authorized: - Start from the exact latest authoritative source
+appropriate to the feature. - Apply only authorized/banked changes. -
+Validate syntax, package, runtime ownership, and version coherence. -
+Package and verify the ZIP exists. - Return the ZIP plus a copyable
+GitHub Desktop Summary. - Never claim physical-device success until
+Jerome confirms.
+
+## Failed-fix rule
+
+FAILED FIX = REMOVE, RESTORE, REDIAGNOSE, THEN REPLACE. NEVER LAYER.
+
+If a fix fails: 1. Treat it as disproven. 2. Remove/back out the failed
+attempt. 3. Return to last clean pre-attempt baseline. 4. Use what was
+learned. 5. Rebuild cleanly. 6. Do not stack another override onto the
+failed attempt.
+
+Important refinement: For visual failures, remove only the failed fix
+that was added. Do NOT delete established underlying structural code
+merely because its selector is associated with the visual element. First
+determine what established rules own: structure, responsive layout,
+mechanics, positioning, or presentation.
+
+## Locked components
+
+LOCKED = NO UNAUTHORIZED CHANGE. IT DOES NOT MEAN NO INVESTIGATION.
+Investigate fully if a locked component is implicated; ask before
+changing it.
+
+## Visual acceptance
+
+A source-code check cannot certify a visual requirement. For visual
+changes, the rendered screen is the acceptance test. Say "implemented in
+code" until Jerome confirms the screen.
+
+------------------------------------------------------------------------
+
+# 3. PERMANENT ROOK VISUAL IDENTITY RULE
+
+**NO POKER ELEMENTS IN GRIFFIN HOUSE OF ROOKS.**
+
+Never introduce: - clubs/hearts/diamonds/spades - poker chips - Hold'em
+terminology - Griffin House Hold'em styling
+
+Rook colors: - GREEN - RED - YELLOW - BLACK
+
+Represent them with Rook-specific color treatments, typography,
+ornamentation, Griffin/House styling, or original Rook iconography.
+
+Every visual roll must check for accidental poker imagery.
+
+------------------------------------------------------------------------
+
+# 4. IMAGE GENERATION RULE
+
+Do NOT generate/edit images unless Jerome explicitly asks. "mock,"
+"redesign," or "make a new one" counts as permission.
+Screenshots/mockups supplied for inspection are inspection-only unless
+editing is requested.
+
+------------------------------------------------------------------------
+
+# 5. SOURCE / BUILD HISTORY --- IMPORTANT
+
+Historical baselines: - Rook552: old authority historically. - Rook575:
+exact clean pre-Nest/card baseline. SHA-256:
+4b6df57a40cfd24a5c98914477aec817c457805e638b39014386a1002d732c93 -
+Rook585: Approved Restoration Roll. - Rook586: Shoot Moon correct; Bid
+nearly correct. - Rook600: important baseline before later layout/PICK
+experiments. - Rook611: successful compact Layout Tool. - Rook615:
+visually confirmed Bid recovery checkpoint. - Rook616: R615 + DONE
+button only. - Rook617: FAILED shared-slot attempt. - Rook618: current
+clean placement/ownership baseline for Bid + Stamp Trump, but NOT final
+styling or final Bid position. - Rook619: FAILED premium styling
+attempt. - Rook620: REJECTED visual/position attempt. - Rook621: manual
+forensic mapper; capture mechanism worked, but workflow was poor because
+confirmation/prompt appeared on phone. - Rook622: automatic full-game
+forensic recorder; REJECTED because it was extremely slow/heavy. -
+Rook623: lightweight auto-map + real bot speed bridge + element finder.
+This was built and validated, but subsequent improvements are now
+banked.
+
+### Rook618 artifact
+
+Rook618_EXACT_SHARED_BID_TRUMP_SLOT.zip SHA-256:
+ead15d65168fa5a14e7ba0318a976081fcc11c861465c8c627142fb23c43b7d9
+
+Rook618 should remain the clean fallback/source for diagnostic rebuilds
+when later diagnostics are rejected.
+
+### Rook623 artifact
+
+Rook623_LIGHT_AUTO_MAP_BOT_SPEED_ELEMENT_FINDER.zip SHA-256:
+9c5058b98790b734cba02e168b5ee5c77211b77ce7d16bbce4f841e1c7877062
+
+Rook623 was rebuilt clean from Rook618.
+
+Rook623 features: - lightweight automatic state mapping - existing real
+botSpeed bridge - BOT: BLITZ / NORMAL / SLOW controls - FIND ELEMENT
+search - search defaults to "spin" - visible matching elements listed
+with selector + X/Y/W/H - selected result gets outlined - EXPORT creates
+ROOK623_AUTO_GAME_MAP.json - no prompt dialogs - no expensive
+whole-stylesheet scan during normal automatic recording
+
+Source inspection confirmed the game already has:
+`let botSpeed = 'normal';` with valid modes: - blitz - normal - slow
+
+Existing bot-delay code uses:
+`botSpeed === 'blitz' ? 0.35 : botSpeed === 'slow' ? 1.85 : 1`
+
+Therefore BLITZ is only a delay multiplier. It is NOT true automated
+high-speed testing.
+
+------------------------------------------------------------------------
+
+# 6. CURRENT BID BOX PROBLEM
+
+Jerome has repeatedly shown the desired exact Bid location. Prior
+attempts failed because coordinate systems/ownership were
+misinterpreted.
+
+Important history: Rook611/615 Layout Tool readings included
+approximately: - #feltBidDock X13 Y388 331×191 Δ13,388 - #feltBidDock
+X14 Y390 331×191 Δ14,390
+
+But those readings were later proven NOT necessarily absolute screen
+coordinates.
+
+Rook618 used: - position: fixed - left: 50vw - transform:
+translateX(-50%) - top: 8px - width: 331px - height: 191px
+
+At one point that appeared visually centered, but Jerome later
+explicitly rejected the current Bid placement and said he had already
+shown the exact location.
+
+DO NOT assume Rook618 top:8/50vw is the final desired location.
+
+Before another Bid-position fix: - use forensic ownership/location
+evidence - identify exact coordinate system - establish one
+authoritative owner - do NOT mix styling redesign into the positioning
+repair - do NOT guess from Layout Tool Δ values
+
+Live portrait Bid owner: `#bidOverlayHost > #feltBidDock`
+
+------------------------------------------------------------------------
+
+# 7. APPROVED BID VISUAL DIRECTION
+
+Approved earlier mockup gen_id: 9627ef0c-cd09-498d-8ebb-a1a786a23457
+
+Locked direction: - premium black/gold furniture - integrated/docked
+into hand - sculpted gold ornamentation - title PLACE YOUR BID fully
+visible - red −5 - black amount - green +5 - green Bid amount - black
+Pass - hand immediately below - rich ornaments stay - no large center
+Griffin medallion covering title - small matching ornaments/griffins
+around title - console comes to the hand; do NOT move cards to achieve
+docking - wide proportions - amount is focal point - maximum about 20%
+larger than original pre-redesign box - opaque - top presentation layer
+while active - mechanics untouched
+
+Rook615 proved that suppressing `#feltBidDock` pseudo-elements removed
+the center medallion safely without destroying structure.
+
+------------------------------------------------------------------------
+
+# 8. STAMP THE TRUMP
+
+Live owner: `#actionPanel.trump-showdown`
+
+Populated by real `showTrumpUI()` in game.js.
+
+Important forensic discovery: The accidental poker symbols were
+generated by CSS pseudo-elements: - green::before content "♣" -
+red::before content "♥" - yellow::before content "♦"
+
+Those must never return.
+
+Approved Trump Stamp animation storyboard is frozen: gen_id:
+ebc3ad60-2874-4665-abc9-bcacfcc9877c
+
+Direction: - #4 SPINS UP - roughly 2--2.5 sec - metallic
+whoosh/shimmer/chime - obey SFX
+
+------------------------------------------------------------------------
+
+# 9. THE "SPINNING THING" / HARD-TO-CLICK ELEMENT
+
+Jerome wants to find where a spinning animated UI element lives so he
+can move it. Trying to grab it with the Layout Tool is difficult because
+it moves.
+
+New diagnostic requirement: - Never require catching a moving animation
+with the pointer. - Provide searchable/list-based UI inventory. - Show
+exact selector, parent, X/Y/W/H. - Allow selecting/highlighting the
+element from the list. - Ideally hand the selected live element directly
+to the existing Layout/PICK system.
+
+Useful knowledge recovered from the uploaded:
+`Rook604_ALL_UI_DIAGNOSTIC_STAGE(1).zip`
+
+Rook604 already contained a useful ALL UI inventory concept: - classify
+elements LIVE / HIDDEN / DYNAMIC - PREV/NEXT cycling - highlight live
+UI - preview hidden UI without firing its game event - hand selected
+live element directly to existing PICK tool - zero-size hidden previews
+are NON-AUTHORITATIVE and must not be treated as real coordinates
+
+Also learned/preserved from that diagnostic lineage: - Trump animation
+lives under `HOR_TRUMP_FX` plus existing stamp-animation classes. -
+`showTrumpUI` owns the Stamp-the-Trump selector. - `showBidUI` owns the
+center Bid controls. - older-looking files such as `rook512-room.js` and
+`polish.js` remain behavior-coupled and MUST NOT be deleted just because
+they look legacy. - a large set of old Bid style owners was removed in
+Rook597; do not blindly resurrect old `#feltBidDock` rules.
+
+This Rook604 knowledge MUST carry forward.
+
+------------------------------------------------------------------------
+
+# 10. MISSING GAME MENU
+
+The Game Menu has been lost somewhere in development.
+
+Jerome does NOT want the old ugly menu merely restored.
+
+BANKED redesign: - compact full-screen overlay - table subtly visible
+behind it - header GAME MENU + clear × Close - high-contrast bars - dark
+charcoal/black bars - bright ivory text - thin gold edge - clear
+chevron - no brown-on-brown - compact finger-friendly rows - accordion
+behavior: only one section open - categories: - Sound - Game - Display -
+Accessibility - Help & Info - preserve existing working settings and
+handlers - diagnostics separate from player menu - no poker imagery -
+black/gold/walnut Griffin House of Rooks styling
+
+Do NOT mix menu redesign into unrelated Bid-position fixes unless
+explicitly authorized.
+
+------------------------------------------------------------------------
+
+# 11. CURRENT DIAGNOSTIC / AUTO TEST PLAN --- BANKED AND AUTHORIZED BY "ROLL"
+
+Immediately before requesting this handoff, Jerome authorized rolling
+the next diagnostic system.
+
+However, this handoff request interrupted execution. Therefore the next
+chat should treat the following as AUTHORIZED work to execute, but
+should still start from a clean appropriate baseline and validate
+carefully.
+
+## Mapper bar must be movable
+
+Jerome needs to be able to move the mapper itself because it can cover
+UI.
+
+Required behavior: - drag the AUTO MAP header/bar to move the whole
+diagnostic strip anywhere - buttons still work normally - bar stays
+where placed during the session - mapper excludes its own movement from
+forensic captures - do not generate junk states when mapper moves
+
+## AUTO TEST
+
+Jerome requested: \> auto test automatically replaces me with a bot and
+records 5 games
+
+Required behavior: - one AUTO TEST control - temporarily replace
+Jerome/human seat with a bot using the EXISTING bot takeover path - run
+the full table automatically - complete FIVE FULL GAMES, not five
+hands - mapper records automatically throughout - show obvious progress:
+`AUTO TEST • GAME 2/5 • RECORDING` - STOP TEST available at all times -
+after game 5: - stop automatically - restore human seat - leave
+recording ready for export - diagnostic-only; must not leak into
+production behavior
+
+## AUTO TEST speed
+
+Current BLITZ is insufficient because it only multiplies bot delay by
+0.35 and still feels extremely slow.
+
+AUTO TEST MAX should accelerate PRESENTATION WAITS safely: -
+bot-thinking pauses - card animation waits where safe - between-trick
+pauses - bid pauses - hand-transition delays - similar cosmetic timing
+
+It must NOT: - skip actual bids - skip discards - skip card plays - skip
+tricks - skip hands - fake scoring - alter rules - alter AI decisions -
+change dealing logic - change multiplayer protocol
+
+Goal: Execute the real game much faster, not skip gameplay.
+
+Before implementing speed-up, inspect actual timing paths. Accelerate
+only safe waits.
+
+## Session-wide deduplication
+
+Jerome specifically asked whether it can know not to snap states when
+they are the same. YES; this is required.
+
+Do NOT merely compare to previous state.
+
+Maintain a session-wide fingerprint index: - first occurrence of unique
+meaningful state gets full snapshot - repeated occurrence uses tiny
+timeline reference to existing state - increment occurrence count - A →
+B → A should NOT save another full A snapshot -
+geometry/visibility/ownership changes that matter create a new
+fingerprint - important temporary UI must still be captured before
+disappearing
+
+This is intended to allow five full games of coverage without thousands
+of duplicate snapshots or a huge export.
+
+------------------------------------------------------------------------
+
+# 12. WHY ROOK622 FAILED
+
+Rook622 automatic recorder became "slow as hell."
+
+Cause: It performed expensive work during automatic snapshots: -
+matching CSS rule scans - computed styles - pseudo-elements - ancestry -
+stacking for essentially every DOM element.
+
+That architecture is rejected.
+
+Correct architecture: DURING PLAY: - lightweight state/timeline
+capture - IDs/classes - visibility - exact rectangles - key parent
+relationships - relevant mutations
+
+IMPORTANT STATES: - targeted deep capture for relevant owners only
+
+EXPORT: - lightweight timeline - unique-state dictionary - occurrence
+counts - targeted deep forensic captures
+
+Never return to full-DOM stylesheet scanning on every state.
+
+------------------------------------------------------------------------
+
+# 13. THREE-PHASE TEST REQUIREMENT
+
+Every roll should use Jerome's required three-phase thinking/test
+process.
+
+## Phase 1 --- Ownership/regression
+
+-   trace DOM → JS → CSS → runtime path
+-   identify duplicate owners
+-   protect gameplay
+-   remove failed attempt before replacement
+-   confirm exact clean source
+
+## Phase 2 --- Intent
+
+For visuals: - compare to screenshot/approved design - confirm exact
+requested result - check whether another element moved accidentally -
+check whether old owner can return
+
+For diagnostics: - automatic behavior obvious - mapper lightweight -
+moving mapper works - element inventory works - AUTO TEST uses real bot
+takeover - progress/stop/restore work - session-wide dedupe works
+
+## Phase 3 --- Adversarial
+
+Try to prove the work wrong: - duplicate selectors - !important
+conflicts - old runtime paths - orientation owners - stale animations -
+hidden legacy DOM - competing positioning - observer self-loops -
+timer/mutation spam - huge unbounded memory - temporary states missed -
+export failures - bot takeover not restored - speed-up accidentally
+changing game logic - version incoherence
+
+Source assertions alone are not visual acceptance.
+
+------------------------------------------------------------------------
+
+# 14. VERSION COHERENCE INVARIANT
+
+Every roll must fail packaging unless these agree: - index.html
+`var BUILD` - `window.HOR_PAGE_BUILD` - `window.HOR_LIVE_VERSION` -
+`window.HOR_BUILD` - game.js APP_VERSION/build fallback - service worker
+cache name - script/style/asset `?v=`
+
+No gameplay/visual changes hidden inside version fixes.
+
+------------------------------------------------------------------------
+
+# 15. PROTECTED / FROZEN FEATURES
+
+## Scoreboard/header
+
+Desired: - no ugly brown menu box - dropdown arrow + match score with
+small backing only Rook600 attempted this; physical confirmation
+uncertain.
+
+## Thinking/status
+
+Desired: - bot status above avatar, centered - human active = YOUR
+TURN - human waiting = no status - BOT takeover at bottom uses bot
+status
+
+## Hand History
+
+Presentation redesign may be done later; preserve data/scoring.
+
+## Bid badges
+
+Historically troublesome. If revisited, forensic reset first. One
+authoritative positioner. Do not move avatars.
+
+## Shoot the Moon
+
+Approved/frozen: gen_id: 1f114ec3-7f67-4766-9f39-449d3eeba7f6
+
+Preserve artwork, size, framing, wording, buttons, placement unless
+architecture investigation proves a specific issue and Jerome approves
+change.
+
+Asset hash:
+d24f36d5dcbeef60b580ae7eed012d8d7052ddc2e577620018d5c5b2a9564cac
+
+## Nest
+
+Protected behavior: Reveal ON: - six backs - top flips/reveals - other
+five disappear - top remains through bidding
+
+Reveal OFF: - all six may disappear after deal/hold as intended
+
+Do not recreate removed backs or duplicate popup.
+
+## Card back
+
+Approved: `assets/images/cardback-griffin-clean.jpg` No clubs/poker
+suits.
+
+## Raven
+
+Approved gen_id: 38b38296-ac89-401b-8d18-d5f37e2636e1
+
+------------------------------------------------------------------------
+
+# 16. PROTECTED SYSTEMS
+
+Do not casually change: - scoring - AI gameplay/decision logic -
+dealing - multiplayer protocol - progression/settings/player data -
+avatars except approved visual work - table/room geometry - Nest rules -
+Bid mechanics - Rook rules - Shoot Moon mechanics
+
+Investigation is allowed. Changes require authorization when
+locked/protected.
+
+------------------------------------------------------------------------
+
+# 17. CACHE / DEVICE
+
+Jerome uses physical Samsung S24 model SM-S921U for important phone
+testing. Do not call a screenshot "physical S24" unless Jerome says it
+is. Remote DevTools can match physical dimensions but is not
+physical-device proof.
+
+Do not casually clear browser/site data. Progression/settings could be
+lost.
+
+Primary orientation is portrait; landscape is expanded. 800×360 should
+remain functional.
+
+------------------------------------------------------------------------
+
+# 18. CURRENT PRIORITY ORDER
+
+At handoff time, the immediate priority is:
+
+1.  Build the authorized next diagnostic/AUTO TEST roll cleanly.
+2.  Preserve lessons from Rook604 inventory system.
+3.  Make mapper bar movable.
+4.  Add AUTO TEST that replaces human with existing bot takeover.
+5.  Run five full games automatically.
+6.  Add STOP TEST and human restoration.
+7.  Add safe MAX diagnostic pacing by accelerating waits only.
+8.  Implement session-wide unique-state dedupe + occurrence counts.
+9.  Keep/find hard-to-click moving UI through searchable inventory/list.
+10. Export one compact forensic JSON.
+11. Use resulting evidence to identify/move the spinning UI element and
+    finally resolve stubborn ownership/positioning issues such as Bid.
+12. Later rebuild the missing Game Menu using the banked compact
+    high-contrast design.
+
+Do NOT jump straight into another Bid positioning guess.
+
+------------------------------------------------------------------------
+
+# 19. NEXT CHAT START INSTRUCTION
+
+When this file is uploaded to a new chat, say:
+
+"Use this handoff as the authoritative continuity context for Griffin
+House of Rooks. Continue from the current authorized AUTO TEST/forensic
+mapper roll. Preserve all locked/protected systems and the failed-fix
+rules. Review any exact source ZIP I provide before modifying it. The
+working screen wins."
+
+If the exact required source is not attached/available, search the
+user's files/library for it before asking Jerome to re-upload it. Do not
+silently substitute an older build.
+
+------------------------------------------------------------------------
+
+# 20. FINAL TRUST RULES
+
+-   Never pretend progress happened.
+-   Never claim execution that did not occur.
+-   Never claim a visual result is correct until the rendered screen
+    confirms it.
+-   Never layer a second patch on a failed first attempt.
+-   Never guess UI ownership when forensic evidence can establish it.
+-   Never generate images without explicit permission.
+-   Never introduce poker imagery into Rook.
+-   Never sacrifice known-working gameplay for a visual fix.
+-   When ownership is uncertain: MAP FIRST.
+-   The working screen wins.

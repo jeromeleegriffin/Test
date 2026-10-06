@@ -1,0 +1,159 @@
+GROK — GRIFFIN HOUSE OF ROOKS
+MASTER BRAIN DURABLE SYNC — 2026-10-05 CHECKPOINT
+
+PURPOSE:
+Synchronize the durable external/GitHub Griffin House Master Brain with the current ChatGPT Master Brain checkpoint before Jerome moves to a fresh main ChatGPT chat.
+
+DO NOT modify the game.
+DO NOT modify R712.
+DO NOT deploy gameplay.
+DO NOT redesign anything.
+DO NOT change production/player pointers merely because this sync is occurring.
+THIS IS MASTER-BRAIN / DOCUMENTATION CONTINUITY WORK ONLY.
+
+SOURCE OF TRUTH FOR THIS SYNC:
+Use the current ChatGPT Master Brain package/files supplied by Jerome/Zoey, especially:
+- GRIFFIN_HOUSE_MASTER_BRAIN_CHECKPOINT_2026-10-05.txt
+- GRIFFIN_HOUSE_NEW_CHAT_HANDOFF_2026-10-05.txt
+- ACTUAL_PIXELS_OVERRIDE_CODE_RULE_2026-10-05.txt
+- NEW_CHAT_MASTER_BRAIN_STARTUP_RULE_2026-10-05.txt
+- MARK_RETURN_PACKAGE_ZIP_ONLY_RULE_2026-10-05.txt
+- current Visual Authorities files
+- TABLE003_FINAL_PLAYED_CARD_PRESENTATION_AUTHORITY_2026-10-05.txt
+- GRIFFIN_HOUSE_TABLE003_PLAYED_CARD_SIZE_STUDY_REVIEW.zip
+- SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt
+- SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png
+- TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png
+- TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png
+- NEXT_ROLL_REMOVE_YOUR_PARTNER_2026-10-05.txt
+
+============================================================
+CURRENT AUTHORITY TO PRESERVE
+============================================================
+
+TABLE-003:
+- LOCKED.
+- seated-player physical table
+- premium walnut
+- deep blue felt
+- strong natural foreshortening
+- broad near rail
+- narrower far end
+- zero chairs
+- fireplace shifted RIGHT of top player
+- real runtime comparison/source remains actual-game-pixel authority
+- generated references are not authority for invented UI
+
+PLAYED CARDS:
+LOCKED VISUAL PRESENTATION:
+- B Natural Toss
+- E table-derived perspective
+- seat-facing orientation
+- 15% smaller final size than original 88 × 126 renderer footprint
+- final approximate pre-projection envelope 74.8 × 107.1 CSS px
+- shrink/scale around fixed card centers
+
+Locked final orientations:
+- Dagger RED 1: +100°
+- Cinder RED 11: +175°
+- Crow RED 5: -98°
+- Jerome RED 13: +9°
+
+Preserve the conceptual split:
+SEAT-FACING BASE ORIENTATION + NATURAL TOSS VARIATION.
+
+CARD ASSET PLAN:
+- future premium cards are built as one master asset/system, then deck faces generated consistently
+- do not artistically build every number independently
+- special templates only where genuinely needed (e.g. Rook/bird, card back)
+- premium artwork must fit the approved played-card physical envelope
+- materially changing aspect ratio requires visual revalidation
+- no poker suits / generic casino identity
+
+PLAYER DIRECTION:
+- scene-integrated seated characters
+- Cinder top/far
+- Dagger left
+- Crow right
+- NO bottom Jerome avatar
+- Jerome = first-person seat/camera/hand
+- natural alpha silhouettes, no visible avatar medallions
+- deliberate physical occlusion/layering
+- THE TABLE MUST BLOCK THE PEOPLE
+- THE TABLE MUST NOT BLOCK THE GAME
+- body/torso behind rail; selected foreground hand/forearm may deliberately rest on rail
+- character pixels do not penetrate table/felt
+
+UI / PROTECTED:
+- remove visible “YOUR PARTNER” on next authorized roll only
+- Bid Box / Bid Dock protected
+- R712 protected
+- no production experimentation
+- landscape protected unless authorized
+- exactly one speed control in header: 1× | 3× | MAX
+- Last Trick future UX remains banked separately and is not part of this sync
+
+============================================================
+GLOBAL PROCESS RULES TO SYNC
+============================================================
+
+- THE WORKING SCREEN WINS.
+- IF THE PIXELS EXIST, USE THE PIXELS.
+- ACTUAL PIXELS / ACTUAL PHOTOS TRUMP CODE.
+- THE PHYSICAL ART ADAPTS AROUND THE GAME. THE GAME DOES NOT ADAPT AROUND THE ART.
+- FAILED FIX = REMOVE / RESTORE / REDIAGNOSE / REPLACE.
+- SURGICAL HANDS, WIDE-ANGLE EYES.
+- TRUST THE DIFF.
+- PLAY FIRST → DISCOVER LATER.
+
+TEAM ROLES:
+- Jerome = owner/director
+- Zoey = main ChatGPT/project brain/reviewer
+- Mark = ChatGPT Work/heavy runtime/file/browser investigation
+- Grok = GitHub/code publishing/external durable Master Brain synchronization
+
+MARK DELIVERY RULE:
+Mark does full verification but puts evidence/reports/screenshots/hashes/diffs INSIDE the returned ZIP.
+Chat response should normally be minimal: identify/provide the ZIP.
+If blocked or verification fails, state that clearly in chat.
+
+PROMPT/HANDOFF RULE:
+- Before substantive Mark/Grok prompts, Zoey normally discusses intended contents with Jerome and asks whether anything should be added unless already authorized.
+- Very long prompts/handoffs should be delivered as downloadable .txt files.
+
+NEW CHAT RULE:
+Whenever preparing a fresh main ChatGPT chat:
+1. Bank all new authority first.
+2. Verify it exists.
+3. Sync durable external Master Brain when needed.
+4. Create fresh-chat handoff.
+5. Handoff MUST tell next Zoey to GO TO MASTER BRAIN FIRST and reconstruct current authority from it before doing project work.
+
+============================================================
+WHAT GROK SHOULD DO
+============================================================
+
+1. Inspect the current external/GitHub Griffin House Master Brain structure.
+2. Preserve frozen/historical authorities; do not overwrite history blindly.
+3. Add/update a clearly current 2026-10-05 checkpoint using the supplied checkpoint/handoff and authority files.
+4. Preserve superseded references as historical where appropriate and clearly mark the current authority.
+5. Ensure current status vocabulary is unambiguous: LOCKED / BANKED / PROTECTED / NOT IMPLEMENTED / NOT DEPLOYED / NEXT AUTHORIZED ROLL, as appropriate.
+6. Include the current played-card authority, card-asset plan, player authority, actual-pixels rule, Mark ZIP-only workflow rule, long-prompt rule, and new-chat startup rule.
+7. Ensure recovery/readme/pointer documentation makes the 2026-10-05 checkpoint easy to find first.
+8. Produce hashes/manifest or equivalent durable verification for changed documentation/assets.
+9. Verify only intended Master Brain/documentation paths changed.
+10. Do NOT modify the game/runtime/production site as part of this sync.
+11. Return a concise confirmation plus one ZIP/report package containing the exact diff, manifest/hashes, final external paths, and verification evidence.
+
+============================================================
+STOP CONDITION
+============================================================
+
+STOP if synchronization would require changing game/runtime/production files or protected R712.
+
+Do not improvise around a repository-structure conflict. Report it.
+
+SUCCESS CONDITION:
+The external/GitHub Master Brain is a durable, self-contained recovery source from which a fresh Zoey can recover the 2026-10-05 project state without depending on this old chat.
+
+END.
