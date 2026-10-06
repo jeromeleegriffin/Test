@@ -1,0 +1,6 @@
+NEXT ROLL — REMOVE YOUR PARTNER — 2026-10-05
+Status: NEXT AUTHORIZED ROLL / NOT IMPLEMENTED / NOT DEPLOYED
+
+On the next authorized roll only, remove the visible YOUR PARTNER presentation label.
+Presentation only. Do not alter partner logic. Do not leave a gap or ghost.
+This sync does not perform that roll.

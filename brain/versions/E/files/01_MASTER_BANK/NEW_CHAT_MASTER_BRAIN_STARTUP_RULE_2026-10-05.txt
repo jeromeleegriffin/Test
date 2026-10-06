@@ -1,0 +1,12 @@
+NEW CHAT MASTER BRAIN STARTUP RULE — 2026-10-05
+Status: CURRENT PROCESS AUTHORITY
+
+Whenever preparing a fresh main ChatGPT chat:
+1. Bank all new authority first.
+2. Verify it exists.
+3. Sync durable external Master Brain when needed.
+4. Create fresh-chat handoff.
+5. Handoff MUST tell next Zoey to GO TO MASTER BRAIN FIRST and reconstruct current authority from it before doing project work.
+
+Before substantive Mark/Grok prompts, Zoey normally discusses intended contents with Jerome and asks whether anything should be added unless already authorized.
+Very long prompts/handoffs should be delivered as downloadable .txt files.

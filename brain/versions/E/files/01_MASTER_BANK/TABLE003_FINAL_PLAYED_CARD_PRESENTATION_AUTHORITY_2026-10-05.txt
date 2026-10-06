@@ -1,0 +1,24 @@
+TABLE003 FINAL PLAYED CARD PRESENTATION AUTHORITY — 2026-10-05
+Status: LOCKED VISUAL PRESENTATION
+Runtime status: NOT IMPLEMENTED / NOT DEPLOYED by the 2026-10-05 Master Brain sync.
+Provenance: written lock from the supplied Grok sync instruction. The size-study review zip was not attached and was not invented.
+
+Presentation:
+- B Natural Toss
+- E table-derived perspective
+- seat-facing orientation
+- 15% smaller final size than original 88 x 126 renderer footprint
+- final approximate pre-projection envelope 74.8 x 107.1 CSS px
+- shrink/scale around fixed card centers
+
+Locked final orientations:
+- Dagger RED 1: +100 degrees
+- Cinder RED 11: +175 degrees
+- Crow RED 5: -98 degrees
+- Jerome RED 13: +9 degrees
+
+Preserve the conceptual split:
+SEAT-FACING BASE ORIENTATION + NATURAL TOSS VARIATION.
+
+Not authority for: Bid Box, scoring, trump, landscape, production deployment, or inventing card faces.
+Material aspect-ratio change requires visual revalidation.

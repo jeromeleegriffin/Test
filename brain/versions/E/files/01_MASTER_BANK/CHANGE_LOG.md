@@ -1,0 +1,63 @@
+# MASTER BANK DHANGE LOG
+
+## 2026-10-04 A — Initial comprehensive Master Bank
+Created as a whole-project continuity bank, not merely an asset-construction bank.
+
+Captured:
+- project north star / quiet-premium philosophy;
+- universal Premium Bid Box physical-asset construction standard;
+- dynamic/hybrid exception;
+- player-seat perspective requirement for table;
+- physical felt as part of finished table treatment;
+- table 001/002 rejection lessons;
+- Bid Box authority;
+- card holder/tray bank;
+- Trump Stamp bank;
+- approved card back;
+- library background;
+- Last Trick/Last 3 center interaction;
+- trump gap/marking;
+- Shoot the Moon;
+- XP/House Level/avatar-frame progression;
+- new-player experience;
+- Experience More rooms;
+- speed control;
+- recovered portrait geometry;
+- landscape freeze;
+- R712/runtime/staging authority;
+- Work vs Grok labor division;
+- failed-fix and reserved-space rules;
+- TABLE-003 next-job requirements;
+- rejected/superseded approaches;
+- permanent Master Bank update procedure.
+
+Future updates should append dated entries and revise MASTER_BANK.md where the authoritative bank changes.
+
+## 2026-10-04 B — MASTER BRAIN expansion
+Added explicit operating rules and aggravation-prevention memory: GEN lock, P rule, ROLL/CONTINUE behavior, adjustable phone-vs-PC worker flow, search-first rule, prompt preflight, visual acceptance, exact-reference rule, Rook identity guard, and repeated-mistake list. Added spinner rotation, results ideas, mapper details, long-name test, physical-UI principle, background artifact lesson, Unity future, plus older full handoff/project-history evidence.
+
+## 2026-10-04 C — Perspective breakthrough + BANK BEFORE RISK
+Added the major table-perspective breakthrough and the real Bid-Box-active portrait screenshot.
+Banked subtle slightly-elevated player perspective as the target, not dramatic first-person perspective.
+Recorded that protected gameplay/cards remain undistorted while finished physical table artwork supplies perspective cues.
+Added card/Bid Box coexistence risk and rule that table art adapts to gameplay geometry.
+Classified the perspective breakthrough image, angle comparison, and rejected invented-UI generation.
+Added permanent BANK BEFORE RISK and screenshot/evidence-banking rules so ChatGPT proactively offers a Master Bank update before meaningful project knowledge is endangered by long-chat context loss.
+
+
+## 2026-10-05 D — Durable recovery update
+Isolated candidate built from frozen Brain C. Brain C was not rewritten.
+Added fresh-start recovery document, authority index, seated-player written construction authority, missing-source record, and verbatim 2026-10-05 handoff evidence.
+Recorded TABLE-003 physical direction as locked written authority and section 24 as superseded for status.
+Did not invent missing TABLE-003 or seated-player PNGs.
+Did not modify R712 or game files.
+Current pointer changes only after external verification, in a later commit.
+
+
+## 2026-10-05 — Master Brain E
+- Frozen Brain D was not rewritten.
+- Banked the played-card presentation lock from the supplied Grok sync instruction.
+- Banked card-asset plan, actual-pixels rule, Mark ZIP-only rule, new-chat startup rule, and fresh-chat handoff.
+- YOUR PARTNER removal remains NEXT AUTHORIZED ROLL / NOT IMPLEMENTED.
+- Named 2026-10-05 pixel masters and the played-card size-study zip were still not supplied and were not invented.
+- No game, R712, player pointer, or production file was modified.

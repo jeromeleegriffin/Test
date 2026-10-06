@@ -1,0 +1,88 @@
+SCENE-INTEGRATED SEATED PLAYER MASTER CONSTRUCTION AUTHORITY
+Date: 2026-10-05
+Status: CURRENT PLAYER-CONSTRUCTION WRITTEN AUTHORITY
+Source: owner handoff transcribed into Master Brain D. The companion visual PNG was not supplied and is not stored here.
+Scope: layer, occlusion, and build rules for seated characters.
+Not authority for: card values, card count, card arrangement, card geometry, gameplay state, Bid Box, Bid Dock, score geometry, runtime UI geometry, exact table geometry, exact room geometry.
+For those dimensions: real runtime and locked table authority win.
+
+THE DESIRED RESULT IS NOT MERELY BORDERLESS AVATARS.
+The design direction is SCENE-INTEGRATED SEATED CHARACTERS.
+Cinder, Dagger, and Crow should feel like real people physically seated around the table.
+
+No visible avatar container.
+No circle, oval, rectangle, shield, medallion, or ornate portrait frame.
+Natural alpha silhouette is the avatar boundary.
+ZERO VISIBLE CHAIRS.
+The unseen chair/lower body is inferred from pose, table occlusion, scale, arm interaction, and perspective.
+
+AUTHORITATIVE DEPTH STACK
+LAYER 0  Room/background.
+LAYER 1  Seated character torsos/shoulders.
+LAYER 2  Authoritative physical table rail/apron occlusion.
+LAYER 3  Only intentionally foregrounded hands/forearms resting ON TOP of the rail.
+LAYER 4  Felt/play surface.
+LAYER 5  Legitimate played cards/game objects.
+LAYER 6  Necessary game UI.
+
+THE TABLE MUST BLOCK THE PEOPLE.
+THE TABLE MUST NOT BLOCK THE GAME.
+
+TABLE RAIL = HARD CHARACTER OCCLUDER
+The wooden table rail is an authoritative occlusion mask for character bodies.
+Character torso/clothing/body pixels do not have permission to pass through the wooden rail or appear on the felt.
+No torso, clothing, shoulder, waist, or accidental arm penetration.
+No ghost body pixels, transparency through the rail, feathering through the rail, or body painted onto felt.
+If a body conflicts with the rail, the rail wins.
+Hide more of the body if necessary.
+Do not move or redesign the table to accommodate the character.
+
+FOREGROUND ARM/HAND EXCEPTION
+A deliberately separated hand or forearm may come forward and rest physically on top of the wooden rail.
+It must approach the rail naturally, make believable contact, rest on the top surface, not emerge through the side of the wood, not pass through the wood, and not invade the felt.
+Crow's successful forearm treatment is the reference concept.
+
+DAGGER FAILURE LESSON
+Dagger repeatedly failed because his torso/clothing penetrated the left wooden rail and appeared inside the table.
+Do not rediscover this failure.
+The inside edge of the left wooden rail is an absolute character-body clipping boundary.
+Torso/chest/clothing/lower shoulder/waist/background arm portions stay behind the rail.
+If necessary, show less Dagger rather than violating the table.
+The failed images were not promoted to authority.
+
+CROW SUCCESS
+Torso behind table, plus optional forearm/hand naturally resting on top of the rail.
+This made Crow appear physically seated rather than pasted onto the interface.
+
+CINDER
+Far/top table seat.
+Not positioned according to fireplace center.
+Naturally somewhat smaller because of perspective.
+Head, shoulders, upper chest / limited torso.
+Lower body disappears behind the far rail.
+Do not float her over the table or place her on the felt.
+Do not move the fireplace to accommodate her.
+
+BOTTOM HUMAN PLAYER
+There is no bottom/Jerome avatar in this physical player direction.
+The human player is the first-person seated camera, bottom hand/cards, and player interaction.
+Do not create a fourth seated character at the bottom.
+
+EDGE / LIGHTING
+Restrained environmental integration.
+Approximately 1-2 physical-phone-pixel perceptual dark separation where needed.
+Dark charcoal/brown-black, adaptive rather than uniform.
+Stronger only where dark hair/clothing crosses dark background.
+Restrained room/fireplace rim light where physically appropriate.
+Tight soft contact/depth shadow.
+Do not use cartoon outlines, continuous orange halos, neon glow, magical particles, giant drop shadows, or sticker treatment.
+
+PLAYER POSITIONING
+Historical protected R712 avatar/name coordinates are baseline/runtime evidence.
+They are not automatically the final TABLE-003 seated-character positions.
+Cinder far/top. Dagger left. Crow right. Jerome first-person bottom, no visible avatar.
+Do not blindly copy old circular-avatar coordinates into the final scene-integrated implementation.
+
+CARD SCALE
+Approval of TABLE-003 did not lock final card size.
+Card scale/readability is a separate future design decision.
