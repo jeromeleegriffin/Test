@@ -1,0 +1,17 @@
+PIXEL LOCK — 2026-10-06
+Status: VERIFIED / PRESENT. Exact supplied bytes. Not regenerated.
+Brain F remains frozen. This file records the lock that F could not complete.
+
+crimson_raven_two_card.png
+SHA-256 0dd8032896a12567441c1c304dd8f80d7f4abde63f4e4e92a25314e9b74995df
+2378945 bytes
+LOCKED full-card master art for the Red 2 bird.
+Not authority for crowded-hand display or runtime implementation.
+
+ornate_crimson_eyed_raven_emblem.png
+SHA-256 bb3e44f409167fca9d1d54f95f37fa826b2c9d229fe814fe74dc6a4955139ba9
+2449865 bytes
+LOCKED full-card master art for the black bird.
+Not authority for crowded-hand display or runtime implementation.
+
+No other 2026-10-06 pixel authority was supplied. No game roll, TABLE-003 change, Bid Box change, or production deployment is authorized.

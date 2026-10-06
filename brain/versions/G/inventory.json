@@ -1,0 +1,226 @@
+{
+  "brainVersion": "G",
+  "zipSha256": "a975ba27774c30003df88497638ff5443dcd0d4d884572fb186e8c4ebd12bf61",
+  "previousFrozenVersion": "F",
+  "verifiedPixelLocks": {
+    "crimson_raven_two_card.png": "0dd8032896a12567441c1c304dd8f80d7f4abde63f4e4e92a25314e9b74995df",
+    "ornate_crimson_eyed_raven_emblem.png": "bb3e44f409167fca9d1d54f95f37fa826b2c9d229fe814fe74dc6a4955139ba9"
+  },
+  "files": [
+    {
+      "path": "00_START_HERE/FILE_MANIFEST.md",
+      "bytes": 6562,
+      "sha256": "b67b3338740cd3b247105e7d38f61d5e4c416f00f6307d021e2dbf0e91ff9ce5"
+    },
+    {
+      "path": "00_START_HERE/00_READ_FIRST_GRIFFIN_HOUSE_RECOVERY.md",
+      "bytes": 12329,
+      "sha256": "8dba182600468b4880216d1b428742aa2670ea855f28533bce904845d1ebddaf"
+    },
+    {
+      "path": "00_START_HERE/JEROME_OPERATING_RULES.md",
+      "bytes": 9634,
+      "sha256": "fff82c32274e58d99ad7a2b44f138f7dc8a3d363ebe63e5fc460b44e9cbb5774"
+    },
+    {
+      "path": "00_START_HERE/START_HERE.md",
+      "bytes": 1106,
+      "sha256": "8b54703bd843fb82d5ed945d2f7c1c65e486afc105021f9d45e920529761b2bc"
+    },
+    {
+      "path": "01_MASTER_BANK/ACTUAL_PIXELS_OVERRIDE_CODE_RULE_2026-10-05.txt",
+      "bytes": 308,
+      "sha256": "e90e972138dea555b93c88cfb8992115b5126486092ff0cb3686119349ab8a90"
+    },
+    {
+      "path": "01_MASTER_BANK/AUTHORITY_INDEX.md",
+      "bytes": 4901,
+      "sha256": "7cd8789d7ac4bd8761e0fdb0f45d73236b4394e6ae768b58915e801079dd3892"
+    },
+    {
+      "path": "01_MASTER_BANK/CARD_ASSET_PLAN_2026-10-05.txt",
+      "bytes": 493,
+      "sha256": "39b8bc0ab1bfe11a42080ca3f10414a643677fb6c6344994a89dd9f741b540be"
+    },
+    {
+      "path": "01_MASTER_BANK/CHANGE_LOG.md",
+      "bytes": 5187,
+      "sha256": "c193296534c1829a9d22183733b910aadaa238701ebf4961bf9c3645d6b1b65e"
+    },
+    {
+      "path": "01_MASTER_BANK/GRIFFIN_HOUSE_MASTER_BRAIN_CHECKPOINT_2026-10-05.txt",
+      "bytes": 4647,
+      "sha256": "2b16184de1d89e73da7493ffd4b1f8f9444400e487e24721193437deb70c0fb9"
+    },
+    {
+      "path": "01_MASTER_BANK/GRIFFIN_HOUSE_MASTER_BRAIN_DELTA_2026-10-06.txt",
+      "bytes": 10253,
+      "sha256": "6bc53fd55d138d443c893ea16f90ae345ddb38baf3dac3d929fa081d430eb2d6"
+    },
+    {
+      "path": "01_MASTER_BANK/GRIFFIN_HOUSE_NEW_CHAT_HANDOFF_2026-10-05.txt",
+      "bytes": 1193,
+      "sha256": "3bda61bf7a8dadf004127969abe1fe1a02a3d38d7c492ad81e53f303bf6a1d35"
+    },
+    {
+      "path": "01_MASTER_BANK/GRIFFIN_HOUSE_TABLE003_PLAYED_CARD_SIZE_STUDY_REVIEW.zip",
+      "bytes": 10280661,
+      "sha256": "bc3d40835165c1a71449b0a57efd15fb76f3ef50e2181270f5a8a509c7273c01"
+    },
+    {
+      "path": "01_MASTER_BANK/MARK_RETURN_PACKAGE_ZIP_ONLY_RULE_2026-10-05.txt",
+      "bytes": 326,
+      "sha256": "7e8d9b9193a93f7f9a86bb3ec1a88936cc9d5e59f56cdbbe3412037e81dc13bf"
+    },
+    {
+      "path": "01_MASTER_BANK/MASTER_BANK.md",
+      "bytes": 29473,
+      "sha256": "4168193f02820e29b34b087be11dcd7169407ab4c8e5acb0d516a19e6b03d5f5"
+    },
+    {
+      "path": "01_MASTER_BANK/MISSING_AUTHORITY_SOURCES_2026-10-05.md",
+      "bytes": 2949,
+      "sha256": "4bff29f6949471d10292f25db88505eef20af2d144ad5a93dcf4ad1ceb2c7aca"
+    },
+    {
+      "path": "01_MASTER_BANK/NEW_CHAT_MASTER_BRAIN_STARTUP_RULE_2026-10-05.txt",
+      "bytes": 631,
+      "sha256": "299028ac2defeed16a1722f34c5047a3e8bebda75c12aea2263ff3ab8f2fde41"
+    },
+    {
+      "path": "01_MASTER_BANK/NEXT_ROLL_REMOVE_YOUR_PARTNER_2026-10-05.txt",
+      "bytes": 1298,
+      "sha256": "dd3fed897f77310bcfc0b9e97023769a90d3bed8eef9fc04812103eab12e2dfe"
+    },
+    {
+      "path": "01_MASTER_BANK/PREMIUM_BIRD_CARD_PIXEL_LOCK_2026-10-06.txt",
+      "bytes": 778,
+      "sha256": "72bab7d9cee9063bca8fa256ac9f5a02b054f384e79d63899a44fab687ba2f42"
+    },
+    {
+      "path": "01_MASTER_BANK/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt",
+      "bytes": 9046,
+      "sha256": "b405602e809b1ce470c92aa7189f78d3d7e03448a622061aeb18cdcf62dd2d89"
+    },
+    {
+      "path": "01_MASTER_BANK/TABLE003_FINAL_PLAYED_CARD_PRESENTATION_AUTHORITY_2026-10-05.txt",
+      "bytes": 3600,
+      "sha256": "acd911ee9f97228e40f94b0e08cd049ba8ff3de0e9dca43730c65d6c9bc55a53"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/01_TABLE_MASTER_PLAYER_PERSPECTIVE.png",
+      "bytes": 2199994,
+      "sha256": "2c9bf9a6223dbcbd2b7f9aa73de33bf1a84b7bfaaffc745c9b2587743e04a764"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/02_PREMIUM_BID_BOX_AUTHORITY.png",
+      "bytes": 1796689,
+      "sha256": "a46e9fa7e98bab3c7c19bd2f34f0f7dcfd798356b2557a5ad96d3b0db3cb9bf2"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/03_APPROVED_CARD_BACK_133PCT.png",
+      "bytes": 2305664,
+      "sha256": "0c631917b589471cb84583f28b59bba67eeb4036f294d6065492b8c92412d45d"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/04_TRUMP_STAMP_CONCEPT_BOARD.png",
+      "bytes": 2087810,
+      "sha256": "d23493b56004e319934e163d35b939f091914e71b323249af0d111e33db4df2c"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/05_LIBRARY_BACKGROUND_REFERENCE.png",
+      "bytes": 2144386,
+      "sha256": "4eacdb7850817f05c1b59930c9c4b285b876b87018cd7f11476b5147dc5ef854"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/06_PLAYER_PERSPECTIVE_INTERFACE_STUDY.png",
+      "bytes": 2355814,
+      "sha256": "badcab1bbdc338d511518e810b3623188f7350a429d044c5a3809b23753739a7"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/07_TABLE_002_RUNTIME_REJECTED_FLAT_HTML_LOOK.jpg",
+      "bytes": 93006,
+      "sha256": "66d040415d2b896e0ab508843c0a7d74ece07c8492ed685c3449b42dd05f44a9"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/08_TABLE_PERSPECTIVE_BREAKTHROUGH_BANKED_DIRECTION.png",
+      "bytes": 2071698,
+      "sha256": "0b9ba26e4af50f5eb60862ad4f6e3195a690c7cb9405e6d8df31d5237006a58f"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/09_TABLE_ANGLE_COMPARISON_STUDY.png",
+      "bytes": 2330942,
+      "sha256": "e18501392d48b513cd6d2b7dadd9a745c4677ad3e45256a4fa64e8be81194737"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/10_TABLE_GENERATION_REJECTED_INVENTED_UI.png",
+      "bytes": 2152734,
+      "sha256": "1210978e0019f542d2738080ee6715e23999840450e73ec5c55e85156daef891"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/11_CURRENT_REAL_PORTRAIT_BIDBOX_ACTIVE_AUTHORITY.jpg",
+      "bytes": 271879,
+      "sha256": "1e79b8e222e242db7b0542512e718619b5e73ced3d7b9168b3d6b232971c8fe6"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png",
+      "bytes": 2206303,
+      "sha256": "0537f1fd1735f087395288bd9c7aa9544727d02a0ad3c2d58d945926a360be31"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png",
+      "bytes": 585449,
+      "sha256": "362d8eef7a3599c9dc4b9ac0c139fdaf29e64f8898d7e846e99d16c439801f57"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png",
+      "bytes": 2146755,
+      "sha256": "e4765964c1112dac9bfbeeff0e7d4cfe489441e13c3780a8fd3b5f26949d143b"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/crimson_raven_two_card.png",
+      "bytes": 2378945,
+      "sha256": "0dd8032896a12567441c1c304dd8f80d7f4abde63f4e4e92a25314e9b74995df"
+    },
+    {
+      "path": "02_VISUAL_REFERENCES/ornate_crimson_eyed_raven_emblem.png",
+      "bytes": 2449865,
+      "sha256": "bb3e44f409167fca9d1d54f95f37fa826b2c9d229fe814fe74dc6a4955139ba9"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/90_HISTORICAL_EXTENSIVE_HANDOFF.md",
+      "bytes": 32505,
+      "sha256": "482488a4e9f761430994f98a46d47fc45374bb937ef9d3ea6d43e4ec0309492b"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/91_FULL_HANDOFF_2026-09-30.md",
+      "bytes": 20998,
+      "sha256": "4a502ac0dd677c3c0c8c159e543629d5eb91f074f9334fe2c3f86a84ad26749e"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/92_PROJECT_HISTORY.md",
+      "bytes": 14177,
+      "sha256": "f9ad86383ab5afe834d53abaf14c9b46c871d6a6faa5a269c4cee8b196496296"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/93_POST_BRAIN_C_RECOVERY_HANDOFF_2026-10-05.md",
+      "bytes": 38594,
+      "sha256": "bb97b22a01db31cfc64ddb5aa1225a26fd322d485fdc96f6bf1435ce78697bf6"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/94_GROK_MASTER_BRAIN_SYNC_PROMPT_2026-10-05.txt",
+      "bytes": 6956,
+      "sha256": "ed53510844c32d97bbaf35e36f9396cf94a627aeb7893200685d07e4caa7702b"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/95_MASTER_BRAIN_DELTA_2026-10-06.txt",
+      "bytes": 9934,
+      "sha256": "eb184afbc4f3adcd7a539569a0eb5755475aa41ea5d61b447389933e4de2b069"
+    },
+    {
+      "path": "03_HISTORY_EVIDENCE/96_GROK_BRAIN_F_PIXEL_LOCK_REPLY_2026-10-06.txt",
+      "bytes": 405,
+      "sha256": "0366d7289922112a6154a7088d4c3acf22e14945ecc719fb94bccf25a10fd4f6"
+    }
+  ]
+}
