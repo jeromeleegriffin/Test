@@ -1,0 +1,6 @@
+MARK RETURN PACKAGE ZIP ONLY RULE — 2026-10-05
+Status: CURRENT PROCESS AUTHORITY
+
+Mark does full verification but puts evidence, reports, screenshots, hashes, and diffs INSIDE the returned ZIP.
+Chat response should normally be minimal: identify/provide the ZIP.
+If blocked or verification fails, state that clearly in chat.

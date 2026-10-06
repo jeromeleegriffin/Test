@@ -1,0 +1,84 @@
+GRIFFIN HOUSE OF ROOKS
+NUMBERED-CARD SYSTEM DESIGN LOCK
+2026-10-06
+
+STATUS
+- This locks the NUMBERED-CARD DESIGN SYSTEM direction.
+- This does NOT declare any generated comparison image to be literal game/runtime authority.
+- This does NOT replace or modify the already byte-locked premium bird full-card masters.
+- No game roll, R712 change, Bid Box change, production deployment, or runtime implementation is authorized.
+
+1. GLOBAL ASSET-FIRST RULE
+Core visual objects should be authored as real assets whenever practical.
+CSS/runtime code may position, scale, mask, reveal, shadow, and integrate those assets, but should not be the primary substitute for the artwork itself.
+
+2. MASTER FOUR-COLOR PALETTE
+Authoritative base colors:
+- RED:    #E11D2E
+- GREEN:  #0E8F3E
+- YELLOW: #FFD51A
+- BLACK:  #0B0B0B
+
+These base colors are to remain consistent across numbered-card identity, trump indicators/stamps, table color indicators/stamps, bidding/trump UI, and future color-identifying assets. Highlights, shadows, texture, and print/material effects may vary without redefining the base color.
+
+3. REGULAR NUMBERED-CARD DESIGN SYSTEM — LOCKED DIRECTION
+Regular numbered cards are NOT premium bird illustrations.
+
+Locked design direction:
+- warm ivory / cream physical-card stock
+- believable subtle card-stock texture at full size
+- correct Griffin House card aspect ratio / approved physical display envelope
+- one large, bold number only
+- number uses the card's authoritative base color
+- written color name centered directly below the number:
+  RED / GREEN / YELLOW / BLACK
+- word remains clearly subordinate to the number but large enough to read at hand scale
+- number and word scale together while preserving their size relationship
+- use as much usable face area as possible while retaining clean breathing room
+- thin, restrained matching-color border
+- only very small border craftsmanship/details; no distracting diamonds or center emblems
+- no second/small corner number
+- no large center symbol
+- no heavy ornamentation
+- no CSS-generated decorative substitute for the actual card face asset
+
+Purpose:
+- maximize fast rank readability
+- make color identification redundant through both color and written word
+- remove the need for a separate strange line/pattern treatment as the primary accessibility solution
+- keep the regular cards visually quiet enough that the two premium bird cards remain special
+
+4. 6 / 9 DISTINGUISHER
+Not locked yet.
+Current preference is no obvious/heavy underline.
+If runtime testing shows orientation ambiguity, use only a very subtle cue (tiny line/tick/dot) that does not compete with the number or written color word.
+
+5. PREMIUM BIRD FULL-CARD MASTERS — REMAIN LOCKED
+- crimson_raven_two_card.png = Red 2 premium bird full-card master
+- ornate_crimson_eyed_raven_emblem.png = Black bird premium full-card master
+
+The black bird must not contain the protected term "Rook".
+The Red 2 must retain an unmistakable numeral 2 in its usable presentation.
+
+6. PREMIUM BIRD HAND PRESENTATION — STILL OPEN
+The full-card bird masters are locked, but their exact in-hand presentation is NOT fully solved.
+Open issue:
+- Red 2 must remain unmistakably identifiable as a 2 in the player's hand.
+- Black bird must remain instantly recognizable without adding the protected word.
+- Do not redesign or replace the locked full-card master art merely to solve hand presentation.
+- Solve hand presentation as an asset/display treatment around the locked masters.
+
+7. NORMAL HAND / DISCARD SCREEN CORRECTION
+There is no normal gameplay state where the player's actual hand contains 16 cards.
+Do not use a 16-card hand as a tray, overlap, sizing, or readability constraint.
+The "Select 6 cards to discard" screen is a separate UI state and may display a larger temporary card set independently of the normal hand/tray.
+
+8. RUNTIME DEPTH
+Keep the master card artwork itself clean.
+Subtle real-card depth may be added at runtime through restrained shadow/elevation treatment so cards read as physical objects above the felt.
+Do not bake exaggerated drop shadows into the master face artwork.
+
+9. CURRENT NEXT STEP
+Create/refine an exact production-quality master numbered-card asset/template using the locked design system above, then derive the regular numbered deck consistently from that master system.
+Do not use generated whole-game mockups as runtime authority.
+When proving the cards in-game, use actual runtime pixels and replace/composite only the intended card regions.

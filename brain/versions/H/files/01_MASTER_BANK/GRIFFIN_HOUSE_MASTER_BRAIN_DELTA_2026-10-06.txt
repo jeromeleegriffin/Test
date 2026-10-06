@@ -1,0 +1,217 @@
+STATUS: CURRENT CONTINUITY UPDATE / WRITTEN AUTHORITY
+Supersedes Brain E as current only after pointer publication. Brain E remains frozen.
+Two named full-card master PNGs were not supplied with this delta and were not invented. Claimed hashes below are owner-supplied and UNVERIFIED until the exact files are banked.
+
+GRIFFIN HOUSE OF ROOKS — MASTER BRAIN DELTA
+DATE: 2026-10-06
+STATUS: BANK THIS AS CURRENT CONTINUITY UPDATE
+OWNER: Jerome Griffin
+MAIN CHATGPT: Zoey
+
+PURPOSE
+Preserve the work and owner decisions made after the 2026-10-05 Master Brain E checkpoint so a future chat or external durable sync can continue without reconstruction.
+
+============================================================
+1. TABLE / RUNTIME AUTHORITY — UNCHANGED
+============================================================
+- TABLE-003 remains LOCKED.
+- Do not reopen table geometry/perspective/rail/felt calibration merely because player/card work continues.
+- R712 remains protected.
+- Bid Box / Bid Dock remain protected.
+- Production remains off limits for experimentation.
+- THE WORKING SCREEN WINS.
+- IF THE PIXELS EXIST, USE THE PIXELS.
+- ACTUAL PIXELS / ACTUAL PHOTOS TRUMP CODE.
+
+============================================================
+2. SEATED-PLAYER STUDY — CURRENT CONCLUSION
+============================================================
+The current seated-player study was for PLACEMENT / SCALE / OCCLUSION only.
+It was NOT final character identity design and was NOT an implementation of final production character assets.
+
+Current working conclusion:
+- Dagger remains strong at the left seat.
+- Cinder remains far/top and perspective-smaller.
+- Crow remains strong at the right seat.
+- NO visible bottom/Jerome avatar; Jerome remains first-person camera/hand position.
+- Do NOT shrink Dagger/Crow further based on the rejected over-correction study.
+- Placement/scale are considered close enough to stop regenerating the same study repeatedly.
+- Remaining real implementation requirement is MECHANICAL HARD OCCLUSION / MASKING, not painterly blending.
+
+Occlusion system rule remains:
+THE TABLE MUST BLOCK THE PEOPLE.
+THE TABLE MUST NOT BLOCK THE GAME.
+- character torso/body/clothing stays behind the rail;
+- zero body leakage onto felt;
+- a deliberate forearm/hand may rest ON TOP of the rail if physically believable;
+- actual implementation must enforce this structurally with layers/masks, not by positional luck.
+
+IMPORTANT:
+The generated seated-player studies are design/reference studies only. They are not literal runtime authority and must not replace real game pixels.
+
+============================================================
+3. IMAGE-GENERATION DISCUSSION RULE
+============================================================
+When Jerome asks for a generated image for visual discussion/comparison:
+- the image may be generated as requested;
+- on Jerome's NEXT message, Zoey must FIRST inspect the newly generated image and give her own visual opinion before addressing anything else in that turn;
+- explain what works, what does not, whether it moved closer/farther from target, and what should change next;
+- do not silently treat generated pixels as runtime/game authority.
+
+Reason for NEXT-message wording:
+The image-generation workflow may require the generation turn itself to contain only the generated image.
+
+Also preserve the previously banked rule:
+USE GENERATION FOR THE NEW ART. USE THE REAL SCREEN FOR THE GAME. COMPOSITE THEM; DO NOT REGENERATE THE GAME.
+
+============================================================
+4. ASSET-FIRST GLOBAL VISUAL RULE
+============================================================
+OWNER RECONFIRMED:
+EVERYTHING IN THE GAME SHOULD BE BUILT AS REAL ASSETS IF POSSIBLE.
+DO NOT RELY ON CSS TRICKS AS THE PRIMARY CONSTRUCTION METHOD FOR IMPORTANT VISUAL OBJECTS.
+
+Apply this asset-first principle especially to:
+- table / physical table components;
+- cards;
+- premium special-card art;
+- future seated-player character art;
+- other major physical visual pieces where a real authored asset is practical.
+
+CSS/runtime code may still be used for:
+- positioning;
+- scaling;
+- layout;
+- clipping/masking;
+- progressive reveal/exposure;
+- interaction integration;
+- responsive behavior.
+
+But CSS should NOT be used as the primary substitute for finished visual artwork when a real asset can be authored.
+
+TABLE NOTE:
+TABLE-003 remains locked visually. Future productionization should preserve it as an asset-driven physical table system/layer set rather than rebuilding the premium physical appearance from decorative CSS alone.
+
+============================================================
+5. PREMIUM BIRD CARDS — OWNER APPROVED / LOCKED FULL-CARD MASTERS
+============================================================
+Two new premium bird-card full-face masters were owner-approved.
+
+A. RED 2 BIRD MASTER
+File to preserve exactly:
+crimson_raven_two_card.png
+SHA-256:
+0dd8032896a12567441c1c304dd8f80d7f4abde63f4e4e92a25314e9b74995df
+
+Owner direction:
+- keep this design essentially as approved;
+- red premium bird card;
+- visible numeral 2 is allowed/required;
+- preserve complete border/corners; do not crop frame edges in final production asset;
+- this is a special premium illustrated card, not the normal numbered-card template.
+
+B. BLACK BIRD MASTER
+File to preserve exactly:
+ornate_crimson_eyed_raven_emblem.png
+SHA-256:
+bb3e44f409167fca9d1d54f95f37fa826b2c9d229fe814fe74dc6a4955139ba9
+
+Owner direction:
+- premium black bird card;
+- bird must NOT be a clone of the Red 2 bird;
+- black bird faces the opposite direction / has distinct pose and identity;
+- preserve complete border/corners; do not crop frame edges in final production asset;
+- NO protected card-game brand name or wordmark on this card;
+- no text is required on the black bird master.
+
+IMPORTANT:
+These two files are FULL-CARD MASTER ART assets. Lock the art direction, but do NOT assume a crowded 16-card hand displays the entire artwork at once.
+
+============================================================
+6. REGULAR NUMBERED CARDS — DIRECTION
+============================================================
+Owner clarified:
+- ordinary numbered cards are NOT intended to be as ornate/fancy as the bird cards;
+- the special bird cards are the showcase premium illustrated cards;
+- normal numbered cards should be GOOD, CLEAR, PRECISE, highly readable and believable;
+- number readability is the primary hierarchy;
+- retain premium material/print quality without visual overload;
+- no need for full bird illustration on ordinary numbered cards.
+
+Future master numbered-card asset system should prioritize:
+1. number clarity;
+2. unmistakable card color identity (Red / Green / Yellow / Black);
+3. believable premium physical-card rendering/material quality;
+4. restrained Griffin House ornament/motif;
+5. consistency across the complete deck.
+
+Do NOT hand-design every normal number independently.
+Build one master numbered-card system/template and generate the deck consistently from it.
+
+============================================================
+7. PROGRESSIVE HAND DETAIL / REVEAL SYSTEM
+============================================================
+Owner reconfirmed earlier intended behavior:
+The hand should progressively reveal more visual detail as the number of cards in hand decreases.
+The 16-card / Nest state is the key crowded-hand case.
+
+The asset system must support:
+- high card count (e.g. 16): narrow overlap/exposed identity region, fast rank/color recognition;
+- medium card count: more card body/detail visible;
+- low card count: richer border/art detail visible;
+- played card on table: full approved card face can be shown.
+
+CRITICAL:
+This is NOT permission to replace real card art with CSS fake cards.
+Use the real master card assets, then use renderer cropping/masking/overlap/reveal behavior to expose appropriate portions of those assets.
+
+Special handling:
+- Red 2 bird: in crowded hand, keep the 2 and red identity immediately readable; reveal bird art progressively as space increases.
+- Black bird: because it has no word label, crowded-hand exposure must preserve a distinctive bird identity/silhouette/eye/head cue so it remains immediately recognizable.
+
+The progressive hand system and the full-card masters are separate concerns:
+FULL MASTER ART = asset truth.
+HAND REVEAL SYSTEM = runtime presentation of the same asset truth.
+
+============================================================
+8. PLAYED-CARD PHYSICAL AUTHORITY — UNCHANGED
+============================================================
+The premium card asset system must fit the already-locked played-card presentation:
+- B Natural Toss;
+- E table-derived perspective;
+- seat-facing orientation;
+- 15% smaller than original 88 x 126 renderer footprint;
+- approximate target pre-projection envelope 74.8 x 107.1 CSS px;
+- card centers remain fixed.
+
+Do NOT move/recalibrate the locked trick merely to fit new art.
+If future card art materially changes aspect ratio, visually revalidate clearance before implementation.
+
+============================================================
+9. WHAT IS NEXT WHEN WORK RESUMES
+============================================================
+Recommended next design task:
+MASTER NUMBERED-CARD ASSET SYSTEM.
+
+Before generating a full deck:
+- design/approve the normal numbered-card master template/system;
+- verify clarity at phone scale and in crowded-hand exposure;
+- verify it visually belongs with the two approved premium bird cards without copying their full illustration density;
+- then derive/generate the complete normal numbered deck consistently;
+- later implement progressive hand reveal and full played-card rendering against the locked geometry.
+
+Actual seated-character identity/art refinement remains a later separate task.
+
+============================================================
+10. DO NOT INFER IMPLEMENTATION / DEPLOYMENT
+============================================================
+Nothing in this delta authorizes:
+- production deployment;
+- modifying protected R712;
+- touching Bid Box / Bid Dock;
+- changing TABLE-003 geometry;
+- changing landscape;
+- changing gameplay;
+- replacing the live card renderer without isolated review and verification.
+
+END DELTA

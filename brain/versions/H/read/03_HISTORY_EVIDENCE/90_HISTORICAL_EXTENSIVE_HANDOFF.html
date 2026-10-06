@@ -1,0 +1,1083 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>90 HISTORICAL EXTENSIVE HANDOFF</title><link rel="stylesheet" href="../../../../brain.css"></head><body><main><nav><a href="../../../../../player/GriffinHousePlayer.html">Player</a><a href="../../../../current/">Current Brain</a><a href="../../../../history.html">History</a></nav><h1>90 HISTORICAL EXTENSIVE HANDOFF</h1><p><a href="../../files/03_HISTORY_EVIDENCE/90_HISTORICAL_EXTENSIVE_HANDOFF.md">Exact source document</a> · <a href="../../index.html">Bank H contents</a></p><p class="status" id="brainStatus" role="status">Checking current Brain…</p><pre># GRIFFIN HOUSE OF ROOKS — EXTENSIVE NEW-CHAT HANDOFF
+## Date: 2026-10-02
+## Purpose: Continue R531b / New Player Experience + isolated Start Prototype without losing design or protection context
+
+READ THIS ENTIRE FILE BEFORE MAKING CHANGES.
+
+============================================================
+0. HOW TO WORK WITH JEROME
+============================================================
+
+User: Jerome Griffin.
+
+Jerome is the designer/product owner. He is not a professional programmer, but has learned by building and debugging this project directly with AI, DevTools, GitHub, Blender, browsers, phones, etc.
+
+IMPORTANT WORKING STYLE:
+- Be direct.
+- Do not agree with every idea just because Jerome is excited about it.
+- Jerome explicitly wants a second designer who applies selection pressure.
+- Separate:
+  - genuinely strong idea
+  - worth testing
+  - unnecessary/too much
+  - technically unknown
+- A good justification does NOT automatically make a proposed solution good.
+- Jerome sometimes deliberately throws out bad/exaggerated ideas to test whether the assistant will blindly praise them.
+- Do not become a “WOW THAT’S AMAZING” machine.
+- At the same time, do not manufacture objections merely to appear independent.
+- When debugging, give one concrete action at a time if Jerome needs to perform something.
+- “ok” / “continue” means proceed automatically when tools/source allow.
+- “Roll” means modify/build project files. It NEVER means generate an image.
+- Image generation remains locked unless Jerome explicitly says generate/mock up or clearly requests generation.
+- When giving text Jerome needs to paste elsewhere, put ALL pasteable text in one fenced copy block.
+- Jerome likes humor and direct language.
+- Do not use “let’s pause,” “take a breath,” “honestly,” “to be blunt,” etc.
+- Do not claim elapsed time without evidence/timestamps.
+
+Core engineering rule:
+**DON’T TRUST JEROME. DON’T TRUST CHATGPT. DON’T TRUST CODEX. TRUST THE ACTUAL DIFF.**
+
+For protected work:
+- establish rollback
+- exact whitelist
+- inspect actual diff
+- reject unexpected file changes
+- test behavior/regressions
+- do not merge/push/deploy just because someone says it worked
+
+If a one-file job changes two files: STOP and investigate.
+
+============================================================
+1. CURRENT BIG-PICTURE STRATEGY
+============================================================
+
+The most important strategic decision from the latest discussion:
+
+**LIVE GAME = MAINTAIN AND PROTECT.**
+**ISOLATED PROTOTYPE = INVENT AND EXPERIMENT.**
+
+Jerome originally expected all the new ideas to go directly into the live game. He now wants the live game to settle back into the spirit of the old RookGame386 period: a stable playable game that can actually be enjoyed while the next experience is designed separately.
+
+Do not continuously feed experimental ideas into production.
+
+The isolated Start Prototype is now the disposable design laboratory.
+
+Use it to:
+- try entrance ideas
+- test flow
+- test discovery
+- see multiple ideas together
+- reject ideas cheaply
+- change things without risking R531a/live game
+- avoid relying on memory
+
+Only once an idea works as part of the whole experience should it become a candidate for careful integration into the real game.
+
+Current sequencing:
+
+1. Nail the new-player experience.
+2. Nail how that experience flows into the existing table.
+3. Make sure the skeleton is understandable without premium art.
+4. THEN begin the amazing/premium asset work.
+5. Integrate proven pieces into the real game carefully later.
+
+Key milestone statement:
+
+**Get the skeleton so simple and natural that it does not need the beautiful assets to make sense. Then make that skeleton look amazing.**
+
+============================================================
+2. CORE DESIGN PHILOSOPHY
+============================================================
+
+These are authoritative working principles:
+
+**PLAY FIRST → DISCOVER LATER.**
+
+**NECESSITIES ARE OBVIOUS. DEPTH IS DISCOVERED.**
+
+**RICH, NOT BUSY.**
+
+**ONE THING GETS TO SHOUT.**
+
+**THE VISUALS PROVIDE THE RICHNESS. THE INTERFACE PROVIDES THE SIMPLICITY.**
+
+Also:
+
+**If it is not required to sit down and play cards, it probably does not belong between the player and the table.**
+
+And a new important simplification rule:
+
+**Before adding a new UI element, ask whether an existing element can change state and do the job instead.**
+
+Jerome specifically wants to reuse space whenever possible.
+
+The goal is SIMPLE + PROFESSIONAL, not simple + cheap and not professional = complicated.
+
+Professional quality should come from:
+- deliberate proportions
+- spacing
+- typography
+- consistent materials
+- animation timing
+- visual hierarchy
+- excellent assets
+- restraint
+- consistency
+- deliberate behavior
+
+Avoid the generic “AI/vibe-coded fantasy dashboard” look:
+- excessive rounded cards/panels
+- glows everywhere
+- gradients everywhere
+- decorative icons beside everything
+- giant hero copy
+- explanatory text everywhere
+- badges everywhere
+- controls everywhere
+- inconsistent component styles
+
+Primary Griffin House visual vocabulary:
+- dark/polished wood
+- aged brass/gold
+- deep blue/navy felt
+- cards
+- portraits/avatars
+- House typography
+
+A useful visual test:
+**Does this look like a physical Griffin House object that belongs here, or a web component styled to look medieval?**
+
+Only one thing should dominate at a time:
+- name entry → Enter the House
+- waiting table → Start Game
+- bidding → Bid Control
+- trump selection → Stamp the Trump
+- major achievement → achievement briefly gets the moment
+
+============================================================
+3. R531a — AUTHORITATIVE PROTECTED BASELINE
+============================================================
+
+R531a is CLOSED and PROTECTED.
+
+Authoritative R531a GAME-STATE:
+`9cd9ef16b3875bbeb0967bd8140d6786bc42256f`
+
+Rollback tag:
+`R531a-authoritative-game-state`
+
+Documentation-only commit:
+`cc8b064dea3218d8a27c235f7eacea1a9f06f609`
+
+Do NOT confuse the documentation-only hash with the authoritative game-state hash.
+
+Clean R531a reconstruction was:
+- baseline `7977960`
+- approved Eagle asset from `f1b4be4`
+- resolver repair from `5012ab3`
+- R532 contamination excluded
+
+Exactly two runtime files changed in reconstructed candidate:
+- `avatar-rookling.svg`
+- `rook512-room.js`
+
+Fresh Chromium verification previously established:
+- bid box centered correctly at 360×800
+- +5 works
+- -5 works
+- Pass works
+- actual Bid 110 works
+- no/default avatar → Eagle
+- invalid avatar → Eagle
+- saved Fox → Fox and survives reload
+- saved Jerome → Jerome
+- bots remain separate
+- no captured page/console errors in those scenarios
+
+Limitations not fully verified:
+- physical-device R531a rendering
+- multiplayer
+- full-match scoring
+- audio
+- offline PWA/cache
+- all 59 avatars
+
+Pre-existing right-side player-name clipping at 360×800 existed in baseline and candidate and was intentionally left alone.
+
+IMPORTANT NEWER ARCHITECTURE DECISION:
+R531a currently has Eagle fallback behavior, but **DO NOT hard-code Eagle as the new R531b default architecture.**
+R531b new players should receive a random animal from a larger animal pool.
+
+============================================================
+4. R531b HARD BOUNDARY
+============================================================
+
+R531b is the NEW-PLAYER / ENTRANCE EXPERIENCE.
+
+Phrase to preserve:
+
+**LANDING PAGE: FAIR GAME. THE HOUSE BEHIND IT: HANDS OFF.**
+
+The old entrance/landing experience can be radically simplified/restructured/removed.
+
+Once the player reaches the existing table/game, the existing game is protected unless a narrow connection change is genuinely required.
+
+Protected existing game includes:
+- table
+- artwork
+- background
+- cards
+- card faces/backs
+- card holder/tray
+- avatars
+- player plaques
+- seats
+- bidding UI
+- existing bid box
+- trump UI
+- scoreboard
+- gameplay controls
+- Last3
+- headers
+- gameplay menus
+- sounds
+- animations
+- transitions
+- logos
+- rules
+- dealing
+- bidding logic
+- scoring
+- bots
+- multiplayer behavior
+- existing game assets/components
+
+EXISTING BID BOX = EXTRA HARD LOCK during R531b.
+Do not:
+- restyle
+- resize
+- reposition
+- replace
+- remove
+- rebuild
+- alter +5/-5/BID/PASS behavior
+- alter calculations
+- alter legal validation
+- alter bidding state
+- alter trump behavior
+
+The future premium Bid Control is a separate later asset/project. Do not use R531b as an excuse to implement it.
+
+Preservation means runtime result, including indirect effects from parent/global CSS/layout/JS.
+
+============================================================
+5. WORK / R531b RUNTIME STATUS
+============================================================
+
+Work completed source-level inventory and some forensics, but fresh runtime inspection is PAUSED because the Work browser environment failed.
+
+The blocker was NOT an R531a defect.
+
+Work found:
+- no installed Playwright Chromium
+- one bounded install attempt was allowed
+- browser download returned invalid/truncated ZIP:
+  “End of central directory record signature not found”
+- installer began retrying
+- further network attempts were stopped
+- no workaround was authorized
+- no runtime files were edited
+- R531a, production, R706/R707, preserved phone remained untouched
+
+DO NOT send Work back into repeated browser installation attempts.
+
+Runtime evidence still needed later:
+- exact safe point between offline setup and automatic game start
+- returning name/avatar persistence in actual runtime
+- Play With Friends / Join / Rejoin paths
+- exact entrance → protected-table boundary
+
+Important source finding:
+Existing `startSoloPractice()`:
+- creates local host/player
+- creates three bots
+- loads avatar/bank/Career state
+- hides entrance/waiting/welcome
+- shows game
+- calls `hostStartGame()` immediately
+
+Therefore:
+The desired new flow `Name → Table → Start Game` is NOT yet proven technically in the real runtime.
+
+Do not hack around this based on assumptions.
+The design is settled enough to prototype, but real integration needs runtime ownership inspection first.
+
+============================================================
+6. NEW-PLAYER EXPERIENCE — CURRENT TARGET
+============================================================
+
+Permanent test:
+
+**Would somebody who has never seen Griffin House know what to do next without explanation?**
+
+Current first-visit target:
+
+`Open`
+→ `What should we call you?`
+→ player enters name
+→ `Enter the House`
+→ automatically assign random animal avatar
+→ existing table
+→ obvious `START GAME`
+→ gameplay
+
+Current returning-player target:
+
+`Open`
+→ saved identity restored
+→ straight to existing table
+→ `START GAME`
+
+No unnecessary landing page after identity exists.
+
+Do NOT force before play:
+- avatar selection
+- card-back selection
+- difficulty
+- House Rules
+- tutorial
+- Career
+- achievements
+- install prompt
+- detailed settings
+
+The old entrance **Play Now** button should disappear from the intended experience.
+
+BUT:
+Preserve/reuse its underlying offline setup machinery later if technically appropriate.
+Do not duplicate player/bot/session/state architecture.
+
+The reason for the table pause before deal:
+The player gets one moment to orient themselves and understand where they are before cards start moving.
+
+============================================================
+7. WORK ENTRANCE INVENTORY — CURRENT DISPOSITION
+============================================================
+
+Work’s old entrance findings and current design status:
+
+YOUR NAME
+- KEEP
+- first visit only
+- likely the entire onboarding requirement
+
+PLAY NOW
+- REMOVE entrance button
+- KEEP/reuse underlying machinery
+- do not immediately auto-deal in desired R531b flow
+
+START GAME
+- KEEP
+- dominant action at table when applicable
+
+PLAY WITH FRIENDS
+- KEEP concept
+- should not become an entrance wall
+- exact table/context placement NOT settled
+- requires runtime inspection before implementation
+
+JOIN / SIT / WATCH / BACK
+- KEEP contextually inside Friends flow
+- not universal entrance clutter
+
+REJOIN
+- KEEP conditionally when a legitimate interrupted multiplayer session exists
+
+PLAYERS
+- no big standalone Players menu up front
+- seat/player actions should eventually be contextual where possible
+
+AVATAR
+- REMOVE from onboarding
+- random animal automatically assigned
+- customization discovered later
+
+CARD BACKS
+- current preference: do NOT make this a prominent customization system
+- likely one excellent definitive Griffin House back initially
+
+SOUND
+- KEEP accessible
+- small/simple control
+
+GAME OPTIONS
+- do not preserve as one giant generic settings concept
+- useful pieces should live where they logically belong
+
+HOUSE RULES
+- KEEP deeper
+- discover later, likely through Experience More
+- default Griffin House rules require no decision
+
+BOT COUNT
+- contextual / seat-oriented later if possible
+
+BOT DIFFICULTY
+- deeper option
+- do not ask new player
+
+FILL SEATS
+- likely contextual/automatic
+- exact behavior needs runtime verification
+
+TEAM NAMES
+- secondary/contextual
+- not entrance
+
+PERFECT HAND / TEST DEAL
+- HOUSE TOOLS / DEVELOPMENT ONLY
+- never ordinary player UI
+
+CAREER / STATS
+- KEEP deeper/discovered
+
+ACHIEVEMENTS
+- KEEP deeper/discovered
+- locked human portraits may expose progression elegantly
+
+CAREER TEST / ACTIVATION
+- HOUSE TOOLS / DEVELOPMENT ONLY
+
+HOW TO PLAY / HOUSE TOUR
+- available, not forced
+- no tutorial gate
+
+FORCE REFRESH
+- advanced troubleshooting only
+
+INSTALL APP
+- conditional and low prominence
+
+SHUFFLE STATISTICS
+- deep Learn/About curiosity item if retained
+- not entrance
+
+PRIVACY / CONTACT
+- quiet secondary location
+
+VERSION / BUILD / STATUS
+- hide from normal player
+- About/debug/advanced only
+
+============================================================
+8. TABLE-SURFACE UI — CURRENT SLIM DIRECTION
+============================================================
+
+Likely universal/contextual table controls:
+
+- Start Game when applicable
+- Sound/Mute
+- Leave/Exit when applicable
+- Experience More
+- Friends/multiplayer entry still needs exact solution
+
+Do not automatically add a permanent Help button.
+Help may be contextual or inside Experience More unless testing shows it is needed.
+
+The table itself should remain the star.
+
+============================================================
+9. EXPERIENCE MORE
+============================================================
+
+**Experience More** is a small/inconspicuous doorway into the deeper House.
+
+It must NOT become:
+- Settings 2.0
+- a giant dashboard
+- a feature catalog
+- an obstacle before play
+
+Strong direction:
+Avatar/identity is likely the first visual focus because players care about identity and the random animal creates curiosity.
+
+Potential deeper structure (NOT all locked):
+- Make It Yours / Identity
+- Career
+- House Rules
+- Learn the House
+- Preferences &amp; Help
+
+But directly visible things should be contextual when possible:
+- seat/bot management at seat
+- team name where team identity appears
+- speed near relevant game state
+- help near relevant interaction
+
+============================================================
+10. AVATAR SYSTEM
+============================================================
+
+Do NOT hard-code Eagle as the new-player default.
+
+Need at least 10 animal avatars, preferably a curated set.
+
+Exact species list is NOT locked.
+
+New player:
+- automatically gets an animal
+- no question asked
+- creates curiosity
+
+Automatic assignment should use a shuffle-bag/no-repeat approach:
+- random from current pool
+- track automatically surfaced animals
+- avoid repeats until pool has surfaced
+- reshuffle/reset after pool exhausted
+- architecture should support collection growth
+- not hard-coded to exactly 10
+
+If player manually chooses an avatar:
+- preserve manual selection
+- stop randomizing that player
+
+Eagle:
+- one valid pool member
+- NOT architectural default
+
+Discovery loop:
+
+`Name`
+→ unexpected animal identity
+→ table
+→ player notices identities
+→ Experience More
+→ discovers avatar collection
+
+============================================================
+11. HUMAN PORTRAITS / PROGRESSION
+============================================================
+
+Strong working concept:
+- Animals = House identities
+- Humans = earned portraits
+
+Do NOT create hundreds of portraits.
+A small premium set is preferable.
+
+Current conceptual scale:
+- roughly 10–12 normal animal avatars
+- perhaps 4–6 earned human portraits
+Exact human count is not locked.
+
+Locked human portraits should be visible enough in Experience More to quietly reveal that progression exists.
+
+Do not make all portraits a simple level ladder.
+Potential unlock types:
+- legitimate completed games
+- different days played
+- wins
+- House Level
+- all trump colors
+- successful Shoot the Moon
+- long-term play
+- full-human-table play
+- mastery
+
+First earned human portrait should be obtainable reasonably early.
+Rare portraits should represent meaningful accomplishment, not arbitrary grinding.
+
+Strong prestige concept:
+
+**FULL HOUSE PORTRAIT — Complete 10 games to 500 points with four human players.**
+
+Important:
+- completion, not 10 wins
+- four real human seats
+- bots do not count
+- can likely accumulate across different groups
+- exact anti-abuse/rejoin/substitution rules still need design
+
+This requirement also acts as a discovery clue:
+“10 games to 500” may cause a player to wonder whether score target can be changed.
+
+============================================================
+12. HOUSE RULES / POINT TARGET
+============================================================
+
+Changing points-to-play-to is a potentially good House Rule.
+
+Do NOT ask on first run.
+
+Default remains Griffin House standard.
+
+Potential later presentation:
+- Short
+- Griffin House / Standard
+- Long
+- perhaps Custom later
+
+Exact values are NOT locked.
+
+Prestige achievements may require standard/500-point qualifying games even if casual House Rules permit shorter games.
+
+Principle:
+
+**House Rules can change how you play. They do not automatically change what “earned” means.**
+
+============================================================
+13. SPEED CONTROL / DISCOVERY
+============================================================
+
+Existing conceptual speeds:
+`1× | 3× | MAX`
+
+The speed engine has historically worked in R705:
+- 1× ≈104 sec
+- 3× ≈37 sec
+- MAX ≈11 sec
+Do not break/revert known working speed logic when eventually working in that line.
+
+New-experience concept under discussion:
+`1× | 🔒3× | 🔒MAX`
+
+This is promising but NOT fully locked.
+
+Reason:
+Convenience can be introduced around the time normal presentation starts becoming repetitive.
+
+Potential:
+- 3× unlock early
+- MAX later
+- permanent once earned
+
+But do NOT withhold basic usability/accessibility too long.
+
+Do not invent final unlock timing.
+Playtest the point at which normal dealing/animations stop feeling novel and start feeling repetitive.
+
+Question:
+**At what point does normal presentation stop feeling novel and start feeling repetitive? Unlock just before that point.**
+
+Progression farming rules at high speed are not finalized.
+
+============================================================
+14. REUSE-SPACE RULE — BOT BIDDING PILL
+============================================================
+
+Jerome proposed a strong simplification:
+
+When a bot is bidding, reuse its existing thinking/status pill rather than adding another bid indicator.
+
+Preferred simple state:
+
+`THINKING…`
+→ `105`
+
+or
+
+`THINKING…`
+→ `PASS`
+
+Do not automatically add a separate `BIDDING…` state.
+Only use that if actual timing proves it communicates something useful.
+
+The same physical pill stays in the same place.
+The player already knows where to look.
+
+This is a model for the larger UI philosophy:
+**change state instead of adding another element.**
+
+============================================================
+15. CARD BACKS
+============================================================
+
+Current independent design preference:
+One excellent clean Griffin House card back and stop.
+
+Reason:
+Card backs are supporting scenery and are rarely the main thing the player sees.
+
+Do not create a picker/achievement/rotation system merely because it is possible.
+
+Earlier quick visual experiment:
+- black/charcoal
+- gold border
+- central gold Griffin
+- green felt in mockup
+- gen_id: `f38812dc-daae-4b61-a24d-c65ac8e4eec6`
+
+Jerome’s reaction:
+Right concept direction, not loved as final.
+
+Useful takeaway:
+- simple geometry
+- restrained detail
+- strong silhouette
+- no visual noise
+
+Do not enter a card-back rabbit hole now.
+
+============================================================
+16. ACTUAL TABLE FELT COLOR
+============================================================
+
+IMPORTANT CORRECTION:
+
+The actual table in Jerome’s supplied screenshot is **deep blue/navy**, NOT green.
+
+Do not keep calling it green.
+
+Jerome is color-blind and asked whether it was seriously green.
+Visual inspection showed it is blue/navy.
+
+Current joke/correction:
+“The damn table stays BLUE.”
+
+This matters for future trump-mark contrast.
+
+============================================================
+17. STAMP THE TRUMP — EXISTING FUTURE ASSET CONCEPT
+============================================================
+
+Previously banked larger concept:
+
+After bidding completes and trump selection is required:
+- Bid Control disappears
+- compact physical dark-wood/brass Stamp the Trump console appears
+- title: STAMP THE TRUMP
+- plaque: CHOOSE TRUMP
+- large GREEN / RED / YELLOW / BLACK controls
+- taller sculpted wooden Griffin stamp handle
+- sunk-in brass mount
+- same general vertical footprint
+- clear gap above card holder
+- card holder/cards/AUTO MAP untouched
+
+After selection:
+- Stamp console disappears
+- normal card play resumes
+
+This is a FUTURE premium asset, not something to implement into protected R531b right now.
+
+============================================================
+18. TRUMP STAMP FELT MARK — LATEST DECISION
+============================================================
+
+This is the latest important design concept and should be tested in the isolated prototype.
+
+The deep-blue table felt already contains a Griffin mark BEFORE trump selection.
+
+Before trump:
+- Griffin is barely visible
+- feels embedded in the felt
+- not a UI badge
+- not demanding attention
+
+When trump is selected:
+1. physical Stamp the Trump action occurs
+2. the SAME existing Griffin mark reacts
+3. that SAME mark becomes the trump color:
+   - RED
+   - GREEN
+   - YELLOW
+   - BLACK
+
+CRITICAL SIMPLICITY RULE:
+**DO NOT ADD A WORD TO THE TABLE.**
+
+No:
+- `GREEN`
+- `RED`
+- `TRUMP`
+- extra label
+- extra badge
+- second indicator
+
+The same existing mark changes state.
+
+This is another example of reusing space instead of adding UI.
+
+BLACK:
+- flat black on navy may disappear
+- this does NOT kill the concept
+- black may need a material treatment rather than simple flat color
+- possible future treatment: near-black pressed/burnished/crushed felt with subtle edge/light response
+- must be judged at real phone-table size
+
+Do NOT change the entire table to the trump color.
+That exaggerated concept was discussed/tested and rejected as too much.
+
+Jerome is color-blind.
+However, the actual game already prevents illegal/wrong card plays, so the decorative Griffin does not need extra text clutter solely to protect gameplay.
+The game/card legality system provides functional protection.
+
+The colored Griffin can remain atmospheric + informative rather than becoming another UI widget.
+
+============================================================
+19. SIMPLE START PROTOTYPE
+============================================================
+
+An isolated prototype was created specifically so these ideas can be experienced instead of remembered.
+
+It is NOT the real Rook game.
+It should remain cheap/disposable.
+
+Prototype purpose:
+- first-visit name entry
+- returning identity persistence
+- random animal assignment
+- fake/table waiting state
+- Start Game boundary
+- Experience More experiments
+- discovery ideas
+- simple UI-state experiments
+- Trump Stamp concept
+- later bot-thinking/bid-pill concept if useful
+
+The prototype should be the place where:
+**idea → cheap implementation → experience it → keep / kill / change**
+
+Do not over-polish the prototype before the flow is right.
+
+Latest prototype mistake to correct:
+A version added the trump word under the Griffin.
+That is now REJECTED.
+
+Correct prototype behavior:
+**barely visible existing Griffin → stamp → same Griffin becomes trump color → NO new text/label.**
+
+============================================================
+20. ASSET SEQUENCING
+============================================================
+
+Jerome’s latest desired sequence:
+
+FIRST:
+- solve new-player experience
+- solve table transition
+- solve simple flow
+
+THEN:
+begin the “amazing assets.”
+
+Reason:
+Do not build expensive beautiful assets before knowing:
+- where they appear
+- when they appear
+- whether they deserve attention
+- whether the feature survives combined testing
+
+Future high-value asset work includes:
+- premium animal avatars
+- earned human portraits
+- refined card tray
+- new Griffin House Bid Control
+- Stamp the Trump console/stamp
+- faint Griffin felt mark / colored stamped state
+- other premium physical House elements that survive testing
+
+============================================================
+21. BANKED VISUAL TARGET — CARD TRAY
+============================================================
+
+Approved direction:
+- low/shallow tray footprint
+- preserve card positions/spacing/behavior/AUTO MAP
+- refined dark polished wood
+- thin aged-brass edge
+- recessed dark card bed
+- dimensional bevel/highlight/shadow
+- rounded
+- cards remain dominant
+
+HARD LOCK:
+NO Griffin crest/figurine/emblem/ornament protruding from or centered on top edge.
+
+Clean top edge.
+
+HTML/CSS responsive first.
+Small transparent assets only if needed.
+
+This was historically intended as first visual implementation after runtime priorities, but current strategic order now places NEW-PLAYER FLOW/TABLE TRANSITION before major premium asset work.
+
+============================================================
+22. BANKED VISUAL TARGET — FUTURE BID CONTROL
+============================================================
+
+Approved future direction:
+- existing bidding engine untouched
+- premium dark reddish wood
+- aged brass
+- black inset
+- dimensional/carved feel
+- restrained Griffin ornament
+- large phone-friendly controls
+- functions exactly:
+  - -5
+  - current bid
+  - +5
+  - BID amount
+  - PASS
+- header: PLACE YOUR BID
+- adjustment row:
+  - red -5
+  - recessed black display
+  - green +5
+- action row:
+  - green BID amount
+  - dark PASS
+- roughly 88–90% width
+- cards/card holder/AUTO MAP/avatars/table/header/Last3/center/nav protected
+- ~15–20px felt gap above card holder
+- Samsung S24 portrait primary
+
+Do NOT implement this during R531b entrance work.
+Existing bid box is protected.
+
+============================================================
+23. WHY THE PROTOTYPE MATTERS
+============================================================
+
+Jerome explicitly likes this approach because he does not have to remember every damn design decision.
+
+Instead of preserving dozens of disconnected `.md` idea files:
+- keep discussing/refining freely
+- periodically consolidate meaningful decisions
+- open the prototype to see the current experience
+- use the prototype as visual/behavioral memory
+
+Do not create a new markdown file for every tiny idea.
+
+This handoff + consolidated design bank + prototype should be enough to resume.
+
+============================================================
+24. PHONE / R706 INVESTIGATION — PARKED
+============================================================
+
+Separate issue. Do not mix it into R531b.
+
+Physical phone investigation previously found:
+- historical mixed cache verified
+- startup v705 worker then v706 transition
+- later cached copies matched clean R706 diagnostic manifest
+- key runtime functions matched clean R706
+- saved portrait adjustments matched built-in R706 defaults
+- speed computed position consistent with clean R706 override
+- abnormal in-game presentation was not captured
+- causal role of mixed cache remains UNKNOWN
+- no justified production change
+
+Conclusion:
+R706 underlying files appear okay based on evidence.
+Phone mystery unresolved but contained.
+Do not burn time on it unless Jerome explicitly returns to it.
+
+============================================================
+25. HISTORICAL / PROJECT CONTEXT WORTH KEEPING
+============================================================
+
+Griffin House of Rooks:
+- mobile-first four-player Rook trick-taking game
+- phones are hardest constraint
+- new users should land at/near table with minimal friction
+- bots default for offline
+- Leave Room must be available where relevant
+- wife has actively tested offline game
+- offline has generally seemed stable
+- multiplayer has had hiccups
+- protect stable offline behavior when touching multiplayer
+
+Jerome’s wife/new-player test:
+- she cared about earned number/currency and asked where her money went
+- she continued playing alone
+- this inspired progression/XP thinking
+- if XP/House Levels eventually launch for everyone:
+  - inspect legitimate retained historical stats
+  - credit existing players once
+  - prevent double credit
+  - present retrospective awards where justified
+
+Approved waiting/spinner concept names to preserve:
+1. Rook Card Flip
+2. Griffin Gold Sweep
+3. Rook Flight
+4. Crest Build
+5. Card Shuffle Swirl
+6. Wing Sweep
+7. Ring Draw
+
+Do not implement these merely because they are listed here.
+
+============================================================
+26. DESIGNER CHECK ON JEROME’S IDEAS
+============================================================
+
+Jerome explicitly said he is creative and can get carried away.
+
+The assistant’s role is not to suppress ideas.
+It is to filter them.
+
+For each significant idea ask:
+- Does this help the player?
+- Is it solving a real problem or showing off?
+- Does it reuse something already present?
+- What happens when it sits beside all the other ideas?
+- Does it add maintenance/state complexity?
+- Will it still feel good after 50 games?
+- Is it visible enough on a phone to justify building?
+- Does it compete with cards/gameplay?
+- Does it deserve to be on the main surface?
+- Can it be discovered later?
+- Can we test it cheaply first?
+
+Jerome intentionally tested this during the trump discussion by suggesting turning the entire table red/green/yellow/black.
+The correct conclusion:
+- trump visibility can be a real problem
+- that does NOT make whole-table color switching a good solution
+- solve the problem without accepting an excessive solution
+
+Do not become more agreeable just because Jerome provides a rationale.
+
+============================================================
+27. WHAT TO DO IN THE NEW CHAT
+============================================================
+
+Do NOT immediately modify R531a.
+
+First:
+1. Read this handoff.
+2. Treat the isolated Start Prototype as the active design sandbox.
+3. Inspect the prototype actually provided in the new chat.
+4. Confirm what it currently does rather than assuming this document perfectly describes its runtime.
+5. Correct the Trump Stamp prototype to the latest rule if it still adds a trump word:
+   faint Griffin already in blue felt → same Griffin changes trump color → no new label.
+6. Continue refining the new-player flow/table transition with Jerome.
+7. Keep it simple.
+8. Do not start the premium asset push until the flow is convincing.
+
+When the prototype is genuinely good:
+- use it as the UX specification
+- return to Work/runtime investigation when a functioning browser environment exists
+- determine the safe real-game integration points
+- protect R531a
+- inspect actual diffs
+- migrate proven ideas surgically
+
+============================================================
+28. CURRENT NORTH STAR
+============================================================
+
+The desired Griffin House experience should feel like:
+
+**A beautiful physical card room where the technology gets out of the way.**
+
+The world can be rich.
+The interface should be simple.
+The game should be obvious.
+The deeper House should reward curiosity.
+
+**Rook is the game. Griffin House is the world around the game.**
+
+END OF HANDOFF
+</pre><script src="../../../../brain-reader.js"></script><script>Brain.status("H");</script></main></body></html>
