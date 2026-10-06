@@ -1,7 +1,7 @@
 {
-  "id": "TABLE-20261004-002",
-  "name": "TABLE-ONLY portrait wood rail",
-  "url": "../builds/TABLE-20261004-002/",
-  "zip": "../artifacts/Rook_TABLE-20261004-002.zip",
-  "sha256": "c7e4534e61e592f9f65f89922e2aa8365cfe0e2183a1e5100abe4daef18dfbd1"
+  "id": "TABLE-20261006-003",
+  "name": "TABLE-003 exact final calibration",
+  "url": "../builds/TABLE-20261006-003/",
+  "zip": "../artifacts/Rook_TABLE-20261006-003.zip",
+  "sha256": "53727a61ca3c6d95a0c332470ad65df90bff81ce0786d2ca580f5113ce8beb75"
 }
