@@ -1,40 +1,11 @@
 {
   "versions": [
-    {
-      "brainVersion": "G",
-      "updated": "2026-10-06",
-      "browse": "versions/G/index.html",
-      "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-06_G_MASTER_BRAIN.zip",
-      "sha256": "a975ba27774c30003df88497638ff5443dcd0d4d884572fb186e8c4ebd12bf61"
-    },
-    {
-      "brainVersion": "F",
-      "updated": "2026-10-06",
-      "browse": "versions/F/index.html",
-      "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-06_F_MASTER_BRAIN.zip",
-      "sha256": "8f5cb482838bc84657ac59c9a198614eb68409e96ca40f93a3b485e98a67a523"
-    },
-    {
-      "brainVersion": "E",
-      "updated": "2026-10-05",
-      "browse": "versions/E/index.html",
-      "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-05_E_MASTER_BRAIN.zip",
-      "sha256": "23a33504c82a352a952969e5216ee21d980dc16412b2e711e03ae1e9be489ecc"
-    },
-    {
-      "brainVersion": "D",
-      "updated": "2026-10-05",
-      "browse": "versions/D/index.html",
-      "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-05_D_MASTER_BRAIN.zip",
-      "sha256": "7f91e79c046904acaa51d44915609bbbc5408bbb00a6aa1d3bf874f39911365f"
-    },
-    {
-      "brainVersion": "C",
-      "updated": "2026-10-04",
-      "browse": "versions/C/index.html",
-      "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-04_C_MASTER_BRAIN.zip",
-      "sha256": "7bdca0dac017147b2e12d6c5d38c66ccb9b34bc2757c0adf60dedc59d6937dc1"
-    }
+    {"brainVersion": "H", "updated": "2026-10-06", "browse": "versions/H/index.html", "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-06_H_MASTER_BRAIN.zip", "sha256": "e5fe4e526d40d4ee8baea74aad06a774e8b74d4fa59b47b764647db43b7b5f4a"},
+    {"brainVersion": "G", "updated": "2026-10-06", "browse": "versions/G/index.html", "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-06_G_MASTER_BRAIN.zip", "sha256": "a975ba27774c30003df88497638ff5443dcd0d4d884572fb186e8c4ebd12bf61"},
+    {"brainVersion": "F", "updated": "2026-10-06", "browse": "versions/F/index.html", "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-06_F_MASTER_BRAIN.zip", "sha256": "8f5cb482838bc84657ac59c9a198614eb68409e96ca40f93a3b485e98a67a523"},
+    {"brainVersion": "E", "updated": "2026-10-05", "browse": "versions/E/index.html", "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-05_E_MASTER_BRAIN.zip", "sha256": "23a33504c82a352a952969e5216ee21d980dc16412b2e711e03ae1e9be489ecc"},
+    {"brainVersion": "D", "updated": "2026-10-05", "browse": "versions/D/index.html", "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-05_D_MASTER_BRAIN.zip", "sha256": "7f91e79c046904acaa51d44915609bbbc5408bbb00a6aa1d3bf874f39911365f"},
+    {"brainVersion": "C", "updated": "2026-10-04", "browse": "versions/C/index.html", "artifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-04_C_MASTER_BRAIN.zip", "sha256": "7bdca0dac017147b2e12d6c5d38c66ccb9b34bc2757c0adf60dedc59d6937dc1"}
   ],
   "unavailablePreviousVersions": ["A", "B"]
 }
