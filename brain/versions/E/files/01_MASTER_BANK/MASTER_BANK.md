@@ -473,3 +473,10 @@ Card asset plan is BANKED / NOT IMPLEMENTED.
 YOUR PARTNER removal is NEXT AUTHORIZED ROLL / NOT IMPLEMENTED.
 R712, Bid Box, Bid Dock, landscape, and production remain PROTECTED.
 Missing pixel masters remain PENDING VERIFICATION.
+
+
+## 32. 2026-10-05 Brain E asset verification
+The seven named source files are VERIFIED / PRESENT and match the supplied SHA-256 manifest.
+Calibration image: left is actual real-runtime final calibration candidate; right is generated environment/table reference only.
+Played-card visual authority remains locked and is not deployed by this pass.
+YOUR PARTNER removal remains next authorized roll only.

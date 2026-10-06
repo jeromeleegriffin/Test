@@ -1,6 +1,25 @@
-NEXT ROLL — REMOVE YOUR PARTNER — 2026-10-05
-Status: NEXT AUTHORIZED ROLL / NOT IMPLEMENTED / NOT DEPLOYED
+GRIFFIN HOUSE OF ROOKS — NEXT ROLL BANKED CHANGE
+Date: 2026-10-05
 
-On the next authorized roll only, remove the visible YOUR PARTNER presentation label.
-Presentation only. Do not alter partner logic. Do not leave a gap or ghost.
-This sync does not perform that roll.
+OWNER DECISION — REMOVE “YOUR PARTNER”
+
+On the next authorized Griffin House of Rooks roll, remove the visible “YOUR PARTNER” text/label from the table/game presentation.
+
+Reason:
+The partner relationship is already visually understandable from the seating/game context. The “YOUR PARTNER” label is unnecessary visual clutter and should not remain in the finished presentation.
+
+IMPORTANT:
+- This is BANKED for the NEXT ROLL.
+- Do not modify production merely because this note exists.
+- Do not touch the Bid Box/Bid Dock.
+- Do not redesign unrelated UI.
+- Remove only the unnecessary “YOUR PARTNER” presentation when the next authorized roll is performed.
+- Verify afterward that its removal leaves no empty placeholder, reserved gap, ghost text, pseudo-element, or stale runtime element.
+- Preserve gameplay/partner logic. This is a presentation removal only, NOT removal of the partner system.
+
+RECALL NOTE FOR ZOEY:
+When Jerome asks what is banked for the next roll, what UI needs removing, or what we decided about “Your Partner,” retrieve this note and remind him that “YOUR PARTNER” is to be removed on the next authorized roll.
+
+STATUS:
+BANKED OWNER DECISION — NEXT ROLL.
+NOT YET IMPLEMENTED.

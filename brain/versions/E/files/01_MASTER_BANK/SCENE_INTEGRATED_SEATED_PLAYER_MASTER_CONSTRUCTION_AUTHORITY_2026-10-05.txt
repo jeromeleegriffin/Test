@@ -1,88 +1,164 @@
-SCENE-INTEGRATED SEATED PLAYER MASTER CONSTRUCTION AUTHORITY
+GRIFFIN HOUSE OF ROOKS
+SCENE-INTEGRATED SEATED PLAYER — MASTER CONSTRUCTION AUTHORITY
 Date: 2026-10-05
-Status: CURRENT PLAYER-CONSTRUCTION WRITTEN AUTHORITY
-Source: owner handoff transcribed into Master Brain D. The companion visual PNG was not supplied and is not stored here.
-Scope: layer, occlusion, and build rules for seated characters.
-Not authority for: card values, card count, card arrangement, card geometry, gameplay state, Bid Box, Bid Dock, score geometry, runtime UI geometry, exact table geometry, exact room geometry.
-For those dimensions: real runtime and locked table authority win.
+Status: APPROVED / BANKED DESIGN & CONSTRUCTION AUTHORITY
 
-THE DESIRED RESULT IS NOT MERELY BORDERLESS AVATARS.
-The design direction is SCENE-INTEGRATED SEATED CHARACTERS.
-Cinder, Dagger, and Crow should feel like real people physically seated around the table.
+PURPOSE
+This file preserves the complete lessons learned during the TABLE-003 seated-player/avatar visual study so future avatar construction can begin from the proven solution instead of rediscovering it.
 
-No visible avatar container.
-No circle, oval, rectangle, shield, medallion, or ornate portrait frame.
-Natural alpha silhouette is the avatar boundary.
-ZERO VISIBLE CHAIRS.
-The unseen chair/lower body is inferred from pose, table occlusion, scale, arm interaction, and perspective.
+AUTHORITY SPLIT — CRITICAL
+1. The approved seated-player reference image is authority for PLAYER CONSTRUCTION, SEATING ILLUSION, OCCLUSION, DEPTH, SCALE RELATIONSHIPS, and CHARACTER/TABLE INTERACTION.
+2. It is NOT pixel authority for cards, card counts/values, gameplay state, UI, Bid Box, room details, or exact table geometry. Generative interpretation occurred in those areas.
+3. The actual real-runtime TABLE-003 Final Calibration Candidate remains authority for actual game pixels/UI/table runtime geometry.
+4. The TABLE003 Master Table Design Authority remains the physical environment/table-design reference where applicable.
+5. If authorities conflict: real runtime wins for game/UI; locked TABLE-003 wins for table; this file + approved seated-player image win for how players are physically integrated.
 
-AUTHORITATIVE DEPTH STACK
-LAYER 0  Room/background.
-LAYER 1  Seated character torsos/shoulders.
-LAYER 2  Authoritative physical table rail/apron occlusion.
-LAYER 3  Only intentionally foregrounded hands/forearms resting ON TOP of the rail.
-LAYER 4  Felt/play surface.
-LAYER 5  Legitimate played cards/game objects.
-LAYER 6  Necessary game UI.
+CORE VISUAL GOAL
+Cinder, Dagger and Crow must read as REAL PEOPLE PHYSICALLY SEATED AROUND THE TABLE, not avatars pasted over a game. No visible chairs are needed; pose, perspective, rail occlusion, and arm contact must make the viewer infer seated bodies/chairs.
 
-THE TABLE MUST BLOCK THE PEOPLE.
-THE TABLE MUST NOT BLOCK THE GAME.
+ONLY THREE SCENE-INTEGRATED CHARACTERS
+- Cinder: top/far seat.
+- Dagger: left seat.
+- Crow: right seat.
+- NO bottom/Jerome avatar or body. Human player is first-person camera/hand.
 
-TABLE RAIL = HARD CHARACTER OCCLUDER
-The wooden table rail is an authoritative occlusion mask for character bodies.
-Character torso/clothing/body pixels do not have permission to pass through the wooden rail or appear on the felt.
-No torso, clothing, shoulder, waist, or accidental arm penetration.
-No ghost body pixels, transparency through the rail, feathering through the rail, or body painted onto felt.
-If a body conflicts with the rail, the rail wins.
-Hide more of the body if necessary.
-Do not move or redesign the table to accommodate the character.
+PROVEN DEPTH / LAYER MODEL
+The earlier failures came from treating a character as one flat portrait layer. Do not do that.
+Conceptual stack:
+L0 room/background
+L1 seated character torsos/shoulders/body mass
+L2 AUTHORITATIVE physical table rail/apron OCCLUSION MASK
+L3 only deliberately exposed foreground hand/forearm resting on top of rail
+L4 felt/play surface
+L5 legitimate played cards/game objects
+L6 necessary game UI
 
-FOREGROUND ARM/HAND EXCEPTION
-A deliberately separated hand or forearm may come forward and rest physically on top of the wooden rail.
-It must approach the rail naturally, make believable contact, rest on the top surface, not emerge through the side of the wood, not pass through the wood, and not invade the felt.
-Crow's successful forearm treatment is the reference concept.
+MASTER RULE
+THE TABLE MUST BLOCK THE PEOPLE. THE TABLE MUST NOT BLOCK THE GAME.
 
-DAGGER FAILURE LESSON
-Dagger repeatedly failed because his torso/clothing penetrated the left wooden rail and appeared inside the table.
-Do not rediscover this failure.
-The inside edge of the left wooden rail is an absolute character-body clipping boundary.
-Torso/chest/clothing/lower shoulder/waist/background arm portions stay behind the rail.
-If necessary, show less Dagger rather than violating the table.
-The failed images were not promoted to authority.
+AUTHORITATIVE RAIL OCCLUSION
+- The existing wooden rail is a HARD PHYSICAL OCCLUDER for character bodies.
+- The inner/top contour of the rail is a hard clipping boundary.
+- Torso, chest, lower shoulder, clothing, waist, background arm portions, hair, etc. have zero permission to leak through the rail onto felt.
+- No feathering, transparency, blending, ghost pixels, or artistic interpretation across the rail.
+- If body geometry conflicts with the rail, hide/crop/reposition the body. The table wins.
+- Felt is gameplay space, not character space.
 
-CROW SUCCESS
-Torso behind table, plus optional forearm/hand naturally resting on top of the rail.
-This made Crow appear physically seated rather than pasted onto the interface.
+FOREGROUND LIMB EXCEPTION
+A hand/forearm may intentionally come forward and rest ON TOP OF the wooden rail. This must be a separate, physically believable foreground interaction: body remains behind rail; limb approaches and rests on rail top. It must not emerge through wood or accidentally intrude onto felt. Crow's approved treatment is the model for this.
 
 CINDER
-Far/top table seat.
-Not positioned according to fireplace center.
-Naturally somewhat smaller because of perspective.
-Head, shoulders, upper chest / limited torso.
-Lower body disappears behind the far rail.
-Do not float her over the table or place her on the felt.
-Do not move the fireplace to accommodate her.
+- Far/top seat; frontal toward human player.
+- Naturally somewhat smaller because farther from camera.
+- Head + shoulders + upper chest + only enough torso to imply seated body.
+- Lower torso disappears behind far rail.
+- Never floats above table, sits on table, or penetrates felt.
+- Seat geometry determines placement, NOT fireplace centerline.
+- Fireplace remains shifted right in TABLE-003.
 
-BOTTOM HUMAN PLAYER
-There is no bottom/Jerome avatar in this physical player direction.
-The human player is the first-person seated camera, bottom hand/cards, and player interaction.
-Do not create a fourth seated character at the bottom.
+DAGGER
+- Left seat.
+- This was the repeated failure point during experimentation.
+- Torso/chest/lower shoulder/clothing/waist/background arm portions must remain COMPLETELY behind left rail.
+- Inner edge of left rail is absolute clipping boundary.
+- Zero torso/clothing/body pixels inside felt.
+- If arm comes forward, it must visibly rest ON TOP of wood; otherwise keep it behind rail.
+- Better to hide more body than violate the table boundary.
+- Approved final reference successfully demonstrates the correct solution.
 
-EDGE / LIGHTING
-Restrained environmental integration.
-Approximately 1-2 physical-phone-pixel perceptual dark separation where needed.
-Dark charcoal/brown-black, adaptive rather than uniform.
-Stronger only where dark hair/clothing crosses dark background.
-Restrained room/fireplace rim light where physically appropriate.
-Tight soft contact/depth shadow.
-Do not use cartoon outlines, continuous orange halos, neon glow, magical particles, giant drop shadows, or sticker treatment.
+CROW
+- Right seat.
+- Torso remains behind right rail.
+- Approved reference demonstrates successful natural forearm/hand interaction on top of rail.
+- Preserve this physical logic: torso behind; deliberate foreground limb on wood.
+- No torso extension onto felt.
 
-PLAYER POSITIONING
-Historical protected R712 avatar/name coordinates are baseline/runtime evidence.
-They are not automatically the final TABLE-003 seated-character positions.
-Cinder far/top. Dagger left. Crow right. Jerome first-person bottom, no visible avatar.
-Do not blindly copy old circular-avatar coordinates into the final scene-integrated implementation.
+PERSPECTIVE / SCALE
+- Do not use identical character scale.
+- Cinder farthest/slightly smaller.
+- Dagger/Crow side seats perceptually closer but must not become giant foreground figures.
+- Table remains dominant physical object.
+- Character crop: head + shoulders + upper chest/small torso. Not full bodies, not standing waist-up portraits, not floating heads, not tiny profile icons.
 
-CARD SCALE
-Approval of TABLE-003 did not lock final card size.
-Card scale/readability is a separate future design decision.
+BORDERLESS PRESENTATION
+- No circle, oval, rectangle, shield, medallion, ornate avatar frame, or visible avatar container.
+- Natural alpha silhouette is the avatar boundary.
+- Remove all old circular avatar regions and ghost remnants completely.
+- No faded duplicate faces or stale avatar backgrounds.
+
+LIGHT / SEPARATION
+- Characters belong to the room lighting.
+- Restrained warm environmental highlights where physically appropriate.
+- No generic gold halo, sparks, magical glow, or neon outline.
+- If separation is needed, use a very restrained adaptive dark edge, perceptually ~1–2 phone pixels, charcoal/brown-black, only where needed.
+- Tight soft contact/depth shadow only as support. Rail occlusion is the primary depth cue.
+
+IDENTITY LABELS
+- Preserve Cinder, Dagger, Crow names with restrained compact identity treatment.
+- No giant plates, invented levels, or unrelated badges.
+- Game-state labels such as BID 100 / PASS seen in generated reference are NOT permanent avatar design authority; they are gameplay-state/UI placeholders.
+
+YOUR PARTNER
+- Visible 'YOUR PARTNER' presentation is approved for removal on next authorized roll.
+- Remove presentation only; do not alter partner gameplay/logic.
+- Leave no placeholder/gap/ghost text.
+
+LOCKED / PROTECTED AREAS
+- Characters adapt to TABLE-003; table does not adapt to characters.
+- Do not change table perspective/taper/curvature/length/width/rails/front wood/apron/felt to fit players.
+- Bid Box / Bid Dock remain protected and untouched.
+- Do not invent cards, card suits, hands, scoreboards, controls, or gameplay.
+- Griffin House of Rooks uses its actual card system; no poker hearts/diamonds/clubs/spades.
+- No chairs.
+- No fourth/bottom player.
+
+PIXEL AUTHORITY WARNING
+The approved generated seated-player image is NOT a literal implementation screenshot. It successfully proves the construction concept but generatively altered some game details (including hand/card details and some character/costume/UI interpretation). Never copy those generated gameplay pixels into production merely because they appear in the reference.
+
+IMPLEMENTATION STRATEGY WHEN AVATAR BUILDING BEGINS
+1. Retrieve and read this exact Master Brain file BEFORE writing implementation instructions.
+2. Retrieve/view the approved seated-player master reference image.
+3. Retrieve/view the actual real-runtime TABLE-003 Final Calibration Candidate for pixel/runtime authority.
+4. Audit current DOM/rendering, avatar wrappers, transforms, z-index, clipping/masking, overflow, pseudo-elements, and runtime inline styles before changes.
+5. Implement deliberate body-behind-rail masking/occlusion structurally; do not rely on lucky positioning.
+6. If a foreground arm is used, treat it as an intentional separated foreground limb layer constrained to rail contact.
+7. Preserve underlying game/table geometry and protected systems.
+8. Verify on actual phone at normal viewing distance AND pixel-peep all three rail/body intersections.
+9. Explicitly inspect Dagger first because that intersection repeatedly failed in visual experiments.
+10. Verify no old circle/ghost remnants and no body pixels leak onto felt.
+11. Failed-fix rule applies: REMOVE / RESTORE / REDIAGNOSE / REPLACE. Do not layer patches.
+
+PASS CHECKLIST
+- Actual game/table still authoritative and recognizable.
+- Cinder behind far rail.
+- Dagger completely behind left rail; zero body/fabric leakage onto felt.
+- Crow behind right rail; optional forearm physically on rail top.
+- Zero visible chairs.
+- Zero old circular avatars/ghosts.
+- No bottom/Jerome avatar.
+- Perspective-aware scale.
+- Table blocks people, not game.
+- Cards/game objects remain legitimate over felt.
+- Bid Box/Bid Dock untouched.
+- 'YOUR PARTNER' absent when authorized roll implements banked decision.
+
+RECALL TRIGGERS
+If Jerome says any of the following, retrieve this file and the approved image before proceeding:
+- avatar building stage
+- build the avatars
+- seated avatars
+- borderless avatars
+- scene-integrated players
+- our new avatar idea
+- the 3D players
+- player positioning
+- table occlusion
+- Dagger clipping
+- go back to the Master Bank / Master Brain for avatars
+
+PROJECT MANTRAS RELEVANT HERE
+IF THE PIXELS EXIST, USE THE PIXELS.
+THE PHYSICAL ART ADAPTS AROUND THE GAME. THE GAME DOES NOT ADAPT AROUND THE ART.
+THE TABLE MUST BLOCK THE PEOPLE. THE TABLE MUST NOT BLOCK THE GAME.
+THE WORKING SCREEN WINS.
+TRUST THE DIFF.

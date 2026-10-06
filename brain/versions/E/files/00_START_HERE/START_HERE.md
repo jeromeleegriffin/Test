@@ -19,7 +19,7 @@ Then read:
 3. `01_MASTER_BANK/MASTER_BANK.md`
 4. `01_MASTER_BANK/GRIFFIN_HOUSE_NEW_CHAT_HANDOFF_2026-10-05.txt`
 5. `00_START_HERE/JEROME_OPERATING_RULES.md`
-6. Visual references only for their labeled status. Missing 2026-10-05 pixel masters were not invented.
+6. Visual references. The 2026-10-05 table, calibration, and seated-player masters are VERIFIED / PRESENT.
 
 Treat LOCKED / BANKED / PROTECTED / NOT IMPLEMENTED / NOT DEPLOYED / NEXT AUTHORIZED ROLL exactly as labeled.
 Do not treat generated imagery as gameplay authority.

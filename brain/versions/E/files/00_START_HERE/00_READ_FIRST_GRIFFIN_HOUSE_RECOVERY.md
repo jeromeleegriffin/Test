@@ -31,11 +31,11 @@ An isolated candidate does not become Current Player without explicit approval a
 ## 5. Current table authority
 TABLE-003 has passed final calibration and is LOCKED as the physical table direction, per the 2026-10-05 owner handoff.
 That lock is written authority in this Brain.
-The named pixel files were not supplied with the handoff and were not invented:
-- `TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png` — MISSING SOURCE
-- `TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png` — MISSING SOURCE
+The named pixel files are now VERIFIED / PRESENT in `02_VISUAL_REFERENCES/` and match the supplied SHA-256 manifest:
+- `TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png` — physical table/environment authority, not invented UI
+- `TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png` — left is actual real-runtime calibration; right is environment reference only
 
-Until those pixels are supplied and hashed, do not substitute Brain C images as the TABLE-003 master.
+Do not substitute Brain C images as the TABLE-003 master.
 Brain C images remain historical/supporting visual references. See the authority index.
 
 TABLE-003 physical direction, as banked from the owner handoff:
@@ -67,8 +67,8 @@ The approved direction is SCENE-INTEGRATED SEATED CHARACTERS, not merely borderl
 Written construction authority in this Brain:
 `01_MASTER_BANK/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt`
 
-The named visual reference was not supplied and was not invented:
-`SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png` — MISSING SOURCE
+The named visual reference is VERIFIED / PRESENT:
+`02_VISUAL_REFERENCES/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png`
 
 Cinder: far/top table seat. Not positioned by fireplace center. Somewhat smaller by perspective. No bottom avatar.
 Dagger: left physical seat. Left rail is an absolute body clipping boundary.
@@ -81,7 +81,7 @@ Known retained runtime evidence already in this Brain:
 `02_VISUAL_REFERENCES/11_CURRENT_REAL_PORTRAIT_BIDBOX_ACTIVE_AUTHORITY.jpg`
 `02_VISUAL_REFERENCES/07_TABLE_002_RUNTIME_REJECTED_FLAT_HTML_LOOK.jpg` is rejected-look evidence, not a target.
 
-The 2026-10-05 final calibration comparison image was not supplied. Do not claim that comparison is stored here.
+The 2026-10-05 final calibration comparison image is VERIFIED / PRESENT. Left is runtime evidence. Right is not game-UI authority.
 
 Historical protected R712 seat coordinates are evidence, not final TABLE-003 seated-character geometry. See MASTER_BANK section 17 and the 2026-10-05 addition.
 
@@ -107,7 +107,7 @@ If the pixels exist, use the pixels. Do not regenerate approved card artwork.
 ## 10. Experimental or pending
 - Player-seat calibration for scene-integrated characters on TABLE-003 is pending. Do not copy old circular-avatar coordinates blindly.
 - Four-card perspective harness/freeze is experimental until promoted.
-- TABLE-003 pixel masters are pending verification because the source files were unavailable for this publication.
+- TABLE-003 pixel masters, seated-player reference, construction text, played-card authority, size-study zip, and YOUR PARTNER next-roll text are VERIFIED / PRESENT. YOUR PARTNER removal is still NOT IMPLEMENTED.
 - Candidate TABLE-20261004-002 was an isolated test candidate, not production, and is not this Brain's runtime authority.
 
 ## 11. Do not touch without authorization

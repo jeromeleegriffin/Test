@@ -1,11 +1,14 @@
-MISSING AUTHORITY SOURCES — 2026-10-05 — BRAIN E
-Status: PENDING VERIFICATION. Not invented.
+MISSING AUTHORITY SOURCES — CLOSED 2026-10-05 — BRAIN E
+Status: VERIFIED / PRESENT.
 
-These names were cited by the 2026-10-05 sync and by Brain D. They were not in the Grok attachment set and are not in the repository as current masters.
+The seven named sources were supplied in GROK_FINAL_MASTER_BRAIN_ASSET_VERIFICATION_PACKAGE_2026-10-05-1 and match the supplied SHA-256 manifest. Bytes were copied exactly. They were not regenerated.
 
-- TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png
-- TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png
-- SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png
-- GRIFFIN_HOUSE_TABLE003_PLAYED_CARD_SIZE_STUDY_REVIEW.zip
-
-Written locks from the sync instruction are banked. Do not substitute Brain C or Brain D generated images as these missing masters.
+| File | Status | SHA-256 |
+| --- | --- | --- |
+| 02_VISUAL_REFERENCES/TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png | VERIFIED / PRESENT — physical table/environment authority; not invented UI | e4765964c1112dac9bfbeeff0e7d4cfe489441e13c3780a8fd3b5f26949d143b |
+| 02_VISUAL_REFERENCES/TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png | VERIFIED / PRESENT — left is real-runtime calibration; right is environment reference only | 362d8eef7a3599c9dc4b9ac0c139fdaf29e64f8898d7e846e99d16c439801f57 |
+| 02_VISUAL_REFERENCES/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png | VERIFIED / PRESENT — seated-character physical integration; not gameplay/UI | 0537f1fd1735f087395288bd9c7aa9544727d02a0ad3c2d58d945926a360be31 |
+| 01_MASTER_BANK/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt | VERIFIED / PRESENT — exact supplied construction authority | b405602e809b1ce470c92aa7189f78d3d7e03448a622061aeb18cdcf62dd2d89 |
+| 01_MASTER_BANK/TABLE003_FINAL_PLAYED_CARD_PRESENTATION_AUTHORITY_2026-10-05.txt | VERIFIED / PRESENT — locked played-card presentation | acd911ee9f97228e40f94b0e08cd049ba8ff3de0e9dca43730c65d6c9bc55a53 |
+| 01_MASTER_BANK/GRIFFIN_HOUSE_TABLE003_PLAYED_CARD_SIZE_STUDY_REVIEW.zip | VERIFIED / PRESENT — size-study evidence | bc3d40835165c1a71449b0a57efd15fb76f3ef50e2181270f5a8a509c7273c01 |
+| 01_MASTER_BANK/NEXT_ROLL_REMOVE_YOUR_PARTNER_2026-10-05.txt | VERIFIED / PRESENT — NEXT AUTHORIZED ROLL / NOT IMPLEMENTED | dd3fed897f77310bcfc0b9e97023769a90d3bed8eef9fc04812103eab12e2dfe |

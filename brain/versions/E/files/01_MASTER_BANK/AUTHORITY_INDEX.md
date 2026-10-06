@@ -24,14 +24,17 @@ Actual pixels / actual photos trump code.
 | 01_MASTER_BANK/GRIFFIN_HOUSE_NEW_CHAT_HANDOFF_2026-10-05.txt | CURRENT HANDOFF | next Zoey | substitute for the Brain |
 | MASTER_BANK.md section 31 | CURRENT WRITTEN ADDITION | E delta | replacement of frozen D |
 
-## Pending verification — not invented
+## Verified present — exact supplied bytes
 
-| Named file | Intended status | Why absent |
+| File | Status | SHA-256 |
 | --- | --- | --- |
-| TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png | CURRENT TABLE VISUAL once supplied | not in sync attachment |
-| TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png | RUNTIME COMPARISON once supplied | not in sync attachment |
-| SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png | PLAYER VISUAL once supplied | not in sync attachment |
-| GRIFFIN_HOUSE_TABLE003_PLAYED_CARD_SIZE_STUDY_REVIEW.zip | SIZE-STUDY EVIDENCE once supplied | not in sync attachment |
+| 02_VISUAL_REFERENCES/TABLE003_MASTER_TABLE_DESIGN_AUTHORITY_2026-10-05.png | VERIFIED / PRESENT table/environment authority | e4765964c1112dac9bfbeeff0e7d4cfe489441e13c3780a8fd3b5f26949d143b |
+| 02_VISUAL_REFERENCES/TABLE003_FINAL_CALIBRATION_VS_AUTHORITY_SOURCE_2026-10-05.png | VERIFIED / PRESENT; left runtime, right reference only | 362d8eef7a3599c9dc4b9ac0c139fdaf29e64f8898d7e846e99d16c439801f57 |
+| 02_VISUAL_REFERENCES/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png | VERIFIED / PRESENT seated-character direction | 0537f1fd1735f087395288bd9c7aa9544727d02a0ad3c2d58d945926a360be31 |
+| 01_MASTER_BANK/GRIFFIN_HOUSE_TABLE003_PLAYED_CARD_SIZE_STUDY_REVIEW.zip | VERIFIED / PRESENT size-study evidence | bc3d40835165c1a71449b0a57efd15fb76f3ef50e2181270f5a8a509c7273c01 |
+| 01_MASTER_BANK/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt | VERIFIED / PRESENT exact construction text | b405602e809b1ce470c92aa7189f78d3d7e03448a622061aeb18cdcf62dd2d89 |
+| 01_MASTER_BANK/TABLE003_FINAL_PLAYED_CARD_PRESENTATION_AUTHORITY_2026-10-05.txt | VERIFIED / PRESENT locked presentation | acd911ee9f97228e40f94b0e08cd049ba8ff3de0e9dca43730c65d6c9bc55a53 |
+| 01_MASTER_BANK/NEXT_ROLL_REMOVE_YOUR_PARTNER_2026-10-05.txt | VERIFIED / PRESENT next roll text; not implemented | dd3fed897f77310bcfc0b9e97023769a90d3bed8eef9fc04812103eab12e2dfe |
 
 ## Retained from D/C
 Brain C and Brain D visual references remain in this package with their prior labels.
