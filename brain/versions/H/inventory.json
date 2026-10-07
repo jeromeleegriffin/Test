@@ -86,8 +86,8 @@
     },
     {
       "path": "01_MASTER_BANK/MASTER_BANK.md",
-      "bytes": 29473,
-      "sha256": "4168193f02820e29b34b087be11dcd7169407ab4c8e5acb0d516a19e6b03d5f5"
+      "bytes": 37254,
+      "sha256": "b291739c72a598ec4f861b281ab989634495be8dc8b9538da55d57eac9fb8ff6"
     },
     {
       "path": "01_MASTER_BANK/MISSING_AUTHORITY_SOURCES_2026-10-05.md",
@@ -258,6 +258,13 @@
       "path": "03_HISTORY_EVIDENCE/97_SHA256SUMS.txt",
       "bytes": 676,
       "sha256": "3bd7806a924e4d51b8667e39162f8a89b748da4457057841421bb24232f3e1c5"
+    },
+    {
+      "path": "01_MASTER_BANK/GRIFFIN_HOUSE_ROOK037_CONTINUATION_2026-10-07.md",
+      "bytes": 7774,
+      "sha256": "ad6ce33fd372738d2eed837f56345225436c0a3a1ccd6d5a96b124a1c77df96a"
     }
-  ]
+  ],
+  "checkpoint": "ROOK037",
+  "checkpointStatus": "AWAITING_PHONE_REVIEW"
 }
