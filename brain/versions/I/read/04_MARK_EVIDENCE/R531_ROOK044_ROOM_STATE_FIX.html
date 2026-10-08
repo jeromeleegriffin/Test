@@ -1,0 +1,177 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>R531 ROOK044 ROOM STATE FIX</title><link rel="stylesheet" href="../../../../brain.css"></head><body><main><nav><a href="../../../../../player/GriffinHousePlayer.html">Player</a><a href="../../../../current/">Current Brain</a><a href="../../../../history.html">History</a></nav><h1>R531 ROOK044 ROOM STATE FIX</h1><p><a href="../../files/04_MARK_EVIDENCE/R531_ROOK044_ROOM_STATE_FIX.patch">Exact source document</a> · <a href="../../index.html">Bank I contents</a></p><p class="status" id="brainStatus" role="status">Checking current Brain…</p><pre>--- a/game.js
++++ b/game.js
+@@ -3052,6 +3052,11 @@
+ 
+ function saveSession() {
+   if (window._horIntentionalLeave) return;
++  // Offline tables never create a multiplayer rejoin session.
++  if (isSoloPractice || roomCode === &#x27;OFFLINE&#x27;) {
++    try { sessionStorage.removeItem(&#x27;rookSession&#x27;); } catch (e) {}
++    return;
++  }
+   try {
+     sessionStorage.setItem(&#x27;rookSession&#x27;, JSON.stringify({
+       roomCode, myName, isHost, isSpectator, myPeerId
+@@ -3763,6 +3768,13 @@
+ 
+ function createRoom() {
+   window._horIntentionalLeave = false;
++  window._horNoServiceStop = false;
++  isSoloPractice = false;
++  // Recover stale activity left by older builds when hosting from the lobby.
++  if (!horClientIsPlaying()) {
++    horMarkActiveTable(false);
++    window._horStayInGame = false;
++  }
+   myName = ($(&#x27;hor-player-name&#x27;).value || &#x27;&#x27;).trim() || &#x27;Host&#x27;;
+   if (typeof Peer === &#x27;undefined&#x27;) {
+     $(&#x27;lobbyStatus&#x27;).textContent = &#x27;PeerJS failed to load. Check your internet connection and refresh.&#x27;;
+@@ -8942,20 +8954,59 @@
+ }
+ 
+ function clientLeaveReplace() {
+-  if (isHost) {
+-    // Host leaving ends the room for others unless we transfer — keep simple: confirm
+-    if (!confirm(&#x27;You are the host. Leaving will end the room for everyone. Continue?&#x27;)) return;
++  const offline = isSoloPractice || roomCode === &#x27;OFFLINE&#x27;;
++  const message = offline ? &#x27;Leave this offline table?&#x27; : isHost
++    ? &#x27;You are the host. Leaving will end the room for everyone. Continue?&#x27;
++    : &#x27;Leave and let a bot take your seat?&#x27;;
++  if (!confirm(message)) return;
++  leaveTableAfterConfirmation531();
++}
++
++function forgetRoomSession531() {
++  try { sessionStorage.removeItem(&#x27;rookSession&#x27;); } catch (e) {}
++  horMarkActiveTable(false);
++  try {
++    [&#x27;rejoinBtn&#x27;, &#x27;reconnectBox&#x27;].forEach(id =&gt; {
++      const el = $(id);
++      if (el) el.classList.add(&#x27;hidden&#x27;);
++    });
++    const input = $(&#x27;hor-room-code&#x27;);
++    if (input) input.value = &#x27;&#x27;;
++  } catch (e) {}
++  try {
++    const url = new URL(location.href);
++    url.searchParams.delete(&#x27;room&#x27;);
++    url.searchParams.delete(&#x27;code&#x27;);
++    history.replaceState(history.state, &#x27;&#x27;, url.href);
++  } catch (e) {}
++}
++
++function leaveTableAfterConfirmation531() {
++  const offline = isSoloPractice || roomCode === &#x27;OFFLINE&#x27;;
++  // Mark leaving before notification, so close/error callbacks cannot rejoin.
++  window._horIntentionalLeave = true;
++  window._horNoServiceStop = true;
++  if (!offline &amp;&amp; isHost) {
+     try { broadcast({ type: &#x27;error&#x27;, message: &#x27;Host left the game.&#x27; }); } catch (e) {}
+-    location.reload();
+-    return;
+-  }
+-  if (!confirm(&#x27;Leave and let a bot take your seat?&#x27;)) return;
+-  try {
+-    if (hostConnection &amp;&amp; hostConnection.open) {
+-      hostConnection.send({ type: &#x27;leaveReplace&#x27;, playerId: myPeerId, name: myName });
+-    }
+-  } catch (e) {}
+-  setTimeout(() =&gt; location.reload(), 300);
++  } else if (!offline) {
++    try {
++      if (hostConnection &amp;&amp; hostConnection.open) {
++        hostConnection.send({ type: &#x27;leaveReplace&#x27;, playerId: myPeerId, name: myName });
++      }
++    } catch (e) {}
++  }
++  // Allow a guest&#x27;s replacement request to leave the channel before closing it.
++  if (!offline &amp;&amp; !isHost) {
++    forgetRoomSession531();
++    setTimeout(leaveTableToLobby531, 300);
++  } else leaveTableToLobby531();
++}
++
++function leaveTableToLobby531() {
++  forgetRoomSession531();
++  try { teardownMultiplayerBeforeLobby(); } catch (e) { console.error(e); }
++  forgetRoomSession531();
++  location.reload();
+ }
+ 
+ /** Sole holder of every remaining trump, or null. */
+@@ -13154,6 +13205,9 @@
+     window._horNetRetryTimers = [];
+     joinInProgress = false;
+ 
++    teardownMultiplayerBeforeLobby();
++    forgetRoomSession531();
++    window._horIntentionalLeave = false;
+     ensureAudio();
+     isSpectator = false;
+     isSoloPractice = true;
+@@ -13281,6 +13335,7 @@
+   // Play Offline press.
+   window._horNoServiceStop = true;
+   window._horStayInGame = false;
++  horMarkActiveTable(false);
+   try {
+     (window._horNetRetryTimers || []).forEach((t) =&gt; clearTimeout(t));
+   } catch (e) {}
+@@ -13321,21 +13376,7 @@
+   game = null;
+ }
+ 
+-bindClick(&#x27;leaveBtn&#x27;, () =&gt; {
+-  try { sessionStorage.removeItem(&#x27;rookSession&#x27;); } catch (e) {}
+-  try { teardownMultiplayerBeforeLobby(); } catch (e) { console.error(e); }
+-  // Teardown can synchronously fire PeerJS callbacks. Clear the saved room a
+-  // second time after all connections are closed so deliberate Leave can never
+-  // surface a stale Rejoin control on the fresh lobby.
+-  try { sessionStorage.removeItem(&#x27;rookSession&#x27;); } catch (e) {}
+-  try {
+-    const rb = $(&#x27;rejoinBtn&#x27;);
+-    const rc = $(&#x27;reconnectBox&#x27;);
+-    if (rb) rb.classList.add(&#x27;hidden&#x27;);
+-    if (rc) rc.classList.add(&#x27;hidden&#x27;);
+-  } catch (e) {}
+-  location.reload();
+-});
++bindClick(&#x27;leaveBtn&#x27;, leaveTableToLobby531);
+ bindClick(&#x27;showRules&#x27;, () =&gt; {
+   try { showVariantRules(); } catch (e) {}
+   if (rulesModal) rulesModal.classList.remove(&#x27;hidden&#x27;);
+--- a/polish.js
++++ b/polish.js
+@@ -1650,25 +1650,17 @@
+     };
+   }
+ 
+-  const _clientLeave = window.clientLeaveReplace;
+   window.clientLeaveReplace = async function () {
++    const offline = isSoloPractice || roomCode === &#x27;OFFLINE&#x27;;
+     const ok = await houseConfirm({
+-      title: isHost ? &#x27;Leave this table?&#x27; : &#x27;Leave and seat a bot?&#x27;,
+-      body: isHost ? &#x27;You are the host. Leaving ends the room for everyone.&#x27; : &#x27;A bot will take your chair for the rest of the night.&#x27;,
++      title: offline || isHost ? &#x27;Leave this table?&#x27; : &#x27;Leave and seat a bot?&#x27;,
++      body: offline ? &#x27;Return to the lobby from this offline game.&#x27; : isHost
++        ? &#x27;You are the host. Leaving ends the room for everyone.&#x27;
++        : &#x27;A bot will take your chair for the rest of the night.&#x27;,
+       danger: true,
+     });
+     if (!ok) return;
+-    if (isHost) {
+-      try { broadcast({ type: &#x27;error&#x27;, message: &#x27;Host left the game.&#x27; }); } catch (e) {}
+-      location.reload();
+-      return;
+-    }
+-    try {
+-      if (hostConnection &amp;&amp; hostConnection.open) {
+-        hostConnection.send({ type: &#x27;leaveReplace&#x27;, playerId: myPeerId, name: myName });
+-      }
+-    } catch (e) {}
+-    setTimeout(() =&gt; location.reload(), 300);
++    leaveTableAfterConfirmation531();
+   };
+ 
+   const _redeal = window.hostRedeal;
+</pre><script src="../../../../brain-reader.js"></script><script>Brain.status("I");</script></main></body></html>

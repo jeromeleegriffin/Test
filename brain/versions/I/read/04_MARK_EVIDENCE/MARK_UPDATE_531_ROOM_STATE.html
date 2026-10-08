@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MARK UPDATE 531 ROOM STATE</title><link rel="stylesheet" href="../../../../brain.css"></head><body><main><nav><a href="../../../../../player/GriffinHousePlayer.html">Player</a><a href="../../../../current/">Current Brain</a><a href="../../../../history.html">History</a></nav><h1>MARK UPDATE 531 ROOM STATE</h1><p><a href="../../files/04_MARK_EVIDENCE/MARK_UPDATE_531_ROOM_STATE.txt">Exact source document</a> · <a href="../../index.html">Bank I contents</a></p><p class="status" id="brainStatus" role="status">Checking current Brain…</p><pre>House of Rooks — update for Mark
+October 7, 2026
+
+Live table: https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/
+Build still shows v531. This is a room-state fix on that live build, not a new version number.
+Commit: 542d7d5 on main
+https://github.com/jeromeleegriffin/Griffin-House-of-Rooks/commit/542d7d5be8a5183b5d759cfcdc15051529d777a1
+
+What this fixes
+The working ROOK044 room cleanup is now on the live 531 table.
+Leaving an offline game could leave a stale room flag behind. The next Play with Friends press could then fail to open a clean host table, or the lobby could still look like a room was open.
+
+What changed
+- An offline table no longer saves a multiplayer rejoin session.
+- Leave clears the saved room, the active-table flag, the rejoin button, and any room code in the address before it returns to the lobby.
+- Play with Friends clears leftover offline / no-service flags before it hosts.
+- Only game.js and polish.js changed. Cards, bidding, bots, and the lobby look are the same.
+
+Please check these three paths
+1. From the lobby, tap Play with Friends. You should land in the waiting room as host, with a room code, and not in an offline game.
+2. Tap Leave. You should be back on the lobby. There should be no Rejoin button and no old room code.
+3. Tap Play now (offline bots). Confirm you are in a game. Tap Leave. Then tap Play with Friends again. That second host should open a new waiting room, not bounce back to the offline table and not offer rejoin for OFFLINE.
+
+If the phone still behaves the old way
+Close the tab completely and open the live link again. The label will still say v531. This fix is inside that build. A phone that played offline earlier may be holding the old script until that fresh open.
+
+Checked here before this note
+- Play with Friends hosted room 47LA, waiting room shown, solo off.
+- Leave returned to a clean lobby: no session, no rejoin, no room in the address.
+- Play now entered OFFLINE and did not save a rejoin session.
+- Leave from that table cleared the active-table flag.
+- Play with Friends again hosted room WMSW, waiting room shown, solo off.
+Pages is already serving the new game.js (last-modified 2026-10-08 02:24 UTC).
+</pre><script src="../../../../brain-reader.js"></script><script>Brain.status("I");</script></main></body></html>

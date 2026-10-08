@@ -1,0 +1,2 @@
+HANDOFF DELIVERY RULE — OWNER DIRECTIVE, OCTOBER 7, 2026
+Every handoff to anyone must be delivered as a ZIP containing the complete recipient prompt and all newly required supporting files. Jerome should only have to forward the ZIP. Never require a separate copied message or prompt outside it. Include this rule in the next Master Brain operating rules.

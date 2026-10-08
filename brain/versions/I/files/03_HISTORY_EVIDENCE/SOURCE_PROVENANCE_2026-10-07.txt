@@ -1,0 +1,6 @@
+SOURCE PROVENANCE — Brain I
+Incoming package: 046.zip, replacement for a failed 045.zip download. Compact documentation handoff. Historical image backup omitted on purpose.
+Contains: 00_GROK_BRAIN_UPDATE_PROMPT.txt, 01_OWNER_HANDOFF_RULE.txt, Mark_Update_531_Room_State.zip / MARK_EVIDENCE, and BRAIN_H_TEXT_SNAPSHOT.
+Preparation session that wrote the prompt read Mark's TXT and patch and received Jerome's confirmation. It did not independently inspect GitHub.
+This publication session inspected Test brain/current.json, brain/versions.json, branches, and Griffin-House-of-Rooks commit 542d7d5be8a5183b5d759cfcdc15051529d777a1. It did not run the live table.
+Game files were not modified.

@@ -1,0 +1,16 @@
+ZOE / ZOEY STARTUP — BRAIN I — 2026-10-07
+Owner: Jerome Griffin. Read the current Master Brain first, then this handoff.
+
+Closed: the R531 room-state fix is OWNER-VERIFIED FIXED. Jerome said at about 11:01 PM Eastern on October 7, 2026: "I verified it and it fixed the issue on 5-31 also." Do not ask him to confirm it again. On-screen version stays v531. Live commit 542d7d5be8a5183b5d759cfcdc15051529d777a1 on jeromeleegriffin/Griffin-House-of-Rooks main. Live table https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/
+
+Held: do not start an R401 networking rewrite. The targeted fix worked. R401 remains historical fallback only.
+
+Locked: Last Trick placement from the ROOK025 phone pixels. Do not recenter it from old X/Y notes. Independent Last Trick group. If placement fails again, say early: "Let's get Mark to do the exact placement."
+
+Banked, not built: the card-holder plan in Brain H MASTER_BANK.md section 6. Recover the latest actual runtime before implementing. No image generation unless Jerome says Generate.
+
+Still open: ROOK037 badge, Nest pile, and deal pace are awaiting phone review. Room-state success does not close that review. Do not treat ROOK026–ROOK043 visual or audio reports as phone-approved unless a specific owner pass is in the Brain.
+
+Resume from the latest recoverable accepted runtime. Keep candidate changes and phone-approved results distinct. Ask only for genuinely missing source material needed for the next concrete change.
+
+Handoff rule: every handoff Jerome forwards must be a ZIP with the complete prompt and supporting files inside it. No separate copied message.

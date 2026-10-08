@@ -1,0 +1,57 @@
+{
+  "brainVersion": "I",
+  "updated": "2026-10-07",
+  "role": "documentation delta; visual assets remain Brain H bytes",
+  "files": [
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 1002,
+      "sha256": "8d6ec1feb171749e47c5a88fb96b87406b393754be10a77a4b980cc1f3cbe105"
+    },
+    {
+      "path": "files/00_START_HERE/JEROME_OPERATING_RULES.md",
+      "bytes": 10101,
+      "sha256": "4cf164a8ec001bdbbea38afa64aac136bc9d15b6ca4c1a35932ebb78677ac6dd"
+    },
+    {
+      "path": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_I_DELTA_2026-10-07.md",
+      "bytes": 10073,
+      "sha256": "95f893d7a312f06662d4d94a1d2ef636ad7fab5ebdce4eba9d4eeb7d32d430ff"
+    },
+    {
+      "path": "files/01_MASTER_BANK/ZOE_STARTUP_HANDOFF_2026-10-07.txt",
+      "bytes": 1625,
+      "sha256": "66198560ab6893350ce23cf1369e82bc5689f8c3fd05adb9d5451dc1797c07a3"
+    },
+    {
+      "path": "files/01_MASTER_BANK/POST_H_BUILD_LEDGER_2026-10-07.txt",
+      "bytes": 922,
+      "sha256": "3d47072ca0b88bf80f851f60a6bb11d3c1ba4d340b6889a1299a2915db42cae1"
+    },
+    {
+      "path": "files/01_MASTER_BANK/HANDOFF_DELIVERY_RULE_2026-10-07.txt",
+      "bytes": 358,
+      "sha256": "22cb2ecb5afa55f42f540a4ba5b2dd4796303f93c985907f24496a03bc19c6dc"
+    },
+    {
+      "path": "files/03_HISTORY_EVIDENCE/046_GROK_BRAIN_UPDATE_PROMPT_2026-10-07.txt",
+      "bytes": 14675,
+      "sha256": "9ccf21d3d3e2e0bc0dd713a341b4ec437ce08513160410af6cad449cefecf69c"
+    },
+    {
+      "path": "files/03_HISTORY_EVIDENCE/SOURCE_PROVENANCE_2026-10-07.txt",
+      "bytes": 693,
+      "sha256": "62a89be3c76a52941f46b922177d05765cac8358a2c8b3f8c2bf9da7e73b1e52"
+    },
+    {
+      "path": "files/04_MARK_EVIDENCE/MARK_UPDATE_531_ROOM_STATE.txt",
+      "bytes": 2198,
+      "sha256": "2afd8a759f04a4736303ccf02a28b2988a21ef000fd026bcc4bd982f8dad77d9"
+    },
+    {
+      "path": "files/04_MARK_EVIDENCE/R531_ROOK044_ROOM_STATE_FIX.patch",
+      "bytes": 6246,
+      "sha256": "3f56003f0803fb5a58a542aa2f47e1c290551955a5b4d23b6aa132c35136331f"
+    }
+  ]
+}

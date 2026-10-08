@@ -1,0 +1,106 @@
+GROK / ZOEY — GRIFFIN HOUSE OF ROOKS
+CONTINUE MASTER BRAIN UPDATE — OCTOBER 7, 2026 (America/New_York)
+OWNER: JEROME GRIFFIN
+
+Continue the existing project. Do not restart development. This is a documentation/continuity branch-push handoff, not a new game build or game deployment.
+
+MISSION
+Read the attached Brain H text snapshot, this update, and Mark's original room-state package. The large historical image assets are not duplicated in this compact handoff; preserve their existing authoritative repository bytes. This is a documentation delta package, not a full asset backup. Recover the current repository authority, add the post-H history below, and prepare/publish the next frozen Master Brain under the established workflow. The earlier unfinished plan called it Brain I. Use I only if the actual repository pointer/version history confirms that it is the next unused version. Do not overwrite an existing frozen version.
+
+REPOSITORIES AND SCOPE
+Historical Brain repository: jeromeleegriffin/Test; pointer brain/current.json; history brain/versions.json and brain/history.html. Inspect the current repository before writing; do not assume historical paths or commits are still current.
+Live game repository: jeromeleegriffin/Griffin-House-of-Rooks.
+Live table: https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/
+Keep Brain publication separate from game deployment. Do not modify game.js, polish.js, player/runtime assets, service workers, Bid Box/Bid Dock, or game deployment settings for this Brain task. The supplied patch is evidence of an already-applied fix, not an instruction to apply it again.
+
+LATEST OWNER CONFIRMATION — HIGHEST PRIORITY
+At approximately 11:01 PM Eastern, October 7, 2026, Jerome explicitly said:
+“I verified it and it fixed the issue on 5-31 also.”
+Record the R531 room-state issue as OWNER-VERIFIED FIXED. Earlier statements that the R531 push was blocked/pending are historical and superseded by Mark's deployment report plus this owner confirmation. Do not ask Jerome to repeat the same confirmation.
+
+Mark's supplied package reports commit:
+542d7d5be8a5183b5d759cfcdc15051529d777a1 on main.
+https://github.com/jeromeleegriffin/Griffin-House-of-Rooks/commit/542d7d5be8a5183b5d759cfcdc15051529d777a1
+The on-screen version intentionally remains v531. No version bump was required.
+This preparation session read Mark's TXT and patch and received Jerome's confirmation; it did not independently inspect GitHub or run the live game. Preserve these evidence distinctions.
+
+ROOM-STATE FAILURE AND RESOLUTION
+Leaving offline play could retain a stale room/activity/session flag. A subsequent Play with Friends could fail to open a clean host waiting room, look as if a room remained open, bounce into offline play, or expose an OFFLINE rejoin state.
+The targeted ROOK044 cleanup worked in Jerome's test. Jerome then requested that fix on R531. The earlier assistant could not write the live repository and supplied a patch. Mark's package reports the patch is now deployed. Jerome now confirms the R531 issue is fixed too.
+Only game.js and polish.js are identified in the supplied patch.
+Changes visible in the patch:
+- saveSession refuses to persist multiplayer rejoin data for solo/OFFLINE tables.
+- createRoom clears intentional-leave/no-service/solo flags and recovers stale inactive-table flags before hosting.
+- shared leave helpers clear rookSession, active-table state, rejoin/reconnect UI, room input, and room/code query parameters.
+- deliberate leaving is marked before callbacks can attempt reconnection.
+- online host departure broadcasts its existing notice; guest departure sends leaveReplace and allows a short delay before teardown.
+- offline startup tears down previous multiplayer state and forgets old room data before initializing solo play.
+- polish.js delegates confirmed Leave to the shared cleanup path rather than its old independent reload implementation.
+Mark reports passing: direct host (47LA), clean Leave, offline start with no saved rejoin, offline Leave clearing activity, subsequent clean host (WMSW). Treat room codes as historical test evidence, not reusable current rooms.
+Do not convert these checks into a claim that all multiplayer cases were tested. Multi-device joining, reconnect during play, host migration, long sessions, and every network failure mode were not established by this package.
+
+R401 NETWORK REWRITE — HELD
+Jerome said R401 worked smoothly and proposed reverting networking to match it if the targeted fix failed. He agreed to try the targeted fix first. It worked in ROOK044 and now in R531. The broad R401 networking replacement was not performed and is not the current next action. Preserve R401 as historical fallback/reference; do not start a rewrite automatically.
+
+BASELINE DISCREPANCY — DO NOT HIDE
+The unfinished prior conversation said Brain H already contained ROOK037. Inspection of the supplied October 6 Brain H ZIP found no ROOK build identifiers in its text files and no ROOK037 update. It contains the earlier design authorities, source visuals, historical records, and numbered-deck lock. Do not claim this particular backup includes ROOK037.
+The historical H publication was reported as candidate d390a06a55f58a4633eea4ddcada0967c56e053f and pointer 490e1bf74121da12e4ae44e338a7fe72a1a38fde. These are recovered history, not newly verified repository state.
+Reconcile against the actual current Brain and preserve newer records if present. Some old Brain entry pages retain conflicting version/path statements; do not copy those as current truth.
+
+POST-H RECOVERED DEVELOPMENT LEDGER
+These entries came from recovered conversation summaries, not inspection of the corresponding build ZIPs. A reported code check is not a phone pass. Preserve that distinction and attach actual build evidence if available.
+
+ROOK025: documented banked phone-tested Last Trick placement. Actual Android pixels are the placement authority. Do not recenter/reconstruct it from X/Y. This is a visual checkpoint, not a direction to roll the entire active development line backward.
+ROOK026: reported 44 asset-first numbered card faces, shared normal-hand/discard assets with independent sizing. Jerome reported the cards still messed up. Not an accepted/banked success.
+ROOK027: reported table-plane perspective/landing, clipping corrections, warmer gold; source checks reported; phone acceptance not recovered.
+ROOK028: reported legacy image inset removal and bottom-avatar centering attempt; phone acceptance not recovered. Do not promote a centering attempt into a new avatar-design lock.
+ROOK029: reported revised avatar centering, visible Last Trick X and automatic refresh; phone acceptance not recovered.
+ROOK030: reported Last Trick X and table-plane face-down stack/full-back artwork changes; phone acceptance not recovered.
+ROOK031: reported table-plane Nest reveal; latest Last Trick retained across deals, X dismissal, updates while open; phone acceptance not recovered.
+ROOK032: reported X moved to the left of the Last Trick group with cards unchanged; explicit owner test not recovered.
+ROOK033: reported Nest reveal lowered to Griffin-head alignment, flat dealer-style wash shuffle, approved Griffin back restored; phone acceptance not recovered.
+ROOK034–ROOK037: build-by-build evidence not recovered. An unpackaged 6/9 underline change was mentioned; do not assign it to a build or declare it approved without source evidence.
+ROOK038: Jerome authorized approximately 40% smaller visible brass controls, separate larger touch targets, faster dealing. Assistant reported packaging those changes without deployment. Authorization is established; a separate final phone pass was not recovered.
+ROOK039–ROOK040: build-by-build evidence not recovered.
+ROOK041: assistant reported 2.55-second crowd reaction, softer audio, hand stabilization, visible card travel, and an avatar-loading fix. Source checks reported; final phone acceptance not recovered.
+ROOK042–ROOK043: build-by-build evidence not recovered.
+ROOK044: targeted room-state cleanup OWNER-VERIFIED WORKING, including offline → Leave → Play with Friends. R531 port now OWNER-VERIFIED FIXED as above.
+
+Do not manufacture missing build descriptions. Do not equate the successful ROOK044 room test with acceptance of every visual/audio change inherited into that build. Preserve open evidence gaps in the new Brain so Zoe can continue without repeating accepted work or trusting an unverified candidate.
+
+LAST TRICK — CURRENT LOCK VS OBSOLETE IDEAS
+Explicit LAST control beside 1× | 3× | MAX.
+Compact N/W/E/S four-card group with simplified number/color faces, no written color words, no large black panel. X is the close control. Review remains until X under the recovered accepted direction; later automatic updates/retention are reported implementation details pending source confirmation.
+ROOK025 actual phone group placement is locked. Historical target X68/Y389 referred to the center of the whole group, but accepted actual pixels supersede coordinate reconstruction.
+The old portrait Last 3 pill and invisible center-table-tap experiment are obsolete for this feature. Do not resurrect them from old Brain prose.
+Repeated mapper failure selected table-felt instead of an independent Last Trick group and moved unrelated elements. Preserve independent grouping. If exact placement repeatedly fails again, remind Jerome early: “Let's get Mark to do the exact placement.”
+
+CARD HOLDER — EXISTING BANKED PLAN FOUND
+Brain H MASTER_BANK.md section 6 contains the plan. Jerome was right that a plan already exists. It is BANKED, NOT YET INTEGRATED in that backup; no implementation proof was recovered here.
+A separate shallow physical object: dark polished wood, thin warm aged-brass edge, recessed dark card channel, dimensional bevel/highlight/shadow, rounded form, clean top edge. Cards remain dominant. No protruding Griffin ornament. No bridge, connector, pedestal, or filler joining it to the Bid Box.
+Preserve actual card position, spacing, behavior, AUTO MAP, and protected Bid Box geometry. Respect the visible felt gap. Design around real locked responsive gameplay geometry; avoid one giant fixed tray image if it fights that geometry.
+After continuity is restored, this is the roadmap item Jerome wanted to revisit. Recover the latest actual runtime before implementing; do not replace newer hand behavior with a reconstructed old baseline. No image generation unless Jerome says Generate.
+
+DECK AND VISUAL AUTHORITIES TO CARRY FORWARD
+Preserve the complete existing H backup and repository assets, including exact image assets and written authority files. The attached BRAIN_H_TEXT_SNAPSHOT contains the unchanged text records only; image assets remain in the original backup/repository. The normal default numbered deck is warm ivory/cream textured stock, thin bronze/gold border, one large colored number with RED/GREEN/YELLOW/BLACK beneath. The clean no-word deck is an alternate; the compact Last Trick faces are a separate presentation.
+Locked base palette: red #E11D2E; green #0E8F3E; yellow #FFD51A; black #0B0B0B.
+Preserve premium Red 2 and black bird masters; do not regenerate or place “Rook” on the black bird.
+Do not confuse Select 6 cards to discard with the normal hand. The larger temporary selection UI is separate; it is not a 16-card normal-hand design requirement.
+TABLE-003, accepted physical perspective, B Natural Toss landing and 15%-smaller played-card size remain protected. Preserve exact visual assets. Old records contain competing numeric orientation descriptions: do not resolve such conflicts by inventing new transforms; consult newest actual accepted pixels and specific authority files.
+Preserve calmer fireplace/room, personas, Bid Dock, gameplay, sorting, speed engine and accepted geometry. Changes mentioned in a test build do not broadly unlock those systems.
+Landscape remains deferred: recovered A Rook 004 was held pending runtime evidence; intended R531 readable utility layout, Premium Bid Box on right at R531 anchor, no room/table art. Do not revive unfinished landscape work during this Brain sync.
+
+WORKING RULES
+PLAY FIRST → DISCOVER LATER. The working screen wins. Actual pixels/photos outrank theoretical coordinate reconstruction. Use isolated changes and short numbered phone-test packages. Do not redesign working systems or clear service-worker/phone state as a routine step. “Continue” means preserve progress. “Roll” means project implementation, not image generation. Keep Jerome informed and finish a concrete deliverable instead of repeatedly restarting or promising to continue.
+
+BRANCH / PUBLICATION PROCEDURE
+1. Read actual brain/current.json and current authority/index/start pages. Locate any existing unfinished Brain I branch/work before creating duplicate work.
+2. Preserve every existing frozen version and original source asset byte-for-byte. Use the attached H as recovery evidence, not permission to downgrade a newer Brain.
+3. On the established documentation branch, add this delta, source provenance, build ledger, owner confirmation, known gaps, card-holder continuation, and fresh Zoe startup handoff. Update current-facing status/index pages in the new candidate so obsolete claims cannot look current.
+4. Include Mark's exact TXT and patch as historical evidence. Never reapply that patch as part of the Brain update.
+5. Verify manifests/hashes, links and scope. Confirm no game or deployment files changed. Do not invent current.json values, commit SHAs or paths.
+6. Push the reviewable documentation branch under the existing authorized repository workflow. Publish the next frozen version only through that workflow. Move brain/current.json LAST, after the complete candidate is verified; if permission or evidence blocks publication, leave the pointer intact and return the complete candidate and exact blocker.
+7. Return actual branch name, candidate commit, pointer commit if changed, final pointer values, artifact path/hash, preservation report and unresolved evidence gaps. A prepared ZIP is not a pushed branch. Do not claim either operation happened without evidence.
+
+ZOE STARTUP AFTER PUBLICATION
+Read the current Master Brain first, then this newest delta and Jerome's R531 success confirmation. Tell Jerome the room-state fix is closed, R401 rewrite is held, Last Trick placement remains locked, and the card-holder plan exists. Resume from the latest recoverable accepted runtime rather than restarting. Keep candidate changes and phone-approved results distinct. Ask only for genuinely missing source material needed for the next concrete change.
