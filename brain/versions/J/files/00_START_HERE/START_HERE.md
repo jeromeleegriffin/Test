@@ -1,0 +1,21 @@
+# START HERE — Brain J
+Date: 2026-10-08 America/New_York. Owner: Jerome Griffin.
+
+Brain J is the October 8 documentation delta. It records candidate builds 054–058. Those builds are not owner-approved. Brain I remains frozen historical authority. Brain H remains frozen and is the visual-asset authority. Do not overwrite H or I.
+
+Read this order:
+1. files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_J_DELTA_2026-10-08.md — exact banked update. Do not treat candidate reports as approval.
+2. files/01_MASTER_BANK/GAME_ZIP_AUTHORIZATION_RULE_2026-10-08.txt — locked process rule. No game-build ZIP unless Jerome explicitly authorizes that package.
+3. files/01_MASTER_BANK/ZOE_STARTUP_HANDOFF_2026-10-08.txt
+4. Frozen Brain I delta and Brain H visual references, linked from the J index.
+
+No Brain J archive ZIP was created. Owner authorization is required before any Brain archive. Do not present the Brain I ZIP as containing J.
+
+Preserved live record, unchanged by this documentation sync:
+- On-screen version v531
+- Live commit 542d7d5be8a5183b5d759cfcdc15051529d777a1
+- Live table https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/
+- Foundation H SHA-256 e5fe4e526d40d4ee8baea74aad06a774e8b74d4fa59b47b764647db43b7b5f4a
+- R531 room-state fix remains OWNER-VERIFIED FIXED. ROOK037 visual review remains open in the H/I record.
+
+Open, not approved: larger-hand top/side clipping; deal-time avatar drift; uncertain initial Bid Box state vs turn state; connector hide/show; remaining-winning-card table plane; peel and in-flight audio stages. Build 058 has five cleaned landing variations only.

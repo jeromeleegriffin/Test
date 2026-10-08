@@ -1,0 +1,14 @@
+GRIFFIN HOUSE OF ROOKS — GAME ZIP AUTHORIZATION RULE
+Date: 2026-10-08 (America/New_York)
+Owner: Jerome Griffin
+Status: LOCKED PROCESS RULE
+
+DO NOT CREATE, REBUILD, REPLACE, OR PACKAGE A GAME-BUILD ZIP UNTIL JEROME EXPLICITLY TELLS YOU TO CREATE OR PACKAGE THAT GAME ZIP.
+
+“Continue,” “fix it,” “update the Master Bank,” “work on it,” or similar instructions authorize the described game work but do not by themselves authorize packaging a game-build ZIP. An instruction such as “make 059.zip” or “package this game build” authorizes that specific game package. Authorization for an earlier game ZIP does not carry forward to a later game build.
+
+Source work and text-documentation work may continue while game packaging is held. Keep the working candidate reviewable; do not create a game archive as a convenience.
+
+Grok-to-GitHub prompt packages are a separate deliverable. When Jerome asks for a prompt for Grok to send to GitHub, package the complete prompt and its required supporting files in a ZIP as requested. That prompt ZIP is not a game build and does not authorize a game ZIP.
+
+This rule supersedes the older Brain I wording that every handoff must be a ZIP. Follow Jerome’s current per-deliverable instruction. Do not publish or deploy a game build without separate explicit authorization. When Jerome asks for a game ZIP, keep full evidence inside it and keep the chat delivery concise.

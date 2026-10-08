@@ -1,0 +1,51 @@
+{
+  "brainVersion": "J",
+  "updated": "2026-10-08",
+  "role": "documentation delta; no archive created; visual assets remain Brain H bytes; builds 054-058 are candidates, not owner-approved",
+  "archive": null,
+  "archiveStatus": "No archive created \u2014 owner authorization required",
+  "document": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_J_DELTA_2026-10-08.md",
+  "documentSha256": "4a02dbbfbdf8d2278646e2fb9ffbfd4e7b532820b808f1e717c61540f8460538",
+  "files": [
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 1602,
+      "sha256": "c31d5f4448224ebbcc3a7150badfc7b883740c6211c017070a64043984f3d7e4"
+    },
+    {
+      "path": "files/00_START_HERE/JEROME_OPERATING_RULES.md",
+      "bytes": 2381,
+      "sha256": "25d33bf9f16a5d27bb4361e95c26ea0aeb396efa1f9bbaf88418b5fe231ba029"
+    },
+    {
+      "path": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_J_DELTA_2026-10-08.md",
+      "bytes": 11318,
+      "sha256": "4a02dbbfbdf8d2278646e2fb9ffbfd4e7b532820b808f1e717c61540f8460538"
+    },
+    {
+      "path": "files/01_MASTER_BANK/GAME_ZIP_AUTHORIZATION_RULE_2026-10-08.txt",
+      "bytes": 1429,
+      "sha256": "47b3dcd5d9dfd507e3df1fa2fbcf18134ca236230b543f39051f3eb913ffd84f"
+    },
+    {
+      "path": "files/01_MASTER_BANK/ZOE_STARTUP_HANDOFF_2026-10-08.txt",
+      "bytes": 1656,
+      "sha256": "fc59dc2277af802cbd760422ce24d4c5514ee9a8f10401cf9f8b64fe4f94f125"
+    },
+    {
+      "path": "files/03_HISTORY_EVIDENCE/GROK_MASTER_BRAIN_J_SYNC_PROMPT_2026-10-08.txt",
+      "bytes": 9860,
+      "sha256": "9601f7c0b7c2c98e84b9c3fd0c6ba091a3f1a6654ba19c475ec84b856ed6aa98"
+    },
+    {
+      "path": "files/03_HISTORY_EVIDENCE/SOURCE_PROVENANCE_2026-10-08.txt",
+      "bytes": 845,
+      "sha256": "c7ea4a8a6ce646644c962661e9c02174baba26a5d7970218592c72436a1a3afc"
+    },
+    {
+      "path": "files/03_HISTORY_EVIDENCE/PACKAGE_README_FIRST.txt",
+      "bytes": 884,
+      "sha256": "424e9dc1ffd2da49efe020ca51c25f7044217bd481a227bb6ebe64cd5085e9ae"
+    }
+  ]
+}

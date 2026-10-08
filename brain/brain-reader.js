@@ -19,11 +19,16 @@ window.Brain = (() => {
     if (/%(?:2f|5c|2e|25)/i.test(url.pathname)) throw Error('Invalid encoded Brain path');
     return url.href;
   }
+  function archivePath(value) {
+    if (value == null || value === '') return null;
+    if (typeof value !== 'string' || !value.startsWith('artifacts/') || !value.endsWith('.zip')) throw Error('Manifest archive path mismatch');
+    return path(value);
+  }
   async function current() {
     const m = await json('current.json');
     if (!m || m.project !== 'Griffin House of Rooks' || typeof m.brainVersion !== 'string' || !/^[A-Za-z0-9_-]+$/.test(m.brainVersion) || m.status !== 'CURRENT' || typeof m.updated !== 'string' || !/^\d{4}-\d{2}-\d{2}(T.*)?$/.test(m.updated) || !/^[a-f0-9]{64}$/i.test(m.sha256 || '')) throw Error('Invalid current Brain manifest');
-    const browse = path(m.browse), artifact = path(m.artifact);
-    if (m.browse !== 'versions/' + m.brainVersion + '/index.html' || !m.artifact.startsWith('artifacts/') || !m.artifact.endsWith('.zip')) throw Error('Manifest version/path mismatch');
+    const browse = path(m.browse), artifact = archivePath(m.artifact);
+    if (m.browse !== 'versions/' + m.brainVersion + '/index.html') throw Error('Manifest version/path mismatch');
     return {...m, browse, artifact, history:path(m.history)};
   }
   function failure(error) {
@@ -37,8 +42,11 @@ window.Brain = (() => {
     el('brainStatus').textContent = 'Checking current Brain…';
     try {
       const m = await current();
-      el('brainStatus').textContent = 'MASTER BANK ' + m.brainVersion + '\nCURRENT\nLast updated: ' + m.updated;
-      el('brainOpen').href = m.browse; el('brainHistory').href = m.history; el('brainBackup').href = m.artifact;
+      el('brainStatus').textContent = 'MASTER BANK ' + m.brainVersion + '\nCURRENT\nLast updated: ' + m.updated + (m.artifact ? '' : '\nNo archive created — owner authorization required.');
+      el('brainOpen').href = m.browse; el('brainHistory').href = m.history;
+      const backup = el('brainBackup');
+      if (m.artifact) { backup.href = m.artifact; backup.hidden = false; backup.style.display = ''; }
+      else { backup.hidden = true; backup.style.display = 'none'; }
       actions.hidden = false; actions.style.display = 'block';
     } catch (e) { failure(e); retry.hidden = false; }
     retry.onclick = player;
@@ -46,7 +54,7 @@ window.Brain = (() => {
   async function status(version) {
     try {
       const m = await current();
-      el('brainStatus').textContent = m.brainVersion === version ? 'MASTER BANK ' + version + ' — CURRENT · Updated ' + m.updated : 'MASTER BANK ' + version + ' — HISTORICAL / SUPERSEDED · Current Brain: ' + m.brainVersion;
+      el('brainStatus').textContent = m.brainVersion === version ? 'MASTER BANK ' + version + ' — CURRENT · Updated ' + m.updated + (m.artifact ? '' : ' · No archive created — owner authorization required.') : 'MASTER BANK ' + version + ' — HISTORICAL / SUPERSEDED · Current Brain: ' + m.brainVersion;
     } catch (e) { failure(e); }
   }
   async function openCurrent() { try { location.replace((await current()).browse); } catch(e) { failure(e); } }
@@ -60,7 +68,7 @@ window.Brain = (() => {
         if (!v || typeof v.brainVersion !== 'string' || !/^[A-Za-z0-9_-]+$/.test(v.brainVersion) || v.browse !== 'versions/' + v.brainVersion + '/index.html') throw Error('Invalid historical version');
         return {...v, browse:path(v.browse)};
       });
-      el('brainStatus').textContent = 'Current Brain: MASTER BANK ' + m.brainVersion;
+      el('brainStatus').textContent = 'Current Brain: MASTER BANK ' + m.brainVersion + (m.artifact ? '' : ' · No archive created — owner authorization required.');
       for (const v of entries) {
         const p = document.createElement('p'), a = document.createElement('a');
         a.href = v.browse; a.textContent = 'MASTER BANK ' + v.brainVersion + ' — ' + (v.brainVersion === m.brainVersion ? 'CURRENT' : 'HISTORICAL / SUPERSEDED') + ' · ' + v.updated;

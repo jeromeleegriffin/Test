@@ -1,0 +1,28 @@
+ZOE STARTUP HANDOFF — Brain J
+Date: 2026-10-08 America/New_York
+Owner: Jerome Griffin
+For: Zoey
+
+This is a documentation pointer only. No game build was published. No Brain J archive ZIP was created.
+
+Current Project Brain: J
+Previous frozen Brain: I (2026-10-07)
+Foundation visual authority: Brain H, SHA-256 e5fe4e526d40d4ee8baea74aad06a774e8b74d4fa59b47b764647db43b7b5f4a
+Live game unchanged: v531, commit 542d7d5be8a5183b5d759cfcdc15051529d777a1
+Live table: https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/
+Brain browse: versions/J/index.html
+
+Read first:
+1. GRIFFIN_HOUSE_BRAIN_J_DELTA_2026-10-08.md
+2. GAME_ZIP_AUTHORIZATION_RULE_2026-10-08.txt
+
+Hard rule: do not create 059.zip or any other game-build ZIP until Jerome explicitly authorizes that package. “Continue,” “fix it,” and “update the bank” do not authorize packaging.
+
+Candidate ledger, not approvals:
+- 054 rejected: cards clipped into the physical holder, especially at seven and eight cards.
+- 055/055-2: Bid Box later appeared during bidding; one initial missing-Bid-Box screen is unconfirmed as defect or turn state. Connector was observed and must stay a real image bound to Bid Box visibility. Card tops clipped when enlarged.
+- 056: bottom avatar, and possibly others, drifted down during the deal. Still open.
+- 057: tray paint, claim-plane, and interim sound are candidate changes only. No fresh pixels or Android approval.
+- 058: five cleaned 0.305-second table-landing variations only. Peel/lift and in-flight sounds are not implemented. ZIP integrity passed. Browser render and Android listening were not verified.
+
+Do not claim owner Android approval.
