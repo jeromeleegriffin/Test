@@ -1,0 +1,24 @@
+VERIFICATION RESULTS — Brain K — 2026-10-08
+Scope: documentation recovery. No game modification. No deploy.
+
+POINTER BEFORE
+brain/current.json brainVersion J
+commit 4a2a53dcbc9d4f2877ee27e04b27e030efa4af97
+document SHA-256 4a02dbbfbdf8d2278646e2fb9ffbfd4e7b532820b808f1e717c61540f8460538
+archiveStatus: no Brain J archive
+
+RECOVERED AUTHORITIES
+construction text SHA-256 b405602e809b1ce470c92aa7189f78d3d7e03448a622061aeb18cdcf62dd2d89 MATCHES Brain H authority index
+2026-10-06 delta SHA-256 6bc53fd55d138d443c893ea16f90ae345ddb38baf3dac3d929fa081d430eb2d6
+seated reference PNG SHA-256 0537f1fd1735f087395288bd9c7aa9544727d02a0ad3c2d58d945926a360be31 MATCHES Brain H authority index
+PNG header is valid PNG. Visual check: Cinder far/top, Dagger left, Crow right, no bottom avatar, rail occlusion present. Generated UI in the image is not adopted as runtime authority.
+
+STORAGE
+SAFE: approved seated-character image stored in Brain H and copied into the owner delivery ZIP.
+SAFE: construction authority stored in Brain H and copied into the owner delivery ZIP without shortening.
+SAFE: 2026-10-06 delta stored in Brain H and copied into the owner delivery ZIP without shortening.
+NOT FOUND AS SEPARATE FILES: additional occlusion-study images.
+NOT IN TEST TREE: build 070. Recorded as owner-stated candidate only.
+
+NOT DONE
+No game file edited. No production deploy. No game ZIP created.
