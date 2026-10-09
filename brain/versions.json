@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "brainVersion": "M",
+      "updated": "2026-10-09",
+      "browse": "versions/M/index.html",
+      "artifact": "",
+      "sha256": "1b55c29fa990127fca5d27c43cf58b363920a12352634892ca10e887e878eca3",
+      "archiveStatus": "Documentation only. 074 not approved. 075 is not a playable build."
+    },
+    {
       "brainVersion": "L",
       "updated": "2026-10-08",
       "browse": "versions/L/index.html",
@@ -74,8 +82,5 @@
       "sha256": "7bdca0dac017147b2e12d6c5d38c66ccb9b34bc2757c0adf60dedc59d6937dc1"
     }
   ],
-  "unavailablePreviousVersions": [
-    "A",
-    "B"
-  ]
+  "unavailablePreviousVersions": ["A", "B"]
 }
