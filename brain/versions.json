@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "brainVersion": "K",
+      "updated": "2026-10-08",
+      "browse": "versions/K/index.html",
+      "artifact": "",
+      "sha256": "19a91144d72016f8d3aa27c5cddb1fb9aeff6d76a787b759e485e99542c3c091",
+      "archiveStatus": "Owner delivery ZIP returned. No game archive. Canonical seated bytes remain Brain H."
+    },
+    {
       "brainVersion": "J",
       "updated": "2026-10-08",
       "browse": "versions/J/index.html",
