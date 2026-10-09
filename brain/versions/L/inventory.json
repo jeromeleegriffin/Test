@@ -1,0 +1,22 @@
+{
+  "brainVersion": "L",
+  "updated": "2026-10-08",
+  "parentVersion": "K",
+  "documentationOnly": true,
+  "publicationStatus": "PUBLISHED_DOCUMENTATION_ONLY",
+  "role": "append-only roadmap and recovery ledger; no game changes; K frozen",
+  "files": [
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 2552,
+      "sha256": "e05702fb77798a38ae7df81e3de7f67ece843b3df3a7b5fb86a57d5e33ca9bbf",
+      "source": "00_START_HERE.md"
+    },
+    {
+      "path": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_L_ROADMAP_2026-10-08.md",
+      "bytes": 9398,
+      "sha256": "0d571501eebb7dcf535ee1b756ebc4c6f4bb952525665f8964c06ec25539229e",
+      "source": "01_ROADMAP_AND_RECOVERY_LEDGER.md"
+    }
+  ]
+}
