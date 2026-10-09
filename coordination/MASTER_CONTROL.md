@@ -18,3 +18,6 @@ Each specialist reads this file and its own status at start/resume. Master Contr
 
 ## Build safeguards
 `074.zip`: game repair candidate, source repairs reported, **not Android-approved**. `075.zip`: bird-fight documentation-only recovery, **not playable Build 075**. `071.zip`: reported rollback checkpoint. Verify original archives and hashes before claiming binary verification. Preserve TABLE-003, ROOK025 LAST, Bid Dock and physical connector requirements, rail occlusion, landscape, and working gameplay.
+
+## Continuity
+Master Control and every specialist follow the permanent proactive chat continuity rule in `OPERATING_RULES.md` (owner approval 2026-10-09). It does not replace or weaken Master Brain M's verbatim self-perpetuating continuity rule. Preparing a continuity handoff is not permission to publish, deploy, alter game files, generate artwork, or advance Master Brain.

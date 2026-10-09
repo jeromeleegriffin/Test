@@ -13,3 +13,5 @@ Separate ChatGPT conversations cannot automatically communicate. They coordinate
 Carry forward the complete-bank reading procedure and self-perpetuating continuity rule from the current Master Brain. Each successor handoff and startup prompt must reproduce the full rules, not merely link to them.
 
 Read `OPERATING_RULES.md`, `MASTER_CONTROL.md`, and your specialist record before acting. Label unverified claims clearly. Stop for owner approval before changes.
+
+Also read the permanent proactive chat continuity rule appended to `OPERATING_RULES.md` (owner approval 2026-10-09). That coordination rule does not replace Master Brain M's self-perpetuating continuity rule; reproduce M's rule verbatim in every successor handoff and startup prompt.
