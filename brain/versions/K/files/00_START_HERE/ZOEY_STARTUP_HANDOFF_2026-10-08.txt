@@ -1,0 +1,29 @@
+GRIFFIN HOUSE — ZOEY STARTUP HANDOFF — BRAIN K — 2026-10-08
+Take this file back to Zoey. Documentation only. Do not modify the game from this handoff.
+
+Current Master Brain pointer: K in jeromeleegriffin/Test.
+J and earlier versions stay frozen. Read K delta, then the exact seated construction authority, not a summary.
+
+Seated construction is banked:
+- Cinder far/top, Dagger left, Crow right.
+- No bottom player avatar.
+- Hard table-rail occlusion. No body, sleeve, or clothing on the felt.
+- Separate foreground arms/hands only on the rail.
+- TABLE-003 and actual Android pixels win for the game.
+- Character identity and final production art are not approved.
+
+Safely stored:
+- SCENE_INTEGRATED_SEATED_PLAYER_MASTER_REFERENCE_2026-10-05.png SHA-256 0537f1fd1735f087395288bd9c7aa9544727d02a0ad3c2d58d945926a360be31
+- SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt SHA-256 b405602e809b1ce470c92aa7189f78d3d7e03448a622061aeb18cdcf62dd2d89
+- GRIFFIN_HOUSE_MASTER_BRAIN_DELTA_2026-10-06.txt SHA-256 6bc53fd55d138d443c893ea16f90ae345ddb38baf3dac3d929fa081d430eb2d6
+
+Owner status, not verified complete:
+- Build 070 is the latest table-control test candidate and is not formally banked.
+- Keep small brass controls and the original back-arrow.
+- Antique oil lantern unfinished.
+- Fireplace animation needs verification/correction.
+- House Effects preview menu needs verification.
+- Sound variations and raven-fight animation outstanding.
+- Seated characters are the next major phase after that smaller work.
+
+No game ZIP unless Jerome explicitly authorizes one. Production stays off limits.
