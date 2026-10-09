@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "brainVersion": "L",
+      "updated": "2026-10-08",
+      "browse": "versions/L/index.html",
+      "artifact": "",
+      "sha256": "0d571501eebb7dcf535ee1b756ebc4c6f4bb952525665f8964c06ec25539229e",
+      "archiveStatus": "Documentation only. No game archive."
+    },
+    {
       "brainVersion": "K",
       "updated": "2026-10-08",
       "browse": "versions/K/index.html",
