@@ -11,3 +11,6 @@
 **Next:** Complete evidence-based read-only report; do not code, repackage, or promote candidate without separate approval.
 
 **Update protocol:** Record exact source hashes, differences, tests, owner acceptance, blockers, and next authorized task. Read `MASTER_CONTROL.md` on resume.
+
+## 2026-10-10 Scoped Catch-up (from Master Brain O)
+Owner accepted local full working build 732 incorporating: approved cardholder/backrest + Bid Box connector (713), complete Choose Trump case + stamp/ceremony (714), yellow7 face restoration from original asset (715), and full-length shuffle preview integration. Browser verification of 732 passed basic deal-to-bidding and controls. GitHub game publication remains UNVERIFIED_PENDING. Test root observed at 712. Production 531 untouched. This does not alter the not-Android-approved status of 074 or authorize new patches.
