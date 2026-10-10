@@ -1,0 +1,11 @@
+{
+  "brainVersion": "N",
+  "updated": "2026-10-09",
+  "parentVersion": "M",
+  "documentationOnly": true,
+  "publicationStatus": "PUBLISHED_DOCUMENTATION_ONLY",
+  "codexWriteTestCommit": "ec5e1ef48b3c7881bb5b355aaad602b86b5b9173",
+  "codexWriteTestStatus": "VERIFIED_SMALL_TEXT_FILE_TEMPORARY_BRANCH",
+  "document": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_N_DELTA_2026-10-09.md",
+  "documentSha256": "7c54c9c8d2f5b052e39a3b7a7922465d4886106dcc82679b185ff76fff01741e"
+}
