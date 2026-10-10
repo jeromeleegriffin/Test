@@ -11,3 +11,6 @@
 **Next:** Complete read-only audit of source, sounds, and original screenshots where accessible; identify missing binaries explicitly.
 
 **Update protocol:** Record evidence, hashes, tests, blockers, approvals, and next authorized task. Read `MASTER_CONTROL.md` on resume.
+
+## 2026-10-10 Note (from Master Brain O)
+Documentation catch-up through approved local 732 does not modify House Effects assets, bird-fight design, or authorize implementation. Bird-fight remains banked and unimplemented. No changes to fireplace, lantern, sound, or menu from this update.
