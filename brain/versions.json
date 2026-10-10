@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "brainVersion": "N",
+      "updated": "2026-10-09",
+      "browse": "versions/N/index.html",
+      "artifact": "",
+      "sha256": "7c54c9c8d2f5b052e39a3b7a7922465d4886106dcc82679b185ff76fff01741e",
+      "archiveStatus": "Documentation only. Codex write access verified for small text. No game archive."
+    },
+    {
       "brainVersion": "M",
       "updated": "2026-10-09",
       "browse": "versions/M/index.html",
