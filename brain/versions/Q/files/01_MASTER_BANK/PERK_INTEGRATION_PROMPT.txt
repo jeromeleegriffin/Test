@@ -1,0 +1,160 @@
+GRIFFIN HOUSE OF ROOKS — PERK INTEGRATION HANDOFF
+Owner: Jerome Griffin. Approved design checkpoint: 2026-10-10.
+Continue from your current working candidate. DO NOT START OVER.
+
+AUTHORIZATION AND DIVISION
+This design chat produced a visual study only. Perk owns current game code and integration.
+Owner approves the attached fixed-size visual direction and authorizes Perk to try integration in an isolated complete candidate. Design approval is not Android implementation approval.
+Do not base integration on rejected730 or roll back your newer card, holder, Trump or shuffle repairs.
+Do not deploy, modify production, clear Android browser data or clear service workers.
+Read current brain/current.json and the required project history. If another authorized thread advances the source, reconcile before editing.
+
+AUTHORITIES
+Current approved game logic/card artwork and actual Android pixels outrank concepts.
+Attached proofs establish materials, arrangement and card-size consistency, not a working screen or measured CSS viewport.
+Use existing approved assets. Never regenerate card faces.
+The older proof deck has no GREEN4 and has a truncated YELLOW7; proof substitutes GREEN5/YELLOW6 and says so. Do not transfer those substitutions into gameplay. Brain O records Perk's715 yellow7 restoration; use that newer valid face.
+Actual proof inputs are preserved in this package for reference, not automatic runtime replacement.
+
+APPEARANCE
+Preserve the approved matched walnut-and-brass folios: rich polished dark walnut, narrow frame, thin aged-brass inlay, quiet recessed green felt, warm ivory typography, subtle shadows and firelight.
+Library/fireplace remain visible around the interface. No new room scene, chairs, rugs or foreground props.
+No crests, logos, generic plain green panel, heavy ornament, large empty compartments or inflated headings.
+Optional final polish: soft upper walnut highlight and shallow brass inset depth. Cards and controls take priority.
+Use physical graphical materials where feasible; scope presentation styles so they cannot affect table/gameplay.
+Existing material inputs included: panel PNG (material only), library background (older reference), and generated concept (material only). Do not reproduce generated cards or use the blank panel as the entire finished design.
+Any genuinely necessary additional generated art requires exact prompt shown to owner and approval before generation. Ordinary authorized integration/compositing/testing can continue.
+
+CARDS
+Approved supplied masters are580x840. Confirm current masters.
+Uniform scale: h=w*840/580. No stretching, cropping, overlap, repainting, face replacement or fake ranks.
+Preserve ivory stock, thin existing borders, large numbers, color words and bird artwork.
+Do not add a second border to unselected cards.
+Both BLACKBIRD and RED TWO are special permanent trump; neither belongs in ordinary BLACK/RED group.
+
+ONE PAGE / VIEWPORT
+Both screens must fit actual available portrait area with no page/internal/horizontal scrolling.
+Account for wrapper, score/speed/LAST header, browser controls and safe areas.
+Reference screenshot709x1536 physical pixels; reserved top232 and bottom fromy1328; content709x1096.
+Proof coordinate width393 is normalized design space, NOT verified device CSS width/DPR.
+Measure current actual content rectangle and report it. Do not assume whole phone is available.
+Tighten frame/headings/padding/gaps before sacrificing cards. Never hide faces or controls.
+Reference face dimensions in design units:
+Received54x78.2; hand preview39x56.5; discard44x63.7.
+Pixel rounding in supersampling produced received54x78.333, preview39x56.333 and discard44x63.6667.
+Maintain consistent discard size for a given viewport across hand distributions.
+Do not enlarge short groups or shrink a long color group.
+Reference uses six cards per row and eight-unit horizontal face gap; eleven of one color wraps6+5.
+Five stacked groups can require six physical card rows. Static enumeration checked2205 distributions, maxsix rows; this does not certify integrated DOM.
+Use compact labels, subtle dividers/recesses and adaptive vertical gaps.
+If narrower supported viewports need different columns, verify worst cases. Do not silently break no-scroll/readability/touch requirements or claim reference size works on every device. Report any measured incompatibility with proposed correction.
+
+KITTY RECEIVED
+Title KITTY RECEIVED.
+Message “6 cards have been added to your hand.”
+Exactly six actual received cards in one horizontal row.
+Label “YOUR HAND · 16 CARDS”.
+Actual full sixteen-card hand in two rows of eight; all faces visible.
+Bottom “Continue”, visible and comfortably tappable.
+Compact balanced spacing, no oversized empty gap.
+Preserve real received snapshot and approved sorting. Continue reaches discard for the same sixteen card IDs.
+Never hard-code proof sample into live game state.
+
+SELECT6 TO DISCARD
+Title SELECT 6 TO DISCARD.
+Instruction “Choose 6 cards for the Nest.”
+Full-width vertical groups, in order:
+BIRD CARDS; GREEN; RED; YELLOW; BLACK.
+No suit quadrants. Keep card dimensions consistent.
+Preserve sorting and handle empty groups without large blank compartments.
+Count0/6 through6/6 selected; bottom “Confirm Discard”, always visible.
+Actual selected six become the Nest; remaining ten become the playing hand.
+Received Kitty and final Nest are different sets. Never say discard to the Kitty.
+
+SELECTION FEEDBACK
+Owner likes existing highlight plus small upward lift.
+Use slight approximately2px lift, restrained warm-gold external outline and soft shadow/light.
+A small outside checkmark supplements the highlight; never obscure numbers, words or birds.
+Reserve gutter/headroom so outline, check and lift do not collide or clip.
+Do not enlarge selected cards. Original older style had2% scale; omit scaling to retain fixed approved dimensions.
+Use transform without reflow. Selection must not shift rows, create scrolling or move Confirm.
+Tap selects; tap again deselects and restores resting appearance.
+Respect reduced motion but preserve visible state. Keep working existing pick/deselect sounds.
+Proof shows external outline/check; proposed lift/shadow still require runtime verification.
+
+GAME LOGIC
+Reuse working handlers and state transitions.
+Exactly six valid selections enables confirmation; zero throughfive disables it.
+Preserve six-selection cap, immediate count updates and deselection behavior.
+Prevent duplicate pointer/click toggles and duplicate submissions.
+Retain host/client validation, network messages, IDs, sounds, trump flow and timing safeguards.
+Confirm transfers precisely selected six to Nest; remaining ten equal starting hand minus those IDs.
+Do not modify deck or game rules for the sample.
+
+PROTECTED
+TABLE-003; Bid Box/Dock; cardholder and connector; seated characters, sizes/positions/occlusion; ordinary hand/trick card rendering; bidding; scoring; trump rules; speed engine; LAST; landscape gameplay; production and service-worker state.
+Only these two screens and necessary scoped assets/presentation are in scope.
+Do not import historical730 source or generic global card/button rules.
+
+VERIFY / CORRECT
+Inspect current source first, preserve rollback, then implement, render, test, inspect pixels and correct defects.
+Functional tests:
+six received;16 preview; Continue same16 IDs; birds grouped properly; all16 toggle individually; select/deselect/reselect; correct counts; seventh blocked; Confirm disabled0-5/enabled6; deselect from6 disables; repeat submission guarded; selected six become Nest; ten remain; next stage works.
+Layout tests:
+mixed hand;11 of one color; maxsix-row distributions; empty groups; both birds; six selected including wrapped cards; shortest/narrowest supported portraits; browser chrome expanded/collapsed; safe areas; supported text/display scaling.
+Inspect screenshots for proportions, readable faces, no clipping/overlap/scrolling, touch clearance, external selection cue, library/fireplace and fully visible bottom controls.
+Static proof fit is not Android approval. State unavailable testing honestly. Preserve approved work while fixing defects.
+
+OWNER DELIVERY
+One complete runnable candidate ZIP with full source/assets, both-screen screenshots, selected-state screenshots, long-suit same-size evidence, test results, changed-file list, dimensions/viewport, SHA256, limitations and rollback.
+Use your current integration thread's next candidate name.730 in copied screenshot wrapper is historical, not required build numbering.
+Use distinct descriptive names for documentation/design packages so they are not confused with playable ZIPs.
+STOP FOR OWNER ANDROID REVIEW. No deploy. No Android approval until Jerome tests.
+THE WORKING SCREEN WINS. PLAY FIRST → DISCOVER LATER.
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."

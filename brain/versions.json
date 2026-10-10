@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "brainVersion": "Q",
+      "updated": "2026-10-10",
+      "browse": "versions/Q/index.html",
+      "artifact": "",
+      "sha256": "1fb4a514e9ee96dceccea82c404262c08a2e151a7769c5128bfca3a67a1e3200",
+      "archiveStatus": "Approved Kitty design only. Portable specialist package saved separately; no game deployment. Android integration review pending."
+    },
+    {
       "brainVersion": "P",
       "updated": "2026-10-10",
       "browse": "versions/P/index.html",
