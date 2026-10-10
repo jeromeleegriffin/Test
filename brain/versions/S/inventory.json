@@ -1,0 +1,29 @@
+{
+  "brainVersion": "S",
+  "parentVersion": "R",
+  "updated": "2026-10-10",
+  "documentationOnly": true,
+  "publicationStatus": "FILES_VERIFIED_POINTER_PENDING",
+  "files": [
+    {
+      "path": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_S_VERIFICATION_2026-10-10.md",
+      "bytes": 3978,
+      "sha256": "6352a8e89e721555db88a9c878ea299f187bf537230983351a69dab753dbe031",
+      "gitBlobSha": "ee5925cc260b6b0b5dc62e732a3fbc19851814c8"
+    },
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 4455,
+      "sha256": "4f65d9fe24f9b5ea67d405e7d7d9f02c7345525ac919e647fd8a664f0160c171",
+      "gitBlobSha": "5304b74429c4cac868ce4912f565eb2f0fdbdf51"
+    },
+    {
+      "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+      "bytes": 4453,
+      "sha256": "ddf3bf0f2b12c26389d60aea1f7ab5bc17a20d47cb00d133d6c0d7e2f9c82bc2",
+      "gitBlobSha": "8dea587cf834fdafdad3974590dbb301459c98f6"
+    }
+  ],
+  "priorVersionPreservation": "Append-only; H-R not modified",
+  "note": "Manifest excludes itself to avoid circular checksum. Current pointer to be updated only after read-back verification."
+}
