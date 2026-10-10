@@ -26,9 +26,15 @@ window.Brain = (() => {
   }
   async function current() {
     const m = await json('current.json');
-    if (!m || m.project !== 'Griffin House of Rooks' || typeof m.brainVersion !== 'string' || !/^[A-Za-z0-9_-]+$/.test(m.brainVersion) || m.status !== 'CURRENT' || typeof m.updated !== 'string' || !/^\d{4}-\d{2}-\d{2}(T.*)?$/.test(m.updated) || !/^[a-f0-9]{64}$/i.test(m.sha256 || '')) throw Error('Invalid current Brain manifest');
+    if (!m || m.project !== 'Griffin House of Rooks' || typeof m.brainVersion !== 'string' || !/^[A-Za-z0-9_-]+$/.test(m.brainVersion) || m.status !== 'CURRENT' || typeof m.updated !== 'string' || !/^\d{4}-\d{2}-\d{2}(T.*)?$/.test(m.updated)) throw Error('Invalid current Brain manifest');
+    // Newer documentation-only checkpoints use a START HERE document rather than index.html.
+    // Require a version-scoped, safe path; a missing legacy sha256 is not a broken pointer.
+    if (m.sha256 != null && !/^[a-f0-9]{64}$/i.test(m.sha256)) throw Error('Invalid current Brain checksum');
+    const expected = 'versions/' + m.brainVersion + '/';
+    if (typeof m.browse !== 'string' || !m.browse.startsWith(expected) ||
+        (m.browse !== expected + 'index.html' &&
+         m.browse !== expected + 'files/00_START_HERE/START_HERE.md')) throw Error('Manifest version/path mismatch');
     const browse = path(m.browse), artifact = archivePath(m.artifact);
-    if (m.browse !== 'versions/' + m.brainVersion + '/index.html') throw Error('Manifest version/path mismatch');
     return {...m, browse, artifact, history:path(m.history)};
   }
   function failure(error) {
@@ -63,9 +69,13 @@ window.Brain = (() => {
     try {
       const m = await current(), h = await json('versions.json');
       if (!h || !Array.isArray(h.versions)) throw Error('Invalid history index');
-      if (!h.versions.some(v => v.brainVersion === m.brainVersion && path(v.browse) === m.browse && v.sha256 === m.sha256)) throw Error('Current version missing or mismatched in history');
-      const entries = h.versions.map(v => {
-        if (!v || typeof v.brainVersion !== 'string' || !/^[A-Za-z0-9_-]+$/.test(v.brainVersion) || v.browse !== 'versions/' + v.brainVersion + '/index.html') throw Error('Invalid historical version');
+      // The history index can lag a freshly published documentation-only pointer.
+      // Include the verified current pointer without changing historical entries.
+      const currentIndexed = h.versions.some(v => v.brainVersion === m.brainVersion && v.browse === m.browse &&
+        (!m.sha256 || v.sha256 === m.sha256));
+      const sourceEntries = currentIndexed ? h.versions : [{brainVersion:m.brainVersion, browse:m.browse, updated:m.updated}, ...h.versions.filter(v => v.brainVersion !== m.brainVersion)];
+      const entries = sourceEntries.map(v => {
+        if (!v || typeof v.brainVersion !== 'string' || !/^[A-Za-z0-9_-]+$/.test(v.brainVersion) || (v.browse !== 'versions/' + v.brainVersion + '/index.html' && v.browse !== 'versions/' + v.brainVersion + '/files/00_START_HERE/START_HERE.md')) throw Error('Invalid historical version');
         return {...v, browse:path(v.browse)};
       });
       el('brainStatus').textContent = 'Current Brain: MASTER BANK ' + m.brainVersion + (m.artifact ? '' : ' · No archive created — owner authorization required.');
