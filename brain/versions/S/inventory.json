@@ -3,7 +3,7 @@
   "parentVersion": "R",
   "updated": "2026-10-10",
   "documentationOnly": true,
-  "publicationStatus": "FILES_VERIFIED_POINTER_PENDING",
+  "publicationStatus": "VERIFIED_DOCUMENTATION_ONLY",
   "files": [
     {
       "path": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_S_VERIFICATION_2026-10-10.md",
@@ -25,5 +25,5 @@
     }
   ],
   "priorVersionPreservation": "Append-only; H-R not modified",
-  "note": "Manifest excludes itself to avoid circular checksum. Current pointer to be updated only after read-back verification."
+  "note": "Per-file SHA-256 and Git blob SHA verified by read-back before pointer promotion; manifest intentionally excludes itself to avoid circular checksum. Publication is determined by brain/current.json."
 }
