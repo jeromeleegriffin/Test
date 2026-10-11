@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": "763",
+  "nextNumberHint": "764",
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -364,6 +364,17 @@
       },
       "testLimits": "Chromium153 phone/touch emulation and original source-pose analysis; no physical Android/audio hardware, owner-installed cache upgrade, live multiplayer or full scored match. Owner phone smoothness review pending. Video silent.",
       "preservedRavenSoundPreviewApproval": true
+    },
+    {
+      "number": "763",
+      "reservationId": "shuffle-audible-onset-sync-20261011-6565ad6cab12",
+      "status": "RESERVED",
+      "task": "Align first audible riffle flap to card release; preserve bridge timing/native sound and762visuals",
+      "sourceGameBuild": "762",
+      "sourceSha256": "0eaa9a017591ed2fa7ebed59d46729305d195b5a9f676931d9bc87abdfad8f74",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false
     }
   ]
 }

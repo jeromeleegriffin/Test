@@ -1,0 +1,11 @@
+{
+  "number": "763",
+  "reservationId": "shuffle-audible-onset-sync-20261011-6565ad6cab12",
+  "status": "RESERVED",
+  "task": "Align first audible riffle flap to card release; preserve bridge timing/native sound and762visuals",
+  "sourceGameBuild": "762",
+  "sourceSha256": "0eaa9a017591ed2fa7ebed59d46729305d195b5a9f676931d9bc87abdfad8f74",
+  "date": "2026-10-11",
+  "ownerApproved": false,
+  "physicalAndroidTested": false
+}
