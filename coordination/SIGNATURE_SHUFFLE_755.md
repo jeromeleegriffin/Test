@@ -113,3 +113,9 @@ Banked correction: The opening shuffle's pacing and visual impression need impro
 The feedback followed delivery of 757, which preserved the 755 shuffle. The exact archive opened and active 1×/3×/MAX setting were not stated. Before a later implementation, verify the actual initial-shuffle playback and speed binding, then review readable packet separation, riffle/interleaving, bridge and squaring while preserving the planted rear-edge correction. No specific duration or speed-control change has been approved. Do not broaden an opening-shuffle correction into unrelated gameplay pacing or artwork changes.
 
 Status: OWNER CORRECTION BANKED / NOT IMPLEMENTED. Jerome's main-development brainstorming hold remains active: bank ideas and do not create a new game file until he explicitly requests one. No runtime, animation, audio or asset edits; no build number reservation, new ZIP or deployment. Existing 757 remains pending owner review, with this correction recorded.
+
+## 2026-10-11 — Opening-shuffle speed clarified: 1× selected
+
+In response to whether 1×, 3× or MAX was selected, Jerome clarified that 1× was selected. This resolves the previously unknown speed setting: the reported opening shuffle feels super fast and fails to convincingly show 46 cards even with normal speed selected. Do not dismiss this as the owner choosing 3× or MAX. The exact runtime timing/binding still needs verification during a later authorized implementation; the owner's observed setting is recorded separately from a measured duration.
+
+The pacing/realism correction remains banked. Brainstorming hold continues: no implementation or new game file until Jerome explicitly requests it. This clarification updates existing documentation only.
