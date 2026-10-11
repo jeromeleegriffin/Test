@@ -1,0 +1,115 @@
+# Master Brain X — completed game work through 766
+
+Owner: Jerome Griffin. Published October 11, 2026 (America/New_York).
+Documentation update authorized by Jerome in the continuing main-development chat. All prior Brain versions remain immutable.
+
+## Current state and the owner's next step
+
+**766 is the latest delivered playable development game.** It is browser-verified and awaiting Jerome's Android review. It is NOT yet the owner-approved clean fallback and is NOT yet the running test-server game. The last explicitly approved complete baseline remains 751.
+
+Owner instruction: “Okay, let's, uh, let's update the master brain about everything that's been done, make sure 766 is the latest game update, and I'm gonna check it, and if it's clean, we'll make that our clean fallback, and we'll get that uploaded and go ahead and have that on the test server as our running game.”
+
+This authorizes the present documentation publication. The planned clean-fallback promotion and test-server upload depend on Jerome confirming that 766 is clean. Wait for that actual review result before executing either. Do not mistake this plan for completed approval or deployment. Production remains protected. No game package is rebuilt or new game number consumed by this Brain update.
+
+766.zip: 339290338 bytes; SHA-256 4d274873eeb445bcedc638cc5dff73e5a30df0003df42944782adaadc8cd505a.
+Library: libfile_59d75b97d46c819197b29c94465d5a77; file_000000004e8c81f594732083e4d0209d.
+Source: exact 765.zip, SHA-256 730d96b36fe4d24bf8785cc7f2a306d602e245d452cc95cd3b9bf1004e860b6b.
+766 delivery documentation commit: 6831bf1b3bccef2038fbf599902c29f624ae54eb.
+Archive CRC and all 2297 manifest hashes passed; 2298 entries. Archive hash reconfirmed for this publication. The current build registry retains each predecessor's identity and approval status.
+
+## Completed work since Brain W
+
+- **757:** Integrated eight owner-approved trump voice clips, routed by actual trump chooser and avatar casting. Reused original compact Thinking/BID/PASSED boxes and removed rejected oversized panels. Applied idle-hidden rail TRICK WON clearance. The rail still suppresses its announcement when enlarged cards leave no safe space; no claim of visibility at every hand size. The earlier 756 numbering collision is preserved, not silently renamed; research 756 is not the current game base.
+- **758:** Fireplace defaults to a faint 10% of its former level with its own saved adjustable slider. Existing master preference is retained. Quiet rare owl opportunities occur 15–30 real-time minutes apart with overlap/lifecycle safeguards. Initial 11.2-second shuffle was subsequently rejected as too slow.
+- **759–760:** More visible shuffle cards and corrected corner/rear support graphics. The owner's initial approximately 7.5-second request was superseded by the later request for normal speed. 760 restored original moving speed and native sound pitch while retaining the improved artwork.
+- **761:** Gentle Raven fight wings, subdued corvid contact call and separation flutter synchronized to the existing effect. Owner approved the sound/animation preview (“That works for me. Let's go ahead and implement it.”). This is scoped preview approval, not acceptance of every later complete game.
+- **762:** Removed the 567 ms stationary hesitation between corner lift and riffle, preserving moving tempo. Portrait duration is 5033 ms at 1×, 1678 ms at 3×, 252 ms at MAX; original landscape/legacy remains 5600 ms at 1×.
+- **763–764:** Retained as rejected audio attempts. 763 split an active riffle and introduced a 622 ms cutout. 764 closed that gap but shifted the later bridge too early. First-onset or continuous-audio checks alone do not establish full synchronization.
+- **765:** Identified the genuine quiet source boundary at 3.80 seconds and aligned complete native riffle and bridge gestures independently, with bounded output-clock mapping. Graphics and tempo unchanged. Production offline onset errors: riffle +2.125 ms, bridge +3.599 ms; live browser graph/frame comparison −0.716/+0.781 ms; decoded review MP4 +1.791/+3.265 ms. These are waveform/render measurements, not subjective listening or physical Android speaker tests. Final squaring is intentionally quiet. Owner review remains the acceptance authority.
+- **766:** Integrated authentic frozen CHALLENGER-X1 as the default, with frozen Sol 7 as the selectable backup, onto 765. Reused verified browser intelligence components only; did not substitute the older 751-derived integration game's full files. All original assets and protected presentation/game systems were preserved.
+
+Complete contemporaneous build reports 757–766 are published under files/02_BUILD_CHECKPOINTS in this version. Their historical statements that Brain W was current describe delivery time; Brain X is now the documentation authority. Their “pending review” statuses are not retroactively changed by this publication. Exact source, tests, rejected approaches, rollback and permanent rules are retained there and in each immutable game ZIP.
+
+## X1 identity and developer controls
+
+Authority: FINAL_INTELLIGENCE_VERDICT_001.zip. All 61 package-manifest members and 12 frozen hashes verified. No new championship was run for integration.
+
+- Sol7_FROZEN.py: 04404bdb843800125582560cec2f209fc8c7bcd4191bc7da37a931e7236aaf4b
+- challenger.py: f1650289373b82ffbc04a610a5dad94a9572a1a0a9781d28d29e5e9d606f77c6
+- rollout.cpp: 5f4ac400b72d1451e1a50b4ecca780c56969338018a908610734b93d8cca9790
+
+Use the existing SOL identity → Menu → Developer / Diagnostics → Main Bot Intelligence. Select Sol 7 to turn X1 off, or X1 to restore it. The saved choice takes effect at the next hand. Fresh/default configuration selects X1; explicit Sol 7 settings remain respected. Diagnostics distinguish selected/active engine, worker readiness, last actual decision engine/phase and fallback reason. A selector label alone is not proof of activation.
+
+Search runs in a worker with exact integer/seed/card ordering and original 128/256 sampling counts, 512 burn-in and 64 mixing steps. Sol 7 bidding, trump and discard foundation is preserved. Host authority and stale-response guards protect turn/game changes. No rendering or sound slowdown is used to accommodate search.
+
+EPA is OFF. No actual partner/opponent cards enter normal X1. Only an acting bidder receives knowledge of buried cards. No EPA experiment was merged.
+
+## Validation and known limitations
+
+320 browser/native parity states matched seeds, choices, all 12 search outputs and frozen policies. 324 captured actual-game worker decisions also matched native replay. Four complete browser games / 17 scored hands completed across initial and final runs, including 1×/3×/MAX and X1 → Sol 7 → X1. Ordinary offline X1, saved selection, cached offline play, explicit worker-failure Sol 7 recovery, private-information boundaries and stale-result rejection passed. Final measured decision latency: mean 36.59 ms, p95 98.1 ms, maximum 256.3 ms in headless Linux Chromium 153 with phone viewport/touch emulation. These are not Android timings.
+
+Standard 46-card rules use authentic X1/Sol 7. Altered deck/hand/rank/point/legal-play/scoring variants and an actual instant-win Shoot the Moon contract use the explicitly labeled House legacy fallback. Existing options/rules were not silently replaced by tournament rules. Persona identities, portraits and presentation remain; tactical persona tilts, difficulty mistakes and drunk random moves are bypassed for the authentic champions and retained in the legacy path. This limitation is deliberate and must remain disclosed.
+
+Protected shuffle/effect checks, offline assets, faint fire and owl defaults passed. Physical Android performance, subjective sound, owner-installed cache upgrade, live PeerJS/reconnect and prolonged device suspension remain unverified. The 60-second hung-worker timeout was not waited out during testing. No desktop result grants owner approval.
+
+## Continuation and conditional test-server publication
+
+Jerome now tests the delivered 766 archive. Record his exact acceptance or correction. If he confirms it is clean, designate these exact bytes as the clean fallback, preserve 765 and historical 751, then carry out the requested test-server publication through the established deployment path with a recoverable server checkpoint and live build verification. Do not deploy production. Do not clear the owner's phone data or overwrite his installation as part of testing.
+
+At this update no test-server upload has occurred. The pointer's historical observed test-root 712 and production 531 fields are not new observations and do not describe the latest delivered local game. Verify actual test hosting before any later deployment. Other sessions must explicitly read the updated records; publication does not automatically notify them.
+
+This continuing conversation already recorded actual foundational H and principal I–W reading; current pointer, live registry, existing Brain inventory/history and complete available checkpoints were refreshed for this catch-up. This is not a claim that all historical assets were re-audited today. Successors must read the actual full history and follow both permanent rules below.
+
+FAILED FIX RULE: REMOVE, RESTORE, REDIAGNOSE, REPLACE. NEVER STACK CONFLICTING PATCHES.
+THE WORKING SCREEN WINS. IF THE PIXELS EXIST, USE THE PIXELS.
+PLAY FIRST → DISCOVER LATER.
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+Explicit successor requirement: Pass both permanent rules verbatim to every future replacement chat.

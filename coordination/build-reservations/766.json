@@ -44,5 +44,12 @@
     "finalP95Ms": 98.1,
     "finalMaxMs": 256.3
   },
-  "testLimits": "No physical Android, audio hardware listening, owner cache upgrade, live PeerJS/reconnect or prolonged suspension test. Standard46-card champions only; altered rules and actual instant-winMoon use explicit House legacy fallback. Persona tactical/difficulty/drunk modifiers bypassed for authentic champions; presentation retained.60-second hung-worker threshold not physically waited out."
+  "testLimits": "No physical Android, audio hardware listening, owner cache upgrade, live PeerJS/reconnect or prolonged suspension test. Standard46-card champions only; altered rules and actual instant-winMoon use explicit House legacy fallback. Persona tactical/difficulty/drunk modifiers bypassed for authentic champions; presentation retained.60-second hung-worker threshold not physically waited out.",
+  "brainCheckpoint": "X",
+  "ownerReviewPlan": {
+    "date": "2026-10-11",
+    "status": "PENDING",
+    "ifClean": "Designate766 clean fallback, then publish766 as running test-server game",
+    "deploymentPerformed": false
+  }
 }

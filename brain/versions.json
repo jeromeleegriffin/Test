@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "brainVersion": "X",
+      "updated": "2026-10-11",
+      "browse": "versions/X/files/00_START_HERE/START_HERE.md",
+      "artifact": "",
+      "sha256": "3e84d040d1fd1da276c78d339ac7e49e2e5928aebfdb27c9e92f83b57a1b5c04",
+      "sha256Scope": "primaryDocumentation",
+      "archiveStatus": "766 delivered; Android review pending; conditional clean fallback and test-server publication"
+    },
+    {
       "brainVersion": "W",
       "updated": "2026-10-11",
       "browse": "versions/W/files/00_START_HERE/START_HERE.md",
