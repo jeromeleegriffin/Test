@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 766,
+  "nextNumberHint": 767,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -497,6 +497,18 @@
         "allOriginalAssetsByteIdentical": true
       },
       "testLimits": "Chromium153 mobile/touch emulation, actual production offline stereo render and live AudioWorklet graph/frame checks; final AAC decoded/checked. Not subjective human listening or physical Android/speaker/cache-upgrade/livePeerJS/full scored-match test. Final squaring quiet; individual46card microimpacts not claimed sample-perfect."
+    },
+    {
+      "number": "766",
+      "reservationId": "x1-default-20261011-6565ad6cab12",
+      "workstream": "Main development continuation",
+      "task": "Authentic frozen X1 default, Sol 7 backup; preserve full765 experience",
+      "sourceGameBuild": "765",
+      "sourceSha256": "730d96b36fe4d24bf8785cc7f2a306d602e245d452cc95cd3b9bf1004e860b6b",
+      "status": "RESERVED",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false
     }
   ]
 }
