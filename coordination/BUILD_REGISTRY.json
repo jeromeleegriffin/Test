@@ -181,18 +181,54 @@
         "fileHashManifest": "PASS"
       },
       "testLimits": "Chromium153 mobile/touch emulation; owl production timer callbacks invoked without 15–30-minute endurance wait. No physical Android/audio hardware, owner-installed cache upgrade, live PeerJS multiplayer or full scored match. Subjective shuffle realism and faint audibility await owner review.",
-      "deploymentStatus": "NOT_DEPLOYED"
+      "deploymentStatus": "NOT_DEPLOYED",
+      "ownerShuffleCorrection": {
+        "date": "2026-10-11",
+        "note": "11.2seconds too slow; wanted more visible cards, about7.5seconds, no need count exactly46. Replacement759 pending owner review; ambience unchanged.",
+        "replacementCandidate": "759"
+      }
     },
     {
       "number": "759",
       "reservationId": "shuffle-visible-cards-20261011-6565ad6cab12",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
       "task": "Owner correction: more visible cards, approximately7.5s opening shuffle",
       "sourceGameBuild": "758",
       "sourceSha256": "4a711072cf231d03eec0aa94c9498d69e51dc8ffc81214ddd07c88db382f51a2",
       "date": "2026-10-11",
       "ownerApproved": false,
-      "physicalAndroidTested": false
+      "physicalAndroidTested": false,
+      "filename": "759.zip",
+      "sha256": "1cb5b72a489eb0036804bff4d7bc6ec4e893e87c480c454796f2419ad870ef25",
+      "bytes": 333845001,
+      "entries": 2040,
+      "libraryFileId": "libfile_1f825675701c8191bcd760f46093e158",
+      "fileId": "file_0000000084ec81fd8965ac7cde8a4682",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "checkpointArtifactPath": "HANDOFF/BUILD_759/MASTER_BRAIN_READY_UPDATE.md",
+      "checkpointStatus": "Complete ready-to-publish checkpoint with both permanent rules; BrainW remains published",
+      "tests": {
+        "shuffleDuration1xMs": 7500,
+        "shuffleDuration3xMs": 2500,
+        "shuffleDurationMaxMs": 375,
+        "realDealFlightsEachSpeed": 46,
+        "handIdentityAndSingleCompletion": "PASS",
+        "rearSupportSamples": 204102,
+        "rearSupport": "PASS",
+        "renderedFrames": 168,
+        "meshOverlapComparisons": 161691,
+        "sampledSurfaceCrossings": 0,
+        "phoneSizePixelReview": "PASS",
+        "freshSoloHand": 10,
+        "freshSoloKitty": 6,
+        "maxReducedMotionPagehide": "PASS",
+        "freshWorkerOfflineCoherence": "PASS",
+        "protectedRuntimeFilesByteIdentical": 626,
+        "archiveCRC": "PASS",
+        "fileHashManifestChecks": 2039
+      },
+      "testLimits": "Chromium153 mobile/touch emulation and sampled kinematics; no physical Android/speaker, owner cache upgrade, live PeerJS multiplayer or complete scored match. Exact earlier YouTube playback inaccessible; primary Royal Road illustrated instructions inspected. Phone realism remains owner judgment.",
+      "scope": "Owner correction: more visible cards, 7.5seconds at1x and localized meeting-corner lift with supported far ends. Faint fireplace/rare owls retained byte-identical from758."
     }
   ]
 }
