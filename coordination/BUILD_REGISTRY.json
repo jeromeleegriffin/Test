@@ -368,13 +368,40 @@
     {
       "number": "763",
       "reservationId": "shuffle-audible-onset-sync-20261011-6565ad6cab12",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
       "task": "Align first audible riffle flap to card release; preserve bridge timing/native sound and762visuals",
       "sourceGameBuild": "762",
       "sourceSha256": "0eaa9a017591ed2fa7ebed59d46729305d195b5a9f676931d9bc87abdfad8f74",
       "date": "2026-10-11",
       "ownerApproved": false,
-      "physicalAndroidTested": false
+      "physicalAndroidTested": false,
+      "filename": "763.zip",
+      "sha256": "055df26de47b15133863bf163b27d69627c233dd8d03cefcd0dd37dbc8010afe",
+      "bytes": 336956149,
+      "entries": 2167,
+      "crc": "PASS",
+      "manifestChecks": 2166,
+      "deploymentStatus": "NOT_DEPLOYED",
+      "libraryFileId": "libfile_0a483856581881918b0001aba51fb6bc",
+      "fileId": "file_0000000083c881fdb281b5125d2a1694",
+      "checkpointArtifactPath": "HANDOFF/BUILD_763/MASTER_BRAIN_READY_UPDATE.md",
+      "checkpointStatus": "Complete Brain-ready checkpoint plus both permanent rules; BrainW unchanged",
+      "scope": "First recorded riffle flap aligned to release; native pitch and762visuals preserved; bridge clock retained. Early gesture decode warm.",
+      "tests": {
+        "sourceStereoChannels": 2,
+        "oldAudibleLagMs": 624.014,
+        "correctedMathematicalLagMs": 2.014,
+        "actualProductionOfflineOnsetMs": -9.78,
+        "actualWorkletOnsetAfterVisibleReleaseMs": 15.477,
+        "productionSpeedsAnd46FlightsIdentity": "PASS",
+        "nativeRates": "PASS",
+        "maxReducedPagehide": "PASS",
+        "landscapeOriginal5600": "PASS",
+        "freshOfflineCoherence": "PASS",
+        "allOriginalAssetsByteIdentical": true
+      },
+      "testLimits": "Chromium153 mobile/touch emulation; actual production offline render and AudioWorklet graph timing, not physical Android/speaker/cache upgrade/live multiplayer/full scored match. Earlier interleaved stereo analysis error and pre-overlay harness timestamp corrected; failed crops/latency helper do not ship.",
+      "previewLibraryFileId": "libfile_30f4b9511d8c81919affb18b9ee35647"
     }
   ]
 }
