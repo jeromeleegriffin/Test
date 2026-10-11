@@ -1,0 +1,32 @@
+{
+  "brainVersion": "V",
+  "parentVersion": "U",
+  "updated": "2026-10-11",
+  "documentationOnly": true,
+  "files": [
+    {
+      "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+      "bytes": 6588,
+      "sha256": "ddee8f97c1049650c4a75dafe6f460e9e745016ae8a3d62a97fb31dbb6f895ca",
+      "gitBlobSha": "29f4e7fe8edb6a599f8f1daa2991c96c153e9820"
+    },
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 6588,
+      "sha256": "ddee8f97c1049650c4a75dafe6f460e9e745016ae8a3d62a97fb31dbb6f895ca",
+      "gitBlobSha": "29f4e7fe8edb6a599f8f1daa2991c96c153e9820"
+    },
+    {
+      "path": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_V_COORDINATION_2026-10-11.md",
+      "bytes": 7476,
+      "sha256": "0e1292ad708348f1c9822c643fbcf177650a4e741e002cf570f1a173f18d835b",
+      "gitBlobSha": "e79942bb2ebbfa6c4413cc5ab7aba885134c1f7d"
+    },
+    {
+      "path": "index.html",
+      "bytes": 144,
+      "sha256": "c9e546517528cb334db060a784fd7b4548bcbd5e5987c1a6304eedae258455b9",
+      "gitBlobSha": "d60634ad957212113a718b5db578f8e5c1b809cb"
+    }
+  ]
+}

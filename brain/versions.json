@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "brainVersion": "V",
+      "updated": "2026-10-11",
+      "browse": "versions/V/files/00_START_HERE/START_HERE.md",
+      "artifact": "",
+      "sha256": "0e1292ad708348f1c9822c643fbcf177650a4e741e002cf570f1a173f18d835b",
+      "sha256Scope": "primaryDocumentation",
+      "archiveStatus": "Shared numbering reservations;754collision; shuffle rear-contact correction; documentation only"
+    },
+    {
       "brainVersion": "U",
       "updated": "2026-10-11",
       "browse": "versions/U/files/00_START_HERE/START_HERE.md",

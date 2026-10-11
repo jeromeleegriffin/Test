@@ -32,3 +32,8 @@ Mandatory task-completion record: exact source/base/newbuild, changed files/asse
 Jerome Griffin explicitly stated: “I approve of 751.” Owner approval received in this continuing Work conversation. Build 751 is now the owner-approved working baseline. Its unchanged complete archive is 751.zip (241115760 bytes), SHA-256 986e027f24c8fc6ec75f2c56504b8b447e80425ef3b208833198aac0adcd8591. This accepts the delivered Laid Down integration and preserved approved work. Previous approvals through 750 remain valid. This is owner approval evidence, not a claim that the assistant performed physical Android testing. No new game build, deployment, production change, or artwork was performed. Banked, unknown and unstarted projects remain in their existing categories.
 
 Read current Brain U before continuing. Completed task updates must report owner status and tests; publish only when authorized. No new game deployment.
+
+
+## Master Brain V — shared numbering and owner shuffle correction
+
+Read brain/current.json, BUILD_NUMBERING.md and BUILD_REGISTRY.json before starting/resuming and again before naming/delivery. Atomically reserve numbers using expected main SHA; never guess or reuse.754has two distinct archives; identify by hash.755is reserved for Signature Shuffle rear-contact correction, not delivered. Outer/rear packet ends stay supported on felt during riffle; only inner corners lift/release. Current shuffle variant needs correction and is not owner-approved. Approved baseline751retained. No deployment. Separate chats must read these records; publication does not notify them.

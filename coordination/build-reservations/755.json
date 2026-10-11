@@ -1,0 +1,10 @@
+{
+  "number": "755",
+  "reservationId": "signature-shuffle-rear-contact-20261011-4e01c9e84120",
+  "workstream": "Signature Shuffle specialist",
+  "task": "Correct riffle rear support contact; preserve approved artwork and game systems",
+  "sourceSha256": "6876e04a948798a282c6700efc2b16a67b6c8e9cd8e7a54bdd594d458586dc35",
+  "sourceStatus": "Existing shuffle candidate, not approved. Before integration inspect other754 source and reconcile latest game work; do not overwrite it.",
+  "status": "RESERVED_NOT_BUILT",
+  "date": "2026-10-11"
+}

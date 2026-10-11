@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "authority": "Test/main coordination/BUILD_REGISTRY.json",
+  "policy": "coordination/BUILD_NUMBERING.md",
+  "updated": "2026-10-11",
+  "approvedWorkingBuild": "751",
+  "historicalNumbersThrough": 750,
+  "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H\u2013U.",
+  "nextNumberHint": "756",
+  "nextNumberHintIsNotReservation": true,
+  "records": [
+    {
+      "number": "751",
+      "status": "OWNER_APPROVED",
+      "sha256": "986e027f24c8fc6ec75f2c56504b8b447e80425ef3b208833198aac0adcd8591",
+      "note": "Last published owner-approved baseline per Brain U; retained."
+    },
+    {
+      "number": "752",
+      "status": "DELIVERED_PENDING_OWNER_REVIEW",
+      "sha256": "f58ea173db244c23a1ea3f26c5d9137b57a8550b893452437b5918ee650422ee",
+      "task": "Unified bidding and local rail Trick Won; inspected during shuffle source recovery."
+    },
+    {
+      "number": "753",
+      "status": "DELIVERED_PENDING_OWNER_REVIEW",
+      "sha256": "16a4a470bb8d1f9d3171e18cb89cba364349f3202e7b386d85e10510f7e46d59",
+      "task": "Curved engraved rail; exact source of shuffle candidate."
+    },
+    {
+      "number": "754",
+      "status": "CONFLICT_DO_NOT_REUSE",
+      "variants": [
+        {
+          "filename": "754.zip",
+          "libraryFileId": "libfile_27314f9f71d48191bc2bc4818de17859",
+          "bytes": 255537446,
+          "reportedSha256": "22a267ec0e5c92d23b9d864785ec732142ba710dd2bb7bc5f8b164806561c1b1",
+          "shaEvidence": "Read companion 754.zip.sha256; archive contents not inspected in this update. Do not infer task or approval."
+        },
+        {
+          "filename": "754(1).zip",
+          "libraryFileId": "libfile_431ddf787fc081919cf356be3078fa3e",
+          "bytes": 270526764,
+          "sha256": "6876e04a948798a282c6700efc2b16a67b6c8e9cd8e7a54bdd594d458586dc35",
+          "task": "Signature shuffle; local filename/internal build754; based753",
+          "status": "OWNER_CORRECTION_REQUIRED_REAR_EDGE_LIFTS"
+        }
+      ]
+    },
+    {
+      "number": "755",
+      "reservationId": "signature-shuffle-rear-contact-20261011-4e01c9e84120",
+      "workstream": "Signature Shuffle specialist",
+      "task": "Correct riffle rear support contact; preserve approved artwork and game systems",
+      "sourceSha256": "6876e04a948798a282c6700efc2b16a67b6c8e9cd8e7a54bdd594d458586dc35",
+      "sourceStatus": "Existing shuffle candidate, not approved. Before integration inspect other754 source and reconcile latest game work; do not overwrite it.",
+      "status": "RESERVED_NOT_BUILT",
+      "date": "2026-10-11"
+    }
+  ]
+}
