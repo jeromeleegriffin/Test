@@ -1,0 +1,11 @@
+{
+  "number": "760",
+  "reservationId": "normal-shuffle-speed-20261011-6565ad6cab12",
+  "status": "RESERVED",
+  "task": "Keep759graphics; restore original normal shuffle tempo and unstretched original sound",
+  "sourceGameBuild": "759",
+  "sourceSha256": "1cb5b72a489eb0036804bff4d7bc6ec4e893e87c480c454796f2419ad870ef25",
+  "date": "2026-10-11",
+  "ownerApproved": false,
+  "physicalAndroidTested": false
+}

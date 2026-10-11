@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": "760",
+  "nextNumberHint": "761",
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -229,6 +229,17 @@
       },
       "testLimits": "Chromium153 mobile/touch emulation and sampled kinematics; no physical Android/speaker, owner cache upgrade, live PeerJS multiplayer or complete scored match. Exact earlier YouTube playback inaccessible; primary Royal Road illustrated instructions inspected. Phone realism remains owner judgment.",
       "scope": "Owner correction: more visible cards, 7.5seconds at1x and localized meeting-corner lift with supported far ends. Faint fireplace/rare owls retained byte-identical from758."
+    },
+    {
+      "number": "760",
+      "reservationId": "normal-shuffle-speed-20261011-6565ad6cab12",
+      "status": "RESERVED",
+      "task": "Keep759graphics; restore original normal shuffle tempo and unstretched original sound",
+      "sourceGameBuild": "759",
+      "sourceSha256": "1cb5b72a489eb0036804bff4d7bc6ec4e893e87c480c454796f2419ad870ef25",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false
     }
   ]
 }
