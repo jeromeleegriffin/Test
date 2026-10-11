@@ -158,10 +158,30 @@
       "task": "Integrate faint fireplace default, very rare owls and deliberate 1x opening shuffle",
       "sourceGameBuild": "757",
       "sourceSha256": "25768ba5b8d4e04adc5c37d9f057dbac43286b85c199decf47b0931c0c0c3bad",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
       "date": "2026-10-11",
       "ownerApproved": false,
-      "physicalAndroidTested": false
+      "physicalAndroidTested": false,
+      "filename": "758.zip",
+      "bytes": 316098594,
+      "sha256": "4a711072cf231d03eec0aa94c9498d69e51dc8ffc81214ddd07c88db382f51a2",
+      "entries": 1962,
+      "libraryFileId": "libfile_ce15e4171cc88191a591fa94bf22d4bc",
+      "fileId": "file_00000000a99c823099bf177c045336cf",
+      "checkpointArtifactPath": "HANDOFF/BUILD_758/MASTER_BRAIN_READY_UPDATE.md",
+      "checkpointStatus": "Complete publication-ready checkpoint in archive; published Brain remains W",
+      "tests": {
+        "ambienceControlsPersistenceOwlScheduler": "PASS",
+        "hiddenPagehideCleanup": "PASS",
+        "realDealFlightsEachSpeed": 46,
+        "shuffleDuration1xMs": 11200,
+        "finalMaxReducedMotion": "PASS",
+        "freshWorkerOfflineCoherence": "PASS",
+        "archiveCRC": "PASS",
+        "fileHashManifest": "PASS"
+      },
+      "testLimits": "Chromium153 mobile/touch emulation; owl production timer callbacks invoked without 15–30-minute endurance wait. No physical Android/audio hardware, owner-installed cache upgrade, live PeerJS multiplayer or full scored match. Subjective shuffle realism and faint audibility await owner review.",
+      "deploymentStatus": "NOT_DEPLOYED"
     }
   ]
 }
