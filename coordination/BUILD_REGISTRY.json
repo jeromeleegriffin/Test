@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": "764",
+  "nextNumberHint": 765,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -402,6 +402,17 @@
       },
       "testLimits": "Chromium153 mobile/touch emulation; actual production offline render and AudioWorklet graph timing, not physical Android/speaker/cache upgrade/live multiplayer/full scored match. Earlier interleaved stereo analysis error and pre-overlay harness timestamp corrected; failed crops/latency helper do not ship.",
       "previewLibraryFileId": "libfile_30f4b9511d8c81919affb18b9ee35647"
+    },
+    {
+      "number": "764",
+      "reservationId": "shuffle-continuous-audio-20261011-6565ad6cab12",
+      "status": "RESERVED",
+      "task": "Remove763 introduced622ms sound gap; continuous original recording at corrected riffle onset",
+      "sourceGameBuild": "763",
+      "sourceSha256": "055df26de47b15133863bf163b27d69627c233dd8d03cefcd0dd37dbc8010afe",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false
     }
   ]
 }

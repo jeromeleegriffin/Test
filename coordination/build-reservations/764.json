@@ -1,0 +1,11 @@
+{
+  "number": "764",
+  "reservationId": "shuffle-continuous-audio-20261011-6565ad6cab12",
+  "status": "RESERVED",
+  "task": "Remove763 introduced622ms sound gap; continuous original recording at corrected riffle onset",
+  "sourceGameBuild": "763",
+  "sourceSha256": "055df26de47b15133863bf163b27d69627c233dd8d03cefcd0dd37dbc8010afe",
+  "date": "2026-10-11",
+  "ownerApproved": false,
+  "physicalAndroidTested": false
+}
