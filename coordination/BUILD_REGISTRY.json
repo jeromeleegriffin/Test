@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": "758",
+  "nextNumberHint": "759",
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -150,6 +150,18 @@
       "deploymentStatus": "NOT_DEPLOYED",
       "libraryFileId": "libfile_26ee55eb91308191bd18071eeb954a25",
       "fileId": "file_000000001c2c8230bd09c83eb249c6cd"
+    },
+    {
+      "number": "758",
+      "reservationId": "ambience-opening-shuffle-20261011-6565ad6cab12",
+      "workstream": "Main development continuation",
+      "task": "Integrate faint fireplace default, very rare owls and deliberate 1x opening shuffle",
+      "sourceGameBuild": "757",
+      "sourceSha256": "25768ba5b8d4e04adc5c37d9f057dbac43286b85c199decf47b0931c0c0c3bad",
+      "status": "RESERVED",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false
     }
   ]
 }
