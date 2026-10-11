@@ -34,5 +34,12 @@
     "allOriginalAssetsByteIdentical": true
   },
   "testLimits": "Chromium153 mobile/touch emulation; actual production offline render and AudioWorklet graph timing, not physical Android/speaker/cache upgrade/live multiplayer/full scored match. Earlier interleaved stereo analysis error and pre-overlay harness timestamp corrected; failed crops/latency helper do not ship.",
-  "previewLibraryFileId": "libfile_30f4b9511d8c81919affb18b9ee35647"
+  "previewLibraryFileId": "libfile_30f4b9511d8c81919affb18b9ee35647",
+  "ownerAudioCorrection": {
+    "date": "2026-10-11",
+    "ownerQuote": "Now that video shows part of the sound cutting out.",
+    "scope": "763 audio split rejected: introduced622ms artificial silence at2.111–2.733s. Replace with764 uninterrupted native excerpt; retain correct first onset and visuals.",
+    "replacementCandidate": "764",
+    "wholeGameApproval": false
+  }
 }

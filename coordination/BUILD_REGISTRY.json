@@ -401,18 +401,54 @@
         "allOriginalAssetsByteIdentical": true
       },
       "testLimits": "Chromium153 mobile/touch emulation; actual production offline render and AudioWorklet graph timing, not physical Android/speaker/cache upgrade/live multiplayer/full scored match. Earlier interleaved stereo analysis error and pre-overlay harness timestamp corrected; failed crops/latency helper do not ship.",
-      "previewLibraryFileId": "libfile_30f4b9511d8c81919affb18b9ee35647"
+      "previewLibraryFileId": "libfile_30f4b9511d8c81919affb18b9ee35647",
+      "ownerAudioCorrection": {
+        "date": "2026-10-11",
+        "ownerQuote": "Now that video shows part of the sound cutting out.",
+        "scope": "763 audio split rejected: introduced622ms artificial silence at2.111–2.733s. Replace with764 uninterrupted native excerpt; retain correct first onset and visuals.",
+        "replacementCandidate": "764",
+        "wholeGameApproval": false
+      }
     },
     {
       "number": "764",
       "reservationId": "shuffle-continuous-audio-20261011-6565ad6cab12",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
       "task": "Remove763 introduced622ms sound gap; continuous original recording at corrected riffle onset",
       "sourceGameBuild": "763",
       "sourceSha256": "055df26de47b15133863bf163b27d69627c233dd8d03cefcd0dd37dbc8010afe",
       "date": "2026-10-11",
       "ownerApproved": false,
-      "physicalAndroidTested": false
+      "physicalAndroidTested": false,
+      "filename": "764.zip",
+      "sha256": "0220440e6bb0ed10d4cc0cab5c5d12126dbea5ee6b88dade54b90a418ea708bc",
+      "bytes": 337707804,
+      "entries": 2195,
+      "crc": "PASS",
+      "manifestChecks": 2194,
+      "deploymentStatus": "NOT_DEPLOYED",
+      "libraryFileId": "libfile_c587d49dcb148191bc473c86f709268d",
+      "fileId": "file_000000008d0481f69c8ab21e9666a63b",
+      "checkpointArtifactPath": "HANDOFF/BUILD_764/MASTER_BRAIN_READY_UPDATE.md",
+      "checkpointStatus": "Complete Brain-ready checkpoint and both permanent rules; BrainW unchanged",
+      "scope": "Remove763 introduced622ms mid-recording gap. One native stereo excerpt3.014–5.10 from corrected release onset1.825; subsequent original cadence continuous.762visuals/gameplay/approved Raven preview/cabin preserved.",
+      "tests": {
+        "productionSpeedsCueCount2NativeRate": "PASS",
+        "production46FlightsIdentitySingleCompletion": "PASS",
+        "firstReleaseOfflineOnsetMs": 2.124,
+        "continuousNativeInteriorSamples": 91287,
+        "originalSampleMaxQuantizationError": 0.000030517578125,
+        "formerGapPreviewRMS": 0.0223324985,
+        "formerGapActualProductionOfflineRMS": 0.0222201884,
+        "encodedMP4FormerGapRMS": 0.0216214238,
+        "landscapeOriginal5600": "PASS",
+        "maxReducedPagehide": "PASS",
+        "freshOfflineCoherence": "PASS",
+        "unchangedOriginalFiles": 2160,
+        "allOriginalAssetsByteIdentical": true
+      },
+      "testLimits": "Chromium153 mobile/touch emulation. Actual production offline audio/continuity and stereo preview/source/encoded AAC checks. No physical Android/speaker/cache-upgrade/livePeerJS/full scored-match verification. Later recorded impacts follow native uninterrupted cadence, not independently frame-perfect anchors.",
+      "previewLibraryFileId": "libfile_33500329be8c8191ba586f488fbd4cbf"
     }
   ]
 }
