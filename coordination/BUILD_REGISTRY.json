@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": "761",
+  "nextNumberHint": "762",
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -276,6 +276,17 @@
         "fileHashManifestChecks": 2068
       },
       "testLimits": "Chromium153 phone/touch emulation and native source-rate checks. Browser video silent. No physical Android/speaker listening, owner-installed cache upgrade, live multiplayer or full scored match.759geometry tests inherited because all graphics unchanged."
+    },
+    {
+      "number": "761",
+      "reservationId": "raven-calm-audio-20261011-6565ad6cab12",
+      "status": "RESERVED",
+      "task": "Gentle synchronized Raven fight sound",
+      "sourceGameBuild": "760",
+      "sourceSha256": "c6c12815184fec2f074b1fb59b3a410ad486bc61638f91baedbd4265d542bfd4",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false
     }
   ]
 }
