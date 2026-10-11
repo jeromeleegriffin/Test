@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "brainVersion": "W",
+      "updated": "2026-10-11",
+      "browse": "versions/W/files/00_START_HERE/START_HERE.md",
+      "artifact": "",
+      "sha256": "5e0ebb92284638a4d08ecb904d8f281fbc649004b75a3c353e591535344fd7be",
+      "sha256Scope": "primaryDocumentation",
+      "archiveStatus": "Voice clips approved; scoped integration recovered; no new game release"
+    },
+    {
       "brainVersion": "V",
       "updated": "2026-10-11",
       "browse": "versions/V/files/00_START_HERE/START_HERE.md",

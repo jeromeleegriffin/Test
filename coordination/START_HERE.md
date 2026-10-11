@@ -55,3 +55,12 @@ Read current Brain U before continuing. Completed task updates must report owner
 ## Master Brain V — shared numbering and owner shuffle correction
 
 Read brain/current.json, BUILD_NUMBERING.md and BUILD_REGISTRY.json before starting/resuming and again before naming/delivery. Atomically reserve numbers using expected main SHA; never guess or reuse.754has two distinct archives; identify by hash.755is reserved for Signature Shuffle rear-contact correction, not delivered. Outer/rear packet ends stay supported on felt during riffle; only inner corners lift/release. Current shuffle variant needs correction and is not owner-approved. Approved baseline751retained. No deployment. Separate chats must read these records; publication does not notify them.
+
+
+## Master Brain W — owner-approved voice clips; main-session continuation
+
+Jerome approved all eight trump voice clips: "Those are perfect. Let's put them in the game" (October11,2026 America/New_York). Male avatars use male; female and animal avatars use female; actual trump chooser determines voice. Completed isolated implementation and48 synthetic browser cases are recoverable from TRUMP-VOICE-REVIEW.html (Library libfile_5c43ca8ca7088191af96e6fa6e980e55). This is clip approval, not combined Android game approval. Read MAIN_DEVELOPMENT_VOICE_HANDOFF.md for source hashes, recovery files, tests, limitations and next steps.
+
+755 is delivered pending Android review; its shuffle must be preserved. Merge scoped voice changes and recovered rail correction into the latest verified complete source, never overwrite755 with old full files. Original small Thinking boxes must carry Thinking/BID/PASSED; oversized added panels are rejected and correction remains pending. Rail is now intended hidden at rest; clearance correction suppresses it on wins where no safe rail remains, including the tested four-card case. Do not claim that limitation resolved.751 whole-game approval retained.
+
+Every task must leave a complete durable Brain/specialist checkpoint; publish only within authorization. Shared numbering requires atomic registry reservation/readback before naming and delivery. No number reserved by this documentation update. No runtime, production, Player staging or deployment change. Chats must read updates explicitly; no automatic notification.

@@ -1,0 +1,28 @@
+{
+  "brainVersion": "W",
+  "parentVersion": "V",
+  "updated": "2026-10-11",
+  "documentationOnly": true,
+  "files": [
+    {
+      "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+      "bytes": 19202,
+      "sha256": "d315b1c72779559bb1b598c194e9e99c09da92e04ab8c9fea8bbfa1814b651f7"
+    },
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 3404,
+      "sha256": "60121b7f1f6fbaa05e29d9d76129c4101c96dd8420b374f7973cb289a41079c7"
+    },
+    {
+      "path": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_W_MAIN_HANDOFF_2026-10-11.md",
+      "bytes": 19386,
+      "sha256": "5e0ebb92284638a4d08ecb904d8f281fbc649004b75a3c353e591535344fd7be"
+    },
+    {
+      "path": "index.html",
+      "bytes": 144,
+      "sha256": "1903d42bab39a932a038488bafe4e2dba661a19628b3c23e736fe1defe4e3f40"
+    }
+  ]
+}

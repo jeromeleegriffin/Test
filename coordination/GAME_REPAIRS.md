@@ -32,3 +32,12 @@ Mandatory task-completion record: exact source/base/newbuild, changed files/asse
 Jerome Griffin explicitly stated: “I approve of 751.” Owner approval received in this continuing Work conversation. Build 751 is now the owner-approved working baseline. Its unchanged complete archive is 751.zip (241115760 bytes), SHA-256 986e027f24c8fc6ec75f2c56504b8b447e80425ef3b208833198aac0adcd8591. This accepts the delivered Laid Down integration and preserved approved work. Previous approvals through 750 remain valid. This is owner approval evidence, not a claim that the assistant performed physical Android testing. No new game build, deployment, production change, or artwork was performed. Banked, unknown and unstarted projects remain in their existing categories.
 
 Read current Brain U before continuing. Completed task updates must report owner status and tests; publish only when authorized. No new game deployment.
+
+
+## Master Brain W — owner-approved voice clips; main-session continuation
+
+Jerome approved all eight trump voice clips: "Those are perfect. Let's put them in the game" (October11,2026 America/New_York). Male avatars use male; female and animal avatars use female; actual trump chooser determines voice. Completed isolated implementation and48 synthetic browser cases are recoverable from TRUMP-VOICE-REVIEW.html (Library libfile_5c43ca8ca7088191af96e6fa6e980e55). This is clip approval, not combined Android game approval. Read MAIN_DEVELOPMENT_VOICE_HANDOFF.md for source hashes, recovery files, tests, limitations and next steps.
+
+755 is delivered pending Android review; its shuffle must be preserved. Merge scoped voice changes and recovered rail correction into the latest verified complete source, never overwrite755 with old full files. Original small Thinking boxes must carry Thinking/BID/PASSED; oversized added panels are rejected and correction remains pending. Rail is now intended hidden at rest; clearance correction suppresses it on wins where no safe rail remains, including the tested four-card case. Do not claim that limitation resolved.751 whole-game approval retained.
+
+Every task must leave a complete durable Brain/specialist checkpoint; publish only within authorization. Shared numbering requires atomic registry reservation/readback before naming and delivery. No number reserved by this documentation update. No runtime, production, Player staging or deployment change. Chats must read updates explicitly; no automatic notification.
