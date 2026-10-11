@@ -1,0 +1,13 @@
+{
+  "number": "756",
+  "reservationId": "main-voice-small-status-20261011-6565ad6cab12",
+  "workstream": "Main development continuation",
+  "task": "Integrate owner-approved trump voices, recovered rail clearance and original compact bidding statuses into 755",
+  "sourceGameBuild": "755",
+  "sourceSha256": "b66c6861abd5439b752d31fb59ebb21f068295f4f46bd2ad1c678fb85a991867",
+  "status": "RESERVED",
+  "date": "2026-10-11",
+  "expectedMainSha": "a8a8fd2d9994c7b58465d19a4a1004100dace103",
+  "ownerApproved": false,
+  "physicalAndroidTested": false
+}
