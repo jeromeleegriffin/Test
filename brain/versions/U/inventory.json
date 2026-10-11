@@ -1,0 +1,74 @@
+{
+  "brainVersion": "U",
+  "parentVersion": "T",
+  "updated": "2026-10-11",
+  "documentationOnly": true,
+  "files": [
+    {
+      "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+      "bytes": 4073,
+      "sha256": "3c89f67eb369321d0e578c4dcd02c732e7107c87ebe6201d00f44263ed19b30c",
+      "gitBlobSha": "3364b9d819be2fe55ceb03d98e214a4be8c0ea96"
+    },
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 4073,
+      "sha256": "3c89f67eb369321d0e578c4dcd02c732e7107c87ebe6201d00f44263ed19b30c",
+      "gitBlobSha": "3364b9d819be2fe55ceb03d98e214a4be8c0ea96"
+    },
+    {
+      "path": "files/01_MASTER_BANK/BUILD_751_CHECKPOINT.json",
+      "bytes": 1157,
+      "sha256": "a4a64140ac154f71934f718a9ce983cfaaeec327b4bf505be9e4e103b889a023",
+      "gitBlobSha": "69850e28ade20081cdfcca0a3b34d3f3697e13e6"
+    },
+    {
+      "path": "files/01_MASTER_BANK/CORRECTED_ROADMAP.md",
+      "bytes": 391,
+      "sha256": "5072813247cecad47fae58b107d2b99020e6265435da4c9f886d3460d7acdadf",
+      "gitBlobSha": "d91ebf189394f1b2c34c26bb59d4eb856912ce14"
+    },
+    {
+      "path": "files/01_MASTER_BANK/DASHBOARD.md",
+      "bytes": 701,
+      "sha256": "78ea1ae1622f3ed4a088a9c22f840accb15788a2fecfb53ad14f1664089edffb",
+      "gitBlobSha": "f83cd7a34c7e513bebbd64fda56a0beea838bf72"
+    },
+    {
+      "path": "files/01_MASTER_BANK/FEATURE_STATUS_MATRIX.csv",
+      "bytes": 31946,
+      "sha256": "b4b34c979c303ad7a62fc2d5b0d0a2ad6dad732363bb623ba6f7f926b1e2c18a",
+      "gitBlobSha": "f9ddfba0f20ad7bc55d275fb2fc15b793b13a21c"
+    },
+    {
+      "path": "files/01_MASTER_BANK/FEATURE_STATUS_MATRIX.json",
+      "bytes": 45696,
+      "sha256": "544ed5e5d8d46abc1a196ee1d8aeccd30b2f313d5a187ed43131a58302ae2f93",
+      "gitBlobSha": "dca1266644fee5f4759bf85282c48fb23dacbf47"
+    },
+    {
+      "path": "files/01_MASTER_BANK/FEATURE_STATUS_MATRIX.md",
+      "bytes": 3616,
+      "sha256": "7942c0c9461376e5ee1791bdd804a312e732e4edfb70d2cb8fef8690fcb229af",
+      "gitBlobSha": "d9c4db105c1160bb5403a4af892c9c7d43bc7848"
+    },
+    {
+      "path": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_U_ACCEPTANCE_2026-10-11.md",
+      "bytes": 4459,
+      "sha256": "ac0c9ab687f1dbe18fbe2571483e2ac65e8c2cf214e3a5316d0d62c0c955bbea",
+      "gitBlobSha": "b9f0566592e6da22e46bfb1f91b14f30fdf13dd2"
+    },
+    {
+      "path": "files/01_MASTER_BANK/OWNER_APPROVAL_RECORD.txt",
+      "bytes": 684,
+      "sha256": "6c82d194c63ab7b6b6603a6203ae57ad97734c951c39f506131ae71d43f8e703",
+      "gitBlobSha": "7a37a1e05e40c82338aa55a909adf6f47e5bb168"
+    },
+    {
+      "path": "index.html",
+      "bytes": 164,
+      "sha256": "416e19cd429acae645421b74ca47d2fdf37ede843661d5c8669905d5a57f9c40",
+      "gitBlobSha": "ec3b2d53705337fefb784f3b8cd32872cbbfb1e8"
+    }
+  ]
+}

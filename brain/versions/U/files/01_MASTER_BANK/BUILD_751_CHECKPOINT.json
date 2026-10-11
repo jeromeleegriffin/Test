@@ -1,0 +1,41 @@
+{
+  "candidate": {
+    "archive": "751.zip",
+    "sha256": "986e027f24c8fc6ec75f2c56504b8b447e80425ef3b208833198aac0adcd8591",
+    "bytes": 241115760,
+    "files": 1306,
+    "base": "750",
+    "approvedBase": true,
+    "newCandidateApproved": true,
+    "deployed": false
+  },
+  "ownerApprovedBaseline": {
+    "build": "751",
+    "sha256": "986e027f24c8fc6ec75f2c56504b8b447e80425ef3b208833198aac0adcd8591"
+  },
+  "changedRuntimeFiles": [
+    "game060.js",
+    "laid-down-refinement.css",
+    "index.html",
+    "hor-version.js",
+    "sw060.js"
+  ],
+  "preserved": [
+    "approved Kitty749/discard750 stylesheet",
+    "all original assets",
+    "style057.css/Scoreboard",
+    "landscape fitter path",
+    "rules/bots",
+    "Raven/trump/bidding/dealer/effects modules"
+  ],
+  "verification": {
+    "handoffChecks": 27,
+    "additionalChecks": 13,
+    "kittyViewportChecks": 6,
+    "realDisposableBrowserWorkerOfflineNewCss": "PASS",
+    "physicalAndroidPerformed": false
+  },
+  "rollback": "Reopen unchanged750; no storage/SW clearing",
+  "masterBrainUpdate": "U records explicit owner acceptance; documentation only",
+  "ownerApproval": "I approve of 751."
+}

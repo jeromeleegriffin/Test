@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "brainVersion": "U",
+      "updated": "2026-10-11",
+      "browse": "versions/U/files/00_START_HERE/START_HERE.md",
+      "artifact": "",
+      "sha256": "ac0c9ab687f1dbe18fbe2571483e2ac65e8c2cf214e3a5316d0d62c0c955bbea",
+      "sha256Scope": "primaryDocumentation",
+      "archiveStatus": "Owner-approved751; documentation only; no game deployment"
+    },
+    {
       "brainVersion": "T",
       "updated": "2026-10-10",
       "browse": "versions/T/files/00_START_HERE/START_HERE.md",
