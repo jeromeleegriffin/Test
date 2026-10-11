@@ -1,0 +1,11 @@
+{
+  "number": "765",
+  "reservationId": "shuffle-full-phase-sync-20261011-6565ad6cab12",
+  "status": "RESERVED",
+  "task": "Correct riffle and bridge sound against actual full animation; edit only verified quiet boundary",
+  "sourceGameBuild": "764",
+  "sourceSha256": "0220440e6bb0ed10d4cc0cab5c5d12126dbea5ee6b88dade54b90a418ea708bc",
+  "date": "2026-10-11",
+  "ownerApproved": false,
+  "physicalAndroidTested": false
+}

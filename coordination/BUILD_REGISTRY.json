@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 765,
+  "nextNumberHint": 766,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -449,6 +449,17 @@
       },
       "testLimits": "Chromium153 mobile/touch emulation. Actual production offline audio/continuity and stereo preview/source/encoded AAC checks. No physical Android/speaker/cache-upgrade/livePeerJS/full scored-match verification. Later recorded impacts follow native uninterrupted cadence, not independently frame-perfect anchors.",
       "previewLibraryFileId": "libfile_33500329be8c8191ba586f488fbd4cbf"
+    },
+    {
+      "number": "765",
+      "reservationId": "shuffle-full-phase-sync-20261011-6565ad6cab12",
+      "status": "RESERVED",
+      "task": "Correct riffle and bridge sound against actual full animation; edit only verified quiet boundary",
+      "sourceGameBuild": "764",
+      "sourceSha256": "0220440e6bb0ed10d4cc0cab5c5d12126dbea5ee6b88dade54b90a418ea708bc",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false
     }
   ]
 }
