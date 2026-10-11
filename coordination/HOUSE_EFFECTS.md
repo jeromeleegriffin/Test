@@ -51,3 +51,15 @@ Jerome approved all eight trump voice clips: "Those are perfect. Let's put them 
 755 is delivered pending Android review; its shuffle must be preserved. Merge scoped voice changes and recovered rail correction into the latest verified complete source, never overwrite755 with old full files. Original small Thinking boxes must carry Thinking/BID/PASSED; oversized added panels are rejected and correction remains pending. Rail is now intended hidden at rest; clearance correction suppresses it on wins where no safe rail remains, including the tested four-card case. Do not claim that limitation resolved.751 whole-game approval retained.
 
 Every task must leave a complete durable Brain/specialist checkpoint; publish only within authorization. Shared numbering requires atomic registry reservation/readback before naming and delivery. No number reserved by this documentation update. No runtime, production, Player staging or deployment change. Chats must read updates explicitly; no automatic notification.
+
+## 2026-10-11 — Banked fireplace default; main-development brainstorming only
+
+Owner requirement: “turn the fireplace sound down very, very faint, just a hint of that sound by default and allow it to be turned up.”
+
+Banked decision: Fireplace ambience should start as a barely audible hint by default, with an available volume control allowing the player to raise it. An exact numeric gain has not been selected or approved. This reopens the fireplace sound default only; it does not authorize a visual redesign or changes to other sounds.
+
+Owner then clarified: “I'm just brainstorming, so don't, don't make a new file yet. Just bank everything until I say make a new game file.”
+
+Current main-development mode: collect and bank the owner's ideas. Do not implement these queued changes, reserve another build number, or create a new game file/ZIP until Jerome explicitly says to make a new game file. This instruction concerns this brainstorming continuation; it is not a cancellation of separately authorized specialist assignments.
+
+Status: BANKED / NOT IMPLEMENTED. Existing coordination notes only were updated. No runtime or audio file was edited, no new game archive was made, and no deployment occurred. Existing 757 remains the delivered Android-review candidate; no acceptance is inferred. On the next explicitly authorized game build, inspect the actual fireplace volume path and its existing adjustment control, preserve deliberate saved player settings, and verify that the default is a faint audible hint while higher volume remains available.
