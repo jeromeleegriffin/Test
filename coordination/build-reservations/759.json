@@ -1,0 +1,11 @@
+{
+  "number": "759",
+  "reservationId": "shuffle-visible-cards-20261011-6565ad6cab12",
+  "status": "RESERVED",
+  "task": "Owner correction: more visible cards, approximately7.5s opening shuffle",
+  "sourceGameBuild": "758",
+  "sourceSha256": "4a711072cf231d03eec0aa94c9498d69e51dc8ffc81214ddd07c88db382f51a2",
+  "date": "2026-10-11",
+  "ownerApproved": false,
+  "physicalAndroidTested": false
+}
