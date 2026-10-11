@@ -103,3 +103,13 @@ Reproduce the entire rule verbatim in START HERE and in the ready-to-paste repla
 Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
 
 Do not replace the rule with a summary or a reference such as "same as before."
+
+## 2026-10-11 — Owner correction banked: opening shuffle is too fast
+
+Owner feedback: “The shuffle at the very start doesn't... it's not convincingly shuffling 46 cards. It's super fast.”
+
+Banked correction: The opening shuffle's pacing and visual impression need improvement so the viewer can convincingly perceive a full 46-card deck being shuffled. The current presentation is too fast for Jerome. This is owner visual feedback and supersedes any implication that prior automated timing/frame checks established convincing phone realism. It is not evidence that the rules engine dealt the wrong card count.
+
+The feedback followed delivery of 757, which preserved the 755 shuffle. The exact archive opened and active 1×/3×/MAX setting were not stated. Before a later implementation, verify the actual initial-shuffle playback and speed binding, then review readable packet separation, riffle/interleaving, bridge and squaring while preserving the planted rear-edge correction. No specific duration or speed-control change has been approved. Do not broaden an opening-shuffle correction into unrelated gameplay pacing or artwork changes.
+
+Status: OWNER CORRECTION BANKED / NOT IMPLEMENTED. Jerome's main-development brainstorming hold remains active: bank ideas and do not create a new game file until he explicitly requests one. No runtime, animation, audio or asset edits; no build number reservation, new ZIP or deployment. Existing 757 remains pending owner review, with this correction recorded.
