@@ -5,8 +5,8 @@
   "updated": "2026-10-11",
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
-  "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H\u2013U.",
-  "nextNumberHint": 767,
+  "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
+  "nextNumberHint": 768,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -180,7 +180,7 @@
         "archiveCRC": "PASS",
         "fileHashManifest": "PASS"
       },
-      "testLimits": "Chromium153 mobile/touch emulation; owl production timer callbacks invoked without 15\u201330-minute endurance wait. No physical Android/audio hardware, owner-installed cache upgrade, live PeerJS multiplayer or full scored match. Subjective shuffle realism and faint audibility await owner review.",
+      "testLimits": "Chromium153 mobile/touch emulation; owl production timer callbacks invoked without 15–30-minute endurance wait. No physical Android/audio hardware, owner-installed cache upgrade, live PeerJS multiplayer or full scored match. Subjective shuffle realism and faint audibility await owner review.",
       "deploymentStatus": "NOT_DEPLOYED",
       "ownerShuffleCorrection": {
         "date": "2026-10-11",
@@ -405,7 +405,7 @@
       "ownerAudioCorrection": {
         "date": "2026-10-11",
         "ownerQuote": "Now that video shows part of the sound cutting out.",
-        "scope": "763 audio split rejected: introduced622ms artificial silence at2.111\u20132.733s. Replace with764 uninterrupted native excerpt; retain correct first onset and visuals.",
+        "scope": "763 audio split rejected: introduced622ms artificial silence at2.111–2.733s. Replace with764 uninterrupted native excerpt; retain correct first onset and visuals.",
         "replacementCandidate": "764",
         "wholeGameApproval": false
       }
@@ -431,13 +431,13 @@
       "fileId": "file_000000008d0481f69c8ab21e9666a63b",
       "checkpointArtifactPath": "HANDOFF/BUILD_764/MASTER_BRAIN_READY_UPDATE.md",
       "checkpointStatus": "Complete Brain-ready checkpoint and both permanent rules; BrainW unchanged",
-      "scope": "Remove763 introduced622ms mid-recording gap. One native stereo excerpt3.014\u20135.10 from corrected release onset1.825; subsequent original cadence continuous.762visuals/gameplay/approved Raven preview/cabin preserved.",
+      "scope": "Remove763 introduced622ms mid-recording gap. One native stereo excerpt3.014–5.10 from corrected release onset1.825; subsequent original cadence continuous.762visuals/gameplay/approved Raven preview/cabin preserved.",
       "tests": {
         "productionSpeedsCueCount2NativeRate": "PASS",
         "production46FlightsIdentitySingleCompletion": "PASS",
         "firstReleaseOfflineOnsetMs": 2.124,
         "continuousNativeInteriorSamples": 91287,
-        "originalSampleMaxQuantizationError": 3.0517578125e-05,
+        "originalSampleMaxQuantizationError": 0.000030517578125,
         "formerGapPreviewRMS": 0.0223324985,
         "formerGapActualProductionOfflineRMS": 0.0222201884,
         "encodedMP4FormerGapRMS": 0.0216214238,
@@ -478,7 +478,7 @@
       "previewLibraryFileId": "libfile_c876134f0db881919bdcfcc406350fb1",
       "checkpointArtifactPath": "HANDOFF/BUILD_765/MASTER_BRAIN_READY_UPDATE.md",
       "checkpointStatus": "Complete Brain-ready checkpoint with both permanent rules; BrainW unchanged",
-      "scope": "Separate COMPLETE native riffle3.014\u20133.80 and bridge3.80\u20135.10 at verified quiet boundary; align actual rendered frames73/127; validated bounded output-clock mapping. Preserve764visuals/normaltempo/pitch/all originalassets/gameplay.",
+      "scope": "Separate COMPLETE native riffle3.014–3.80 and bridge3.80–5.10 at verified quiet boundary; align actual rendered frames73/127; validated bounded output-clock mapping. Preserve764visuals/normaltempo/pitch/all originalassets/gameplay.",
       "tests": {
         "firstRiffleOfflineErrorMs": 2.125,
         "bridgeOfflineErrorMs": 3.599,
@@ -487,7 +487,7 @@
         "firstRiffleEncodedVideoErrorMs": 1.791,
         "bridgeEncodedVideoErrorMs": 3.265,
         "quietBoundary1x3xFourMsPeak": 0,
-        "fullSourceRangeRetainedOnce": "3.014\u20135.10",
+        "fullSourceRangeRetainedOnce": "3.014–5.10",
         "nativeRatesAndSpeedModes": "PASS",
         "production46FlightsIdentitySingleCompletion": "PASS",
         "muteCardVolumeZero": "PASS",
@@ -552,6 +552,19 @@
         "ifClean": "Designate766 clean fallback, then publish766 as running test-server game",
         "deploymentPerformed": false
       }
+    },
+    {
+      "number": "767",
+      "reservationId": "character-studio077-fa72cc1b4ad4",
+      "workstream": "Character Studio 077",
+      "task": "Isolated seated human cast on exact766; owner waived appearance gate and authorized packaging. Stop for Android review.",
+      "sourceGameBuild": "766",
+      "sourceSha256": "4d274873eeb445bcedc638cc5dff73e5a30df0003df42944782adaadc8cd505a",
+      "status": "RESERVED",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deploymentStatus": "NOT_DEPLOYED"
     }
   ]
 }

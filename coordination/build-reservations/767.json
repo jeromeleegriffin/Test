@@ -1,0 +1,13 @@
+{
+  "number": "767",
+  "reservationId": "character-studio077-fa72cc1b4ad4",
+  "workstream": "Character Studio 077",
+  "task": "Isolated seated human cast on exact766; owner waived appearance gate and authorized packaging. Stop for Android review.",
+  "sourceGameBuild": "766",
+  "sourceSha256": "4d274873eeb445bcedc638cc5dff73e5a30df0003df42944782adaadc8cd505a",
+  "status": "RESERVED",
+  "date": "2026-10-11",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED"
+}
