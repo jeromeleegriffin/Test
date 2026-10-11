@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 769,
+  "nextNumberHint": 770,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -694,6 +694,19 @@
       "libraryFileId": "libfile_b9da2c6a1e0c8191a221c8505093d5a6",
       "fileId": "file_0000000011f881f6ab0d51ba928cbe32",
       "reviewLibraryFileId": "libfile_dd9ed69ccfe48191b358ea85cd53ea94"
+    },
+    {
+      "number": "769",
+      "reservationId": "character-studio077-status-fa72cc1b4ad4",
+      "workstream": "Character Studio077",
+      "task": "Owner-reported Thinking and Lead pills: actor targeting and character-relative presentation only; auction positions preserved",
+      "sourceGameBuild": "768",
+      "sourceSha256": "454c101c82e9635e330ddc08645b351a03ad78ad16eca3d59f539b765412058a",
+      "status": "RESERVED",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deploymentStatus": "NOT_DEPLOYED"
     }
   ]
 }

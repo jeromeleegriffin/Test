@@ -1,0 +1,13 @@
+{
+  "number": "769",
+  "reservationId": "character-studio077-status-fa72cc1b4ad4",
+  "workstream": "Character Studio077",
+  "task": "Owner-reported Thinking and Lead pills: actor targeting and character-relative presentation only; auction positions preserved",
+  "sourceGameBuild": "768",
+  "sourceSha256": "454c101c82e9635e330ddc08645b351a03ad78ad16eca3d59f539b765412058a",
+  "status": "RESERVED",
+  "date": "2026-10-11",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED"
+}
