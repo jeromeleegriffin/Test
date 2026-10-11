@@ -63,3 +63,11 @@ Owner then clarified: “I'm just brainstorming, so don't, don't make a new file
 Current main-development mode: collect and bank the owner's ideas. Do not implement these queued changes, reserve another build number, or create a new game file/ZIP until Jerome explicitly says to make a new game file. This instruction concerns this brainstorming continuation; it is not a cancellation of separately authorized specialist assignments.
 
 Status: BANKED / NOT IMPLEMENTED. Existing coordination notes only were updated. No runtime or audio file was edited, no new game archive was made, and no deployment occurred. Existing 757 remains the delivered Android-review candidate; no acceptance is inferred. On the next explicitly authorized game build, inspect the actual fireplace volume path and its existing adjustment control, preserve deliberate saved player settings, and verify that the default is a faint audible hint while higher volume remains available.
+
+## 2026-10-11 — Banked very rare owl sounds
+
+Owner request: “I want to add owl sounds, very rare owl sounds.”
+
+Banked requirement: Add occasional owl calls to the ambience, occurring very rarely. Exact interval, variation, volume, sound source and controls have not yet been selected. Keep this distinct from the already banked barely audible fireplace default.
+
+Status: BANKED / NOT IMPLEMENTED. The owner's brainstorming hold remains active: collect ideas until Jerome says to make a new game file. This update changes only the existing notes; no sound assets, runtime changes, build reservation, ZIP or deployment.
