@@ -1,11 +1,34 @@
 {
   "number": "761",
   "reservationId": "raven-calm-audio-20261011-6565ad6cab12",
-  "status": "RESERVED",
+  "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
   "task": "Gentle synchronized Raven fight sound",
   "sourceGameBuild": "760",
   "sourceSha256": "c6c12815184fec2f074b1fb59b3a410ad486bc61638f91baedbd4265d542bfd4",
   "date": "2026-10-11",
   "ownerApproved": false,
-  "physicalAndroidTested": false
+  "physicalAndroidTested": false,
+  "filename": "761.zip",
+  "sha256": "571ad9f2eb7e0bedd2e16c51836d11c2ef004015842d8ee6f4184797c2ea6360",
+  "bytes": 335322209,
+  "entries": 2101,
+  "libraryFileId": "libfile_4e3b95dccb6881919b1c71c9ca6ccd49",
+  "fileId": "file_00000000d28481fdbae28e8a286ab84c",
+  "deploymentStatus": "NOT_DEPLOYED",
+  "checkpointArtifactPath": "HANDOFF/BUILD_761/MASTER_BRAIN_READY_UPDATE.md",
+  "checkpointStatus": "Complete Brain-ready checkpoint plus both permanent rules; Brain W unchanged",
+  "scope": "Soft recorded wings, subdued single corvid contact call and separating flutter; native pitch, 3x wing only, MAX/reduced silent. Retain760 normal shuffle/759graphics/faint fireplace/rare owls.",
+  "tests": {
+    "actualCapture1x3xMAX": "PASS",
+    "nativePitchAndPhaseTiming": "PASS",
+    "unchangedGameState": "PASS",
+    "muteRookCardVolumeAndZero": "PASS",
+    "hiddenPagehideLeaveReplacePrelaunchCancelReduced": "PASS",
+    "originalNormalShuffleAnd46DealFlightsEachSpeed": "PASS",
+    "freshWorkerOfflineNewAudioAndModule": "PASS",
+    "allOriginalAssetsByteIdentical": true,
+    "archiveCRC": "PASS",
+    "manifestChecks": 2100
+  },
+  "testLimits": "Chromium153 phone/touch emulation and processing measurements; no physical Android/speaker listening, owner cache upgrade, live multiplayer or full scored match. Sound taste pending owner phone review. Initial frame-based monitor failed a timing check; replaced with independent40ms audio-only monitor and final rerun passed."
 }
