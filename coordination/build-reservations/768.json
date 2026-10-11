@@ -1,0 +1,13 @@
+{
+  "number": "768",
+  "reservationId": "character-studio077-crow-arm-fa72cc1b4ad4",
+  "workstream": "Character Studio077",
+  "task": "Owner-rejected767 Crow right arm: correct source anatomy and continuous rail occlusion; isolated candidate only",
+  "sourceGameBuild": "767",
+  "sourceSha256": "b2169371019e1305e2e107195f86e88803236f1cf13c0710e25a80370a4e6fb7",
+  "status": "RESERVED",
+  "date": "2026-10-11",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED"
+}

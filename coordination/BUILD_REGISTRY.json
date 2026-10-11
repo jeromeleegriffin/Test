@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 768,
+  "nextNumberHint": 769,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -633,7 +633,25 @@
       "sourceApproval": "SESSION_RECOVERY_766_2026-10-11: owner explicitly 766 is clean; no newer runtime repair baseline selected",
       "libraryFileId": "libfile_5102a55f2a848191a262e526d356d105",
       "fileId": "file_0000000037c481f5982c2802e41645e8",
-      "reviewLibraryFileId": "libfile_f8bd91e974d881919e61c752013a6f90"
+      "reviewLibraryFileId": "libfile_f8bd91e974d881919e61c752013a6f90",
+      "ownerReview": {
+        "status": "CORRECTION_REQUIRED",
+        "date": "2026-10-11",
+        "evidence": "Owner Android screenshot: Crow right arm cut off and pointing unnaturally. Previous assistant visual pass superseded; owner authorized focused correction."
+      }
+    },
+    {
+      "number": "768",
+      "reservationId": "character-studio077-crow-arm-fa72cc1b4ad4",
+      "workstream": "Character Studio077",
+      "task": "Owner-rejected767 Crow right arm: correct source anatomy and continuous rail occlusion; isolated candidate only",
+      "sourceGameBuild": "767",
+      "sourceSha256": "b2169371019e1305e2e107195f86e88803236f1cf13c0710e25a80370a4e6fb7",
+      "status": "RESERVED",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deploymentStatus": "NOT_DEPLOYED"
     }
   ]
 }
