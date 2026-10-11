@@ -1,0 +1,77 @@
+{
+  "brainVersion": "T",
+  "parentVersion": "S",
+  "updated": "2026-10-10",
+  "documentationOnly": true,
+  "publicationStatus": "OWNER_AUTHORIZED_DOCUMENTATION",
+  "files": [
+    {
+      "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+      "bytes": 4318,
+      "sha256": "5b273e4e1d03143ee3571f20885759bf8de500a8b8f3c98b6da5cfee30f2c74c",
+      "gitBlobSha": "6c7735e7800c522fa7dc92b88cc2b142e55c5841"
+    },
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 4318,
+      "sha256": "5b273e4e1d03143ee3571f20885759bf8de500a8b8f3c98b6da5cfee30f2c74c",
+      "gitBlobSha": "6c7735e7800c522fa7dc92b88cc2b142e55c5841"
+    },
+    {
+      "path": "files/01_MASTER_BANK/BUILD_751_CHECKPOINT.json",
+      "bytes": 1140,
+      "sha256": "52ae698353f404918ae515119de0bb9c3eca3bb9f86052a72cebea9f6b2993f5",
+      "gitBlobSha": "b2d3f83b30739da21425d5c8046d7ab9efb3ddb0"
+    },
+    {
+      "path": "files/01_MASTER_BANK/CORRECTED_ROADMAP.md",
+      "bytes": 1663,
+      "sha256": "37871c7936f3ea0244bd1e883287ef5bb247fcb166a7f982bfe889e4806efcd5",
+      "gitBlobSha": "211af720799b0e9f8954226d3e3f6491cad193c4"
+    },
+    {
+      "path": "files/01_MASTER_BANK/DASHBOARD.md",
+      "bytes": 1108,
+      "sha256": "a6c4812fef1cf0d36715f3dc4d9293a906df2e0d3d1177d03ed81cbc6e75fc84",
+      "gitBlobSha": "513612da4e171f981df261fee6b0c7a01ba7fdbf"
+    },
+    {
+      "path": "files/01_MASTER_BANK/FEATURE_STATUS_MATRIX.csv",
+      "bytes": 32034,
+      "sha256": "4b79c597145404c0dc62ca9cbf31e2e748f9a4f36ef1605ddbafbe57c3d0c706",
+      "gitBlobSha": "5aeb3be00a848988ab346fceeea9a9e6469295f2"
+    },
+    {
+      "path": "files/01_MASTER_BANK/FEATURE_STATUS_MATRIX.json",
+      "bytes": 45630,
+      "sha256": "33599cc67f2859580dd03a2a53fb3849d1f859fbd40f963f3d35aa63454e0fda",
+      "gitBlobSha": "e15b9bbe532f4a4114804f140454ec2353e4eb50"
+    },
+    {
+      "path": "files/01_MASTER_BANK/FEATURE_STATUS_MATRIX.md",
+      "bytes": 10944,
+      "sha256": "b1629fea0fece30c8c127820a207c3a06c31153c1e093b6afac09d44b2729d7f",
+      "gitBlobSha": "6deaf1108769824b96a449a15196d78194189c04"
+    },
+    {
+      "path": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_T_ACCEPTANCE_2026-10-10.md",
+      "bytes": 9573,
+      "sha256": "f9962f44211cadbf796a08a80a944c3c7c2715eeedda2c65ad166b68e886db40",
+      "gitBlobSha": "bfae44d1eec6f143b5f164168153c0ddeac8512e"
+    },
+    {
+      "path": "files/01_MASTER_BANK/OWNER_APPROVAL_RECORD.txt",
+      "bytes": 1256,
+      "sha256": "b55e942f95d8337a214dc961bb2b7c3178791433ecbf79a7a9bb7eb4376be904",
+      "gitBlobSha": "87b8195fcccfb06d8f6c08240f67b77aabf73a15"
+    },
+    {
+      "path": "index.html",
+      "bytes": 519,
+      "sha256": "0fb6cd93096be815e98665c1760f7ee4917bfc61cba2846fe14328e232550087",
+      "gitBlobSha": "55b1efa5a4a65cfb94d1eff0dd7c995c7a28d039"
+    }
+  ],
+  "priorVersionPreservation": "H-S unchanged; append-only status correction",
+  "note": "SHA-256/Git blob SHA for version files; manifest excludes itself. Pointer promoted only after staged verification."
+}

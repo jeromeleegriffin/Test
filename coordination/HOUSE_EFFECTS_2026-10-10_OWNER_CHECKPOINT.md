@@ -22,3 +22,14 @@ The trump-stamp animation MUST originate from the **actual trump chooser's curre
 3. Queue seat-aware trump-stamp correction for original Work after Raven Fight.
 4. Original Work integrates only approved, verified handoffs into latest source, regression tests and requests owner Android approval.
 5. Prepare formal append-only Master Brain R (or next verified letter), with full required START HERE, continuity, manifests, and pointer update last, under separate publication verification.
+
+
+## 2026-10-10 Owner acceptance through750 — Brain T
+
+Preserve original738feature acceptance. Later739combined737+738, retained750; owner now accepts complete750. No historical record erased.
+
+Owner Jerome Griffin approved the existing designs and complete working candidate through Build750 after reviewing the project audit. Exact owner direction: “Mark everything as approved by owner, by me, until further, unless I open up something later. Everything is good and approved.” He separately confirmed the before/after Kitty and discard designs: “I approve of those and I want those to go into the next build as well.”
+
+This advances the accepted working baseline from732to750. All implemented features included in750are owner-approved and must remain locked unless Jerome explicitly reopens them. Preserve the previously separate737bidding and738effects rollback archives; they are combined in750. This approval is an owner declaration, not a claim that this assistant performed physical Android testing of every case. Keep existing verification limits in history. It does not make banked/unstarted/inaccessible future projects completed or turn the new751LaidDownintegration into an approved build.
+
+Mandatory task-completion record: exact source/base/newbuild, changed files/assets, test evidence and limits, owner approval or pending status, rollback and SHA-256, current dependencies/remaining work. Every task must include the Brain update; publish only when task authorization permits, otherwise deliver one complete ready-to-publish handoff. Never claim a separate chat was notified automatically. Read current.json and all relevant coordination on resume. H–S history and both complete reading/continuity rules remain mandatory; reproduce them verbatim in future handoffs/startup and Brain successors. No game deployment/production change is authorized.

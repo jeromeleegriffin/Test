@@ -1,6 +1,33 @@
 {
   "versions": [
     {
+      "brainVersion": "T",
+      "updated": "2026-10-10",
+      "browse": "versions/T/files/00_START_HERE/START_HERE.md",
+      "artifact": "",
+      "sha256": "f9962f44211cadbf796a08a80a944c3c7c2715eeedda2c65ad166b68e886db40",
+      "sha256Scope": "primaryDocumentation",
+      "archiveStatus": "Owner approved complete750; new751LaidDownreview; completion-update protocol; no game deployment"
+    },
+    {
+      "brainVersion": "S",
+      "updated": "2026-10-10",
+      "browse": "versions/S/files/00_START_HERE/START_HERE.md",
+      "artifact": "",
+      "sha256": "5c446c11fe540e78a7e876cac4b4a786b7c8f3e4a2cb5e61bfd0f9c984476477",
+      "sha256Scope": "primaryDocumentation",
+      "archiveStatus": "Verification/status reconciliation, immutable predecessor; no game deployment"
+    },
+    {
+      "brainVersion": "R",
+      "updated": "2026-10-10",
+      "browse": "versions/R/files/00_START_HERE/START_HERE.md",
+      "artifact": "",
+      "sha256": "c3ccba56a5ad34fde5f6c023951bf81a5e6caabcf545ce82b031ea1cb12154c7",
+      "sha256Scope": "primaryDocumentation",
+      "archiveStatus": "Owner-approved738effects and specialist records; no game deployment"
+    },
+    {
       "brainVersion": "Q",
       "updated": "2026-10-10",
       "browse": "versions/Q/index.html",
@@ -62,7 +89,7 @@
       "browse": "versions/J/index.html",
       "artifact": "",
       "sha256": "4a02dbbfbdf8d2278646e2fb9ffbfd4e7b532820b808f1e717c61540f8460538",
-      "archiveStatus": "No archive created — owner authorization required"
+      "archiveStatus": "No archive created \u2014 owner authorization required"
     },
     {
       "brainVersion": "I",
