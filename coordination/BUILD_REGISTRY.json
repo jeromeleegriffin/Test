@@ -123,14 +123,33 @@
       "task": "Integrate owner-approved trump voices, recovered rail clearance and original compact bidding statuses into 755",
       "sourceGameBuild": "755",
       "sourceSha256": "b66c6861abd5439b752d31fb59ebb21f068295f4f46bd2ad1c678fb85a991867",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
       "date": "2026-10-11",
       "expectedMainSha": "520c4c1d39bb9aac793f99d98e4f9eee722430c7",
       "ownerApproved": false,
       "physicalAndroidTested": false,
       "supersedesConflictedNumber": "756",
-      "sameRuntimeDeltaAs": "756 main candidate; version/cache labels only will change",
-      "numberCheck": "No exact 757.zip or 757(1).zip Library metadata match; registry unused. All old 756 variants preserved."
+      "sameRuntimeDeltaAs": "Saved main 756 candidate; only runtime build/cache/version labels changed. Source identity verified; 757 worker/offline coherence rechecked.",
+      "numberCheck": "No exact 757.zip or 757(1).zip Library metadata match; registry unused. All old 756 variants preserved.",
+      "filename": "757.zip",
+      "bytes": 308079658,
+      "sha256": "25768ba5b8d4e04adc5c37d9f057dbac43286b85c199decf47b0931c0c0c3bad",
+      "entries": 1921,
+      "checkpointArtifactPath": "HANDOFF/BUILD_757/MASTER_BRAIN_READY_UPDATE.md",
+      "checkpointStatus": "Publication-ready complete checkpoint in archive; published Brain remains W",
+      "tests": {
+        "biddingSeatActorSpeedCases": 48,
+        "voiceChooserColorSpeedCases": 48,
+        "railViewportHandSizeCases": 36,
+        "realOfflineHands": 2,
+        "final757OfflineWorkerAndVoiceResponses": "PASS",
+        "archiveCRC": "PASS",
+        "fileHashManifest": "PASS"
+      },
+      "testLimits": "Chromium 153 mobile/touch emulation; no physical Android, owner-installed cache upgrade, or live PeerJS multiplayer test. Detailed behavioral evidence from version-identical main 756 precursor.",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "libraryFileId": "libfile_26ee55eb91308191bd18071eeb954a25",
+      "fileId": "file_000000001c2c8230bd09c83eb249c6cd"
     }
   ]
 }
