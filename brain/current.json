@@ -50,7 +50,11 @@
   "latestLocalCandidateStatus": "OWNER_APPROVED",
   "buildRegistry": "../coordination/BUILD_REGISTRY.json",
   "buildNumberingPolicy": "../coordination/BUILD_NUMBERING.md",
-  "signatureShuffleStatus": "OWNER_CORRECTION_REQUIRED_REAR_SUPPORT_MUST_STAY_DOWN",
+  "signatureShuffleStatus": "755_DELIVERED_OWNER_ANDROID_REVIEW_PENDING",
   "signatureShuffleReservedBuild": "755",
-  "build754Status": "CONFLICT_TWO_DISTINCT_ARCHIVES_USE_HASH"
+  "build754Status": "CONFLICT_TWO_DISTINCT_ARCHIVES_USE_HASH",
+  "signatureShuffleCheckpoint": "../coordination/SIGNATURE_SHUFFLE_755.md",
+  "signatureShuffleBuild": "755",
+  "signatureShuffleSha256": "b66c6861abd5439b752d31fb59ebb21f068295f4f46bd2ad1c678fb85a991867",
+  "signatureShuffleLibraryFileId": "libfile_f911325210948191a590c5d70692d73e"
 }

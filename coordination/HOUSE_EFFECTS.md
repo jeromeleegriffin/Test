@@ -37,3 +37,8 @@ Read current Brain U before continuing. Completed task updates must report owner
 ## Master Brain V — shared numbering and owner shuffle correction
 
 Read brain/current.json, BUILD_NUMBERING.md and BUILD_REGISTRY.json before starting/resuming and again before naming/delivery. Atomically reserve numbers using expected main SHA; never guess or reuse.754has two distinct archives; identify by hash.755is reserved for Signature Shuffle rear-contact correction, not delivered. Outer/rear packet ends stay supported on felt during riffle; only inner corners lift/release. Current shuffle variant needs correction and is not owner-approved. Approved baseline751retained. No deployment. Separate chats must read these records; publication does not notify them.
+
+
+## Signature Shuffle755 delivery checkpoint
+
+755.zip delivered, SHA-256 b66c6861abd5439b752d31fb59ebb21f068295f4f46bd2ad1c678fb85a991867. Rear-edge riffle correction built; main754rail-spacing refinement preserved. Desktop checks passed; Android owner approval pending. Read SIGNATURE_SHUFFLE_755.md and BUILD_REGISTRY.json for exact source, evidence, limitations and rollback. No deployment;751 approval unchanged.755 reservation consumed and never reused.

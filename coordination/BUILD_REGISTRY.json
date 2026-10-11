@@ -36,7 +36,10 @@
           "libraryFileId": "libfile_27314f9f71d48191bc2bc4818de17859",
           "bytes": 255537446,
           "reportedSha256": "22a267ec0e5c92d23b9d864785ec732142ba710dd2bb7bc5f8b164806561c1b1",
-          "shaEvidence": "Read companion 754.zip.sha256; archive contents not inspected in this update. Do not infer task or approval."
+          "shaEvidence": "Archive downloaded and SHA-256 verified; complete README/Brain handoff read; source compared with753.",
+          "sha256": "22a267ec0e5c92d23b9d864785ec732142ba710dd2bb7bc5f8b164806561c1b1",
+          "task": "Main-session3px lower curved rail TRICK WON spacing refinement",
+          "status": "PENDING_OWNER_REVIEW_PER_PACKAGE"
         },
         {
           "filename": "754(1).zip",
@@ -54,9 +57,18 @@
       "workstream": "Signature Shuffle specialist",
       "task": "Correct riffle rear support contact; preserve approved artwork and game systems",
       "sourceSha256": "6876e04a948798a282c6700efc2b16a67b6c8e9cd8e7a54bdd594d458586dc35",
-      "sourceStatus": "Existing shuffle candidate, not approved. Before integration inspect other754 source and reconcile latest game work; do not overwrite it.",
-      "status": "RESERVED_NOT_BUILT",
-      "date": "2026-10-11"
+      "sourceStatus": "Both754variants recovered; main754rail3px refinement preserved; shuffle754(1) corrected.",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
+      "date": "2026-10-11",
+      "filename": "755.zip",
+      "libraryFileId": "libfile_f911325210948191a590c5d70692d73e",
+      "sha256": "b66c6861abd5439b752d31fb59ebb21f068295f4f46bd2ad1c678fb85a991867",
+      "bytes": 273390568,
+      "sourceGameBuild": "754 main-game rail-spacing variant",
+      "sourceGameSha256": "22a267ec0e5c92d23b9d864785ec732142ba710dd2bb7bc5f8b164806561c1b1",
+      "checkpoint": "coordination/SIGNATURE_SHUFFLE_755.md",
+      "physicalAndroidTested": false,
+      "ownerApproved": false
     }
   ]
 }
