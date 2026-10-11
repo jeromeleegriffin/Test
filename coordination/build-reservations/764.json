@@ -36,5 +36,11 @@
     "allOriginalAssetsByteIdentical": true
   },
   "testLimits": "Chromium153 mobile/touch emulation. Actual production offline audio/continuity and stereo preview/source/encoded AAC checks. No physical Android/speaker/cache-upgrade/livePeerJS/full scored-match verification. Later recorded impacts follow native uninterrupted cadence, not independently frame-perfect anchors.",
-  "previewLibraryFileId": "libfile_33500329be8c8191ba586f488fbd4cbf"
+  "previewLibraryFileId": "libfile_33500329be8c8191ba586f488fbd4cbf",
+  "ownerBridgeCorrection": {
+    "date": "2026-10-11",
+    "ownerQuote": "Now you have the audio out of sync on the second part of the arched part.",
+    "scope": "764 whole remainder advance moves bridge too early.765 uses actual source quiet phase boundary; whole-build approval not granted.",
+    "replacementCandidate": "765"
+  }
 }
