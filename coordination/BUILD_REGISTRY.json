@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "751",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": "762",
+  "nextNumberHint": "763",
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -317,6 +317,17 @@
         "implementation": "Already integrated in delivered761.zip; no new package necessary",
         "wholeGameApproval": false
       }
+    },
+    {
+      "number": "762",
+      "reservationId": "shuffle-continuous-corner-20261011-6565ad6cab12",
+      "status": "RESERVED",
+      "task": "Remove stationary hold between corner lift and riffle; preserve moving tempo and native audio",
+      "sourceGameBuild": "761",
+      "sourceSha256": "571ad9f2eb7e0bedd2e16c51836d11c2ef004015842d8ee6f4184797c2ea6360",
+      "date": "2026-10-11",
+      "ownerApproved": false,
+      "physicalAndroidTested": false
     }
   ]
 }
