@@ -30,5 +30,12 @@
     "archiveCRC": "PASS",
     "manifestChecks": 2100
   },
-  "testLimits": "Chromium153 phone/touch emulation and processing measurements; no physical Android/speaker listening, owner cache upgrade, live multiplayer or full scored match. Sound taste pending owner phone review. Initial frame-based monitor failed a timing check; replaced with independent40ms audio-only monitor and final rerun passed."
+  "testLimits": "Chromium153 phone/touch emulation and processing measurements; no physical Android/speaker listening, owner cache upgrade, live multiplayer or full scored match. Sound taste pending owner phone review. Initial frame-based monitor failed a timing check; replaced with independent40ms audio-only monitor and final rerun passed.",
+  "ownerPreviewApproval": {
+    "date": "2026-10-11",
+    "scope": "Gentle Raven fight animation/sound preview accepted; implement this treatment",
+    "ownerQuote": "That works for me. Let's go ahead and implement it.",
+    "implementation": "Already integrated in delivered761.zip; no new package necessary",
+    "wholeGameApproval": false
+  }
 }
