@@ -1,0 +1,16 @@
+{
+  "number": "757",
+  "reservationId": "main-voice-small-status-20261011-6565ad6cab12-757",
+  "workstream": "Main development continuation",
+  "task": "Integrate owner-approved trump voices, recovered rail clearance and original compact bidding statuses into 755",
+  "sourceGameBuild": "755",
+  "sourceSha256": "b66c6861abd5439b752d31fb59ebb21f068295f4f46bd2ad1c678fb85a991867",
+  "status": "RESERVED",
+  "date": "2026-10-11",
+  "expectedMainSha": "520c4c1d39bb9aac793f99d98e4f9eee722430c7",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "supersedesConflictedNumber": "756",
+  "sameRuntimeDeltaAs": "756 main candidate; version/cache labels only will change",
+  "numberCheck": "No exact 757.zip or 757(1).zip Library metadata match; registry unused. All old 756 variants preserved."
+}
