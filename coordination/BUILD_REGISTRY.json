@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "783",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 787,
+  "nextNumberHint": 788,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1423,6 +1423,17 @@
       "tests": "24 portrait cases; text inside borders; unchanged hand bounds; career touch; landscape restoration; coherent786 offline restart",
       "physicalAndroidTested": false,
       "ownerFeedback": "784 placement looks good; text jumbled. Correction requested; not blanket candidate approval."
+    },
+    {
+      "number": "787",
+      "reservationId": "public-jerome-e42c005b93c9-20261012",
+      "sourceGameBuild": "786",
+      "sourceSha256": "d658895ac7559139a3da9046ec97e4a2d9ae454c877b97855d65b4fe7c9562be",
+      "task": "Owner supersedes exclusivity: Jerome public human selection with original artwork and voice;52bots retained",
+      "status": "RESERVED",
+      "ownerApproved": false,
+      "deploymentStatus": "NOT_DEPLOYED",
+      "date": "2026-10-12"
     }
   ],
   "testSiteBuild": "779",
