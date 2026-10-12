@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "774",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 775,
+  "nextNumberHint": 777,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -977,6 +977,29 @@
         "timeZone": "America/New_York",
         "scope": "Acceptance of delivered774 character expansion. Specific device/test coverage not stated. No deployment authorization."
       }
+    },
+    {
+      "number": "775",
+      "reservationId": "complete-cast12-fa72cc1b4ad4",
+      "task": "Complete original12 with Sofia Rafael Samir; isolated candidate",
+      "sourceGameBuild": "774",
+      "sourceSha256": "f3ed60eff732fd01b829fa4c50380f4355011fab8eb440bd3a35b796fb48e44b",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "deploymentStatus": "NOT_DEPLOYED",
+      "workstream": "Character Studio077"
+    },
+    {
+      "number": "776",
+      "reservationId": "continuity-cast12-fa72cc1b4ad4",
+      "task": "Complete recovery and continuation archive; NOT a new gameplay build",
+      "packageType": "CONTINUATION_HANDOFF",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "deploymentStatus": "NOT_DEPLOYED",
+      "workstream": "Character Studio077"
     }
   ],
   "testSiteBuild": "772"

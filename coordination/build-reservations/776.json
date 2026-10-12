@@ -1,0 +1,11 @@
+{
+  "number": "776",
+  "reservationId": "continuity-cast12-fa72cc1b4ad4",
+  "task": "Complete recovery and continuation archive; NOT a new gameplay build",
+  "packageType": "CONTINUATION_HANDOFF",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "deploymentStatus": "NOT_DEPLOYED",
+  "workstream": "Character Studio077"
+}

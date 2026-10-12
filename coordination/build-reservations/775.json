@@ -1,0 +1,12 @@
+{
+  "number": "775",
+  "reservationId": "complete-cast12-fa72cc1b4ad4",
+  "task": "Complete original12 with Sofia Rafael Samir; isolated candidate",
+  "sourceGameBuild": "774",
+  "sourceSha256": "f3ed60eff732fd01b829fa4c50380f4355011fab8eb440bd3a35b796fb48e44b",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "deploymentStatus": "NOT_DEPLOYED",
+  "workstream": "Character Studio077"
+}
