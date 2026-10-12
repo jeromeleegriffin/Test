@@ -1,0 +1,50 @@
+{
+  "failedBodyUsesLegacy": true,
+  "onlineRetry": true,
+  "staleLoadCannotReplaceOccupant": true,
+  "CrowFavorite": [
+    {
+      "name": "Jerome",
+      "avatar": "jerome",
+      "seat": 0
+    },
+    {
+      "name": "Halo",
+      "avatar": "halo",
+      "seat": 1
+    },
+    {
+      "name": "Crow",
+      "avatar": "crow",
+      "seat": 2
+    },
+    {
+      "name": "Samir",
+      "avatar": "samir",
+      "seat": 3
+    }
+  ],
+  "BrandyFavorite": [
+    {
+      "name": "Jerome",
+      "avatar": "jerome",
+      "seat": 0
+    },
+    {
+      "name": "Pebble",
+      "avatar": "pebble",
+      "seat": 1
+    },
+    {
+      "name": "Brandy",
+      "avatar": "brandy",
+      "seat": 2
+    },
+    {
+      "name": "Fang",
+      "avatar": "fang",
+      "seat": 3
+    }
+  ],
+  "pass": true
+}

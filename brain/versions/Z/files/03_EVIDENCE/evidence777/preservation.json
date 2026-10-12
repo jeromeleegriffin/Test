@@ -1,0 +1,16 @@
+{
+  "originalFiles": 429,
+  "runtimeFiles": 589,
+  "changed": [
+    "asset-loading772.js",
+    "characters077.js",
+    "game060.js",
+    "hor-version.js",
+    "index.html",
+    "rook510-avatars.js",
+    "sw060.js"
+  ],
+  "allOriginalArtAndAudioIdentical": true,
+  "embeddedAudioIdentical": true,
+  "pass": true
+}

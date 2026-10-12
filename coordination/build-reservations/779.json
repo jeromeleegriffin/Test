@@ -5,11 +5,11 @@
   "task": "Willow sage and Brandy dusty-blue shirts; six clean seated views and two matching portraits",
   "sourceGameBuild": "778",
   "sourceSha256": "f69b0eed0f6e7a1f9075ecee0e5cf33bd4a66b698b431f2d0dd082efc125682b",
-  "status": "DELIVERED_CORRECTION_COMPLETE_OWNER_PREVIEW_WAIVED",
+  "status": "OWNER_APPROVED_LOCKED_BASELINE",
   "date": "2026-10-12",
-  "ownerApproved": false,
+  "ownerApproved": true,
   "physicalAndroidTested": false,
-  "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD",
+  "deploymentStatus": "TEST_SITE_DEPLOYED_HTTP_HASH_VERIFIED",
   "filename": "779.zip",
   "bytes": 112833516,
   "sha256": "94963b99f7e8bee5b9714f39e01e25cc2dfcd25c2bf1dd0c6861c48fbb233c4d",
@@ -30,5 +30,10 @@
     "deltaReconstructionFiles": 591
   },
   "testLimits": "Chromium393x693DPR2 actual renderer; no physical Android/livePeerJS/fullmatch/installedcacheupgrade. Pale edge defect corrected at game size, not mathematical alpha perfection at arbitrary zoom.",
-  "ownerInstruction": "Go ahead and correct those, and I don't need to see it. Just fix it."
+  "ownerInstruction": "Go ahead and correct those, and I don't need to see it. Just fix it.",
+  "deploymentCommit": "6872e4ebc64b78691564eb2ae0c41761fb0e1ada",
+  "ownerApproval": "Everything looks good. I say lock it down. This is their new baseline. Let's go ahead and update the master groom and deploy this.",
+  "ownerApprovalDate": "2026-10-12",
+  "approvalScope": "779 baseline and Test deployment; production unchanged; physical Android remains unverified",
+  "brainVersion": "Z"
 }

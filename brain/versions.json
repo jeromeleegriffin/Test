@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "brainVersion": "Z",
+      "updated": "2026-10-12",
+      "browse": "versions/Z/files/00_START_HERE/START_HERE.md",
+      "artifact": "",
+      "sha256": "f8e26f192528c4fa4485ee2c9cacd31f526be437eb458b32a47dbb6e9cde12d0",
+      "sha256Scope": "primaryDocumentation",
+      "archiveStatus": "779 owner-approved locked baseline; 52 bot avatars, 156 seated views, entry avatar/voice choices and shirt corrections; Test verified; production unchanged"
+    },
+    {
       "brainVersion": "Y",
       "updated": "2026-10-12",
       "browse": "versions/Y/files/00_START_HERE/START_HERE.md",

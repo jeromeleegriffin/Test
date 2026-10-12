@@ -1,0 +1,1292 @@
+{
+  "scope": "Local isolated775 draft; synthetic seating, actual renderer, no physical Android/network multiplayer certification",
+  "errors": [],
+  "combinations": [
+    {
+      "identity": "nettle",
+      "seat": "left",
+      "source": "nettle-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "frost",
+      "seat": "top",
+      "source": "frost-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "spark",
+      "seat": "right",
+      "source": "spark-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "ash",
+      "seat": "left",
+      "source": "ash-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "fang",
+      "seat": "top",
+      "source": "fang-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "hearth",
+      "seat": "right",
+      "source": "hearth-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "cobalt",
+      "seat": "left",
+      "source": "cobalt-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "halo",
+      "seat": "top",
+      "source": "halo-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "grit",
+      "seat": "right",
+      "source": "grit-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "harrier",
+      "seat": "left",
+      "source": "harrier-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "thistle",
+      "seat": "top",
+      "source": "thistle-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "copper",
+      "seat": "right",
+      "source": "copper-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "blaze",
+      "seat": "left",
+      "source": "blaze-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "pebble",
+      "seat": "top",
+      "source": "pebble-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "flint",
+      "seat": "right",
+      "source": "flint-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "nix",
+      "seat": "left",
+      "source": "nix-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "rookery",
+      "seat": "top",
+      "source": "rookery-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "barrel",
+      "seat": "right",
+      "source": "barrel-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "anchor",
+      "seat": "left",
+      "source": "anchor-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "sable",
+      "seat": "top",
+      "source": "sable-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "sofia",
+      "seat": "right",
+      "source": "sofia-right.png",
+      "voice": "female"
+    },
+    {
+      "identity": "wager",
+      "seat": "left",
+      "source": "wager-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "willow",
+      "seat": "top",
+      "source": "willow-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "rafael",
+      "seat": "right",
+      "source": "rafael-right.png",
+      "voice": "male"
+    },
+    {
+      "identity": "ember",
+      "seat": "left",
+      "source": "ember-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "quill",
+      "seat": "top",
+      "source": "quill-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "samir",
+      "seat": "right",
+      "source": "samir-right.png",
+      "voice": "male"
+    },
+    {
+      "identity": "titan",
+      "seat": "left",
+      "source": "titan-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "moss",
+      "seat": "top",
+      "source": "moss-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "claire",
+      "seat": "right",
+      "source": "claire-right.png",
+      "voice": "female"
+    },
+    {
+      "identity": "pike",
+      "seat": "left",
+      "source": "pike-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "gable",
+      "seat": "top",
+      "source": "gable-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "june",
+      "seat": "right",
+      "source": "june-right.png",
+      "voice": "female"
+    },
+    {
+      "identity": "drift",
+      "seat": "left",
+      "source": "drift-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "marrow",
+      "seat": "top",
+      "source": "marrow-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "tess",
+      "seat": "right",
+      "source": "tess-right.png",
+      "voice": "female"
+    },
+    {
+      "identity": "dice",
+      "seat": "left",
+      "source": "dice-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "finch",
+      "seat": "top",
+      "source": "finch-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "marcus",
+      "seat": "right",
+      "source": "marcus-right.png",
+      "voice": "male"
+    },
+    {
+      "identity": "hollow",
+      "seat": "left",
+      "source": "hollow-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "moth",
+      "seat": "top",
+      "source": "moth-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "owen",
+      "seat": "right",
+      "source": "owen-right.png",
+      "voice": "male"
+    },
+    {
+      "identity": "vex",
+      "seat": "left",
+      "source": "vex-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "brandy",
+      "seat": "top",
+      "source": "brandy-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "daniel",
+      "seat": "right",
+      "source": "daniel-right.png",
+      "voice": "male"
+    },
+    {
+      "identity": "bramble",
+      "seat": "left",
+      "source": "bramble-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "ivy",
+      "seat": "top",
+      "source": "ivy-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "dagger",
+      "seat": "right",
+      "source": "dagger-right.png",
+      "voice": "male"
+    },
+    {
+      "identity": "emberlyn",
+      "seat": "left",
+      "source": "emberlyn-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "shade",
+      "seat": "top",
+      "source": "shade-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "cinder",
+      "seat": "right",
+      "source": "cinder-right.png",
+      "voice": "female"
+    },
+    {
+      "identity": "frost",
+      "seat": "left",
+      "source": "frost-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "spark",
+      "seat": "top",
+      "source": "spark-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "crow",
+      "seat": "right",
+      "source": "crow-right.png",
+      "voice": "female"
+    },
+    {
+      "identity": "fang",
+      "seat": "left",
+      "source": "fang-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "hearth",
+      "seat": "top",
+      "source": "hearth-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "nettle",
+      "seat": "right",
+      "source": "nettle-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "halo",
+      "seat": "left",
+      "source": "halo-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "grit",
+      "seat": "top",
+      "source": "grit-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "ash",
+      "seat": "right",
+      "source": "ash-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "thistle",
+      "seat": "left",
+      "source": "thistle-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "copper",
+      "seat": "top",
+      "source": "copper-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "cobalt",
+      "seat": "right",
+      "source": "cobalt-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "pebble",
+      "seat": "left",
+      "source": "pebble-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "flint",
+      "seat": "top",
+      "source": "flint-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "harrier",
+      "seat": "right",
+      "source": "harrier-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "rookery",
+      "seat": "left",
+      "source": "rookery-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "barrel",
+      "seat": "top",
+      "source": "barrel-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "blaze",
+      "seat": "right",
+      "source": "blaze-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "sable",
+      "seat": "left",
+      "source": "sable-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "sofia",
+      "seat": "top",
+      "source": "sofia-top.png",
+      "voice": "female"
+    },
+    {
+      "identity": "nix",
+      "seat": "right",
+      "source": "nix-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "willow",
+      "seat": "left",
+      "source": "willow-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "rafael",
+      "seat": "top",
+      "source": "rafael-top.png",
+      "voice": "male"
+    },
+    {
+      "identity": "anchor",
+      "seat": "right",
+      "source": "anchor-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "quill",
+      "seat": "left",
+      "source": "quill-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "samir",
+      "seat": "top",
+      "source": "samir-top.png",
+      "voice": "male"
+    },
+    {
+      "identity": "wager",
+      "seat": "right",
+      "source": "wager-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "moss",
+      "seat": "left",
+      "source": "moss-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "claire",
+      "seat": "top",
+      "source": "claire-top.png",
+      "voice": "female"
+    },
+    {
+      "identity": "ember",
+      "seat": "right",
+      "source": "ember-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "gable",
+      "seat": "left",
+      "source": "gable-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "june",
+      "seat": "top",
+      "source": "june-top.png",
+      "voice": "female"
+    },
+    {
+      "identity": "titan",
+      "seat": "right",
+      "source": "titan-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "marrow",
+      "seat": "left",
+      "source": "marrow-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "tess",
+      "seat": "top",
+      "source": "tess-top.png",
+      "voice": "female"
+    },
+    {
+      "identity": "pike",
+      "seat": "right",
+      "source": "pike-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "finch",
+      "seat": "left",
+      "source": "finch-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "marcus",
+      "seat": "top",
+      "source": "marcus-top.png",
+      "voice": "male"
+    },
+    {
+      "identity": "drift",
+      "seat": "right",
+      "source": "drift-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "moth",
+      "seat": "left",
+      "source": "moth-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "owen",
+      "seat": "top",
+      "source": "owen-top.png",
+      "voice": "male"
+    },
+    {
+      "identity": "dice",
+      "seat": "right",
+      "source": "dice-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "brandy",
+      "seat": "left",
+      "source": "brandy-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "daniel",
+      "seat": "top",
+      "source": "daniel-top.png",
+      "voice": "male"
+    },
+    {
+      "identity": "hollow",
+      "seat": "right",
+      "source": "hollow-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "ivy",
+      "seat": "left",
+      "source": "ivy-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "dagger",
+      "seat": "top",
+      "source": "dagger-top.png",
+      "voice": "male"
+    },
+    {
+      "identity": "vex",
+      "seat": "right",
+      "source": "vex-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "shade",
+      "seat": "left",
+      "source": "shade-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "cinder",
+      "seat": "top",
+      "source": "cinder-top.png",
+      "voice": "female"
+    },
+    {
+      "identity": "bramble",
+      "seat": "right",
+      "source": "bramble-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "spark",
+      "seat": "left",
+      "source": "spark-left.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "crow",
+      "seat": "top",
+      "source": "crow-top.png",
+      "voice": "female"
+    },
+    {
+      "identity": "emberlyn",
+      "seat": "right",
+      "source": "emberlyn-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "hearth",
+      "seat": "left",
+      "source": "hearth-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "nettle",
+      "seat": "top",
+      "source": "nettle-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "frost",
+      "seat": "right",
+      "source": "frost-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "grit",
+      "seat": "left",
+      "source": "grit-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "ash",
+      "seat": "top",
+      "source": "ash-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "fang",
+      "seat": "right",
+      "source": "fang-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "copper",
+      "seat": "left",
+      "source": "copper-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "cobalt",
+      "seat": "top",
+      "source": "cobalt-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "halo",
+      "seat": "right",
+      "source": "halo-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "flint",
+      "seat": "left",
+      "source": "flint-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "harrier",
+      "seat": "top",
+      "source": "harrier-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "thistle",
+      "seat": "right",
+      "source": "thistle-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "barrel",
+      "seat": "left",
+      "source": "barrel-left.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "blaze",
+      "seat": "top",
+      "source": "blaze-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "pebble",
+      "seat": "right",
+      "source": "pebble-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "sofia",
+      "seat": "left",
+      "source": "sofia-left.png",
+      "voice": "female"
+    },
+    {
+      "identity": "nix",
+      "seat": "top",
+      "source": "nix-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "rookery",
+      "seat": "right",
+      "source": "rookery-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "rafael",
+      "seat": "left",
+      "source": "rafael-left.png",
+      "voice": "male"
+    },
+    {
+      "identity": "anchor",
+      "seat": "top",
+      "source": "anchor-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "sable",
+      "seat": "right",
+      "source": "sable-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "samir",
+      "seat": "left",
+      "source": "samir-left.png",
+      "voice": "male"
+    },
+    {
+      "identity": "wager",
+      "seat": "top",
+      "source": "wager-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "willow",
+      "seat": "right",
+      "source": "willow-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "claire",
+      "seat": "left",
+      "source": "claire-left.png",
+      "voice": "female"
+    },
+    {
+      "identity": "ember",
+      "seat": "top",
+      "source": "ember-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "quill",
+      "seat": "right",
+      "source": "quill-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "june",
+      "seat": "left",
+      "source": "june-left.png",
+      "voice": "female"
+    },
+    {
+      "identity": "titan",
+      "seat": "top",
+      "source": "titan-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "moss",
+      "seat": "right",
+      "source": "moss-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "tess",
+      "seat": "left",
+      "source": "tess-left.png",
+      "voice": "female"
+    },
+    {
+      "identity": "pike",
+      "seat": "top",
+      "source": "pike-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "gable",
+      "seat": "right",
+      "source": "gable-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "marcus",
+      "seat": "left",
+      "source": "marcus-left.png",
+      "voice": "male"
+    },
+    {
+      "identity": "drift",
+      "seat": "top",
+      "source": "drift-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "marrow",
+      "seat": "right",
+      "source": "marrow-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "owen",
+      "seat": "left",
+      "source": "owen-left.png",
+      "voice": "male"
+    },
+    {
+      "identity": "dice",
+      "seat": "top",
+      "source": "dice-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "finch",
+      "seat": "right",
+      "source": "finch-right.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "daniel",
+      "seat": "left",
+      "source": "daniel-left.png",
+      "voice": "male"
+    },
+    {
+      "identity": "hollow",
+      "seat": "top",
+      "source": "hollow-top.webp",
+      "voice": "male"
+    },
+    {
+      "identity": "moth",
+      "seat": "right",
+      "source": "moth-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "dagger",
+      "seat": "left",
+      "source": "dagger-left.png",
+      "voice": "male"
+    },
+    {
+      "identity": "vex",
+      "seat": "top",
+      "source": "vex-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "brandy",
+      "seat": "right",
+      "source": "brandy-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "cinder",
+      "seat": "left",
+      "source": "cinder-left.png",
+      "voice": "female"
+    },
+    {
+      "identity": "bramble",
+      "seat": "top",
+      "source": "bramble-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "ivy",
+      "seat": "right",
+      "source": "ivy-right.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "crow",
+      "seat": "left",
+      "source": "crow-left.png",
+      "voice": "female"
+    },
+    {
+      "identity": "emberlyn",
+      "seat": "top",
+      "source": "emberlyn-top.webp",
+      "voice": "female"
+    },
+    {
+      "identity": "shade",
+      "seat": "right",
+      "source": "shade-right.webp",
+      "voice": "female"
+    }
+  ],
+  "localViews": [
+    {
+      "local": 0,
+      "seats": [
+        {
+          "pose": "left",
+          "index": 1
+        },
+        {
+          "pose": "top",
+          "index": 2
+        },
+        {
+          "pose": "right",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "local": 1,
+      "seats": [
+        {
+          "pose": "left",
+          "index": 2
+        },
+        {
+          "pose": "top",
+          "index": 3
+        },
+        {
+          "pose": "right",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "local": 2,
+      "seats": [
+        {
+          "pose": "left",
+          "index": 3
+        },
+        {
+          "pose": "top",
+          "index": 0
+        },
+        {
+          "pose": "right",
+          "index": 1
+        }
+      ]
+    },
+    {
+      "local": 3,
+      "seats": [
+        {
+          "pose": "left",
+          "index": 0
+        },
+        {
+          "pose": "top",
+          "index": 1
+        },
+        {
+          "pose": "right",
+          "index": 2
+        }
+      ]
+    }
+  ],
+  "landingBodyRequests": 0,
+  "firstTableBodyRequests": 3,
+  "roster": [
+    {
+      "name": "Crow",
+      "style": "safe",
+      "avatar": "crow"
+    },
+    {
+      "name": "Blaze",
+      "style": "aggressive",
+      "avatar": "blaze"
+    },
+    {
+      "name": "Nix",
+      "style": "tricky",
+      "avatar": "nix"
+    },
+    {
+      "name": "Titan",
+      "style": "trumpHeavy",
+      "avatar": "titan"
+    },
+    {
+      "name": "Pike",
+      "style": "pointHungry",
+      "avatar": "pike"
+    },
+    {
+      "name": "Drift",
+      "style": "passive",
+      "avatar": "drift"
+    },
+    {
+      "name": "Dice",
+      "style": "randomish",
+      "avatar": "dice"
+    },
+    {
+      "name": "Anchor",
+      "style": "partnerFirst",
+      "avatar": "anchor"
+    },
+    {
+      "name": "Wager",
+      "style": "bidHappy",
+      "avatar": "wager"
+    },
+    {
+      "name": "Hollow",
+      "style": "voidMaker",
+      "avatar": "hollow"
+    },
+    {
+      "name": "Ember",
+      "style": "balanced",
+      "avatar": "ember"
+    },
+    {
+      "name": "Vex",
+      "style": "ruffHappy",
+      "avatar": "vex"
+    },
+    {
+      "name": "Frost",
+      "style": "scoreHawk",
+      "avatar": "frost"
+    },
+    {
+      "name": "Fang",
+      "style": "setDog",
+      "avatar": "fang"
+    },
+    {
+      "name": "Halo",
+      "style": "partnerSignal",
+      "avatar": "halo"
+    },
+    {
+      "name": "Quill",
+      "style": "countSaver",
+      "avatar": "quill"
+    },
+    {
+      "name": "Bramble",
+      "style": "leadLong",
+      "avatar": "bramble"
+    },
+    {
+      "name": "Moss",
+      "style": "trumpShy",
+      "avatar": "moss"
+    },
+    {
+      "name": "Emberlyn",
+      "style": "showboat",
+      "avatar": "emberlyn"
+    },
+    {
+      "name": "Cinder",
+      "style": "rookHunter",
+      "avatar": "cinder"
+    },
+    {
+      "name": "Gable",
+      "style": "lastTrick",
+      "avatar": "gable"
+    },
+    {
+      "name": "Thistle",
+      "style": "sandbag",
+      "avatar": "thistle"
+    },
+    {
+      "name": "Marrow",
+      "style": "fourteenHold",
+      "avatar": "marrow"
+    },
+    {
+      "name": "Pebble",
+      "style": "secondHandLow",
+      "avatar": "pebble"
+    },
+    {
+      "name": "Rookery",
+      "style": "trumpDown",
+      "avatar": "rookery"
+    },
+    {
+      "name": "Sable",
+      "style": "shortLead",
+      "avatar": "sable"
+    },
+    {
+      "name": "Finch",
+      "style": "climbOnly",
+      "avatar": "finch"
+    },
+    {
+      "name": "Dagger",
+      "style": "trumpUp",
+      "avatar": "dagger"
+    },
+    {
+      "name": "Willow",
+      "style": "eggSitter",
+      "avatar": "willow"
+    },
+    {
+      "name": "Hearth",
+      "style": "passFirst",
+      "avatar": "hearth"
+    },
+    {
+      "name": "Grit",
+      "style": "nestDump",
+      "avatar": "grit"
+    },
+    {
+      "name": "Copper",
+      "style": "fiveHunter",
+      "avatar": "copper"
+    },
+    {
+      "name": "Moth",
+      "style": "thirdHandHigh",
+      "avatar": "moth"
+    },
+    {
+      "name": "Brandy",
+      "style": "widowFiend",
+      "avatar": "brandy"
+    },
+    {
+      "name": "Flint",
+      "style": "honorCash",
+      "avatar": "flint"
+    },
+    {
+      "name": "Ivy",
+      "style": "bidOnce",
+      "avatar": "ivy"
+    },
+    {
+      "name": "Shade",
+      "style": "midRank",
+      "avatar": "shade"
+    },
+    {
+      "name": "Barrel",
+      "style": "quietDealer",
+      "avatar": "barrel"
+    },
+    {
+      "name": "Spark",
+      "style": "moonDreamer",
+      "avatar": "spark"
+    },
+    {
+      "name": "Nettle",
+      "style": "colorStubborn",
+      "avatar": "nettle"
+    },
+    {
+      "name": "Cobalt",
+      "style": "leftHandVoid",
+      "avatar": "cobalt"
+    },
+    {
+      "name": "Ash",
+      "style": "lastBidder",
+      "avatar": "ash"
+    },
+    {
+      "name": "Harrier",
+      "style": "antiMoon",
+      "avatar": "harrier"
+    },
+    {
+      "name": "Claire",
+      "style": "balanced",
+      "avatar": "claire"
+    },
+    {
+      "name": "June",
+      "style": "balanced",
+      "avatar": "june"
+    },
+    {
+      "name": "Tess",
+      "style": "balanced",
+      "avatar": "tess"
+    },
+    {
+      "name": "Marcus",
+      "style": "balanced",
+      "avatar": "marcus"
+    },
+    {
+      "name": "Owen",
+      "style": "balanced",
+      "avatar": "owen"
+    },
+    {
+      "name": "Daniel",
+      "style": "balanced",
+      "avatar": "daniel"
+    },
+    {
+      "name": "Sofia",
+      "style": "balanced",
+      "avatar": "sofia"
+    },
+    {
+      "name": "Rafael",
+      "style": "balanced",
+      "avatar": "rafael"
+    },
+    {
+      "name": "Samir",
+      "style": "balanced",
+      "avatar": "samir"
+    }
+  ],
+  "legacyFallback": true,
+  "landscape": true,
+  "collision": [
+    {
+      "name": "Human",
+      "avatar": "blaze",
+      "isBot": false
+    },
+    {
+      "name": "Crow",
+      "avatar": "crow",
+      "style": "safe",
+      "isBot": true
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,16 @@
+{
+  "truth": {
+    "page": "775",
+    "script": "775",
+    "marker": 775,
+    "worker": {
+      "build": "775-bot-draft",
+      "cache": "house-of-rooks-v775-bot-draft"
+    },
+    "controller": "http://127.0.0.1:45649/bot-integration/candidate/sw060.js?v=775",
+    "coherent": false
+  },
+  "precachedBodies": 0,
+  "cachedBodyBytes": 49504,
+  "pass": true
+}

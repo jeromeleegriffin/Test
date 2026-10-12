@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "joinVoice": "silent",
+  "joinAvatarConflictResolved": true,
+  "snapshotTypes": [
+    "welcome",
+    "players",
+    "welcome"
+  ],
+  "scope": "Real join/resync handlers with local mock transport; not live PeerJS"
+}

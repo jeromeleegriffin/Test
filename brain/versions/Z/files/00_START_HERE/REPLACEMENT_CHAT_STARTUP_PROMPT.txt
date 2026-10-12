@@ -1,0 +1,105 @@
+CONTINUE GRIFFIN HOUSE OF ROOKS. DO NOT START OVER. OwnerJeromeGriffin. CurrentBrainZ,locked779baseline. Read this completecheckpoint,previousH–Yandallapplicableauthorities before newdevelopment. Preserveallarchives andpermanentrules; pass them verbatim to yoursuccessor.
+
+# Master Brain Z — locked779baseline, completed52-character cast and identity choices
+
+Owner: Jerome Griffin. October12,2026, America/New_York. Previous immutable Brain:Y.
+
+## Owner authority and supersessions
+
+Owner command: “Everything looks good. I say lock it down. This is their new baseline. Let's go ahead and update the master groom and deploy this.” In context “master groom” refers to Master Brain. Owner later instructed recovery without restarting and continuation of this same authorized task.779 is now OWNER_APPROVED and LOCKED as the working baseline. Reviewed777appearances and waived779preview are historical; this final baseline approval supersedes their pending overall approval. It does not claim the assistant physically tested Android or that every character was individually inspected by the owner.
+
+Publication hold is lifted for this Master Brain update and deployment of exact779to the established Test site only. Production remains protected and unchanged. No future production authorization, fresh artwork, gameplay changes or restart of the long audit is implied. FrozenH–Ydocuments and all older build archives remain immutable. Historical holds/pending/four-bot-gap/cream-edge-open notes in embedded records are superseded only by the explicit current facts here.
+
+## Exact baseline and deployment
+
+779.zip:112,833,516bytes;591runtime files;SHA25694963b99f7e8bee5b9714f39e01e25cc2dfcd25c2bf1dd0c6861c48fbb233c4d. Library libfile_5cb821d9107481919fce1e03a1f22c66. Test:https://jeromeleegriffin.github.io/Test/ . Root game files match all591Git blob hashes from the approvedZIP. Runtime commit: 6872e4ebc64b78691564eb2ae0c41761fb0e1ada. Prior Test head: ccb902b30d9e759634e2b8921276a09a4a5f005d. The prior hosted game was772; the new commit overlays runtime paths only and preserves non-runtime history/coordination. No whole-repository ZIP or cleanup.
+
+GitHub Pages run38232216561 completed successfully for runtime commit 6872e4ebc64b78691564eb2ae0c41761fb0e1ada. Live Test HTTP verification: 17/17 critical runtime and corrected artwork files match exact approved779bytes. Production unchanged.
+
+## Completed work through779
+
+772: previously accepted hosted loading/retry repair, startup readiness and safe fallback.773: approved far-seat hard rail correction.774: Claire/June/Tess/Marcus/Owen/Daniel18seatedviews.775: Sofia/Rafael/Samir complete original12characters/36views plusCrowarm.776is the complete recovery archive, NOT a game build.
+
+777: all52existing bot personas now have their own fixed human avatars,156left/far-top/right views plusCrow's foregroundarm. No bot roster expansion or deletion. Original12art preserved;40additional identities use120WebPbodyposes and40matching portraits. Nettle/Ash/Cobalt/Harrier are new elderly BOT identities, separate from earlier elderly human designs. Body art loads on demand for occupied seats; no full cast preload. Legacyportrait fallback while loading or on failure; online/click retry and stale-load protection. Host enforces unique table avatars: human claim replaces a conflicting bot with a free COMPLETE persona, preserving its playerid,seat,team,bank,cards,scores,turn and reconnect fields. Another human's occupied avatar, invalid avatars and spoofed requests are rejected. Favorites remain available when their avatar is free.
+
+778: optional avatar choice beside “What shall we call you?” on main and invite name-entry pages.52finished human choices; existing saved avatars preserved, new random choices use human bot identities. Voice options Match avatar/Male/Female/Silent use existing trump recordings and offer preview. Preferences persist and travel through solo/host/join/reconnect/reclaim/public snapshots. Bots retain their assigned voice; human choice overrides only their voice. No forced extra step beforePlaynow. This is the implemented entry form; a separate table-first landing mockup is NOT silently implemented here.
+
+779: Willow's creamshirt changed to softsage andBrandy's to dustyblue;6views+2portraits replaced,369484bytes. Visible pale shirt-edge defect corrected in actual table pixels at393x693DPR2. Faces,hair,poses,scale andhardrail geometry retained. Not a claim of perfect alpha at arbitrary magnification. All other778runtimefiles byte-identical except4versionmarkers. Original masters and rejected cream-cleanup attempts retained. Final corrected PNGmasters/prompts embedded in Shirt-Correction-Record.html, libfile_ed8168af83e0819186dc88ac67d7da81.
+
+## Locked protections and deferred work
+
+PreserveTABLE-003, original approved art, rail masks andseatplacement, no bottomplayerbody, BidDock/holder/connector,LAST, carddesigns/colors, speed/deal/shuffle/ambience/audio, X1default/Sol7backup,EPAoff, rules/scoring, saveddata and landscape. The working screen wins. No cache/data clearing orFRESHbutton as an upgrade procedure.
+
+64human-only appearance candidates(32women32men) remain saved and deferred, outside runtime. Owner stopped expansion to avoid bloat and permits possible reuse of bot art for humans;778provides that reuse. Do not generate their192seatedviews or discard them. Earlier animal/masked anonymous-entry ideas were superseded by avatar/voice choice. Saved legacy avatars remain compatible; no new animalbodyproduction.
+
+Separate Jerome personal-avatar/recorded-voice packages, expanded voice-production library, server/CDN ideas and later table-first mockups are NOT integrated in779. Retrieve actual artifacts and agree on any new assignment before merging. Do not claim another chat was notified automatically. Any new appearance generation needs the owner's applicable authorization.
+
+## Verification and limits
+
+777tests preserved:156actual-renderer character-seat-voice combinations,4relative views,52humanavatarclaims preserving gameplay state, humanconflict/invalid/spoof rejection, real host/client message handlers with loopbacktransport, favorites, landscape/fallback, failedretry/stalecompletion, zero initialbodyrequests, at most4first-table body/armrequests, visitedbodyofflinecache.
+778tests preserved:52choices/persistence/actualsoloentry,40voice-policy/colorcases,320/393/768width/modal checks, join/reconnect mocktransport andcoherentworker.779tests:6correctedseatviews visually inspected and rendererverified, coherent779worker andcorrectedBrandyofflineasset,591ZIPCRC/hashchecks,591delta-restoredbytechecks. All591deployedGit hashesverified. Documentation references original evidence rather than restarting completed tests.
+
+These are Chromium153mobile/touch simulation and controlled fixtures, NOT new physicalAndroid/audio-listening/livePeerJS/installed-cacheupgrade/fullmatchcertification. Owner baseline approval is separate. Long766audit remains PAUSED at38scoredhands/7matches; target30matches/100hands incomplete. Do not resume without instruction.
+
+## Recovery and continuation
+
+Current779 source: deployed runtime plus779.zip. Immediate predecessor778.zip libfile_86c09c362aa08191a4d5d76ce93ca633, SHA256f69b0eed0f6e7a1f9075ecee0e5cf33bd4a66b698b431f2d0dd082efc125682b.777.zip libfile_6c43921d4f1081919c3431b457fffa65, SHA25628d044c5bdb23b9b4064fd3a33c66b8ec89cd6079aef2697a662929d59b25076. Original775 inside776.zip libfile_15654cfe56bc8191ad1d2eee18c4a637. Keep all754andlater archives; conflicts are identified by hash, not largest number.
+
+Bot-Cast-Integration-Review.html libfile_3d78a644a6348191a306a3ebac70d90c(version2) reconstructs777from775and preserves52viewer,sourceprompts,testevidence. Identity-Choice-Review.html libfile_714544f277288191986b3b69457ce302 reconstructs778from777. Shirt-Correction-Record.html reconstructs779from778and preserves two correctedfullPNGmasters. Character-Expansion-Checkpoint.txt libfile_56499a0fd0a48191bb62bd81df8f8cfe retains complete chronological work. This Brain freezes that fullprepublicationrecord under02_BUILD_CHECKPOINTS; its historicalholdlanguage is superseded above.
+
+Deployment recovery: an interrupted upload and a524288-character tool-output cap affected largefiletransfers. Existinguploads were checked/reused. Remainingcontent was assembled from180000-byte chunks and verified byGitblobhash before atomicrootcommit. No sourcebuild/imagegeneration/tests were restarted. The stagingtree verified all591paths before compare-and-swap update. The current authorization permits finishing this publication; no need to ask owner again.
+
+Read completeH–Ychronologicalhistory andZfrozenrecords on future replacement chats. In this continuing session the previously completedH–Yreading was retained; currentpointer,coordination,registryandactualsource were checked, not a new fullaudit. Do not lose the complete permanent rules below.
+
+Rollback requires an authorized NEWcommit restoring priorruntimepaths while preserving laterBrain/coordination; never force-resetmain. Keep the shared atomic build-number policy. No new buildnumber/ZIP is created by this documentation publication.
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+Explicit successor requirement: Pass both permanent rules verbatim to every future replacement chat.
+

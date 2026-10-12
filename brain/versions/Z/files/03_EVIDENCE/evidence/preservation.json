@@ -1,0 +1,12 @@
+{
+  "originalMemberCount": 429,
+  "changedOriginals": [
+    "asset-loading772.js",
+    "characters077.js",
+    "game060.js",
+    "rook510-avatars.js",
+    "sw060.js"
+  ],
+  "originalCharacterAssetsByteIdentical": true,
+  "original775SHA256": "f562f2353d260901e3d1492385250827db8696239f1b1e230d9bf3f0d3c71896"
+}

@@ -1,0 +1,75 @@
+GRIFFIN HOUSE OF ROOKS — CHARACTER STUDIO077 SIX-CHARACTER EXPANSION / 774
+Owner Jerome Griffin. October12,2026 UTC / October11 EDT. ISOLATED; NOT DEPLOYED; OWNER ANDROID REVIEW PENDING.
+BASELINE: owner-approved773.zip SHA256670dfe970bd9cc27cc4bc3347352044d0f42a467ccfb76f4a6a9edf1893cabac. Original773 is untouched. Hosted Test remains772, whose loading repair owner accepted as resolved for now. Production unchanged. BrainY pointer unchanged. Shared reservation character-six-expansion-fa72cc1b4ad4-20261012.
+AUTHORITY: owner requested low-resolution next-cast samples, explicitly assigned top3 female/bottom3 male, confirmed original cast assignments, then said Continue. Existing full artistic/isolated technical discretion applies. No deployment authorization.
+CAST: Claire03 female, June04 female, Tess06 female, Marcus08 male, Owen09 male, Daniel10 male. Retained Crow/Maya01 female, Cinder/Elena02 female, Dagger/Adrian07 male. Existing female/male trump WAVs unchanged; no image detection. Choice follows identity at any seat. All12 original casting studies remain protected; Sofia05, Rafael11, Samir12 are still future additions.
+ARTWORK: six newly generated transparent three-view sheets, from original saved face/clothing references, using built-in image generation (no CLI). Each sheet left/front/right distinct seated torso views, not mirrored images.18 new512x768 production PNGs rendered from exact thirds via SVG; original1774x887 sheets saved in masters with provenance. New hands comfortably in lap, physically occluded by fixed table, no added foreground hands. Existing Crow right separate foreground arm untouched. Old10production PNGs/TABLE003/audio/cards byte-identical. Full prompt specification in PROMPTS.txt. No unnecessary regeneration of original casting or approved poses.
+INTEGRATION: separate character-library774.js registers six names and avatar IDs in existing roster/favorite controls using existing balanced persona style. Existing X1/default, backup and legacy tactic implementations unchanged. This is cast expansion, not new bot intelligence. Existing array/name lookup powers favorites, no new selection UI. characters077.js gains six explicit pose/voice records; renderer masks/scale/seat layout/status logic preserved from approved773. trump-voice.js gains six explicit identity voice entries; chooser/trigger/rules unchanged. Asset readiness adds18poses+6portrait exports,95startup assets total. First download grows with added artwork; no claim of zero impact or Android speed benchmark. All cached for offline use.
+PORTRAITS: discovered rook510-avatars.js resolves registered IDs to assets/images/avatar-ID.svg. Initial custom avatarSrc override was superseded by that existing renderer and produced broken landscape portraits. Removed override, used six standard expected SVG paths with embedded top-view PNGs. Existing landscape geometry untouched. Initial failed screenshot/selection evidence retained. Tightened tests to require all seat portrait naturalWidth>0; final landscape screenshot inspected. Existing old portraits for original three remain the approved landscape behavior.
+CHANGED: characters077.js, trump-voice.js, asset-loading772.js, index.html, hor-version.js, sw060.js, game060.js(version only). Added character-library774.js and24new assets.417runtime entries; no masters/screenshots/docs in playableZIP. Strict explicit allowlist and SHA256manifest. Source diff included.
+TESTED:27 actual-renderer character-seat combinations (9characters x3), each explicit voice/event verified.4local view indices.6new favorites saved and each entered a real offline game with correct far partner. Five viewports320x568,393x648,412x915,820x1180,915x412 including real loaded landscape portraits. Nine native alpha layers overlap conservative felt-interior mask in ZERO pixels. Actual dealing at1x/3x/MAX:46flights, onecompletion, same cards and anchors.108 color/speed/identity voice cases through existing trigger. Actual human bid and controlled winner Kitty ->6 touch selections ->Confirm ->trump; LAST; tablet status bounds. Seven controlled hand counts10/8/7/6/4/2/1 preserve cast anchors with screenshots. Final harness initially failed because it did not await asynchronous HORRuntimeTruth; corrected the harness (no runtime change) and reran. Final new worker774 coherent;95startup assets online and offline. Browser errors zero in recorded completed tests. ZIP CRC/all417payload hashes verified.
+LIMITATIONS: Chromium mobile/touch simulation, not physical Android. Roster/hand fixtures and controlled winner cases explicitly synthetic. No full new scored match/tournament, live PeerJS, physical audio listening, actual hosted deployment/slownetwork benchmark or owner cache upgrade test. Long766audit still paused38hands/7matches. Sixfavorite test starts actual offline games but freezes bots for inspection. The first landscape fixture falsely passed incomplete assertions; screenshot caught issue, assertion fixed, retest passed. Do not claim failed initial state was valid.
+ANDROID REVIEW: load774.zip with existing loader. Confirm774. Play Offline draws from all9 characters. Settings existing favorite-partner list lets you select Claire/June/Tess/Marcus/Owen/Daniel for next offline game. Check far sleeves/rail, side poses, Thinking/BID/PASSED/Lead, voices when that character chooses trump, portrait/landscape, dealing and shrinking hand. First load includes more assets; repeat/offline should use cached assets when loader supports workers. No cache/data clear or FRESH as repair. Owner pixels win. Do not deploy without approval.
+ROLLBACK: close774 and reopen untouched approved773 ZIP. Hosted Test772 remains untouched; no data migration introduced. Preserve favorite choices; no resets. Development/master/evidence archive separate from runtime. All original12designs and previousstudies remain in original archives; no deletions.
+NEXT: owner Android review774, then scoped corrections if needed. Deployment or Brain successor publication separate authorization. Initial3cast completed and ownerapproved773; this new6cast is pending Android approval. This record and both permanent rules are ready for Master Control synchronization.
+
+PACKAGE
+{
+  "filename": "774.zip",
+  "sha256": "f3ed60eff732fd01b829fa4c50380f4355011fab8eb440bd3a35b796fb48e44b",
+  "bytes": 98824839,
+  "entries": 417,
+  "uncompressed": 112514314
+}
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+Explicit successor requirement: Pass both permanent rules verbatim to every future replacement chat.
+
+

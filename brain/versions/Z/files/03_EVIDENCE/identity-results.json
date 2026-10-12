@@ -1,0 +1,327 @@
+{
+  "errors": [],
+  "table": {
+    "players": [
+      {
+        "id": "solo-getvmgl",
+        "name": "Jerome",
+        "team": 0,
+        "isHost": true,
+        "isBot": false,
+        "seat": 0,
+        "bank": 0,
+        "avatar": "cobalt",
+        "voice": "female",
+        "botStyle": "",
+        "isTempBot": false,
+        "humanStyle": "housePlayer",
+        "humanTitle": "House Player",
+        "humanHabit": "House Player",
+        "humanHow": "Griffin House player.",
+        "humanHands": 0,
+        "careerPublic": null
+      },
+      {
+        "id": "bot-1791793606083-vyg9",
+        "name": "Crow",
+        "team": 1,
+        "isHost": false,
+        "isBot": true,
+        "seat": 1,
+        "bank": 0,
+        "avatar": "crow",
+        "voice": "avatar",
+        "botStyle": "safe",
+        "isTempBot": false,
+        "humanStyle": "",
+        "humanTitle": "",
+        "humanHabit": "",
+        "humanHow": "",
+        "humanHands": 0,
+        "careerPublic": null
+      },
+      {
+        "id": "bot-1791793606086-zp03",
+        "name": "Frost",
+        "team": 0,
+        "isHost": false,
+        "isBot": true,
+        "seat": 2,
+        "bank": 0,
+        "avatar": "frost",
+        "voice": "avatar",
+        "botStyle": "scoreHawk",
+        "isTempBot": false,
+        "humanStyle": "",
+        "humanTitle": "",
+        "humanHabit": "",
+        "humanHow": "",
+        "humanHands": 0,
+        "careerPublic": null
+      },
+      {
+        "id": "bot-1791793606087-k0d1",
+        "name": "Harrier",
+        "team": 1,
+        "isHost": false,
+        "isBot": true,
+        "seat": 3,
+        "bank": 0,
+        "avatar": "harrier",
+        "voice": "avatar",
+        "botStyle": "antiMoon",
+        "isTempBot": false,
+        "humanStyle": "",
+        "humanTitle": "",
+        "humanHabit": "",
+        "humanHow": "",
+        "humanHands": 0,
+        "careerPublic": null
+      }
+    ],
+    "me": "solo-getvmgl"
+  },
+  "voiceCases": [
+    {
+      "bot": false,
+      "v": "avatar",
+      "color": "red",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "avatar",
+      "color": "green",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "avatar",
+      "color": "black",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "avatar",
+      "color": "yellow",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "male",
+      "color": "red",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "male",
+      "color": "green",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "male",
+      "color": "black",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "male",
+      "color": "yellow",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "female",
+      "color": "red",
+      "voice": "female"
+    },
+    {
+      "bot": false,
+      "v": "female",
+      "color": "green",
+      "voice": "female"
+    },
+    {
+      "bot": false,
+      "v": "female",
+      "color": "black",
+      "voice": "female"
+    },
+    {
+      "bot": false,
+      "v": "female",
+      "color": "yellow",
+      "voice": "female"
+    },
+    {
+      "bot": false,
+      "v": "silent",
+      "color": "red",
+      "voice": "silent"
+    },
+    {
+      "bot": false,
+      "v": "silent",
+      "color": "green",
+      "voice": "silent"
+    },
+    {
+      "bot": false,
+      "v": "silent",
+      "color": "black",
+      "voice": "silent"
+    },
+    {
+      "bot": false,
+      "v": "silent",
+      "color": "yellow",
+      "voice": "silent"
+    },
+    {
+      "bot": false,
+      "v": "bad",
+      "color": "red",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "bad",
+      "color": "green",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "bad",
+      "color": "black",
+      "voice": "male"
+    },
+    {
+      "bot": false,
+      "v": "bad",
+      "color": "yellow",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "avatar",
+      "color": "red",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "avatar",
+      "color": "green",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "avatar",
+      "color": "black",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "avatar",
+      "color": "yellow",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "male",
+      "color": "red",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "male",
+      "color": "green",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "male",
+      "color": "black",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "male",
+      "color": "yellow",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "female",
+      "color": "red",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "female",
+      "color": "green",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "female",
+      "color": "black",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "female",
+      "color": "yellow",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "silent",
+      "color": "red",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "silent",
+      "color": "green",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "silent",
+      "color": "black",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "silent",
+      "color": "yellow",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "bad",
+      "color": "red",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "bad",
+      "color": "green",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "bad",
+      "color": "black",
+      "voice": "male"
+    },
+    {
+      "bot": true,
+      "v": "bad",
+      "color": "yellow",
+      "voice": "male"
+    }
+  ],
+  "pass": true
+}

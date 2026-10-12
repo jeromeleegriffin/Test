@@ -1,0 +1,577 @@
+[
+  {
+    "name": "Blaze",
+    "style": "aggressive",
+    "avatar": "blaze",
+    "voice": "female",
+    "design": "W1",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-1922c63d-01d6-4076-bb1b-f42cb4aecb5c.png",
+    "description": "TOP ROW FIRST woman W1 age57: silver-blonde swept pixie, blue eyes, pearl studs, sapphire silk collared blouse",
+    "poses": {
+      "left": "blaze-left.webp",
+      "top": "blaze-top.webp",
+      "right": "blaze-right.webp"
+    }
+  },
+  {
+    "name": "Nix",
+    "style": "tricky",
+    "avatar": "nix",
+    "voice": "female",
+    "design": "W2",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-c5ef80e8-9660-4f3d-a46f-069aa1b2cc2e.png",
+    "description": "TOP ROW SECOND woman W2 age54: Black woman, shoulder-length silver-and-black soft curls, gold hoop earrings, ivory collared blouse",
+    "poses": {
+      "left": "nix-left.webp",
+      "top": "nix-top.webp",
+      "right": "nix-right.webp"
+    }
+  },
+  {
+    "name": "Anchor",
+    "style": "partnerFirst",
+    "avatar": "anchor",
+    "voice": "female",
+    "design": "W3",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-ed09f543-20e8-4367-8ea7-568961211b11.png",
+    "description": "TOP ROW THIRD woman W3 age49: olive skin, chestnut/caramel voluminous shoulder-length hair, emerald blouse",
+    "poses": {
+      "left": "anchor-left.webp",
+      "top": "anchor-top.webp",
+      "right": "anchor-right.webp"
+    }
+  },
+  {
+    "name": "Wager",
+    "style": "bidHappy",
+    "avatar": "wager",
+    "voice": "female",
+    "design": "W4",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-4d435dd0-05a1-4f4d-ab83-156451844702.png",
+    "description": "TOP ROW FOURTH woman W4 age59: East Asian woman, silver-gray wavy chin-length bob, dusty rose blouse, delicate gold pendant",
+    "poses": {
+      "left": "wager-left.webp",
+      "top": "wager-top.webp",
+      "right": "wager-right.webp"
+    }
+  },
+  {
+    "name": "Ember",
+    "style": "balanced",
+    "avatar": "ember",
+    "voice": "female",
+    "design": "W5",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-51791335-461c-4888-8dbc-4c28f8db71d6.png",
+    "description": "TOP ROW FIFTH woman W5 age46: light brown skin, long honey-brown and silver hair over shoulder, burgundy wrap blouse, small gold earrings",
+    "poses": {
+      "left": "ember-left.webp",
+      "top": "ember-top.webp",
+      "right": "ember-right.webp"
+    }
+  },
+  {
+    "name": "Titan",
+    "style": "trumpHeavy",
+    "avatar": "titan",
+    "voice": "male",
+    "design": "M1",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-2b666153-9bb6-4058-baf3-be4a8b321c54.png",
+    "description": "BOTTOM ROW FIRST man M1 age58: fair skin, thick swept charcoal/silver hair, clean shaven, navy blazer over cream open-collar shirt",
+    "poses": {
+      "left": "titan-left.webp",
+      "top": "titan-top.webp",
+      "right": "titan-right.webp"
+    }
+  },
+  {
+    "name": "Pike",
+    "style": "pointHungry",
+    "avatar": "pike",
+    "voice": "male",
+    "design": "M2",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-773e934a-a15d-47c4-b8bb-f5b036762d37.png",
+    "description": "BOTTOM ROW SECOND man M2 age52: Black man, short silver/black curls, neatly trimmed salt-and-pepper beard, charcoal knit jacket and blue open-collar shirt",
+    "poses": {
+      "left": "pike-left.webp",
+      "top": "pike-top.webp",
+      "right": "pike-right.webp"
+    }
+  },
+  {
+    "name": "Drift",
+    "style": "passive",
+    "avatar": "drift",
+    "voice": "male",
+    "design": "M3",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-ebb251d9-2a98-4ef2-b7b8-f401789062ab.png",
+    "description": "BOTTOM ROW THIRD man M3 age56: tan skin, abundant wavy charcoal/silver hair, short gray stubble, textured brown sport coat and forest green open-collar shirt",
+    "poses": {
+      "left": "drift-left.webp",
+      "top": "drift-top.webp",
+      "right": "drift-right.webp"
+    }
+  },
+  {
+    "name": "Dice",
+    "style": "randomish",
+    "avatar": "dice",
+    "voice": "male",
+    "design": "M4",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-a0d9c460-1652-42d2-a1ac-bae63d57788a.png",
+    "description": "BOTTOM ROW FOURTH man M4 age48: East Asian man, swept silver/black side-part hair, clean shaven, navy cardigan and slate open-collar shirt",
+    "poses": {
+      "left": "dice-left.webp",
+      "top": "dice-top.webp",
+      "right": "dice-right.webp"
+    }
+  },
+  {
+    "name": "Hollow",
+    "style": "voidMaker",
+    "avatar": "hollow",
+    "voice": "male",
+    "design": "M5",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-9c7dd464-da43-46b8-9839-4a3837f846ff.png",
+    "description": "BOTTOM ROW FIFTH man M5 age44: fair skin, dark hair with pronounced silver temples, short salt-and-pepper beard, charcoal jacket over aubergine polo",
+    "poses": {
+      "left": "hollow-left.webp",
+      "top": "hollow-top.webp",
+      "right": "hollow-right.webp"
+    }
+  },
+  {
+    "name": "Vex",
+    "style": "ruffHappy",
+    "avatar": "vex",
+    "voice": "female",
+    "design": "YW1",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-b3d3d8f6-97cc-4748-abe2-ff3c42a50018.png",
+    "description": "TOP LEFT woman18, auburn shoulderlength hair, freckles, blue crewneck sweater",
+    "poses": {
+      "left": "vex-left.webp",
+      "top": "vex-top.webp",
+      "right": "vex-right.webp"
+    }
+  },
+  {
+    "name": "Bramble",
+    "style": "leadLong",
+    "avatar": "bramble",
+    "voice": "female",
+    "design": "YW2",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-8bf9894f-225c-4d64-b798-72fdc0c397e2.png",
+    "description": "TOP CENTER Black woman18, shoulderlength curls, terracotta blouse",
+    "poses": {
+      "left": "bramble-left.webp",
+      "top": "bramble-top.webp",
+      "right": "bramble-right.webp"
+    }
+  },
+  {
+    "name": "Emberlyn",
+    "style": "showboat",
+    "avatar": "emberlyn",
+    "voice": "female",
+    "design": "YW3",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-9274c1e0-dabd-405c-abcc-2f62aaa564b6.png",
+    "description": "TOP RIGHT East Asian woman18, dark hair curtain bangs, sage knit top",
+    "poses": {
+      "left": "emberlyn-left.webp",
+      "top": "emberlyn-top.webp",
+      "right": "emberlyn-right.webp"
+    }
+  },
+  {
+    "name": "Frost",
+    "style": "scoreHawk",
+    "avatar": "frost",
+    "voice": "male",
+    "design": "YM1",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-583fbd75-53a7-4294-97a4-be8476cb6050.png",
+    "description": "BOTTOM LEFT man18, wavy lightbrown hair, clean shaven, charcoal henley",
+    "poses": {
+      "left": "frost-left.webp",
+      "top": "frost-top.webp",
+      "right": "frost-right.webp"
+    }
+  },
+  {
+    "name": "Fang",
+    "style": "setDog",
+    "avatar": "fang",
+    "voice": "male",
+    "design": "YM2",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-6557ab3c-8d57-4fa4-925b-ca7416dbf368.png",
+    "description": "BOTTOM CENTER Latino man18, thick dark curls, clean shaven, navy shirt",
+    "poses": {
+      "left": "fang-left.webp",
+      "top": "fang-top.webp",
+      "right": "fang-right.webp"
+    }
+  },
+  {
+    "name": "Halo",
+    "style": "partnerSignal",
+    "avatar": "halo",
+    "voice": "male",
+    "design": "YM3",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-50b5f8cf-287c-4949-9d14-d5ca8723f593.png",
+    "description": "BOTTOM RIGHT Black man18, short coiled hair, clean shaven, green crewneck",
+    "poses": {
+      "left": "halo-left.webp",
+      "top": "halo-top.webp",
+      "right": "halo-right.webp"
+    }
+  },
+  {
+    "name": "Thistle",
+    "style": "sandbag",
+    "avatar": "thistle",
+    "voice": "female",
+    "design": "AW1",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-570a2d5e-ed66-4b4f-b285-cde21b0c1e84.png",
+    "description": "TOP FIRST woman24 short dark curly bob, blue collared blouse",
+    "poses": {
+      "left": "thistle-left.webp",
+      "top": "thistle-top.webp",
+      "right": "thistle-right.webp"
+    }
+  },
+  {
+    "name": "Pebble",
+    "style": "secondHandLow",
+    "avatar": "pebble",
+    "voice": "female",
+    "design": "AW2",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-e6d8cbb8-19da-40f1-a396-8530b188a41d.png",
+    "description": "TOP SECOND South Asian woman29 long dark sidepart hair, rust blouse",
+    "poses": {
+      "left": "pebble-left.webp",
+      "top": "pebble-top.webp",
+      "right": "pebble-right.webp"
+    }
+  },
+  {
+    "name": "Rookery",
+    "style": "trumpDown",
+    "avatar": "rookery",
+    "voice": "female",
+    "design": "AW3",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-6f3f1979-511a-4a3f-b39a-484905b4195a.png",
+    "description": "TOP THIRD Black woman34 closecropped natural hair, plum knit top",
+    "poses": {
+      "left": "rookery-left.webp",
+      "top": "rookery-top.webp",
+      "right": "rookery-right.webp"
+    }
+  },
+  {
+    "name": "Sable",
+    "style": "shortLead",
+    "avatar": "sable",
+    "voice": "female",
+    "design": "AW4",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-b493fc1e-0b18-4a4b-8cda-d13bed58627c.png",
+    "description": "TOP FOURTH Latina woman39 shoulderlength wavy brown hair, teal blouse",
+    "poses": {
+      "left": "sable-left.webp",
+      "top": "sable-top.webp",
+      "right": "sable-right.webp"
+    }
+  },
+  {
+    "name": "Willow",
+    "style": "eggSitter",
+    "avatar": "willow",
+    "voice": "female",
+    "design": "AW5",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-508bb773-ff11-4519-9765-fad23fb8bf88.png",
+    "description": "TOP FIFTH woman44 long ashblonde hair, cream blouse",
+    "poses": {
+      "left": "willow-left.webp",
+      "top": "willow-top.webp",
+      "right": "willow-right.webp"
+    },
+    "priorCreamMaster": "/workspace/scratch/312e2e305ea7/generated_images/exec-dd8b27c6-9304-46b1-9756-9072a2e58a02.png",
+    "shirtColor": "soft sage",
+    "shirtFixBuild": "779"
+  },
+  {
+    "name": "Quill",
+    "style": "countSaver",
+    "avatar": "quill",
+    "voice": "male",
+    "design": "AM1",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-8aaab2e7-9511-4306-b1d5-f35457dd978f.png",
+    "description": "BOTTOM FIRST East Asian man24 swept black hair clean shaven, forestgreen shirt",
+    "poses": {
+      "left": "quill-left.webp",
+      "top": "quill-top.webp",
+      "right": "quill-right.webp"
+    }
+  },
+  {
+    "name": "Moss",
+    "style": "trumpShy",
+    "avatar": "moss",
+    "voice": "male",
+    "design": "AM2",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-e4017cec-e08f-4942-898e-60bc6274681b.png",
+    "description": "BOTTOM SECOND Black man29 short textured hair neat beard navy shirt",
+    "poses": {
+      "left": "moss-left.webp",
+      "top": "moss-top.webp",
+      "right": "moss-right.webp"
+    }
+  },
+  {
+    "name": "Gable",
+    "style": "lastTrick",
+    "avatar": "gable",
+    "voice": "male",
+    "design": "AM3",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-081bf26c-9792-4ad6-ba61-88787a9e8eda.png",
+    "description": "BOTTOM THIRD fair man34 dark auburn hair short beard freckles slate henley",
+    "poses": {
+      "left": "gable-left.webp",
+      "top": "gable-top.webp",
+      "right": "gable-right.webp"
+    }
+  },
+  {
+    "name": "Marrow",
+    "style": "fourteenHold",
+    "avatar": "marrow",
+    "voice": "male",
+    "design": "AM4",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-f09ff539-2e26-470a-86ac-13313c86132f.png",
+    "description": "BOTTOM FOURTH South Asian man39 wavy dark hair light stubble burgundy shirt",
+    "poses": {
+      "left": "marrow-left.webp",
+      "top": "marrow-top.webp",
+      "right": "marrow-right.webp"
+    }
+  },
+  {
+    "name": "Finch",
+    "style": "climbOnly",
+    "avatar": "finch",
+    "voice": "male",
+    "design": "AM5",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-1f4eb8cf-0e9c-4236-af5e-178284476ae6.png",
+    "description": "BOTTOM FIFTH Latino man44 silver temples saltpepper beard charcoal jacket blue shirt",
+    "poses": {
+      "left": "finch-left.webp",
+      "top": "finch-top.webp",
+      "right": "finch-right.webp"
+    }
+  },
+  {
+    "name": "Moth",
+    "style": "thirdHandHigh",
+    "avatar": "moth",
+    "voice": "female",
+    "design": "EW1",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-2df4a733-88d2-4bae-8f4c-e09e3c38476d.png",
+    "description": "TOP FIRST woman33 Black long dark waves sapphire blouse",
+    "poses": {
+      "left": "moth-left.webp",
+      "top": "moth-top.webp",
+      "right": "moth-right.webp"
+    },
+    "originalMaster": "/workspace/scratch/312e2e305ea7/generated_images/exec-ac0f6eca-d775-4537-a64c-17a11622b958.png"
+  },
+  {
+    "name": "Brandy",
+    "style": "widowFiend",
+    "avatar": "brandy",
+    "voice": "female",
+    "design": "EW2",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-19ef2840-98ea-4a72-b7c5-62cba58c3f6e.png",
+    "description": "TOP SECOND woman34 copper-red shoulderlength waves freckles ivory blouse",
+    "poses": {
+      "left": "brandy-left.webp",
+      "top": "brandy-top.webp",
+      "right": "brandy-right.webp"
+    },
+    "originalMaster": "/workspace/scratch/312e2e305ea7/generated_images/exec-8957e3ff-5fc4-4bbd-a0e7-28b0d364d9ea.png",
+    "priorCreamMaster": "/workspace/scratch/312e2e305ea7/generated_images/exec-67835235-9998-4cb3-898d-9f56d5786f89.png",
+    "shirtColor": "dusty blue",
+    "shirtFixBuild": "779"
+  },
+  {
+    "name": "Ivy",
+    "style": "bidOnce",
+    "avatar": "ivy",
+    "voice": "female",
+    "design": "EW3",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-5017d64f-9f8e-49d6-9444-54daf541ac6f.png",
+    "description": "TOP THIRD woman35 South Asian long dark hair plum blouse",
+    "poses": {
+      "left": "ivy-left.webp",
+      "top": "ivy-top.webp",
+      "right": "ivy-right.webp"
+    },
+    "originalMaster": "/workspace/scratch/312e2e305ea7/generated_images/exec-43ab91af-127d-4852-8492-99d2108e889f.png"
+  },
+  {
+    "name": "Shade",
+    "style": "midRank",
+    "avatar": "shade",
+    "voice": "female",
+    "design": "EW4",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-bcdcdbc7-98a5-452e-9838-630b79185329.png",
+    "description": "TOP FOURTH woman36 East Asian sleek chinlength black bob emerald blouse",
+    "poses": {
+      "left": "shade-left.webp",
+      "top": "shade-top.webp",
+      "right": "shade-right.webp"
+    }
+  },
+  {
+    "name": "Spark",
+    "style": "moonDreamer",
+    "avatar": "spark",
+    "voice": "female",
+    "design": "EW5",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-260df234-3500-4699-903c-13a9b0c13a39.png",
+    "description": "TOP FIFTH woman37 Latina chestnut curls burgundy blouse",
+    "poses": {
+      "left": "spark-left.webp",
+      "top": "spark-top.webp",
+      "right": "spark-right.webp"
+    }
+  },
+  {
+    "name": "Hearth",
+    "style": "passFirst",
+    "avatar": "hearth",
+    "voice": "male",
+    "design": "EM1",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-fb1bad90-0b3b-44ca-aa68-e30d21a82567.png",
+    "description": "BOTTOM FIRST man33 Black short curls precise beard charcoal sportcoat creamshirt",
+    "poses": {
+      "left": "hearth-left.webp",
+      "top": "hearth-top.webp",
+      "right": "hearth-right.webp"
+    },
+    "originalMaster": "/workspace/scratch/312e2e305ea7/generated_images/exec-2f7d5f80-ff91-4852-b8b4-e5903b7176a7.png"
+  },
+  {
+    "name": "Grit",
+    "style": "nestDump",
+    "avatar": "grit",
+    "voice": "male",
+    "design": "EM2",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-fd051abc-d8f3-4db0-b204-ccda783d53a9.png",
+    "description": "BOTTOM SECOND man34 fair swept darkblond hair clean shaven navyshirt",
+    "poses": {
+      "left": "grit-left.webp",
+      "top": "grit-top.webp",
+      "right": "grit-right.webp"
+    }
+  },
+  {
+    "name": "Copper",
+    "style": "fiveHunter",
+    "avatar": "copper",
+    "voice": "male",
+    "design": "EM3",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-9e769c42-62f4-4458-b67d-4436e374139e.png",
+    "description": "BOTTOM THIRD man35 South Asian darkwaves stubble green shirt",
+    "poses": {
+      "left": "copper-left.webp",
+      "top": "copper-top.webp",
+      "right": "copper-right.webp"
+    }
+  },
+  {
+    "name": "Flint",
+    "style": "honorCash",
+    "avatar": "flint",
+    "voice": "male",
+    "design": "EM4",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-9e7a8c5b-55c6-4cda-80d8-1e51c324dd8f.png",
+    "description": "BOTTOM FOURTH man36 East Asian sweptblackhair clean shaven blackjacket slateshirt",
+    "poses": {
+      "left": "flint-left.webp",
+      "top": "flint-top.webp",
+      "right": "flint-right.webp"
+    }
+  },
+  {
+    "name": "Barrel",
+    "style": "quietDealer",
+    "avatar": "barrel",
+    "voice": "male",
+    "design": "EM5",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-231a7873-144b-4596-a41c-321b87fdd7fa.png",
+    "description": "BOTTOM FIFTH man37 olive skin darkcurls shortbeard subtlesilver temples aubergineshirt",
+    "poses": {
+      "left": "barrel-left.webp",
+      "top": "barrel-top.webp",
+      "right": "barrel-right.webp"
+    }
+  },
+  {
+    "name": "Nettle",
+    "style": "colorStubborn",
+    "avatar": "nettle",
+    "voice": "female",
+    "design": "Elder-nettle",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-aee7b3d3-a3ab-4c68-89ae-28c9194dece6.png",
+    "description": "TOP LEFT NETTLE woman69 silver waved bob plum blouse pearl earrings",
+    "poses": {
+      "left": "nettle-left.webp",
+      "top": "nettle-top.webp",
+      "right": "nettle-right.webp"
+    },
+    "exportMode": "contain"
+  },
+  {
+    "name": "Ash",
+    "style": "lastBidder",
+    "avatar": "ash",
+    "voice": "female",
+    "design": "Elder-ash",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-fd5ece32-2fea-4f01-b7f5-b28aa43c7daa.png",
+    "description": "TOP RIGHT ASH woman72 Black silver swept-up curls teal blouse gold earrings",
+    "poses": {
+      "left": "ash-left.webp",
+      "top": "ash-top.webp",
+      "right": "ash-right.webp"
+    },
+    "exportMode": "contain"
+  },
+  {
+    "name": "Cobalt",
+    "style": "leftHandVoid",
+    "avatar": "cobalt",
+    "voice": "male",
+    "design": "Elder-cobalt",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-8dd0859c-6906-4b1d-bdac-78b4d010b56d.png",
+    "description": "BOTTOM LEFT COBALT man71 silver sidepart clean shaven navy sportcoat mutedblue shirt",
+    "poses": {
+      "left": "cobalt-left.webp",
+      "top": "cobalt-top.webp",
+      "right": "cobalt-right.webp"
+    },
+    "exportMode": "contain"
+  },
+  {
+    "name": "Harrier",
+    "style": "antiMoon",
+    "avatar": "harrier",
+    "voice": "male",
+    "design": "Elder-harrier",
+    "master": "/workspace/scratch/312e2e305ea7/generated_images/exec-195bf042-97a2-43de-9ec1-60dc298fd04c.png",
+    "description": "BOTTOM RIGHT HARRIER man73 Black silver cropped hair silverbeard brown textured coat burgundy shirt",
+    "poses": {
+      "left": "harrier-left.webp",
+      "top": "harrier-top.webp",
+      "right": "harrier-right.webp"
+    },
+    "exportMode": "contain",
+    "previousMaster": "/workspace/scratch/312e2e305ea7/generated_images/exec-ba385020-ea7a-4745-a4a1-462525c5fbd5.png"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "hostAcceptsClientRequest": true,
+  "hostSnapshotAndStateDelivered": true,
+  "canonicalClientAvatar": "nix",
+  "packetTypes": [
+    "players",
+    "state"
+  ],
+  "scope": "Two isolated Chromium pages; transport loopback using real handlers, not live PeerJS"
+}

@@ -1,0 +1,298 @@
+779 FINAL DELIVERY: 779.zip libfile_5cb821d9107481919fce1e03a1f22c66; correction record libfile_ed8168af83e0819186dc88ac67d7da81. Numbering-only delivery commit ccb902b30d9e759634e2b8921276a09a4a5f005d verified by remote readback. Owner waived appearance preview; no claim of owner-tested779. Visible cream-shirt correction complete. No deployment or MasterBrain advance.
+
+BUILD779 — CREAM-SHIRT CORRECTIONS COMPLETE AT GAME SCALE — OCTOBER12,2026
+Owner explicitly authorized: “Go ahead and correct those, and I don't need to see it. Just fix it.” Accepted proposed color change Willow softsage/Brandy dustyblue; no appearance approval gate. This is correction authorization, not owner inspection of779.
+Built-in imagegen edited the two exact existing three-pose masters. Willow exec-508bb773-ff11-4519-9765-fad23fb8bf88.png; Brandy exec-19ef2840-98ea-4a72-b7c5-62cba58c3f6e.png. Faces/hair/body proportions/pose directions retained; cream garments replaced, outlines regenerated. Mechanical browsercanvas export used original third-sheet framing/512x768WebP/.9quality and192portraits. Eight exported assets369484bytes. Original masters and failed attempts retained; assignments.json now references corrected masters and keeps priorCreamMaster. Prompts/full newPNGmasters embedded in Shirt-Correction-Record.html source delta; built-in tool, no external image API or manual Python image edits.
+All six new views tested and visually inspected against actual dark game room/table at393x693DPR2. Previous pale creamshirt flakes absent at displayed game scale. Natural outlines, original scale/pose/rail masking preserved. OriginalCrow used as control. Do not claim mathematically perfect alpha at arbitrary enlargement; the visible in-game defect is corrected. Earlier unresolved-cream-shirt notes below are historical. No need to ask owner for another appearance review.
+Exact778source retained. Candidate779changes only willow/brandy left/top/right/portraitWebP and fourversion files(index.html,game060.js APP_VERSION only,hor-version.js,sw060.js). All other files/assets byte-identical; no gameplay/voice/AI/loading/geometry changes.52cast/156views, entry avatar/voice chooser and duplicate protection preserved.591runtime files. Coherent779worker;0bodyprecache; correctedBrandyvisitedfileavailableoffline.591ZIP CRC/hash checks and591restoredfilebytecomparisons passed. No physicalAndroid/livePeerJS/fullmatch/installedcacheupgrade certification.
+Current BrainY/registry reread; same continuing session prior completeH–Yandcoordinationreading retained.779atomicnumberreservation validated. Only numbering records remote; no runtime upload, productionchange orMasterBrainadvance. Hold remains. Long766audit still paused38hands/7matches. Source778SHAf69b0eed0f6e7a1f9075ecee0e5cf33bd4a66b698b431f2d0dd082efc125682b. Package: {"filename": "779.zip", "bytes": 112833516, "sha256": "94963b99f7e8bee5b9714f39e01e25cc2dfcd25c2bf1dd0c6861c48fbb233c4d", "entries": 591, "crc": "PASS", "manifestChecks": 591}
+Durable Shirt-Correction-Record.html contains12-filedelta from778,2newfullmasters,prompts,evidence and restore/export/test sources. Earlier777/778reviews untouched. Current runtime is779; original777/778remain rollback. No newcharacter generation or deferred64human seating work; separateJerome/voicepackages untouched. Publication andMasterBrainremainONHOLD.
+
+OLDER RECORDS FOLLOW; UNFIXED CREAM-SHIRT NOTES BELOW ARE HISTORICAL.
+
+778 FINAL DELIVERY:777 reviewed-appearance feedback retained.778.zip saved as libfile_86c09c362aa08191a4d5d76ce93ca633, file_000000004d4881f9a712a87205d8d926; review libfile_714544f277288191986b3b69457ce302. Numbering-only delivery commit 41a40bbf25b1fa9e7d3252fa0132a3a51dcf070a readback verified. Pending owner Android review. No deployment or Master Brain advance.
+
+BUILD778 IDENTITY CHOOSER — OCTOBER12,2026
+Owner feedback on777: “It's hard for me to check every one of them, but all the ones I looked at look great, so let's continue.” Record acceptance of reviewed appearances and authorization to proceed, not individual inspection of52characters or physical-device certification.777remains exact rollback; its artwork is unchanged in778. No claim that every777runtime feature was explicitly accepted.
+Continued previously authorized front-name-page avatar/voice choice on exact777. Added optional selector for52finished human avatars beside “What shall we call you?” on main and invite entry pages. Uses existing portraits, no deferred64human designs, new images or new voices. Play now needs no extra step. Existing saved avatars retained; fresh random choice uses current bot-human pool. Voice: Match avatar / Male / Female / Silent, existing red-trump clip preview, selection persisted. Preview stops on entry/pagehide/hidden/change. Humanvoice carried through solo,host,join,reconnect,reclaim and public/spectator snapshots. Bot voice casting unaffected; silent does not announce.777human-priority collision rule preserved.
+Changes from777:game060.js,trump-voice.js,index.html,hor-version.js,sw060.js plus identity-choice.js/.css. All assets byte-identical, including full52cast/156views, card/audio/X1 assets. No AI/gameplay/rail/cardholder/BidDock/LAST geometry edits.591runtime files, no handoff/test bloat. Added UI is scoped to entry screens/dialog only. Existing host-options avatar chooser unchanged.
+Tests:52choices, avatar/voice persistence after reload, actual solo entry with chosenCobalt/female, unique table avatars;40trump voice cases across human/bot,5settings incl invalid,4colors;320/393/768viewport overflow and modal close checks; real join/resync handlers with mock transport checked collision and silent voice propagation; coherent778worker/no bodyprecache/visited bodyoffline. Phone393x693 actual pixels inspected. All591ZIP CRC/hash comparisons pass; exact777+embedded delta reconstructs all591files byte-identical. No physicalAndroid/livePeerJS/fullmatch/audio-listening/installedcacheupgrade certification. Long766audit stays paused at38hands/7matches.
+Current remote BrainY and coordination MASTER_CONTROL/BUILD_NUMBERING/registry reread; initial mistaken rootMASTER_CONTROL404 resolved to coordination/MASTER_CONTROL.md. Prior foundationalH–Ycomplete reading reused from this continuing session.777review recorded in registry separately from full acceptance.778atomically reserved commitc8d1f0729ed42bd8f2c0abb84f10ebfc4e082102, reservationIdentry-identity-312e2e305ea7-20261012; source777SHA28d044c5bdb23b9b4064fd3a33c66b8ec89cd6079aef2697a662929d59b25076. Only numbering/limitedreview records written remotely. BrainY, approvedWorkingBuild775,testhost772,production untouched. Publication/MasterBrain HOLD unchanged.
+Package: {"filename": "778.zip", "bytes": 112849221, "sha256": "f69b0eed0f6e7a1f9075ecee0e5cf33bd4a66b698b431f2d0dd082efc125682b", "entries": 591, "crc": "PASS", "manifestChecks": 591}
+Identity-Choice-Review.html embeds exact7-file delta, restore script and local test evidence/sources. Bot-Cast-Integration-Review.html remains777version2 unchanged. Original recovery776,777,full source art and prior evidence retained. Two cream-shirt edge defects still open; no regeneration this turn. Human-only64asset production and separate Jerome/voice-library packages not integrated. Future work: owner review of778entry flow; don't claim the other voice-production chat was contacted. No automatic deployment or MasterBrain update.
+
+OLDER RECORDS FOLLOW; PRIOR FRONT-CHOOSER-DEFERRED STATEMENTS ARE HISTORICAL.
+
+DELIVERY RECEIPT:777.zip saved as libfile_6c43921d4f1081919c3431b457fffa65 (file_00000000a6f481fda403aea980fa3fad); filename777.zip,112846092bytes,SHA25628d044c5bdb23b9b4064fd3a33c66b8ec89cd6079aef2697a662929d59b25076. Numbering-only delivery commit320eac07c9bdd053725216cd786a2e5a2f2b5490; reservation readback verified DELIVERED_PENDING_OWNER_ANDROID_REVIEW. Master Brain remainsY; approved775; hosted772. Review saved version2. Publication remains on hold.
+
+BUILD777 ANDROID CANDIDATE — OCTOBER12,2026
+Latest owner: “All right, continue” approved the proposed artwork cleanup, collision protection and numbered Android ZIP. Continued existing52-bot draft, not restarted. Build777 reserved atomically in Test/main registry and coordination/build-reservations/777.json, reservationId bot-cast52-android-312e2e305ea7-20261012; commit db8351f12cb1288d3086c44c338e605eca369a01. Publication and Master Brain remain ON HOLD; approvedWorkingBuild stays775. Test-site772 and production untouched. Numbering records are the only remote changes.
+777 has52 fixed bot identities,156 seat views.40 additional identities add160WebP assets totaling7,820,608bytes;64human candidates deferred, none added to runtime. Original429files preserved; seven changed runtime files: asset-loading772.js,characters077.js,game060.js,rook510-avatars.js,index.html,hor-version.js,sw060.js. All original art/audio including embedded bird audio byte-identical. No AI/rules/cards/geometry/LAST changes.589runtime files; no handoff/test/history bloat in ZIP.
+Host-authoritative identity reconciliation covers snapshots and avatar requests. Human priority replaces conflicting bot with a free complete persona, keeping playerid/seat/team/bank/hands/score/turn/reconnect fields. Other-human occupied avatar rejected; spoofed sender and invalid avatar rejected. Avatar-click path sends client requests to hostConnection rather than broadcast-to-guests; no optimistic map mutation. Existing avatar grid is host-options UI; new front-landing avatar/voice chooser remains deferred. This patch does not claim that UI is implemented.
+Tests:156actual-renderer seat/voice combinations;52bot claims with gameplay-state comparison; invalid/spoof/human collision rejection; two-page host/client real-handler transport loopback; lazy loading0landing body requests and at most4first-table; relative seats; landscape/legacy fallback; failed-load retry/stale completion; original and expanded favorite partners.777page/script/marker/worker coherent;0body precache; visited body offline retrieval.589ZIP CRC/hash comparisons pass. Delta restore reproduced589runtime files byte-for-byte. Browser emulation only: no physical Android, live PeerJS, installed-cache upgrade, subjective audio listening or full-match certification. Long tournament remains paused76638hands/7matches.
+Two cream-shirt edge defects remain: Willow/AW5 and Brandy/EW2. Four more imagegen edits/regenerations were inspected and rejected for persistent white flecks; existing approved/integrated masters retained, no failed replacement shipped. Prompts/paths recorded in review source delta cleanup777; generated originals retained. Not falsely declared polished. Initial network UI harness sought a grid that solo mode had not populated; corrected to real message-handler loopback, no false UI pass. An intermediate broad version replacement touched embedded base64; caught in diff, reset, reapplied only APP_VERSION, audio byte equality verified before packaging.
+777 package metadata: {"filename": "777.zip", "bytes": 112846092, "sha256": "28d044c5bdb23b9b4064fd3a33c66b8ec89cd6079aef2697a662929d59b25076", "entries": 589, "crc": "PASS", "manifestChecks": 589}
+Self-contained Bot-Cast-Integration-Review.html updated with167-file delta,52viewer, old/new evidence, source scripts and prompt history. Exact775 remains inside776. Current candidate is pending owner Android review; appearance approval does not certify777runtime. Prior artifact versions and historical test evidence preserved.
+
+OLDER RECORDS FOLLOW; NO-777/NO-REMOTE-WRITE STATEMENTS BELOW ARE HISTORICAL.
+
+CURRENT COMPLETED BOT CAST — OCTOBER12,2026
+Owner explicitly approved the four new elderly bot appearances and authorized proceeding with integration without routine interruptions: "I approve all this. Let's get them in the game... let's go as far as you can go." Preserve this as appearance/source-work approval, not a claim of later physicalAndroid certification. Earlier elderly human-player candidates remain human-only; no reassignment.
+All52registered bots now have fixed unique human character art and left/far-top/right seated views:156total, plus Crow's separate foreground arm. Added Nettle69/Ash72/Cobalt71/Harrier73 from approved board exec-2f842331-e24a-483b-bf38-4aa03b548678.png. These are newly generated identities, not copies of the earlier four human candidates. Bot names/styles/voice genders retained. No roster additions or deletions. The64human-only candidates remain deferred.
+Four initial pose sheets generated and visually inspected. Harrier's first sheet made him too small at the table; rejected that framing only and generated closer upright seated views. Final Harrier exec-195bf042-97a2-43de-9ec1-60dc298fd04c.png. All four exported with aspect-preserving alpha-bounds placement into512x768WebP; no stretched anatomy. Three views+matching192squareportrait perbot. New16assets788,692bytes. Total40expansion identities:120seatedWebP+40portraits7,820,608bytes. Original12PNG art unchanged.
+Actual Chromium153 renderer: full156identity/seat/voice check passed for52bots; finalHarrierframing then verified with all12elder-seat cases and actual table-pixel inspection. Original/current names,styles,voice genders, relative seating, landscape, fallback, human-priority addBot collision checks passed. Existing48cast loading/favorite/retry/service-worker checks remain preserved; no loader/AI/geometry code changed in this four-character addition. Harrier corrected scale visually accepted by assistant, not falsely attributed to owner. No physicalAndroid/live multiplayer/fulltournament certification. Cream-clothing fringe notes for Willow/Brandy remain open; these are prior artwork details, not four-new-bot gaps.
+Source: same isolated775draft, no restart. Relative to prior48draft only characters077.js and rook510-avatars.js changed, plus16newWebPassets. Compared with exact775 all429original files remain, only same5JavaScript files differ;160newassets;589runtimefiles total. Table/rail masks, BidDock/holder/connector,LAST,cardart,audio,AI and landscape preserved. Failed image and pending human entry/mid-game avatar-collision validation notes below remain applicable.
+Remote brain/current.json and MASTER_CONTROL.md reread this turn; pointer stillY. Complete foundationalH-throughY reading from this continuing session reused; Y and operating rules reread. No remote writes or shared publication. Master Brain, production and test-site publication stay on hold. No gameZIP or release number allocated. Draft worker775-bot-draft remains intentionally non-release-coherent; release coordination requires authorization.
+Updated durable Bot-Cast-Integration-Review.html includes52-character viewer,165-file delta (same5JS+160assets), source prompts/selectedmaster paths, evidence and restore script. Reconstructed from exact775 into a fresh directory and verified all589files byte-for-byte. Prior48review retained as prior file version. Full original775/776 and earlier continuation/test evidence preserved. This continuation text is not a Master Brain advance.
+Final four assignment/master sources:
+Nettle | Elder-nettle | female | colorStubborn | /workspace/scratch/312e2e305ea7/generated_images/exec-aee7b3d3-a3ab-4c68-89ae-28c9194dece6.png
+Ash | Elder-ash | female | lastBidder | /workspace/scratch/312e2e305ea7/generated_images/exec-fd5ece32-2fea-4f01-b7f5-b28aa43c7daa.png
+Cobalt | Elder-cobalt | male | leftHandVoid | /workspace/scratch/312e2e305ea7/generated_images/exec-8dd0859c-6906-4b1d-bdac-78b4d010b56d.png
+Harrier | Elder-harrier | male | antiMoon | /workspace/scratch/312e2e305ea7/generated_images/exec-195bf042-97a2-43de-9ec1-60dc298fd04c.png
+
+OLDER RECORDS FOLLOW; FOUR-BOT-GAP STATEMENTS BELOW ARE NOW HISTORICAL.
+
+CURRENT BOT INTEGRATION CHECKPOINT — OCTOBER12,2026
+Owner freezes new identities and directs: lock assigned bot characters into game now; preserve human designs for later, possible bot-art reuse for humans only if later decided. This supersedes generating the rest of human seating now. No human-only candidates were moved into bot pool.
+Recovered exact775 from776; read current BrainY, operating/coordination records,774/773scope and remote CURRENT read-only before development. Remote pointer remainsY,775 owner-approved, testsite772. No remote writes, deployment, Master Brain advancement, new release number or game ZIP. This file is a continuation record, NOT a Brain revision.
+Isolated draft: bot-integration/candidate.48designs integrated into52registered bots:12originals plus36new.144seated views total plus originalCrow foreground arm. Four bots Nettle,Cobalt,Ash,Harrier retain original legacy portraits and need four more approved seated identities; do not borrow the four elderly human candidates. All64human-only appearance candidates retained/deferred, no seated production or runtime bundle for those64.
+New36 are108seated512x768WebP+36matching192x192portraitWebP, total7,031,916bytes (~7.03MB). Original12artwork byte-identical, all429original files retained; only asset-loading772.js,characters077.js,game060.js,rook510-avatars.js,sw060.js modified. New assets144;573runtime files total. Gameplay AI/rules, bot styles/names/voice genders, table geometry/rail masks, audio, cards, Bid Dock/holder/LAST/landscape protections preserved. Full original776 remains authoritative recovery/history.
+Remaining10mid30s seated sheets generated with built-in image tool. EW1/EW2/EW3/EM1leftposes corrected by additional generation, not mirrored. Mechanical browser-canvas crop/resize/WebP exports preserve genuine alpha and source masters. Original candidate masters retained. AW5/Willow and EW2/Brandy cream clothing retain fine pale fringe in source artwork despite retries; visible in large artwork inspection, less apparent at game scale. Integrated for review, not silently declared polished. Failed AW5 cleanup exec-c0657558-9bbf-4a19-889b-6e71bf6d8c48.png not selected.
+Loader now requests only visible seat pose plus any foreground; landing requests0body images, first table at most3bodies+Crowarm. Legacy portrait fallback until image decode; failed requests retry on click/online; stale completions cannot reassign a seat. SW no longer precaches body art, caches visited assets on demand. Fully offline unseen bodies fall back to portraits until connection/retry. Draft SW build/cache775-bot-draft intentionally differs from original775 release markers; HORRuntimeTruth.coherent=false deliberately. Release coherence/version coordination remains required before any authorized publication.
+addBot collision protection now selects another whole persona if a human occupies chosen avatar, preserving human priority and fixed bot identities. Favorite conflict also yields to human avatar. Tested default-add and favorite paths. Do NOT overclaim all remote late-join/mid-game human avatar changes: that broader collision validation and planned front-page name/avatar/voice selection remain future release work.
+Verification: Chromium153 actual isolated renderer,144identity/seat/voice combinations passed;52roster entries;4relative local views;landscape/legacy fallback; originalCrow and expandedBrandy favorite; failed body retry; stale load protection; SW active/no body precache/visited-body offline cache.0page errors in full144check. Representative full-table views visually inspected including older cast,cream clothing,mid30s and originalcast. No physicalAndroid,live multiplayer or tournament certification claimed. Existing tournament audit pause unchanged.
+Durable deliverable output/Bot-Cast-Integration-Review.html is self-contained48-character art viewer, complete149-file source delta (5changedJS+144newassets), SHA256 hashes, assignment manifest,prompts,test results,and restore script. It reconstructs a new local573-file draft from exact775.zip. Reconstruction verified every file byte-for-byte. Original775ZIP SHA256 f562f2353d260901e3d1492385250827db8696239f1b1e230d9bf3f0d3c71896. No gameZIP created. Browser screenshots used locally for inspection; numerical evidence/test sources embedded. Prior supplied776test evidence untouched.
+Fixed assignments for36new designs (mapping persists; do not reshuffle on resume):
+Blaze | W1 | female | style:aggressive | master:/workspace/scratch/312e2e305ea7/generated_images/exec-1922c63d-01d6-4076-bb1b-f42cb4aecb5c.png
+Nix | W2 | female | style:tricky | master:/workspace/scratch/312e2e305ea7/generated_images/exec-c5ef80e8-9660-4f3d-a46f-069aa1b2cc2e.png
+Anchor | W3 | female | style:partnerFirst | master:/workspace/scratch/312e2e305ea7/generated_images/exec-ed09f543-20e8-4367-8ea7-568961211b11.png
+Wager | W4 | female | style:bidHappy | master:/workspace/scratch/312e2e305ea7/generated_images/exec-4d435dd0-05a1-4f4d-ab83-156451844702.png
+Ember | W5 | female | style:balanced | master:/workspace/scratch/312e2e305ea7/generated_images/exec-51791335-461c-4888-8dbc-4c28f8db71d6.png
+Titan | M1 | male | style:trumpHeavy | master:/workspace/scratch/312e2e305ea7/generated_images/exec-2b666153-9bb6-4058-baf3-be4a8b321c54.png
+Pike | M2 | male | style:pointHungry | master:/workspace/scratch/312e2e305ea7/generated_images/exec-773e934a-a15d-47c4-b8bb-f5b036762d37.png
+Drift | M3 | male | style:passive | master:/workspace/scratch/312e2e305ea7/generated_images/exec-ebb251d9-2a98-4ef2-b7b8-f401789062ab.png
+Dice | M4 | male | style:randomish | master:/workspace/scratch/312e2e305ea7/generated_images/exec-a0d9c460-1652-42d2-a1ac-bae63d57788a.png
+Hollow | M5 | male | style:voidMaker | master:/workspace/scratch/312e2e305ea7/generated_images/exec-9c7dd464-da43-46b8-9839-4a3837f846ff.png
+Vex | YW1 | female | style:ruffHappy | master:/workspace/scratch/312e2e305ea7/generated_images/exec-b3d3d8f6-97cc-4748-abe2-ff3c42a50018.png
+Bramble | YW2 | female | style:leadLong | master:/workspace/scratch/312e2e305ea7/generated_images/exec-8bf9894f-225c-4d64-b798-72fdc0c397e2.png
+Emberlyn | YW3 | female | style:showboat | master:/workspace/scratch/312e2e305ea7/generated_images/exec-9274c1e0-dabd-405c-abcc-2f62aaa564b6.png
+Frost | YM1 | male | style:scoreHawk | master:/workspace/scratch/312e2e305ea7/generated_images/exec-583fbd75-53a7-4294-97a4-be8476cb6050.png
+Fang | YM2 | male | style:setDog | master:/workspace/scratch/312e2e305ea7/generated_images/exec-6557ab3c-8d57-4fa4-925b-ca7416dbf368.png
+Halo | YM3 | male | style:partnerSignal | master:/workspace/scratch/312e2e305ea7/generated_images/exec-50b5f8cf-287c-4949-9d14-d5ca8723f593.png
+Thistle | AW1 | female | style:sandbag | master:/workspace/scratch/312e2e305ea7/generated_images/exec-570a2d5e-ed66-4b4f-b285-cde21b0c1e84.png
+Pebble | AW2 | female | style:secondHandLow | master:/workspace/scratch/312e2e305ea7/generated_images/exec-e6d8cbb8-19da-40f1-a396-8530b188a41d.png
+Rookery | AW3 | female | style:trumpDown | master:/workspace/scratch/312e2e305ea7/generated_images/exec-6f3f1979-511a-4a3f-b39a-484905b4195a.png
+Sable | AW4 | female | style:shortLead | master:/workspace/scratch/312e2e305ea7/generated_images/exec-b493fc1e-0b18-4a4b-8cda-d13bed58627c.png
+Willow | AW5 | female | style:eggSitter | master:/workspace/scratch/312e2e305ea7/generated_images/exec-dd8b27c6-9304-46b1-9756-9072a2e58a02.png
+Quill | AM1 | male | style:countSaver | master:/workspace/scratch/312e2e305ea7/generated_images/exec-8aaab2e7-9511-4306-b1d5-f35457dd978f.png
+Moss | AM2 | male | style:trumpShy | master:/workspace/scratch/312e2e305ea7/generated_images/exec-e4017cec-e08f-4942-898e-60bc6274681b.png
+Gable | AM3 | male | style:lastTrick | master:/workspace/scratch/312e2e305ea7/generated_images/exec-081bf26c-9792-4ad6-ba61-88787a9e8eda.png
+Marrow | AM4 | male | style:fourteenHold | master:/workspace/scratch/312e2e305ea7/generated_images/exec-f09ff539-2e26-470a-86ac-13313c86132f.png
+Finch | AM5 | male | style:climbOnly | master:/workspace/scratch/312e2e305ea7/generated_images/exec-1f4eb8cf-0e9c-4236-af5e-178284476ae6.png
+Moth | EW1 | female | style:thirdHandHigh | master:/workspace/scratch/312e2e305ea7/generated_images/exec-2df4a733-88d2-4bae-8f4c-e09e3c38476d.png
+Brandy | EW2 | female | style:widowFiend | master:/workspace/scratch/312e2e305ea7/generated_images/exec-67835235-9998-4cb3-898d-9f56d5786f89.png
+Ivy | EW3 | female | style:bidOnce | master:/workspace/scratch/312e2e305ea7/generated_images/exec-5017d64f-9f8e-49d6-9444-54daf541ac6f.png
+Shade | EW4 | female | style:midRank | master:/workspace/scratch/312e2e305ea7/generated_images/exec-bcdcdbc7-98a5-452e-9838-630b79185329.png
+Spark | EW5 | female | style:moonDreamer | master:/workspace/scratch/312e2e305ea7/generated_images/exec-260df234-3500-4699-903c-13a9b0c13a39.png
+Hearth | EM1 | male | style:passFirst | master:/workspace/scratch/312e2e305ea7/generated_images/exec-fb1bad90-0b3b-44ca-aa68-e30d21a82567.png
+Grit | EM2 | male | style:nestDump | master:/workspace/scratch/312e2e305ea7/generated_images/exec-fd051abc-d8f3-4db0-b204-ccda783d53a9.png
+Copper | EM3 | male | style:fiveHunter | master:/workspace/scratch/312e2e305ea7/generated_images/exec-9e769c42-62f4-4458-b67d-4436e374139e.png
+Flint | EM4 | male | style:honorCash | master:/workspace/scratch/312e2e305ea7/generated_images/exec-9e7a8c5b-55c6-4cda-80d8-1e51c324dd8f.png
+Barrel | EM5 | male | style:quietDealer | master:/workspace/scratch/312e2e305ea7/generated_images/exec-231a7873-144b-4596-a41c-321b87fdd7fa.png
+
+EARLIER RECORDS FOLLOW; CURRENT BOT-ONLY PRIORITY AND HUMAN DEFERRAL ABOVE TAKE PRECEDENCE.
+
+LATEST REQUEST — TWENTY MORE HUMAN APPEARANCE CANDIDATES
+Owner requests male/female for each of ten suggested background groups. Interpretation stated before generation: one pair each Filipino,Vietnamese,Thai,Samoan,Native Hawaiian,Oromo Ethiopian,Somali,Yoruba Nigerian,Cherokee,Jamaican. Alternative subgroups listed in brainstorm were choices, not additional mandatory pairs. These are fictional intended backgrounds, not claims inferred from facial appearance.
+BoardI exec-8d5dc08a-9035-489a-a0e8-b0ec01f6bc1e.png: HW23 Filipino29/HM23 Filipino41;HW24 Vietnamese46/HM24 Vietnamese28;HW25 Thai35/HM25 Thai60;HW26 Samoan54/HM26 Samoan33;HW27 Native Hawaiian63/HM27 Native Hawaiian50.
+BoardII exec-4be99b21-0a40-411b-aea2-62707794a1aa.png: HW28 Oromo38/HM28 Oromo55;HW29 Somali26/HM29 Somali44;HW30 Yoruba58/HM30 Yoruba31;HW31 Cherokee47/HM31 Cherokee62;HW32 Jamaican66/HM32 Jamaican36.
+Both generated and visually inspected,10portraits each, women top men bottom. Owner review pending. Human-only collection now64appearance candidates(32women32men). User expansion supersedes old40target; do not discard or move surplus to bot pool. Bot pool remains48designs for52bots, four still required. No seated artwork yet for human-only candidates, no runtime integration or test claim. Publication and Master Brain holds unchanged.
+
+LATEST HUMAN BATCH — TEN VARIED AGES/BACKGROUNDS
+Owner requests5women5men random adult ages and ethnic backgrounds not explicitly used before. New appearance board exec-f5b9217f-e560-4abf-aa19-c62dda23ad76.png generated and displayed. Fictional casting specifications, not ethnicity inferred from appearance: HW18 Maori27,HW19 Armenian42,HW20 Sami60,HW21 Malagasy35,HW22 Fijian53; HM18 Kazakh24,HM19 Bhutanese47,HM20 Inuit66,HM21 Romani32,HM22 Papuan58. Contemporary ordinary clothing, no stereotyped cultural props. Exact new identities visually proposed; owner review pending.
+Human-only collection now44appearance candidates (22women22men),4above prior40target as permitted by new ten-person request. Do not silently drop4or reassign them to bots. Bot pool still48designs for52bots,4bot designs still needed. Prior human boards and seated work status preserved. No human candidate seating production, game integration, deployment or Master Brain update in this step.
+
+Latest mature human board generated and displayed: exec-a24d0320-2a93-43db-a6f5-c911e78edbf2.png. HW13–HW17 top and HM13–HM17 bottom,45/51/57/63/68. Ten appearance candidates visually reviewed, labels correct; owner approval pending. No seated production yet for this human collection.
+
+OWNER CORRECTION — OLDER FOUR ARE HUMAN PLAYERS, NOT BOTS
+October12,2026. Owner explicitly corrects prior allocation: four around70 characters are human-player choices too. Retain their source board exec-2306d9c6-df74-48e3-a005-192ca94acef0.png; its NEW BOT CAST heading and EBW/EBM labels are now misleading historical labels, NOT assignment authority. Map EBW1/EBW2 to human HW11/HW12 and EBM1/EBM2 to human HM11/HM12 for future production. Do not regenerate approved-looking faces just to change labels; no visual approval inferred from allocation correction alone.
+NEW REQUEST: five attractive naturally aging women and five men ages45–68, human-only collection. Proposed working IDs HW13–HW17/HM13–HM17; ages45,51,57,63,68 each. Appearance samples first. Human candidate count becomes34 (17women17men), leaving6 (3women3men) to reach target40. Bot pool remains48appearance designs toward52, four still needed. No additional bot avatars generated by this request.
+Master Brain and publication still on hold; no runtime changes or integration/test claims.
+
+LATEST BATCH — FOUR ELDER BOT CANDIDATES + TWENTY HUMAN CANDIDATES
+Owner requests two elderly women with Southern charm and two distinguished elderly men around70 for remaining bot identities; then ten good-looking men and ten good-looking women ages20–40 for separate human player pool, then go from there. Generated appearance samples first; owner review pending, no seated art for these24 yet.
+Four elder board: exec-2306d9c6-df74-48e3-a005-192ca94acef0.png. EBW1 age69, EBW2 age72, EBM1 age70, EBM2 age73. These cover remaining4bot design slots if approved, yielding52bot appearances; assignment to named bots pending.
+Human women board: exec-b3cd06b7-b8ac-4ec8-841e-5adb872624de.png. HW01–HW10 ages22,24,26,28,30,32,34,36,38,40.
+Human men board: exec-0b087ee9-f252-4656-80c5-ad2f9a24c3ee.png. HM01–HM10 same age distribution. Human collection now20appearance candidates of target40; another10women+10men remain for later, NOT generated this batch.
+All three boards displayed and visually inspected, correct counts and labels. Some age/style traits resemble prior cast; no identity uniqueness runtime claim. These are proposed new identities; do not silently reuse bot art for human pool. No approval or seated completion inferred.
+No game integration yet, no new tests, no deployment or Master Brain advancement. Preserve full prior approved cast/art/evidence and remaining seated work.
+
+CURRENT OWNER DIRECTION AND VERIFIED ROSTER COUNT
+October12,2026. Starter animals/masks/chair discovery plan superseded: owner now chooses name, avatar and voice on front entry page. Avatar/voice selection must remain simple. No duplicate avatars at same table. Owner specifically requires every bot its own fixed unique identity, plus SEPARATE40human-only choices (20women20men), not reuse bot art for human pool. Previous suggestion original12bots +40humans was rejected. Preserve bot personalities and engine behavior; do not add/remove bots as a counting shortcut.
+READ-ONLY775ROSTER AUDIT: index.html loads game060.js then character-library774.js. BOT_PERSONAS literal in game060.js contains43distinct original names. character-library774.js appends9distinct names: Claire,June,Tess,Marcus,Owen,Daniel,Sofia,Rafael,Samir. Total current registered roster52. Static scan of bundled scripts found no other BOT_PERSONAS push/splice/unshift mutations. Existing offline castPool narrows default random selection to rendered characters; it does NOT remove the rest of roster.
+ART COUNT:12integrated original character designs plus36approved expansion appearances=48available human designs. Covering all52registered bots requires4MORE appearance identities and mapping existing36 onto bots lacking seated art. Separate human pool requires40MORE designs (20women20men). Total44additional designs, eventual92identities (52bot+40human). No new bot AI needed.36existing expansion identities include26with78seated candidate views and10extra mid30s needing30poses. Of existing candidates AW5 still needsedgecleanup. Additional44designs require132seated views; remaining production is162views pluscleanup/integration, assuming3views percharacter. Allocation of4new bot genders not yet specified. No new art generation in roster-count task.
+Publication and Master Brain update still ON HOLD. This is continuation record only. No game edits or remote writes.
+
+EARLIER CHECKPOINTS FOLLOW; CURRENT DIRECTION ABOVE SUPERSEDES MASKED/SILENT DISCOVERY PLAN.
+
+LATEST STARTER DESIGN — BRAINSTORM RESET, CHAIR CONCEPT ONLY
+Owner says start over in context of starter-identity brainstorming, NOT restart game project or discard human characters. Creepy masks rejected; no final starter visual design approved. Latest fresh mask board exec-5a068ed5-b8ff-4e22-9bcf-df2147e0d2eb.png exposed mouths/chins and failed concealed-identity goal.
+Assistant proposed silent guest chair with personal House emblem instead of body; user requested visualization. Generated concept edit of775-natural-tablet-bidding.png: exec-b356ce60-bf6d-47b3-8411-7f2ad5ec3994.png. Far seat has walnut/cognac-leather chair with brass compass and Guest plate; Dagger and Marcus remain. Concept only, NOT runtime evidence or approved geometry. Visual tradeoff: fits decor, but empty chair may communicate vacant seat rather than active player. Owner review pending. Silent until choosing voiced character principle remains. Master Brain update deferred, publication hold unchanged, no game files modified.
+
+LATEST MASK REVIEW — FIRST MASK SET REJECTED AS SCARY
+Owner says first MG1–MG10 would suit a scary card game and requests less creepy/scary. Original dark metallic full masks are REJECTED direction. New appearance board generated: exec-11ca15ae-7c3a-4cf3-b776-7560652c77b5.png. Ten revised MG1–MG10 candidates: softer matte masks, rounded eye openings, subtle smiles, warm pastel materials, relaxed sweaters/overshirts and soft caps. Visual review: more welcoming, but identities still visually similar; owner review pending. Do not treat as approved or claim universally gender-neutral perception. No seated masked assets yet. Silent-starting-guest voice rule preserved. Master Brain remains unchanged, publication on hold, no runtime changes.
+
+Masked appearance sheet generated: exec-97c35778-5d68-4a02-b29d-a70d430608a9.png. Ten candidates MG1–MG10. Owner visual review pending; no masked seated assets or runtime integration yet. Design observation: refined material palette fits House, but full masks read mysterious/formal and may still feel unsettling. Do not claim universally gender-unreadable or owner-approved.
+
+CURRENT OWNER DECISION — MASKED SILENT STARTING GUESTS REPLACE ANIMALS
+October12,2026 America/New_York. Owner rejected natural eagle concept as weird, then explicitly abandoned animal starting-avatar plan in favor of masked people with concealed gender presentation. Do not keep animal identity motifs as a new requirement. Preserve existing files historically; no deletion authorized.
+VOICE RULE CONFIRMED: New players start as masked House guests with NO character speech, including trump announcements or reactions. Normal game sounds remain. After discovering avatar selection and choosing a human character, enable that chosen character's matching voice. ID means avatar identity here, NOT identity verification. Do not select a male or female fallback voice for a masked guest. Earlier animal-to-female mapping is superseded for the new masked starter path; protect unrelated voice and game logic.
+Owner requests at least10distinct masked characters and grants artistic control so they fit the House more naturally than animals. Creating10appearance candidates MG1–MG10 first, with full-face tasteful masks, concealed hair/neck and neutral layered clothing. Do not infer visual design approval before owner sees them. Human character expansion remains preserved and ongoing.
+MASTER BRAIN INSTRUCTION: Owner wants this decision recorded for eventual Master Brain update but explicitly says DO NOT UPDATE MASTER BRAIN UNTIL ALL THIS IS READY. This continuation record is not a Brain revision. Publication remains on hold. No remote Brain/coordination writes, deployment, new build number or game changes in this design step.
+
+EARLIER CHECKPOINTS FOLLOW; ABOVE SUPERSEDES ANIMAL STARTER DESIGN AND VOICE ASSUMPTIONS.
+
+LATEST DISCUSSION — ANIMAL BODY CONCEPT, NOT AN APPROVED CHANGE
+Owner approved extra mid30s appearance board (Those are good) and requested getting characters into game. Isolated integration is authorized; not yet started. There are12 existing +36 new =48 potential total;26new have seated candidates and10extra mid30s still need30poses. No further human characters needed for currently requested scope.
+Owner then opened animal/eagle body design discussion. Recovered BrainH historical extensive handoff avatar section confirms automatic rotating animal pool, eagle one pool member, species not locked. Suggested natural upright animal bodies with folded wings/paws low, hidden lower body behind rail; no human costumes. Owner requested seeing eagle concept and is considering alternatives including neutral human appearances.
+Generated CONCEPT ONLY edit of775-natural-tablet-bidding.png: exec-d7f0ea2f-3c20-451b-b1a5-f0c0cbc4dd50.png. Eagle replaces far-seat Daniel, humans remain at sides. This is generated visual study, NOT actual runtime or exact-pixel evidence. No game files changed. Animal design not yet approved. Androgynous humans are an option, but appearance cannot guarantee every viewer perceives no gender. Publication and Master Brain hold unchanged.
+
+Extra mid30s appearance board generated and displayed: exec-50af3461-84fd-4aac-a1ef-3812de6f28ec.png. Ten portraits, five women top/five men bottom, IDs EW1–EW5/EM1–EM5 ages33–37. Appearance review pending; no seated art yet for these10.
+
+CURRENT OWNER ASSIGNMENT — TEN EXTRA MID-30s CHARACTERS
+October12,2026. Owner says prior batch is good and explicitly requests EXTRA characters even if exceeding prior counts: five exceptionally gorgeous men and five exceptionally gorgeous women in their mid30s. These add to, and do not replace, the26 expansion characters already prepared. Working IDs EW1–EW5 and EM1–EM5, ages33–37. New appearance sheet first; seated views follow appearance review. No agreed final overall expansion total inferred.
+Prior16 seated review accepted generally by owner saying That is good; AW5 pale-edge cleanup still technically outstanding and must not be silently marked fixed. All original12 and prior26 expansion characters, artwork and evidence preserved. Publication and Master Brain holds unchanged.
+
+EARLIER CHECKPOINT FOLLOWS.
+
+CURRENT UPDATE — SIXTEEN APPROVED APPEARANCES; SEATED ART BATCH
+October12,2026. Owner explicitly said: All those are approved, continue. This approves both new appearance boards, six age18 and ten ages20s–40s. Proceeded with16 three-pose transparent seated masters,48views. IDs YW1–YW3,YM1–YM3,AW1–AW5,AM1–AM5. Original W1–W5/M1–M5 masters remain preserved.
+
+Corrections: YW2 right pose and YM2 left pose initially turned outward; corrected. AM2 shoulders initially clipped; corrected. AW5 background residue required cleanup; intermediate attempts retained. AW5 fresh rerender reduced residue, but pale edge fringe remains: final edge cleanup and actual-table inspection still required before integration. Do not mark AW5 production-ready. All16 final candidate sheets visually inspected,1774x887RGBA with real alpha; upper outer canvas edges are clear. Final asset manifest and review follow. Generation uses built-in image tool with exact approved board references. No mirrored pose shortcuts or programmatic image editing.
+
+This completes artwork preparation for the current requested batch, not game integration or final expansion authorization. Combined expansion art is26new characters/78seated views. Original12characters/36views remain in approved775. No38-character playable build is claimed. Next technical work: isolate775, individual export/registration, roster/portrait/explicit voice mappings, then renderer rail/geometry/loading checks without touching protected gameplay or geometry. Current sprite sheets need silhouette-aware export; knees may cross equal-third boundaries. No new gameplay tests performed.
+
+Publication remains ON HOLD. Master BrainY remains unchanged. No deployment, remote writes, new build number or game ZIP. Final additional expansion count beyond current batch remains unspecified; do not invent more people. Preserve all original artwork and test evidence and full historical continuity rules below.
+
+EARLIER CHECKPOINTS FOLLOW; OWNER APPROVAL ABOVE SUPERSEDES PENDING REVIEW WORDING.
+
+CURRENT UPDATE — NEXT APPEARANCE BATCH
+October 12, 2026. Continue existing project; no restart.
+
+Owner now requests three 18-year-old women and three 18-year-old men, plus equal numbers of men and women spanning their 20s through 40s. In response to the prior proposed five women/five men, the working interpretation communicated to owner is 16 new characters: six age18 and ten ages24,29,34,39,44 (one woman and one man per age). This is the next batch, not an agreed final expansion total.
+
+Age18 appearance board generated: exec-e04c6cdf-8bf8-4449-9a12-f6f714497747.png. IDs YW1–YW3 and YM1–YM3. Adults20s–40s board generated: exec-83ddd986-3c87-412b-9b41-6acca9fa331f.png, IDs AW1–AW5 and AM1–AM5. Both boards displayed and visually inspected; ten and six distinct portraits with matching labels. Owner review pending. These are new fictional identities, appearance candidates, not seated artwork or owner-approved production assets. Samples first; preserve all earlier completed W1–W5/M1–M5 seated masters.
+
+No game integration, gameplay modifications, new game tests, publication, build-number reservation, remote writes or Master Brain advancement. 775 and existing evidence remain unchanged. Publication hold continues.
+
+PREVIOUS CHECKPOINT FOLLOWS; ABOVE SUPERSEDES ITS UNSPECIFIED NEXT-BATCH SCOPE.
+
+CURRENT UPDATE — TEN NEW CHARACTERS, SEATED ARTWORK COMPLETE
+October 12, 2026. Continue existing Griffin House of Rooks. No restart.
+
+SUPERSESSION
+Owner rejected first Ruth/Denise/etc. sheet and its too-subtle revision. Owner requested TEN BRAND NEW characters: pretty older ladies and salt-and-pepper gentlemen. New source board exec-908062a5-d752-47f1-841d-4a24c13c65d9.png was generated from scratch, five women W1–W5 and five men M1–M5. Owner then said: Go to work. Get to work, continue. Use this new cast; old proposed names/faces below are historical, not current.
+
+ARTWORK
+Ten transparent PNG master sheets with three seated poses each: left, far/top, right. Thirty views total. Built-in image generation, each grounded in the new board. All visually inspected. M2 initial right shoulder clipped; corrected. M4/M5 initial left poses faced wrong way; corrected. Failed originals preserved. Real alpha confirmed in final files. Review HTML embeds exact PNGs, specifications, checksum manifest and complete checkpoint.
+Names remain W1–W5/M1–M5; owner has not assigned final names.
+
+STATUS AND NEXT TECHNICAL STEP
+Artwork prepared, not integrated into775 or tested against table rail. No22-character playable build is claimed. Next: individual seat exports/registration, scoped roster/portrait/explicit voice mapping, actual renderer rail/geometry/loading checks on isolated775. Never blindly rerun old integration scripts. Silhouettes differ and some knees cross ideal column divisions; inspect exact silhouettes during export rather than assuming thirds guarantee production-safe crops. Preserve game geometry. No new gameplay tests performed at this art stage.
+
+NEXT EXPANSION
+Adults in their20s–40s remain requested. Final additional count unspecified. Ask owner for count before defining final roster or claiming expansion complete.
+
+HOLD AND PRESERVATION
+775 owner-approved and unchanged. Original12/36body views/Crow arm, all prior art and evidence preserved. Master BrainY remains current. No remote writes, deployment, game ZIP, new build number, cache/data clearing, or Master Brain advancement. Publication stays on hold until expansion finished AND owner authorizes. Long766 audit remains paused.
+
+EARLIER CHECKPOINT BELOW IS HISTORICAL; THE UPDATE ABOVE SUPERSEDES ITS CAST DETAILS.
+
+GRIFFIN HOUSE OF ROOKS — CHARACTER EXPANSION APPEARANCE CHECKPOINT
+Owner: Jerome Griffin. October 12, 2026, America/New_York.
+CONTINUE; DO NOT START OVER. This is an unpublished work record, not a new Master Brain or game build.
+
+CURRENT AUTHORITY
+Owner explicitly approves 775: all original 12 characters integrated, 36 seat-specific body views plus Crow right foreground arm. This supersedes frozen 776 pending-review wording. Remote coordination CHARACTER_COMPLETE_775.txt and BUILD_REGISTRY.json independently confirm owner acceptance. Current remote brain/current.json still points to Y. No remote writes performed.
+Publication HOLD until expansion finished, and no deployment or Master Brain advancement without explicit owner authorization. Completing expansion does not itself lift the hold.
+
+RECOVERED SOURCE
+776.zip Library libfile_15654cfe56bc8191ad1d2eee18c4a637
+SHA256 81020fefda6d4730d539a86d9031388c6902644feff9055a4965cc3c1226b7e3
+775.zip inside recovery SHA256 f562f2353d260901e3d1492385250827db8696239f1b1e230d9bf3f0d3c71896
+Both archive hashes verified. All 361 recovery manifest payload entries verified with zero mismatches. 775 CRC passed, 429 runtime entries, 36 body poses and Crow arm confirmed. These are recovery checks, not new gameplay tests. Existing source, artwork, evidence, masters and rollback remain unchanged.
+Read in this session: current remote Brain pointer, Y startup, coordination startup/operating/master-control/775 completion and registry; recovered H full MASTER_BANK, principal I–Y documents, seated construction authority, H October 6 delta, character specialist record, 776 startup and completion checkpoint, current artwork references and prior seated prompt. No fresh exhaustive visual audit of all historical attachments is claimed.
+
+NEW OWNER SCOPE
+Five women and five men approximately 40–59. Show low-resolution appearance samples first, then prepare left, far/top and right seated artwork for each. Afterwards expand adults in their 20s–40s; final additional count NOT specified. Do not invent an agreed total.
+
+FIRST APPEARANCE SHEET
+Generated with built-in image generation as one 1536x1024 ten-person contact sheet, two rows of five. Appearance candidates only; not owner-approved or integrated. Style references: original12/design-01.png, design-04.png, design-07.png. Existing identities were not edited.
+Image displayed in this conversation: exec-fe1bbf83-98c2-4ecc-9f21-3416709c2030.png (generated image retained by conversation).
+Top row women: 13 Ruth 58; 14 Denise 51; 15 Vivian 46; 16 Carmen 43; 17 Nadia 55.
+Bottom row men: 18 Grant 59; 19 Calvin 48; 20 Victor 54; 21 Hector 45; 22 Ellis 41.
+Numbers are casting-study identifiers, NOT reserved game-build numbers. Names and appearances are proposed, not owner-assigned final names.
+Ruth: silver wavy hair, burgundy knit. Denise: short natural coiled hair, teal blouse. Vivian: dark bob, rectangular glasses, plum shirt. Carmen: dark curls, rust shirt. Nadia: silver-streaked dark hair, navy cardigan and cream top. Grant: receding gray hair and close gray beard, green henley. Calvin: shaved head, short beard, ochre polo. Victor: swept salt-and-pepper hair, clean shaven, charcoal shirt. Hector: dark wavy hair and mustache, denim. Ellis: auburn hair and ginger beard, glasses, blue sweater.
+Visual review: exactly five women and five men, labels match proposed names/ages; coherent warm realistic style and distinct silhouettes/clothes. This is appearance review only, not physical-age verification or runtime rail validation.
+
+NEXT STAGE
+Owner appearance review is the current presentation stage. Preserve these exact identities when proceeding to 30 seated body views. Use prior proven three-view-sheet construction: separate left-facing-in, frontal far/top and right-facing-in anatomical poses, no mirror copies; warm room light; true alpha; no table/chair/cards/text; elbows tucked and hands naturally in lap. Preserve source sheets before deriving individual assets. Keep existing renderer scale, anchors, rail masks and foreground-arm rules. Do not redraw original12.
+Then verify actual rendered seating, rail/body occlusion and portrait loading before claiming game integration. No new runtime code or service worker changes, game ZIP, new build number, seated sheets, or gameplay test were made during this appearance stage.
+Adults in their 20s–40s follow this batch; remaining count requires owner direction.
+
+PROTECTIONS
+Preserve TABLE-003, cardholder/connector, Bid Dock, LAST, cards, X1/Sol7, scoring/rules, dealing, speed, voices, existing roster/favorites, landscape, saved state and evidence. No cache/data clearing. Long766 audit remains paused (38 hands/7 matches); not resumed. Test hosting recorded at772; no new hosted browser verification. Production untouched.
+No number reserved. Follow shared atomic numbering protocol if later packaging is explicitly requested. Do not package a playable game merely for convenience.
+
+Both permanent rules follow verbatim from recovered startup:
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+Explicit successor requirement: Pass both permanent rules verbatim to every future replacement chat.
+

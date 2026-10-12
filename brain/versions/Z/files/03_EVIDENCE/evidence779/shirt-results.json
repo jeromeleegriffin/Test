@@ -1,0 +1,351 @@
+{
+  "pass": true,
+  "seatingCases": 6,
+  "views": [
+    {
+      "enabled": true,
+      "ready": true,
+      "portrait": true,
+      "geometry": {
+        "s": 0.4491428571428571,
+        "x": 0,
+        "y": 0
+      },
+      "seats": [
+        {
+          "slot": "slot-left",
+          "pose": "left",
+          "offset": 1,
+          "x": -44.53,
+          "y": 362.91,
+          "w": 345.1,
+          "label": [
+            110,
+            711
+          ],
+          "status": [
+            110,
+            357
+          ],
+          "active": true,
+          "occupant": {
+            "key": "willow",
+            "index": 1,
+            "id": "bot-1791794546575-kqmz",
+            "name": "Willow",
+            "character": {
+              "name": "Willow",
+              "design": "AW5",
+              "voice": "female",
+              "poses": {
+                "left": "willow-left.webp",
+                "top": "willow-top.webp",
+                "right": "willow-right.webp"
+              }
+            }
+          }
+        },
+        {
+          "slot": "slot-partner",
+          "pose": "top",
+          "offset": 2,
+          "x": 309.48,
+          "y": 300.57,
+          "w": 256.04,
+          "label": [
+            437,
+            531
+          ],
+          "status": [
+            437,
+            289
+          ],
+          "active": true,
+          "occupant": {
+            "key": "brandy",
+            "index": 2,
+            "id": "bot-1791794546577-2hue",
+            "name": "Brandy",
+            "character": {
+              "name": "Brandy",
+              "design": "EW2",
+              "voice": "female",
+              "poses": {
+                "left": "brandy-left.webp",
+                "top": "brandy-top.webp",
+                "right": "brandy-right.webp"
+              }
+            }
+          }
+        },
+        {
+          "slot": "slot-right",
+          "pose": "right",
+          "offset": 3,
+          "x": 610.05,
+          "y": 376.27,
+          "w": 322.84,
+          "label": [
+            781,
+            717
+          ],
+          "status": [
+            781,
+            370
+          ],
+          "active": true,
+          "occupant": {
+            "key": "crow",
+            "index": 3,
+            "id": "bot-1791794546578-fvfw",
+            "name": "Crow",
+            "character": {
+              "name": "Crow",
+              "design": "Maya01",
+              "voice": "female",
+              "poses": {
+                "left": "crow-left.png",
+                "top": "crow-top.png",
+                "right": "crow-right.png"
+              },
+              "foreground": {
+                "right": "crow-right-arm.png"
+              }
+            }
+          }
+        }
+      ],
+      "outside": "M0 0H875V797L628 592Q590 563 534 561Q436 554 336 563Q298 565 254 594L0 799Z"
+    },
+    {
+      "enabled": true,
+      "ready": true,
+      "portrait": true,
+      "geometry": {
+        "s": 0.4491428571428571,
+        "x": 0,
+        "y": 0
+      },
+      "seats": [
+        {
+          "slot": "slot-left",
+          "pose": "left",
+          "offset": 1,
+          "x": -44.53,
+          "y": 362.91,
+          "w": 345.1,
+          "label": [
+            110,
+            711
+          ],
+          "status": [
+            110,
+            357
+          ],
+          "active": true,
+          "occupant": {
+            "key": "brandy",
+            "index": 1,
+            "id": "bot-1791794546575-kqmz",
+            "name": "Brandy",
+            "character": {
+              "name": "Brandy",
+              "design": "EW2",
+              "voice": "female",
+              "poses": {
+                "left": "brandy-left.webp",
+                "top": "brandy-top.webp",
+                "right": "brandy-right.webp"
+              }
+            }
+          }
+        },
+        {
+          "slot": "slot-partner",
+          "pose": "top",
+          "offset": 2,
+          "x": 309.48,
+          "y": 300.57,
+          "w": 256.04,
+          "label": [
+            437,
+            531
+          ],
+          "status": [
+            437,
+            289
+          ],
+          "active": true,
+          "occupant": {
+            "key": "crow",
+            "index": 2,
+            "id": "bot-1791794546577-2hue",
+            "name": "Crow",
+            "character": {
+              "name": "Crow",
+              "design": "Maya01",
+              "voice": "female",
+              "poses": {
+                "left": "crow-left.png",
+                "top": "crow-top.png",
+                "right": "crow-right.png"
+              },
+              "foreground": {
+                "right": "crow-right-arm.png"
+              }
+            }
+          }
+        },
+        {
+          "slot": "slot-right",
+          "pose": "right",
+          "offset": 3,
+          "x": 610.05,
+          "y": 376.27,
+          "w": 322.84,
+          "label": [
+            781,
+            717
+          ],
+          "status": [
+            781,
+            370
+          ],
+          "active": true,
+          "occupant": {
+            "key": "willow",
+            "index": 3,
+            "id": "bot-1791794546578-fvfw",
+            "name": "Willow",
+            "character": {
+              "name": "Willow",
+              "design": "AW5",
+              "voice": "female",
+              "poses": {
+                "left": "willow-left.webp",
+                "top": "willow-top.webp",
+                "right": "willow-right.webp"
+              }
+            }
+          }
+        }
+      ],
+      "outside": "M0 0H875V797L628 592Q590 563 534 561Q436 554 336 563Q298 565 254 594L0 799Z"
+    },
+    {
+      "enabled": true,
+      "ready": true,
+      "portrait": true,
+      "geometry": {
+        "s": 0.4491428571428571,
+        "x": 0,
+        "y": 0
+      },
+      "seats": [
+        {
+          "slot": "slot-left",
+          "pose": "left",
+          "offset": 1,
+          "x": -44.53,
+          "y": 362.91,
+          "w": 345.1,
+          "label": [
+            110,
+            711
+          ],
+          "status": [
+            110,
+            357
+          ],
+          "active": true,
+          "occupant": {
+            "key": "crow",
+            "index": 1,
+            "id": "bot-1791794546575-kqmz",
+            "name": "Crow",
+            "character": {
+              "name": "Crow",
+              "design": "Maya01",
+              "voice": "female",
+              "poses": {
+                "left": "crow-left.png",
+                "top": "crow-top.png",
+                "right": "crow-right.png"
+              },
+              "foreground": {
+                "right": "crow-right-arm.png"
+              }
+            }
+          }
+        },
+        {
+          "slot": "slot-partner",
+          "pose": "top",
+          "offset": 2,
+          "x": 309.48,
+          "y": 300.57,
+          "w": 256.04,
+          "label": [
+            437,
+            531
+          ],
+          "status": [
+            437,
+            289
+          ],
+          "active": true,
+          "occupant": {
+            "key": "willow",
+            "index": 2,
+            "id": "bot-1791794546577-2hue",
+            "name": "Willow",
+            "character": {
+              "name": "Willow",
+              "design": "AW5",
+              "voice": "female",
+              "poses": {
+                "left": "willow-left.webp",
+                "top": "willow-top.webp",
+                "right": "willow-right.webp"
+              }
+            }
+          }
+        },
+        {
+          "slot": "slot-right",
+          "pose": "right",
+          "offset": 3,
+          "x": 610.05,
+          "y": 376.27,
+          "w": 322.84,
+          "label": [
+            781,
+            717
+          ],
+          "status": [
+            781,
+            370
+          ],
+          "active": true,
+          "occupant": {
+            "key": "brandy",
+            "index": 3,
+            "id": "bot-1791794546578-fvfw",
+            "name": "Brandy",
+            "character": {
+              "name": "Brandy",
+              "design": "EW2",
+              "voice": "female",
+              "poses": {
+                "left": "brandy-left.webp",
+                "top": "brandy-top.webp",
+                "right": "brandy-right.webp"
+              }
+            }
+          }
+        }
+      ],
+      "outside": "M0 0H875V797L628 592Q590 563 534 561Q436 554 336 563Q298 565 254 594L0 799Z"
+    }
+  ]
+}
