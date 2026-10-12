@@ -5,9 +5,30 @@
   "task": "52fixed bot identities, on-demand body assets and avatar collision protection; local Android test ZIP",
   "sourceGameBuild": "775",
   "sourceSha256": "f562f2353d260901e3d1492385250827db8696239f1b1e230d9bf3f0d3c71896",
-  "status": "RESERVED",
+  "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
   "date": "2026-10-12",
   "ownerApproved": false,
   "physicalAndroidTested": false,
-  "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD"
+  "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD",
+  "filename": "777.zip",
+  "bytes": 112846092,
+  "sha256": "28d044c5bdb23b9b4064fd3a33c66b8ec89cd6079aef2697a662929d59b25076",
+  "entries": 589,
+  "crc": "PASS",
+  "manifestChecks": 589,
+  "libraryFileId": "libfile_6c43921d4f1081919c3431b457fffa65",
+  "fileId": "file_00000000a6f481fda403aea980fa3fad",
+  "reviewLibraryFileId": "libfile_3d78a644a6348191a306a3ebac70d90c",
+  "checkpointLibraryFileId": "libfile_56499a0fd0a48191bb62bd81df8f8cfe",
+  "tests": {
+    "seatVoiceCombinations": 156,
+    "botAvatarClaims": 52,
+    "gameplayIdentityStatePreserved": true,
+    "spoofAndHumanConflictRejected": true,
+    "hostClientHandlerLoopback": true,
+    "lazyLoadingRetryFavorites": true,
+    "coherent777Offline": true,
+    "originalArtAudioIdentical": true
+  },
+  "testLimits": "Chromium153 simulation and real-handler local transport loopback; no physical Android, live PeerJS, installed cache upgrade, or full match. Willow/Brandy cream-edge cosmetics remain. Landing avatar/voice chooser deferred. Long tournament remains paused."
 }
