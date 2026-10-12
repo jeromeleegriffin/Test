@@ -3,7 +3,7 @@
   "authority": "Test/main coordination/BUILD_REGISTRY.json",
   "policy": "coordination/BUILD_NUMBERING.md",
   "updated": "2026-10-12",
-  "approvedWorkingBuild": "773",
+  "approvedWorkingBuild": "774",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
   "nextNumberHint": 775,
@@ -926,9 +926,9 @@
       "task": "Add Claire June Tess Marcus Owen Daniel with18 distinct seat views and owner-assigned voices; isolated review",
       "sourceGameBuild": "773",
       "sourceSha256": "670dfe970bd9cc27cc4bc3347352044d0f42a467ccfb76f4a6a9edf1893cabac",
-      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
+      "status": "OWNER_APPROVED",
       "date": "2026-10-12",
-      "ownerApproved": false,
+      "ownerApproved": true,
       "deploymentStatus": "NOT_DEPLOYED",
       "filename": "774.zip",
       "sha256": "f3ed60eff732fd01b829fa4c50380f4355011fab8eb440bd3a35b796fb48e44b",
@@ -969,6 +969,13 @@
         "marcus": "male",
         "owen": "male",
         "daniel": "male"
+      },
+      "ownerApproval": {
+        "owner": "Jerome Griffin",
+        "statement": "Looks good, continue.",
+        "date": "2026-10-12",
+        "timeZone": "America/New_York",
+        "scope": "Acceptance of delivered774 character expansion. Specific device/test coverage not stated. No deployment authorization."
       }
     }
   ],
