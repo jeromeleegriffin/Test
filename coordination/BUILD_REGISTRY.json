@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "783",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 785,
+  "nextNumberHint": 786,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1355,6 +1355,21 @@
         "offlineReload": true
       },
       "testLimits": "Chromium143 simulations; no physical Android, live multiplayer/reconnect or installed-cache upgrade. No game ZIP packaged; source and evidence embedded in review."
+    },
+    {
+      "number": "785",
+      "reservationId": "founder-identity-e42c005b93c9-20261012",
+      "workstream": "Founder Jerome identity repair",
+      "task": "Recover original founder assets; persistent opt-in founder picker, name and real voice; isolated Android ZIP",
+      "sourceGameBuild": "784",
+      "sourceStatus": "Isolated cardholder candidate; approved rollback783",
+      "sourceReviewSha256": "d359c403621de3076a0f8b0e1fe0db3c616eafd333b2f71a2d5cad55608a01b1",
+      "approvedBaseline": "783",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deploymentStatus": "NOT_DEPLOYED"
     }
   ],
   "testSiteBuild": "779",
