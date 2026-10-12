@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "783",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 788,
+  "nextNumberHint": 789,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1455,6 +1455,19 @@
       "physicalAndroidTested": false,
       "ownerPolicy": "Jerome is now publicly selectable by any human with original artwork and voice. Owner-only/account restriction explicitly revoked October12,2026.52bot roster unchanged; existing same-table duplicate-avatar rule retained.",
       "testLimits": "Chromium simulation and controlled host handlers; no physicalAndroid or livePeerJS claim."
+    },
+    {
+      "number": "788",
+      "reservationId": "jerome-epa-offline-20261012-34a18ba184b8",
+      "workstream": "Jerome human/bot and X1 Partner Assist",
+      "task": "Isolated Jerome bot integration and sole-offline-human X1 EPA; unchanged bidding",
+      "sourceGameBuild": "787",
+      "sourceSha256": "fbd89cbecea68445a25187b5c37f396b822f395fd788aade2c6b1b9a37473cfd",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deploymentStatus": "NOT_DEPLOYED"
     }
   ],
   "testSiteBuild": "779",
