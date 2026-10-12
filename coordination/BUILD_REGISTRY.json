@@ -882,10 +882,28 @@
       "task": "Far-seat hard rail mask contact correction; reuse original art. Isolated only.",
       "sourceGameBuild": "772",
       "sourceSha256": "1bbba202c01718678e45ad881183f969e38b4bf55ab3e559c9d39b90307ae6c0",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
       "date": "2026-10-12",
       "ownerApproved": false,
-      "deploymentStatus": "NOT_DEPLOYED"
+      "deploymentStatus": "NOT_DEPLOYED",
+      "filename": "773.zip",
+      "sha256": "670dfe970bd9cc27cc4bc3347352044d0f42a467ccfb76f4a6a9edf1893cabac",
+      "bytes": 87150710,
+      "entries": 392,
+      "libraryFileId": "libfile_8cdd5d55328c8191a2e72ffd0b9ec4ba",
+      "reviewLibraryFileId": "libfile_ffd5a44d22d48191973bd59e7dbad6fa",
+      "evidenceLibraryFileId": "libfile_6248504799408191b72c25a0e0fba3b8",
+      "tests": {
+        "seatCombinations": 9,
+        "phoneViewports": 4,
+        "feltOverlapPixels": 0,
+        "voiceIdentityMapping": true,
+        "bidKittyDiscardLAST": true,
+        "offline773": true,
+        "allArtworkUnchanged": true
+      },
+      "testLimits": "Chromium simulated viewports and controlled roster/winner fixtures; no physical Android, live multiplayer or full match. Hosted772 loading acceptance pending.",
+      "checkpoint": "coordination/CHARACTER_FAR_RAIL_773.txt"
     }
   ],
   "testSiteBuild": "772"
