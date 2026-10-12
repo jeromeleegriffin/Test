@@ -1,0 +1,16 @@
+# Hosted 771 asset-loading investigation
+
+Owner reports 771 ZIP works correctly in local loader; hosted https://jeromeleegriffin.github.io/Test/ showed old shuffle, intermittent red/gold blank card rectangles, and circular avatars before later displaying the new characters. Shuffle subsequently returned. ZIP approval remains; hosted experience is UNDER REVIEW, not accepted as resolved.
+
+October 12 UTC / October 11, 2026 Eastern. No runtime changes, deployment fixes, storage reset or cache deletion performed during diagnosis. Preserve exact approved771 SHA256 c342f1e67db3f62a0fe69b1ecf71a309ca85e5fddda5603202c77a0239f28b8c and BrainY publication history.
+
+Verified hosted bare root and ?v=771 entry bytes match771. Exact signature-shuffle.js?v=771, signature-shuffle.css?v=771, shuffle-asset.js?v=771, sw060.js?v=771 and all14 unversioned shuffle atlas URLs return200 and match approved files. Earlier390runtime repository hashes match. No evidence of an incorrect uploaded package.
+
+Focused local Chromium reproductions with service workers blocked (therefore no old-worker cache required):
+1. Block shuffle atlas fetch: mode becomes legacy-fallback; normal control uses asset mode, zero JS errors. Initial sheet00 fetch is a single retained promise; a failure persists for that page lifetime. Landscape/explicit legacy intentionally uses legacy presentation.
+2. Delay numbered face3seconds: image.complete false/naturalWidth0 and numbered fallback display:none; after completion naturalWidth580. Readable fallback is shown only onerror, not while loading.44 numbered PNGs total17,516,674bytes. This reproduces blank face loading, not a claim to identify every owner's gold rectangle.
+3. Hold all character image requests during real offline entry and bidding: ready=false,4 visible circular avatars. Release images: ready=true,0 visible old avatars, no JS errors; no hand restart needed in test. All10 character assets are a single Promise.all readiness gate; any failed image retains old portraits for page lifetime. First diagnostic fixture stopped at tutorial and was inconclusive; corrected run explicitly skipped tutorial and entered bidding.
+
+Conclusion: confirmed uncoordinated asset readiness can reproduce all reported classes of symptom independently of old caches. It does NOT establish the actual cache/controller state on Jerome's phone. Hosted browser direct navigation from this environment returned ERR_EMPTY_RESPONSE; HTTP byte checks succeeded separately. Do not claim physical Android instrumentation or hosted browser rendering passed.
+
+Next correction should be isolated from approved771: resilient retryable asset loading, readable card identities while images load, and a deliberate character/shuffle readiness policy that avoids presenting obsolete visuals. Preserve all artwork, gameplay, table/seat geometry, existing player data and offline compatibility. Test cold/slow/interrupted loading plus warmed cache and old-worker upgrade before any new hosting publication. Do not remove legacy landscape intentionally without design authority. No correction has yet been delivered. Long766audit remains paused. Successor must read current BrainY full rules and carry both permanent rules forward verbatim in any handoff.
