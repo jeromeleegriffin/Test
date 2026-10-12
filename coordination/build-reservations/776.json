@@ -3,9 +3,15 @@
   "reservationId": "continuity-cast12-fa72cc1b4ad4",
   "task": "Complete recovery and continuation archive; NOT a new gameplay build",
   "packageType": "CONTINUATION_HANDOFF",
-  "status": "RESERVED",
+  "status": "DELIVERED",
   "date": "2026-10-12",
   "ownerApproved": false,
-  "deploymentStatus": "NOT_DEPLOYED",
-  "workstream": "Character Studio077"
+  "deploymentStatus": "NOT_APPLICABLE",
+  "workstream": "Character Studio077",
+  "filename": "776.zip",
+  "sha256": "81020fefda6d4730d539a86d9031388c6902644feff9055a4965cc3c1226b7e3",
+  "bytes": 377074153,
+  "entries": 362,
+  "libraryFileId": "libfile_15654cfe56bc8191ad1d2eee18c4a637",
+  "scope": "Recovery contains775game,774rollback,all12originalboards,masters,evidence,cachedH-Y,currentcoordination,startupprompt and bothfullpermanentrules. Not a gameplaybuild or transcript export."
 }
