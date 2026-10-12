@@ -6,9 +6,9 @@
   "sourceGameBuild": "782",
   "sourceSha256": "849982ca154c255c533169a3682abcc67c37ab0b971b8efb563401352efe6b12",
   "approvedBaseline": "779",
-  "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
+  "status": "OWNER_APPROVED_LOCKED_CHECKPOINT",
   "date": "2026-10-12",
-  "ownerApproved": false,
+  "ownerApproved": true,
   "deploymentStatus": "NOT_DEPLOYED",
   "filename": "783.zip",
   "sha256": "813748886c0668aabf5ba06a9ae65a8a0878e7339a31bbbc3203716a1acd3b38",
@@ -42,5 +42,12 @@
     "offlineShellAndSavedPartner": true,
     "unvisitedPoseFallback": true
   },
-  "testLimits": "Chromium143 simulation and controlled handler/audio fixtures. No physical Android, subjective speaker listening, live PeerJS, installed-cache upgrade, performance benchmark or full scored match. Existing game rules/AI/audio/artwork retained. Unvisited offline body art falls back to cached portraits."
+  "testLimits": "Chromium143 simulation and controlled handler/audio fixtures. No physical Android, subjective speaker listening, live PeerJS, installed-cache upgrade, performance benchmark or full scored match. Existing game rules/AI/audio/artwork retained. Unvisited offline body art falls back to cached portraits.",
+  "ownerApproval": {
+    "owner": "Jerome Griffin",
+    "date": "2026-10-12",
+    "timeZone": "America/New_York",
+    "statement": "Oh, I like this. Let's lock this in as the new checkpoint.",
+    "scope": "783 accepted as the new development checkpoint. Preserve exact delivered ZIP and evidence. No deployment authorization; no assertion of physical Android testing."
+  }
 }
