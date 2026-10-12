@@ -1,0 +1,13 @@
+{
+  "number": "789",
+  "reservationId": "holder-cues-20261012-34a18ba184b8",
+  "workstream": "Cardholder turn/win cues",
+  "task": "Replace YOUR TURN/TRICK WON signs with mild holder pulses and synchronized optional haptics",
+  "sourceGameBuild": "788",
+  "sourceSha256": "22127b01f487e135fc6b1830f07337c2293a975b1bfed06b508c7776fbd76172",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED"
+}

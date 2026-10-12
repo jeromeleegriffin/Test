@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "783",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 789,
+  "nextNumberHint": 790,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1493,6 +1493,19 @@
       "brainStatus": "Published Z pointer unchanged; complete ready handoff in ZIP",
       "approvedRollback": "783",
       "approvedRollbackSha256": "813748886c0668aabf5ba06a9ae65a8a0878e7339a31bbbc3203716a1acd3b38"
+    },
+    {
+      "number": "789",
+      "reservationId": "holder-cues-20261012-34a18ba184b8",
+      "workstream": "Cardholder turn/win cues",
+      "task": "Replace YOUR TURN/TRICK WON signs with mild holder pulses and synchronized optional haptics",
+      "sourceGameBuild": "788",
+      "sourceSha256": "22127b01f487e135fc6b1830f07337c2293a975b1bfed06b508c7776fbd76172",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deploymentStatus": "NOT_DEPLOYED"
     }
   ],
   "testSiteBuild": "779",
