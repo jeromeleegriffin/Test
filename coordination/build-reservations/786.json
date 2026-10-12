@@ -1,0 +1,11 @@
+{
+  "number": "786",
+  "reservationId": "plaque-text-e42c005b93c9-20261012",
+  "sourceGameBuild": "785",
+  "sourceSha256": "9321941c8fdff8f9a0ab9859f5cd7edd295e1a61b4f7aff2db67ba87e400c2f2",
+  "task": "Owner screenshot correction: readable cardholder plaque text; preserve placement and founder repair",
+  "status": "RESERVED",
+  "ownerApproved": false,
+  "deploymentStatus": "NOT_DEPLOYED",
+  "date": "2026-10-12"
+}

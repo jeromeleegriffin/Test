@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "783",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 786,
+  "nextNumberHint": 787,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1395,6 +1395,17 @@
       "founderIdentityId": "jerome_founder",
       "tests": "Clean/existing profile selection; original preview and four trump playback routes; rotation/reopen/offline; regular human restoration;64human/52bot separation;2scoredhands;782 original artwork/audio files byte-identical",
       "testLimits": "No physical Android, subjective listening, live PeerJS or installed-cache upgrade. Additional60split clips have unverified phrase labels. Founder remote joining unsupported; local development opt-in is not authentication."
+    },
+    {
+      "number": "786",
+      "reservationId": "plaque-text-e42c005b93c9-20261012",
+      "sourceGameBuild": "785",
+      "sourceSha256": "9321941c8fdff8f9a0ab9859f5cd7edd295e1a61b4f7aff2db67ba87e400c2f2",
+      "task": "Owner screenshot correction: readable cardholder plaque text; preserve placement and founder repair",
+      "status": "RESERVED",
+      "ownerApproved": false,
+      "deploymentStatus": "NOT_DEPLOYED",
+      "date": "2026-10-12"
     }
   ],
   "testSiteBuild": "779",
