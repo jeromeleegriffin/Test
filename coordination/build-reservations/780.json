@@ -1,0 +1,13 @@
+{
+  "number": "780",
+  "reservationId": "cobalt-career-312e2e305ea7-20261012",
+  "workstream": "Character Studio077",
+  "task": "Correct Cobalt far-seat scale and remove duplicate floating career badges; preserve name-side markers",
+  "sourceGameBuild": "779",
+  "sourceSha256": "94963b99f7e8bee5b9714f39e01e25cc2dfcd25c2bf1dd0c6861c48fbb233c4d",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED"
+}
