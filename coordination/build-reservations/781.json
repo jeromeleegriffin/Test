@@ -1,0 +1,13 @@
+{
+  "number": "781",
+  "reservationId": "jerome-founder-312e2e305ea7-20261012",
+  "workstream": "Founder character integration",
+  "task": "Jerome approved likeness, real four-trump voice, development-only owner identity and no-scroll Career card; preserve780 corrections",
+  "sourceGameBuild": "780",
+  "sourceSha256": "48e3ede5191f1e8cb98da829a4a2da591f1feca51c5e832b012a3870414fb2c6",
+  "approvedBaseline": "779",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "deploymentStatus": "NOT_DEPLOYED"
+}
