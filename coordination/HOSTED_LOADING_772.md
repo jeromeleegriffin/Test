@@ -94,3 +94,10 @@ All three saves succeeded with local metadata applied. No runtime deployed. Mast
 
 CURRENT UPDATE — October12 UTC / October11 Eastern
 Jerome confirmed: “Okay, 772 works in a loader.” He answered “Yes” to publishing this exact772 to the TEST SITE ONLY, production untouched. This supersedes the pre-publication status above. Runtime commit f9334187d84a2d0ee503807232cef419efe4c99d; GitHub Pages run38198112595 succeeded. All392runtime Git blobs match the approved test ZIP; ten changed/new served files match exact SHA256bytes. See HOSTED_772_DEPLOYMENT.json. URL https://jeromeleegriffin.github.io/Test/. Hosted Android acceptance remains PENDING; loader acceptance is not proof network behavior is resolved. Production and user data/caches untouched. BrainY frozen; this coordination record is the current772deployment supplement. Rollback runtime source is parent c5d95c958ea927ee603c140204260be2b7e8baad; restore only runtime in a new commit if authorized, preserving newer coordination. No automatic rollback or cache reset.
+
+
+## Owner hosted-loading acceptance — October11,2026 23:15 EDT
+
+Jerome: “All right, I also approve that the loading issue seems to be resolved for now. Continue.”
+
+Hosted772 loading issue accepted as resolved for now based on owner Android use. This supersedes pending hosted-loading review wording above; no claim of exhaustive network/device certification.773 far-rail correction remains delivered pending separate Android review and is NOT deployed. Hosted Test stays772. Production and BrainY pointer unchanged. No further loading repair or hosting migration warranted by current evidence. All existing artwork and archives preserved. Next: owner review773 far-seat contact; remaining nine initial designs preserved for future cast expansion, not an unfinished part of the initial three-character integration.

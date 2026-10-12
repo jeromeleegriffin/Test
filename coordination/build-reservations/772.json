@@ -5,7 +5,7 @@
   "task": "Isolated loading/retry repair; preserve approved771 and artwork",
   "sourceGameBuild": "771",
   "sourceSha256": "c342f1e67db3f62a0fe69b1ecf71a309ca85e5fddda5603202c77a0239f28b8c",
-  "status": "OWNER_LOADER_VERIFIED_HOSTED_REVIEW_PENDING",
+  "status": "OWNER_ACCEPTED_HOSTED_LOADING",
   "date": "2026-10-12",
   "deploymentStatus": "TEST_SITE_DEPLOYED_HTTP_VERIFIED",
   "ownerApproved": false,
@@ -35,6 +35,13 @@
   "ownerLoaderStatement": "Okay, 772 works in a loader.",
   "testSiteDeploymentCommit": "f9334187d84a2d0ee503807232cef419efe4c99d",
   "testSiteDeploymentStatus": "DEPLOYED_HTTP_HASH_VERIFIED",
-  "hostedAndroidAcceptance": "PENDING",
-  "publicationAuthority": "Owner answered Yes to publish exact772 to test site only; production untouched. October11,2026 America/New_York."
+  "hostedAndroidAcceptance": "OWNER_REPORT_RESOLVED_FOR_NOW",
+  "publicationAuthority": "Owner answered Yes to publish exact772 to test site only; production untouched. October11,2026 America/New_York.",
+  "hostedLoadingApproval": {
+    "owner": "Jerome Griffin",
+    "statement": "All right, I also approve that the loading issue seems to be resolved for now. Continue.",
+    "date": "2026-10-11",
+    "timeZone": "America/New_York",
+    "scope": "Owner reports hosted loading issue resolved for now. Preserve provisional wording; not exhaustive device certification or authorization to deploy773."
+  }
 }
