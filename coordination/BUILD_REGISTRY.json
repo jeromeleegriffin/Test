@@ -1402,10 +1402,27 @@
       "sourceGameBuild": "785",
       "sourceSha256": "9321941c8fdff8f9a0ab9859f5cd7edd295e1a61b4f7aff2db67ba87e400c2f2",
       "task": "Owner screenshot correction: readable cardholder plaque text; preserve placement and founder repair",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
       "ownerApproved": false,
       "deploymentStatus": "NOT_DEPLOYED",
-      "date": "2026-10-12"
+      "date": "2026-10-12",
+      "filename": "786.zip",
+      "sha256": "d658895ac7559139a3da9046ec97e4a2d9ae454c877b97855d65b4fe7c9562be",
+      "bytes": 146993758,
+      "entries": 929,
+      "manifestChecks": 928,
+      "crc": "PASS",
+      "changedFiles": [
+        "index.html",
+        "sw060.js",
+        "game060.js",
+        "holder-identity784.css",
+        "hor-version.js"
+      ],
+      "libraryFileId": "libfile_007f6d0bceec8191bd6a216fef34a35e",
+      "tests": "24 portrait cases; text inside borders; unchanged hand bounds; career touch; landscape restoration; coherent786 offline restart",
+      "physicalAndroidTested": false,
+      "ownerFeedback": "784 placement looks good; text jumbled. Correction requested; not blanket candidate approval."
     }
   ],
   "testSiteBuild": "779",
