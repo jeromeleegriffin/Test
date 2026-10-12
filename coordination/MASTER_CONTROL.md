@@ -106,3 +106,10 @@ Owner approved 779 as the new baseline and authorized this Master Brain update a
 Exact 779.zip SHA256: 94963b99f7e8bee5b9714f39e01e25cc2dfcd25c2bf1dd0c6861c48fbb233c4d. Runtime deployment commit: 6872e4ebc64b78691564eb2ae0c41761fb0e1ada. Git verification matched all 591 runtime files; live HTTP verification matched all 17 selected code/art files. Production is unchanged. Prior immutable Brain versions and all existing build evidence are preserved. No new build, image generation, full audit or packaging was repeated.
 
 Complete checkpoint: [Master Brain Z](../brain/versions/Z/files/00_START_HERE/START_HERE.md). Current pointer: brain/current.json. Recovery receipt and complete runtime manifest are in Z/files/03_EVIDENCE. Physical Android and live PeerJS verification remain unclaimed; the 766 long audit stays paused.
+
+
+## 2026-10-12 — owner-approved full-cast trump recordings
+
+Jerome approved ALL delivered voice recordings and authorized this durable checkpoint. [Full cast voice handoff](FULL_CAST_TRUMP_VOICES_023.md) records 023.zip (Library libfile_25682ceb2d4c81919546ac624ee3119d), 464 MP3s for 116 bot/human avatars, four trump colors each, plus preservation of Jerome's real recordings. 112 existing clips reused;352 new blended clips. Audio is OWNER-APPROVED; avatar casting remains provisional; game integration is PENDING. Do not regenerate accepted clips. No proof of116 perceptually distinct voices is claimed.
+
+Only four trump lines now; other dialogue and long samples are deferred. Active work session must retrieve023 and reconcile exact roster/mappings with its latest source, preserve Male/Female/Silent and current Jerome permissions, and test integration. Preserve actual-lay-down-only timing for “I have the rest”/“The rest are mine.” No deployment, baseline promotion or runtime change by this checkpoint. BrainZ history remains immutable; current pointer links this supplement. Registry's newer783–789 work remains unchanged. Separate chats must read this record on resume; no automatic notification is claimed.
