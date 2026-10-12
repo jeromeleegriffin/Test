@@ -72,5 +72,13 @@
   "backupIntelligence": "Sol7 original frozen",
   "epaEnabled": false,
   "sha256": "3e84d040d1fd1da276c78d339ac7e49e2e5928aebfdb27c9e92f83b57a1b5c04",
-  "sha256Scope": "primaryDocumentation"
+  "sha256Scope": "primaryDocumentation",
+  "pendingResponsiveTabletRepair": {
+    "status": "PENDING_OWNER_REQUESTED_NEXT_GAME_UPDATE",
+    "record": "../coordination/RESPONSIVE_TABLET_NEXT_UPDATE.md",
+    "ownerAuthorizedDate": "2026-10-11",
+    "reportLibraryFileId": "libfile_7721bbf5e5cc819196f4855987c3eab3",
+    "instruction": "Read before next updated playable ZIP; reproduce on latest verified source, repair confirmed responsive defects while preserving approved phone pixels; document blockers and carry pending until validated. No deployment or artwork generation.",
+    "physicalTabletVerified": false
+  }
 }
