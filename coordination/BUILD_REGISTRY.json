@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "775",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 778,
+  "nextNumberHint": 779,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1083,7 +1083,25 @@
         "coherent777Offline": true,
         "originalArtAudioIdentical": true
       },
-      "testLimits": "Chromium153 simulation and real-handler local transport loopback; no physical Android, live PeerJS, installed cache upgrade, or full match. Willow/Brandy cream-edge cosmetics remain. Landing avatar/voice chooser deferred. Long tournament remains paused."
+      "testLimits": "Chromium153 simulation and real-handler local transport loopback; no physical Android, live PeerJS, installed cache upgrade, or full match. Willow/Brandy cream-edge cosmetics remain. Landing avatar/voice chooser deferred. Long tournament remains paused.",
+      "ownerReview": {
+        "date": "2026-10-12",
+        "statement": "It's hard for me to check every one of them, but all the ones I looked at look great, so let's continue.",
+        "scope": "Reviewed appearances accepted; proceed. Not individual verification of every character or blanket runtime certification."
+      }
+    },
+    {
+      "number": "778",
+      "reservationId": "entry-identity-312e2e305ea7-20261012",
+      "workstream": "Character Studio077 / entry identity",
+      "task": "Name-page avatar and existing voice selection; preserve777 cast and protections",
+      "sourceGameBuild": "777",
+      "sourceSha256": "28d044c5bdb23b9b4064fd3a33c66b8ec89cd6079aef2697a662929d59b25076",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD"
     }
   ],
   "testSiteBuild": "772"

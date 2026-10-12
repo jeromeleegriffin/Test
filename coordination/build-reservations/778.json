@@ -1,0 +1,13 @@
+{
+  "number": "778",
+  "reservationId": "entry-identity-312e2e305ea7-20261012",
+  "workstream": "Character Studio077 / entry identity",
+  "task": "Name-page avatar and existing voice selection; preserve777 cast and protections",
+  "sourceGameBuild": "777",
+  "sourceSha256": "28d044c5bdb23b9b4064fd3a33c66b8ec89cd6079aef2697a662929d59b25076",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD"
+}
