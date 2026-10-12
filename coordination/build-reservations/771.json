@@ -1,0 +1,13 @@
+{
+  "number": "771",
+  "reservationId": "responsive-catchup-fa72cc1b4ad4-20261012",
+  "workstream": "Main continuation / scoped responsive repair",
+  "task": "Owner requested catch-up from770, preserve approved769 and Cleaner separation; isolated tablet responsive corrections",
+  "sourceGameBuild": "769",
+  "sourceSha256": "8921db4f71c3a404110f9acafd2255a04ade1c3d6c085ad9ee17208fe5456142",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD"
+}
