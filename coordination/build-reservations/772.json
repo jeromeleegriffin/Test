@@ -5,8 +5,30 @@
   "task": "Isolated loading/retry repair; preserve approved771 and artwork",
   "sourceGameBuild": "771",
   "sourceSha256": "c342f1e67db3f62a0fe69b1ecf71a309ca85e5fddda5603202c77a0239f28b8c",
-  "status": "RESERVED",
+  "status": "DELIVERED_PENDING_OWNER_REVIEW",
   "date": "2026-10-12",
   "deploymentStatus": "NOT_DEPLOYED",
-  "ownerApproved": false
+  "ownerApproved": false,
+  "filename": "772.zip",
+  "bytes": 87150590,
+  "entries": 392,
+  "sha256": "1bbba202c01718678e45ad881183f969e38b4bf55ab3e559c9d39b90307ae6c0",
+  "libraryFileId": "libfile_977e5ff38f108191a0cd9319764c732e",
+  "reviewLibraryFileId": "libfile_cff0be8649308191ae4753cd3182b699",
+  "evidenceLibraryFileId": "libfile_5bf2422aa35c81919e187810f15fc4da",
+  "checkpoint": "coordination/HOSTED_LOADING_772.md",
+  "physicalAndroidTested": false,
+  "tests": {
+    "startupImages": 71,
+    "normalSlowTransientPersistentRetry": true,
+    "readablePendingCard": true,
+    "shuffleSamePageRecovery": true,
+    "actualBidKittyDiscardLAST": true,
+    "upgrade771To772": true,
+    "offlineAllStartupImages": true,
+    "savedDataPreserved": true,
+    "previousCacheRetained": true,
+    "artworkUnchanged": true
+  },
+  "testLimits": "Chromium simulation; no physical bandwidth benchmark, real712worker migration, live multiplayer or long audit. Hosted771 unchanged."
 }
