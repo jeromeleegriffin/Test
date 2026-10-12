@@ -1135,11 +1135,32 @@
       "task": "Willow sage and Brandy dusty-blue shirts; six clean seated views and two matching portraits",
       "sourceGameBuild": "778",
       "sourceSha256": "f69b0eed0f6e7a1f9075ecee0e5cf33bd4a66b698b431f2d0dd082efc125682b",
-      "status": "RESERVED",
+      "status": "DELIVERED_CORRECTION_COMPLETE_OWNER_PREVIEW_WAIVED",
       "date": "2026-10-12",
       "ownerApproved": false,
       "physicalAndroidTested": false,
-      "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD"
+      "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD",
+      "filename": "779.zip",
+      "bytes": 112833516,
+      "sha256": "94963b99f7e8bee5b9714f39e01e25cc2dfcd25c2bf1dd0c6861c48fbb233c4d",
+      "entries": 591,
+      "crc": "PASS",
+      "manifestChecks": 591,
+      "libraryFileId": "libfile_5cb821d9107481919fce1e03a1f22c66",
+      "fileId": "file_000000003f8882308f42d9c388b8602f",
+      "reviewLibraryFileId": "libfile_ed8168af83e0819186dc88ac67d7da81",
+      "checkpointLibraryFileId": "libfile_56499a0fd0a48191bb62bd81df8f8cfe",
+      "tests": {
+        "correctedSeatViews": 6,
+        "matchingPortraits": 2,
+        "actualTablePixelInspection": true,
+        "coherent779Offline": true,
+        "allOtherAssetsIdentical": true,
+        "gameCodeOnlyVersionChanged": true,
+        "deltaReconstructionFiles": 591
+      },
+      "testLimits": "Chromium393x693DPR2 actual renderer; no physical Android/livePeerJS/fullmatch/installedcacheupgrade. Pale edge defect corrected at game size, not mathematical alpha perfection at arbitrary zoom.",
+      "ownerInstruction": "Go ahead and correct those, and I don't need to see it. Just fix it."
     }
   ],
   "testSiteBuild": "772"
