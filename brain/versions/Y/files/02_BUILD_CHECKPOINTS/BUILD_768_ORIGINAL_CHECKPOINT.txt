@@ -1,0 +1,72 @@
+CHARACTER STUDIO077 — CROW ARM CORRECTION —768
+OWNER ANDROID REVIEW PENDING; NO DEPLOYMENT
+
+Why this exists
+Jerome's actual Android screenshot of767 establishes that Crow's right-seat arm is cut off and turned unnaturally. Owner rejected it; assistant's earlier visual pass was wrong and is superseded. Inspection of the original generated image found an impossible double sleeve/elbow construction. The old foreground extraction also omitted the joint. Zero felt leakage alone never proves correct anatomy.
+
+Correction
+One targeted built-in imagegen edit uses the preserved Maya/Crow identity reference to construct one continuous shoulder/upper arm/elbow/forearm/wrist/hand. A matching foreground layer includes the whole rail-crossing limb and sleeve connection from those SAME pixels; it is not an independently pasted hand or forearm. Her hand rests palm-down along the inner rail edge, wrist follows the forearm and other arm rests in her lap. The replacement is a new right-seat pose of the same character; her head scale and runtime seat anchors are unchanged. The complete prompt and raw1024x1536 master are in working. Production body and foreground PNGs512x768.
+
+Scope and preservation
+Only crow-right.png and crow-right-arm.png are visually replaced. Four version/cache files become768. All eight other character/seat assets, TABLE003, masking geometry, character module/CSS, voice assignments, game rules, bot engines and protected UI are byte-identical to767. This correction does not move the Thinking bubble. Source-change report and rollback copies included. All original12 boards, studies and rejected image sources retained in inherited BUILD_767/original-art. Historical767 screenshots remain in unchanged767.zip, Library libfile_5102a55f2a848191a262e526d356d105; latest screenshots are in BUILD_768/evidence. Duplicate history screenshots omitted from768 to keep download below500MB; none deleted from preserved767. 767 remains rejected for Crow right anatomy; do not reinstate its visual pass.
+
+Verification
+Actual headless Chromium153 mobile/touch rendering, not a physical Android test. Corrected Crow right inspected in full table and close-up, including393x648 phone proportions,393x693,320x568,412x915. All nine character-seat combinations and existing identity voices rerun through real renderer with controlled roster fixtures; four local view indices and real saved Crow favorite-partner selection passed. All three native alpha permutations have zero character pixels within the inset felt test mask. Anatomy also visually inspected; do not use that pixel metric as anatomical approval. Actual46-flight1x deal completed once with stable anchors; fresh coherent768 worker cached corrected assets and offline reload passed. Two real scored hands passed with original bot logic and zero illegal-play/page errors. Natural hand counts10/8/7; actual renderer fixtures10/8/7/4/1 passed. Landscape on/off pixels identical. Bid controls and LAST visual evidence retained; raw lastOpened=false is a zero-bounds parent predicate, child mini cards visible in screenshot. No voice recordings or trump logic changed.
+
+Review on Android
+Use the same isolated ZIP Player workflow used to open767: load768.zip as a NEW candidate and confirm768, not767. No deployment performed by this session. Do not overwrite production or clear its cache/storage. This is an HTML web-game ZIP, not APK. If using a Windows local server instead, extract to a NEW folder and run START_WINDOWS.bat (Python3 required), then open http://YOUR-PC-LAN-IP:8001/ on Android Chrome on the same private Wi-Fi. Stop any older local server on that port first or choose an unused port. Plain LAN HTTP can limit install/offline features; actual Android offline is not claimed. No public hosting authorized.
+Start Solo Practice and inspect Crow whenever she occupies right. If Crow starts elsewhere, identity/seat mapping remains random per existing behavior; see CHARACTER_REVIEW.html and nine-combination screenshots. Check sleeve-to-elbow continuity, hand direction/contact with wood, no felt leakage, then deal/play and rotate device. Please judge actual phone pixels; candidate remains unapproved until Jerome reviews.
+
+Rollback and remaining limits
+Keep767.zip unchanged for comparison, but do not treat its Crow arm as accepted. Closing768 and reopening the prior isolated candidate restores prior behavior. rollback767 contains the two old PNGs and four previous version files for forensic comparison. It is safer to use distinct origins than to mix service-worker versions. Production unaffected. No physical Android, live PeerJS multiplayer or subjective audio listening tests performed here. Brain remains X; no Master Brain publication. Shared coordination records identify768; future chats must read them explicitly. Original complete reading/continuity rules follow in HANDOFF and NEXT_CHAT_STARTUP and must pass forward verbatim.
+
+Successor: continue768, do not restart. Pass these complete rules verbatim in every successor handoff/startup.
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+Explicit requirement: pass both the complete reading rule and the complete continuity rule verbatim to every successor. Do not summarize them.

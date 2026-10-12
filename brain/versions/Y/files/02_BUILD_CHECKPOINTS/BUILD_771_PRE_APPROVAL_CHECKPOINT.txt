@@ -1,0 +1,100 @@
+GRIFFIN HOUSE OF ROOKS — 771 ISOLATED RESPONSIVE REVIEW / MAIN CONTINUATION
+Owner Jerome Griffin. October 12 UTC / October 11, 2026 Eastern.
+Status: isolated candidate ready for owner Android review. NOT OWNER-APPROVED. NOT DEPLOYED.
+
+LATEST INSTRUCTION AND PUBLICATION BOUNDARY
+Owner requested continued catch-up in this existing session, including the responsive task newly recorded in Brain X. The earlier publication hold remains. Only build-number coordination was updated under the permanent shared numbering policy; no runtime repository files or Master Brain pointer/version were changed. No production, player storage or existing installation changes.
+
+BASE AND PACKAGE
+Exact owner-approved 769 archive SHA-256 8921db4f71c3a404110f9acafd2255a04ade1c3d6c085ad9ee17208fe5456142.
+Runtime source is the already verified Cleaner001 retained copy of769, not a reconstruction from mixed candidates. Original769 and all excluded histories/artwork remain in their protected locations and saved Cleaner archives. Preserve all12 character concepts. Existing selected Cinder/Elena02 female, Dagger/Adrian07 male, Crow/Maya01 female remain; separate left/top/right poses and Crow arm retained.
+771.zip: 87147609 bytes; 390 files; SHA-256 c342f1e67db3f62a0fe69b1ecf71a309ca85e5fddda5603202c77a0239f28b8c.
+All runtime originals retained. Two presentation files added. Five existing files modified. Artwork/audio/X1/vendor files byte-identical. game060.js differs ONLY in APP_VERSION769->771.
+Reservation: responsive-catchup-fa72cc1b4ad4-20261012; commit e4a029b6e20e44bee39088d19f7693763a374939. Brain remains X.
+
+CONFIRMED REPAIRS
+1. Portrait CSS widths above428: register Bid Box center to existing holder center and leave8px above the rendered hand. Connector remains original bridge004 raster, registered by unchanged holder004.js, visible only with the Bid Box. TABLE003 and holder geometry untouched.
+2. Same tablet widths: position POT above current hand bounds, allowing hand resizing without covering ranks.
+3. Landscape discard: replace centered overflow with start-aligned scrolling and a shrinkable grid column. First cards were outside the scroll origin in long suits. Existing click/selection/Confirm handlers unchanged.
+4. Portrait tablet header controls have40px minimum height; phone appearance is unchanged. Existing header/tab styles otherwise retained. This is not a claim of44px targets everywhere.
+5. Tablet status pills are clamped inside the app's existing hard clip rather than being truncated when the full-width scene extends beyond its520px container. Identity/voice/actor mappings unchanged; phone placement unchanged.
+Changed files: characters077.js, game060.js, hor-version.js, index.html, responsive-review.css, responsive-review.js, sw060.js.
+
+TEST EVIDENCE
+Chromium153 Linux touch/mobile simulation, NOT physical Android.
+Seven CSS viewports:393x693,412x915,667x916,667x1016,500x662,1016x567,762x400. DPR2 for this matrix.56 hand fixtures covering14,10,8,7,6,4,2,1. Screenshots and geometry retained separately from runtime ZIP. Phone card, character and POT rectangles exactly match769 at393/412 across all eight hand counts.
+Every one of16 discard cards selected/deselected through the existing tap handler at all seven sizes, using automation scrolling to reveal offscreen cards; six selections and enabled Confirm verified at each. This is not a physical swipe/latency test.
+Existing real human Bid button exercised; controlled winning-bid fixture ran real Kitty merge, Continue, six taps and Confirm, leaving10cards and entering trump. LAST controls/visible close and screenshot checked. Fresh771 worker/cache/page/script coherence and offline reload passed. New presentation assets and character module cached. No recorded JS errors in successful checks.
+Before/after screenshots visually inspected for tablet bid/hand/rail alignment,7/8card clearance, pot position, landscape discard, status labels and phone continuity. Full long tournament intentionally NOT restarted. Earlier766 partial audit remains38scored hands/7matches, no completed final assertion. 769 historical gameplay tests are inherited, not represented as newly run771 matches.
+Harness notes: first synthetic phase change left a stale visible Bid Box; corrected fixture closes it explicitly before play. Earlier synthetic next-viewport bids omitted renderHand; corrected visual rerun restores hand and rerenders. These were test setup corrections, not gameplay patches. Preliminary screenshots retained as preliminary, with final natural bidding screenshot separately identified.
+
+REMAINING / LIMITS
+Owner phone/tablet review pending. Actual onn Chrome viewport/DPR unknown. Landscape retains the existing alternate theater; no landscape artwork redesign or new human-portrait layout. No physical audio, multiplayer, owner profile/cache upgrade, Moon outcome or full771match test claimed. Existing protected phone card geometry deliberately unchanged; owner pixels prevail. The tablet task is implemented in771 and awaits owner validation, not silently declared universally responsive.
+Original tablet study HTML could not be read this turn: two Library read attempts returned Transport closed. The current published detailed responsive authority was fully read; issues independently reproduced in actual source. Earlier H–X authority reading and verified cached sources reused; no claim of a fresh reread of every historical binary appendix.
+
+RECOVERED MAIN-CHAT WORK
+770.zip passed ZIP CRC and57 manifest hashes. It is a handoff, not a game. Four766 Git blobs remain unavailable (404 on first confirmed request; other requests not individually resolved beyond error in initial batch), source payloads remain in770. Other completed uploads preserved. No upload restarted. Test root was712 at770handoff; no new deployment by this session. BrainX stale766pending/751approval fields must be reconciled with owner approvals766and769 when authorized. Do not execute770's older publish prompt while current hold applies. If owner still wants exact766 as hosted clean base, it is distinct from latest approved769 and review771: never silently substitute or downgrade the latter.
+
+CLEANER CONTINUITY
+Original769477,976,302bytes; slim76987,145,839bytes.77187,147,609bytes, only1770bytes above slim769. Development history, masters and raw screenshots stay outside playable ZIP. All83 precaution/unknown retained assets remain. packaging/runtime-allowlist.json reviews every390candidate file and new dependencies. package.py fails on new/missing/changed source, exclusions of required files, unsafe paths, or output collision; verifies hashes and ZIP CRC. Do not package a whole workspace.
+
+ANDROID REVIEW AND ROLLBACK
+Extract771.zip into a NEW folder. Use the same isolated ZIP preview workflow used for769, or on Windows run python -m http.server 8002 --bind 0.0.0.0 from the extracted folder, then open http://YOUR-PC-LAN-IP:8002/ on the same Wi-Fi. Do not overwrite an existing installation. LAN HTTP typically cannot install a service worker; Android offline needs an already approved secure/localhost workflow. No APK or public host was created.
+Check marker771; bid/pass and connector;10/8/7/4/1cards; POT; Thinking/Lead; all three characters; Kitty and six-card selection; portrait/landscape. Check phone first, then tablet if available. Do not press FRESH/reset or clear saved data/caches for this review.
+Rollback: close isolated771, return to untouched approved769/current installation. Original769 Library libfile_f22b4556aa508191a1d347a3e9a94829; slim769 libfile_790af737eb4481919c73b922e2e48307. Test-root rollback/test-before-766 preserved.
+
+NEXT ACTION / MASTER CONTROL
+Present771for Android owner review. Await authorization before any runtime deployment or Brain successor publication. Ready checkpoint includes Character Studio approval769, Cleaner separation,770recovery,771scoped responsiveness and pending physical review. Re-fetch current.json, current main and all relevant shared work before any future publication. Never overwrite newer tablet record or frozen Brain versions. Coordinate status via verified records; no claim other chats were notified.
+
+Both permanent rules follow verbatim and must pass to each successor:
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+Explicit successor requirement: Pass both permanent rules verbatim to every future replacement chat.
+

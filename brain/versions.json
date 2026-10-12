@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "brainVersion": "Y",
+      "updated": "2026-10-12",
+      "browse": "versions/Y/files/00_START_HERE/START_HERE.md",
+      "artifact": "",
+      "sha256": "0de6c037e1b2c87f88c4513aaf05b968fc87baa06b70c29e3eaf1cffd3b21706",
+      "sha256Scope": "primaryDocumentation",
+      "archiveStatus": "771 approved and Test deployed; complete Character077/Cleaner001/responsive catch-up; production unchanged"
+    },
+    {
       "brainVersion": "X",
       "updated": "2026-10-11",
       "browse": "versions/X/files/00_START_HERE/START_HERE.md",

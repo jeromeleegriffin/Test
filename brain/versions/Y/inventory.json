@@ -1,0 +1,88 @@
+{
+  "brainVersion": "Y",
+  "parentVersion": "X",
+  "updated": "2026-10-12",
+  "documentationOnly": true,
+  "files": [
+    {
+      "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+      "bytes": 10715,
+      "sha256": "49a79326c486574dfef3c6624048d255296c2438f67434d77bc10e11f679f954"
+    },
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 10652,
+      "sha256": "8814dcbe0834a8c75a95aade41435c790612c28e97e7926e59571921a52dffed"
+    },
+    {
+      "path": "files/01_MASTER_BANK/GRIFFIN_HOUSE_BRAIN_Y_771_CHECKPOINT_2026-10-12.md",
+      "bytes": 10556,
+      "sha256": "0de6c037e1b2c87f88c4513aaf05b968fc87baa06b70c29e3eaf1cffd3b21706"
+    },
+    {
+      "path": "files/02_BUILD_CHECKPOINTS/BUILD_767_ORIGINAL_CHECKPOINT.txt",
+      "bytes": 9826,
+      "sha256": "e84bbb17cb3ccf9216f2806c063458ab28257d7489aa7e87d9feaa68827b7cf8"
+    },
+    {
+      "path": "files/02_BUILD_CHECKPOINTS/BUILD_768_ORIGINAL_CHECKPOINT.txt",
+      "bytes": 8246,
+      "sha256": "0aedd5c248f0c79e8c142ccc587b55b1136b4ad55d0a2098409c35ff30e4f6be"
+    },
+    {
+      "path": "files/02_BUILD_CHECKPOINTS/BUILD_769_ORIGINAL_CHECKPOINT.txt",
+      "bytes": 7707,
+      "sha256": "5e3e6d137f4f8b7ca47190130dc57fa69cce5ed3cac7a07a900dbeff703b9a22"
+    },
+    {
+      "path": "files/02_BUILD_CHECKPOINTS/BUILD_771_PRE_APPROVAL_CHECKPOINT.txt",
+      "bytes": 11409,
+      "sha256": "e58c76b8169770a7db3f129f49044d8998c0bd37b7e35ac1edc3e4098af21c1c"
+    },
+    {
+      "path": "files/02_BUILD_CHECKPOINTS/CLEANER001_ORIGINAL_HANDOFF.txt",
+      "bytes": 7547,
+      "sha256": "ea7d859c17914b63f66e586db3067a84a282c43103337f680bd6992e6ec5e093"
+    },
+    {
+      "path": "files/03_EVIDENCE/771_CHECKSUMS.json",
+      "bytes": 395,
+      "sha256": "9066d59d5f23c331e215891d2d70ebcc1abfa8448f6788d3bb8a02143c867a22"
+    },
+    {
+      "path": "files/03_EVIDENCE/771_DELIVERY.json",
+      "bytes": 1085,
+      "sha256": "ca9d4a582e8a92dec5e7c67898cf477e2cbdfbd51da2bec3de73af2f1b03daa1"
+    },
+    {
+      "path": "files/03_EVIDENCE/771_DEPLOYMENT_COMMIT.json",
+      "bytes": 181,
+      "sha256": "52895d8cb4903c8e6c46e1e17e4c580cc3f91cb69046ed49c0ca3e910437950c"
+    },
+    {
+      "path": "files/03_EVIDENCE/771_DEPLOYMENT_RECEIPT.json",
+      "bytes": 2590,
+      "sha256": "f67a4e145960595ea2bc4aa9d578f7e22d56c6b776ceebf125f4ea8cb595f0bd"
+    },
+    {
+      "path": "files/03_EVIDENCE/771_RUNTIME_GIT_MANIFEST.json",
+      "bytes": 58039,
+      "sha256": "bc3390abfa9bb41b42a96a1cd77f9a8f74d2efa7e4e17de48a93a29ca655d590"
+    },
+    {
+      "path": "files/03_EVIDENCE/CLEANER001_DELIVERY.json",
+      "bytes": 4148,
+      "sha256": "5eb40530d0ff0f1e142a69e31793249df8a0262cdec71e3a231ef9cc6357a712"
+    },
+    {
+      "path": "files/04_PACKAGING/package.py",
+      "bytes": 3446,
+      "sha256": "7f352b5096f595c8d934cc58a13b9688ff9192e1a76ad2b0cccbb3f1a01b2100"
+    },
+    {
+      "path": "files/04_PACKAGING/runtime-allowlist.json",
+      "bytes": 100437,
+      "sha256": "3fe4940906a6787dfa86607a9acba90e4ffbc4ce682fc593a3ceb320467841df"
+    }
+  ]
+}
