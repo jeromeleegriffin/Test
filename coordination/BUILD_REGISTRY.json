@@ -1335,12 +1335,26 @@
       "task": "Relocate existing human identity/career, bid and pot into approved front-face plaques; isolated candidate only",
       "sourceGameBuild": "783",
       "sourceSha256": "813748886c0668aabf5ba06a9ae65a8a0878e7339a31bbbc3203716a1acd3b38",
-      "status": "RESERVED",
+      "status": "IMPLEMENTED_TESTED_PENDING_OWNER_REVIEW_NOT_PACKAGED",
       "date": "2026-10-12",
       "ownerApproved": false,
       "physicalAndroidTested": false,
       "deploymentStatus": "NOT_DEPLOYED",
-      "expectedMainSha": "6db5384174e81157d2fd3bf4146a37d65fc866b3"
+      "expectedMainSha": "6db5384174e81157d2fd3bf4146a37d65fc866b3",
+      "reviewLibraryFileId": "libfile_490b7389f5c88191a7853af1373c90d2",
+      "reviewFilename": "784-Cardholder-Review.html",
+      "reviewSha256": "d359c403621de3076a0f8b0e1fe0db3c616eafd333b2f71a2d5cad55608a01b1",
+      "changedRuntimeFiles": 7,
+      "unchangedSourceAndHandoffFiles": 890,
+      "tests": {
+        "portraitCases": 36,
+        "geometryPairs": 20,
+        "actualScoredHands": 2,
+        "liveStateSamples": 553,
+        "careerTouchKeyboard": true,
+        "offlineReload": true
+      },
+      "testLimits": "Chromium143 simulations; no physical Android, live multiplayer/reconnect or installed-cache upgrade. No game ZIP packaged; source and evidence embedded in review."
     }
   ],
   "testSiteBuild": "779",
