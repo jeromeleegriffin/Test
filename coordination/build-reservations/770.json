@@ -3,9 +3,20 @@
   "reservationId": "main-continuation-zip-6565ad6cab12",
   "workstream": "Main session continuation",
   "task": "Single ZIP conversion of complete saved handoff; NOT a playable game",
-  "status": "RESERVED",
+  "status": "DELIVERED",
   "date": "2026-10-12",
   "ownerApproved": false,
   "deploymentStatus": "NOT_APPLICABLE",
-  "packageType": "CONTINUATION_HANDOFF"
+  "packageType": "CONTINUATION_HANDOFF",
+  "bytes": 10033358,
+  "sha256": "2352011fbb442147a552696d3d759099ae1322b511f09e32f5084dafc40c14ca",
+  "entries": 59,
+  "filename": "770.zip",
+  "libraryFileId": "libfile_e5e66e4fc674819199625eed3d2be2a8",
+  "fileId": "file_00000000339c820cbcc8c700ff9f5ace",
+  "crc": "PASS",
+  "manifestChecks": 57,
+  "checkpointStatus": "Complete handoff, startup, upload progress and paused audit; both continuity rules verbatim. BrainX unchanged.",
+  "testServerStatus": "712 last HTTP observation;766 upload unfinished",
+  "gameBuild": false
 }
