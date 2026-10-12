@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "779",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 782,
+  "nextNumberHint": 783,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1231,6 +1231,19 @@
       "brainVersion": "Z",
       "brainStatus": "UNCHANGED; unpublished candidate saved",
       "newAssetBytes": 340019
+    },
+    {
+      "number": "782",
+      "reservationId": "human64-312e2e305ea7-20261012",
+      "workstream": "Human avatar expansion",
+      "task": "64 saved human designs,192seated views,on-demand assets,human-only selection;preserve781 founder and52bots",
+      "sourceGameBuild": "781",
+      "sourceSha256": "4eac64e3b37cc805be37451585f45b1499c333317e0964893dbef2730fd3d2bc",
+      "approvedBaseline": "779",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "deploymentStatus": "NOT_DEPLOYED"
     }
   ],
   "testSiteBuild": "779"
