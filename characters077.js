@@ -65,6 +65,8 @@ function castPool(pool){if(!enabled)return pool;const selected=pool.filter(p=>ch
 function setEnabled(value){enabled=!!value;sync();}
 window.HORCharacterStudio077={characters,castPool,sync,positionStatus,positionLead,setEnabled,inspect:()=>({enabled,ready,portrait:portrait(),geometry:geom(),seats:seats.map(s=>({...s,active:!!occupant(s),occupant:occupant(s)})),outside})};
 const paths=Object.values(characters).flatMap(c=>[...Object.values(c.poses),...Object.values(c.foreground||{})]);
-Promise.all(paths.map(path=>new Promise((resolve,reject)=>{const i=new Image();i.onload=resolve;i.onerror=reject;i.src='assets/characters077/'+path;}))).then(()=>{ready=true;sync();}).catch(()=>{ready=false;sync();console.warn('Character artwork unavailable; original portraits retained.');});
+let loadingCharacters=false;
+function loadCharacters(){if(ready||loadingCharacters)return;loadingCharacters=true;Promise.all(paths.map(path=>window.HORAssetLoading772.image('assets/characters077/'+path))).then(()=>{ready=true;sync();}).catch(()=>{ready=false;sync();}).finally(()=>{loadingCharacters=false;});}
+loadCharacters();addEventListener('online',loadCharacters);document.addEventListener('click',loadCharacters);document.addEventListener('visibilitychange',()=>{if(!document.hidden)loadCharacters()});
 addEventListener('resize',schedule);addEventListener('orientationchange',schedule);document.addEventListener('visibilitychange',schedule);new MutationObserver(schedule).observe(document.body,{attributes:true,attributeFilter:['class']});
 })();

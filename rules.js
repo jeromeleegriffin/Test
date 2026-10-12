@@ -89,7 +89,8 @@ function cardInnerHTML(card) {
     return `
       <div class="c-stack rook-stack">
         <img class="rook-bird-img" src="${document.documentElement.classList.contains('hor-original-cards') ? 'assets/images/Rook.png' : 'assets/images/RookPremium.png?v=rook036'}" alt="Rook" draggable="false"
-          onerror="this.style.display='none'">
+          onload="this.style.display='block';this.nextElementSibling.style.display='none'" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="asset-bird-fallback772">BLACK BIRD</span>
       </div>
     `;
   }
@@ -100,7 +101,8 @@ function cardInnerHTML(card) {
       return `
         <div class="c-stack red2-stack">
           <img class="red2-img" src="${document.documentElement.classList.contains('hor-original-cards') ? 'assets/images/Red2.png?v=632' : 'assets/images/Red2-card.webp?v=rook036'}" alt="Red 2 Trump" draggable="false"
-            data-fallback="1" onerror="window.__red2ImgError&&window.__red2ImgError(this)">
+            data-fallback="1" onload="this.style.display='block';this.nextElementSibling.style.display='none'" onerror="this.nextElementSibling.style.display='flex';window.__red2ImgError&&window.__red2ImgError(this)">
+          <span class="asset-bird-fallback772">RED 2</span>
         </div>
       `;
     }
@@ -137,10 +139,10 @@ function cardInnerHTML(card) {
   return `
     <div class="c-stack numbered-asset-stack">
       <img class="numbered-card-img" src="${assetSrc}" alt="${color} ${rank}" draggable="false"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="numbered-card-fallback" style="display:none">
-        <div class="c-num${needsOrientationMark036 ? ' number-ambiguous036' : ''}">${rank}</div>
-        <div class="c-color">${color}</div>
+        onload="this.style.display='block';this.nextElementSibling.style.display='none'" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="numbered-card-fallback" style="display:flex">
+        <div class="asset-fallback-rank772${needsOrientationMark036 ? ' number-ambiguous036' : ''}">${rank}</div>
+        <div class="asset-fallback-color772">${color}</div>
       </div>
       ${orientationMark036}
     </div>

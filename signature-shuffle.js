@@ -36,7 +36,7 @@ function start(ov,ms){
  ov.classList.add('signature-shuffle');canvas=document.createElement('canvas');canvas.className='signature-shuffle-canvas';canvas.setAttribute('aria-hidden','true');ov.appendChild(canvas);
  player=new GriffinShuffleAsset.Player(canvas,{skipCornerHold:true});const token=generation,p=player;
  geometry(0);last={mode,duration,minimal,art:'approved Griffin PNG',frames:168,omittedStationaryFrames:17,removedHoldMs:GAP,releaseDurationAt1x:850};
- p.seek(minimal?5599:0).then(()=>{if(!active||token!==generation)return;if(p.last<0){generation++;silence();canvas.remove();canvas=null;p.close();player=null;ov.classList.remove('signature-shuffle');mode='legacy-fallback';legacy.start(ov,Math.max(1,ms-(performance.now()-started)));if(soundRequested)legacy.sound();last.fallback='asset unavailable'}});
+ p.seek(minimal?5599:0).then(()=>{if(!active||token!==generation)return;if(p.last<0){last.fallback='approved poster while retrying';last.assetUnavailable=true}});
  raf=requestAnimationFrame(tick);
 }
 function load(ctx,pace){if(buffers.has(pace))return Promise.resolve(buffers.get(pace));if(pending.has(pace))return pending.get(pace);const p=fetch('assets/audio/shuffle732/'+pace+'.wav').then(r=>{if(!r.ok)throw Error('shuffle audio');return r.arrayBuffer()}).then(b=>ctx.decodeAudioData(b)).then(b=>{buffers.set(pace,b);return b}).catch(()=>null).finally(()=>pending.delete(pace));pending.set(pace,p);return p}
