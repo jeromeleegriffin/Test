@@ -5,8 +5,48 @@
   "task": "Add Claire June Tess Marcus Owen Daniel with18 distinct seat views and owner-assigned voices; isolated review",
   "sourceGameBuild": "773",
   "sourceSha256": "670dfe970bd9cc27cc4bc3347352044d0f42a467ccfb76f4a6a9edf1893cabac",
-  "status": "RESERVED",
+  "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
   "date": "2026-10-12",
   "ownerApproved": false,
-  "deploymentStatus": "NOT_DEPLOYED"
+  "deploymentStatus": "NOT_DEPLOYED",
+  "filename": "774.zip",
+  "sha256": "f3ed60eff732fd01b829fa4c50380f4355011fab8eb440bd3a35b796fb48e44b",
+  "bytes": 98824839,
+  "entries": 417,
+  "libraryFileId": "libfile_0f0e4e38578c8191a7d370814b86b354",
+  "reviewLibraryFileId": "libfile_91db788660848191ade5fe18271f8444",
+  "evidenceLibraryFileId": "libfile_e2018a3d06688191a86c87a14de55444",
+  "checkpoint": "coordination/CHARACTER_EXPANSION_774.txt",
+  "tests": {
+    "seatCombinations": 27,
+    "newFavorites": 6,
+    "viewports": 5,
+    "voiceCases": 108,
+    "dealSpeeds": [
+      1,
+      3,
+      99
+    ],
+    "handCounts": [
+      10,
+      8,
+      7,
+      6,
+      4,
+      2,
+      1
+    ],
+    "startupAssetsOnlineOffline": 95,
+    "feltOverlapPixels": 0,
+    "priorAssetsUnchanged": true
+  },
+  "testLimits": "Chromium simulated phone/touch/tablet/landscape, controlled roster/hand/winner fixtures; no physical Android/fullmatch/livePeerJS/hosted performance benchmark. Initial landscape portraits failed, corrected expected standard paths and retested.",
+  "voices": {
+    "claire": "female",
+    "june": "female",
+    "tess": "female",
+    "marcus": "male",
+    "owen": "male",
+    "daniel": "male"
+  }
 }
