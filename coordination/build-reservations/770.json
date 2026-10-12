@@ -1,0 +1,11 @@
+{
+  "number": "770",
+  "reservationId": "main-continuation-zip-6565ad6cab12",
+  "workstream": "Main session continuation",
+  "task": "Single ZIP conversion of complete saved handoff; NOT a playable game",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "deploymentStatus": "NOT_APPLICABLE",
+  "packageType": "CONTINUATION_HANDOFF"
+}

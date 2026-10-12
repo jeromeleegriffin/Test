@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "769",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 770,
+  "nextNumberHint": 771,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -756,6 +756,17 @@
         "scope": "Owner acceptance of delivered isolated769, including character appearances/Crow arm and Thinking/Lead corrections. Not deployment or Master Brain publication authorization.",
         "assistantPhysicalAndroidTestPerformed": false
       }
+    },
+    {
+      "number": "770",
+      "reservationId": "main-continuation-zip-6565ad6cab12",
+      "workstream": "Main session continuation",
+      "task": "Single ZIP conversion of complete saved handoff; NOT a playable game",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "deploymentStatus": "NOT_APPLICABLE",
+      "packageType": "CONTINUATION_HANDOFF"
     }
   ]
 }
