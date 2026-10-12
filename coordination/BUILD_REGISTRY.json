@@ -3,7 +3,7 @@
   "authority": "Test/main coordination/BUILD_REGISTRY.json",
   "policy": "coordination/BUILD_NUMBERING.md",
   "updated": "2026-10-12",
-  "approvedWorkingBuild": "774",
+  "approvedWorkingBuild": "775",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
   "nextNumberHint": 777,
@@ -984,9 +984,9 @@
       "task": "Complete original12 with Sofia Rafael Samir; isolated candidate",
       "sourceGameBuild": "774",
       "sourceSha256": "f3ed60eff732fd01b829fa4c50380f4355011fab8eb440bd3a35b796fb48e44b",
-      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
+      "status": "OWNER_APPROVED",
       "date": "2026-10-12",
-      "ownerApproved": false,
+      "ownerApproved": true,
       "deploymentStatus": "NOT_DEPLOYED",
       "workstream": "Character Studio077",
       "filename": "775.zip",
@@ -1025,6 +1025,13 @@
         "sofia": "female",
         "rafael": "male",
         "samir": "male"
+      },
+      "ownerApproval": {
+        "owner": "Jerome Griffin",
+        "statement": "Looks good, continue.",
+        "date": "2026-10-12",
+        "timeZone": "America/New_York",
+        "scope": "Acceptance of delivered775 complete12-character candidate. Specific Android device/test coverage not stated. No deployment or Master Brain publication authorization."
       }
     },
     {
