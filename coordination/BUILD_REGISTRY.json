@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "771",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 773,
+  "nextNumberHint": 774,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -874,6 +874,18 @@
       "testSiteDeploymentStatus": "DEPLOYED_HTTP_HASH_VERIFIED",
       "hostedAndroidAcceptance": "PENDING",
       "publicationAuthority": "Owner answered Yes to publish exact772 to test site only; production untouched. October11,2026 America/New_York."
+    },
+    {
+      "number": "773",
+      "reservationId": "crow-far-rail-fa72cc1b4ad4-20261012",
+      "workstream": "Character Studio077 continuation",
+      "task": "Far-seat hard rail mask contact correction; reuse original art. Isolated only.",
+      "sourceGameBuild": "772",
+      "sourceSha256": "1bbba202c01718678e45ad881183f969e38b4bf55ab3e559c9d39b90307ae6c0",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "deploymentStatus": "NOT_DEPLOYED"
     }
   ],
   "testSiteBuild": "772"
