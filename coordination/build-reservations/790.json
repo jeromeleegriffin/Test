@@ -1,0 +1,15 @@
+{
+  "number": "790",
+  "reservationId": "fullcast-trumps-pf45dc-790-20261012",
+  "workstream": "Full-cast trump voices + preserved X1 intelligent Partner-First and EPA",
+  "task": "Integrate owner-approved 023 audio into PF45dc candidate based on 788; four trump lines only; isolated Android review ZIP",
+  "sourceGameBuild": "X1-PF45dc-TEST (parent 788)",
+  "sourceSha256": "af962deb8229eb7a037ba2a1e94cc230f395f03a8591ecc65304c7a684c70d91",
+  "sourceLibraryFileId": "libfile_c4756225a35c81918688f890b201af28",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED",
+  "expectedMainSha": "7aeee17a9835e7342942a02c85f18a0d6083678a"
+}
