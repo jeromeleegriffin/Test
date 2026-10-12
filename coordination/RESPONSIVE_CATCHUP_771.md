@@ -13,3 +13,9 @@ Recovered770CRC/57hashes pass. Four766uploads remain unconfirmed/unavailable; pa
 Cleaner001 completed earlier:477.98MB original769to87.15MB retained runtime;2112excluded files preserved in separate archives.771adds only1770bytes compressed; development evidence stays outside playableZIP. Strict packaging manifest/script and all rollback information in saved evidence. No originals removed/changed, no storage reset.
 
 Next: Jerome Android review771. Responsive task remains pending owner validation, not universally certified. Deploy and publish Brain only after explicit release authorization; re-read current pointers/records. No automatic chat notification is claimed. Complete permanent reading/continuity rules retained verbatim in saved START_HERE and Brain-ready checkpoint.
+
+
+## Owner approval of 771 — October 11, 2026, America/New_York
+Jerome Griffin stated: “Seven seventy-one is approved. You can continue.” This supersedes pending owner-review wording above. Exact771.zip is OWNER_APPROVED and the accepted working baseline; archive remains unchanged, SHA256 c342f1e67db3f62a0fe69b1ecf71a309ca85e5fddda5603202c77a0239f28b8c. Scoped responsive implementation and inherited approved characters are accepted. Do not repeat the implementation. This declaration does not establish physical onn-tablet coverage or change documented testing limits. Keep physical-device coverage as unverified unless separately reported.
+
+Publishing hold remains: no runtime deployment, production modification or Master Brain successor publication. Long audit remains paused. Next release/documentation catch-up must preserve771and Cleaner separation, and distinguish exact766 historical clean fallback from the latest accepted771. Both complete continuity/reading rules and prior checkpoints remain in the saved771evidence. This coordination acceptance supplements the pre-approval archive; no new ZIP is necessary.

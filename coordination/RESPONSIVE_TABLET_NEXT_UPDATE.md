@@ -1,6 +1,6 @@
 # RESPONSIVE TABLET REPAIR — NEXT GAME UPDATE
 Owner: Jerome Griffin. Authorized 2026-10-11 (America/New_York).
-Status: PENDING — owner requests inclusion in the next new game update ZIP.
+Status: IMPLEMENTED IN 771 — OWNER APPROVED October 11, 2026. Physical tablet coverage remains unverified. Historical assignment and evidence follow.
 
 ## Standing instruction for the next build session
 Before creating the next updated playable game ZIP, read this record and the current Brain/coordination records. Include the scoped responsiveness investigation and confirmed repairs in that update without requiring Jerome to repeat this assignment. This does not authorize work now in an unrelated chat, a historical ZIP re-download/repackage, production deployment, artwork generation, or a redesign. A later explicit owner scope restriction takes precedence.
@@ -34,3 +34,9 @@ This shared record is read-on-resume coordination; it does not notify or wake an
 
 ## Implemented isolated candidate771 — pending owner Android review
 See [RESPONSIVE_CATCHUP_771.md](RESPONSIVE_CATCHUP_771.md) and registry. Confirmed scoped fixes implemented on latest verified owner-approved769/Cleaner runtime; seven-view focused browser checks passed. Source769approval is independently recorded in CHARACTERS_AND_CARDS.md. Physical tablet verification and owner approval remain pending. Do not repeat completed implementation or close this task as universally validated. No game deployment or Brain successor publication.
+
+
+## Owner approval of 771 — October 11, 2026, America/New_York
+Jerome Griffin stated: “Seven seventy-one is approved. You can continue.” This supersedes pending owner-review wording above. Exact771.zip is OWNER_APPROVED and the accepted working baseline; archive remains unchanged, SHA256 c342f1e67db3f62a0fe69b1ecf71a309ca85e5fddda5603202c77a0239f28b8c. Scoped responsive implementation and inherited approved characters are accepted. Do not repeat the implementation. This declaration does not establish physical onn-tablet coverage or change documented testing limits. Keep physical-device coverage as unverified unless separately reported.
+
+Publishing hold remains: no runtime deployment, production modification or Master Brain successor publication. Long audit remains paused. Next release/documentation catch-up must preserve771and Cleaner separation, and distinguish exact766 historical clean fallback from the latest accepted771. Both complete continuity/reading rules and prior checkpoints remain in the saved771evidence. This coordination acceptance supplements the pre-approval archive; no new ZIP is necessary.
