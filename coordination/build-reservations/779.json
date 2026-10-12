@@ -1,0 +1,13 @@
+{
+  "number": "779",
+  "reservationId": "shirt-edge-fix-312e2e305ea7-20261012",
+  "workstream": "Character Studio077",
+  "task": "Willow sage and Brandy dusty-blue shirts; six clean seated views and two matching portraits",
+  "sourceGameBuild": "778",
+  "sourceSha256": "f69b0eed0f6e7a1f9075ecee0e5cf33bd4a66b698b431f2d0dd082efc125682b",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD"
+}
