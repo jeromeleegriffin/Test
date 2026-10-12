@@ -1,0 +1,13 @@
+{
+  "number": "783",
+  "reservationId": "landing-lock-312e2e305ea7-20261012",
+  "workstream": "Approved landing page",
+  "task": "Isolated implementation of locked table-first landing, human-only avatars, voice and partner preferences",
+  "sourceGameBuild": "782",
+  "sourceSha256": "849982ca154c255c533169a3682abcc67c37ab0b971b8efb563401352efe6b12",
+  "approvedBaseline": "779",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "deploymentStatus": "NOT_DEPLOYED"
+}
