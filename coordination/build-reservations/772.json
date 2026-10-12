@@ -5,9 +5,9 @@
   "task": "Isolated loading/retry repair; preserve approved771 and artwork",
   "sourceGameBuild": "771",
   "sourceSha256": "c342f1e67db3f62a0fe69b1ecf71a309ca85e5fddda5603202c77a0239f28b8c",
-  "status": "DELIVERED_PENDING_OWNER_REVIEW",
+  "status": "OWNER_LOADER_VERIFIED_HOSTED_REVIEW_PENDING",
   "date": "2026-10-12",
-  "deploymentStatus": "NOT_DEPLOYED",
+  "deploymentStatus": "TEST_SITE_DEPLOYED_HTTP_VERIFIED",
   "ownerApproved": false,
   "filename": "772.zip",
   "bytes": 87150590,
@@ -30,5 +30,11 @@
     "previousCacheRetained": true,
     "artworkUnchanged": true
   },
-  "testLimits": "Chromium simulation; no physical bandwidth benchmark, real712worker migration, live multiplayer or long audit. Hosted771 unchanged."
+  "testLimits": "Chromium simulation; no physical bandwidth benchmark, real712worker migration, live multiplayer or long audit. Hosted771 unchanged.",
+  "ownerLoaderVerified": true,
+  "ownerLoaderStatement": "Okay, 772 works in a loader.",
+  "testSiteDeploymentCommit": "f9334187d84a2d0ee503807232cef419efe4c99d",
+  "testSiteDeploymentStatus": "DEPLOYED_HTTP_HASH_VERIFIED",
+  "hostedAndroidAcceptance": "PENDING",
+  "publicationAuthority": "Owner answered Yes to publish exact772 to test site only; production untouched. October11,2026 America/New_York."
 }
