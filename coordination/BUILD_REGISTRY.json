@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "783",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 784,
+  "nextNumberHint": 785,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1327,6 +1327,20 @@
         "statement": "Oh, I like this. Let's lock this in as the new checkpoint.",
         "scope": "783 accepted as the new development checkpoint. Preserve exact delivered ZIP and evidence. No deployment authorization; no assertion of physical Android testing."
       }
+    },
+    {
+      "number": "784",
+      "reservationId": "cardholder-identity-e42c005b93c9-20261012",
+      "workstream": "Dynamic cardholder identity and pot",
+      "task": "Relocate existing human identity/career, bid and pot into approved front-face plaques; isolated candidate only",
+      "sourceGameBuild": "783",
+      "sourceSha256": "813748886c0668aabf5ba06a9ae65a8a0878e7339a31bbbc3203716a1acd3b38",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deploymentStatus": "NOT_DEPLOYED",
+      "expectedMainSha": "6db5384174e81157d2fd3bf4146a37d65fc866b3"
     }
   ],
   "testSiteBuild": "779",
