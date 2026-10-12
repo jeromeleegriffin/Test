@@ -1167,17 +1167,13 @@
   }
 
   function markPartnerSeat() {
+    // A Rook 006: portrait partner relationship remains game state; the visible
+    // "YOUR PARTNER" presentation is intentionally removed. Clean up any
+    // legacy chip that may survive a hot reload without touching seat/name data.
     const el = $('slot-partner');
     if (!el) return;
-    let chip = el.querySelector('.partner-chip');
-    if (!chip) {
-      chip = document.createElement('div');
-      chip.className = 'partner-chip';
-      el.appendChild(chip);
-    }
-    const show = game && (game.phase === 'bidding' || game.phase === 'dealing' || game.phase === 'discard');
-    chip.textContent = 'your partner';
-    chip.classList.toggle('hidden', !show);
+    const chip = el.querySelector('.partner-chip');
+    if (chip) chip.remove();
   }
 
   function shouldShowCoach() {
@@ -1266,7 +1262,10 @@
         try {
           isSpectator = false;
           if (typeof createRoom === 'function') createRoom();
-        } catch (e) {}
+        } catch (e) {
+          const status = $('lobbyStatus');
+          if (status) status.textContent = 'Could not start multiplayer: ' + (e.message || e);
+        }
       };
     }
     document.querySelectorAll('.preset-btn').forEach((b) => {
@@ -1357,13 +1356,13 @@
   }
 
   // ---- wrap existing functions ----
+  window.addEventListener('hor-table-ready', e => { speakCode(e.detail && e.detail.code); });
   const _createRoom = window.createRoom;
   window.createRoom = function () {
     persistPlayer();
     hideTourCard();
     myName = ($('hor-player-name') && $('hor-player-name').value || '').trim() || loadPrefs().name || 'Host';
     const r = _createRoom.apply(this, arguments);
-    setTimeout(() => speakCode(roomCode), 400);
     return r;
   };
 
@@ -1492,6 +1491,35 @@
     maybeTutorial();
   };
 
+  // 743: measure only the portrait Scoreboard, including text/font/chrome changes.
+  // The compact mode recovers padding and ornament, never crops/shrinks card art.
+  let scoreFitKey743 = '', scoreFitFrame743 = 0, scoreFitObserver743;
+  function fitScoreboard743(reset = false) {
+    if (reset) scoreFitKey743 = '';
+    if (scoreFitFrame743) return;
+    scoreFitFrame743 = requestAnimationFrame(() => {
+      scoreFitFrame743 = 0;
+      const modal = $('scoreModal'), panel = modal?.querySelector('.scoreboard-modal');
+      const body = $('scoreModalBody'), board = body?.querySelector('.gh-approved-scoreboard');
+      const active = modal && board && !modal.classList.contains('hidden') &&
+        !modal.classList.contains('showing-remaining') && innerWidth <= 520 &&
+        window.matchMedia('(orientation: portrait)').matches;
+      if (!active) { modal?.classList.remove('score-compact743'); scoreFitKey743 = ''; return; }
+      const measurementKey = () => [innerWidth, innerHeight, panel.clientWidth, panel.clientHeight,
+        body.clientHeight, board.getBoundingClientRect().height,
+        getComputedStyle(document.documentElement).fontSize, board.textContent,
+        modal.querySelector('.score-modal-actions')?.textContent].join('|');
+      if (measurementKey() === scoreFitKey743) return;
+      modal.classList.remove('score-compact743');
+      if (board.getBoundingClientRect().bottom > body.getBoundingClientRect().bottom + 1 ||
+          body.scrollHeight > body.clientHeight + 1) modal.classList.add('score-compact743');
+      // Cache final geometry so compact-mode resize notifications cannot oscillate.
+      scoreFitKey743 = measurementKey();
+    });
+  }
+  window.addEventListener('resize', () => fitScoreboard743(true));
+  window.visualViewport?.addEventListener('resize', () => fitScoreboard743(true));
+
   const _showScore = window.showScoreModal;
   window.showScoreModal = function (summary) {
     _showScore.apply(this, arguments);
@@ -1502,15 +1530,34 @@
       if (body && summary) {
         const teach = document.createElement('p');
         teach.className = 'score-teach';
-        const nestLine = summary.nestPts
-          ? (' Nest ' + summary.nestPts + ' to ' + (summary.nestWinnerName || (nestGoesTo === 'bidder' ? 'makers' : 'last trick')) + '.')
+        const owned = body.querySelector('.ghsb-result-line');
+        const ownsPortraitScore = window.matchMedia('(orientation: portrait)').matches && owned;
+        const nestLine = (summary.nestPts || ownsPortraitScore)
+          ? (' Nest ' + (summary.nestPts || 0) + ' to ' + (summary.nestWinnerName ||
+              (ownsPortraitScore ? 'Winner' : (nestGoesTo === 'bidder' ? 'makers' : 'last trick'))) + '.')
           : '';
         teach.textContent = scoringSentence(summary) + nestLine +
           ' Running total: ' + teamLabel(0) + ' ' + summary.scores[0] + ' · ' + teamLabel(1) + ' ' + summary.scores[1] +
           ' (to ' + (game?.targetScore || targetScore) + ').';
         const banner = body.querySelector('.score-banner');
-        if (banner && banner.parentNode) banner.parentNode.insertBefore(teach, banner.nextSibling);
+        // The two summaries describe the same hand. Keep the existing scoring
+        // narrator's full explanation in the portrait renderer's single region.
+        // This retains set/bid-only/sandbag wording without a second copy.
+        if (ownsPortraitScore) {
+          owned.textContent = teach.textContent;
+        } else if (banner && banner.parentNode) {
+          banner.parentNode.insertBefore(teach, banner.nextSibling);
+        }
         body.querySelectorAll('.sb-label').forEach((el, i) => { el.textContent = teamLabel(i); });
+        if (!scoreFitObserver743 && window.ResizeObserver) {
+          scoreFitObserver743 = new ResizeObserver(() => fitScoreboard743());
+        }
+        if (scoreFitObserver743) {
+          const board = body.querySelector('.gh-approved-scoreboard');
+          if (board) { scoreFitObserver743.disconnect(); scoreFitObserver743.observe(body);
+            scoreFitObserver743.observe(body.closest('.scoreboard-modal')); scoreFitObserver743.observe(board); }
+        }
+        fitScoreboard743(true);
       }
     } catch (e) {}
   };
@@ -1624,25 +1671,17 @@
     };
   }
 
-  const _clientLeave = window.clientLeaveReplace;
   window.clientLeaveReplace = async function () {
+    const offline = isSoloPractice || roomCode === 'OFFLINE';
     const ok = await houseConfirm({
-      title: isHost ? 'Leave this table?' : 'Leave and seat a bot?',
-      body: isHost ? 'You are the host. Leaving ends the room for everyone.' : 'A bot will take your chair for the rest of the night.',
+      title: offline || isHost ? 'Leave this table?' : 'Leave and seat a bot?',
+      body: offline ? 'Return to the lobby from this offline game.' : isHost
+        ? 'You are the host. Leaving ends the room for everyone.'
+        : 'A bot will take your chair for the rest of the night.',
       danger: true,
     });
     if (!ok) return;
-    if (isHost) {
-      try { broadcast({ type: 'error', message: 'Host left the game.' }); } catch (e) {}
-      location.reload();
-      return;
-    }
-    try {
-      if (hostConnection && hostConnection.open) {
-        hostConnection.send({ type: 'leaveReplace', playerId: myPeerId, name: myName });
-      }
-    } catch (e) {}
-    setTimeout(() => location.reload(), 300);
+    leaveTableAfterConfirmation043();
   };
 
   const _redeal = window.hostRedeal;

@@ -90,7 +90,7 @@ function outline(){
  let r=selected.getBoundingClientRect();o.hidden=false;
  Object.assign(o.style,{left:r.left+'px',top:r.top+'px',width:r.width+'px',height:r.height+'px'});
 }
-function select(el){if(!el||el.closest?.('#'+ID))return;selected=el;keep(el);pick=false;let b=$('[data-c611="pick"]');if(b)b.textContent='PICK';read('SELECTED');outline()}
+function select(el){if(!el||el.closest?.('#'+ID))return;const lt=el.closest?.('#portraitLastTrickGroup,#portraitLastTrickCards,.portrait-last-trick-mini-card,.portrait-last-simple-face');if(lt)el=document.getElementById('portraitLastTrickGroup')||el;selected=el;keep(el);pick=false;let b=$('[data-c611="pick"]');if(b)b.textContent='PICK';read('SELECTED');outline()}
 function apply(){
  if(!selected)return;let a=q(),o=originals.get(selected);
  imp(selected,'translate',`${a.x}px ${a.y}px`);
@@ -217,3 +217,5 @@ new MutationObserver(()=>{if(selected&&!selected.isConnected){selected=null;read
 build();
 })();
 
+
+// ROOK025: coordinate capture completed; no tap listener or overlay in normal play.

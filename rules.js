@@ -88,7 +88,7 @@ function cardInnerHTML(card) {
   if (card.color === 'rook' || card.id === 'rook') {
     return `
       <div class="c-stack rook-stack">
-        <img class="rook-bird-img" src="${document.documentElement.classList.contains('hor-original-cards') ? 'assets/images/Rook.png' : 'assets/images/RookPremium.png'}" alt="Rook" draggable="false"
+        <img class="rook-bird-img" src="${document.documentElement.classList.contains('hor-original-cards') ? 'assets/images/Rook.png' : 'assets/images/RookPremium.png?v=rook036'}" alt="Rook" draggable="false"
           onerror="this.style.display='none'">
       </div>
     `;
@@ -99,7 +99,7 @@ function cardInnerHTML(card) {
     if (includeRed2) {
       return `
         <div class="c-stack red2-stack">
-          <img class="red2-img" src="${document.documentElement.classList.contains('hor-original-cards') ? 'assets/images/Red2.png?v=632' : 'assets/images/Red2-card.webp'}" alt="Red 2 Trump" draggable="false"
+          <img class="red2-img" src="${document.documentElement.classList.contains('hor-original-cards') ? 'assets/images/Red2.png?v=632' : 'assets/images/Red2-card.webp?v=rook036'}" alt="Red 2 Trump" draggable="false"
             data-fallback="1" onerror="window.__red2ImgError&&window.__red2ImgError(this)">
         </div>
       `;
@@ -125,13 +125,25 @@ function cardInnerHTML(card) {
   }
   const rank = card.rank;
   const color = cardColorWord(card);
+  // ROOK026: regular numbered cards are real production face assets.
+  // The text fallback remains for safety if an asset cannot load.
+  const assetColor = String(card.color || '').toLowerCase();
+  const assetSrc = `assets/cards/numbered/${assetColor}-${rank}.png`;
+  const needsOrientationMark036 = Number(rank) === 6 || Number(rank) === 9;
+  const ink036 = ({red:'#E11D2E',green:'#0E8F3E',yellow:'#B88B18',black:'#0B0B0B'})[assetColor] || '#0B0B0B';
+  const orientationMark036 = needsOrientationMark036
+    ? `<svg class="number-orientation-mark036" viewBox="0 0 580 840" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M205 478H375" fill="none" stroke="${ink036}" stroke-width="0.6" vector-effect="non-scaling-stroke"/></svg>` : '';
+
   return `
-    <div class="c-bar top"></div>
-    <div class="c-stack">
-      <div class="c-num">${rank}</div>
-      <div class="c-color">${color}</div>
+    <div class="c-stack numbered-asset-stack">
+      <img class="numbered-card-img" src="${assetSrc}" alt="${color} ${rank}" draggable="false"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="numbered-card-fallback" style="display:none">
+        <div class="c-num${needsOrientationMark036 ? ' number-ambiguous036' : ''}">${rank}</div>
+        <div class="c-color">${color}</div>
+      </div>
+      ${orientationMark036}
     </div>
-    <div class="c-bar bot"></div>
   `;
 }
 

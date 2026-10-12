@@ -16,7 +16,7 @@
     (function () {
       // Rook522: remember the build only. Service-worker activation owns updates.
       // Never redirect/reload here: competing page + SW reload paths caused loops.
-      var BUILD = '712';
+      var BUILD = '771';
       window.HOR_PAGE_BUILD = BUILD;
       try { localStorage.setItem('horBuild', BUILD); } catch (e) {}
     })();
@@ -24,12 +24,20 @@
 <link href="manifest.json" rel="manifest"/>
 <link href="assets/images/icon-192.png" rel="icon"/>
 <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon"/>
-<script src="hor-version.js?v=712"></script>
-<link href="style.css?v=712" rel="stylesheet"/>
-<link href="rook510.css?v=712" rel="stylesheet"/>
-<link href="rook513.css?v=712" rel="stylesheet"/>
-<link href="rook518-trump.css?v=712" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.5/dist/peerjs.min.js"></script>
+<script src="hor-version.js?v=771"></script>
+<link href="style057.css?v=771" rel="stylesheet"/>
+<link href="rook510.css?v=732" rel="stylesheet"/>
+<link href="rook513.css?v=732" rel="stylesheet"/>
+<link href="kitty736.css?v=771" rel="stylesheet"/>
+<link href="house736.css?v=736" rel="stylesheet"/>
+<link href="house738.css?v=738" rel="stylesheet"/>
+<link href="laid-down-refinement.css?v=771" rel="stylesheet"/>
+<link href="unified-bidding752.css?v=771" rel="stylesheet"/>
+<link href="rail-trick752.css?v=771" rel="stylesheet"/>
+<link href="bid-repair737.css?v=737" rel="stylesheet"/>
+<link href="trump-hand739.css?v=771" rel="stylesheet"/>
+<link href="rook518-trump.css?v=732" rel="stylesheet"/>
+<script src="vendor/peerjs.min.js?v=rook044"></script>
 <style>
     /* Emergency layout if style.css fails to load — joiners still see a usable page */
     body{margin:0;background:#1a120b;color:#f3e6c8;font-family:sans-serif}
@@ -99,7 +107,15 @@
 /* Old speed surfaces stay suppressed. */
 .hor-speed-menu-setting,#horGameSpeed,#ghTopTools693 .gh-top-tools-label,#ghTopTools693 [data-gh-speed]{display:none!important;}
 </style>
-<link rel="stylesheet" href="approved-bid-portrait.css?v=712">
+<link rel="stylesheet" href="approved-bid-portrait.css?v=732">
+<link rel="stylesheet" href="holder004.css?v=732">
+<link rel="stylesheet" href="trump714.css?v=771">
+<link rel="stylesheet" href="shuffle732.css?v=732">
+<link rel="stylesheet" href="signature-shuffle.css?v=771">
+<link rel="stylesheet" href="raven-fight741.css?v=771">
+<link rel="stylesheet" href="characters077.css?v=771">
+<link rel="stylesheet" href="responsive-review.css?v=771">
+<script defer src="responsive-review.js?v=771"></script>
 </head>
 <body class="theme-classic cardback-griffin room-theme-midnight">
 <div id="matchHeader706" aria-label="Match score and game speed"><div class="scores" id="scoreRow">
@@ -109,7 +125,7 @@
 <span class="target-label">to <b id="targetDisplay">500</b></span>
 
 <span class="sandbag-score hidden" id="sandbagScore">Sandbags: A <b id="sandbagA">0</b> · B <b id="sandbagB">0</b></span>
-<span class="score-speed-701" id="scoreSpeed701" aria-label="Game speed"><button type="button" data-score-pace="1">1×</button><button type="button" data-score-pace="3">3×</button><button type="button" data-score-pace="99">MAX</button></span>
+<span class="score-speed-701" id="scoreSpeed701" aria-label="Game speed"><button type="button" data-score-pace="1">1×</button><button type="button" data-score-pace="3">3×</button><button type="button" data-score-pace="99">MAX</button></span><button type="button" id="portraitLastTrickButton" aria-haspopup="dialog" aria-expanded="false">LAST</button>
 </div></div>
 
 <script>
@@ -132,8 +148,8 @@
 <div class="lt-decor lt-corner lt-tl"><img alt="" class="rook-ui-bird" src="assets/images/cardback-raven.jpg"/></div>
 <div class="lt-decor lt-corner lt-tr"><img alt="" class="rook-ui-bird" src="assets/images/cardback-raven.jpg"/></div>
 <div aria-live="polite" class="lt-wait-banner hidden" id="ltKittyWait">
-<img alt="" class="lt-wait-art" id="ltWaitArtNest" src="assets/images/wait-nest-landscape.jpg?v=712"/>
-<img alt="" class="lt-wait-art" id="ltWaitArtTrump" src="assets/images/wait-trump-landscape.jpg?v=712"/>
+<img alt="" class="lt-wait-art" id="ltWaitArtNest" src="assets/images/wait-nest-landscape.jpg?v=732"/>
+<img alt="" class="lt-wait-art" id="ltWaitArtTrump" src="assets/images/wait-trump-landscape.jpg?v=732"/>
 <div class="lt-wait-veil"></div>
 <div class="lt-wait-copy">
 <div class="lt-wait-kicker" id="ltWaitKicker">The nest is open</div>
@@ -182,7 +198,7 @@
 <!-- Lobby Screen -->
 <div class="screen" id="lobby">
 <div class="header lobby-header">
-<img alt="" class="lobby-mark" src="assets/images/griffin-icon.png?v=712"/>
+<img alt="" class="lobby-mark" src="assets/images/griffin-icon.png?v=732"/>
 <div class="lobby-header-copy">
 <h1>House of Rooks</h1>
 <p class="subtitle">A four-player partnership table</p>
@@ -213,6 +229,7 @@
 </div>
 </details>
 </div>
+<div class="status" id="lobbyStatus" role="status" aria-live="polite"></div>
 <section aria-label="Game information and support" class="lobby-info-card">
 <div class="lobby-info-title">HOUSE OF ROOKS INFO &amp; SUPPORT</div>
 <div class="lobby-info-links">
@@ -248,7 +265,7 @@
 <button aria-hidden="true" class="btn hidden" id="createBtn" type="button">Create table</button>
 <button class="btn" id="rejoinBtn" type="button">Rejoin last code</button>
 </div>
-<div class="status" id="lobbyStatus"></div>
+
 <div aria-hidden="true" class="no-service-modal hidden" id="noServiceModal">
 <div class="no-service-card">
 <h2>No service</h2>
@@ -286,7 +303,7 @@
 <!-- Invite welcome — shared link already has a room code -->
 <div class="screen hidden" id="welcome">
 <div class="header waiting-header welcome-header">
-<img alt="" class="waiting-crest" height="56" src="assets/images/griffin-icon.png?v=712" width="56"/>
+<img alt="" class="waiting-crest" height="56" src="assets/images/griffin-icon.png?v=732" width="56"/>
 <div class="waiting-header-copy">
 <h1>Welcome to table <span id="welcomeCode"></span></h1>
 <p id="welcomeLead">A friend shared this table with you.</p>
@@ -330,7 +347,7 @@
 <!-- Waiting Room — open table -->
 <div class="screen hidden" id="waiting">
 <div class="header waiting-header">
-<img alt="" class="waiting-crest" height="56" src="assets/images/griffin-icon.png?v=712" width="56"/>
+<img alt="" class="waiting-crest" height="56" src="assets/images/griffin-icon.png?v=732" width="56"/>
 <div class="waiting-header-copy">
 <h1>Table <span id="displayCode"></span></h1>
 <p id="speakCodeLine">Share this code. Friends tap an open seat to sit.</p>
@@ -419,10 +436,16 @@
 <label class="option-label"><input checked="" id="opt-sound-card" type="checkbox"/> Cards</label>
 <label class="option-label"><input checked="" id="opt-sound-turn" type="checkbox"/> Turn</label>
 <label class="option-label turn-tone-option">My turn tone
-                <select aria-label="Choose my turn sound" class="select-input" id="opt-turn-sound-choice"><option value="1">1. Soft wood</option><option value="2">2. Warm tap</option><option value="3">3. Soft chime</option><option value="4">4. Low knock</option><option value="5">5. Light bell</option><option value="6">6. Deep tap</option><option value="7">7. Tiny glass</option><option value="8">8. Muted wood</option><option value="9">9. Soft ping</option><option value="10">10. Felt tap</option><option value="11">11. Warm chime</option><option value="12">12. Low pulse</option><option value="13">13. Fine bell</option><option value="14">14. Gentle knock</option><option value="15">15. Quiet ping</option><option value="16">16. Card-table tap</option><option value="17">17. Soft glass</option><option value="18">18. Warm wood</option><option value="19">19. Light tone</option></select>
+                <select aria-label="Choose my turn sound" class="select-input" id="opt-turn-sound-choice"><option value="20">Natural wood tap (recorded)</option><option value="1">1. Soft wood</option><option value="2">2. Warm tap</option><option value="3">3. Soft chime</option><option value="4">4. Low knock</option><option value="5">5. Light bell</option><option value="6">6. Deep tap</option><option value="7">7. Tiny glass</option><option value="8">8. Muted wood</option><option value="9">9. Soft ping</option><option value="10">10. Felt tap</option><option value="11">11. Warm chime</option><option value="12">12. Low pulse</option><option value="13">13. Fine bell</option><option value="14">14. Gentle knock</option><option value="15">15. Quiet ping</option><option value="16">16. Card-table tap</option><option value="17">17. Soft glass</option><option value="18">18. Warm wood</option><option value="19">19. Light tone</option></select>
 </label>
 <label class="option-label"><input checked="" id="opt-sound-rook" type="checkbox"/> Rook caw</label>
 <label class="option-label"><input checked="" id="opt-sound-tick" type="checkbox"/> Timer tick</label>
+<label class="option-label"><input id="opt-cabin-ambience" type="checkbox" checked/> Cabin ambience</label>
+<label class="option-label cabin-volume-option" for="opt-cabin-volume">Ambience volume <output id="cabin-volume-value" for="opt-cabin-volume">6%</output>
+<input id="opt-cabin-volume" type="range" min="0" max="100" step="1" value="6" aria-label="Cabin ambience volume"/></label>
+
+<label class="option-label cabin-volume-option" for="opt-fire-volume">Fireplace volume <output id="fire-volume-value" for="opt-fire-volume">10%</output><input id="opt-fire-volume" type="range" min="0" max="100" step="1" value="10" aria-label="Fireplace volume"/></label>
+<label class="option-label"><input id="opt-owl-ambience" type="checkbox" checked/> Rare owl calls</label>
 </div></section>
 
 <div class="preset-row" id="rulePresetRow">
@@ -723,6 +746,12 @@
 <p class="option-hint" style="opacity:0.75;">Bots only use public information — they never see your hand.</p>
 </div>
 <div class="opt-pane gh-menu-pane hidden" id="optPanePlayers">
+<div class="option-block">
+<label class="option-hint" for="opt-favorite-partner">Favorite offline partner:</label>
+<select class="select-input" id="opt-favorite-partner"><option value="">No favorite · choose normally</option></select>
+</div>
+<p class="option-hint" id="favoritePartnerHint" aria-live="polite">Keep your favorite for offline play against three bots. Changes apply to your next offline game.</p>
+
 <p class="option-hint">Names marked <b>new</b> get the play-along house tour as the first hand unfolds. Clear that mark when someone already knows the table.</p>
 <div class="new-player-list" id="newPlayerList"></div>
 <div class="btn-row new-player-actions">
@@ -776,6 +805,7 @@
 </section>
 <section aria-label="Diagnostics" class="gh-menu-section gh-menu-diagnostics developer-only">
 <div class="gh-menu-section-title">Developer / Diagnostics</div>
+<div id="x1MainControl" class="host-only developer-only hidden"><label>MAIN BOT INTELLIGENCE <select id="x1MainSelector"><option value="x1">X1 — New Champion</option><option value="sol7">Sol 7 — Original Champion</option></select></label><div id="x1MainStatus" role="status"></div></div>
 <div class="gh-menu-diag-grid">
 <button class="gh-menu-diag-btn sol-fast-btn" id="btnSolFast" title="SOL diagnostic speed" type="button">SOL NORMAL</button>
 <button aria-pressed="false" class="gh-menu-diag-btn sol-bot-btn" id="btnSolBot" title="Let the existing bot AI control the SOL seat from the next hand" type="button">SOL SEAT</button>
@@ -831,7 +861,6 @@
 </div>
 <div class="bid-overlay-host" id="bidOverlayHost"><div class="gh-decision-console hidden" id="decisionConsole" aria-live="polite"></div></div>
 <div class="table-wrap">
-<button class="table-last3-btn" id="portraitLast3Btn" title="Last 3 tricks" type="button">Last 3</button>
 <div class="table-felt">
 <div aria-hidden="true" class="felt-inlay"></div>
 <div class="felt-badges">
@@ -845,14 +874,14 @@
 <div aria-live="polite" class="trump-banner hidden" id="trumpBanner"></div>
 <div class="table">
 <div class="player-slot top" id="slot-partner">
-<span aria-hidden="true" class="seat-glass">🍺</span>
+
 <div class="name"></div>
 <div class="seat-bank" data-bank-slot="partner">$0</div>
 <div class="cards-count"></div>
 <div class="played-card"></div>
 </div>
 <div class="player-slot left" id="slot-left">
-<span aria-hidden="true" class="seat-glass">🍺</span>
+
 <div class="name"></div>
 <div class="seat-bank" data-bank-slot="left">$0</div>
 <div class="cards-count"></div>
@@ -860,12 +889,13 @@
 </div>
 <div class="center-area">
 <div class="trick" id="trickArea"></div>
+<div class="portrait-last-trick-popover hidden" id="portraitLastTrickPopover" role="dialog" aria-label="Last trick"><div class="portrait-last-trick-cards" id="portraitLastTrickGroup"><div id="portraitLastTrickCards" aria-live="polite"></div><div id="portraitLastTrickStatus031" class="hidden" role="status">No completed trick yet.</div><button type="button" class="portrait-last-trick-close" id="portraitLastTrickClose" aria-label="Close last trick">×</button></div></div>
 <div class="nest hidden" id="nestArea"></div>
 <div aria-label="Widow" class="widow-spread hidden" id="widowSpread"></div>
 <div class="bot-thinking hidden" id="botThinking">Thinking…</div>
 <div aria-live="polite" class="pt-wait-banner hidden" id="ptWaitBanner">
-<img alt="" class="pt-wait-art" id="ptWaitArtNest" src="assets/images/wait-nest-portrait.jpg?v=712"/>
-<img alt="" class="pt-wait-art" id="ptWaitArtTrump" src="assets/images/wait-trump-portrait.jpg?v=712"/>
+<img alt="" class="pt-wait-art" id="ptWaitArtNest" src="assets/images/wait-nest-portrait.jpg?v=732"/>
+<img alt="" class="pt-wait-art" id="ptWaitArtTrump" src="assets/images/wait-trump-portrait.jpg?v=732"/>
 <div class="pt-wait-veil"></div>
 <div class="pt-wait-copy">
 <div class="pt-wait-kicker" id="ptWaitKicker">House of Rooks</div>
@@ -876,7 +906,7 @@
 </div>
 </div>
 <div class="player-slot right" id="slot-right">
-<span aria-hidden="true" class="seat-glass">🍺</span>
+
 <div class="name"></div>
 <div class="seat-bank" data-bank-slot="right">$0</div>
 <div class="cards-count"></div>
@@ -884,7 +914,7 @@
 </div>
 <div class="bottom-seat-row">
 <div class="player-slot bottom" id="slot-me">
-<span aria-hidden="true" class="seat-glass">🍺</span>
+
 <div class="name"></div>
 <div class="seat-bank is-mine" data-bank-slot="me">$0</div>
 <div class="played-card"></div>
@@ -900,13 +930,6 @@
 <div aria-live="polite" class="trick-pts-bar hidden" id="trickPtsBar"></div>
 <div class="hand-rail"></div>
 <div class="hand" id="myHand"></div>
-</div>
-<div aria-hidden="true" class="portrait-last3-overlay hidden" id="portraitLast3Overlay">
-<div class="portrait-last3-panel">
-<div class="portrait-last3-title">Last 3 Tricks</div>
-<div class="portrait-last3-body" id="portraitLast3Body"></div>
-<button class="btn primary portrait-last3-close" id="portraitLast3Close" type="button">Close</button>
-</div>
 </div>
 <div class="pause-overlay hidden" id="pauseOverlay">
 <div class="pause-card">
@@ -931,8 +954,8 @@
 </div>
 </div>
 <div class="in-game-leave">
-<button aria-label="Menu" class="icon-btn top-opts-toggle leave-menu-btn" id="btnToggleTopOpts" title="Show / hide options" type="button">☰</button>
-<button aria-label="Leave table" class="leave-exit-btn" id="leaveReplaceBtn" title="Leave table" type="button">←</button>
+<button aria-label="Menu" class="icon-btn top-opts-toggle leave-menu-btn" id="btnToggleTopOpts" title="Show / hide options" type="button"><svg class="rail-inlay036" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="railBrassMenu036" x1="0" y1="0" x2="0.25" y2="1"><stop offset="0" stop-color="#5b3c18"/><stop offset=".28" stop-color="#d3b078"/><stop offset=".46" stop-color="#a68043"/><stop offset=".63" stop-color="#ddbf86"/><stop offset="1" stop-color="#68491f"/></linearGradient></defs><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10H22 M10 16H22 M10 22H22" stroke="#231407" stroke-width="4.4" transform="translate(0 .65)"/><path d="M10 10H22 M10 16H22 M10 22H22" stroke="#efd3a0" stroke-width="3.3" opacity=".22" transform="translate(0 -.5)"/><path d="M10 10H22 M10 16H22 M10 22H22" stroke="url(#railBrassMenu036)" stroke-width="2.5"/></g></svg><span class="rail-symbol-legacy036" aria-hidden="true">☰</span></button>
+<button aria-label="Leave table" class="leave-exit-btn" id="leaveReplaceBtn" title="Leave table" type="button"><svg class="rail-inlay036" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="railBrassExit036" x1="0" y1="0" x2="0.25" y2="1"><stop offset="0" stop-color="#5b3c18"/><stop offset=".28" stop-color="#d3b078"/><stop offset=".46" stop-color="#a68043"/><stop offset=".63" stop-color="#ddbf86"/><stop offset="1" stop-color="#68491f"/></linearGradient></defs><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M25 16H7 M14 9L7 16L14 23" stroke="#231407" stroke-width="4.4" transform="translate(0 .65)"/><path d="M25 16H7 M14 9L7 16L14 23" stroke="#efd3a0" stroke-width="3.3" opacity=".22" transform="translate(0 -.5)"/><path d="M25 16H7 M14 9L7 16L14 23" stroke="url(#railBrassExit036)" stroke-width="2.5"/></g></svg><span class="rail-symbol-legacy036" aria-hidden="true">←</span></button>
 </div>
 </div>
 <!-- Score summary modal / scoreboard -->
@@ -1175,16 +1198,22 @@
       paintInstall();
     })();
   </script>
-<script src="rules.js?v=712"></script>
-<script src="bots.js?v=712"></script>
-<script src="game.js?v=712"></script>
-<script src="sol-diagnostics.js?v=712"></script>
-<script src="rook510-avatars.js?v=712"></script>
-<script src="rook512-room.js?v=712"></script>
-<script src="rook513.js?v=712"></script>
-<script src="polish.js?v=712"></script>
+<script src="rules.js?v=rook044"></script>
+<script src="bots.js?v=732"></script>
+<script src="unified-bidding752.js?v=771"></script>
+<script src="rail-trick752.js?v=771"></script>
+<script src="trump-voice.js?v=771"></script>
+<script src="game060.js?v=771"></script>
+<script src="characters077.js?v=771"></script>
+<script src="x1/core.js"></script>
+<script src="x1/integration.js"></script>
+<script src="sol-diagnostics.js?v=732"></script>
+<script src="rook510-avatars.js?v=732"></script>
+<script src="rook512-room.js?v=732"></script>
+<script src="rook513.js?v=732"></script>
+<script src="polish.js?v=771"></script>
 <!-- Dormant career/achievement framework. Master switch is OFF in progression.js. -->
-<script src="progression.js?v=712"></script>
+<script src="progression.js?v=771"></script>
 <div id="horBootError"></div>
 <script>
     window.addEventListener('error', function (ev) {
@@ -1198,7 +1227,7 @@
   </script>
 <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js?v=712', { updateViaCache: 'none' })
+      navigator.serviceWorker.register('sw060.js?v=771', { updateViaCache: 'none' })
         .then(function (reg) { try { reg.update(); } catch (e) {} })
         .catch(() => {});
       // Rook522: do not reload on controllerchange. The new worker takes control
@@ -1210,6 +1239,24 @@
     // network-first loading for HTML/JS/CSS, and updates are picked up on the
     // next normal navigation. Force Refresh remains a manual escape hatch.
   </script>
-<script src="approved-bid-portrait.js?v=712"></script>
+<script src="bid-repair737.js?v=737"></script>
+<script src="trump-hand739.js?v=771"></script>
+<script src="raven-timeline741.js?v=771"></script>
+<script src="raven-audio761.js?v=771"></script>
+<script src="raven-fight741.js?v=771"></script>
+<script src="approved-bid-portrait.js?v=732"></script>
+<script>
+  // New installs start with a quiet hint of ambience; saved user settings win.
+  try { if (localStorage.getItem('rookCabinVolume041') === null) localStorage.setItem('rookCabinVolume041', '6'); } catch (_) {}
+</script>
+<script src="cabin-ambience041.js?v=771"></script>
+<script src="fire-glow-controller060.js?v=064"></script>
+<script src="house736.js?v=736"></script>
+<script src="holder004.js?v=732"></script>
+
+<script src="trump714.js?v=771"></script>
+<script src="shuffle732.js?v=732"></script>
+<script src="shuffle-asset.js?v=771"></script>
+<script src="signature-shuffle.js?v=771"></script>
 </body>
 </html>
