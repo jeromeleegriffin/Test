@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "775",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 777,
+  "nextNumberHint": 778,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1050,6 +1050,19 @@
       "entries": 362,
       "libraryFileId": "libfile_15654cfe56bc8191ad1d2eee18c4a637",
       "scope": "Recovery contains775game,774rollback,all12originalboards,masters,evidence,cachedH-Y,currentcoordination,startupprompt and bothfullpermanentrules. Not a gameplaybuild or transcript export."
+    },
+    {
+      "number": "777",
+      "reservationId": "bot-cast52-android-312e2e305ea7-20261012",
+      "workstream": "Character Studio077",
+      "task": "52fixed bot identities, on-demand body assets and avatar collision protection; local Android test ZIP",
+      "sourceGameBuild": "775",
+      "sourceSha256": "f562f2353d260901e3d1492385250827db8696239f1b1e230d9bf3f0d3c71896",
+      "status": "RESERVED",
+      "date": "2026-10-12",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD"
     }
   ],
   "testSiteBuild": "772"
