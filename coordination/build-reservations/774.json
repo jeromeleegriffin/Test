@@ -1,0 +1,12 @@
+{
+  "number": "774",
+  "reservationId": "character-six-expansion-fa72cc1b4ad4-20261012",
+  "workstream": "Character Studio077",
+  "task": "Add Claire June Tess Marcus Owen Daniel with18 distinct seat views and owner-assigned voices; isolated review",
+  "sourceGameBuild": "773",
+  "sourceSha256": "670dfe970bd9cc27cc4bc3347352044d0f42a467ccfb76f4a6a9edf1893cabac",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "deploymentStatus": "NOT_DEPLOYED"
+}
