@@ -1,0 +1,12 @@
+{
+  "number": "772",
+  "reservationId": "hosted-loading-fa72cc1b4ad4-20261012",
+  "workstream": "Main continuation hosted asset readiness",
+  "task": "Isolated loading/retry repair; preserve approved771 and artwork",
+  "sourceGameBuild": "771",
+  "sourceSha256": "c342f1e67db3f62a0fe69b1ecf71a309ca85e5fddda5603202c77a0239f28b8c",
+  "status": "RESERVED",
+  "date": "2026-10-12",
+  "deploymentStatus": "NOT_DEPLOYED",
+  "ownerApproved": false
+}
