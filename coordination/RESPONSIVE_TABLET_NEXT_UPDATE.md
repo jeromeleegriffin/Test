@@ -30,3 +30,7 @@ Portrait preserves intended scene better than existing alternate landscape theat
 ## Completion / packaging gate
 Record exact base and new build, changed files, before/after screenshots at phone and tablet CSS sizes, interaction results, remaining limits, source/package hashes and rollback. Reserve the next number via the shared registry; do not guess a ZIP number. Carry this pending item into each Brain successor/handoff until validated or explicitly waived by Jerome. Owner review is still required for changed pixels. Do not describe untested real hardware as passed.
 This shared record is read-on-resume coordination; it does not notify or wake another chat.
+
+
+## Implemented isolated candidate771 — pending owner Android review
+See [RESPONSIVE_CATCHUP_771.md](RESPONSIVE_CATCHUP_771.md) and registry. Confirmed scoped fixes implemented on latest verified owner-approved769/Cleaner runtime; seven-view focused browser checks passed. Source769approval is independently recorded in CHARACTERS_AND_CARDS.md. Physical tablet verification and owner approval remain pending. Do not repeat completed implementation or close this task as universally validated. No game deployment or Brain successor publication.

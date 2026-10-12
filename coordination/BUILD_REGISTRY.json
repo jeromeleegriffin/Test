@@ -786,11 +786,43 @@
       "task": "Owner requested catch-up from770, preserve approved769 and Cleaner separation; isolated tablet responsive corrections",
       "sourceGameBuild": "769",
       "sourceSha256": "8921db4f71c3a404110f9acafd2255a04ade1c3d6c085ad9ee17208fe5456142",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
       "date": "2026-10-12",
       "ownerApproved": false,
       "physicalAndroidTested": false,
-      "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD"
+      "deploymentStatus": "NOT_DEPLOYED_PUBLICATION_HOLD",
+      "filename": "771.zip",
+      "bytes": 87147609,
+      "sha256": "c342f1e67db3f62a0fe69b1ecf71a309ca85e5fddda5603202c77a0239f28b8c",
+      "entries": 390,
+      "libraryFileId": "libfile_22f6afd248d0819182a60067390e1b3d",
+      "fileId": "file_00000000aa54820cb6865a3d2a2736ac",
+      "reviewLibraryFileId": "libfile_b72659680cec8191a36b3e0d0fe6d5d2",
+      "evidenceLibraryFileId": "libfile_a8038006cf588191a26be697162775b2",
+      "checkpoint": "coordination/RESPONSIVE_CATCHUP_771.md",
+      "tests": {
+        "viewports": 7,
+        "handFixtures": 56,
+        "discardCardsAccessiblePerViewport": 16,
+        "sixSelections": 7,
+        "actualHumanBid": true,
+        "kittyDiscardConfirm": true,
+        "LAST": true,
+        "coherent771Offline": true,
+        "pageErrors": 0,
+        "phoneHandCastPotGeometryParity": true,
+        "artworkAudioX1Unchanged": true
+      },
+      "testLimits": "Chromium153 touch/mobile simulation, not physical Android. Controlled state matrix and short actual controls. Full audit remains paused; owner review pending.",
+      "changedFiles": [
+        "responsive-review.js",
+        "responsive-review.css",
+        "characters077.js",
+        "index.html",
+        "game060.js (version only)",
+        "hor-version.js",
+        "sw060.js"
+      ]
     }
   ]
 }
