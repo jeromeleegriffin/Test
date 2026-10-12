@@ -16,7 +16,7 @@
     (function () {
       // Rook522: remember the build only. Service-worker activation owns updates.
       // Never redirect/reload here: competing page + SW reload paths caused loops.
-      var BUILD = '772';
+      var BUILD = '779';
       window.HOR_PAGE_BUILD = BUILD;
       try { localStorage.setItem('horBuild', BUILD); } catch (e) {}
     })();
@@ -24,18 +24,18 @@
 <link href="manifest.json" rel="manifest"/>
 <link href="assets/images/icon-192.png" rel="icon"/>
 <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon"/>
-<script src="hor-version.js?v=772"></script>
-<link href="style057.css?v=772" rel="stylesheet"/>
+<script src="hor-version.js?v=779"></script>
+<link href="style057.css?v=779" rel="stylesheet"/>
 <link href="rook510.css?v=732" rel="stylesheet"/>
 <link href="rook513.css?v=732" rel="stylesheet"/>
-<link href="kitty736.css?v=772" rel="stylesheet"/>
+<link href="kitty736.css?v=779" rel="stylesheet"/>
 <link href="house736.css?v=736" rel="stylesheet"/>
 <link href="house738.css?v=738" rel="stylesheet"/>
-<link href="laid-down-refinement.css?v=772" rel="stylesheet"/>
-<link href="unified-bidding752.css?v=772" rel="stylesheet"/>
-<link href="rail-trick752.css?v=772" rel="stylesheet"/>
+<link href="laid-down-refinement.css?v=779" rel="stylesheet"/>
+<link href="unified-bidding752.css?v=779" rel="stylesheet"/>
+<link href="rail-trick752.css?v=779" rel="stylesheet"/>
 <link href="bid-repair737.css?v=737" rel="stylesheet"/>
-<link href="trump-hand739.css?v=772" rel="stylesheet"/>
+<link href="trump-hand739.css?v=779" rel="stylesheet"/>
 <link href="rook518-trump.css?v=732" rel="stylesheet"/>
 <script src="vendor/peerjs.min.js?v=rook044"></script>
 <style>
@@ -109,14 +109,15 @@
 </style>
 <link rel="stylesheet" href="approved-bid-portrait.css?v=732">
 <link rel="stylesheet" href="holder004.css?v=732">
-<link rel="stylesheet" href="trump714.css?v=772">
+<link rel="stylesheet" href="trump714.css?v=779">
 <link rel="stylesheet" href="shuffle732.css?v=732">
-<link rel="stylesheet" href="signature-shuffle.css?v=772">
-<link rel="stylesheet" href="raven-fight741.css?v=772">
-<link rel="stylesheet" href="characters077.css?v=772">
-<link rel="stylesheet" href="responsive-review.css?v=772">
-<script defer src="responsive-review.js?v=772"></script>
-<link rel="stylesheet" href="asset-loading772.css?v=772">
+<link rel="stylesheet" href="signature-shuffle.css?v=779">
+<link rel="stylesheet" href="raven-fight741.css?v=779">
+<link rel="stylesheet" href="characters077.css?v=779">
+<link rel="stylesheet" href="responsive-review.css?v=779">
+<script defer src="responsive-review.js?v=779"></script>
+<link rel="stylesheet" href="asset-loading772.css?v=779">
+<link rel="stylesheet" href="identity-choice.css?v=779"/>
 </head>
 <body class="theme-classic cardback-griffin room-theme-midnight">
 <div id="matchHeader706" aria-label="Match score and game speed"><div class="scores" id="scoreRow">
@@ -1201,21 +1202,23 @@
   </script>
 <script src="rules.js?v=rook044"></script>
 <script src="bots.js?v=732"></script>
-<script src="unified-bidding752.js?v=772"></script>
-<script src="rail-trick752.js?v=772"></script>
-<script src="trump-voice.js?v=772"></script>
-<script src="game060.js?v=772"></script>
-<script src="asset-loading772.js?v=772"></script>
-<script src="characters077.js?v=772"></script>
+<script src="unified-bidding752.js?v=779"></script>
+<script src="rail-trick752.js?v=779"></script>
+<script src="trump-voice.js?v=779"></script>
+<script src="game060.js?v=779"></script>
+<script src="asset-loading772.js?v=779"></script>
+<script src="character-library774.js?v=779"></script>
+<script src="characters077.js?v=779"></script>
 <script src="x1/core.js"></script>
 <script src="x1/integration.js"></script>
 <script src="sol-diagnostics.js?v=732"></script>
 <script src="rook510-avatars.js?v=732"></script>
 <script src="rook512-room.js?v=732"></script>
 <script src="rook513.js?v=732"></script>
-<script src="polish.js?v=772"></script>
+<script src="polish.js?v=779"></script>
+<script src="identity-choice.js?v=779"></script>
 <!-- Dormant career/achievement framework. Master switch is OFF in progression.js. -->
-<script src="progression.js?v=772"></script>
+<script src="progression.js?v=779"></script>
 <div id="horBootError"></div>
 <script>
     window.addEventListener('error', function (ev) {
@@ -1229,7 +1232,7 @@
   </script>
 <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw060.js?v=772', { updateViaCache: 'none' })
+      navigator.serviceWorker.register('sw060.js?v=779', { updateViaCache: 'none' })
         .then(function (reg) { try { reg.update(); } catch (e) {} })
         .catch(() => {});
       // Rook522: do not reload on controllerchange. The new worker takes control
@@ -1242,23 +1245,23 @@
     // next normal navigation. Force Refresh remains a manual escape hatch.
   </script>
 <script src="bid-repair737.js?v=737"></script>
-<script src="trump-hand739.js?v=772"></script>
-<script src="raven-timeline741.js?v=772"></script>
-<script src="raven-audio761.js?v=772"></script>
-<script src="raven-fight741.js?v=772"></script>
+<script src="trump-hand739.js?v=779"></script>
+<script src="raven-timeline741.js?v=779"></script>
+<script src="raven-audio761.js?v=779"></script>
+<script src="raven-fight741.js?v=779"></script>
 <script src="approved-bid-portrait.js?v=732"></script>
 <script>
   // New installs start with a quiet hint of ambience; saved user settings win.
   try { if (localStorage.getItem('rookCabinVolume041') === null) localStorage.setItem('rookCabinVolume041', '6'); } catch (_) {}
 </script>
-<script src="cabin-ambience041.js?v=772"></script>
+<script src="cabin-ambience041.js?v=779"></script>
 <script src="fire-glow-controller060.js?v=064"></script>
 <script src="house736.js?v=736"></script>
 <script src="holder004.js?v=732"></script>
 
-<script src="trump714.js?v=772"></script>
+<script src="trump714.js?v=779"></script>
 <script src="shuffle732.js?v=732"></script>
-<script src="shuffle-asset.js?v=772"></script>
-<script src="signature-shuffle.js?v=772"></script>
+<script src="shuffle-asset.js?v=779"></script>
+<script src="signature-shuffle.js?v=779"></script>
 </body>
 </html>

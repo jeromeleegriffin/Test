@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '772';
+const APP_VERSION = '779';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -616,19 +616,24 @@ function savePreferredAvatar(id) {
 }
 // Rook549: first-time humans get a random persistent avatar instead of AVATARS[0].
 // Existing/manual selections are never overwritten. Bots keep their existing assignment path.
+function validHumanVoice(value) {return ['avatar','male','female','silent'].includes(value)?value:'avatar';}
+function loadPreferredVoice() {try{return validHumanVoice(localStorage.getItem('griffinHousePlayerVoice'));}catch(_){return 'avatar';}}
+function savePreferredVoice(value) {try{localStorage.setItem('griffinHousePlayerVoice',validHumanVoice(value));}catch(_){}}
 function ensurePreferredAvatar() {
   const existing = loadPreferredAvatar();
   if (existing) return existing;
-  if (!AVATARS.length) return '';
+  let pool = AVATARS;
+  try { const humans=BOT_PERSONAS.map(p=>p.avatar).filter(id=>AVATARS.includes(id)); if(humans.length)pool=humans; } catch(_) {}
+  if (!pool.length) return '';
   let idx = 0;
   try {
     const a = new Uint32Array(1);
     crypto.getRandomValues(a);
-    idx = a[0] % AVATARS.length;
+    idx = a[0] % pool.length;
   } catch (e) {
-    idx = Math.floor(Math.random() * AVATARS.length);
+    idx = Math.floor(Math.random() * pool.length);
   }
-  const chosen = AVATARS[idx] || AVATARS[0];
+  const chosen = pool[idx] || pool[0];
   savePreferredAvatar(chosen);
   return chosen;
 }
@@ -3786,7 +3791,7 @@ function createRoom(retryCount = 0) {
       try { finishHostHandoff(id); } catch (e) { console.error(e); }
       return;
     }
-    players = [{ id, name: myName, team: 0, isHost: true, isBot: false, seat: 0, bank: loadMyBank(), avatar: ensurePreferredAvatar() || AVATARS[0], careerPublic: horMyCareerProfile() }];
+    players = [{ id, name: myName, team: 0, isHost: true, isBot: false, seat: 0, bank: loadMyBank(), avatar: ensurePreferredAvatar() || AVATARS[0], voice: loadPreferredVoice(), careerPublic: horMyCareerProfile() }];
     applyPreferredAvatarToMe();
     myIndex = 0;
     beerSeats = pickBeerSeats();
@@ -3927,7 +3932,7 @@ function joinRoom() {
     const currentConnection = () => !finished && current() && horJoinConn === conn;
     conn.on('open', () => {
       if (!currentConnection()) return;
-      const joinMsg = {type:'join',name:myName,id:myPeerId,spectator:!!isSpectator,bank:loadMyBank(),avatar:ensurePreferredAvatar()||AVATARS[0],appVersion:APP_VERSION,reconnect:true};
+      const joinMsg = {type:'join',name:myName,id:myPeerId,spectator:!!isSpectator,bank:loadMyBank(),avatar:ensurePreferredAvatar()||AVATARS[0],voice:loadPreferredVoice(),appVersion:APP_VERSION,reconnect:true};
       if (pendingPreviewJoin) joinMsg.preview = true;
       if (!isSpectator && typeof pendingWelcomeSeat === 'number' && pendingWelcomeSeat >= 0 && pendingWelcomeSeat <= 3) joinMsg.preferredSeat = pendingWelcomeSeat;
       if (!horNetSendRaw(conn, joinMsg)) {
@@ -4187,6 +4192,8 @@ function horBeginClientReconnect() {
             id: myPeerId,
             spectator: !!isSpectator,
             bank: loadMyBank(),
+            avatar: ensurePreferredAvatar(),
+            voice: loadPreferredVoice(),
             reconnect: true,
             appVersion: APP_VERSION,
             lastSeq: horLastAppliedSeq
@@ -4316,7 +4323,7 @@ function handleMessage(data, conn) {
               currentPlayer: game.currentPlayer,
               trick: game.trick,
               ledColor: game.ledColor,
-              players: players.map(p => ({ name: p.name, team: p.team, id: p.id, isBot: !!p.isBot, bank: p.bank || 0, avatar: p.avatar || playerAvatars[p.id] || '', careerPublic: p.careerPublic || null })),
+              players: players.map(p => ({ name: p.name, team: p.team, id: p.id, isBot: !!p.isBot, bank: p.bank || 0, avatar: p.avatar || playerAvatars[p.id] || '', voice: p.isBot ? 'avatar' : validHumanVoice(p.voice), careerPublic: p.careerPublic || null })),
               dealer: game.dealer,
               nestCount: game.nest?.length || 0,
               handsCount: game.hands.map(h => h.length),
@@ -4365,7 +4372,7 @@ function handleMessage(data, conn) {
         if (players.find(p => p.id === data.id)) {
           return;
         }
-        players.push({ id: data.id, name: data.name, team: 0, isHost: false, isBot: false, seat: -1, bank: Math.max(0, Math.floor(Number(data.bank) || 0)), avatar: AVATARS.includes(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0], careerPublic: null });
+        players.push({ id: data.id, name: data.name, team: 0, isHost: false, isBot: false, seat: -1, bank: Math.max(0, Math.floor(Number(data.bank) || 0)), avatar: AVATARS.includes(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0], voice: validHumanVoice(data.voice), careerPublic: null });
         if (data.id) playerAvatars[data.id] = AVATARS.includes(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0];
         const wantSeat = parseInt(data.preferredSeat, 10);
         let seatedOk = false;
@@ -4424,11 +4431,15 @@ function handleMessage(data, conn) {
       case 'declineClaim':
         if (game && game.phase === 'play') hostDeclineClaim(data.player);
         break;
-      case 'avatar':
-        if (data.id) playerAvatars[data.id] = data.avatar || data.emoji || AVATARS[0];
-        broadcast({ type: 'avatar', id: data.id, avatar: data.avatar || data.emoji || AVATARS[0] });
-        try { renderUI(); } catch (e) {}
+      case 'avatar': {
+        const sender = conn && conn.peer;
+        if (sender && data.id === sender && changeHumanAvatar777(sender, data.avatar || data.emoji || AVATARS[0])) {
+          publishAvatarIdentities777();
+        } else if (conn && conn.send) {
+          conn.send({type:'error',message:'That avatar is unavailable. Please choose another.'});
+        }
         break;
+      }
       case 'leaveReplace':
         hostReplaceWithBot(data.playerId || conn.peer, data.name);
         break;
@@ -5187,13 +5198,20 @@ function showWaiting() {
         btn.onclick = () => {
           const id = btn.getAttribute('data-avatar');
           if (!id) return;
-          savePreferredAvatar(id);
-          if (myPeerId) playerAvatars[myPeerId] = id;
-          const meP = players.find(p => p.id === myPeerId);
-          if (meP) meP.avatar = id;
+          if (players.some(p=>p&&!p.isBot&&p.id!==myPeerId&&(playerAvatars[p.id]||p.avatar)===id)) {
+            horToast('That avatar is already chosen by another player.');return;
+          }
+          if (isHost) {
+            if (!changeHumanAvatar777(myPeerId,id)) return;
+            savePreferredAvatar(id);publishAvatarIdentities777();
+          } else if (hostConnection && hostConnection.open) {
+            // Wait for the host's canonical snapshot; no duplicate-frame optimistic swap.
+            hostConnection.send({type:'avatar',id:myPeerId,avatar:id});
+            savePreferredAvatar(id);
+          } else if (!game) {
+            savePreferredAvatar(id);if(myPeerId)playerAvatars[myPeerId]=id;
+          } else { horToast('Reconnect before changing your avatar.');return; }
           avatarGrid.querySelectorAll('.avatar-choice').forEach(b => b.classList.toggle('selected', b === btn));
-          try { broadcast({ type: 'avatar', id: myPeerId, avatar: id }); } catch (e) {}
-          try { renderUI(); } catch (e) {}
         };
       });
       const current = ensurePreferredAvatar() || playerAvatars[myPeerId] || (players.find(p => p.id === myPeerId) || {}).avatar || AVATARS[0];
@@ -5487,7 +5505,59 @@ function ensurePlayerSeats(list) {
   return out;
 }
 
+// Host owns table identities. A human claim replaces the conflicting bot PERSONA,
+// keeping the same player id, seat, team, bank, cards, score, turn and reconnect fields.
+function reconcileAvatarIdentities777() {
+  if (!isHost || !Array.isArray(players)) return false;
+  let changed = false;
+  const patch = (p, values) => {
+    for (const pool of [players, (typeof game !== 'undefined' && game && game.players) || []])
+      for (const q of pool) if (q && q.id === p.id) Object.assign(q, values);
+    if (values.avatar) playerAvatars[p.id] = values.avatar;
+    changed = true;
+  };
+  const used = new Set(), names = new Set(players.filter(p=>p&&p.isBot).map(p=>p.name));
+  const freeAvatar = () => BOT_PERSONAS.map(p=>p.avatar).concat(AVATARS).find(a=>!used.has(a));
+  for (const p of players.filter(p=>p&&!p.isBot)) {
+    let a = playerAvatars[p.id] || p.avatar || AVATARS[0];
+    if (!AVATARS.includes(a) || used.has(a)) a = freeAvatar();
+    if (a && (p.avatar !== a || playerAvatars[p.id] !== a)) patch(p,{avatar:a});
+    if (a) used.add(a);
+  }
+  for (const p of players.filter(p=>p&&p.isBot)) {
+    let persona = BOT_PERSONAS.find(b=>b.name===p.name);
+    let a = persona?.avatar || playerAvatars[p.id] || p.avatar;
+    if (!a || used.has(a)) {
+      persona = BOT_PERSONAS.find(b=>!used.has(b.avatar)&&!names.has(b.name));
+      if (!persona) continue;
+      names.delete(p.name); names.add(persona.name);
+      a = persona.avatar;
+      patch(p,{name:persona.name,avatar:a,botStyle:persona.style,
+        careerPublic:(horCareerModeOn()&&window.HORProgression?.localCareer?.botPublicProfile)
+          ? HORProgression.localCareer.botPublicProfile(persona.name):null});
+    } else if (p.avatar !== a || playerAvatars[p.id] !== a) patch(p,{avatar:a});
+    used.add(a);
+  }
+  return changed;
+}
+function changeHumanAvatar777(id, avatar) {
+  if (!isHost || !AVATARS.includes(avatar)) return false;
+  const p = players.find(p=>p&&p.id===id&&!p.isBot);
+  if (!p || players.some(q=>q&&!q.isBot&&q.id!==id&&(playerAvatars[q.id]||q.avatar)===avatar)) return false;
+  p.avatar=avatar;playerAvatars[id]=avatar;
+  if (game?.players) { const q=game.players.find(q=>q&&q.id===id);if(q)q.avatar=avatar; }
+  reconcileAvatarIdentities777();
+  return true;
+}
+function publishAvatarIdentities777() {
+  if (!isHost) return;
+  broadcast({type:'players',players:publicPlayersSnapshot(),beerSeats});
+  if (game) broadcastState();
+  try { updateWaitingUI();renderUI(); } catch (_) {}
+}
+
 function publicPlayersSnapshot() {
+  reconcileAvatarIdentities777();
   ensurePlayerSeats(players);
   try { const me=(players||[]).find(p=>p&&!p.isBot&&p.id===myPeerId); if(me) me.careerPublic=horMyCareerProfile(); } catch(e) {}
   return (players || []).filter(Boolean).map((p) => ({
@@ -5499,6 +5569,7 @@ function publicPlayersSnapshot() {
     seat: (typeof p.seat === 'number' ? p.seat : -1),
     bank: p.bank || 0,
     avatar: p.avatar || playerAvatars[p.id] || '',
+    voice: p.isBot ? 'avatar' : validHumanVoice(p.voice),
     botStyle: p.botStyle || '',
     isTempBot: !!p.isTempBot,
     humanStyle: p.humanStyle || '',
@@ -5814,6 +5885,13 @@ function addBot(seat, personaPick) {
   }
   if (!persona) persona = pool[Math.floor(Math.random() * pool.length)] || BOT_PERSONAS[botCount() % BOT_PERSONAS.length];
   if ((players || []).some(p => p && p.isBot && p.name === persona.name)) return;
+  // Human avatar priority: choose another whole persona, never dress a fixed bot as somebody else.
+  const occupiedAvatars = new Set((players || []).filter(Boolean).map(p => playerAvatars[p.id] || p.avatar));
+  if (occupiedAvatars.has(persona.avatar)) {
+    persona = pool.find(p => !occupiedAvatars.has(p.avatar) && !(players || []).some(x => x && x.isBot && x.name === p.name))
+      || availableBotPersonas().find(p => !occupiedAvatars.has(p.avatar));
+    if (!persona) return;
+  }
   const id = 'bot-' + Date.now() + '-' + Math.random().toString(36).slice(2, 6);
   players.push({
     id,
@@ -5828,11 +5906,6 @@ function addBot(seat, personaPick) {
     careerPublic: (horCareerModeOn() && window.HORProgression && HORProgression.localCareer && HORProgression.localCareer.botPublicProfile)
       ? HORProgression.localCareer.botPublicProfile(persona.name) : null,
   });
-  const usedAv = new Set((players || []).filter(p => p && p.avatar && p.id !== id).map(p => p.avatar));
-  if (usedAv.has(players[players.length - 1].avatar)) {
-    const free = AVATARS.find(a => !usedAv.has(a));
-    if (free) players[players.length - 1].avatar = free;
-  }
   playerAvatars[id] = players[players.length - 1].avatar;
   balanceTeams();
   try { broadcast({ type: 'players', players: publicPlayersSnapshot(), beerSeats }); } catch (e) {}
@@ -8980,7 +9053,7 @@ function hostResyncClient(conn, playerId) {
       currentPlayer: game.currentPlayer,
       trick: game.trick,
       ledColor: game.ledColor,
-      players: players.map(p => ({ name: p.name, team: p.team, id: p.id, isBot: !!p.isBot, bank: p.bank || 0, disconnected: !!p.disconnected })),
+      players: players.map(p => ({ name: p.name, team: p.team, id: p.id, isBot: !!p.isBot, bank: p.bank || 0, disconnected: !!p.disconnected, avatar: p.avatar || playerAvatars[p.id] || '', voice: p.isBot ? 'avatar' : validHumanVoice(p.voice) })),
       dealer: game.dealer,
       nestCount: game.nest?.length || 0,
       handsCount: (game.hands || []).map(h => (h ? h.length : 0)),
@@ -9103,6 +9176,8 @@ function hostTryReclaimSeat(conn, data) {
   players[idx] = {
     id: data.id,
     name: name || players[idx].replacedHumanName || players[idx].name || 'Player',
+    avatar: AVATARS.includes(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0],
+    voice: validHumanVoice(data.voice),
     team,
     isHost: false,
     isBot: false,
@@ -13570,7 +13645,7 @@ function startSoloPractice() {
     myName = (($('hor-player-name') && $('hor-player-name').value) || '').trim() || myName || 'You';
     myPeerId = 'solo-' + Math.random().toString(36).slice(2, 9);
     roomCode = 'OFFLINE';
-    players = [{ id: myPeerId, name: myName, team: 0, isHost: true, isBot: false, seat: 0, bank: loadMyBank(), avatar: ensurePreferredAvatar() || AVATARS[0], careerPublic: horMyCareerProfile() }];
+    players = [{ id: myPeerId, name: myName, team: 0, isHost: true, isBot: false, seat: 0, bank: loadMyBank(), avatar: ensurePreferredAvatar() || AVATARS[0], voice: loadPreferredVoice(), careerPublic: horMyCareerProfile() }];
     applyPreferredAvatarToMe();
 
     // 3 named persona bots (no network)
@@ -15819,6 +15894,7 @@ function applyFavoritePartner042() {
   if (!isHost || isSpectator || !(isSoloPractice || roomCode === 'OFFLINE')) return false;
   const favorite = favoritePartner042(), seat = favoritePartnerSeat042();
   if (!favorite || seat < 0) return false;
+  if ((players || []).some(p => p && !p.isBot && (playerAvatars[p.id] || p.avatar) === favorite.avatar)) return false;
   const current = playerAtSeat(seat);
   // A human partner always keeps their seat; their host cannot be changed here.
   if (!current || !current.isBot || current.name === favorite.name) return false;

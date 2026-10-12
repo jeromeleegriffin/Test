@@ -7,7 +7,7 @@
  const cache=new Map();let previous=null,event=null,serial=0,source=null;const history=[];
  function record(type,detail){history.push({type,...detail});if(history.length>80)history.shift();}
  // Explicit owner-authorized Character Studio casting; existing chooser/trigger untouched.
- const characterVoices=Object.freeze({dagger:'male',cinder:'female',crow:'female'});
+ const characterVoices=Object.freeze({dagger:'male',cinder:'female',crow:'female',sofia:'female',rafael:'male',samir:'male',claire:'female',june:'female',tess:'female',marcus:'male',owen:'male',daniel:'male'});
  function voiceFor(avatar){if(characterVoices[String(avatar||'').toLowerCase()])return characterVoices[String(avatar).toLowerCase()];return male.has(String(avatar||'').toLowerCase())?'male':'female';}
  function volume(){const v=window.he064Volumes?.gameplay;return Math.max(0,Math.min(1,Number.isFinite(v)?v:(window.he064Gain?window.he064Gain('card'):1)));}
  function allowed(){return !document.hidden && document.body.classList.contains('in-game') && typeof soundMuted!=='undefined' && !soundMuted && soundCard && volume()>0;}
@@ -38,7 +38,8 @@
   if(previous&&previous.phase==='trump'&&g.phase==='play'&&colors.includes(g.trump)&&Number.isInteger(g.bidder)&&g.players?.[g.bidder]){
    stop('new-choice');const p=g.players[g.bidder];
    const avatar=avatars?.[p.id]||p.avatar||((typeof AVATARS!=='undefined')?AVATARS[g.bidder%AVATARS.length]:'rookling');
-   event={color:g.trump,chooser:g.bidder,avatar,voice:voiceFor(avatar)};announce(event);
+   const choice=!p.isBot&&['male','female','silent'].includes(p.voice)?p.voice:voiceFor(avatar);
+   event={color:g.trump,chooser:g.bidder,avatar,voice:choice};if(choice!=='silent')announce(event);else record('suppressed',{reason:'player-silent',color:g.trump});
   }
   if(!allowed()&&source)stop('muted-or-hidden');
   previous=now;

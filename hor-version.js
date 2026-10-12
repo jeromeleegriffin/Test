@@ -1,7 +1,7 @@
-// Griffin House of Rooks — R772 runtime marker, no gameplay ownership.
-window.HOR_LIVE_VERSION = 772;
-window.HOR_BUILD = 772;
-window.GHR_BUILD = "Rook772";
+// Griffin House of Rooks — R779 runtime marker, no gameplay ownership.
+window.HOR_LIVE_VERSION = 779;
+window.HOR_BUILD = 779;
+window.GHR_BUILD = "Rook779";
 window.HORRuntimeTruth = async function () {
   const controller = navigator.serviceWorker && navigator.serviceWorker.controller;
   const worker = controller ? await new Promise(resolve => {
@@ -12,7 +12,7 @@ window.HORRuntimeTruth = async function () {
   }) : null;
   return {page:window.HOR_PAGE_BUILD, script:window.HOR_SCRIPT_BUILD,
     marker:window.HOR_BUILD, worker, controller:controller && controller.scriptURL,
-    coherent:window.HOR_PAGE_BUILD === '772' && window.HOR_SCRIPT_BUILD === '772' &&
-      window.HOR_BUILD === 772 && !!worker && worker.build === '772' &&
-      worker.cache === 'house-of-rooks-v772'};
+    coherent:window.HOR_PAGE_BUILD === '779' && window.HOR_SCRIPT_BUILD === '779' &&
+      window.HOR_BUILD === 779 && !!worker && worker.build === '779' &&
+      worker.cache === 'house-of-rooks-v779'};
 };

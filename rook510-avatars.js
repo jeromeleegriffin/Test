@@ -31,6 +31,7 @@
   };
   window.avatarSrc = function (id) {
     const key = window.avatarKey(id);
+    if (["blaze", "nix", "anchor", "wager", "ember", "titan", "pike", "drift", "dice", "hollow", "vex", "bramble", "emberlyn", "frost", "fang", "halo", "thistle", "pebble", "rookery", "sable", "willow", "quill", "moss", "gable", "marrow", "finch", "moth", "brandy", "ivy", "shade", "spark", "hearth", "grit", "copper", "flint", "barrel", "nettle", "ash", "cobalt", "harrier"].includes(key)) return 'assets/characters077/'+key+'-portrait.webp';
     if (key && PNG[key]) return 'assets/images/avatar-' + key + '.webp';
     if (typeof AVATARS !== 'undefined' && AVATARS.indexOf(key) >= 0) return 'assets/images/avatar-' + key + '.svg';
     return 'assets/images/avatar-rookling.svg';

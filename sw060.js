@@ -2,10 +2,11 @@
  * Author: Jerome Griffin
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
-const BUILD = '772';
-const CACHE = 'house-of-rooks-v772';
+const BUILD = '779';
+const CACHE = 'house-of-rooks-v779';
 const SHELL = [
- //772: card faces must belong to the new cache even when warmed by an older worker.
+ './identity-choice.js', './identity-choice.css',
+ //779: card faces must belong to the new cache even when warmed by an older worker.
  './assets/cards/numbered/black-1.png',
  './assets/cards/numbered/black-10.png',
  './assets/cards/numbered/black-11.png',
@@ -51,13 +52,13 @@ const SHELL = [
  './assets/cards/numbered/yellow-8.png',
  './assets/cards/numbered/yellow-9.png',
 
- './asset-loading772.js?v=772','./asset-loading772.css?v=772',
- './responsive-review.js?v=772','./responsive-review.css?v=772',
- './characters077.js?v=772','./characters077.css?v=772','./assets/characters077/dagger-left.png','./assets/characters077/dagger-top.png','./assets/characters077/dagger-right.png','./assets/characters077/cinder-left.png','./assets/characters077/cinder-top.png','./assets/characters077/cinder-right.png','./assets/characters077/crow-left.png','./assets/characters077/crow-top.png','./assets/characters077/crow-right.png','./assets/characters077/crow-right-arm.png',
+ './character-library774.js?v=779',"./assets/images/avatar-claire.svg","./assets/images/avatar-june.svg","./assets/images/avatar-tess.svg","./assets/images/avatar-marcus.svg","./assets/images/avatar-owen.svg","./assets/images/avatar-daniel.svg","./assets/images/avatar-sofia.svg","./assets/images/avatar-rafael.svg","./assets/images/avatar-samir.svg", './asset-loading772.js?v=779','./asset-loading772.css?v=779',
+ './responsive-review.js?v=779','./responsive-review.css?v=779',
+ './characters077.js?v=779','./characters077.css?v=779',
  './x1/core.js','./x1/sha256.js','./x1/worker.js','./x1/integration.js',
- './trump-voice.js?v=772',
+ './trump-voice.js?v=779',
  './assets/trump-voice/female-black.wav','./assets/trump-voice/female-green.wav','./assets/trump-voice/female-red.wav','./assets/trump-voice/female-yellow.wav','./assets/trump-voice/male-black.wav','./assets/trump-voice/male-green.wav','./assets/trump-voice/male-red.wav','./assets/trump-voice/male-yellow.wav',
- './shuffle-asset.js?v=772','./signature-shuffle.js?v=772','./signature-shuffle.css?v=772',
+ './shuffle-asset.js?v=779','./signature-shuffle.js?v=779','./signature-shuffle.css?v=779',
  './shuffle-preview.html','./shuffle-asset.js',
  './assets/signature-shuffle/poster.png','./assets/signature-shuffle/manifest.json',
  './assets/signature-shuffle/sheet-00.webp',
@@ -75,10 +76,10 @@ const SHELL = [
  './assets/signature-shuffle/sheet-12.webp',
  './assets/signature-shuffle/sheet-13.webp',
 
- './unified-bidding752.js?v=772','./unified-bidding752.css?v=772','./rail-trick752.js?v=772','./rail-trick752.css?v=772','./assets/ui752/trick-won-lettering.svg',
- './laid-down-refinement.css?v=772',
- './raven-audio761.js?v=772','./assets/audio/raven-fight761/approach.wav','./assets/audio/raven-fight761/call.wav','./assets/audio/raven-fight761/flutter.wav',
- './raven-timeline741.js?v=772','./raven-fight741.js?v=772','./raven-fight741.css?v=772',
+ './unified-bidding752.js?v=779','./unified-bidding752.css?v=779','./rail-trick752.js?v=779','./rail-trick752.css?v=779','./assets/ui752/trick-won-lettering.svg',
+ './laid-down-refinement.css?v=779',
+ './raven-audio761.js?v=779','./assets/audio/raven-fight761/approach.wav','./assets/audio/raven-fight761/call.wav','./assets/audio/raven-fight761/flutter.wav',
+ './raven-timeline741.js?v=779','./raven-fight741.js?v=779','./raven-fight741.css?v=779',
  './assets/raven-fight/BLACK_WINGS_UP.png',
  './assets/raven-fight/BLACK_WINGS_MID.png',
  './assets/raven-fight/BLACK_WINGS_DOWN.png',
@@ -87,14 +88,14 @@ const SHELL = [
  './assets/raven-fight/RED_WINGS_DOWN.png',
 
  './bid-repair737.css?v=737','./bid-repair737.js?v=737',
- './trump-hand739.css?v=772','./trump-hand739.js?v=772',
+ './trump-hand739.css?v=779','./trump-hand739.js?v=779',
   './house738.css?v=738',
   './house736.css?v=736','./house736.js?v=736',
   './assets/house736/lantern-clipped.svg','./assets/house736/lantern-approved.png',
   './assets/audio/natural063/smoothcard736down-01.wav',
   './shuffle732.css?v=732','./shuffle732.js?v=732',
   './assets/audio/shuffle732/1.wav','./assets/audio/shuffle732/2.wav','./assets/audio/shuffle732/3.wav','./assets/audio/shuffle732/4.wav',
-  './trump714.css?v=772', './trump714.js?v=772',
+  './trump714.css?v=779', './trump714.js?v=779',
   './assets/trump714/case.png', './assets/trump714/lid-inner.png',
   './assets/trump714/lid-outer.png', './assets/trump714/stamp.png',
   './assets/trump746/table-faint.png',
@@ -127,10 +128,10 @@ const SHELL = [
 
   './',
   './index.html',
-  './kitty736.css?v=772',
+  './kitty736.css?v=779',
   './holder004.css?v=732',
   './holder004.js?v=732',
-  './game060.js?v=772',
+  './game060.js?v=779',
   './assets/cardholder/holder047.png',
   './assets/cardholder/connector050.png',
   './assets/cardholder/backrest004.png',
@@ -148,17 +149,17 @@ const SHELL = [
   './assets/audio/card-wash-max-cc0.wav',
   './vendor/peerjs.min.js',
   './vendor/peerjs.min.js?v=rook044',
-  './style057.css?v=772',
+  './style057.css?v=779',
   './rules.js?v=rook044',
   './game.js?v=rook044',
-  './polish.js?v=772',
+  './polish.js?v=779',
   './shuffle-statistics.html',
   './rules.js',
   './rules.js?v=732',
   './bots.js',
   './bots.js?v=732',
   './cabin-ambience041.js',
-  './cabin-ambience041.js?v=772',
+  './cabin-ambience041.js?v=779',
   './fire-glow-controller060.js?v=063',
   './game.js',
   './game.js?v=732',
@@ -171,7 +172,7 @@ const SHELL = [
   './polish.js',
   './polish.js?v=732',
   './progression.js',
-  './progression.js?v=772',
+  './progression.js?v=779',
   './style.css',
   './style.css?v=732',
   './hor-version.js',
