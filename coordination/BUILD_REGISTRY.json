@@ -1174,11 +1174,33 @@
       "task": "Correct Cobalt far-seat scale and remove duplicate floating career badges; preserve name-side markers",
       "sourceGameBuild": "779",
       "sourceSha256": "94963b99f7e8bee5b9714f39e01e25cc2dfcd25c2bf1dd0c6861c48fbb233c4d",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_OWNER_APPEARANCE_REVIEW",
       "date": "2026-10-12",
       "ownerApproved": false,
       "physicalAndroidTested": false,
-      "deploymentStatus": "NOT_DEPLOYED"
+      "deploymentStatus": "NOT_DEPLOYED",
+      "filename": "780.zip",
+      "bytes": 112833936,
+      "sha256": "48e3ede5191f1e8cb98da829a4a2da591f1feca51c5e832b012a3870414fb2c6",
+      "entries": 591,
+      "crc": "PASS",
+      "manifestChecks": 591,
+      "changedFiles": [
+        "characters077.css",
+        "characters077.js",
+        "game060.js",
+        "hor-version.js",
+        "index.html",
+        "sw060.js"
+      ],
+      "libraryFileId": "libfile_57ec48dd2e988191bf547bae63726274",
+      "fileId": "file_00000000e71c81f5a54a17d054e4bfc7",
+      "correctionRecordLibraryFileId": "libfile_60daebf00afc8191b54882f249c5e69b",
+      "checkpointLibraryFileId": "libfile_56499a0fd0a48191bb62bd81df8f8cfe",
+      "tests": "3 portrait widths; name-star career-card click; occupant geometry reset; legacy and landscape marker retention; coherent 780 worker and offline visited asset; 591 ZIP bytes verified",
+      "testLimits": "Chromium143 simulation only; owner Android appearance review pending; no new live PeerJS or fullmatch test",
+      "brainVersion": "Z",
+      "brainStatus": "UNCHANGED; complete ready checkpoint saved"
     }
   ],
   "testSiteBuild": "779"
