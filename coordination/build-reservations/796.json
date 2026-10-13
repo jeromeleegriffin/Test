@@ -6,7 +6,7 @@
   "sourceGameBuild": "795-career-phone-test-v1",
   "sourceSha256": "85439e34821590accf8444f43025ab3a14798caa64ef5873d423e2ae10edd337",
   "sourceRuntimeIdentitySha256": "ad4d0019637ca1c0fe65c86953fab919f9d383952b824f16c5efa349a34385f6",
-  "status": "RESERVED",
+  "status": "CONFLICT_DO_NOT_REUSE",
   "date": "2026-10-13",
   "ownerApproved": true,
   "physicalAndroidTested": true,
@@ -18,5 +18,28 @@
     "scope": "Owner overall phone acceptance; no independent device measurements or live PeerJS claim"
   },
   "deploymentAuthorization": "TEST_ONLY",
-  "production531": "PROTECTED"
+  "production531": "PROTECTED",
+  "collision": {
+    "status": "CONFLICT_DO_NOT_REUSE",
+    "conflictReason": "Two Library items named 796.zip were found during release packaging. Preserve both archives; do not overwrite or publish either as the unique official 796 release.",
+    "variants": [
+      {
+        "filename": "796.zip",
+        "libraryFileId": "libfile_506d3d8a2b8881918551ea6ca97a7bcc",
+        "fileId": "file_00000000b28481f68efbbaade84728fd",
+        "bytes": 140708958,
+        "sha256": "b567d87a9349dc6d5999b85400e08d5ec7104b93c67ff10f4f3111c0cff01804",
+        "notes": "Pre-existing Library item. Hash is from local prepublication draft; byte equality to Library item not verified."
+      },
+      {
+        "filename": "796(1).zip",
+        "libraryFileId": "libfile_63097ac885148191871377de3cac7c2b",
+        "fileId": "file_00000000652081f4898827c215a64ed4",
+        "bytes": 144797861,
+        "sha256": "9304d45fcaa715bf7e85a19d31c11a12ed11420f52fe88d2618398e42348787e",
+        "notes": "New full-evidence archive; preserved, not deployed."
+      }
+    ],
+    "supersededBy": "797"
+  }
 }

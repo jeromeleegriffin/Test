@@ -1,0 +1,24 @@
+{
+  "number": "797",
+  "reservationId": "career-release-3a04d861-reissue-797-20261013",
+  "workstream": "Career migration and owner-approved release",
+  "task": "Reissue the owner-approved career release after build 796 Library filename collision; Test server only",
+  "sourceGameBuild": "795-career-phone-test-v1",
+  "sourceSha256": "85439e34821590accf8444f43025ab3a14798caa64ef5873d423e2ae10edd337",
+  "sourceRuntimeIdentitySha256": "8650683fc8a5461d8a12a7328f3dd98e130179f67421cf3feeded30c79198ced",
+  "status": "RESERVED",
+  "date": "2026-10-13",
+  "ownerApproved": true,
+  "physicalAndroidTested": true,
+  "physicalAndroidTestEvidence": "OWNER_REPORTED",
+  "ownerPhoneReview": {
+    "quote": "Okay, everything worked.",
+    "reportedAt": "2026-10-13T03:55:09-04:00",
+    "sourceFilename": "Career-Rita-Test-3a04d861.zip",
+    "scope": "Owner overall phone acceptance; no independent device measurements or live PeerJS claim"
+  },
+  "deploymentAuthorization": "TEST_ONLY",
+  "production531": "PROTECTED",
+  "supersedesBuild": "796",
+  "collisionResolution": "Build 796 marked CONFLICT_DO_NOT_REUSE; both archives retained."
+}
