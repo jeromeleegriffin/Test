@@ -33,5 +33,13 @@
   },
   "testLimits": "Chromium simulation and controlled pixel fixtures. Physical Android visibility, vibration/motor timing not certified; owner phone review pending. No new intelligence tournament or livePeerJS testing.",
   "ownerFeedback": "Holder turn/win cue not visible; vibration uncertain. Owner installed build was not independently confirmed. Latest790 uses unchanged789cue CSS; correction continues790.",
-  "ownerFeedbackLatest": "After792delivery Jerome reports cue still not showing in actual game. Phone build/settings/loader not independently established. Do not claim fixed from browser tests."
+  "ownerFeedbackLatest": "After792delivery Jerome reports cue still not showing in actual game. Phone build/settings/loader not independently established. Do not claim fixed from browser tests.",
+  "ownerAndroidVideoReview": {
+    "filename": "Screen_Recording_20261012_205519_Chrome.mp4",
+    "libraryFileId": "libfile_4b54fdef67888191921b16c62f67fc6b",
+    "sha256": "3e343cb68363cbefd674dbf18f1a16124e3a6d10ed67777db0c699dcff1ce6d4",
+    "loadedZipVisible": "792.zip",
+    "cueAcceptance": "UNRESOLVED: video confirms rendered brightening but ineffective owner attention cue",
+    "record": "coordination/PHONE_REVIEW_792.md"
+  }
 }

@@ -20,3 +20,8 @@ Next: Jerome phone review of visible slow turn pulse/two win pulses and physical
 Jerome: “It might be showing in the code, but it is not showing on the actual game.” Treat visual cue as UNRESOLVED;792 is not accepted as a visibility fix. Actual installed phone build/settings/loader still unverified. Keep exact792archive frozen; no blind strength increase or replacement ZIP.
 
 Follow-up Chromium trace of one complete scored hand through normal gameplay (no forced phase fixtures) observed66turn samples,2win samples,one visible holder and changing filter values with normal elapsed animation. Zero page errors. This cannot establish phone visibility or disprove the owner report. Next diagnosis requires a short phone screen recording while awaiting a human action and identification of the loaded ZIP; compare actual holder/event/settings/render path. No physical-phone/haptic success claimed. No new runtime changes,artwork,deployments or baseline promotion.
+
+
+## Actual owner recording inspected — October13 UTC
+
+See [PHONE_REVIEW_792.md](PHONE_REVIEW_792.md). Header confirms792.ZIP. Frame analysis shows real wood/brass brightness cycling on the phone, but the effect remains ineffective for the owner. Keep visibility acceptance unresolved. Also verified pending name/status placement, a newly observed collection-card/BIG TRICK popup overlap at106.65s, and duplicate display-name ambiguity (not proof of duplicate-avatar failure). No runtime modification or new ZIP in this inspection.

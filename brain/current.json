@@ -107,5 +107,6 @@
   "artifactSha256": "791b4fb33a76740164b564de9d5b35990d63af060a8142ff365121b6afe1aed6",
   "artifactBytes": 205653644,
   "holderCueCorrectionCheckpoint": "../coordination/HOLDER_CUES_792.md",
-  "holderCueStatus": "OWNER_REPORT_STILL_NOT_VISIBLE_DIAGNOSIS_OPEN"
+  "holderCueStatus": "792_VIDEO_CONFIRMS_RENDERED_BUT_INEFFECTIVE_CUE_UNRESOLVED",
+  "latestPhoneReviewCheckpoint": "../coordination/PHONE_REVIEW_792.md"
 }
