@@ -1,0 +1,14 @@
+{
+  "number": "792",
+  "reservationId": "holder-visible-cue-45dc04e134e5-20261013",
+  "workstream": "Visible holder turn/win cue correction",
+  "task": "Owner phone report: no visible holder pulse in790. Reproduce and correct isolated presentation only; preserve790 AI/EPA/voices.",
+  "sourceGameBuild": "790",
+  "sourceSha256": "60aa6465c69b401fb10302c506543168fe53ad79056082dd184a0c1db9d61f1a",
+  "status": "RESERVED",
+  "date": "2026-10-13",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED",
+  "expectedMainSha": "de2e156fcb2a8cd214039a5848e3c8a385eded75"
+}
