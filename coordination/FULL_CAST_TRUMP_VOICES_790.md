@@ -1,6 +1,9 @@
 GRIFFIN HOUSE OF ROOKS — FULL-CAST TRUMP VOICES INTEGRATED, BUILD 790
 Owner: Jerome Griffin. Integration/testing date: 2026-10-13 UTC (October 12 owner time).
-Status: ISOLATED EXPERIMENTAL CANDIDATE TESTED AND PACKAGED; owner Android review pending. No deployment or runtime publication.
+Status: DELIVERED ISOLATED EXPERIMENTAL CANDIDATE; owner Android review pending. No deployment or runtime publication.
+
+SAVED DELIVERY
+790.zip: libfile_8eb70ad047388191ab4e5908ed4e4b03; file ID file_00000000e3ac81f5abb80a353748db3e; exact filename confirmed, no collision suffix. Report: libfile_46754e34a72881918afa98818b6658bb. Complete voice mapping: libfile_fdaef47d5894819194db9142e2356c3d. Separate evidence archive 790-evidence.tar.gz: libfile_af2a571c224481919763d31b65dff7f4; SHA25661a5e5bc44c66f1505619d7e1b27f9880e2f679108019bb0905f61c9f87cff51. All saves and local identity application succeeded. Brain status publication521c86d1bddf6922907d0102184a3a7b6eeb3188 was read back; this delivery update preserves concurrent791 documentation reservation. Do not confuse791 documentation packaging with a newer playable game.
 
 AUTHORITY AND CONTINUITY
 This owner-authorized specialist supplement records integration status under Master Brain Z. It does not promote any approved/deployed baseline or rewrite frozen Brain versions. Complete H–Z reading was performed earlier in this continuing development session; current Z pointer, numbering/operating rules, full-cast approval checkpoint, 789 handoff and registry were read again for this task. Published Brain/Test remains779; registry approved development remains783. Current source, not the historical782 roster, governs.

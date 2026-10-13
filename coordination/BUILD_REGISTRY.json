@@ -1531,7 +1531,7 @@
       "sourceGameBuild": "X1-PF45dc-TEST (parent 788)",
       "sourceSha256": "af962deb8229eb7a037ba2a1e94cc230f395f03a8591ecc65304c7a684c70d91",
       "sourceLibraryFileId": "libfile_c4756225a35c81918688f890b201af28",
-      "status": "TESTED_PACKAGED_PENDING_DELIVERY",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
       "date": "2026-10-13",
       "ownerApproved": false,
       "physicalAndroidTested": false,
@@ -1562,7 +1562,14 @@
       },
       "testLimits": "Chromium153 mobile/touch simulation; no physical Android listening/haptics/latency, live PeerJS reconnect or installed-cache migration test. Bidding improvement remains experimental.",
       "biddingChanged": "Preserved exact PF45dc candidate; no new bidding changes in790",
-      "brainStatus": "Authorized specialist integration status published; approved/deployed pointers unchanged"
+      "brainStatus": "Owner-authorized specialist status published and read back; approved/deployed pointers preserved",
+      "libraryFileId": "libfile_8eb70ad047388191ab4e5908ed4e4b03",
+      "fileId": "file_00000000e3ac81f5abb80a353748db3e",
+      "reportLibraryFileId": "libfile_46754e34a72881918afa98818b6658bb",
+      "mappingLibraryFileId": "libfile_fdaef47d5894819194db9142e2356c3d",
+      "evidenceLibraryFileId": "libfile_af2a571c224481919763d31b65dff7f4",
+      "evidenceFilename": "790-evidence.tar.gz",
+      "evidenceSha256": "61a5e5bc44c66f1505619d7e1b27f9880e2f679108019bb0905f61c9f87cff51"
     },
     {
       "number": "791",
