@@ -47,7 +47,7 @@
   "discardIntegrationStatus": "OWNER_APPROVED_PRESERVED_IN751",
   "specialistCheckpointUpdatePolicy": "Every requested task must include a complete Brain status update; publish within task authorization, otherwise supply ready handoff",
   "latestLocalCandidateSha256": "85a2ccb32c2b65e8f77f2d7156085e58428ec026ce2b4bc5a57db2e86a6f9d01",
-  "latestLocalCandidateStatus": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
+  "latestLocalCandidateStatus": "DELIVERED_VISUAL_CUE_UNRESOLVED",
   "buildRegistry": "../coordination/BUILD_REGISTRY.json",
   "buildNumberingPolicy": "../coordination/BUILD_NUMBERING.md",
   "signatureShuffleStatus": "765_FULL_PHASE_SYNC_PRESERVED_IN_APPROVED771",
@@ -98,7 +98,7 @@
   "fullCastTrumpVoiceReportLibraryFileId": "libfile_46754e34a72881918afa98818b6658bb",
   "fullCastTrumpVoiceMappingLibraryFileId": "libfile_fdaef47d5894819194db9142e2356c3d",
   "fullCastTrumpVoiceEvidenceLibraryFileId": "libfile_af2a571c224481919763d31b65dff7f4",
-  "latestDeliveredGameStatus": "PENDING_OWNER_ANDROID_REVIEW",
+  "latestDeliveredGameStatus": "VISUAL_CUE_UNRESOLVED",
   "artifactFilename": "791.zip",
   "artifactStatus": "PORTABLE_DOCUMENTATION_SAVED_SEPARATELY",
   "candidateEpaEnabled": true,
@@ -107,5 +107,5 @@
   "artifactSha256": "791b4fb33a76740164b564de9d5b35990d63af060a8142ff365121b6afe1aed6",
   "artifactBytes": 205653644,
   "holderCueCorrectionCheckpoint": "../coordination/HOLDER_CUES_792.md",
-  "holderCueStatus": "792_HIGHER_VISIBLE_CONTRAST_DELIVERED_ANDROID_REVIEW_PENDING"
+  "holderCueStatus": "OWNER_REPORT_STILL_NOT_VISIBLE_DIAGNOSIS_OPEN"
 }

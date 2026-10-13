@@ -1602,7 +1602,7 @@
       "task": "Owner phone report: no visible holder pulse in790. Reproduce and correct isolated presentation only; preserve790 AI/EPA/voices.",
       "sourceGameBuild": "790",
       "sourceSha256": "60aa6465c69b401fb10302c506543168fe53ad79056082dd184a0c1db9d61f1a",
-      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
+      "status": "DELIVERED_VISUAL_CUE_UNRESOLVED",
       "date": "2026-10-13",
       "ownerApproved": false,
       "physicalAndroidTested": false,
@@ -1629,7 +1629,8 @@
         "allAudioUnchanged": true
       },
       "testLimits": "Chromium simulation and controlled pixel fixtures. Physical Android visibility, vibration/motor timing not certified; owner phone review pending. No new intelligence tournament or livePeerJS testing.",
-      "ownerFeedback": "Holder turn/win cue not visible; vibration uncertain. Owner installed build was not independently confirmed. Latest790 uses unchanged789cue CSS; correction continues790."
+      "ownerFeedback": "Holder turn/win cue not visible; vibration uncertain. Owner installed build was not independently confirmed. Latest790 uses unchanged789cue CSS; correction continues790.",
+      "ownerFeedbackLatest": "After792delivery Jerome reports cue still not showing in actual game. Phone build/settings/loader not independently established. Do not claim fixed from browser tests."
     }
   ],
   "testSiteBuild": "779",
