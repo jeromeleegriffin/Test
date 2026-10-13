@@ -1,7 +1,8 @@
 # Griffin House of Rooks — approved full-cast trump voice checkpoint
 
 Owner: Jerome Griffin. Decision date: 2026-10-12.
-Status: AUDIO OWNER-APPROVED; GAME INTEGRATION PENDING.
+Status: AUDIO OWNER-APPROVED; INTEGRATED IN ISOLATED790 CANDIDATE; ANDROID REVIEW PENDING.
+Integration update2026-10-13: see FULL_CAST_TRUMP_VOICES_790.md and current build registry. The following production history remains preserved; its older pending-integration statements describe that earlier checkpoint. No deployment.
 This is an authorized specialist supplement to Master Brain Z, not a new game release or baseline promotion. Preserve frozen Brain versions. Owner requested: “Okay, now get the master brain updated so we don't forget anything.”
 
 ## Approval and scope

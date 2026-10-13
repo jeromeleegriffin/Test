@@ -85,9 +85,12 @@
   "testServerDeploymentCommit": "6872e4ebc64b78691564eb2ae0c41761fb0e1ada",
   "testServerUrl": "https://jeromeleegriffin.github.io/Test/",
   "testRootRollbackCommit": "ccb902b30d9e759634e2b8921276a09a4a5f005d",
-  "fullCastTrumpVoiceCheckpoint": "../coordination/FULL_CAST_TRUMP_VOICES_023.md",
-  "fullCastTrumpVoiceStatus": "OWNER_APPROVED_AUDIO_464_MP3_116_AVATARS_INTEGRATION_PENDING",
+  "fullCastTrumpVoiceCheckpoint": "../coordination/FULL_CAST_TRUMP_VOICES_790.md",
+  "fullCastTrumpVoiceStatus": "INTEGRATED_TESTED_790_PENDING_ANDROID_REVIEW_NO_DEPLOYMENT",
   "fullCastTrumpVoiceLibraryFileId": "libfile_25682ceb2d4c81919546ac624ee3119d",
   "fullCastTrumpVoiceApprovalDate": "2026-10-12",
-  "fullCastTrumpVoiceScope": "Four trump colors only; preserve Jerome real recordings; additional dialogue deferred; no deployment"
+  "fullCastTrumpVoiceScope": "Four trump colors only; preserve Jerome real recordings; additional dialogue deferred; no deployment",
+  "fullCastTrumpVoiceCandidateBuild": "790",
+  "fullCastTrumpVoiceCandidateSha256": "60aa6465c69b401fb10302c506543168fe53ad79056082dd184a0c1db9d61f1a",
+  "fullCastTrumpVoiceIntegratedDate": "2026-10-13"
 }
