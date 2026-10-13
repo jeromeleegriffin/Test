@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "brainVersion": "AA",
+      "updated": "2026-10-13",
+      "browse": "versions/AA/files/00_START_HERE/START_HERE.md",
+      "artifact": "",
+      "sha256": "5747ff4319e5d8223b4084b87891b1e3fa1003d722e1814025b1cd692652dfe1",
+      "sha256Scope": "primaryDocumentation",
+      "archiveStatus": "AA documentation catch-up;783 approved;Test779;790 delivered experimental candidate"
+    },
+    {
       "brainVersion": "Z",
       "updated": "2026-10-12",
       "browse": "versions/Z/files/00_START_HERE/START_HERE.md",

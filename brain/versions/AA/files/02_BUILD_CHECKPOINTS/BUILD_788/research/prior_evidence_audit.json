@@ -1,0 +1,91 @@
+{
+  "original": {
+    "hands_audited": 2000,
+    "pairs": 1000,
+    "wins_losses_ties": [
+      806,
+      97,
+      97
+    ],
+    "mean_margin_per_hand": 38.815
+  },
+  "qualification": {
+    "fresh_sol7": {
+      "clusters": 400,
+      "hands": 800,
+      "wins_losses_ties": [
+        333,
+        38,
+        29
+      ],
+      "mean_margin_per_hand": 43.45
+    },
+    "unfamiliar_meridian": {
+      "clusters": 200,
+      "hands": 400,
+      "wins_losses_ties": [
+        164,
+        32,
+        4
+      ],
+      "mean_margin_per_hand": 48.95
+    },
+    "unfamiliar_extreme": {
+      "clusters": 200,
+      "hands": 400,
+      "wins_losses_ties": [
+        165,
+        22,
+        13
+      ],
+      "mean_margin_per_hand": 70.75
+    },
+    "mixed_meridian": {
+      "clusters": 50,
+      "hands": 200,
+      "wins_losses_ties": [
+        32,
+        14,
+        4
+      ],
+      "mean_margin_per_hand": 19.225
+    },
+    "mixed_extreme": {
+      "clusters": 50,
+      "hands": 200,
+      "wins_losses_ties": [
+        35,
+        10,
+        5
+      ],
+      "mean_margin_per_hand": 21.8
+    }
+  },
+  "epa_validation": {
+    "matched_rows": 5000,
+    "distinct_seed_deals": 4250,
+    "shared_better": 1767,
+    "frozen_better": 1054,
+    "ties": 2179,
+    "mean_delta": 7.44,
+    "seed_cluster_robust_se_descriptive": 1.0050231598796933,
+    "seed_cluster_normal95_descriptive": [
+      5.470154606635802,
+      9.409845393364199
+    ],
+    "focal_always_dealer": true,
+    "limitations": "The published independent-deal count is wrong. This descriptive robust interval clusters repeated seeds; it does not repair limited seat/partner coverage or validate human behavior. No new EPA simulation performed."
+  },
+  "epa_duel": {
+    "matched_deals": 5000,
+    "wins_losses_ties": [
+      4472,
+      177,
+      351
+    ],
+    "mean_margin": 53.37,
+    "limitations": "All four seats have partner-hand privilege. Sol7EPA modifies unseen-card inference; X1EPA modifies sampling. This compares EPA implementations and does not represent the sole-human offline deployment rule."
+  },
+  "simulations_executed": 0,
+  "raw_prior_hands_independently_audited": 4000
+}

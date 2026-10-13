@@ -1,0 +1,284 @@
+GRIFFIN HOUSE OF ROOKS
+THE FINAL INTELLIGENCE VERDICT
+Independent research evaluation | Owner: Jerome Griffin | 2026-10-11
+
+VERDICT: A. X1 SHOULD BECOME THE DEFAULT MAIN BRAIN.
+
+If this were my game, I would choose the original frozen CHALLENGER-X1 today,
+retain Sol7 as the switchable backup, and stop developing challengers for this
+decision. X1's advantage survives a more relevant test: changing just one seat,
+keeping the other three players fixed, and playing complete games with changing
+scores. This strengthens the earlier recommendation from leading candidate to
+recommended default foundation. It does not certify an untested browser port
+or establish that every future opponent, human partnership or rule option is solved.
+No integration, deployment, production, persona, pointer, repository or Android
+change was performed by this assignment.
+
+THE ONE EXPERIMENT
+
+Matched single-seat substitution in full games to 500, across four frozen table
+environments. Compare X1+the same partner against Sol7+that same partner, with
+the same two opponents, same deck stream, same physical seat and initial dealer.
+Each independent stream was repeated in four seat rotations. The first three
+environments contain NO Sol7 outside the tested seat, directly challenging the
+idea that X1 only works against the policy used in its rollouts. The fourth puts
+it with an X1 teammate against two X1 opponents, testing a likely future table.
+
+80 independently seeded streams, 20 per environment; four rotations per stream;
+two engines per rotation. This is 320 matched game comparisons and 640 games,
+NOT 640 independent observations and NOT 3,181 independent deals. Statistical
+uncertainty uses 80 whole-stream clusters, stratified by the four environments.
+
+Why this adds more than another ordinary tournament: previous tests already
+established isolated-hand strength. They did not establish the marginal value
+of installing one engine into a varied table while the actual game score and
+auction incentives evolve. This test evaluates the game-winning objective,
+partner compatibility with different existing policies, and rollout mismatch
+together through one predeclared causal comparison. No human-like policy was
+invented, and these bot partners are not described as real humans.
+
+EXACT RESULTS
+
+                                 X1 arm       Sol7 arm
+Complete games                       320            320
+Wins                                 212            153
+Losses                               108            163
+Ties                                   0              4
+Raw game win rate                 66.2500%       47.8125%
+Payoff rate, ties worth half      66.2500%       48.4375%
+Complete hand executions            1587           1594
+
+Primary paired effect: +17.8125 percentage points in win/tie payoff for X1.
+100,000-resample stratified paired cluster bootstrap 95% CI:
+  +13.28125 to +22.65625 percentage points.
+Confirmatory stratified t 95% CI: +12.94635 to +22.67865 percentage points.
+Standard error 2.43596 percentage points; Satterthwaite degrees of freedom 64.1668.
+Both prespecified intervals are comfortably above zero. No early stopping.
+
+In 63 matched comparisons X1 won while Sol7 lost; the reverse occurred 8 times.
+X1 also won the 4 comparisons where Sol7 tied. The other 245 had the same binary
+outcome. Across independent stream clusters, 44 favored X1, 2 favored Sol7 and
+34 tied. Neither these 320 comparisons nor their individual hands are treated
+as independent for the reported intervals.
+
+Partner / opposing policies          X1 W-L-T    Sol7 W-L-T   Paired payoff gain
+Extreme / Meridian and Corvus          54-26-0      46-34-0       +10.0000 pp
+Meridian / Corvus and Extreme          66-14-0      49-31-0       +21.2500 pp
+Corvus / Extreme and Meridian          52-28-0      35-42-3       +19.3750 pp
+X1 / X1 and X1                        40-40-0      23-56-1       +20.6250 pp
+
+Each row has 80 games per engine and 20 independent streams. All four point
+estimates favor X1. After the prespecified four-environment adjustment,
+Extreme's t 98.75% interval crosses zero (-0.4948 to +20.4948 pp), whereas its
+bootstrap interval stays positive. Its separate gain is therefore less secure;
+the other three adjusted t intervals remain positive. No environment supplies
+statistically supported evidence of a reversal favoring Sol7. The pooled
+primary conclusion remains strong. Equal environment weights are deliberate,
+not a measurement of the customer population.
+
+The all-X1 arm's 50% rate in the last row is expected from balanced focal seats
+at an all-identical table. Replacing one of those seats with Sol7 reduced its
+team's payoff rate to 29.375%. This is useful evidence that X1's benefit survives
+opponents who themselves use X1, despite its unchanged Sol7 continuation policy.
+
+HANDS, DEALS, BUDGET AND FAILURES
+
+Official: 3,181 complete hands, 31,810 tricks, 127,240 actual card plays.
+All 640 games completed in 3 to 9 hands; zero hit the 15-hand cap.
+1,200 fresh decks were scheduled; 494 distinct decks were actually used across
+the shared streams/rotations. 1,497 paired hand-number slots were played in both
+arms; 187 additional executions arose because paired games ended at different
+times. These differences are legitimate consequences of the engine choice.
+No hand-level inferential claim treats those unequal trajectories as matched.
+
+Additional complete executions: 4 historical X1 replays, 8 Sol7 wrapper-parity
+hands, 16 predetermined official-hand replays. TOTAL THIS ASSIGNMENT: 3,209.
+Zero failed, illegal, aborted, invalid or replaced executions; zero censored
+games. The fixed maximum was 9,600 official hands plus 28 planned validations,
+within the owner's 10,000 budget. The full fixed sample was completed; the low
+hand count reflects short completed games, not outcome-dependent early stopping.
+
+Official X1 computation, including X1 opponents/partners: 29,907 searches,
+4,734,208 sampled hidden worlds and 18,944,256 candidate-action continuation
+rollouts. These are internal search work, not extra real tournament hands.
+768 measured benchmark decisions plus 16 warmups are not complete hands either.
+4,000 OLD hand logs were additionally audited, without re-simulating them.
+
+SOURCE AND RULE VERIFICATION
+
+Sol7 SHA256:
+04404bdb843800125582560cec2f209fc8c7bcd4191bc7da37a931e7236aaf4b
+X1 Python SHA256:
+f1650289373b82ffbc04a610a5dad94a9572a1a0a9781d28d29e5e9d606f77c6
+X1 native C++ SHA256:
+5f4ac400b72d1451e1a50b4ecca780c56969338018a908610734b93d8cca9790
+
+All original 74-member package hashes and 12 frozen hashes passed. The756
+149-member manifest and qualification freeze passed; all 75 delivered original
+package members match the corresponding756 preserved copy byte-for-byte.
+Historical nested archives independently corroborate Sol7 and the simulator.
+Exact current results reproduce4 saved original championship hand digests.
+Both engines and the new study's frozen files passed final unchanged checks.
+Freeze timestamps are local audit records, not externally notarized timestamps.
+Exact prior model/effort provenance could not be verified from available session
+metadata; no unsupported claim is made about which model created X1.
+
+The authentic historical hand engine was used unchanged: 46-card house deck,
+ten cards each plus six-card nest; Bird above Red2 permanent trumps; high ones;
+follow effective suit; no mandatory ruff; bidder leads; last trick takes nest;
+200 counters; made contracts score captured points, set contracts score minus the bid,
+defenders retain their captured points. Auctions open70 in 5-point increments.
+Dealer rotates right. The test uses all-pass forced dealer70 and ordinary
+bid200, with no optional instant-win moon, bid-only or sandbagging scoring.
+
+One disclosed OUTER match-rule correction: the archived historical match
+wrapper ignored the browser's -500 loss rule and awarded equal terminal scores
+to team 1. We used the archived browser getMatchResult instead: positive 500
+takes precedence, otherwise negative 500 loses, terminal equality is a tie.
+It matched 3,249 independently generated score pairs in the actual JavaScript
+function. No hand engine or competitor was edited. No official game ended at
+the negative boundary, and no official bid reached200; optional moon behavior
+therefore did not arise, but is still not certified by this experiment.
+
+INFORMATION, FAIRNESS AND AUDIT
+
+Both candidates received only their own cards, public state and their own
+buried nest when bidder. Neither received its real teammate's hand, opposing
+hands, the actual shuffle seed, future cards or lineup identities. EPA was OFF.
+The same strict detached-input Adapter enforced this boundary; all 12 forbidden
+field probes were rejected. Native search receives sampled worlds, not the
+real unseen allocation. Enforcement is API/source based, not an adversarial
+operating-system sandbox.
+
+Official cards were generated after the design/code freeze. All 1,200 scheduled
+deck hashes are distinct, with no overlap against 12,650 recoverable prior
+distinct deals, or the four new preflight control deals. This cannot certify
+absence from unavailable historical logs; those were not fabricated.
+
+Every seat/dealer/environment/engine cell has five game executions. All 320
+first-hand auctions, trump selections and discards are identical between arms.
+Among shared later hand numbers, 860 preplay sequences stayed identical and 317
+differed. Those later differences follow changed cumulative scores and the
+SAME score-aware bidding code, not a stronger auction added to X1.
+
+The independent verifier reconstructed EVERY official auction, kept/buried
+card, play order, ownership, follow-suit obligation, trick winner, counter,
+contract and score. All 46 cards and all 200 points accounted for each hand.
+A separate match audit reconstructed cumulative scores, stopping, rotations
+and pair membership. Sixteen prespecified hands rerun in a fresh process
+reproduced every action, result and deterministic digest. The entire experiment
+was executed once; auditing all logs is not described as replaying all games.
+
+CHALLENGING THE CONCLUSION AND STRATEGIC LIMITS
+
+Implementation error: original-byte and saved-action checks passed, alongside
+all-hand independent rule/score reconstruction and fresh-process replay.
+Seat/deal bias: every seat/dealer cell balanced; identical deck schedules within
+pairs; bootstrap resamples complete four-rotation clusters.
+Information bias: equal legal views, no EPA, hidden-field rejection.
+Sol7 rollout exploitation: gain persists with Meridian/Extreme/Corvus outside
+the tested seat and at the X1-populated table. This weakens that explanation;
+it does not establish superiority to every unseen opponent.
+Auction/discard bias: algorithms shared and unchanged; first-hand parity is
+exact. Full-game effects include downstream score-induced auction changes.
+Statistical artifact: one frozen primary endpoint, fixed sample, stratified
+paired intervals, subgroup multiplicity adjustment, zero excluded failures.
+
+Inconvenient evidence is retained. Sol7 won 8 paired games X1 lost: 2 with
+Extreme, 1 with Meridian, 1 with Corvus and 4 at the X1 table. One Extreme case
+(block 13, seat 3) ended with X1's team scoring 0 against 565; the corresponding Sol7 team
+won 615 against 450. Outcomes alone do not identify which single move was a mistake.
+All eight full-game records and their complete action logs remain available.
+
+X1 is not a wholesale replacement of everything Sol7 learned. It inherits the
+exact Sol7 auction, trump choice and discard policy. Its gain comes from search
+over card-play decisions. Important weaknesses remain:
+- It predicts Sol7 continuation for every simulated player, including its own
+  future moves. That is an imperfect model of X1, other bots and people.
+- Hidden-hand allocation uses remaining cards and observed voids, but not a
+  calibrated likelihood model of bidding, trump choice or play intentions.
+- The search utility maximizes final HAND score margin, not probability of
+  winning the whole MATCH. Cumulative score affects inherited bidding but is
+  absent from the native card-play utility. Winning this test does not remove
+  that architectural limitation.
+- Approximate sampling and action selection are not a solved Rook strategy.
+- Human teammates were not tested. Helpful lead transfers and counter feeds
+  may emerge from scoring search; understanding a person's intent is unproven.
+
+Descriptive contract outcomes support the result: X1-arm teams made 777/853
+contracts (91.0903%); Sol7-arm teams made 731/859 (85.09895%). Opponents made
+604/734 against the X1 arm and 636/735 against the Sol7 arm. These aggregates
+have different visited states and stopping times; they are not another paired
+causal endpoint. No isolated tactical example is presented as proof of optimality.
+
+EPA IMPLICATIONS
+
+Choose X1 as the EPA foundation as well, but do not bundle EPA into the claim
+that frozen X1 won this experiment. This experiment used NO privileged cards.
+The reviewed single-partner EPA archives suggest improved team margins, not
+proven human partnership satisfaction. Their 10,000-hand validation's +7.44
+point mean is reproducible from its result rows, but its 5,000 rows contain
+only 4,250 distinct shuffled deals: 1,250 seeds per proxy with a 1,000-seed stride
+caused overlap. The focal bot always occupied the dealer seat. The published
+independent-deal count and coverage were overstated. A descriptive seed-cluster
+robust interval remains positive (about +5.47 to +9.41); this does not repair
+the design limits or turn proxies into people.
+
+The EPA duel's 4,472/177/351 paired result and +53.37 margin are reproducible
+from its rows. It compared X1's partner-constrained sampling with a modified
+Sol7 unseen-card rule; all four bots received partner-hand knowledge. That is
+an EPA-IMPLEMENTATION comparison, not an equal frozen-engine comparison, and
+not the owner's intended sole-human deployment situation. It is not the basis
+for this verdict. Full EPA hand traces were not available in those archives,
+so their every-play legality cannot be re-audited to the same standard here.
+
+For the intended product: only the bot partnering the sole human in an offline
+game may use that human's remaining cards. Opponents get no such access, and
+human multiplayer must have EPA disabled. Nothing in this research modifies or
+certifies current integration enforcement. EPA human experience remains unproven.
+
+RUNTIME AND MOBILE LIMITS
+
+Official 640-game run: 224.915 seconds in this Linux environment.
+Matched 128 nonforced decision views, 32 per environment; three repetitions each:
+  X1: mean 6.2398 ms, median 4.0170 ms,
+      p95 19.7616 ms, p99 25.6351 ms, max 37.5094 ms.
+  Sol7: mean 0.0742 ms, p95 0.2165 ms.
+X1 cost about 84.1 times as much on these identical views.
+It chose differently from Sol7 on 50/128 views. Views follow a fixed first 32
+nonforced calls per environment; they are not a representative phone sample.
+
+Across actual focal decisions, X1 averaged 4.9509 ms with p95 18.5932 ms, but the
+largest observed call was 391.5677 ms. Scheduling may contribute; this is not a
+proven worst-case bound. Native server timing is NOT Android timing. The
+preserved Python/Linux implementation is not a browser-ready installation.
+The separately active browser integration was neither touched nor benchmarked.
+Responsive phone behavior remains an integration acceptance issue; the strength
+verdict is not a reason to assert that an unmeasured port is fast enough.
+
+ENGINEERING JUDGMENT
+
+Make frozen X1 the default foundational intelligence. Preserve Sol7 unchanged
+as the fallback and acknowledge that X1 builds on its bidding and discard work.
+The combined evidence now supports a real match-winning improvement across
+varied tables, not just a repeated victory over one opponent. This final test
+strengthens, rather than reverses, the previous X1 recommendation. No additional
+challenger-development project is justified by the evidence needed for this
+choice. Phone integration quality and human EPA experience are separate product
+questions, not reasons to conceal the clear engine-strength result.
+
+PACKAGE GUIDE
+EXPERIMENT_DESIGN.txt: predeclared design and decision criteria.
+STUDY_FREEZE.json: source hashes and pre-deal freeze timestamp.
+inputs/: seven original research archives, unchanged.
+frozen/: exact executable Sol7, X1, hand engine and original freeze.
+results/: full deal schedule, every official play, matches, paired CSV,
+  cluster effects, exact analysis and all eight Sol7-only wins.
+evidence/: source checks, previous-log audit, preflight, full official audit,
+  exact replays, runtime fixtures/results, hand ledger and final validation.
+scripts/: reproducible simulation, validation, inference and reporting code.
+REPRODUCE.txt and ENVIRONMENT.json: commands and environment.
+PACKAGE_SHA256.json: integrity hashes for the complete deliverable.
+
+Standalone research naming: FINAL_INTELLIGENCE_VERDICT_001.zip.
+No official Rook build number was consumed or reserved.

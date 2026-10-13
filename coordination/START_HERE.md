@@ -78,3 +78,10 @@ Owner approved 779 as the new baseline and authorized this Master Brain update a
 Exact 779.zip SHA256: 94963b99f7e8bee5b9714f39e01e25cc2dfcd25c2bf1dd0c6861c48fbb233c4d. Runtime deployment commit: 6872e4ebc64b78691564eb2ae0c41761fb0e1ada. Git verification matched all 591 runtime files; live HTTP verification matched all 17 selected code/art files. Production is unchanged. Prior immutable Brain versions and all existing build evidence are preserved. No new build, image generation, full audit or packaging was repeated.
 
 Complete checkpoint: [Master Brain Z](../brain/versions/Z/files/00_START_HERE/START_HERE.md). Current pointer: brain/current.json. Recovery receipt and complete runtime manifest are in Z/files/03_EVIDENCE. Physical Android and live PeerJS verification remain unclaimed; the 766 long audit stays paused.
+
+
+## Current documentation checkpoint — Master Brain AA
+
+Owner authorized complete Brain catch-up. Read [AA START HERE](../brain/versions/AA/files/00_START_HERE/START_HERE.md) and full master checkpoint. Approved development783, deployedTest779, delivered789 pending phone review; concurrent790 tested/packaged pending delivery per its specialist handoff. Public Jerome and sole-offline-human EPA implemented788; mild holder pulses/haptics implemented789 and reported retained790. Fixed above-head names/actionpill and Jerome sizing remain pending. All rail signs/plaque/wood lettering superseded.788/789 bidding unchanged; PF45dc is separate experimental bidding source, not approved. Refresh current registry before choosing source.791 is documentation, not game. No deployment/promotion or automatic chat notification. Both permanent rules are reproduced in AA startup/handoff and must pass forward verbatim.
+
+FINAL CURRENT STATE:790 delivered pending Android review; includes789 holder cues per specialist. Read AA final receipt and FULL_CAST_TRUMP_VOICES_790.md. This supersedes reservation/packaged/latest789 snapshot language above. Approved783;deployedTest779 unchanged.

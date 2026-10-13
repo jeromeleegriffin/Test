@@ -1,0 +1,427 @@
+--- 787/character-library774.js
++++ 788/character-library774.js
+@@ -2,6 +2,8 @@
+ (()=>{'use strict';
+ const names=["Claire", "June", "Tess", "Marcus", "Owen", "Daniel", "Sofia", "Rafael", "Samir"];
+ for(const name of names){const id=name.toLowerCase();if(!AVATARS.includes(id))AVATARS.push(id);AVATAR_LABELS[id]=name;if(!BOT_PERSONAS.some(p=>p.name===name))BOT_PERSONAS.push({name,avatar:id,style:'balanced',blurb:'A new face at the Griffin table.'});}
++// Public Jerome uses neutral legacy metadata; never activate partnerFirst bidding.
++if(!BOT_PERSONAS.some(p=>p.avatar==='jerome_founder'))BOT_PERSONAS.push({name:'Jerome',avatar:'jerome_founder',style:'balanced',blurb:'Jerome at the Griffin table.'});
+ // Refresh only the existing favorite options if the game initialized them before registration.
+ const select=document.getElementById('opt-favorite-partner');if(select)delete select.dataset.favoriteReady;
+ syncFavoritePartner042();
+--- 787/characters077.js
++++ 788/characters077.js
+@@ -4,7 +4,7 @@
+ const NS='http://www.w3.org/2000/svg',W=875,H=1797;
+ const characters=Object.freeze({
+ ...window.HORHumanAvatars,
+-jerome_founder:{name:"Jerome",design:"Owner-approved founder",voice:"jerome",availability:"public-human",poses:{left:"jerome_founder-left.webp",top:"jerome_founder-top.webp",right:"jerome_founder-right.webp"}},
++jerome_founder:{name:"Jerome",design:"Owner-approved founder",voice:"jerome",availability:"public-human-and-bot",poses:{left:"jerome_founder-left.webp",top:"jerome_founder-top.webp",right:"jerome_founder-right.webp"}},
+ "nettle":{"name": "Nettle", "design": "Elder-nettle", "voice": "female", "poses": {"left": "nettle-left.webp", "top": "nettle-top.webp", "right": "nettle-right.webp"}},
+ "ash":{"name": "Ash", "design": "Elder-ash", "voice": "female", "poses": {"left": "ash-left.webp", "top": "ash-top.webp", "right": "ash-right.webp"}},
+ "cobalt":{"name": "Cobalt", "design": "Elder-cobalt", "voice": "male", "poses": {"left": "cobalt-left.webp", "top": "cobalt-top.webp", "right": "cobalt-right.webp"}},
+--- 787/game060.js
++++ 788/game060.js
+@@ -7,7 +7,7 @@
+ // It's exchanged during the join handshake so a stale host or joiner (e.g.
+ // one still running old cached JS) gets caught and auto-updated instead of
+ // silently failing or behaving unpredictably against a mismatched peer.
+-const APP_VERSION = '787';
++const APP_VERSION = '788';
+ window.HOR_SCRIPT_BUILD = APP_VERSION;
+ 
+ function horThisIndex() {
+--- 787/hor-version.js
++++ 788/hor-version.js
+@@ -1,7 +1,7 @@
+-// Griffin House of Rooks — R787 runtime marker, no gameplay ownership.
+-window.HOR_LIVE_VERSION = 787;
+-window.HOR_BUILD = 787;
+-window.GHR_BUILD = "Rook787";
++// Griffin House of Rooks — R788 runtime marker, no gameplay ownership.
++window.HOR_LIVE_VERSION = 788;
++window.HOR_BUILD = 788;
++window.GHR_BUILD = "Rook788";
+ window.HORRuntimeTruth = async function () {
+   const controller = navigator.serviceWorker && navigator.serviceWorker.controller;
+   const worker = controller ? await new Promise(resolve => {
+@@ -12,7 +12,7 @@
+   }) : null;
+   return {page:window.HOR_PAGE_BUILD, script:window.HOR_SCRIPT_BUILD,
+     marker:window.HOR_BUILD, worker, controller:controller && controller.scriptURL,
+-    coherent:window.HOR_PAGE_BUILD === '787' && window.HOR_SCRIPT_BUILD === '787' &&
+-      window.HOR_BUILD === 787 && !!worker && worker.build === '787' &&
+-      worker.cache === 'house-of-rooks-v787'};
++    coherent:window.HOR_PAGE_BUILD === '788' && window.HOR_SCRIPT_BUILD === '788' &&
++      window.HOR_BUILD === 788 && !!worker && worker.build === '788' &&
++      worker.cache === 'house-of-rooks-v788'};
+ };
+--- 787/index.html
++++ 788/index.html
+@@ -16,7 +16,7 @@
+     (function () {
+       // Rook522: remember the build only. Service-worker activation owns updates.
+       // Never redirect/reload here: competing page + SW reload paths caused loops.
+-      var BUILD = '787';
++      var BUILD = '788';
+       window.HOR_PAGE_BUILD = BUILD;
+       try { localStorage.setItem('horBuild', BUILD); } catch (e) {}
+     })();
+@@ -24,18 +24,18 @@
+ <link href="manifest.json" rel="manifest"/>
+ <link href="assets/images/icon-192.png" rel="icon"/>
+ <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+-<script src="hor-version.js?v=787"></script>
+-<link href="style057.css?v=787" rel="stylesheet"/>
++<script src="hor-version.js?v=788"></script>
++<link href="style057.css?v=788" rel="stylesheet"/>
+ <link href="rook510.css?v=732" rel="stylesheet"/>
+ <link href="rook513.css?v=732" rel="stylesheet"/>
+-<link href="kitty736.css?v=787" rel="stylesheet"/>
++<link href="kitty736.css?v=788" rel="stylesheet"/>
+ <link href="house736.css?v=736" rel="stylesheet"/>
+ <link href="house738.css?v=738" rel="stylesheet"/>
+-<link href="laid-down-refinement.css?v=787" rel="stylesheet"/>
+-<link href="unified-bidding752.css?v=787" rel="stylesheet"/>
+-<link href="rail-trick752.css?v=787" rel="stylesheet"/>
++<link href="laid-down-refinement.css?v=788" rel="stylesheet"/>
++<link href="unified-bidding752.css?v=788" rel="stylesheet"/>
++<link href="rail-trick752.css?v=788" rel="stylesheet"/>
+ <link href="bid-repair737.css?v=737" rel="stylesheet"/>
+-<link href="trump-hand739.css?v=787" rel="stylesheet"/>
++<link href="trump-hand739.css?v=788" rel="stylesheet"/>
+ <link href="rook518-trump.css?v=732" rel="stylesheet"/>
+ <script src="vendor/peerjs.min.js?v=rook044"></script>
+ <style>
+@@ -109,17 +109,17 @@
+ </style>
+ <link rel="stylesheet" href="approved-bid-portrait.css?v=732">
+ <link rel="stylesheet" href="holder004.css?v=732">
+-<link rel="stylesheet" href="trump714.css?v=787">
++<link rel="stylesheet" href="trump714.css?v=788">
+ <link rel="stylesheet" href="shuffle732.css?v=732">
+-<link rel="stylesheet" href="signature-shuffle.css?v=787">
+-<link rel="stylesheet" href="raven-fight741.css?v=787">
+-<link rel="stylesheet" href="characters077.css?v=787">
+-<link rel="stylesheet" href="responsive-review.css?v=787">
+-<link rel="stylesheet" href="holder-identity784.css?v=787">
+-<script defer src="responsive-review.js?v=787"></script>
+-<link rel="stylesheet" href="asset-loading772.css?v=787">
+-<link rel="stylesheet" href="identity-choice.css?v=787"/>
+-<link rel="stylesheet" href="landing783.css?v=787">
++<link rel="stylesheet" href="signature-shuffle.css?v=788">
++<link rel="stylesheet" href="raven-fight741.css?v=788">
++<link rel="stylesheet" href="characters077.css?v=788">
++<link rel="stylesheet" href="responsive-review.css?v=788">
++<link rel="stylesheet" href="holder-identity784.css?v=788">
++<script defer src="responsive-review.js?v=788"></script>
++<link rel="stylesheet" href="asset-loading772.css?v=788">
++<link rel="stylesheet" href="identity-choice.css?v=788"/>
++<link rel="stylesheet" href="landing783.css?v=788">
+ </head>
+ <body class="theme-classic cardback-griffin room-theme-midnight">
+ <div id="matchHeader706" aria-label="Match score and game speed"><div class="scores" id="scoreRow">
+@@ -1204,27 +1204,27 @@
+   </script>
+ <script src="rules.js?v=rook044"></script>
+ <script src="bots.js?v=732"></script>
+-<script src="unified-bidding752.js?v=787"></script>
+-<script src="rail-trick752.js?v=787"></script>
+-<script src="trump-voice.js?v=787"></script>
+-<script src="human-avatars.js?v=787"></script>
+-<script src="founder-dev.js?v=787"></script>
+-<script src="holder-identity784.js?v=787"></script>
+-<script src="game060.js?v=787"></script>
+-<script src="asset-loading772.js?v=787"></script>
+-<script src="character-library774.js?v=787"></script>
+-<script src="characters077.js?v=787"></script>
++<script src="unified-bidding752.js?v=788"></script>
++<script src="rail-trick752.js?v=788"></script>
++<script src="trump-voice.js?v=788"></script>
++<script src="human-avatars.js?v=788"></script>
++<script src="founder-dev.js?v=788"></script>
++<script src="holder-identity784.js?v=788"></script>
++<script src="game060.js?v=788"></script>
++<script src="asset-loading772.js?v=788"></script>
++<script src="character-library774.js?v=788"></script>
++<script src="characters077.js?v=788"></script>
+ <script src="x1/core.js"></script>
+ <script src="x1/integration.js"></script>
+ <script src="sol-diagnostics.js?v=732"></script>
+ <script src="rook510-avatars.js?v=732"></script>
+ <script src="rook512-room.js?v=732"></script>
+ <script src="rook513.js?v=732"></script>
+-<script src="polish.js?v=787"></script>
+-<script src="founder-profile785.js?v=787"></script>
+-<script src="identity-choice.js?v=787"></script>
++<script src="polish.js?v=788"></script>
++<script src="founder-profile785.js?v=788"></script>
++<script src="identity-choice.js?v=788"></script>
+ <!-- Dormant career/achievement framework. Master switch is OFF in progression.js. -->
+-<script src="progression.js?v=787"></script>
++<script src="progression.js?v=788"></script>
+ <div id="horBootError"></div>
+ <script>
+     window.addEventListener('error', function (ev) {
+@@ -1238,7 +1238,7 @@
+   </script>
+ <script>
+     if ('serviceWorker' in navigator) {
+-      navigator.serviceWorker.register('sw060.js?v=787', { updateViaCache: 'none' })
++      navigator.serviceWorker.register('sw060.js?v=788', { updateViaCache: 'none' })
+         .then(function (reg) { try { reg.update(); } catch (e) {} })
+         .catch(() => {});
+       // Rook522: do not reload on controllerchange. The new worker takes control
+@@ -1251,24 +1251,24 @@
+     // next normal navigation. Force Refresh remains a manual escape hatch.
+   </script>
+ <script src="bid-repair737.js?v=737"></script>
+-<script src="trump-hand739.js?v=787"></script>
+-<script src="raven-timeline741.js?v=787"></script>
+-<script src="raven-audio761.js?v=787"></script>
+-<script src="raven-fight741.js?v=787"></script>
++<script src="trump-hand739.js?v=788"></script>
++<script src="raven-timeline741.js?v=788"></script>
++<script src="raven-audio761.js?v=788"></script>
++<script src="raven-fight741.js?v=788"></script>
+ <script src="approved-bid-portrait.js?v=732"></script>
+ <script>
+   // New installs start with a quiet hint of ambience; saved user settings win.
+   try { if (localStorage.getItem('rookCabinVolume041') === null) localStorage.setItem('rookCabinVolume041', '6'); } catch (_) {}
+ </script>
+-<script src="cabin-ambience041.js?v=787"></script>
++<script src="cabin-ambience041.js?v=788"></script>
+ <script src="fire-glow-controller060.js?v=064"></script>
+ <script src="house736.js?v=736"></script>
+ <script src="holder004.js?v=732"></script>
+ 
+-<script src="trump714.js?v=787"></script>
++<script src="trump714.js?v=788"></script>
+ <script src="shuffle732.js?v=732"></script>
+-<script src="shuffle-asset.js?v=787"></script>
+-<script src="signature-shuffle.js?v=787"></script>
+-<script src="landing783.js?v=787"></script>
++<script src="shuffle-asset.js?v=788"></script>
++<script src="signature-shuffle.js?v=788"></script>
++<script src="landing783.js?v=788"></script>
+ </body>
+ </html>
+--- 787/landing783.js
++++ 788/landing783.js
+@@ -31,8 +31,9 @@
+ picker.addEventListener('close',()=>{favoriteHome.insertBefore(favorite,nextFavorite);chooseRoster();partner.focus()});
+ favorite.addEventListener('change',()=>{chosenThisVisit=favorite.value;chooseRoster()});
+ function chooseRoster(){
+- myName=input.value.trim()||'You';const favored=favoritePartner042();
+- const eligible=HORCharacterStudio077.castPool(BOT_PERSONAS).filter(p=>HORCharacterStudio077.characters[p.avatar]);
++ myName=input.value.trim()||'You';const saved=favoritePartner042(),humanAvatar=ensurePreferredAvatar();
++ const favored=saved?.avatar===humanAvatar?null:saved;
++ const eligible=HORCharacterStudio077.castPool(BOT_PERSONAS).filter(p=>HORCharacterStudio077.characters[p.avatar]&&p.avatar!==humanAvatar);
+  const pool=eligible.filter(p=>p.name!==favored?.name);const take=()=>pool.splice(Math.floor(Math.random()*pool.length),1)[0];
+  const top=favored||take();roster=[take(),top,take()];paint();
+ }
+--- 787/sw060.js
++++ 788/sw060.js
+@@ -2,8 +2,8 @@
+  * Author: Jerome Griffin
+  * Copyright (c) 2026 Jerome Griffin / Griffin House
+  */
+-const BUILD = '787';
+-const CACHE = 'house-of-rooks-v787';
++const BUILD = '788';
++const CACHE = 'house-of-rooks-v788';
+ const SHELL = [
+  './voices/jerome/trumps_are_red.ogg','./voices/jerome/trumps_are_green.ogg','./voices/jerome/trumps_are_black.ogg','./voices/jerome/trumps_are_yellow.ogg','./founder-profile785.js','./JEROME.html','./holder-identity784.js', './holder-identity784.css', './assets/images/bid-plaque-quiet-r654.png',
+  './landing783.js', './landing783.css',
+@@ -56,13 +56,13 @@
+  './assets/cards/numbered/yellow-8.png',
+  './assets/cards/numbered/yellow-9.png',
+ 
+- './character-library774.js?v=787',"./assets/images/avatar-claire.svg","./assets/images/avatar-june.svg","./assets/images/avatar-tess.svg","./assets/images/avatar-marcus.svg","./assets/images/avatar-owen.svg","./assets/images/avatar-daniel.svg","./assets/images/avatar-sofia.svg","./assets/images/avatar-rafael.svg","./assets/images/avatar-samir.svg", './asset-loading772.js?v=787','./asset-loading772.css?v=787',
+- './responsive-review.js?v=787','./responsive-review.css?v=787',
+- './characters077.js?v=787','./characters077.css?v=787',
++ './character-library774.js?v=788',"./assets/images/avatar-claire.svg","./assets/images/avatar-june.svg","./assets/images/avatar-tess.svg","./assets/images/avatar-marcus.svg","./assets/images/avatar-owen.svg","./assets/images/avatar-daniel.svg","./assets/images/avatar-sofia.svg","./assets/images/avatar-rafael.svg","./assets/images/avatar-samir.svg", './asset-loading772.js?v=788','./asset-loading772.css?v=788',
++ './responsive-review.js?v=788','./responsive-review.css?v=788',
++ './characters077.js?v=788','./characters077.css?v=788',
+  './x1/core.js','./x1/sha256.js','./x1/worker.js','./x1/integration.js',
+- './trump-voice.js?v=787',
++ './trump-voice.js?v=788',
+  './assets/trump-voice/female-black.wav','./assets/trump-voice/female-green.wav','./assets/trump-voice/female-red.wav','./assets/trump-voice/female-yellow.wav','./assets/trump-voice/male-black.wav','./assets/trump-voice/male-green.wav','./assets/trump-voice/male-red.wav','./assets/trump-voice/male-yellow.wav',
+- './shuffle-asset.js?v=787','./signature-shuffle.js?v=787','./signature-shuffle.css?v=787',
++ './shuffle-asset.js?v=788','./signature-shuffle.js?v=788','./signature-shuffle.css?v=788',
+  './shuffle-preview.html','./shuffle-asset.js',
+  './assets/signature-shuffle/poster.png','./assets/signature-shuffle/manifest.json',
+  './assets/signature-shuffle/sheet-00.webp',
+@@ -80,10 +80,10 @@
+  './assets/signature-shuffle/sheet-12.webp',
+  './assets/signature-shuffle/sheet-13.webp',
+ 
+- './unified-bidding752.js?v=787','./unified-bidding752.css?v=787','./rail-trick752.js?v=787','./rail-trick752.css?v=787','./assets/ui752/trick-won-lettering.svg',
+- './laid-down-refinement.css?v=787',
+- './raven-audio761.js?v=787','./assets/audio/raven-fight761/approach.wav','./assets/audio/raven-fight761/call.wav','./assets/audio/raven-fight761/flutter.wav',
+- './raven-timeline741.js?v=787','./raven-fight741.js?v=787','./raven-fight741.css?v=787',
++ './unified-bidding752.js?v=788','./unified-bidding752.css?v=788','./rail-trick752.js?v=788','./rail-trick752.css?v=788','./assets/ui752/trick-won-lettering.svg',
++ './laid-down-refinement.css?v=788',
++ './raven-audio761.js?v=788','./assets/audio/raven-fight761/approach.wav','./assets/audio/raven-fight761/call.wav','./assets/audio/raven-fight761/flutter.wav',
++ './raven-timeline741.js?v=788','./raven-fight741.js?v=788','./raven-fight741.css?v=788',
+  './assets/raven-fight/BLACK_WINGS_UP.png',
+  './assets/raven-fight/BLACK_WINGS_MID.png',
+  './assets/raven-fight/BLACK_WINGS_DOWN.png',
+@@ -92,14 +92,14 @@
+  './assets/raven-fight/RED_WINGS_DOWN.png',
+ 
+  './bid-repair737.css?v=737','./bid-repair737.js?v=737',
+- './trump-hand739.css?v=787','./trump-hand739.js?v=787',
++ './trump-hand739.css?v=788','./trump-hand739.js?v=788',
+   './house738.css?v=738',
+   './house736.css?v=736','./house736.js?v=736',
+   './assets/house736/lantern-clipped.svg','./assets/house736/lantern-approved.png',
+   './assets/audio/natural063/smoothcard736down-01.wav',
+   './shuffle732.css?v=732','./shuffle732.js?v=732',
+   './assets/audio/shuffle732/1.wav','./assets/audio/shuffle732/2.wav','./assets/audio/shuffle732/3.wav','./assets/audio/shuffle732/4.wav',
+-  './trump714.css?v=787', './trump714.js?v=787',
++  './trump714.css?v=788', './trump714.js?v=788',
+   './assets/trump714/case.png', './assets/trump714/lid-inner.png',
+   './assets/trump714/lid-outer.png', './assets/trump714/stamp.png',
+   './assets/trump746/table-faint.png',
+@@ -132,10 +132,10 @@
+ 
+   './',
+   './index.html',
+-  './kitty736.css?v=787',
++  './kitty736.css?v=788',
+   './holder004.css?v=732',
+   './holder004.js?v=732',
+-  './game060.js?v=787',
++  './game060.js?v=788',
+   './assets/cardholder/holder047.png',
+   './assets/cardholder/connector050.png',
+   './assets/cardholder/backrest004.png',
+@@ -153,17 +153,17 @@
+   './assets/audio/card-wash-max-cc0.wav',
+   './vendor/peerjs.min.js',
+   './vendor/peerjs.min.js?v=rook044',
+-  './style057.css?v=787',
++  './style057.css?v=788',
+   './rules.js?v=rook044',
+   './game.js?v=rook044',
+-  './polish.js?v=787',
++  './polish.js?v=788',
+   './shuffle-statistics.html',
+   './rules.js',
+   './rules.js?v=732',
+   './bots.js',
+   './bots.js?v=732',
+   './cabin-ambience041.js',
+-  './cabin-ambience041.js?v=787',
++  './cabin-ambience041.js?v=788',
+   './fire-glow-controller060.js?v=063',
+   './game.js',
+   './game.js?v=732',
+@@ -176,7 +176,7 @@
+   './polish.js',
+   './polish.js?v=732',
+   './progression.js',
+-  './progression.js?v=787',
++  './progression.js?v=788',
+   './style.css',
+   './style.css?v=732',
+   './hor-version.js',
+--- 787/x1/core.js
++++ 788/x1/core.js
+@@ -31,8 +31,11 @@
+ class Sampler{
+  constructor(seed){this.rng=new RNG(seed);this.seats=[];this.sizes=[];this.slots=[];this.groups=[];this.allow=Array(46).fill(0);this.accepted=0;this.proposed=0;}
+  feasible(remain,counts){let G=this.seats.length;for(let m=1;m<(1<<G);m++){let need=0,cap=0;for(let x=1;x<(1<<G);x++)if((x&m)===x)need+=counts[x];for(let g=0;g<G;g++)if(m&(1<<g))cap+=remain[g];if(need>cap)return false;}return true;}
+- init(unseen,seat,lengths,voids,tr,hidden){for(let s=0;s<4;s++)if(s!==seat){this.seats.push(s);this.sizes.push(lengths[s]);}if(hidden){this.seats.push(4);this.sizes.push(6);}let cards=bits(unseen),counts=Array(16).fill(0),remain=this.sizes.slice();
+-  for(let c of cards){let m=0;for(let g=0;g<this.seats.length;g++)if(this.seats[g]===4||!(voids[this.seats[g]]&(1<<cat(c,tr))))m|=1<<g;this.allow[c]=m;if(!m)return false;counts[m]++;}if(!this.feasible(remain,counts))return false;
++ init(unseen,seat,lengths,voids,tr,hidden,partnerMask=null){for(let s=0;s<4;s++)if(s!==seat){this.seats.push(s);this.sizes.push(lengths[s]);}if(hidden){this.seats.push(4);this.sizes.push(6);}let cards=bits(unseen),counts=Array(16).fill(0),remain=this.sizes.slice();
++  for(let c of cards){let m=0;for(let g=0;g<this.seats.length;g++)if((partnerMask===null
++    ? this.seats[g]===4||!(voids[this.seats[g]]&(1<<cat(c,tr)))
++    : this.seats[g]===4 ? !(partnerMask&(1n<<BigInt(c)))
++    : ((this.seats[g]===(seat+2)%4)===!!(partnerMask&(1n<<BigInt(c))))&&!(voids[this.seats[g]]&(1<<cat(c,tr)))))m|=1<<g;this.allow[c]=m;if(!m)return false;counts[m]++;}if(!this.feasible(remain,counts))return false;
+   for(let i=cards.length-1;i>0;i--){let j=this.rng.n(i+1);[cards[i],cards[j]]=[cards[j],cards[i]];}cards.sort((a,b)=>pop(this.allow[a])-pop(this.allow[b]));let grouped=this.seats.map(()=>[]);
+   for(let c of cards){let m=this.allow[c];counts[m]--;let opts=[],weights=[],total=0;for(let g=0;g<this.seats.length;g++)if(remain[g]&&(m&(1<<g))){remain[g]--;let ok=this.feasible(remain,counts);remain[g]++;if(ok){opts.push(g);weights.push(remain[g]);total+=remain[g];}}if(!opts.length)return false;let q=this.rng.n(total),j=0;while(q>=weights[j])q-=weights[j++];let g=opts[j];remain[g]--;grouped[g].push(c);}
+   grouped.forEach((a,g)=>a.forEach(c=>{this.slots.push(c);this.groups.push(g);}));this.mix(512);return this.slots.length===cards.length;
+@@ -43,7 +46,10 @@
+ function copy(s){return {...s,h:s.h.map(a=>a.slice()),t:{c:s.t.c.slice(),s:s.t.s.slice()},points:s.points.slice()};}
+ function complete(world,seat,first){let s=copy(world),rootteam=seat%2,c=first;while(true){let at=s.h[seat].indexOf(c);if(at<0)throw Error('simulation card absent');s.h[seat].splice(at,1);s.t.c.push(c);s.t.s.push(seat);s.played|=1n<<BigInt(c);if(s.t.c.length===4){let w=s.t.s[win(s.t,s.tr)];s.points[w%2]+=s.t.c.reduce((a,c)=>a+point(c),0);s.t={c:[],s:[]};seat=w;if(s.h.every(h=>!h.length)){s.points[w%2]+=s.nestpts;break;}}else seat=(seat+1)%4;c=solmove(s.h[seat],s.t,s.tr,s.played,seat===s.bidder?s.nest:0n,seat);}let b=s.bidder%2;if(s.points[b]<s.bid)s.points[b]=-s.bid;return s.points[rootteam]-s.points[1-rootteam];}
+ function choose(v){let {h,tc,ts,tr,seat,bidder,bid,points,voids}=v,played=BigInt(v.played),nest=BigInt(v.nest),seed=BigInt(v.seed),samples=h.length<=3?256:128;
+- let base={h:[[],[],[],[]],t:{c:tc.slice(),s:ts.slice()},tr,bidder,bid,points:points.slice(),played,nest,nestpts:bits(nest).reduce((a,c)=>a+point(c),0)};base.h[seat]=h.slice();let L=legal(h,base.t,tr),reference=solmove(h,base.t,tr,played,nest,seat),out=Array(12).fill(0);if(L.length===1)return{card:L[0],out};let completed=(bits(played).length-tc.length)/4,lengths=Array(4).fill(10-completed);ts.forEach(s=>lengths[s]--);if(lengths[seat]!==h.length)return{card:-2,out};let sampler=new Sampler(seed);if(!sampler.init(FULL&~(played|nest|mask(h)),seat,lengths,voids,tr,seat!==bidder))return{card:-3,out};let sum=L.map(()=>0),dsq=L.map(()=>0),ri=L.indexOf(reference);
++ let partnerMask=Object.prototype.hasOwnProperty.call(v,'partnerMask')?BigInt(v.partnerMask):null;
++ // null means unauthorized/absent; 0n means an eligible partner has no cards.
++ if(partnerMask!==null){let n=(bits(played).length-tc.length)/4,expected=10-n-(ts.includes((seat+2)%4)?1:0);if(partnerMask<0n||(partnerMask&~FULL)||(partnerMask&(played|nest|mask(h)))||bits(partnerMask).length!==expected||bits(partnerMask).some(c=>voids[(seat+2)%4]&(1<<cat(c,tr))))return{card:-8,out:Array(12).fill(0)};}
++ let base={h:[[],[],[],[]],t:{c:tc.slice(),s:ts.slice()},tr,bidder,bid,points:points.slice(),played,nest,nestpts:bits(nest).reduce((a,c)=>a+point(c),0)};base.h[seat]=h.slice();let L=legal(h,base.t,tr),reference=solmove(h,base.t,tr,played,nest,seat),out=Array(12).fill(0);if(L.length===1)return{card:L[0],out};let completed=(bits(played).length-tc.length)/4,lengths=Array(4).fill(10-completed);ts.forEach(s=>lengths[s]--);if(lengths[seat]!==h.length)return{card:-2,out};let sampler=new Sampler(seed);if(!sampler.init(FULL&~(played|nest|mask(h)),seat,lengths,voids,tr,seat!==bidder,partnerMask))return{card:-3,out};let sum=L.map(()=>0),dsq=L.map(()=>0),ri=L.indexOf(reference);
+  for(let i=0;i<samples;i++){sampler.mix(64);let world=copy(base);sampler.fill(world);let all=played;if(bits(world.nest).length!==6||(all&world.nest))return{card:-4,out};all|=world.nest;for(let s=0;s<4;s++){let hm=mask(world.h[s]);if(world.h[s].length!==lengths[s]||bits(hm).length!==lengths[s]||(all&hm))return{card:-5,out};all|=hm;if(world.h[s].some(c=>voids[s]&(1<<cat(c,tr))))return{card:-6,out};}if(all!==FULL)return{card:-7,out};let vals=L.map((c,j)=>{let n=complete(world,seat,c);sum[j]+=n;return n;});vals.forEach((n,j)=>{let d=n-vals[ri];dsq[j]+=d*d;});}
+  let best=ri,bestadv=0;L.forEach((c,j)=>{let d=(sum[j]-sum[ri])/samples,se=Math.sqrt(Math.max(0,dsq[j]/samples-d*d)/Math.max(1,samples-1)),adjusted=d-.5-.5*se;if(adjusted>bestadv){bestadv=adjusted;best=j;}});out.splice(0,8,samples,L.length,reference,sum[ri]/samples,sum[best]/samples,sampler.accepted,sampler.proposed,Number(L[best]!==reference));return{card:L[best],out};
+ }
+--- 787/x1/integration.js
++++ 788/x1/integration.js
+@@ -1,14 +1,28 @@
+-/* Frozen X1 / Sol 7 dispatch, integrated onto build 765. No EPA. */
++/* Frozen X1 / Sol 7 dispatch, integrated onto build 765. Sole-offline-human EPA at the detached worker boundary. */
+ (function(){'use strict';
+-if(typeof X1Core==='undefined'){let selected='x1';try{if((localStorage.getItem('horMainIntelligence')??localStorage.getItem('horMainIntelligenceX1Experiment'))==='sol7')selected='sol7';}catch(e){}const why='Champion core failed to load; using House legacy intelligence';console.error('[Main intelligence fallback]',why);window.HORX1Integration={status:()=>({requested:selected,active:'legacy',reason:why,initializationError:why,lastDecision:null,epa:false,ready:false,hand:0,pending:false}),metrics:{decisions:[],fallbacks:[{engine:'legacy',reason:why}]}};const show=()=>{const s=document.getElementById('x1MainSelector'),t=document.getElementById('x1MainStatus');if(s)s.disabled=true;if(t)t.textContent='Selected: '+selected+' · '+why+' · EPA: off';};show();document.addEventListener('DOMContentLoaded',show);return;}
++if(typeof X1Core==='undefined'){let selected='x1';try{if((localStorage.getItem('horMainIntelligence')??localStorage.getItem('horMainIntelligenceX1Experiment'))==='sol7')selected='sol7';}catch(e){}const why='Champion core failed to load; using House legacy intelligence';console.error('[Main intelligence fallback]',why);window.HORX1Integration={status:()=>({requested:selected,active:'legacy',reason:why,initializationError:why,lastDecision:null,epa:false,ready:false,hand:0,pending:false}),metrics:{decisions:[],fallbacks:[{engine:'legacy',reason:why}]}};const show=()=>{const s=document.getElementById('x1MainSelector'),t=document.getElementById('x1MainStatus');if(s)s.disabled=true;if(t)t.textContent='Selected: '+selected+' · '+why+' · Partner Assist: '+(eligiblePartner(game?.currentPlayer)!==null?'eligible X1 partner':'off for this seat');};show();document.addEventListener('DOMContentLoaded',show);return;}
+ const C=X1Core,key='horMainIntelligence',original={bid:botBid,discard:botDiscard,trump:botChooseTrump,play:botPlay};
+ let requested='x1';try{let saved=localStorage.getItem(key);if(saved===null)saved=localStorage.getItem('horMainIntelligenceX1Experiment');if(saved==='sol7')requested='sol7';}catch(e){}
+ let active=requested,epoch=0,seq=0,pending=null,worker=null,ready=false,reason='',history=[],plannedTrump=null,strategyOrder=null,initError='',lastDecision=null;
+ const metrics={decisions:[],fallbacks:[],engines:[],source:'f1650289373b82ffbc04a610a5dad94a9572a1a0a9781d28d29e5e9d606f77c6'};
++// Return only a seat entitlement. Never pass the game/hands object to the worker.
++function eligiblePartner(seat){
++ try{
++  if(active!=='x1'||!isHost||isSoloPractice!==true||roomCode!=='OFFLINE'||hostConnection||Object.keys(connMap||{}).length||!game||game.phase!=='play'||game.paused)return null;
++  const ps=game.players;if(!Array.isArray(ps)||ps.length!==4||!Array.isArray(players)||players.length!==4)return null;
++  if(ps.some((p,i)=>!p||p.seat!==i||p.team!==i%2||!p.id||typeof p.isBot!=='boolean'))return null;
++  if(new Set(ps.map(p=>p.id)).size!==4||ps.filter(p=>!p.isBot).length!==1||ps.filter(p=>p.isBot).length!==3)return null;
++  if(ps.some(p=>{const q=players.find(q=>q&&q.id===p.id);return !q||q.seat!==p.seat||q.team!==p.team||q.isBot!==p.isBot;}))return null;
++  const partner=(seat+2)%4;if(!ps[seat]?.isBot||ps[partner].isBot||ps[seat].team!==ps[partner].team)return null;
++  if(!Array.isArray(game.hands?.[partner]))return null;
++  return partner;
++ }catch(_){return null;}
++}
++function authority(){return JSON.stringify({host:isHost,offline:isSoloPractice,room:roomCode,connected:!!hostConnection,peers:Object.keys(connMap||{}),active,paused:!!game?.paused,hand:game?.handNumber,players:(game?.players||[]).map(p=>[p.id,p.seat,p.team,p.isBot]),roster:(players||[]).map(p=>[p.id,p.seat,p.team,p.isBot])});}
+ const id=c=>{if(c.id==='rook')return 45;if(c.id==='red-2')return 44;let col=C.colors.indexOf(c.color),rank=Number(c.rank);if(col<0||c.id==='red1-special')throw Error('unsupported card');if(rank===1)return 40+col;if(rank<5||rank>14)throw Error('unsupported rank');return col*10+rank-5;};
+ function record(phase,engine=active){lastDecision={phase,engine,hand:epoch,seat:game&&(phase==='discard'||phase==='trump'?game.bidder:game.currentPlayer)};paint();}
+ function cancelPending(){epoch++;if(pending){let p=pending;pending=null;clearTimeout(p.timer);p.resolve({error:'stale action'});}}
+-function paint(){let select=document.getElementById('x1MainSelector'),status=document.getElementById('x1MainStatus');if(select)select.value=requested;if(status)status.textContent='Selected: '+(requested==='x1'?'X1 — New Champion':'Sol 7 — Original Champion')+' · Active: '+(active==='x1'?'X1':active==='sol7'?'Sol 7':'House legacy')+(requested!==active?' · '+(reason||'next hand'):'')+(reason?' · '+reason:'')+' · Worker: '+(ready?'ready':initError||'initializing')+' · Last decision: '+(lastDecision?lastDecision.engine+' / '+lastDecision.phase:'none yet')+' · EPA: off';}
++function paint(){let select=document.getElementById('x1MainSelector'),status=document.getElementById('x1MainStatus');if(select)select.value=requested;if(status)status.textContent='Selected: '+(requested==='x1'?'X1 — New Champion':'Sol 7 — Original Champion')+' · Active: '+(active==='x1'?'X1':active==='sol7'?'Sol 7':'House legacy')+(requested!==active?' · '+(reason||'next hand'):'')+(reason?' · '+reason:'')+' · Worker: '+(ready?'ready':initError||'initializing')+' · Last decision: '+(lastDecision?lastDecision.engine+' / '+lastDecision.phase:'none yet')+' · Partner Assist: '+(eligiblePartner(game?.currentPlayer)!==null?'eligible X1 partner':'off for this seat');}
+ function logFallback(why,engine='sol7'){active=engine;reason=why;metrics.fallbacks.push({hand:epoch,engine,reason:why});console.error('[Main intelligence fallback]',why);paint();let el=document.getElementById('messageArea');if(el)el.textContent='Bot intelligence: '+(engine==='sol7'?'Sol 7':'House legacy')+' fallback — '+why;}
+ function init(){try{worker=new Worker('x1/worker.js');worker.onmessage=e=>{let r=e.data;if(r.ready){ready=true;paint();return;}if(!pending||r.id!==pending.id)return;let p=pending;pending=null;clearTimeout(p.timer);p.resolve(r);};worker.onerror=e=>{initError='X1 worker initialization/execution failed';ready=false;if(pending){let p=pending;pending=null;clearTimeout(p.timer);p.resolve({error:initError});}if(active==='x1')logFallback(initError);};}catch(e){initError='X1 worker unavailable: '+e.message;active='sol7';reason=initError;metrics.fallbacks.push({hand:epoch,engine:'sol7',reason:initError});}}
+ function compatible(){try{return handSize===10&&includeOnes&&onesHigh&&includeRed2&&includeRook&&!includeRed1&&!rookLowest&&Number(red2Points)===20&&nestGoesTo==='lastTrick'&&!specialsAnytime&&!mustTrumpWhenVoid&&!bidOnlyScoring&&!sandbagging&&Number(minBid)>=70&&Number(minBid)<=200&&Number(minBid)%5===0&&makeDeck().length===46;}catch(e){return false;}}
+@@ -18,6 +32,7 @@
+ function hand(seat){let actual=game.hands[seat];if(seat===game.bidder&&strategyOrder){let map=new Map(actual.map(c=>[id(c),c]));return strategyOrder.filter(x=>map.has(x)).map(x=>map.get(x));}return actual;}
+ function view(seat){let h=hand(seat).map(id),tc=game.trick.map(t=>id(t.card)),ts=game.trick.map(t=>t.player),tr=C.colors.indexOf(game.trump),playedCards=[...(game.tricksTaken[0]||[]),...(game.tricksTaken[1]||[]),...game.trick.map(t=>t.card)],played=C.mask(playedCards.map(id)),nest=seat===game.bidder?C.mask((game.nestCards||[]).map(id)):0n,voids=knownVoids.map(v=>C.colors.reduce((m,c,i)=>m|(v[c]?1<<i:0),0)),points=[teamCapturedPoints(0),teamCapturedPoints(1)];
+  let v={h,tc,ts,tr,seat,bidder:game.bidder,bid:game.bid,points,played:String(played),nest:String(nest),voids};
++ const partner=eligiblePartner(seat);if(partner!==null)v.partnerMask=String(C.mask(game.hands[partner].map(id)));
+  // Match Python's exact JSON representation of public/own masks; no lossy Number conversion.
+  let payload='['+[JSON.stringify(h),JSON.stringify(tc),JSON.stringify(ts),JSON.stringify(game.trump),seat,game.bidder,game.bid,JSON.stringify(points),String(played),String(nest),JSON.stringify(voids)].join(',')+']';return{v,payload};}
+ function contractGuard(){if(active!=='legacy'&&game&&game.shotTheMoon)logFallback('Instant-win moon is outside the frozen championship contract rules','legacy');}
+@@ -25,12 +40,16 @@
+ botBid=function(){if(!isHost||!game||game.paused||game.phase!=='bidding')return;if(active==='legacy'){record('bid');return original.bid();}if(nestAuctionLocked())return;let seat=game.currentPlayer,cap=C.ceiling(hand(seat).map(id),{seat,high:game.highestBid,history,scores:game.scores}),ask=game.highestBid+5,limit=typeof bidCeilingFor==='function'?bidCeilingFor(seat):maxBid();let bid=cap>=ask&&ask<=limit?ask:0;if(bid&&isShootMoonBid(bid)&&!moonBidAllowed(seat))bid=0;record('bid');hostProcessBid({player:seat,value:bid});};
+ botDiscard=function(){if(!isHost||!game||game.paused||game.phase!=='discard')return;contractGuard();record('discard');if(active==='legacy')return original.discard();let h=game.hands[game.bidder],ids=h.map(id);plannedTrump=C.trump(ids);strategyOrder=C.discard(ids,game.discardCount,plannedTrump);let keep=new Set(strategyOrder);hostProcessDiscard({player:game.bidder,cardIds:h.filter(c=>!keep.has(id(c))).map(c=>c.id)});};
+ botChooseTrump=function(){if(!isHost||!game||game.paused||game.phase!=='trump')return;record('trump');if(active==='legacy')return original.trump();let tr=plannedTrump??C.trump(game.hands[game.bidder].map(id));hostProcessTrump({player:game.bidder,color:C.colors[tr]});};
+-botPlay=function(){if(!isHost||!game||game.paused||game.phase!=='play'||game.resolvingTrick||game.claimAnimating)return;contractGuard();if(active==='legacy'){record('play');return original.play();}if(pending)return;if(active==='sol7')return solPlay();let seat=game.currentPlayer,g=game,handEpoch=epoch,{v,payload}=view(seat),fingerprint=JSON.stringify(v),request=++seq;
++botPlay=function(){if(!isHost||!game||game.paused||game.phase!=='play'||game.resolvingTrick||game.claimAnimating)return;contractGuard();if(active==='legacy'){record('play');return original.play();}if(pending)return;if(active==='sol7')return solPlay();let seat=game.currentPlayer,g=game,handEpoch=epoch,{v,payload}=view(seat),fingerprint=JSON.stringify(v),entitlement=authority(),request=++seq;
+  let response=new Promise(resolve=>{pending={id:request,resolve,timer:setTimeout(()=>{if(!pending||pending.id!==request)return;pending=null;initError='X1 worker did not respond within 60 seconds';ready=false;if(worker)worker.terminate();worker=null;resolve({error:initError});},60000)};try{if(!worker)throw Error(initError||'worker unavailable');worker.postMessage({id:request,v,payload});}catch(e){let p=pending;pending=null;clearTimeout(p.timer);resolve({error:String(e)});}});
+- response.then(r=>{if(!isHost||epoch!==handEpoch||game!==g||!game||game.phase!=='play'||game.currentPlayer!==seat)return;let current=view(seat);if(JSON.stringify(current.v)!==fingerprint)return;if(game.paused){scheduleBot();return;}if(r.error||r.card<0){logFallback(r.error||'X1 sampling failure '+r.card);solPlay();return;}let card=game.hands[seat].find(c=>id(c)===r.card);if(!card||!canPlay(card,game.hands[seat],game.ledColor,game.trump)){logFallback('X1 returned an illegal card');solPlay();return;}metrics.decisions.push({hand:epoch,seat,ms:r.ms,seed:r.seed,card:r.card,search:r.out});if(metrics.decisions.length>2000)metrics.decisions.shift();if(game.paused){scheduleBot();return;}record('play','x1');hostProcessPlay({player:seat,cardId:card.id});}).catch(e=>{logFallback(String(e));if(isHost&&game===g&&epoch===handEpoch&&game.phase==='play'&&game.currentPlayer===seat)solPlay();});};
++ response.then(r=>{if(!isHost||epoch!==handEpoch||game!==g||!game||game.phase!=='play'||game.currentPlayer!==seat)return;let current=view(seat);if(JSON.stringify(current.v)!==fingerprint||authority()!==entitlement){scheduleBot();return;}if(game.paused){scheduleBot();return;}if(r.error||r.card<0){logFallback(r.error||'X1 sampling failure '+r.card);solPlay();return;}let card=game.hands[seat].find(c=>id(c)===r.card);if(!card||!canPlay(card,game.hands[seat],game.ledColor,game.trump)){logFallback('X1 returned an illegal card');solPlay();return;}metrics.decisions.push({hand:epoch,seat,ms:r.ms,seed:r.seed,card:r.card,search:r.out,epa:Object.prototype.hasOwnProperty.call(v,'partnerMask')});if(metrics.decisions.length>2000)metrics.decisions.shift();if(game.paused){scheduleBot();return;}record('play','x1');lastDecision.epa=Object.prototype.hasOwnProperty.call(v,'partnerMask');hostProcessPlay({player:seat,cardId:card.id});}).catch(e=>{logFallback(String(e));if(isHost&&game===g&&epoch===handEpoch&&game.phase==='play'&&game.currentPlayer===seat)solPlay();});};
+ function bind(){let s=document.getElementById('x1MainSelector');if(s&&!s.__x1){s.__x1=true;s.addEventListener('change',()=>{if(!horDeveloperToolsEnabled()||!isHost){paint();return;}requested=s.value==='sol7'?'sol7':'x1';try{localStorage.setItem(key,requested);}catch(e){}paint();});}paint();}
++const play=hostProcessPlay;hostProcessPlay=function(){const g=game,count=g?.hands?.reduce((n,h)=>n+h.length,0);const r=play.apply(this,arguments);if(game!==g||g?.hands?.reduce((n,h)=>n+h.length,0)!==count)cancelPending();return r;};
++const pause=hostTogglePause;hostTogglePause=function(){cancelPending();return pause.apply(this,arguments);};
++const snapshot=applyPlayersSnapshot;applyPlayersSnapshot=function(){cancelPending();return snapshot.apply(this,arguments);};
++const pack=packPlayersBySeat;packPlayersBySeat=function(){cancelPending();return pack.apply(this,arguments);};
+ const undo=hostUndoLastPlay;hostUndoLastPlay=function(){cancelPending();return undo.apply(this,arguments);};
+ const leave=leaveTableToLobby043;leaveTableToLobby043=function(){cancelPending();return leave.apply(this,arguments);};
+ window.addEventListener('pagehide',cancelPending);
+-window.HORX1Integration={status:()=>({requested,active,reason,ready,initializationError:initError,lastDecision,epa:false,hand:epoch,pending:!!pending}),metrics,view,cardId:id};init();bind();document.addEventListener('DOMContentLoaded',bind);
++window.HORX1Integration={status:()=>({requested,active,reason,ready,initializationError:initError,lastDecision,epa:eligiblePartner(game?.currentPlayer)!==null,partnerSeat:eligiblePartner(game?.currentPlayer),hand:epoch,pending:!!pending}),metrics,view,eligiblePartner,cardId:id};init();bind();document.addEventListener('DOMContentLoaded',bind);
+ })();
+--- 787/x1/worker.js
++++ 788/x1/worker.js
+@@ -1,4 +1,4 @@
+ 'use strict';
+ importScripts('core.js','sha256.js');
+-self.onmessage=function(e){let {id,v,payload}=e.data;try{let bytes=x1SHA256(payload),seed=0n;for(let i=7;i>=0;i--)seed=(seed<<8n)|BigInt(bytes[i]);v.seed=String(seed);let t=performance.now(),r=X1Core.choose(v);self.postMessage({id,...r,seed:String(seed),ms:performance.now()-t});}catch(e){self.postMessage({id,error:String(e)});}};
++self.onmessage=function(e){let {id,v,payload}=e.data;try{let allowed=new Set(['h','tc','ts','tr','seat','bidder','bid','points','played','nest','voids','partnerMask']);if(Object.keys(v).some(k=>!allowed.has(k)))throw Error('unauthorized X1 input field');let bytes=x1SHA256(payload),seed=0n;for(let i=7;i>=0;i--)seed=(seed<<8n)|BigInt(bytes[i]);v.seed=String(seed);let t=performance.now(),r=X1Core.choose(v);self.postMessage({id,...r,seed:String(seed),ms:performance.now()-t});}catch(e){self.postMessage({id,error:String(e)});}};
+ self.postMessage({ready:true});

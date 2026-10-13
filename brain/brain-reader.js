@@ -48,7 +48,7 @@ window.Brain = (() => {
     el('brainStatus').textContent = 'Checking current Brain…';
     try {
       const m = await current();
-      el('brainStatus').textContent = 'MASTER BANK ' + m.brainVersion + '\nCURRENT\nLast updated: ' + m.updated + (m.artifact ? '' : '\nNo archive created — owner authorization required.');
+      el('brainStatus').textContent = 'MASTER BANK ' + m.brainVersion + '\nCURRENT\nLast updated: ' + m.updated + (m.artifact ? '' : (m.artifactLibraryFileId ? '\nPortable documentation archive: ' + m.artifactFilename : '\nNo archive created — owner authorization required.'));
       el('brainOpen').href = m.browse; el('brainHistory').href = m.history;
       const backup = el('brainBackup');
       if (m.artifact) { backup.href = m.artifact; backup.hidden = false; backup.style.display = ''; }
@@ -60,7 +60,7 @@ window.Brain = (() => {
   async function status(version) {
     try {
       const m = await current();
-      el('brainStatus').textContent = m.brainVersion === version ? 'MASTER BANK ' + version + ' — CURRENT · Updated ' + m.updated + (m.artifact ? '' : ' · No archive created — owner authorization required.') : 'MASTER BANK ' + version + ' — HISTORICAL / SUPERSEDED · Current Brain: ' + m.brainVersion;
+      el('brainStatus').textContent = m.brainVersion === version ? 'MASTER BANK ' + version + ' — CURRENT · Updated ' + m.updated + (m.artifact ? '' : (m.artifactLibraryFileId ? ' · Portable documentation archive: ' + m.artifactFilename : ' · No archive created — owner authorization required.')) : 'MASTER BANK ' + version + ' — HISTORICAL / SUPERSEDED · Current Brain: ' + m.brainVersion;
     } catch (e) { failure(e); }
   }
   async function openCurrent() { try { location.replace((await current()).browse); } catch(e) { failure(e); } }
@@ -78,7 +78,7 @@ window.Brain = (() => {
         if (!v || typeof v.brainVersion !== 'string' || !/^[A-Za-z0-9_-]+$/.test(v.brainVersion) || (v.browse !== 'versions/' + v.brainVersion + '/index.html' && v.browse !== 'versions/' + v.brainVersion + '/files/00_START_HERE/START_HERE.md')) throw Error('Invalid historical version');
         return {...v, browse:path(v.browse)};
       });
-      el('brainStatus').textContent = 'Current Brain: MASTER BANK ' + m.brainVersion + (m.artifact ? '' : ' · No archive created — owner authorization required.');
+      el('brainStatus').textContent = 'Current Brain: MASTER BANK ' + m.brainVersion + (m.artifact ? '' : (m.artifactLibraryFileId ? ' · Portable documentation archive: ' + m.artifactFilename : ' · No archive created — owner authorization required.'));
       for (const v of entries) {
         const p = document.createElement('p'), a = document.createElement('a');
         a.href = v.browse; a.textContent = 'MASTER BANK ' + v.brainVersion + ' — ' + (v.brainVersion === m.brainVersion ? 'CURRENT' : 'HISTORICAL / SUPERSEDED') + ' · ' + v.updated;

@@ -1,0 +1,443 @@
+{
+  "checks": [
+    {
+      "name": "Visible holder cue/haptic synchronized in bidding",
+      "data": {
+        "state": "turn",
+        "railAnim": "holder789-turn",
+        "cardAnim": "none",
+        "areaFilter": "none",
+        "syncDelta": 0.6999999992549419,
+        "rect": {
+          "x": 6.390625,
+          "y": 753,
+          "width": 380.21875,
+          "height": 72,
+          "top": 753,
+          "right": 386.609375,
+          "bottom": 825,
+          "left": 6.390625
+        }
+      }
+    },
+    {
+      "name": "No repeated buzzing from cloned snapshots in bidding"
+    },
+    {
+      "name": "Visible holder cue/haptic synchronized in discard",
+      "data": {
+        "state": "turn",
+        "railAnim": "holder789-turn",
+        "cardAnim": "none",
+        "areaFilter": "none",
+        "syncDelta": 6.5,
+        "rect": {
+          "x": 6.390625,
+          "y": 753,
+          "width": 380.21875,
+          "height": 72,
+          "top": 753,
+          "right": 386.609375,
+          "bottom": 825,
+          "left": 6.390625
+        }
+      }
+    },
+    {
+      "name": "No repeated buzzing from cloned snapshots in discard"
+    },
+    {
+      "name": "Visible holder cue/haptic synchronized in trump",
+      "data": {
+        "state": "turn",
+        "railAnim": "holder789-turn",
+        "cardAnim": "none",
+        "areaFilter": "none",
+        "syncDelta": 2.300000000745058,
+        "rect": {
+          "x": 6.390625,
+          "y": 753,
+          "width": 380.21875,
+          "height": 72,
+          "top": 753,
+          "right": 386.609375,
+          "bottom": 825,
+          "left": 6.390625
+        }
+      }
+    },
+    {
+      "name": "No repeated buzzing from cloned snapshots in trump"
+    },
+    {
+      "name": "Visible holder cue/haptic synchronized in play",
+      "data": {
+        "state": "turn",
+        "railAnim": "holder789-turn",
+        "cardAnim": "none",
+        "areaFilter": "none",
+        "syncDelta": 3.400000000372529,
+        "rect": {
+          "x": 6.390625,
+          "y": 753,
+          "width": 380.21875,
+          "height": 72,
+          "top": 753,
+          "right": 386.609375,
+          "bottom": 825,
+          "left": 6.390625
+        }
+      }
+    },
+    {
+      "name": "No repeated buzzing from cloned snapshots in play"
+    },
+    {
+      "name": "Local human cue follows seat 0"
+    },
+    {
+      "name": "Local human cue follows seat 1"
+    },
+    {
+      "name": "Local human cue follows seat 2"
+    },
+    {
+      "name": "Local human cue follows seat 3"
+    },
+    {
+      "name": "Unsupported vibration still gets visual turn cue"
+    },
+    {
+      "name": "Hidden-page lifecycle cancels cues"
+    },
+    {
+      "name": "Opponent turn leaves holder idle"
+    },
+    {
+      "name": "Pause clears cue and owned vibration"
+    },
+    {
+      "name": "Spectator sees no local cue"
+    },
+    {
+      "name": "Diagnostic bot seat is not a human turn"
+    },
+    {
+      "name": "Two mild win pulses synchronize two light taps",
+      "data": {
+        "state": {
+          "mode": "win",
+          "turn": "",
+          "shown": "",
+          "win": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|4|green-5,green-6,green-7,green-8",
+          "pendingWin": "",
+          "enabled": true,
+          "reduced": false,
+          "events": [
+            {
+              "type": "clear",
+              "at": 833.1000000014901,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "clear",
+              "at": 835,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "clear",
+              "at": 3835.10000000149,
+              "reason": "holder orientation changed"
+            },
+            {
+              "type": "clear",
+              "at": 8772.700000001118,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 11215.60000000149,
+              "key": "1||solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|bidding|0|95",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 11216.700000001118,
+              "pattern": 18
+            },
+            {
+              "type": "clear",
+              "at": 11726.10000000149,
+              "reason": "not visible/paused"
+            },
+            {
+              "type": "clear",
+              "at": 11732.10000000149,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 11755.10000000149,
+              "key": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|bidding|0|95",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 11755.900000000373,
+              "pattern": 18
+            },
+            {
+              "type": "turn",
+              "at": 12075,
+              "key": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|discard|0|",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 12081.5,
+              "pattern": 18
+            },
+            {
+              "type": "turn",
+              "at": 12347.5,
+              "key": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|trump|0|",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 12349.800000000745,
+              "pattern": 18
+            },
+            {
+              "type": "turn",
+              "at": 12597.700000001118,
+              "key": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|play|0|0:",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 12601.10000000149,
+              "pattern": 18
+            },
+            {
+              "type": "clear",
+              "at": 12849.800000000745,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 12867.10000000149,
+              "key": "1||solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|play|0|0:",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 12867.700000001118,
+              "pattern": 18
+            },
+            {
+              "type": "clear",
+              "at": 12903.700000001118,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 12917.60000000149,
+              "key": "1||solo-jnu4skm:true|bot-1791849730845-ygza:false|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|play|1|0:",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 12918.200000001118,
+              "pattern": 18
+            },
+            {
+              "type": "clear",
+              "at": 12957.10000000149,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 12967.10000000149,
+              "key": "1||solo-jnu4skm:true|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:false|bot-1791849730851-mzm8:true|play|2|0:",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 12967.60000000149,
+              "pattern": 18
+            },
+            {
+              "type": "clear",
+              "at": 13010.400000000373,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 13017.900000000373,
+              "key": "1||solo-jnu4skm:true|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:false|play|3|0:",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 13018.60000000149,
+              "pattern": 18
+            },
+            {
+              "type": "clear",
+              "at": 13067.10000000149,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 13087.700000001118,
+              "key": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|play|0|0:",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 13088.300000000745,
+              "pattern": 18
+            },
+            {
+              "type": "clear",
+              "at": 13160.10000000149,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 13175.300000000745,
+              "key": "1|18|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|play|0|0:",
+              "reduced": false
+            },
+            {
+              "type": "clear",
+              "at": 13246.200000001118,
+              "reason": "hidden"
+            },
+            {
+              "type": "clear",
+              "at": 13306.5,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 13418.10000000149,
+              "key": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|play|0|0:",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 13418.900000000373,
+              "pattern": 18
+            },
+            {
+              "type": "clear",
+              "at": 13523.400000000373,
+              "reason": "not visible/paused"
+            },
+            {
+              "type": "turn",
+              "at": 13587.900000000373,
+              "key": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|play|0|0:",
+              "reduced": false
+            },
+            {
+              "type": "clear",
+              "at": 13663.700000001118,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "clear",
+              "at": 13739.10000000149,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 13756.200000001118,
+              "key": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|play|0|0:",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 13756.900000000373,
+              "pattern": 18
+            },
+            {
+              "type": "clear",
+              "at": 13837.300000000745,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "clear",
+              "at": 13892.800000000745,
+              "reason": "new table/hand/viewer"
+            },
+            {
+              "type": "turn",
+              "at": 13904.60000000149,
+              "key": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|play|0|0:",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 13905.5,
+              "pattern": 18
+            },
+            {
+              "type": "win",
+              "at": 14016.900000000373,
+              "key": "1|17|solo-jnu4skm:false|bot-1791849730845-ygza:true|bot-1791849730850-1ulf:true|bot-1791849730851-mzm8:true|4|green-5,green-6,green-7,green-8",
+              "reduced": false
+            },
+            {
+              "type": "vibration",
+              "at": 14020.200000001118,
+              "pattern": [
+                18,
+                322,
+                18
+              ]
+            }
+          ]
+        },
+        "h": {
+          "pattern": [
+            18,
+            322,
+            18
+          ],
+          "at": 14020.10000000149
+        },
+        "anim": "holder789-win"
+      }
+    },
+    {
+      "name": "Resolved-trick snapshots do not repeat win vibration"
+    },
+    {
+      "name": "Win transitions into next local turn"
+    },
+    {
+      "name": "Vibration opt-out retains visual cue and persists"
+    },
+    {
+      "name": "Reduced motion uses steady mild holder highlight"
+    },
+    {
+      "name": "Landscape cues frame without filtering cards",
+      "data": {
+        "mode": "turn",
+        "card": "none"
+      }
+    },
+    {
+      "name": "Returning vibration preference remains disabled"
+    },
+    {
+      "name": "Coherent789shell and offline reload include cue module"
+    }
+  ],
+  "errors": [],
+  "missing": []
+}

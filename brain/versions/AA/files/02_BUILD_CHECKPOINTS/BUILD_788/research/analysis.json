@@ -1,0 +1,955 @@
+{
+  "unique_deals": 5000,
+  "complete_hands": 10000,
+  "mean_margin_delta": 7.44,
+  "median_margin_delta": 0.0,
+  "sample_std_dev": 69.65965039661536,
+  "paired_bootstrap_95_CI_mean_margin": [
+    5.527,
+    9.359
+  ],
+  "shared_better": 1767,
+  "frozen_better": 1054,
+  "tied": 2179,
+  "non_tied_shared_fraction": 0.6263736263736264,
+  "partner_style_breakdown": {
+    "Sol7": {
+      "pairs": 1250,
+      "shared_better": 479,
+      "frozen_better": 243,
+      "tied": 528,
+      "mean_margin_change": 9.7
+    },
+    "Extreme": {
+      "pairs": 1250,
+      "shared_better": 430,
+      "frozen_better": 258,
+      "tied": 562,
+      "mean_margin_change": 9.408
+    },
+    "Meridian": {
+      "pairs": 1250,
+      "shared_better": 458,
+      "frozen_better": 260,
+      "tied": 532,
+      "mean_margin_change": 6.2
+    },
+    "Corvus": {
+      "pairs": 1250,
+      "shared_better": 400,
+      "frozen_better": 293,
+      "tied": 557,
+      "mean_margin_change": 4.452
+    },
+    "overall": {
+      "pairs": 5000,
+      "shared_better": 1767,
+      "frozen_better": 1054,
+      "tied": 2179,
+      "mean_margin_change": 7.44
+    },
+    "elapsed_seconds": 369.28
+  },
+  "selected_100_outcome_differences": [
+    {
+      "style": "Meridian",
+      "seed": 202803172864,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -230,
+      "shared_margin": 160,
+      "delta": 390
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171889,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -160,
+      "shared_margin": 225,
+      "delta": 385
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171119,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -265,
+      "shared_margin": 110,
+      "delta": 375
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803172088,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": 150,
+      "shared_margin": -225,
+      "delta": -375
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172068,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -110,
+      "shared_margin": 250,
+      "delta": 360
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172308,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -205,
+      "shared_margin": 150,
+      "delta": 355
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803172040,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -260,
+      "shared_margin": 90,
+      "delta": 350
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803172125,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -120,
+      "shared_margin": 230,
+      "delta": 350
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803174025,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 210,
+      "shared_margin": -140,
+      "delta": -350
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171880,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": 110,
+      "shared_margin": -235,
+      "delta": -345
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171183,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -220,
+      "shared_margin": 120,
+      "delta": 340
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171406,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -120,
+      "shared_margin": 220,
+      "delta": 340
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171468,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": 90,
+      "shared_margin": -250,
+      "delta": -340
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171592,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -130,
+      "shared_margin": 205,
+      "delta": 335
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172406,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": 130,
+      "shared_margin": -205,
+      "delta": -335
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172543,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -205,
+      "shared_margin": 130,
+      "delta": 335
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803173127,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -225,
+      "shared_margin": 110,
+      "delta": 335
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170018,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -120,
+      "shared_margin": 210,
+      "delta": 330
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170540,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": 230,
+      "shared_margin": -100,
+      "delta": -330
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803171199,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -120,
+      "shared_margin": 210,
+      "delta": 330
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171550,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -210,
+      "shared_margin": 120,
+      "delta": 330
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170533,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -235,
+      "shared_margin": 90,
+      "delta": 325
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170703,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -120,
+      "shared_margin": 205,
+      "delta": 325
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170950,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -205,
+      "shared_margin": 120,
+      "delta": 325
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172658,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": 215,
+      "shared_margin": -110,
+      "delta": -325
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803174071,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -110,
+      "shared_margin": 215,
+      "delta": 325
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170077,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -110,
+      "shared_margin": 210,
+      "delta": 320
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170530,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -100,
+      "shared_margin": 220,
+      "delta": 320
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171379,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -230,
+      "shared_margin": 90,
+      "delta": 320
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171454,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -240,
+      "shared_margin": 80,
+      "delta": 320
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172489,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 220,
+      "shared_margin": -100,
+      "delta": -320
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172589,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 230,
+      "shared_margin": -90,
+      "delta": -320
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170838,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -100,
+      "shared_margin": 215,
+      "delta": 315
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803171112,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -215,
+      "shared_margin": 100,
+      "delta": 315
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803171231,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 90,
+      "shared_margin": -225,
+      "delta": -315
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171390,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -205,
+      "shared_margin": 110,
+      "delta": 315
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171934,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -225,
+      "shared_margin": 90,
+      "delta": 315
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803172049,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -110,
+      "shared_margin": 205,
+      "delta": 315
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803173386,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -110,
+      "shared_margin": 205,
+      "delta": 315
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170936,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -90,
+      "shared_margin": 220,
+      "delta": 310
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171510,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": 220,
+      "shared_margin": -90,
+      "delta": -310
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171777,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -100,
+      "shared_margin": 210,
+      "delta": 310
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803173400,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -100,
+      "shared_margin": 210,
+      "delta": 310
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170089,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -90,
+      "shared_margin": 215,
+      "delta": 305
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170177,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -100,
+      "shared_margin": 205,
+      "delta": 305
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170671,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -90,
+      "shared_margin": 215,
+      "delta": 305
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803171215,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 205,
+      "shared_margin": -100,
+      "delta": -305
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803171247,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 90,
+      "shared_margin": -215,
+      "delta": -305
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171160,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": 205,
+      "shared_margin": -100,
+      "delta": -305
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171199,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -90,
+      "shared_margin": 215,
+      "delta": 305
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171962,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -265,
+      "shared_margin": 40,
+      "delta": 305
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803173047,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 215,
+      "shared_margin": -90,
+      "delta": -305
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803173049,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 205,
+      "shared_margin": -100,
+      "delta": -305
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803173157,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -90,
+      "shared_margin": 215,
+      "delta": 305
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803173227,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 215,
+      "shared_margin": -90,
+      "delta": -305
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803173359,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 225,
+      "shared_margin": -80,
+      "delta": -305
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803173447,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 100,
+      "shared_margin": -205,
+      "delta": -305
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803174068,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": 225,
+      "shared_margin": -80,
+      "delta": -305
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170021,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 80,
+      "shared_margin": -220,
+      "delta": -300
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170325,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 230,
+      "shared_margin": -70,
+      "delta": -300
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170505,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 210,
+      "shared_margin": -90,
+      "delta": -300
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170943,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -80,
+      "shared_margin": 220,
+      "delta": 300
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170944,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -230,
+      "shared_margin": 70,
+      "delta": 300
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170954,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -90,
+      "shared_margin": 210,
+      "delta": 300
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803171147,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -80,
+      "shared_margin": 220,
+      "delta": 300
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171590,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -230,
+      "shared_margin": 70,
+      "delta": 300
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171876,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -220,
+      "shared_margin": 80,
+      "delta": 300
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803172137,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 220,
+      "shared_margin": -80,
+      "delta": -300
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172137,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 220,
+      "shared_margin": -80,
+      "delta": -300
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172518,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -90,
+      "shared_margin": 210,
+      "delta": 300
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172622,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -220,
+      "shared_margin": 80,
+      "delta": 300
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803173308,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": 220,
+      "shared_margin": -80,
+      "delta": -300
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803173457,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 240,
+      "shared_margin": -60,
+      "delta": -300
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170507,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -205,
+      "shared_margin": 90,
+      "delta": 295
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803171132,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": 215,
+      "shared_margin": -80,
+      "delta": -295
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803171207,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -60,
+      "shared_margin": 235,
+      "delta": 295
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171207,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -70,
+      "shared_margin": 225,
+      "delta": 295
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171297,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -90,
+      "shared_margin": 205,
+      "delta": 295
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803172213,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": -235,
+      "shared_margin": 60,
+      "delta": 295
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803173010,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -80,
+      "shared_margin": 215,
+      "delta": 295
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803173432,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": 90,
+      "shared_margin": -205,
+      "delta": -295
+    },
+    {
+      "style": "Corvus",
+      "seed": 202803173995,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 225,
+      "shared_margin": -70,
+      "delta": -295
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170072,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -210,
+      "shared_margin": 80,
+      "delta": 290
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170464,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": 210,
+      "shared_margin": -80,
+      "delta": -290
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170465,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 210,
+      "shared_margin": -80,
+      "delta": -290
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170520,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -50,
+      "shared_margin": 240,
+      "delta": 290
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170559,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 210,
+      "shared_margin": -80,
+      "delta": -290
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170842,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": 210,
+      "shared_margin": -80,
+      "delta": -290
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171564,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -220,
+      "shared_margin": 70,
+      "delta": 290
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803171700,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -80,
+      "shared_margin": 210,
+      "delta": 290
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803172107,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 80,
+      "shared_margin": -210,
+      "delta": -290
+    },
+    {
+      "style": "Extreme",
+      "seed": 202803172196,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -210,
+      "shared_margin": 80,
+      "delta": 290
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172200,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -220,
+      "shared_margin": 70,
+      "delta": 290
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172215,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -60,
+      "shared_margin": 230,
+      "delta": 290
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172435,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": -80,
+      "shared_margin": 210,
+      "delta": 290
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172493,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 210,
+      "shared_margin": -80,
+      "delta": -290
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803172787,
+      "seat": 3,
+      "dealer": 3,
+      "baseline_margin": 220,
+      "shared_margin": -70,
+      "delta": -290
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803173042,
+      "seat": 2,
+      "dealer": 2,
+      "baseline_margin": -210,
+      "shared_margin": 80,
+      "delta": 290
+    },
+    {
+      "style": "Meridian",
+      "seed": 202803173149,
+      "seat": 1,
+      "dealer": 1,
+      "baseline_margin": 210,
+      "shared_margin": -80,
+      "delta": -290
+    },
+    {
+      "style": "Sol7",
+      "seed": 202803170032,
+      "seat": 0,
+      "dealer": 0,
+      "baseline_margin": -215,
+      "shared_margin": 70,
+      "delta": 285
+    }
+  ]
+}

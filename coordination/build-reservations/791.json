@@ -5,11 +5,20 @@
   "task": "Publish complete documentation catch-up through isolated788/789, phone evidence, decisions and pending790; no runtime change",
   "sourceGameBuild": "789",
   "sourceSha256": "2d08496b60322825e5436a0936581fb7e1e5e70889196d03ed429eaa4637aaca",
-  "status": "RESERVED",
-  "date": "2026-10-12",
+  "status": "DELIVERED_DOCUMENTATION_CHECKPOINT",
+  "date": "2026-10-13",
   "runtimeGame": false,
   "packageType": "MASTER_BRAIN_DOCUMENTATION",
   "ownerApproved": false,
   "physicalAndroidTested": false,
-  "deploymentStatus": "NO_GAME_DEPLOYMENT"
+  "deploymentStatus": "NO_GAME_DEPLOYMENT",
+  "filename": "791.zip",
+  "sha256": "791b4fb33a76740164b564de9d5b35990d63af060a8142ff365121b6afe1aed6",
+  "bytes": 205653644,
+  "entries": 688,
+  "manifestChecks": 687,
+  "crc": "PASS",
+  "libraryFileId": "libfile_0e710eb499008191a972b6f8bbf23971",
+  "brainVersion": "AA",
+  "ownerAuthorizedDocumentation": true
 }
