@@ -1,0 +1,14 @@
+{
+  "number": "794",
+  "reservationId": "holder-arrival-45dc04e134e5-20261013",
+  "workstream": "Holder win cue arrival timing",
+  "task": "Delay local win flash and vibration until collected trick cards finish arriving; preserve793 presentation and gameplay; career remains deferred.",
+  "sourceGameBuild": "793",
+  "sourceSha256": "374c930cc61074adb64a9833b0625e140634a059dd3ea7d7c421bf23d7648557",
+  "status": "RESERVED",
+  "date": "2026-10-13",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED",
+  "expectedMainSha": "00c1c77d44921396c39e15114ae7ac4e9616eccb"
+}
