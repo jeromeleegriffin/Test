@@ -6,7 +6,7 @@
   "sourceGameBuild": "795-career-phone-test-v1",
   "sourceSha256": "85439e34821590accf8444f43025ab3a14798caa64ef5873d423e2ae10edd337",
   "sourceRuntimeIdentitySha256": "8650683fc8a5461d8a12a7328f3dd98e130179f67421cf3feeded30c79198ced",
-  "status": "DELIVERED_PENDING_TEST_DEPLOYMENT_VERIFY",
+  "status": "DELIVERED_TEST_DEPLOYED_LIVE_ASSETS_VERIFIED",
   "date": "2026-10-13",
   "ownerApproved": true,
   "physicalAndroidTested": true,
@@ -31,7 +31,7 @@
   "publicEvidenceEntries": 57,
   "crc": "PASS",
   "manifestChecks": 1397,
-  "deploymentStatus": "PENDING_TEST_MAIN_COMMIT_AND_LIVE_VERIFY",
+  "deploymentStatus": "TEST_DEPLOYED_LIVE_ASSETS_VERIFIED",
   "expectedParentSha": "61ffebdb121edf3ea1df44690beb865bfa6c11a7",
   "testLimits": "Owner-reported phone acceptance only; no independent physical-device measurements. Live cross-device PeerJS remains untested. The offline reload check for relabeled 797 was blocked locally by sandbox listen EPERM; no offline 797 pass is claimed. First repaired 500-hand detailed AI/page telemetry was lost although raw records reconcile. Graceful startup UX for artificially damaged ordinary restore journal is not established.",
   "modifiedRuntimeFiles": [
@@ -39,5 +39,20 @@
     "game060.js",
     "hor-version.js",
     "sw060.js"
-  ]
+  ],
+  "deployedCommit": "1f3a6382baccca6bf9d0f2102698c8a39d38fa30",
+  "pagesWorkflowRunId": "38443569244",
+  "pagesWorkflowConclusion": "success",
+  "liveAssetVerification": {
+    "status": "LIVE_ASSETS_VERIFIED",
+    "observedLobbyScriptUrls": [
+      "hor-version.js?v=797",
+      "game060.js?v=797"
+    ],
+    "servedHorVersionBuild": 797,
+    "servedServiceWorkerBuild": 797,
+    "servedServiceWorkerCache": "house-of-rooks-797",
+    "activeServiceWorkerControllerVerified": false,
+    "offlineReloadVerified": false
+  }
 }

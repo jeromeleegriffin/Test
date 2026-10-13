@@ -11,12 +11,12 @@
   "history": "history.html",
   "previousVersion": "AA",
   "checkpoint": "career-release-797-test",
-  "checkpointStatus": "OWNER_APPROVED_PACKAGE_READY_TEST_DEPLOYMENT_PENDING",
+  "checkpointStatus": "OWNER_APPROVED_TEST_DEPLOYED_LIVE_ASSETS_VERIFIED",
   "approvedWorkingBuild": "783",
   "testRootObservedBuild": "779",
-  "gamePublicationStatus": "797_TEST_DEPLOYMENT_PENDING_LIVE_VERIFY",
-  "onScreenVersion": "v779",
-  "liveCommit": "6872e4ebc64b78691564eb2ae0c41761fb0e1ada",
+  "gamePublicationStatus": "797_TEST_DEPLOYED_LIVE_ASSETS_VERIFIED",
+  "onScreenVersion": "not rendered in lobby; live script assets are 797",
+  "liveCommit": "1f3a6382baccca6bf9d0f2102698c8a39d38fa30",
   "liveTable": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
   "foundationVersion": "H",
   "foundationArtifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-06_H_MASTER_BRAIN.zip",
@@ -67,7 +67,7 @@
   "cleanFallbackCandidate": "766",
   "cleanFallbackStatus": "766_OWNER_APPROVED_HISTORICAL_FALLBACK",
   "testServerPlannedBuild": "779",
-  "testServerDeploymentStatus": "DEPLOYED_VERIFIED",
+  "testServerDeploymentStatus": "DEPLOYED_VERIFIED_797_LIVE_ASSETS",
   "defaultIntelligence": "CHALLENGER-X1 original frozen",
   "backupIntelligence": "Sol7 original frozen",
   "epaEnabled": false,
@@ -82,7 +82,7 @@
     "physicalTabletVerified": false,
     "implementedBuild": "771"
   },
-  "testServerDeploymentCommit": "6872e4ebc64b78691564eb2ae0c41761fb0e1ada",
+  "testServerDeploymentCommit": "1f3a6382baccca6bf9d0f2102698c8a39d38fa30",
   "testServerUrl": "https://jeromeleegriffin.github.io/Test/",
   "testRootRollbackCommit": "ccb902b30d9e759634e2b8921276a09a4a5f005d",
   "fullCastTrumpVoiceCheckpoint": "../coordination/FULL_CAST_TRUMP_VOICES_790.md",
@@ -127,5 +127,19 @@
     "libraryFileId": "libfile_a4982c338d948191b057823cec7c880c",
     "sha256": "69070b3e148a8ad86106c27bebed08ca6dd2e585b31117915a193dbf976bd863",
     "bytes": 143344809
+  },
+  "pagesWorkflowRunId": "38443569244",
+  "pagesWorkflowConclusion": "success",
+  "liveAssetVerification": {
+    "status": "LIVE_ASSETS_VERIFIED",
+    "observedLobbyScriptUrls": [
+      "hor-version.js?v=797",
+      "game060.js?v=797"
+    ],
+    "servedHorVersionBuild": 797,
+    "servedServiceWorkerBuild": 797,
+    "servedServiceWorkerCache": "house-of-rooks-797",
+    "activeServiceWorkerControllerVerified": false,
+    "offlineReloadVerified": false
   }
 }

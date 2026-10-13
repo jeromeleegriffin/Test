@@ -5,9 +5,10 @@
       "updated": "2026-10-13",
       "browse": "versions/AB/index.html",
       "artifact": "",
-      "sha256": "9cd309b7ec46da61a818b78f79dd2619f9a47208fccc6f07158051f6d227a126",
+      "sha256": "432a21ec51a088d9ab6a70f8c638f86a9accb873ff90b29ac9399cc509d5c977",
       "documentationOnly": true,
-      "manifest": "versions/AB/inventory.json"
+      "manifest": "versions/AB/inventory.json",
+      "archiveStatus": "Test build 797 deployed; live script and service-worker build/cache markers verified; active worker controller and offline reload unverified"
     },
     {
       "brainVersion": "AA",
