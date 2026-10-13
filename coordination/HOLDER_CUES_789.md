@@ -15,3 +15,8 @@ Changes: game060.js notification routes; unified-bidding752.js local-human sign 
 Pending separate visuals: above-head name/status consolidation and Jerome sizing. No smart-bidding or full-cast voice merge in789. Concurrent reservation790 belongs to full-cast trump voices on X1-PF45dc-TEST(parent788), source af962deb8229eb7a037ba2a1e94cc230f395f03a8591ecc65304c7a684c70d91. Preserve that workstream. When authorized to combine, apply only this789presentation delta onto its latest verified source; do not overwrite smart bidding/voices with this whole788-derived game. No automatic chat notification is claimed.
 
 Next: Jerome reviews exact789 on Android without clearing data/cache or FRESH. Keep source/rollback unchanged; do not promote based on browser tests.
+
+
+## Owner phone feedback and792 correction —2026-10-13
+
+Owner reports no visible holder turn/win cue and uncertain vibration. This reopens visibility acceptance; prior browser checks are not evidence of acceptable phone visibility. See [HOLDER_CUES_792.md](HOLDER_CUES_792.md): latest790 preserved with stronger furniture-only contrast, delivered792pending owner phone review. Actual phone source version not independently confirmed. No deployment or baseline promotion.
