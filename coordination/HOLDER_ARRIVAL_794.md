@@ -1,5 +1,13 @@
 # Holder win cue arrival — Build 794
 
+## Owner phone acceptance — October 12, 2026, 10:30 p.m. America/New_York
+
+Jerome clarified: “That's supposed to say everything did pass.” This corrects his preceding message and records that everything passed his phone test of delivered **794.zip**. Status: **OWNER PHONE APPROVED — NOT DEPLOYED**. The earlier pending-review statements below are preserved as delivery history and are superseded by this acceptance.
+
+This is owner-reported physical phone acceptance of the integrated build, including the current presentation and arrival-cue follow-up. It does not invent individual test coverage, timings or hardware measurements. Preserve the accepted794 runtime and continue from it for future isolated work; no new build is needed for this documentation update. Frozen ZIP/source hashes are unchanged. Career/achievement work remains deferred. No deployment, runtime publication or separate baseline promotion was requested; the published baseline783 and deployedTest779 pointers remain intact.
+
+## Original delivery record — retained history
+
 Owner-authorized isolated follow-up to 793. Delivered for Android review; not approved, promoted or deployed. This is a documentation receipt only. Published Brain AA, approved rollback 783, and deployed Test 779 remain unchanged. Runtime code is confined to the downloadable candidate.
 
 Owner request: delay the trick-won flash until the collected cards come down into the human holder. The last card's collection transform ending releases the existing flash and optional vibration together; the existing cleanup supplies a bounded fallback. Normal turn cues resume afterward. The special Raven encounter retains its separate completion gate. 793 presentation fixes and all X1/EPA/audio are preserved; career/achievement work remains deferred.
@@ -16,7 +24,7 @@ Validation: 18 focused timing checks plus 5 ZIP-loader checks passed. Portrait a
 
 Review: load 794.zip in the existing player, win a trick at 1x and observe the card arrival before the holder's double flash, then compare 3x/MAX. Do not clear caches or use FRESH. Rollback: reopen frozen 793.zip. The candidate is not accepted merely because automated checks passed. Next work must refresh the registry and reserve its own unused number.
 
-## Complete continuation handoff
+## Original delivery handoff — read acceptance above first
 
 GRIFFIN HOUSE OF ROOKS — 794 CONTINUATION
 Owner: Jerome Griffin. Workspace 45dc04e134e5, continuing 793. Experiment date: October 13, 2026 UTC (October 12 America/New_York).

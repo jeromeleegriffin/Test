@@ -1688,10 +1688,10 @@
       "task": "Delay local win flash and vibration until collected trick cards finish arriving; preserve793 presentation and gameplay; career remains deferred.",
       "sourceGameBuild": "793",
       "sourceSha256": "374c930cc61074adb64a9833b0625e140634a059dd3ea7d7c421bf23d7648557",
-      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
+      "status": "OWNER_PHONE_APPROVED_NOT_DEPLOYED",
       "date": "2026-10-13",
-      "ownerApproved": false,
-      "physicalAndroidTested": false,
+      "ownerApproved": true,
+      "physicalAndroidTested": true,
       "deploymentStatus": "NOT_DEPLOYED",
       "expectedMainSha": "00c1c77d44921396c39e15114ae7ac4e9616eccb",
       "filename": "794.zip",
@@ -1723,8 +1723,20 @@
         "allArtworkUnchanged": true,
         "progressionEngineUnchanged": true
       },
-      "testLimits": "Chromium mobile/touch and actual ZIP-loader sources in isolated local iframe; stubbed vibration requests. No physical Android timing/visibility/vibration/listening approval, live PeerJS/reconnect or installed-old-cache migration certification.",
-      "careerAchievementWork": "DEFERRED_BY_OWNER_UNCHANGED"
+      "testLimits": "Automated evidence remains Chromium mobile/touch and ZIP-loader tests with stubbed vibration. Owner subsequently reports everything passed on his phone. No independent hardware measurements, live PeerJS/reconnect or installed-old-cache migration certification.",
+      "careerAchievementWork": "DEFERRED_BY_OWNER_UNCHANGED",
+      "physicalAndroidTestEvidence": "OWNER_REPORTED",
+      "ownerPhoneReview": {
+        "status": "PASS_OWNER_REPORTED",
+        "reviewer": "Jerome Griffin",
+        "reportedAt": "2026-10-12T22:30:44-04:00",
+        "build": "794",
+        "quote": "That's supposed to say everything did pass.",
+        "context": "Owner corrected the preceding message: everything passed his phone test of delivered794.",
+        "scope": "Overall owner phone acceptance of the delivered794 build. Individual test counts, device measurements and haptic timings were not supplied; do not invent them.",
+        "deploymentAuthorized": false
+      },
+      "automatedTestLimitsAtDelivery": "Chromium mobile/touch and actual ZIP-loader sources in isolated local iframe; stubbed vibration requests. No physical Android timing/visibility/vibration/listening approval, live PeerJS/reconnect or installed-old-cache migration certification."
     }
   ],
   "testSiteBuild": "779",
