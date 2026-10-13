@@ -456,7 +456,7 @@
     if (window._horTurnAlerted) return;
     window._horTurnAlerted = true;
     try { if (typeof playSfx === 'function') playSfx('turn', { broadcastNet: false }); } catch (e) {}
-    try { if (navigator.vibrate) navigator.vibrate([40, 40, 40]); } catch (e) {}
+    try { if (!window.HORHolderCues789 && navigator.vibrate) navigator.vibrate([40, 40, 40]); } catch (e) {}
   }
 
   function stripHostPeek() {
@@ -848,7 +848,7 @@
   const PLAY_TIPS = {
     lobby: {
       title: 'New at this table',
-      html: '<p>Type your name, then tap <b>Play offline</b>. Tips pop up as the hand happens — bid, nest, trump, tricks, money, then messages.</p><p>Friends tables work the same way. Skip anytime if you already know it.</p>'
+      html: '<p>Type your name, then tap <b>Take Your Seat</b>. Tips pop up as the hand happens — bid, nest, trump, tricks, money, then messages.</p><p>Friends tables work the same way. Skip anytime if you already know it.</p>'
     },
     sit: {
       title: 'Partners sit across',
@@ -1137,6 +1137,8 @@
     const lobby = $('lobby');
     const onLobby = lobby && !lobby.classList.contains('hidden');
     if (onLobby) {
+      // Locked entrance already explains entry. Keep manual tour and in-game tips.
+      if (document.querySelector('link[href^="landing783.css"]') && !manualTour) return;
       if (!isNewPlayer()) return;
       if (window.__horLobbyTipShown) return;
       window.__horLobbyTipShown = true;
@@ -1796,14 +1798,18 @@
   if (typeof _sfx === 'function') {
     window.playSfx = function () {
       const r = _sfx.apply(this, arguments);
-      if (gfxOn('hapticsHeavy') && navigator.vibrate) {
+      if (gfxOn('hapticsHeavy') && navigator.vibrate && !(window.HORHolderCues789 && arguments[0] === 'turn')) {
         try { navigator.vibrate(12); } catch (e) {}
       }
       return r;
     };
   }
 
-  document.addEventListener('click', persistPlayer, true);
+  document.addEventListener('click', e => {
+    // Career viewing/export/recovery must not rewrite unrelated saved preferences.
+    if(window.__horCareerDismissGesture||e.target?.closest?.('#horActivationPanel,#horPublicCareerCard,#horCareerBackdrop,#horCareerGuide,[data-hor-career-export]'))return;
+    persistPlayer();
+  }, true);
 
   document.addEventListener('DOMContentLoaded', () => {});
   applyPrefsToEngine();

@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "brainVersion": "AB",
+      "updated": "2026-10-13",
+      "browse": "versions/AB/index.html",
+      "artifact": "",
+      "sha256": "9cd309b7ec46da61a818b78f79dd2619f9a47208fccc6f07158051f6d227a126",
+      "documentationOnly": true,
+      "manifest": "versions/AB/inventory.json"
+    },
+    {
       "brainVersion": "AA",
       "updated": "2026-10-13",
       "browse": "versions/AA/files/00_START_HERE/START_HERE.md",
@@ -152,7 +161,7 @@
       "browse": "versions/J/index.html",
       "artifact": "",
       "sha256": "4a02dbbfbdf8d2278646e2fb9ffbfd4e7b532820b808f1e717c61540f8460538",
-      "archiveStatus": "No archive created \u2014 owner authorization required"
+      "archiveStatus": "No archive created — owner authorization required"
     },
     {
       "brainVersion": "I",

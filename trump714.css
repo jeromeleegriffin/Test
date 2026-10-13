@@ -49,3 +49,12 @@
  .tc-contact-shadow746{position:fixed;z-index:11999;border-radius:50%;background:#000;filter:blur(2px);transform:translate(-50%,-50%);pointer-events:none}
  .tc-contact-shadow746[hidden]{display:none!important}
 }
+
+/* 795: authored brass pixels in the lid SVG. CSS owns interaction only. */
+#trumpCase714 .tc-confirm {pointer-events:auto;cursor:pointer;touch-action:manipulation;}
+#trumpCase714 .tc-confirm[aria-disabled="true"] {pointer-events:none;cursor:default;}
+#trumpCase714 .tc-confirm:focus-visible {outline:none;}
+#trumpCase714 .tc-confirm:focus-visible .tc-confirm-hit {stroke:#ffedb1;stroke-width:7;}
+.tc-fallback-confirm {touch-action:manipulation;}
+.tc-fallback-confirm svg {display:block;width:100%;height:auto;}
+.tc-fallback-confirm:focus-visible {outline:2px solid #ffedb1;}

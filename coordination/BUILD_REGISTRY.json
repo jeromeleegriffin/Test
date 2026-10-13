@@ -1869,7 +1869,7 @@
       "sourceGameBuild": "795-career-phone-test-v1",
       "sourceSha256": "85439e34821590accf8444f43025ab3a14798caa64ef5873d423e2ae10edd337",
       "sourceRuntimeIdentitySha256": "8650683fc8a5461d8a12a7328f3dd98e130179f67421cf3feeded30c79198ced",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_TEST_DEPLOYMENT_VERIFY",
       "date": "2026-10-13",
       "ownerApproved": true,
       "physicalAndroidTested": true,
@@ -1883,7 +1883,26 @@
       "deploymentAuthorization": "TEST_ONLY",
       "production531": "PROTECTED",
       "supersedesBuild": "796",
-      "collisionResolution": "Build 796 marked CONFLICT_DO_NOT_REUSE; both archives retained."
+      "collisionResolution": "Build 796 marked CONFLICT_DO_NOT_REUSE; both archives retained.",
+      "filename": "797.zip",
+      "libraryFileId": "libfile_a4982c338d948191b057823cec7c880c",
+      "fileId": "file_00000000f97081f6b12c28f8e240621c",
+      "bytes": 143344809,
+      "sha256": "69070b3e148a8ad86106c27bebed08ca6dd2e585b31117915a193dbf976bd863",
+      "entries": 1398,
+      "runtimeEntries": 1338,
+      "publicEvidenceEntries": 57,
+      "crc": "PASS",
+      "manifestChecks": 1397,
+      "deploymentStatus": "PENDING_TEST_MAIN_COMMIT_AND_LIVE_VERIFY",
+      "expectedParentSha": "61ffebdb121edf3ea1df44690beb865bfa6c11a7",
+      "testLimits": "Owner-reported phone acceptance only; no independent physical-device measurements. Live cross-device PeerJS remains untested. The offline reload check for relabeled 797 was blocked locally by sandbox listen EPERM; no offline 797 pass is claimed. First repaired 500-hand detailed AI/page telemetry was lost although raw records reconcile. Graceful startup UX for artificially damaged ordinary restore journal is not established.",
+      "modifiedRuntimeFiles": [
+        "index.html",
+        "game060.js",
+        "hor-version.js",
+        "sw060.js"
+      ]
     }
   ],
   "testSiteBuild": "779",

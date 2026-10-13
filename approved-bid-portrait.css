@@ -94,27 +94,10 @@ body #decisionConsole.approved-bid-portrait button:disabled {
   opacity: .55 !important;
   cursor: default !important;
 }
-body #decisionConsole.approved-bid-portrait #bidConfirm.bid-shoot-moon {
-  gap: 1cqw !important;
-  font-size: 3.8cqw !important;
-}
-body #decisionConsole.approved-bid-portrait .moon-orb {
-  display: block !important;
-  width: 7cqw !important;
-  height: 7cqw !important;
-  background: url("assets/images/shoot-moon-orb-r656.png") center/contain no-repeat !important;
-}
-body #decisionConsole.approved-bid-portrait .moon-action-copy {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  font: inherit !important;
-  line-height: 1.05 !important;
-}
-body #decisionConsole.approved-bid-portrait .moon-action-copy span {
-  display: block !important;
-  font: inherit !important;
-}
+/* Exact approved crescent/button study pixels, within the unchanged bid hit box. */
+body #decisionConsole.approved-bid-portrait #bidConfirm.bid-shoot-moon {padding:0 !important;}
+body #decisionConsole.approved-bid-portrait #bidConfirm .moon-approved-button795 {display:block!important;width:100%!important;height:100%!important;max-width:100%!important;min-width:0!important;object-fit:contain!important;pointer-events:none!important;}
+body #decisionConsole.approved-bid-portrait :is(#bidMinus,#bidPlus) {touch-action:none!important;user-select:none!important;-webkit-user-select:none!important;-webkit-touch-callout:none!important;}
 /* Existing Moon dialog remains the only gate. Yield only this painted surface,
    preserving root geometry used by the unchanged R706 seat observer. */
 body:has(> .moon-approved-overlay) #decisionConsole.approved-bid-portrait .approved-bid-surface {
@@ -131,3 +114,5 @@ body #decisionConsole.approved-bid-portrait #bidConfirm { left: 4.9928673324% !i
 body #decisionConsole.approved-bid-portrait #bidPassBtn { left: 53.9229671897% !important; top: 60.6896551724% !important; width: 40.6562054208% !important; height: 34.4827586207% !important; }
 }
 }
+#bidConfirm .moon-approved-button795 {display:block;width:100%;height:100%;max-width:100%;min-width:0;object-fit:contain;pointer-events:none;}
+#bidMinus,#bidPlus {touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}

@@ -6,6 +6,10 @@
  const assetRoot='assets/trump714/';
  const specs={case:[2069,760,57,136,1980,481], 'lid-inner':[2187,719,57,165,2081,412],
   'lid-outer':[2172,724,38,166,2095,392],stamp:[1254,1254,283,107,677,1027]};
+ // Source-art registration: recessed wooden opening, excluding surrounding rails/hinges.
+ const panel={left:126,right:2067,top:244,bottom:466};
+ const plaque={cx:(panel.left+panel.right)/2,cy:(panel.top+panel.bottom)/2,width:1000,height:1000*342/2022};
+ let tentativeTrump=null, choiceKey=null, confirmGroup=null, fallbackDock=null;
  const portrait=()=>matchMedia('(orientation:portrait)').matches;
  const reduced=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
  let ready=false, root, canvas, ctx, stamp, lid, closed, buttons=[], dockRef, submitRef;
@@ -16,6 +20,35 @@
  const materials={};
  const log=(event,detail)=>{trace.push({event,detail,t:performance.now()});if(trace.length>80)trace.shift();};
  const svg=name=>{const [w,h,x,y,vw,vh]=specs[name];return `<svg viewBox="${x} ${y} ${vw} ${vh}" aria-hidden="true"><image width="${w}" height="${h}" href="${assetRoot+name}.png"/></svg>`;};
+ function plaqueArt(color){
+  const x=plaque.cx-plaque.width/2,y=plaque.cy-plaque.height/2;
+  return `<image x="${x}" y="${y}" width="${plaque.width}" height="${plaque.height}" href="${assetRoot}confirm-brass.png" aria-hidden="true"/><text x="${plaque.cx}" y="${plaque.cy}" text-anchor="middle" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#302c25" aria-hidden="true">CONFIRM ${color.toUpperCase()}</text>`;
+ }
+ function updateChoice(){
+  if(confirmGroup){
+   confirmGroup.style.display=tentativeTrump?'':'none';
+   confirmGroup.setAttribute('aria-disabled',String(pending||running));
+   confirmGroup.setAttribute('tabindex',tentativeTrump&&!pending&&!running?'0':'-1');
+   if(tentativeTrump){confirmGroup.setAttribute('aria-label','Confirm '+tentativeTrump+' trump');confirmGroup.innerHTML=plaqueArt(tentativeTrump)+'<rect class="tc-confirm-hit" x="126" y="165" width="1941" height="330" fill="transparent"/>';}
+  }
+  buttons.forEach(b=>{b.disabled=pending||running;b.toggleAttribute('data-selected',b.dataset.trump===tentativeTrump);b.setAttribute('aria-pressed',String(b.dataset.trump===tentativeTrump));});
+  if(fallbackDock?.isConnected){
+   fallbackDock.querySelectorAll('[data-trump]').forEach(b=>{
+    const selected=b.dataset.trump===tentativeTrump;
+    b.disabled=pending;b.setAttribute('aria-pressed',String(selected));b.classList.toggle('tc-fallback-confirm',selected);
+    b.setAttribute('aria-label',(selected?'Confirm ':'Choose ')+b.dataset.trump+' trump');
+    b.innerHTML=selected?`<svg viewBox="${plaque.cx-plaque.width/2} ${plaque.cy-plaque.height/2} ${plaque.width} ${plaque.height}" aria-hidden="true">${plaqueArt(tentativeTrump)}</svg>`:b.dataset.trump[0].toUpperCase()+b.dataset.trump.slice(1);
+   });
+  }
+ }
+ function beginChoice(g){
+  const key=g?`${g.handNumber}:${g.bidder}`:choiceKey;
+  if(key!==choiceKey){choiceKey=key;tentativeTrump=null;pending=false;}
+ }
+ function chooseFallback(dock,submit,g){
+  ensure();beginChoice(g);dockRef=dock;submitRef=submit;fallbackDock=dock;
+  dock.querySelectorAll('[data-trump]').forEach(b=>b.onclick=()=>b.dataset.trump===tentativeTrump?confirmChoice():select(b.dataset.trump));updateChoice();
+ }
  function ensure(){
   if(root)return;
   root=document.createElement('section');root.id='trumpCase714';root.hidden=true;
@@ -26,6 +59,9 @@
   root.appendChild(padGroup);document.body.appendChild(root);
   stamp=root.querySelector('.tc-stamp');stamp.innerHTML='<canvas aria-hidden="true"></canvas>';stampPaint=stamp.firstChild;stampPaint.width=338;stampPaint.height=514;
   shadow=document.createElement('div');shadow.className='tc-contact-shadow746';shadow.hidden=true;shadow.setAttribute('aria-hidden','true');document.body.appendChild(shadow);drawStamp(null,1);lid=root.querySelector('.tc-lid');closed=root.querySelector('.tc-closed');
+  const lidSvg=lid.querySelector('svg');lidSvg.removeAttribute('aria-hidden');
+  confirmGroup=document.createElementNS('http://www.w3.org/2000/svg','g');confirmGroup.classList.add('tc-confirm');confirmGroup.setAttribute('role','button');confirmGroup.style.display='none';confirmGroup.setAttribute('tabindex','-1');
+  confirmGroup.addEventListener('click',confirmChoice);confirmGroup.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();confirmChoice();}});lidSvg.appendChild(confirmGroup);
   canvas=document.createElement('canvas');canvas.id='trumpInk714';canvas.hidden=true;canvas.setAttribute('aria-hidden','true');ctx=canvas.getContext('2d');
   (document.getElementById('hor-room-bg')||document.body).appendChild(canvas);
  }
@@ -47,27 +83,30 @@
   restore();log('cancel',reason);
  }
  function showCase(interactive){
-  ensure();root.hidden=false;root.style.opacity='';root.setAttribute('aria-hidden',interactive?'false':'true');
+  ensure();const opening=root.hidden&&interactive;root.hidden=false;root.style.opacity='';root.setAttribute('aria-hidden',interactive?'false':'true');
   buttons.forEach(b=>b.disabled=!interactive);document.body.classList.add('trump714-avatar');position();
+  if(opening&&!reduced()){const duration=opts.scaled?opts.scaled(220,0):220;if(duration>30)animate(lid,[{transform:'scaleY(0)'},{transform:'scaleY(1)'}],{duration,fill:'none',easing:'ease-out'});}
  }
- function choose(dock,submit){
+ function choose(dock,submit,g){
   if(!ownsPortrait())return false;
-  ensure();dockRef=dock;submitRef=submit;
+  ensure();beginChoice(g);dockRef=dock;submitRef=submit;fallbackDock=null;
   dock.classList.remove('decision-mode-bid','hidden');dock.classList.add('decision-mode-trump','trump714-owned');
   dock.innerHTML='';
-  if(!running&&!pending)showCase(true);
+  if(!running&&!pending)showCase(true);updateChoice();
   // Selection authority is still the caller's original callback.
   last={phase:'trump',trump:null};
   return true;
  }
  function select(color){
   if(pending||running||!colors.includes(color)||!submitRef)return;
-  pending=true;buttons.forEach(b=>{b.disabled=true;if(b.dataset.trump===color)b.dataset.selected='';});
-  root.querySelector('.tc-access').textContent='Selecting '+color+' trump';log('submitted',color);
+  tentativeTrump=color;updateChoice();root.querySelector('.tc-access').textContent=color+' selected. Confirm or choose another color.';log('tentative',color);
+ }
+ function confirmChoice(){
+  const color=tentativeTrump;
+  if(pending||running||!colors.includes(color)||!submitRef)return;
+  pending=true;updateChoice();root.querySelector('.tc-access').textContent='Confirming '+color+' trump';log('submitted',color);
   const callback=submitRef;callback(color);
-  // A disconnected client keeps the case while the existing queue reconnects.
-  // Re-enable only the presentation if no authority acknowledgement arrived.
-  const token=epoch;clockTimers.push(setTimeout(()=>{if(token===epoch&&pending&&!running&&current&&current.phase==='trump'){pending=false;buttons.forEach(b=>b.disabled=false);root.querySelector('.tc-access').textContent='Waiting for connection. You may retry your choice.';}},4000));
+  const token=epoch;clockTimers.push(setTimeout(()=>{if(token===epoch&&pending&&!running&&current&&current.phase==='trump'){pending=false;updateChoice();root.querySelector('.tc-access').textContent='Waiting for connection. You may retry confirmation.';}},4000));
  }
  function timing(fn,at,token){clockTimers.push(setTimeout(()=>{if(token===epoch)fn();},at));}
  function animate(el,frames,settings){const a=el.animate(frames,{fill:'forwards',...settings});motions.push(a);return a;}
@@ -119,7 +158,7 @@
   stop('new-ceremony');accepted=color;pending=false;running=true;pressed=false;
   const duration=reduced()?0:Math.max(0,opts.scaled?opts.scaled(1950,0):1950);
   if(duration<150){paint(color);running=false;log('reduced-or-fast',color);return;}
-  showCase(false);const token=epoch;
+  showCase(false);tentativeTrump=color;updateChoice();const token=epoch;
   buttons.forEach(b=>{if(b.dataset.trump===color)b.dataset.selected='';});
   const slotId=seatSlotIdForIndex(chooser),direction=({'slot-me':'bottom','slot-partner':'top','slot-left':'left','slot-right':'right'})[slotId];
   if(!direction){stop('missing-chooser-seat');paint(color);return;}
@@ -167,12 +206,13 @@
  }
  function sync(g,me,options){
   ensure();current=g;currentMe=me;opts=options||{};
+  if(g?.phase==='trump')beginChoice(g);else if(g?.phase!=='play'){choiceKey=null;tentativeTrump=null;updateChoice();}
   if(!g||!document.body.classList.contains('in-game')){stop('no-game');accepted=null;last=null;paint(null);return;}
   const snapshot={phase:g.phase,trump:g.trump};
   if(!portrait()){if(running||!root.hidden)stop('landscape');canvas.hidden=true;last=snapshot;return;}
   if(g.phase!=='play'){
    if(markColor)paint(null);
-   if(g.phase!=='trump'){if(running||!root.hidden)stop('phase-'+g.phase);accepted=null;}
+   if(g.phase!=='trump'){if(running||pending||!root.hidden||dockRef?.classList.contains('trump714-owned'))stop('phase-'+g.phase);accepted=null;}
    else if(g.paused||opts.spectator||g.bidder!==me){if(!root.hidden)stop('not-choosing');}
   } else if(colors.includes(g.trump)) {
    const fresh=last&&last.phase==='trump'&&!last.trump;
@@ -187,10 +227,10 @@
   if(running){stop('viewport-change');if(current?.phase==='play')paint(current.trump);}
   if(!portrait()){stop('landscape');if(canvas)canvas.hidden=true;return;}
   if(current?.phase==='play')paint(current.trump);
-  else if(current?.phase==='trump'&&current.bidder===currentMe&&!opts.spectator&&!current.paused&&dockRef&&submitRef)choose(dockRef,submitRef);
+  else if(current?.phase==='trump'&&current.bidder===currentMe&&!opts.spectator&&!current.paused&&dockRef&&submitRef)choose(dockRef,submitRef,current);
   position();
  }
- const preload=Object.keys(specs).map(name=>new Promise(resolve=>{const im=new Image();im.onload=()=>{try{if(name==='stamp'){stampSource=im;buildMaterials(im);}resolve(true);}catch(error){log('asset-error',String(error));resolve(false);}};im.onerror=()=>resolve(false);im.src=assetRoot+name+'.png';}));
+ const preload=[...Object.keys(specs),'confirm-brass'].map(name=>new Promise(resolve=>{const im=new Image();im.onload=()=>{try{if(name==='stamp'){stampSource=im;buildMaterials(im);}resolve(true);}catch(error){log('asset-error',String(error));resolve(false);}};im.onerror=()=>resolve(false);im.src=assetRoot+name+'.png';}));
  Promise.all(preload).then(values=>{ready=values.every(Boolean);log('assets',ready);});
  const faintTable=new Image();faintTable.onload=()=>{document.body.classList.add('trump746-faint');log('faint-table',true);};faintTable.onerror=()=>log('faint-table',false);faintTable.src='assets/trump746/table-faint.png';
  const table=new Image();table.onload=()=>{
@@ -204,5 +244,5 @@
  matchMedia('(orientation:portrait)').addEventListener('change',resized);
  document.addEventListener('visibilitychange',()=>{if(document.hidden&&running){stop('background');if(current?.phase==='play')paint(current.trump);}});
  new MutationObserver(()=>{if(!document.body.classList.contains('in-game')&&root&&(running||!root.hidden||markColor)){stop('left-table');paint(null);last=null;accepted=null;}}).observe(document.body,{attributes:true,attributeFilter:['class']});
- window.HORTrump714={choose,sync,ownsPortrait,inspect:()=>({ready,running,pending,accepted,markColor,visible:!!root&&!root.hidden,trace:trace.slice(),pose,inkColor,maskReady:!!mask})};
+ window.HORTrump714={choose,chooseFallback,sync,ownsPortrait,inspect:()=>({panel,plaque,tentativeTrump,choiceKey,ready,running,pending,accepted,markColor,visible:!!root&&!root.hidden,trace:trace.slice(),pose,inkColor,maskReady:!!mask})};
 })();

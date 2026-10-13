@@ -12,11 +12,12 @@
 <meta content="no-store, no-cache, must-revalidate" http-equiv="Cache-Control"/>
 <meta content="no-cache" http-equiv="Pragma"/>
 <title>House of Rooks</title>
+<script src="career-phone-test.js?v=career-phone-test-v1"></script>
 <script>
     (function () {
       // Rook522: remember the build only. Service-worker activation owns updates.
       // Never redirect/reload here: competing page + SW reload paths caused loops.
-      var BUILD = '779';
+      var BUILD = '797';
       window.HOR_PAGE_BUILD = BUILD;
       try { localStorage.setItem('horBuild', BUILD); } catch (e) {}
     })();
@@ -24,18 +25,18 @@
 <link href="manifest.json" rel="manifest"/>
 <link href="assets/images/icon-192.png" rel="icon"/>
 <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon"/>
-<script src="hor-version.js?v=779"></script>
-<link href="style057.css?v=779" rel="stylesheet"/>
+<script src="hor-version.js?v=797"></script>
+<link href="style057.css?v=795" rel="stylesheet"/>
 <link href="rook510.css?v=732" rel="stylesheet"/>
 <link href="rook513.css?v=732" rel="stylesheet"/>
-<link href="kitty736.css?v=779" rel="stylesheet"/>
+<link href="kitty736.css?v=795" rel="stylesheet"/>
 <link href="house736.css?v=736" rel="stylesheet"/>
 <link href="house738.css?v=738" rel="stylesheet"/>
-<link href="laid-down-refinement.css?v=779" rel="stylesheet"/>
-<link href="unified-bidding752.css?v=779" rel="stylesheet"/>
-<link href="rail-trick752.css?v=779" rel="stylesheet"/>
+<link href="laid-down-refinement.css?v=795" rel="stylesheet"/>
+<link href="unified-bidding752.css?v=795" rel="stylesheet"/>
+<link href="holder-cues789.css?v=795" rel="stylesheet"/>
 <link href="bid-repair737.css?v=737" rel="stylesheet"/>
-<link href="trump-hand739.css?v=779" rel="stylesheet"/>
+<link href="trump-hand739.css?v=795" rel="stylesheet"/>
 <link href="rook518-trump.css?v=732" rel="stylesheet"/>
 <script src="vendor/peerjs.min.js?v=rook044"></script>
 <style>
@@ -107,17 +108,19 @@
 /* Old speed surfaces stay suppressed. */
 .hor-speed-menu-setting,#horGameSpeed,#ghTopTools693 .gh-top-tools-label,#ghTopTools693 [data-gh-speed]{display:none!important;}
 </style>
-<link rel="stylesheet" href="approved-bid-portrait.css?v=732">
+<link rel="stylesheet" href="approved-bid-portrait.css?v=795">
 <link rel="stylesheet" href="holder004.css?v=732">
-<link rel="stylesheet" href="trump714.css?v=779">
+<link rel="stylesheet" href="trump714.css?v=795">
 <link rel="stylesheet" href="shuffle732.css?v=732">
-<link rel="stylesheet" href="signature-shuffle.css?v=779">
-<link rel="stylesheet" href="raven-fight741.css?v=779">
-<link rel="stylesheet" href="characters077.css?v=779">
-<link rel="stylesheet" href="responsive-review.css?v=779">
-<script defer src="responsive-review.js?v=779"></script>
-<link rel="stylesheet" href="asset-loading772.css?v=779">
-<link rel="stylesheet" href="identity-choice.css?v=779"/>
+<link rel="stylesheet" href="signature-shuffle.css?v=795">
+<link rel="stylesheet" href="raven-fight741.css?v=795">
+<link rel="stylesheet" href="characters077.css?v=795">
+<link rel="stylesheet" href="responsive-review.css?v=795">
+<link rel="stylesheet" href="holder-identity784.css?v=795">
+<script defer src="responsive-review.js?v=795"></script>
+<link rel="stylesheet" href="asset-loading772.css?v=795">
+<link rel="stylesheet" href="identity-choice.css?v=795"/>
+<link rel="stylesheet" href="landing783.css?v=795">
 </head>
 <body class="theme-classic cardback-griffin room-theme-midnight">
 <div id="matchHeader706" aria-label="Match score and game speed"><div class="scores" id="scoreRow">
@@ -437,6 +440,7 @@
 <span class="option-hint">Sounds:</span>
 <label class="option-label"><input checked="" id="opt-sound-card" type="checkbox"/> Cards</label>
 <label class="option-label"><input checked="" id="opt-sound-turn" type="checkbox"/> Turn</label>
+<label class="option-label"><input checked id="opt-holder-vibration789" type="checkbox"/> Turn &amp; win vibration</label>
 <label class="option-label turn-tone-option">My turn tone
                 <select aria-label="Choose my turn sound" class="select-input" id="opt-turn-sound-choice"><option value="20">Natural wood tap (recorded)</option><option value="1">1. Soft wood</option><option value="2">2. Warm tap</option><option value="3">3. Soft chime</option><option value="4">4. Low knock</option><option value="5">5. Light bell</option><option value="6">6. Deep tap</option><option value="7">7. Tiny glass</option><option value="8">8. Muted wood</option><option value="9">9. Soft ping</option><option value="10">10. Felt tap</option><option value="11">11. Warm chime</option><option value="12">12. Low pulse</option><option value="13">13. Fine bell</option><option value="14">14. Gentle knock</option><option value="15">15. Quiet ping</option><option value="16">16. Card-table tap</option><option value="17">17. Soft glass</option><option value="18">18. Warm wood</option><option value="19">19. Light tone</option></select>
 </label>
@@ -1202,23 +1206,31 @@
   </script>
 <script src="rules.js?v=rook044"></script>
 <script src="bots.js?v=732"></script>
-<script src="unified-bidding752.js?v=779"></script>
-<script src="rail-trick752.js?v=779"></script>
-<script src="trump-voice.js?v=779"></script>
-<script src="game060.js?v=779"></script>
-<script src="asset-loading772.js?v=779"></script>
-<script src="character-library774.js?v=779"></script>
-<script src="characters077.js?v=779"></script>
+<script src="unified-bidding752.js?v=795"></script>
+<script src="holder-cues789.js?v=795"></script>
+<script src="trump-voices790.js?v=795"></script>
+<script src="trump-voice.js?v=795"></script>
+<script src="human-avatars.js?v=795"></script>
+<script src="founder-dev.js?v=795"></script>
+<script src="holder-identity784.js?v=795"></script>
+<script src="bid-hold795.js?v=795"></script>
+<script src="game060.js?v=797"></script>
+<script src="asset-loading772.js?v=795"></script>
+<script src="character-library774.js?v=795"></script>
+<script src="characters077.js?v=795"></script>
 <script src="x1/core.js"></script>
 <script src="x1/integration.js"></script>
 <script src="sol-diagnostics.js?v=732"></script>
 <script src="rook510-avatars.js?v=732"></script>
 <script src="rook512-room.js?v=732"></script>
 <script src="rook513.js?v=732"></script>
-<script src="polish.js?v=779"></script>
-<script src="identity-choice.js?v=779"></script>
+<script src="polish.js?v=797"></script>
+<script src="founder-profile785.js?v=795"></script>
+<script src="identity-choice.js?v=795"></script>
 <!-- Dormant career/achievement framework. Master switch is OFF in progression.js. -->
-<script src="progression.js?v=779"></script>
+<script src="career-core.js?v=career-phone-test-v1"></script>
+<script src="progression.js?v=career-phone-test-v1"></script>
+<script src="moon-howl.js?v=career-phone-test-v1"></script>
 <div id="horBootError"></div>
 <script>
     window.addEventListener('error', function (ev) {
@@ -1232,7 +1244,7 @@
   </script>
 <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw060.js?v=779', { updateViaCache: 'none' })
+      navigator.serviceWorker.register('sw060.js?v=797', { updateViaCache: 'none' })
         .then(function (reg) { try { reg.update(); } catch (e) {} })
         .catch(() => {});
       // Rook522: do not reload on controllerchange. The new worker takes control
@@ -1245,23 +1257,24 @@
     // next normal navigation. Force Refresh remains a manual escape hatch.
   </script>
 <script src="bid-repair737.js?v=737"></script>
-<script src="trump-hand739.js?v=779"></script>
-<script src="raven-timeline741.js?v=779"></script>
-<script src="raven-audio761.js?v=779"></script>
-<script src="raven-fight741.js?v=779"></script>
+<script src="trump-hand739.js?v=795"></script>
+<script src="raven-timeline741.js?v=795"></script>
+<script src="raven-audio761.js?v=795"></script>
+<script src="raven-fight741.js?v=795"></script>
 <script src="approved-bid-portrait.js?v=732"></script>
 <script>
   // New installs start with a quiet hint of ambience; saved user settings win.
   try { if (localStorage.getItem('rookCabinVolume041') === null) localStorage.setItem('rookCabinVolume041', '6'); } catch (_) {}
 </script>
-<script src="cabin-ambience041.js?v=779"></script>
+<script src="cabin-ambience041.js?v=795"></script>
 <script src="fire-glow-controller060.js?v=064"></script>
 <script src="house736.js?v=736"></script>
 <script src="holder004.js?v=732"></script>
 
-<script src="trump714.js?v=779"></script>
+<script src="trump714.js?v=795"></script>
 <script src="shuffle732.js?v=732"></script>
-<script src="shuffle-asset.js?v=779"></script>
-<script src="signature-shuffle.js?v=779"></script>
+<script src="shuffle-asset.js?v=795"></script>
+<script src="signature-shuffle.js?v=795"></script>
+<script src="landing783.js?v=797"></script>
 </body>
 </html>

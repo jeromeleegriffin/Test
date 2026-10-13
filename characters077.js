@@ -3,6 +3,8 @@
 (()=>{'use strict';
 const NS='http://www.w3.org/2000/svg',W=875,H=1797;
 const characters=Object.freeze({
+...window.HORHumanAvatars,
+jerome_founder:{name:"Jerome",design:"Owner-approved founder",voice:"jerome",availability:"public-human-and-bot",poses:{left:"jerome_founder-left.webp",top:"jerome_founder-top.webp",right:"jerome_founder-right.webp"}},
 "nettle":{"name": "Nettle", "design": "Elder-nettle", "voice": "female", "poses": {"left": "nettle-left.webp", "top": "nettle-top.webp", "right": "nettle-right.webp"}},
 "ash":{"name": "Ash", "design": "Elder-ash", "voice": "female", "poses": {"left": "ash-left.webp", "top": "ash-top.webp", "right": "ash-right.webp"}},
 "cobalt":{"name": "Cobalt", "design": "Elder-cobalt", "voice": "male", "poses": {"left": "cobalt-left.webp", "top": "cobalt-top.webp", "right": "cobalt-right.webp"}},
@@ -72,7 +74,7 @@ let root,svg,labels,frame=0,ready=true,enabled=new URLSearchParams(location.sear
 const portrait=()=>matchMedia('(orientation:portrait)').matches;
 function geom(){const r=document.getElementById('hor-room-bg')?.getBoundingClientRect()||{left:0,top:0,width:innerWidth,height:innerHeight};const s=Math.max(r.width/W,r.height/H);return{s,x:r.left+(r.width-W*s)/2,y:r.top};}
 function occupant(seat){if(!enabled||!ready||!portrait()||!document.body.classList.contains('in-game')||typeof game==='undefined'||!game)return null;const base=myIndex>=0?myIndex:0,index=(base+seat.offset)%4,p=game.players?.[index];if(!p)return null;const avatar=(typeof playerAvatars!=='undefined'&&playerAvatars[p.id])||p.avatar||((typeof AVATARS!=='undefined')?AVATARS[index%AVATARS.length]:'');const key=String(avatar).toLowerCase();const c=characters[key];if(!c)return null;const needed=[c.poses[seat.pose],c.foreground?.[seat.pose]].filter(Boolean);needed.forEach(loadPose);return needed.every(path=>poseReady.has(path))?{key,index,id:p.id,name:p.name||c.name,character:c}:null;}
-function make(){root=document.createElement('div');root.id='characters077';root.setAttribute('aria-hidden','true');root.innerHTML=`<svg xmlns="${NS}" width="875" height="1797" viewBox="0 0 875 1797"><defs><clipPath id="cs077-outside"><path d="${outside}"/></clipPath><clipPath id="cs077-far-outside"><path d="${farOutside}"/></clipPath></defs><g>${seats.map(s=>`<image clip-path="url(#${s.pose==='top'?'cs077-far-outside':'cs077-outside'})" data-seat="${s.pose}" x="${s.x}" y="${s.y}" width="${s.w}" height="${s.w*1.5}"/>`).join('')}</g><g>${seats.map(s=>`<image data-foreground="${s.pose}" x="${s.x}" y="${s.y}" width="${s.w}" height="${s.w*1.5}"/>`).join('')}</g></svg>`;(document.getElementById('hor-room-bg')||document.body).appendChild(root);svg=root.querySelector('svg');labels=document.createElement('div');labels.id='characterLabels077';for(const s of seats){const e=document.createElement('div');e.className='cs077-label name';e.dataset.seat=s.slot;labels.appendChild(e);}document.body.appendChild(labels);}
+function make(){root=document.createElement('div');root.id='characters077';root.setAttribute('aria-hidden','true');root.innerHTML=`<svg xmlns="${NS}" width="875" height="1797" viewBox="0 0 875 1797"><defs><clipPath id="cs077-outside"><path d="${outside}"/></clipPath><clipPath id="cs077-far-outside"><path d="${farOutside}"/></clipPath><clipPath id="cs077-cobalt-crop"><rect x="294" y="0" width="289" height="1797"/></clipPath><clipPath id="cs077-cobalt-top"><path d="${farOutside}" clip-path="url(#cs077-cobalt-crop)"/></clipPath></defs><g>${seats.map(s=>`<image clip-path="url(#${s.pose==='top'?'cs077-far-outside':'cs077-outside'})" data-seat="${s.pose}" x="${s.x}" y="${s.y}" width="${s.w}" height="${s.w*1.5}"/>`).join('')}</g><g>${seats.map(s=>`<image data-foreground="${s.pose}" x="${s.x}" y="${s.y}" width="${s.w}" height="${s.w*1.5}"/>`).join('')}</g></svg>`;(document.getElementById('hor-room-bg')||document.body).appendChild(root);svg=root.querySelector('svg');labels=document.createElement('div');labels.id='characterLabels077';for(const s of seats){const e=document.createElement('div');e.className='cs077-label name';e.dataset.seat=s.slot;labels.appendChild(e);}document.body.appendChild(labels);}
 function releasePosition(el){if(el&&el.__cs077PriorStyle!==undefined){el.style.cssText=el.__cs077PriorStyle;delete el.__cs077PriorStyle;}}
 function placePill(el,slot,cx,bottom,fit=false){
  if(el.__cs077PriorStyle===undefined)el.__cs077PriorStyle=el.style.cssText;
@@ -87,9 +89,9 @@ function placePill(el,slot,cx,bottom,fit=false){
 function positionLead(el){
  const slot=el?.parentElement,s=seats.find(s=>s.slot===slot?.id);
  if(!s||!occupant(s)){releasePosition(el);return false;}
- if(el.classList.contains('hidden'))return false;
- const g=geom(),label=labels?.querySelector(`[data-seat="${s.slot}"]`),bottom=(label?.getBoundingClientRect().top??g.y+s.label[1]*g.s)-5;
- placePill(el,slot,g.x+s.label[0]*g.s,bottom,true);return true;
+ const copy=labels?.querySelector(`[data-seat="${s.slot}"] .cs077-lead793`);
+ if(copy)copy.style.visibility=el.classList.contains('hidden')?'hidden':'visible';
+ return true;
 }
 function positionStatus(el,index){
  if(!el||el.dataset.humanTurn==='1'||!portrait()){releasePosition(el);return false;}
@@ -103,15 +105,31 @@ function positionStatus(el,index){
  const sid=Number.isInteger(actor)&&typeof seatSlotIdForIndex==='function'?seatSlotIdForIndex(actor):null,s=seats.find(s=>s.slot===sid);
  if(!s||!occupant(s)){releasePosition(el);return false;}
  const g=geom(),slot=document.getElementById(s.slot);
- if(game.phase==='bidding'){placePill(el,slot,g.x+s.status[0]*g.s,g.y+s.status[1]*g.s);return true;}
- // Gameplay statuses share a compact column above the visible character name.
- const lead=slot.querySelector(':scope>.seat-lead-tag:not(.hidden)');
- let bottom=(labels?.querySelector(`[data-seat="${s.slot}"]`)?.getBoundingClientRect().top??g.y+s.label[1]*g.s)-5;
- if(lead){positionLead(lead);bottom=lead.getBoundingClientRect().top-4;}
- placePill(el,slot,g.x+s.label[0]*g.s,bottom,true);return true;
+ const row=labels?.querySelector(`[data-seat="${s.slot}"]`)?.getBoundingClientRect();
+ // Fixed status bottom for this seat. Never move with a phase, LEAD or message length.
+ placePill(el,slot,row?.width?row.left+row.width/2:g.x+s.status[0]*g.s,g.y+s.status[1]*g.s,true);
+ return true;
 }
+
 function imageState(el,path){if(path){const href='assets/characters077/'+path;if(el.getAttribute('href')!==href)el.setAttribute('href',href);el.style.display='';}else{el.style.display='none';el.removeAttribute('href');}}
-function sync(){frame=0;if(!root)make();const bg=document.getElementById('hor-room-bg');if(bg&&root.parentElement!==bg)bg.appendChild(root);const g=geom();svg.style.cssText=`left:${g.x}px;top:${g.y}px;transform:scale(${g.s});`;if(document.body.classList.contains('cs077-ready')!==(enabled&&ready))document.body.classList.toggle('cs077-ready',enabled&&ready);for(const s of seats){const o=occupant(s),slot=document.getElementById(s.slot);slot?.classList.toggle('cs077-seat',!!o);imageState(root.querySelector(`[data-seat="${s.pose}"]`),o?.character.poses[s.pose]);imageState(root.querySelector(`[data-foreground="${s.pose}"]`),o?.character.foreground?.[s.pose]);const label=labels.querySelector(`[data-seat="${s.slot}"]`);label.style.display=o?'':'none';if(o){const original=slot.querySelector('.seat-identity-copy');if(original&&label.innerHTML!==original.innerHTML){label.innerHTML=original.innerHTML;try{horBindCareerBadges(label);}catch(_){}}label.dataset.botname=slot.querySelector('.name')?.dataset.botname||'';label.style.left=(g.x+s.label[0]*g.s)+'px';label.style.top=(g.y+s.label[1]*g.s)+'px';for(const el of slot.querySelectorAll(':scope>.auction-status,:scope>#botThinking'))positionStatus(el);}}try{positionSeatLeadTags();const pill=document.getElementById('botThinking');if(pill&&!pill.classList.contains('hidden'))positionBotThinkingAtSeat();}catch(_){} }
+function sync(){frame=0;if(!root)make();const bg=document.getElementById('hor-room-bg');if(bg&&root.parentElement!==bg)bg.appendChild(root);const g=geom();svg.style.cssText=`left:${g.x}px;top:${g.y}px;transform:scale(${g.s});`;if(document.body.classList.contains('cs077-ready')!==(enabled&&ready))document.body.classList.toggle('cs077-ready',enabled&&ready);for(const s of seats){const o=occupant(s),slot=document.getElementById(s.slot);slot?.classList.toggle('cs077-seat',!!o);const body=root.querySelector(`[data-seat="${s.pose}"]`);
+// Cobalt's source includes his lap; use a torso-sized framing behind the existing rail.
+// Reset on every occupant change so no other character inherits this adjustment.
+const bodyClip=o?.key==='cobalt'&&s.pose==='top'?'cs077-cobalt-top':(s.pose==='top'?'cs077-far-outside':'cs077-outside');
+if(body.getAttribute('clip-path')!==`url(#${bodyClip})`)body.setAttribute('clip-path',`url(#${bodyClip})`);
+// 793: enlarge only Jerome 8%, anchored at his original rail contact. Same hard clip.
+const placement=o?.key==='cobalt'&&s.pose==='top'?{x:272.5,y:295,w:330}:
+ o?.key==='jerome_founder'?{x:s.x-s.w*.04,y:s.label[1]+(s.y-s.label[1])*1.08,w:s.w*1.08}:s;
+for(const [attr,value] of Object.entries({x:placement.x,y:placement.y,width:placement.w,height:placement.w*1.5}))if(body.getAttribute(attr)!==String(value))body.setAttribute(attr,value);
+imageState(body,o?.character.poses[s.pose]);imageState(root.querySelector(`[data-foreground="${s.pose}"]`),o?.character.foreground?.[s.pose]);const label=labels.querySelector(`[data-seat="${s.slot}"]`);label.style.display=o?'':'none';if(o){const original=slot.querySelector('.seat-identity-copy');
+if(!label.querySelector('.cs077-identity793'))label.innerHTML='<span class="cs077-identity793"></span><span class="cs077-lead793" style="visibility:hidden">LEAD</span>';
+const identity=label.querySelector('.cs077-identity793');
+if(original&&identity.innerHTML!==original.innerHTML){identity.innerHTML=original.innerHTML;try{horBindCareerBadges(label);}catch(_){}}
+label.dataset.botname=slot.querySelector('.name')?.dataset.botname||'';
+const bounds=document.getElementById('app')?.getBoundingClientRect(),left=bounds?.width?Math.max(0,bounds.left):0,right=bounds?.width?Math.min(innerWidth,bounds.right):innerWidth;
+const width=label.getBoundingClientRect().width;
+label.style.left=Math.max(left+width/2+6,Math.min(right-width/2-6,g.x+s.status[0]*g.s))+'px';
+label.style.top=(g.y+s.status[1]*g.s-22-label.getBoundingClientRect().height)+'px';positionLead(slot.querySelector(':scope > .seat-lead-tag'));for(const el of slot.querySelectorAll(':scope>.auction-status,:scope>#botThinking'))positionStatus(el);}}try{positionSeatLeadTags();const pill=document.getElementById('botThinking');if(pill&&!pill.classList.contains('hidden'))positionBotThinkingAtSeat();}catch(_){} }
 const schedule=()=>{if(!frame)frame=requestAnimationFrame(sync);};
 // Narrow default offline cast pool only: original random selection, empty-seat assignment,
 // explicit persona picks and saved favorite-partner priority remain in addBot().

@@ -12,7 +12,7 @@
     const active=index===g.currentPlayer&&!g.paused&&!g.resolvingTrick;
     if(active){
       if(index===local&&!spectator&&g.players?.[index]?.isBot)return {label:previous,previous:''};
-      return {label:index===local&&!spectator?'YOUR BID':'THINKING...',previous};
+      return {label:index===local&&!spectator?'':'THINKING...',previous};
     }
     return {label:previous,previous:''};
   }
@@ -22,14 +22,21 @@
     slot.dataset.auctionPlayer=String(index);
     let old=slot.querySelector(':scope > .bid-badge');
     if(old)old.remove();
-    let retained=slot.querySelector(':scope > .auction-status');
+    const plaque=window.HORHolderIdentity784?.bidTarget(slot);
+    let retained=plaque?.querySelector(':scope > .auction-status')||slot.querySelector(':scope > .auction-status');
     const active=g?.phase==='bidding'&&index===g.currentPlayer;
     const shared=document.getElementById('botThinking');
     const s=state(g,index,local,spectator);
     if(!portrait()||g?.phase!=='bidding') {retained?.remove();return;}
+    if(plaque){
+      const bidText=s.previous||(/^(BID |PASSED$)/.test(s.label)?s.label:'');
+      if(!retained&&bidText){retained=document.createElement('div');retained.className='bot-thinking auction-status';}
+      if(retained){if(!bidText)retained.remove();else{plaque.appendChild(retained);retained.textContent=bidText;retained.dataset.auctionPlayer=String(index);retained.classList.remove('hidden');retained.setAttribute('role','status');retained.setAttribute('aria-live','polite');}}
+      if(!active)return;
+    }
     // Keep the original element for the current actor; settled bids/pass use
     // instances of that same small component, never a parallel panel layer.
-    if(active)retained?.remove();
+    if(active&&!plaque)retained?.remove();
     let el=active?shared:retained;
     if(!el&&s.label){el=document.createElement('div');el.className='bot-thinking auction-status hidden';slot.appendChild(el);}
     if(!el)return;

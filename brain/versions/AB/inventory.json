@@ -1,0 +1,33 @@
+{
+  "brainVersion": "AB",
+  "parentVersion": "AA",
+  "updated": "2026-10-13",
+  "documentationOnly": true,
+  "files": [
+    {
+      "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+      "bytes": 4529,
+      "sha256": "3522cbf021e1cd5b338218a9c56b20ebfeef6fc23a7bb47faad53298b6e89eb7"
+    },
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 4377,
+      "sha256": "d4967b90dd47f4c6885fc509a744823bbbcbbf37db4cf3d89569dfe58efb8947"
+    },
+    {
+      "path": "files/01_MASTER_BANK/CHAT_CONTINUITY_RULE.md",
+      "bytes": 1868,
+      "sha256": "309191b2eee242466e7eca47f955b417805a0e0edbfbed83fe1a98f989f9687c"
+    },
+    {
+      "path": "files/01_MASTER_BANK/COMPLETE_BANK_READING_RULE.md",
+      "bytes": 1191,
+      "sha256": "4c62dbc8c74936c63314caefde5879f144b640d9257f7a4d4edfb25f267d51c3"
+    },
+    {
+      "path": "files/01_MASTER_BANK/MASTER_BRAIN_AA.md",
+      "bytes": 28332,
+      "sha256": "9cd309b7ec46da61a818b78f79dd2619f9a47208fccc6f07158051f6d227a126"
+    }
+  ]
+}

@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '779';
+const APP_VERSION = '797';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -29,7 +29,10 @@ function horThisIndex() {
  * mismatch is actually the stale one instead of assuming it's always the
  * joiner. Non-numeric/garbled versions fall back to 0 (treated as oldest). */
 function horVersionNum(v) {
-  const n = parseInt(String(v == null ? '' : v).replace(/[^0-9]/g, ''), 10);
+  // Candidate suffixes may contain digits (for example "796").
+  // Compare the build number only; a suffix must not turn build 795 into 7952.
+  const match = String(v == null ? '' : v).trim().match(/^(?:rook|v|r)?(\d+)/i);
+  const n = match ? parseInt(match[1], 10) : 0;
   return Number.isFinite(n) ? n : 0;
 }
 
@@ -234,10 +237,10 @@ function ps(idx) {
   if (!playerStats[idx]) playerStats[idx] = freshPlayerStat();
   return playerStats[idx];
 }
-// Lifetime ("all-time") stats, kept in localStorage keyed by player name so
-// bots (persistent named personas) build a career record right alongside you.
+// Legacy statistics remain preserved; the display reads canonical careers after migration.
 function lifetimeStatsKey() { return 'rookLifetimeStats'; }
 function loadLifetimeStats() {
+  try {const s=window.HORProgression?.core?.read();if(s){const rows={};for(const r of Object.values(s.records)){const key=Object.hasOwn(rows,r.displayName)?r.displayName+(r.isBot?' (bot)':' (you)'):r.displayName;rows[key]={...r.stats,isBot:r.isBot,avatar:r.avatar};}return rows;}}catch(e){console.error('[Career display]',e.message);}
   try { return JSON.parse(localStorage.getItem(lifetimeStatsKey())) || {}; } catch (e) { return {}; }
 }
 function saveLifetimeStats(obj) {
@@ -397,7 +400,20 @@ function horRefreshBotCareerProfiles(){
   }catch(e){}
 }
 
+function horRecordCareerHand(event){
+  if(window.HOR_SOL_BOT_ACTIVE||isSpectator||!window.HORProgression?.core)return;
+  try{
+    let result;
+    // Replay missed completed hands after reconnect, mid-match activation, or a failed save.
+    const history=(handHistory||[]).map(h=>h.careerEvent).filter(e=>e&&e.matchId===event.matchId&&e.hand<=event.hand);
+    if(!history.some(e=>e.hand===event.hand))history.push(event);
+    for(const e of history.sort((a,b)=>a.hand-b.hand))result=HORProgression.core.recordHand({...e,localPeerId:myPeerId,isHost:!!isHost});
+    window.__horCareerSaveError=null;horBroadcastCareerProfile();return result;
+  }catch(e){window.__horCareerSaveError=e.message;console.error('[Career save]',e.message);const el=document.getElementById('messageArea');if(el)el.textContent='Career save needs attention: '+e.message;return {ok:false,error:e.message};}
+}
+
 function mergeLifetimeStats(winnerLabel) {
+  if (window.HORProgression?.core && (horCareerModeOn()||HORProgression.core.read())) return; // already committed once per hand
   if (window.HOR_SOL_BOT_ACTIVE) return; // diagnostic bot matches never touch persistent careers/stats
   try {
     const store = loadLifetimeStats();
@@ -437,7 +453,7 @@ function mergeLifetimeStats(winnerLabel) {
 }
 
 /* Rook491: local Career/Stats only. Remove obsolete remote-stat storage keys from older builds. */
-try { ['horStatsEndpoint','horPlayerIdentityV1','horProgressOutboxV1','horInstallIdV1'].forEach(k=>localStorage.removeItem(k)); } catch (e) {}
+// Historical identity/storage keys are retained as evidence; local careers do not use remote endpoints.
 
 
 const HUMAN_STYLE_MIN_HANDS = 12;
@@ -564,10 +580,11 @@ const AVATARS = [
   'rookery','sable','finch','dagger','willow','hearth','grit','copper','moth','brandy',
   'flint','ivy','shade','barrel','spark','nettle','cobalt','ash','harrier',
   'crow','blaze','nix','titan','pike','drift','dice','anchor','wager','hollow',
-  'ember','vex','frost','fang','halo','jerome'
+  'ember','vex','frost','fang','halo','jerome','jerome_founder',...Object.keys(window.HORHumanAvatars||{})
 ];
 const AVATAR_LABELS = {
-  jerome:'Jerome', rookling:'Rookling', fox:'Fox', badger:'Badger', owl:'Owl', cardshark:'Card Shark',
+  ...Object.fromEntries(Object.entries(window.HORHumanAvatars||{}).map(([id,c])=>[id,c.name])),
+  jerome_founder:'Jerome', jerome:'Jerome', rookling:'Rookling', fox:'Fox', badger:'Badger', owl:'Owl', cardshark:'Card Shark',
   greenie:'Greenie', bluejay:'Bluejay', grumpy:'Grumpy', goldfinch:'Goldfinch',
   jackal:'Jackal', wolf:'Wolf', raven:'Raven', lynx:'Lynx', cobra:'Cobra', stag:'Stag',
   quill:'Quill', bramble:'Bramble', moss:'Moss', emberlyn:'Emberlyn', cinder:'Cinder',
@@ -591,10 +608,12 @@ const AVATAR_PNG_IDS = {
   ash:1, harrier:1
 };
 function avatarKey(id) {
-  return String(id == null ? '' : id).toLowerCase().replace(/[^a-z0-9]/g, '');
+  return String(id == null ? '' : id).toLowerCase().replace(/[^a-z0-9_]/g, '');
 }
 function avatarSrc(id) {
   const key = avatarKey(id);
+  if (window.HORHumanAvatars?.[key]) return 'assets/characters077/human/'+key+'-portrait.webp';
+  if (key === 'jerome_founder') return 'assets/characters077/jerome_founder-portrait.webp';
   if (key === 'jerome') return 'assets/images/avatar-jerome.png';
   if (key && AVATAR_PNG_IDS[key]) return 'assets/images/avatar-' + key + '.webp';
   if (AVATARS.includes(key)) return 'assets/images/avatar-' + key + '.svg';
@@ -603,27 +622,28 @@ function avatarSrc(id) {
 function avatarHTML(id) { return `<img class="seat-avatar-img" src="${avatarSrc(id)}" alt="${AVATAR_LABELS[id] || 'Avatar'}">`; }
 let playerAvatars = {}; // peerId -> avatar id
 const PLAYER_AVATAR_KEY = 'griffinHousePlayerAvatar';
+function humanAvatarAllowed783(id) { return !!window.HORHumanAvatars?.[id] || id==='jerome_founder'; }
 function loadPreferredAvatar() {
   try {
     const id = avatarKey(localStorage.getItem(PLAYER_AVATAR_KEY) || '');
-    return AVATARS.includes(id) ? id : '';
+    return humanAvatarAllowed783(id) ? id : '';
   } catch (e) { return ''; }
 }
 function savePreferredAvatar(id) {
   const key = avatarKey(id);
-  if (!AVATARS.includes(key)) return;
+  if (!humanAvatarAllowed783(key)) return;
   try { localStorage.setItem(PLAYER_AVATAR_KEY, key); } catch (e) {}
 }
 // Rook549: first-time humans get a random persistent avatar instead of AVATARS[0].
 // Existing/manual selections are never overwritten. Bots keep their existing assignment path.
 function validHumanVoice(value) {return ['avatar','male','female','silent'].includes(value)?value:'avatar';}
-function loadPreferredVoice() {try{return validHumanVoice(localStorage.getItem('griffinHousePlayerVoice'));}catch(_){return 'avatar';}}
-function savePreferredVoice(value) {try{localStorage.setItem('griffinHousePlayerVoice',validHumanVoice(value));}catch(_){}}
+function loadPreferredVoice() {try{if(window.HORFounderDev?.enabled&&localStorage.getItem(PLAYER_AVATAR_KEY)==='jerome_founder')return localStorage.getItem('horFounderVoiceV1')==='silent'?'silent':'male';const v=localStorage.getItem('griffinHousePlayerVoice');return ['male','female','silent'].includes(v)?v:'silent';}catch(_){return 'silent';}}
+function savePreferredVoice(value) {try{if(window.HORFounderDev?.enabled&&localStorage.getItem(PLAYER_AVATAR_KEY)==='jerome_founder'){localStorage.setItem('horFounderVoiceV1',value==='silent'?'silent':'male');return;}localStorage.setItem('griffinHousePlayerVoice',validHumanVoice(value));}catch(_){}}
 function ensurePreferredAvatar() {
   const existing = loadPreferredAvatar();
   if (existing) return existing;
-  let pool = AVATARS;
-  try { const humans=BOT_PERSONAS.map(p=>p.avatar).filter(id=>AVATARS.includes(id)); if(humans.length)pool=humans; } catch(_) {}
+  let pool = AVATARS.filter(id=>id!=='jerome_founder');
+  try { const humans=Object.keys(window.HORHumanAvatars||{}).filter(id=>AVATARS.includes(id)); if(humans.length)pool=humans; } catch(_) {}
   if (!pool.length) return '';
   let idx = 0;
   try {
@@ -634,6 +654,8 @@ function ensurePreferredAvatar() {
     idx = Math.floor(Math.random() * pool.length);
   }
   const chosen = pool[idx] || pool[0];
+  // Preserve the prior legacy/bot preference for rollback; only human appearances are selectable now.
+  try { const old=localStorage.getItem(PLAYER_AVATAR_KEY);if(old&&!humanAvatarAllowed783(old)&&!localStorage.getItem('horLegacyAvatarBefore783'))localStorage.setItem('horLegacyAvatarBefore783',old); } catch(_) {}
   savePreferredAvatar(chosen);
   return chosen;
 }
@@ -642,7 +664,8 @@ function applyPreferredAvatarToMe() {
   if (!id) return '';
   if (myPeerId) playerAvatars[myPeerId] = id;
   const me = (players || []).find(p => p && p.id === myPeerId);
-  if (me) me.avatar = id;
+  if (me) { me.avatar = id; if(id==='jerome_founder')me.name='Jerome'; }
+  if(id==='jerome_founder') { myName='Jerome'; window.HORFounderProfile785?.syncName(); }
   return id;
 }
 let reduceMotion = localStorage.getItem('rookReduceMotion') === '1';
@@ -2390,31 +2413,36 @@ function showRookRed2Duel(done) {
  * winnerName: display name
  * amount: point value of the trick (used for high-points)
  */
-function showCaptureCelebration(kind, winnerName, amount) {
+function captureSubject793(name, winnerId) {
+  const localId=typeof myIndex==='number'&&myIndex>=0&&!isSpectator?game?.players?.[myIndex]?.id:null;
+  const you=!!(winnerId&&localId&&winnerId===localId);
+  return {name:you?'You':(name||'Player'),take:you?' take':' takes',steal:you?' steal':' steals',win:you?' win':' wins'};
+}
+function showCaptureCelebration(kind, winnerName, amount, winnerId) {
   const ov = $('captureOverlay');
   if (!ov) return;
   const title = $('captureTitle');
   const sub = $('captureSub');
   const emoji = $('captureEmoji');
-  const name = winnerName || 'Someone';
+  const subject=captureSubject793(winnerName,winnerId),name=subject.name;
   ov.classList.remove('hidden', 'capture-rook', 'capture-one', 'capture-big');
   if (kind === 'rook-red2') {
     ov.classList.add('capture-rook');
     if (emoji) emoji.innerHTML = '<img class="rook-cele-bird" src="assets/images/cardback-raven.jpg" alt="Black Rook">';
     if (title) title.textContent = 'THE BIRD TAKES RED 2!';
-    if (sub) sub.textContent = name + ' steals the 2nd-highest trump';
+    if (sub) sub.textContent = name + subject.steal + ' the 2nd-highest trump';
   } else if (kind === 'high-points') {
     // Rook589: presentation-only branch proven on-device in Rook588.
     // Keep the existing capture queue/timing engine; isolate only Big Trick visuals.
     ov.classList.add('hidden');
     ov.setAttribute('aria-hidden', 'true');
-    showBigTrickCelebration(name, Number(amount) || 0);
+    showBigTrickCelebration(winnerName, Number(amount) || 0, winnerId);
     return;
   } else {
     ov.classList.add('capture-one');
     if (emoji) emoji.textContent = '★';
     if (title) title.textContent = 'TRUMP 1 CAPTURED!';
-    if (sub) sub.textContent = name + ' takes the high 1';
+    if (sub) sub.textContent = name + subject.take + ' the high 1';
   }
   ov.setAttribute('aria-hidden', 'false');
   try {
@@ -2434,7 +2462,8 @@ function showCaptureCelebration(kind, winnerName, amount) {
 }
 
 
-function showBigTrickCelebration(name, amount) {
+function showBigTrickCelebration(name, amount, winnerId) {
+  const subject=captureSubject793(name,winnerId);
   let ov = document.getElementById('bigTrickOverlay');
   if (!ov) {
     ov = document.createElement('div');
@@ -2447,7 +2476,7 @@ function showBigTrickCelebration(name, amount) {
   const pts = ov.querySelector('.big-trick-points');
   const sub = ov.querySelector('.big-trick-sub');
   if (pts) pts.textContent = String(amount) + ' POINTS';
-  if (sub) sub.textContent = name + ' takes the trick';
+  if (sub) sub.textContent = subject.name + subject.take + ' the trick';
   ov.classList.remove('hidden');
   ov.setAttribute('aria-hidden','false');
   void ov.offsetWidth;
@@ -2466,10 +2495,10 @@ function showBigTrickCelebration(name, amount) {
 
 function captureEventPresentation(entry) {
   const kind = entry && entry.kind;
-  const name = (entry && entry.winnerName) || 'Player';
-  if (kind === 'rook-red2') return { icon:'♜', title:'THE BIRD TAKES RED 2!', sub:name + ' steals the 2nd-highest trump' };
-  if (kind === 'high-points') return { icon:'💰', title:'BIG TRICK!', sub:name + ' takes ' + (Number(entry.amount)||0) + ' points!' };
-  return { icon:'★', title:'TRUMP 1 CAPTURED!', sub:name + ' takes the high 1' };
+  const subject=captureSubject793(entry?.winnerName,entry?.winnerId),name=subject.name;
+  if (kind === 'rook-red2') return { icon:'♜', title:'THE BIRD TAKES RED 2!', sub:name + subject.steal + ' the 2nd-highest trump' };
+  if (kind === 'high-points') return { icon:'💰', title:'BIG TRICK!', sub:name + subject.take + ' ' + (Number(entry.amount)||0) + ' points!' };
+  return { icon:'★', title:'TRUMP 1 CAPTURED!', sub:name + subject.take + ' the high 1' };
 }
 
 function showCombinedCaptureCelebration(entries) {
@@ -2507,7 +2536,7 @@ function queueCaptureCelebrations(items, winnerName) {
   const normalized = items.map(item => {
     const entry = (typeof item === 'string') ? { kind:item } : (item || {});
     if (!entry.kind) return null;
-    return { kind:entry.kind, winnerName:entry.winnerName || winnerName || 'Player', amount:Number(entry.amount)||0 };
+    return { kind:entry.kind, winnerName:entry.winnerName || winnerName || 'Player', winnerId:entry.winnerId || null, amount:Number(entry.amount)||0 };
   }).filter(Boolean);
   // One trick = one interruption. If the same resolved trick earns multiple
   // specials, celebrate them together instead of serial full-screen popups.
@@ -2526,8 +2555,8 @@ function playNextCaptureCelebration() {
   if (captureCelebrationRunning || !captureCelebrationQueue.length) return;
   const next = captureCelebrationQueue.shift();
   captureCelebrationRunning = true;
-  if (next.kind === 'rook-red2') showRookRed2Duel(() => showCaptureCelebration(next.kind, next.winnerName, next.amount));
-  else showCaptureCelebration(next.kind, next.winnerName, next.amount);
+  if (next.kind === 'rook-red2') showRookRed2Duel(() => showCaptureCelebration(next.kind, next.winnerName, next.amount, next.winnerId));
+  else showCaptureCelebration(next.kind, next.winnerName, next.amount, next.winnerId);
 }
 
 /** Inspect a finished trick for all special captures, in card order. */
@@ -2820,21 +2849,7 @@ function applyFirstHandChrome() {
     document.body.classList.toggle('hor-first-hand', isFirstHandOfMatch());
   } catch (e) {}
 }
-function pulseTurnFlash() {
-  if (isFirstHandOfMatch()) {
-    try {
-      const theater = $('landscapeTheater');
-      if (theater) theater.classList.remove('lt-your-turn');
-    } catch (e) {}
-    return;
-  }
-  try {
-    const me = $('slot-me');
-    if (me) me.classList.add('is-turn');
-    const theater = $('landscapeTheater');
-    if (theater) theater.classList.remove('lt-your-turn');
-  } catch (e) {}
-}
+function pulseTurnFlash() { try { window.HORHolderCues789?.notifyTurn(); } catch (_) {} }
 
 function turnOpportunityKey() {
   if (!game || isSpectator) return '';
@@ -2907,13 +2922,7 @@ function notifyYourTurn() {
       if (!suppressForOpeningNestReveal) playTurnSound();
     } catch (e) {}
 
-    // Sound, vibration, and visual pulse intentionally fire together here.
-    try {
-      if (typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') {
-        navigator.vibrate(0);
-        navigator.vibrate([80, 50, 80, 50, 120]);
-      }
-    } catch (e) {}
+    // Preserve the existing sound delay; the holder cue owns synchronized visual/haptic timing.
     try { pulseTurnFlash(); } catch (e) {}
     turnFlashUntil = 0;
   }, notifyDelay);
@@ -4320,6 +4329,7 @@ function handleMessage(data, conn) {
               bid: game.bid,
               bidder: game.bidder,
               trump: game.trump,
+              trumpVoiceEvent790: game.trumpVoiceEvent790 || null, trumpVoiceRestore790: true,
               currentPlayer: game.currentPlayer,
               trick: game.trick,
               ledColor: game.ledColor,
@@ -4372,8 +4382,8 @@ function handleMessage(data, conn) {
         if (players.find(p => p.id === data.id)) {
           return;
         }
-        players.push({ id: data.id, name: data.name, team: 0, isHost: false, isBot: false, seat: -1, bank: Math.max(0, Math.floor(Number(data.bank) || 0)), avatar: AVATARS.includes(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0], voice: validHumanVoice(data.voice), careerPublic: null });
-        if (data.id) playerAvatars[data.id] = AVATARS.includes(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0];
+        players.push({ id: data.id, name: data.name, team: 0, isHost: false, isBot: false, seat: -1, bank: Math.max(0, Math.floor(Number(data.bank) || 0)), avatar: humanAvatarAllowed783(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0], voice: validHumanVoice(data.voice), careerPublic: null });
+        if (data.id) playerAvatars[data.id] = humanAvatarAllowed783(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0];
         const wantSeat = parseInt(data.preferredSeat, 10);
         let seatedOk = false;
         if (!isNaN(wantSeat) && wantSeat >= 0 && wantSeat <= 3) {
@@ -4433,7 +4443,7 @@ function handleMessage(data, conn) {
         break;
       case 'avatar': {
         const sender = conn && conn.peer;
-        if (sender && data.id === sender && changeHumanAvatar777(sender, data.avatar || data.emoji || AVATARS[0])) {
+        if (sender && data.id === sender && changeHumanAvatar777(sender, data.avatar || data.emoji || AVATARS[0], data.voice, data.name)) {
           publishAvatarIdentities777();
         } else if (conn && conn.send) {
           conn.send({type:'error',message:'That avatar is unavailable. Please choose another.'});
@@ -4729,9 +4739,11 @@ function handleMessage(data, conn) {
       case 'tableToast':
         playTableToast();
         break;
-      case 'message':
-        $('messageArea').textContent = data.text;
+      case 'message': {
+        const subject=data.event==='trick-winner'?captureSubject793(data.winnerName,data.winnerId):null;
+        $('messageArea').textContent = subject?'🏆 '+subject.name+subject.win+' the trick!':data.text;
         break;
+      }
       case 'tableMsg':
         if (Array.isArray(data.banks)) applyBanksFromList(data.banks);
         showTableMsgPopup(data.name, data.text);
@@ -4842,6 +4854,9 @@ function handleMessage(data, conn) {
           updateTurnTimerUI();
         }
         break;
+      case 'moonHowl':
+        window.HORMoonHowl?.play(data.id);
+        break;
       case 'sfx':
         playSfx(data.name, { broadcastNet: false });
         break;
@@ -4861,6 +4876,7 @@ function handleMessage(data, conn) {
         if (data.matchStats) matchStats = data.matchStats;
         if (Array.isArray(data.playerStats)) playerStats = data.playerStats;
         if (data.summary) {
+          if(data.summary.careerEvent)horRecordCareerHand(data.summary.careerEvent);
           // Host already held the nest overlay; clients may still be watching it
           const stillNest = document.getElementById('ghNestAnim');
           if (stillNest) {
@@ -5193,7 +5209,7 @@ function showWaiting() {
     const sk = $('opt-sound-tick'); if (sk) { sk.checked = soundTick; sk.onchange = () => { soundTick = sk.checked; }; }
     const avatarGrid = $('avatarGrid');
     if (avatarGrid) {
-      avatarGrid.innerHTML = AVATARS.map((id, i) => `<button type="button" class="avatar-choice" data-avatar="${id}" title="${AVATAR_LABELS[id]}"><img src="${avatarSrc(id)}" alt="${AVATAR_LABELS[id]}"><span>${AVATAR_LABELS[id]}</span></button>`).join('');
+      avatarGrid.innerHTML = ['jerome_founder',...Object.keys(window.HORHumanAvatars||{})].map((id, i) => `<button type="button" class="avatar-choice" data-avatar="${id}" title="${AVATAR_LABELS[id]}"><img loading="lazy" src="${avatarSrc(id)}" alt="${AVATAR_LABELS[id]}"><span>${AVATAR_LABELS[id]}</span></button>`).join('');
       avatarGrid.querySelectorAll('.avatar-choice').forEach(btn => {
         btn.onclick = () => {
           const id = btn.getAttribute('data-avatar');
@@ -5202,14 +5218,15 @@ function showWaiting() {
             horToast('That avatar is already chosen by another player.');return;
           }
           if (isHost) {
-            if (!changeHumanAvatar777(myPeerId,id)) return;
-            savePreferredAvatar(id);publishAvatarIdentities777();
+            window.HORFounderProfile785.select(id);
+            if (!changeHumanAvatar777(myPeerId,id,loadPreferredVoice(),myName)) return;
+            publishAvatarIdentities777();
           } else if (hostConnection && hostConnection.open) {
             // Wait for the host's canonical snapshot; no duplicate-frame optimistic swap.
-            hostConnection.send({type:'avatar',id:myPeerId,avatar:id});
-            savePreferredAvatar(id);
+            window.HORFounderProfile785.select(id);
+            hostConnection.send({type:'avatar',id:myPeerId,avatar:id,voice:loadPreferredVoice(),name:myName});
           } else if (!game) {
-            savePreferredAvatar(id);if(myPeerId)playerAvatars[myPeerId]=id;
+            window.HORFounderProfile785.select(id);if(myPeerId)playerAvatars[myPeerId]=id;
           } else { horToast('Reconnect before changing your avatar.');return; }
           avatarGrid.querySelectorAll('.avatar-choice').forEach(b => b.classList.toggle('selected', b === btn));
         };
@@ -5517,10 +5534,10 @@ function reconcileAvatarIdentities777() {
     changed = true;
   };
   const used = new Set(), names = new Set(players.filter(p=>p&&p.isBot).map(p=>p.name));
-  const freeAvatar = () => BOT_PERSONAS.map(p=>p.avatar).concat(AVATARS).find(a=>!used.has(a));
+  const freeAvatar = () => Object.keys(window.HORHumanAvatars||{}).find(a=>!used.has(a));
   for (const p of players.filter(p=>p&&!p.isBot)) {
     let a = playerAvatars[p.id] || p.avatar || AVATARS[0];
-    if (!AVATARS.includes(a) || used.has(a)) a = freeAvatar();
+    if (!humanAvatarAllowed783(a) || used.has(a)) a = freeAvatar();
     if (a && (p.avatar !== a || playerAvatars[p.id] !== a)) patch(p,{avatar:a});
     if (a) used.add(a);
   }
@@ -5540,12 +5557,16 @@ function reconcileAvatarIdentities777() {
   }
   return changed;
 }
-function changeHumanAvatar777(id, avatar) {
-  if (!isHost || !AVATARS.includes(avatar)) return false;
+function changeHumanAvatar777(id, avatar, voice, name) {
+  if (!isHost || !humanAvatarAllowed783(avatar)) return false;
   const p = players.find(p=>p&&p.id===id&&!p.isBot);
   if (!p || players.some(q=>q&&!q.isBot&&q.id!==id&&(playerAvatars[q.id]||q.avatar)===avatar)) return false;
+  if(avatar==='jerome_founder'&&p.avatar!==avatar){p.nameBeforeJerome787=p.name;p.name='Jerome';p.voice='male';}
+  else if(avatar!=='jerome_founder'&&p.avatar==='jerome_founder'&&p.nameBeforeJerome787){p.name=p.nameBeforeJerome787;delete p.nameBeforeJerome787;}
+  if(avatar!=='jerome_founder'&&typeof name==='string'&&name.trim())p.name=name.trim();
+  if(voice!==undefined)p.voice=validHumanVoice(voice);
   p.avatar=avatar;playerAvatars[id]=avatar;
-  if (game?.players) { const q=game.players.find(q=>q&&q.id===id);if(q)q.avatar=avatar; }
+  if (game?.players) { const q=game.players.find(q=>q&&q.id===id);if(q){q.avatar=avatar;q.name=p.name;q.voice=p.voice;} }
   reconcileAvatarIdentities777();
   return true;
 }
@@ -6676,6 +6697,7 @@ function firstActorSeat(dealer) {
 }
 
 function hostStartGame() {
+  window.HORMoonHowl?.stop();
   if (!isHost) return;
   if (tourCardOpen()) {
     afterTourCard(() => hostStartGame());
@@ -6736,6 +6758,8 @@ function hostStartGame() {
   window._horStayInGame = true;
   game = {
     phase: 'deal',
+    careerMatchId: crypto.randomUUID(),
+    careerExtras: [{},{},{},{}],
     players: publicPlayersSnapshot(), // ROOK041: identities exist before first shuffle/deal render
     dealer: Math.floor(Math.random() * 4), // first hand of a match: random dealer / first-to-act
     scores: [0, 0], // team A, team B
@@ -7475,7 +7499,7 @@ function showBidUI() {
         <button type="button" class="btn" id="bidPlus" aria-label="Raise bid">+5</button>
       </div>
       <div class="bid-buttons">
-        <button class="btn primary${isShootMoonBid(suggested) ? ' bid-shoot-moon' : ''}" id="bidConfirm">${isShootMoonBid(suggested) ? '<span class="moon-orb" aria-hidden="true"></span><span class="moon-action-copy"><span>SHOOT</span><span>THE MOON</span></span>' : ('Bid <span id="bidConfirmVal">' + suggested + '</span>')}</button>
+        <button class="btn primary${isShootMoonBid(suggested) ? ' bid-shoot-moon' : ''}" id="bidConfirm">${isShootMoonBid(suggested) ? '<img class="moon-approved-button795" src="assets/images/shoot-moon-crescent-approved.png" alt="Shoot the Moon">' : ('Bid <span id="bidConfirmVal">' + suggested + '</span>')}</button>
         <button class="btn danger" id="bidPassBtn">Pass</button>
       </div>`;
   const dock = $('decisionConsole');
@@ -7500,7 +7524,7 @@ function showBidUI() {
         confBtn.disabled = suggested < nextMin || suggested > ceiling;
         confBtn.setAttribute('data-live-bid', String(suggested));
         if (isShootMoonBid(suggested)) {
-          confBtn.innerHTML = '<span class="moon-orb" aria-hidden="true"></span><span class="moon-action-copy"><span>SHOOT</span><span>THE MOON</span></span>';
+          confBtn.innerHTML = '<img class="moon-approved-button795" src="assets/images/shoot-moon-crescent-approved.png" alt="Shoot the Moon">';
           confBtn.classList.add('bid-shoot-moon');
         } else {
           confBtn.classList.remove('bid-shoot-moon');
@@ -7526,6 +7550,8 @@ function showBidUI() {
       try { playSfx('bidUp'); } catch (err) {}
       if (suggested + 5 <= ceiling) { suggested += 5; sync(); }
     };
+    // Hold repeats the same legal +/-5 click operation; the auction remains authoritative.
+    window.HORBidHold795?.bind(minus, plus, () => game?.phase==='bidding' && game.currentPlayer===myIndex && !game.paused && !isSpectator);
     if (conf) conf.onclick = (e) => {
       e.preventDefault(); e.stopPropagation();
       try { playSfx('bidUp'); } catch (err) {}
@@ -7791,6 +7817,9 @@ function hostProcessBid(data) {
     try { botMaybeTableTalk('bid', { name: pname, prefer: data.player }); } catch (e) {}
     try { noteHumanAuction(data.player, 'bid', data.value); } catch (e) {}
     if (game.shotTheMoon) {
+      const howlId=(game.careerMatchId||(game.careerMatchId=crypto.randomUUID()))+':'+handHistory.length+':moon:'+data.player;
+      window.HORMoonHowl?.play(howlId);
+      broadcast({type:'moonHowl',id:howlId});
       finishBidding();
       return;
     }
@@ -8581,7 +8610,7 @@ function showTrumpUI() {
   } else {
     dock.style.left=''; dock.style.top=''; dock.style.transform='';
   }
-  if (!landscape && window.HORTrump714 && window.HORTrump714.choose(dock, submitTrump)) return;
+  if (!landscape && window.HORTrump714 && window.HORTrump714.choose(dock, submitTrump, game)) return;
   dock.classList.remove('decision-mode-bid');
     dock.classList.add('decision-mode-trump');
   let html = '<div class="decision-console-title">STAMP THE TRUMP</div><div class="stamp-trump-grid">';
@@ -8591,14 +8620,7 @@ function showTrumpUI() {
   html += '</div><p class="stamp-trump-note">' + (includeRook ? (rookLowest ? 'The Bird stays lowest trump.' : 'The Bird stays highest trump.') : '') + '</p>';
   dock.innerHTML = html;
   dock.classList.remove('hidden');
-  dock.querySelectorAll('[data-trump]').forEach((btn) => {
-    btn.onclick = () => {
-      dock.classList.add('hidden');
-      dock.classList.remove('decision-mode-trump');
-      dock.innerHTML='';
-      submitTrump(btn.getAttribute('data-trump'));
-    };
-  });
+  if (window.HORTrump714) window.HORTrump714.chooseFallback(dock, submitTrump, game);
 }
 
 function submitTrump(color) {
@@ -8637,6 +8659,9 @@ function hostProcessTrump(data) {
   if (horRememberAction(data)) return;
   game.trump = data.color;
   game.phase = 'play';
+  //790: public presentation event identity; never a bid/trick input.
+  game.trumpVoiceEvent790 = horNewActionId('trump-voice');
+  try { window.HORTrumpVoice?.chosen(game, playerAvatars); } catch(e) { console.warn('Trump voice:',e); }
   try { announceTrumpSelection(data.color); } catch (e) {}
   try { hideActionPanel(); } catch (e) {}
   try { const d=$('decisionConsole'); if(d){d.classList.add('hidden');d.classList.remove('decision-mode-trump');d.innerHTML='';} } catch(e){}
@@ -8707,7 +8732,9 @@ function hostTransferHost() {
   const snapshot = {
     game: JSON.parse(JSON.stringify({
       phase: game.phase, dealer: game.dealer, scores: game.scores,
+      careerMatchId: game.careerMatchId, careerExtras: game.careerExtras,
       hands: game.hands, nest: game.nest, bid: game.bid, bidder: game.bidder,
+      trumpVoiceEvent790: game.trumpVoiceEvent790 || null, trumpVoiceRestore790: true,
       trump: game.trump, currentPlayer: game.currentPlayer, trick: game.trick,
       ledColor: game.ledColor, tricksTaken: game.tricksTaken, nestCards: game.nestCards,
       passCount: game.passCount, highestBid: game.highestBid, discardCount: game.discardCount,
@@ -9039,7 +9066,7 @@ function hostResyncClient(conn, playerId) {
   try {
     const idx = players.findIndex(p => p && p.id === playerId);
     sendTo(playerId, Object.assign({}, {
-      type: 'state',
+      type: 'state', trumpVoiceRestore790: true,
       seq: horNetSeq,
       phase: game.phase,
       scores: game.scores,
@@ -9050,6 +9077,7 @@ function hostResyncClient(conn, playerId) {
       bidStatus: game.bidStatus,
       bidder: game.bidder,
       trump: game.trump,
+    trumpVoiceEvent790: game.trumpVoiceEvent790 || null,
       currentPlayer: game.currentPlayer,
       trick: game.trick,
       ledColor: game.ledColor,
@@ -9176,7 +9204,7 @@ function hostTryReclaimSeat(conn, data) {
   players[idx] = {
     id: data.id,
     name: name || players[idx].replacedHumanName || players[idx].name || 'Player',
-    avatar: AVATARS.includes(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0],
+    avatar: humanAvatarAllowed783(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0],
     voice: validHumanVoice(data.voice),
     team,
     isHost: false,
@@ -9459,6 +9487,11 @@ function hostProcessAllTrumpsClaim(data) {
     holderStat.tricksWon += laidDownTricks;
     holderStat.points += laidDownPoints;
     holderStat.trickPtsSum += laidDownPoints;
+    // Captured special cards in a legal claim remain real captures.
+    if(claimCards.some(isRed2))holderStat.red2Captures++;
+    if(claimCards.some(c=>c.color==='rook'||c.id==='rook'))holderStat.rookCaptures++;
+    if(!game.careerExtras)game.careerExtras=[{},{},{},{}];
+    if((game.trick||[]).some(t=>isRed2(t.card)&&players[t.player].team!==players[holder].team)||(game.hands||[]).some((h,i)=>players[i].team!==players[holder].team&&h.some(isRed2)))game.careerExtras[holder].red2Rescues=(game.careerExtras[holder].red2Rescues||0)+1;
     const partnerSeat = (holder + 2) % 4;
     if (players[partnerSeat]) {
       const partnerStat = ps(partnerSeat);
@@ -9813,6 +9846,10 @@ function hostProcessPlay(data) {
         partnerStat.trickPtsSum += trickPoints;
       }
       if (trickPoints >= 30) wStat.bigTricks++;
+      if(!game.careerExtras)game.careerExtras=[{},{},{},{}];
+      const ce=game.careerExtras[winner.player];
+      ce.bestTrickPoints=Math.max(ce.bestTrickPoints||0,trickPoints);
+      if(game.trick.some(t=>t.card&&isRed2(t.card)&&players[t.player].team!==team))ce.red2Rescues=(ce.red2Rescues||0)+1;
       if (game.trick.some(t => t.card && (t.card.color === 'rook' || t.card.id === 'rook'))) wStat.rookCaptures++;
       if (game.trick.some(t => t.card && isRed2(t.card))) wStat.red2Captures++;
     } catch (e) {}
@@ -9830,8 +9867,9 @@ function hostProcessPlay(data) {
       }
     } catch (e) {}
     const msg = `🏆 ${players[winner.player].name} wins the trick!`;
-    $('messageArea').textContent = msg;
-    broadcast({ type: 'message', text: msg });
+    const subject=captureSubject793(players[winner.player].name,players[winner.player].id);
+    $('messageArea').textContent = '🏆 '+subject.name+subject.win+' the trick!';
+    broadcast({ type: 'message', text: msg, event:'trick-winner', winnerName:players[winner.player].name, winnerId:players[winner.player].id });
     // The individual card landing SFX already plays for each card. Avoid an
     // extra synthetic chime immediately after the fourth card completes a trick.
     // Highlight winner card in trick. The trick is broadcast/rendered first so
@@ -9842,11 +9880,11 @@ function hostProcessPlay(data) {
         const wName = (players[winner.player] && players[winner.player].name) || 'Player';
         const events = [];
         if (caps && caps.length) {
-          caps.forEach(kind => events.push({ kind, winnerName: wName }));
+          caps.forEach(kind => events.push({ kind, winnerName: wName, winnerId:players[winner.player]?.id }));
         }
         // The Raven capture owns this trick's celebration; accounting above stays intact.
         if (trickPoints >= 30 && !caps.includes('rook-red2')) {
-          events.push({ kind: 'high-points', amount: trickPoints, winnerName: wName });
+          events.push({ kind: 'high-points', amount: trickPoints, winnerName: wName, winnerId:players[winner.player]?.id });
         }
         return { events, winnerName: wName };
       } catch (e) {
@@ -10059,7 +10097,10 @@ function hostEndHand() {
       try {
         const nStat = ps(nestSeat);
         nStat.nestWins++;
+        if(nestSnapshot.some(isRed2))nStat.red2Captures++;
+        if(nestSnapshot.some(c=>c.color==='rook'||c.id==='rook'))nStat.rookCaptures++;
         nStat.nestPts += nestPtsShown;
+        nStat.points += nestPtsShown; // both partners receive their captured nest points
         // Partnership scoring: nest points count for the winner and their partner.
         const nestPartnerSeat = (nestSeat + 2) % 4;
         if (players[nestPartnerSeat]) {
@@ -10158,6 +10199,8 @@ function hostEndHand() {
   try { botMaybeStandingsTaunt(); } catch (e) {}
 
   game.phase = 'score';
+  // Clear the relocated pot as soon as the completed hand leaves play.
+  if ($('holderPlayerName784')) renderTrickPot784();
   try { clearTrumpBanners(); } catch (e) {}
   try { playSfx(made ? 'made' : 'set', { broadcastNet: true }); } catch (e) {}
   try {
@@ -10244,6 +10287,13 @@ function hostEndHand() {
     if (sandbagOverAdded) bStat.bags += Math.floor(sandbagOverAdded / 10);
   } catch (e) {}
 
+  summary.careerEvent={matchId:game.careerMatchId||(game.careerMatchId=crypto.randomUUID()),hand:handHistory.length,
+    players:players.map(p=>({id:p.id,name:p.name,isBot:!!p.isBot,team:p.team,avatar:p.avatar||null})),
+    stats:playerStats.map(s=>({...s})),extras:JSON.parse(JSON.stringify(game.careerExtras||[{},{},{},{}])),
+    bidder:game.bidder,tricksPerHand:handSize,completed:!!getMatchResult(game.scores,game.targetScore||targetScore||300),
+    winnerTeam:getMatchResult(game.scores,game.targetScore||targetScore||300)==='Team A'?0:getMatchResult(game.scores,game.targetScore||targetScore||300)==='Team B'?1:null,
+    summary:{pointsA,pointsB,bid:game.bid,made,trump:game.trump,scores:[...game.scores]}};
+  horRecordCareerHand(summary.careerEvent);
   const finishToScore = () => {
     broadcast({
       type: 'handResult', summary, history: handHistory, matchTricks: matchTricks || [],
@@ -10461,19 +10511,9 @@ const LEGACY_SIMULATED_BOT_NAMES = [
   'Pebble','Dice','Nix','Anchor','Cinder'
 ];
 function purgeLegacySimulatedBotStats() {
-  try {
-    const store = loadLifetimeStats();
-    let changed = false;
-    LEGACY_SIMULATED_BOT_NAMES.forEach(name => {
-      if (Object.prototype.hasOwnProperty.call(store, name) && store[name] && store[name].isBot) {
-        delete store[name];
-        changed = true;
-      }
-    });
-    if (changed) saveLifetimeStats(store);
-  } catch (e) {}
+  // Names cannot prove that a record is synthetic. Preserve every saved bot career.
+  return {preserved:true};
 }
-purgeLegacySimulatedBotStats();
 
 function renderAllTimeLeaders() {
   const store = loadLifetimeStats();
@@ -11117,6 +11157,7 @@ function broadcastState() {
     passCount: game.passCount || 0,
     bidder: game.bidder,
     trump: game.trump,
+    trumpVoiceEvent790: game.trumpVoiceEvent790 || null,
     currentPlayer: game.currentPlayer,
     trick: game.trick,
     ledColor: game.ledColor,
@@ -11186,11 +11227,7 @@ function broadcastState() {
   if (discarding) fitHandToScreen();
 }
 
-function showBottomTrickWinnerNotice() {
-  if (matchMedia('(orientation:landscape)').matches) { showLegacyLandscapeTrickNotice752(); return; }
-  // The existing authoritative resolved-trick boundary now owns a rail presentation.
-  try { window.HORRailTrick752?.sync(game, myIndex, isSpectator); } catch(e) { console.warn('Rail presentation:', e); }
-}
+function showBottomTrickWinnerNotice() { try { window.HORHolderCues789?.sync(game, myIndex, isSpectator); } catch (_) {} }
 
 function showLegacyLandscapeTrickNotice752() {
   try {
@@ -11258,6 +11295,8 @@ function applyState(data) {
     passCount: data.passCount != null ? data.passCount : (game.passCount || 0),
     bidder: data.bidder,
     trump: data.trump,
+    trumpVoiceEvent790: data.trumpVoiceEvent790 || null,
+    trumpVoiceRestore790: !!data.trumpVoiceRestore790,
     currentPlayer: data.currentPlayer,
     trick: data.trick || [],
     ledColor: data.ledColor,
@@ -11542,9 +11581,30 @@ function maybeReactTrumpPlay() {
 }
 
 // ========== Rendering ==========
+// Same established pot renderer, shared with the portrait score transition.
+function renderTrickPot784() {
+  const ptsBar = $('trickPtsBar');
+  if (ptsBar) {
+    const tlen = (game.trick && game.trick.length) || 0;
+    if (game.phase === 'play' && tlen > 0) {
+      let pts = 0;
+      try { pts = (typeof trickPointsSoFar === 'function') ? trickPointsSoFar() : 0; } catch (e) { pts = 0; }
+      if (game.resolvingTrick && Number(game.resolvingTrickPoints) >= 0) {
+        pts = Number(game.resolvingTrickPoints) || pts;
+      }
+      ptsBar.textContent = 'POT • ' + pts;
+      ptsBar.classList.remove('hidden');
+    } else {
+      ptsBar.textContent = '';
+      ptsBar.classList.add('hidden');
+    }
+  }
+}
+
 function renderUI() {
+  try { window.HORHolderIdentity784?.sync(); } catch(e) {}
   try { window.HORUnifiedBidding752?.sync(game, myIndex, isSpectator); } catch(e) {}
-  try { window.HORRailTrick752?.sync(game, myIndex, isSpectator); } catch(e) {}
+  try { window.HORHolderCues789?.sync(game, myIndex, isSpectator); } catch(e) {}
   if (!game || game.phase!=='play' || !game.resolvingTrick) { try { window.HORRavenFight741?.sync(game); } catch(_) {} }
   try { window.HORBidRepair737?.sync(); } catch(e) {}
   try { window.HORTrumpVoice?.sync(game, playerAvatars); } catch(e) { console.warn('Trump voice:',e); }
@@ -11672,25 +11732,7 @@ function renderUI() {
     }
   } catch (e) { trickLeadIdx = -1; }
 
-  const ptsBar = $('trickPtsBar');
-  if (ptsBar) {
-    const tlen = (game.trick && game.trick.length) || 0;
-    if (game.phase === 'play' && tlen > 0) {
-      let pts = 0;
-      try { pts = (typeof trickPointsSoFar === 'function') ? trickPointsSoFar() : 0; } catch (e) { pts = 0; }
-      if (game.resolvingTrick && Number(game.resolvingTrickPoints) >= 0) {
-        pts = Number(game.resolvingTrickPoints) || pts;
-      }
-      const leadName = (trickLeadIdx >= 0 && game.players && game.players[trickLeadIdx] && game.players[trickLeadIdx].name)
-        ? game.players[trickLeadIdx].name
-        : '';
-      ptsBar.textContent = 'POT • ' + pts;
-      ptsBar.classList.remove('hidden');
-    } else {
-      ptsBar.textContent = '';
-      ptsBar.classList.add('hidden');
-    }
-  }
+  renderTrickPot784();
 
   ['partner', 'left', 'right'].forEach(slot => {
     const idx = seatMap[slot];
@@ -11753,7 +11795,7 @@ function renderUI() {
     const pc = meSlot.querySelector('.played-card');
     if (pc) pc.innerHTML = '';
     // Show this player's real name (not "You")
-    const meNameEl = meSlot.querySelector('.name');
+    const meNameEl = $('holderPlayerName784') || meSlot.querySelector('.name');
     if (meNameEl) {
       const meP = (game.players && game.players[seatBase])
         || (players && players[seatBase])
@@ -11764,7 +11806,7 @@ function renderUI() {
       meNameEl.innerHTML = `<span class="seat-avatar">${avatarHTML(av)}</span><span class="seat-identity-copy"><span class="player-name-text">${escapeHtmlSafe(meName)}</span>${meP?horCareerBadgeHtml(meP):''}</span>`;
       applyBotNameAttr(meNameEl, meP);
       try { updateBankDisplays(); } catch (e) {}
-      try { horBindCareerBadges(meSlot); } catch (e) { console.error('[Career badge bind]', e); }
+      try { horBindCareerBadges(meNameEl); } catch (e) { console.error('[Career badge bind]', e); }
     }
     const quietMe = isFirstHandOfMatch();
     meSlot.classList.toggle('is-turn', !quietMe && seatBase === whoseTurn && !game.resolvingTrick);
@@ -11788,6 +11830,7 @@ function renderUI() {
   }
 
 
+  try { window.HORHolderIdentity784?.sync(); } catch(e) {}
   try { scheduleBottomAvatar029(); refreshPortraitLastTrick029(); } catch (e) {}
   try { positionSeatLeadTags(); positionSeatBidBadges(); } catch (e) {}
 
@@ -12015,6 +12058,25 @@ function captureTargetForWinner(winnerIdx) {
   return { x: r.left + r.width / 2, y: r.top + r.height / 2, rel };
 }
 
+// 794: notify the holder at the visible collection endpoint, not trick resolution.
+// A transition event normally supplies arrival; the existing flight cleanup is
+// the fallback for reduced motion/throttled or missing transition events.
+function watchTrickArrival794(layer, winnerIdx, trick) {
+  const arrive=window.HORHolderCues789?.captureWaiter(winnerIdx,trick);
+  let done=false;const landed=new Set();
+  const finish=()=>{
+    if(done)return;done=true;layer.removeEventListener('transitionend',onEnd);
+    if(layer.isConnected)arrive?.();
+  };
+  const onEnd=e=>{
+    if(e.propertyName!=='transform'||e.target.parentNode!==layer||!e.target.classList.contains('trick-flight-card'))return;
+    landed.add(e.target);
+    if(landed.size>=layer.querySelectorAll(':scope > .trick-flight-card').length)finish();
+  };
+  layer.addEventListener('transitionend',onEnd);
+  return finish;
+}
+
 function animateTrickCaptureRobust(stackEl, winnerIdx) {
   if (window.HORRavenFight741?.ownsCapture(game)) return;
   if (!stackEl || !stackEl.isConnected) return;
@@ -12054,7 +12116,7 @@ function animateTrickCaptureRobust(stackEl, winnerIdx) {
   layer.setAttribute('aria-hidden', 'true');
   layer.style.cssText =
     'position:fixed;left:0;top:0;width:100vw;height:100vh;' +
-    'pointer-events:none;z-index:2147483000;overflow:visible;';
+    'pointer-events:none;z-index:8999;overflow:visible;';
   document.body.appendChild(layer);
 
   stackEl.style.visibility = 'hidden';
@@ -12116,8 +12178,10 @@ function animateTrickCaptureRobust(stackEl, winnerIdx) {
     }, delay);
   });
 
+  const arrivalDone794=watchTrickArrival794(layer,winnerIdx,game.trick);
   const cleanupMs = solScaledDelay(1150 + Math.max(0, flightCount - 1) * 55, 80);
   setTimeout(() => {
+    arrivalDone794();
     try { layer.remove(); } catch (e) {}
     window._trickCapturing = false;
   }, cleanupMs);
@@ -12154,7 +12218,7 @@ function animateLandscapeTrickCapture(winnerIdx) {
       const layer = document.createElement('div');
       layer.className = 'trick-capture-flight-layer lt-flight';
       layer.setAttribute('aria-hidden', 'true');
-      layer.style.cssText = 'position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:2147483000;overflow:visible;';
+      layer.style.cssText = 'position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:8999;overflow:visible;';
       document.body.appendChild(layer);
 
       if (bottomWinner) {
@@ -12191,8 +12255,10 @@ function animateLandscapeTrickCapture(winnerIdx) {
         }, solScaledDelay(i * 50, 0));
       });
 
+      const arrivalDone794=watchTrickArrival794(layer,winnerIdx,game.trick);
       const cleanup = solScaledDelay(920 + Math.max(0, faces.length - 1) * 50, 70);
       setTimeout(() => {
+        arrivalDone794();
         try { layer.remove(); } catch (e) {}
         try { plays.classList.remove('lt-capturing'); } catch (e) {}
         window._trickCapturing = false;
@@ -12646,23 +12712,11 @@ function positionBotThinkingAtSeat(statusElement, statusIndex){
   }catch(e){}
 }
 function syncHumanTurnStatus(){
-  if(game?.phase==='bidding'&&isPortraitViewport()&&window.HORUnifiedBidding752){window.HORUnifiedBidding752.position();return;}
-  try{
-    const el=$('botThinking'); if(!el||!game)return;
-    const idx=(game.phase==='discard'||game.phase==='trump')?game.bidder:
-      ((game.phase==='bidding'||game.phase==='play')?game.currentPlayer:-1);
-    const p=(game.players&&idx>=0)?game.players[idx]:null;
-    const humanTurn=idx===myIndex && p && !p.isBot && !game.paused && !game.resolvingTrick;
-    if(!humanTurn){
-      if(el.dataset.humanTurn==='1'){ el.dataset.humanTurn='0'; el.classList.add('hidden'); }
-      return;
-    }
-    el.dataset.humanTurn='1';
-    el.textContent=game.phase==='bidding'?'YOUR BID':'YOUR TURN';
-    el.classList.remove('hidden');
-    requestAnimationFrame(positionBotThinkingAtSeat);
-  }catch(e){}
+  const el=$('botThinking');
+  if(el?.dataset.humanTurn==='1'){el.dataset.humanTurn='0';el.classList.add('hidden');}
+  try { window.HORHolderCues789?.sync(game,myIndex,isSpectator); } catch (_) {}
 }
+
 function setBotThinking(on) {
   if(game?.phase==='bidding'&&isPortraitViewport()&&window.HORUnifiedBidding752){window.HORUnifiedBidding752.position();return;}
   const el = $('botThinking');
@@ -13649,7 +13703,7 @@ function startSoloPractice() {
     applyPreferredAvatarToMe();
 
     // 3 named persona bots (no network)
-    while (players.length < 4) addBot();
+    while (players.length < 4) { const seat=firstEmptySeat(); addBot(seat, window.HORLanding783?.rosterForStart()?.[seat-1]?.name); }
     balanceTeams();
     myIndex = players.findIndex(p => p.id === myPeerId);
     if (myIndex < 0) myIndex = 0;
