@@ -1,0 +1,22 @@
+{
+  "number": "796",
+  "reservationId": "career-release-3a04d861-20261013",
+  "workstream": "Career migration and owner-approved release",
+  "task": "Publish owner-approved career repair, fixed cards, confirmation wolf cue, safe Rita test restore, Master Brain AB and Test server only",
+  "sourceGameBuild": "795-career-phone-test-v1",
+  "sourceSha256": "85439e34821590accf8444f43025ab3a14798caa64ef5873d423e2ae10edd337",
+  "sourceRuntimeIdentitySha256": "ad4d0019637ca1c0fe65c86953fab919f9d383952b824f16c5efa349a34385f6",
+  "status": "RESERVED",
+  "date": "2026-10-13",
+  "ownerApproved": true,
+  "physicalAndroidTested": true,
+  "physicalAndroidTestEvidence": "OWNER_REPORTED",
+  "ownerPhoneReview": {
+    "quote": "Okay, everything worked.",
+    "reportedAt": "2026-10-13T03:55:09-04:00",
+    "sourceFilename": "Career-Rita-Test-3a04d861.zip",
+    "scope": "Owner overall phone acceptance; no independent device measurements or live PeerJS claim"
+  },
+  "deploymentAuthorization": "TEST_ONLY",
+  "production531": "PROTECTED"
+}

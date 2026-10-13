@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "783",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 796,
+  "nextNumberHint": 797,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1818,10 +1818,49 @@
         "hor-version.js",
         "sw060.js"
       ]
+    },
+    {
+      "number": "796",
+      "reservationId": "career-release-3a04d861-20261013",
+      "workstream": "Career migration and owner-approved release",
+      "task": "Publish owner-approved career repair, fixed cards, confirmation wolf cue, safe Rita test restore, Master Brain AB and Test server only",
+      "sourceGameBuild": "795-career-phone-test-v1",
+      "sourceSha256": "85439e34821590accf8444f43025ab3a14798caa64ef5873d423e2ae10edd337",
+      "sourceRuntimeIdentitySha256": "ad4d0019637ca1c0fe65c86953fab919f9d383952b824f16c5efa349a34385f6",
+      "status": "RESERVED",
+      "date": "2026-10-13",
+      "ownerApproved": true,
+      "physicalAndroidTested": true,
+      "physicalAndroidTestEvidence": "OWNER_REPORTED",
+      "ownerPhoneReview": {
+        "quote": "Okay, everything worked.",
+        "reportedAt": "2026-10-13T03:55:09-04:00",
+        "sourceFilename": "Career-Rita-Test-3a04d861.zip",
+        "scope": "Owner overall phone acceptance; no independent device measurements or live PeerJS claim"
+      },
+      "deploymentAuthorization": "TEST_ONLY",
+      "production531": "PROTECTED"
     }
   ],
   "testSiteBuild": "779",
   "previousApprovedWorkingBuild": "779",
   "publishedBrainApprovedBuild": "783",
-  "publishedBrainVersion": "AA"
+  "publishedBrainVersion": "AA",
+  "temporaryPackages": [
+    {
+      "filename": "Career-Test-3a04d861.zip",
+      "libraryFileId": "libfile_12bb5844c9208191a398824403c35e36",
+      "sha256": "4badf9e2f87a9d06fc6385e440ec8fa581a796ba89b6b320747dfb6d97b9f28e",
+      "number": null,
+      "status": "HISTORICAL_ISOLATED_TEMPORARY"
+    },
+    {
+      "filename": "Career-Rita-Test-3a04d861.zip",
+      "libraryFileId": "libfile_53f82cb68980819184cb9c3935a84179",
+      "sha256": "85439e34821590accf8444f43025ab3a14798caa64ef5873d423e2ae10edd337",
+      "number": null,
+      "status": "OWNER_PHONE_APPROVED",
+      "approvalQuote": "Okay, everything worked."
+    }
+  ]
 }
