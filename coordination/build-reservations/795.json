@@ -1,0 +1,14 @@
+{
+  "number": "795",
+  "reservationId": "trump-physical-assets-3b68d5d61615-20261013",
+  "workstream": "Trump case physical asset repair",
+  "task": "Remove lower hinge pair; lid-coordinate brass confirmation; accelerated bid hold; approved crescent Moon button",
+  "sourceGameBuild": "794",
+  "sourceSha256": "ff0792b5d66728d0115d7dac033e28f7a44e839822455b75e9fe17afdbc80054",
+  "status": "RESERVED",
+  "date": "2026-10-13",
+  "ownerApproved": false,
+  "physicalAndroidTested": false,
+  "deploymentStatus": "NOT_DEPLOYED",
+  "expectedMainSha": "2c99857d21113271c77a4a570523e21fa9509c45"
+}

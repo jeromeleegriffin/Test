@@ -6,7 +6,7 @@
   "approvedWorkingBuild": "783",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
-  "nextNumberHint": 795,
+  "nextNumberHint": 796,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -1737,6 +1737,20 @@
         "deploymentAuthorized": false
       },
       "automatedTestLimitsAtDelivery": "Chromium mobile/touch and actual ZIP-loader sources in isolated local iframe; stubbed vibration requests. No physical Android timing/visibility/vibration/listening approval, live PeerJS/reconnect or installed-old-cache migration certification."
+    },
+    {
+      "number": "795",
+      "reservationId": "trump-physical-assets-3b68d5d61615-20261013",
+      "workstream": "Trump case physical asset repair",
+      "task": "Remove lower hinge pair; lid-coordinate brass confirmation; accelerated bid hold; approved crescent Moon button",
+      "sourceGameBuild": "794",
+      "sourceSha256": "ff0792b5d66728d0115d7dac033e28f7a44e839822455b75e9fe17afdbc80054",
+      "status": "RESERVED",
+      "date": "2026-10-13",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deploymentStatus": "NOT_DEPLOYED",
+      "expectedMainSha": "2c99857d21113271c77a4a570523e21fa9509c45"
     }
   ],
   "testSiteBuild": "779",
