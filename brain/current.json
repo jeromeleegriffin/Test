@@ -13,8 +13,8 @@
   "checkpoint": "approved-room-menu-friends-805",
   "checkpointStatus": "DOCUMENTATION_CURRENT_805_DELIVERED_PHONE_REVIEW_PENDING",
   "approvedWorkingBuild": "783",
-  "testRootObservedBuild": "805-stability",
-  "gamePublicationStatus": "TEST_STABILITY_DEPLOYED_FOR_REVIEW_PRODUCTION_UNCHANGED",
+  "testRootObservedBuild": "805-shareicon",
+  "gamePublicationStatus": "TEST_SHARE_ICON_REFRESH_DEPLOYED_PRODUCTION_UNCHANGED",
   "onScreenVersion": "805 package marker; deployed Test runtime remains797",
   "liveCommit": "1f3a6382baccca6bf9d0f2102698c8a39d38fa30",
   "liveTable": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
@@ -61,13 +61,13 @@
   "mainDevelopmentCheckpoint": "../coordination/MAIN_DEVELOPMENT_STABILITY_20261014.md",
   "smallBiddingStatus": "PRESERVED771_WITH_CHARACTER_STATUS_ANCHOR_REPAIRS",
   "railClearanceStatus": "PRESERVED771_EXISTING_SAFE_SUPPRESSION_LIMIT_UNCHANGED",
-  "latestGameBuild": "805-stability",
+  "latestGameBuild": "805-shareicon",
   "latestGameLibraryFileId": "libfile_9aa904ab89c88191829e50ee9e0af68c",
   "latestGameFilename": "HouseStability-9a8f4d4242e1.zip",
   "cleanFallbackCandidate": "766",
   "cleanFallbackStatus": "766_OWNER_APPROVED_HISTORICAL_FALLBACK",
-  "testServerPlannedBuild": "805-stability",
-  "testServerDeploymentStatus": "TEST_STABILITY_DEPLOYED_LIVE_VERIFIED_ANDROID_PENDING",
+  "testServerPlannedBuild": "805-shareicon",
+  "testServerDeploymentStatus": "TEST_SHARE_ICON_REFRESH_LIVE_VERIFIED_ANDROID_ICON_PENDING",
   "defaultIntelligence": "CHALLENGER-X1 original frozen",
   "backupIntelligence": "Sol7 original frozen",
   "epaEnabled": false,
@@ -82,9 +82,9 @@
     "physicalTabletVerified": false,
     "implementedBuild": "771"
   },
-  "testServerDeploymentCommit": "731fe47ffb0616413b42272e1311ce164a11673e",
+  "testServerDeploymentCommit": "cb14bdf2c1794453e9e06ffa3ce15a2a86805b74",
   "testServerUrl": "https://jeromeleegriffin.github.io/Test/",
-  "testRootRollbackCommit": "6e395847a94a05408ffbf770c4dc895cde4a074d",
+  "testRootRollbackCommit": "becd56778eee2e758ef581e21e67b360176861c5",
   "fullCastTrumpVoiceCheckpoint": "../coordination/FULL_CAST_TRUMP_VOICES_790.md",
   "fullCastTrumpVoiceStatus": "790_TRUMP_ROUTING_PRESERVED;801_BID_PASS_MOON_QUEUE_IN805;PHONE_REVIEW_PENDING",
   "fullCastTrumpVoiceLibraryFileId": "libfile_25682ceb2d4c81919546ac624ee3119d",
@@ -129,15 +129,15 @@
     "bytes": 145217741,
     "status": "DOWNLOAD_ONLY_NOT_DEPLOYED"
   },
-  "pagesWorkflowRunId": "38554409164",
+  "pagesWorkflowRunId": "38556273377",
   "pagesWorkflowConclusion": "success",
   "liveAssetVerification": {
-    "status": "LIVE_ASSETS_VERIFIED",
-    "changedServedFiles": 167,
-    "runtimeGitBlobs": 1484,
-    "activeServiceWorkerControllerVerified": true,
-    "offlineReloadVerified": true,
-    "browserLimit": "Live harness reached its final HTTP-response assertion after all functional/engine/offline assertions passed. It recorded one503 response; full detailed in-memory game telemetry was not saved before that assertion. No clean zero-HTTP-error run is claimed."
+    "status": "LIVE_SHARE_ICON_FILES_VERIFIED",
+    "runtime": "805-shareicon",
+    "changedServedFiles": 10,
+    "activeServiceWorkerControllerVerified": false,
+    "offlineReloadVerified": false,
+    "limit": "Earlier805-stability offline/X1 pass preserved separately; new icon-only marker not re-certified through a fresh hosted worker."
   },
   "deployedTestReleasePackage": {
     "filename": "797.zip",
@@ -254,6 +254,36 @@
     "mainDevelopmentCheckpoint": "../coordination/SESSION_798_805.md"
   },
   "standingTestWorkflow": "../coordination/TEST_SITE_WORKFLOW.md",
-  "currentTestReleaseReceipt": "../coordination/releases/stability-9a8f4d4242e1-20261014/LIVE_RECEIPT.json",
-  "currentOwnerMenuDecision": "Latest explicit owner choice: shared midnight-blue/gold individually raised buttons, fixed non-scrolling pages; supersedes conflicting Menu A appearance history only."
+  "currentTestReleaseReceipt": "../coordination/SHARE_ICON_RECEIPT.json",
+  "currentOwnerMenuDecision": "Latest explicit owner choice: shared midnight-blue/gold individually raised buttons, fixed non-scrolling pages; supersedes conflicting Menu A appearance history only.",
+  "latestTestRepairCheckpoint": "../coordination/SHARE_ICON_20261014.md",
+  "shareIconRepair": {
+    "runtime": "805-shareicon",
+    "commit": "cb14bdf2c1794453e9e06ffa3ce15a2a86805b74",
+    "rollbackCommit": "becd56778eee2e758ef581e21e67b360176861c5",
+    "pagesRunId": 38556273377,
+    "pagesConclusion": "success",
+    "changedServedFiles": 10,
+    "allChangedServedBytesMatch": true,
+    "imagePixelsChanged": false,
+    "localFixture": "Icons/dimensions, app identity/scope, real shareRoom plain URL/code payload passed",
+    "hypothesis": "Stale browser/device identity; Bed Time source not reproduced in website files",
+    "nativeAndroidShareIconAccepted": false,
+    "productionTouched": false,
+    "standingWorkflow": "TEST_SITE_WORKFLOW.md"
+  },
+  "currentTestSource": {
+    "type": "GitHub Test runtime",
+    "commit": "cb14bdf2c1794453e9e06ffa3ce15a2a86805b74",
+    "runtime": "805-shareicon",
+    "sourceArchive": "HouseStability-9a8f4d4242e1.zip plus scoped share-icon delta; no new ZIP"
+  },
+  "previousRuntimeLiveVerification": {
+    "status": "LIVE_ASSETS_VERIFIED",
+    "changedServedFiles": 167,
+    "runtimeGitBlobs": 1484,
+    "activeServiceWorkerControllerVerified": true,
+    "offlineReloadVerified": true,
+    "browserLimit": "Live harness reached its final HTTP-response assertion after all functional/engine/offline assertions passed. It recorded one503 response; full detailed in-memory game telemetry was not saved before that assertion. No clean zero-HTTP-error run is claimed."
+  }
 }
