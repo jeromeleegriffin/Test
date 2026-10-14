@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Overhead artwork assembly — isolated study</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#060a0e;color:#f5e9ce;font:14px system-ui}#stage{position:absolute;width:1672px;height:941px;transform-origin:0 0;overflow:hidden}#plate{position:absolute;inset:0;width:100%;height:100%}.sprite{position:absolute;overflow:hidden;pointer-events:none}.sprite>img{position:absolute;max-width:none}.card{position:absolute;object-fit:fill;transform-origin:50% 85%;border-radius:5px}.front{clip-path:polygon(0 35%,4% 36%,6% 64%,30% 58%,50% 53%,70% 58%,94% 64%,96% 36%,100% 35%,100% 100%,0 100%)}.seat-label{position:absolute;color:#f7ead2;font:bold 22px Georgia;text-shadow:1px 1px 2px #000,-1px -1px 2px #000;transform:translateX(-50%)}#controls{position:fixed;left:8px;top:8px;z-index:100;display:flex;gap:6px;max-width:calc(100% - 16px);align-items:center}button,select{background:#10243a;color:#f5e9ce;border:1px solid #b39a59;border-radius:6px;padding:9px;font:inherit}#note{position:fixed;bottom:3px;left:6px;font-size:11px;background:#07111bd9;padding:3px 6px;border-radius:4px;pointer-events:none}#reference{display:none;position:absolute;inset:0;width:100%;height:100%;z-index:90}body.reference #reference{display:block}#controls button:focus-visible{outline:2px solid white}
+</style>
+<div id="stage"><img id="plate" src="assets/overhead/room-table-v1.png" alt="Overhead blue felt table"><img id="reference" src="../landscape-handoff/CURRENT_FOUR_HOLDERS.png" alt="Approved concept reference"></div>
+<div id="controls"><button id="compare">Hold: reference</button><select id="count" aria-label="Preview card count"><option>10</option><option>11</option><option>6</option><option>1</option><option>0</option></select><button id="cards">Hide cards</button></div><div id="note">Artwork assembly only · four reference identities · not a playable game</div>
+<script>
+const stage=document.querySelector('#stage');
+// CSS windows crop transparent padding only; original image bytes are untouched.
+function sprite(name,bounds,x,y,w,h,cls=''){
+ const box=document.createElement('div');box.className='sprite '+cls;
+ const [l,t,r,b]=bounds,sx=w/(r-l),sy=h/(b-t);
+ Object.assign(box.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px'});
+ const img=new Image();img.src='assets/overhead/'+name+'-v1.png';img.alt='';
+ img.onload=()=>Object.assign(img.style,{width:img.naturalWidth*sx+'px',height:img.naturalHeight*sy+'px',left:-l*sx+'px',top:-t*sy+'px'});
+ box.append(img);stage.append(box);return box;
+}
+sprite('cinder-top',[557,0,1113,316],625,0,403,229);
+sprite('dagger-left',[89,91,898,903],74,224,442,444);
+sprite('crow-right',[414,38,1470,940],1158,256,505,432);
+sprite('jerome-bottom',[167,347,1506,941],532,669,602,267);
+const human=[25,248,2149,562],opponent=[437,225,1735,459];
+const holder=sprite('human-holder',human,590,572,491,79);
+const opponents=[];
+for(const [x,y,w,h,angle] of [[727,157,222,47,180],[446,403,190,40,100],[1027,403,190,40,-100]]){
+ const group=document.createElement('div');Object.assign(group.style,{position:'absolute',left:x+'px',top:y+'px',width:w+'px',height:h+'px',transform:`rotate(${angle}deg)`});stage.append(group);
+ const back=sprite('opponent-holder',opponent,0,0,w,h);group.append(back);const cards=document.createElement('div');group.append(cards);const front=sprite('opponent-holder',opponent,0,0,w,h,'front');group.append(front);opponents.push({group,cards,w,h});
+}
+const layer=document.createElement('div');stage.append(layer);
+function card(src,x,y,w,h,angle=0,parent=layer){const img=new Image();img.className='card';img.src='assets/reference-cards/'+src;img.alt='';Object.assign(img.style,{left:x+'px',top:y+'px',width:w+'px',height:h+'px',transform:`rotate(${angle}deg)`});parent.append(img);}
+function paint(){layer.replaceChildren();opponents.forEach(o=>o.cards.replaceChildren());const n=+document.querySelector('#count').value;const faces=['green-14.png','red-13.png','yellow-12.png','black-10.png'];
+ for(let i=0;i<n;i++){const spread=n>1?i/(n-1)-.5:0;card(faces[i%4],810+spread*395,549+Math.abs(spread)*24,49,70,spread*13);}
+ for(const o of opponents)for(let i=0;i<n;i++){const s=n>1?i/(n-1)-.5:0;card('cardback-griffin-clean.jpg',o.w/2-12+s*(o.w-35),-20+Math.abs(s)*4,24,43,s*8,o.cards);}
+}
+paint();
+// Reuse genuine holder artwork above card bottoms rather than drawing a fake rail.
+sprite('human-holder',human,590,572,491,79,'front');
+for(const [name,x,y] of [['Cinder',828,116],['Dagger',278,620],['Crow',1443,633],['Jerome',833,909]]){const t=document.createElement('div');t.className='seat-label';t.textContent=name;t.style.left=x+'px';t.style.top=y+'px';stage.append(t);}
+const ref=document.querySelector('#reference');stage.append(ref);
+document.querySelector('#count').onchange=paint;
+document.querySelector('#cards').onclick=e=>{layer.hidden=!layer.hidden;opponents.forEach(o=>o.cards.hidden=layer.hidden);e.target.textContent=layer.hidden?'Show cards':'Hide cards';};
+const compare=document.querySelector('#compare');compare.onpointerdown=e=>{compare.setPointerCapture(e.pointerId);document.body.classList.add('reference');};compare.onpointerup=compare.onpointercancel=()=>document.body.classList.remove('reference');
+function fit(){const s=Math.min(innerWidth/1672,innerHeight/941);Object.assign(stage.style,{transform:`scale(${s})`,left:(innerWidth-1672*s)/2+'px',top:(innerHeight-941*s)/2+'px'});}addEventListener('resize',fit);fit();
+</script></html>
