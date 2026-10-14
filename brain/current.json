@@ -514,5 +514,6 @@
   "animationMenuRemovalStatus": "TEST_LIVE_VERIFIED_ANDROID_PENDING",
   "animationMenuRemovalCommit": "7d6d4ae3696b2d1f9df856192eeeb5794aa845e1",
   "atmosphereControlsCheckpoint": "../coordination/ATMOSPHERE_CONTROLS_20261014.md",
-  "atmosphereControlsStatus": "BROWSER_TESTED_TEST_PUBLICATION_ANDROID_PENDING"
+  "atmosphereControlsStatus": "TEST_LIVE_VERIFIED_ANDROID_PENDING",
+  "atmosphereControlsCommit": "0307ba69cceaaaf68317e6dffe3dd7d09e033ac6"
 }
