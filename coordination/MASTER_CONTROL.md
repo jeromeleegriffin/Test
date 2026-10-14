@@ -125,3 +125,10 @@ FINAL CURRENT STATE:790 delivered pending Android review; includes789 holder cue
 ## 2026-10-14 — standing direct Test updates; stability review rollout
 
 Jerome explicitly authorized reviewed updates directly to Test instead of routine full ZIPs. Read [TEST_SITE_WORKFLOW.md](TEST_SITE_WORKFLOW.md) and [MAIN_DEVELOPMENT_STABILITY_20261014.md](MAIN_DEVELOPMENT_STABILITY_20261014.md). This supersedes earlier Test-only publication holds within the requested development scope; production stays protected. Reviewed805-stability includes retained menu/rules/career repairs and confirmed X1/timer/audio/action/restore corrections; Android acceptance pending. No official numbered ZIP or new Master Brain version is created. Rollback branch `rollback/test-before-stability-20261014-9a8f4d` preserves previous Test797. Deployment verification receipt is under releases/stability-9a8f4d4242e1-20261014/. Separate chats must read this record; no automatic notification.
+
+
+## Official pre-landscape fallback — October 14, 2026 14:24 EDT
+
+Owner designates current805-ownerreview/805-atmosphere1 as the official pre-landscape fallback. Complete source b551144768084fc81c12de03682eae4e78f8e600 preserved at rollback/pre-landscape-20261014. Read PRE_LANDSCAPE_FALLBACK_20261014.md and current.json before assignments. Brain AC history retained with this supplement. Current known tablet navigation/nameplate touch issues remain OPEN; no blanket defect-free or new physical-device verification claim. No runtime change or new ZIP by this checkpoint.
+
+Landscape overhaul must be isolated and delivered as a test ZIP only: DO NOT PUBLISH to Test or production. This overrides standing Test publication permission for the landscape overhaul.809 is a reference handoff, not a game. Real artwork required; no generation without explicit Generate. Preserve portrait and authoritative game state. Another specialist owns Cloudflare followup; inspect its current status before any Worker change. Separate chats must read these records; no automatic notification.
