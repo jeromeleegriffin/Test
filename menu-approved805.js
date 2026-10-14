@@ -10,6 +10,8 @@ function init(){
  const adapters=document.createElement('div');adapters.hidden=true;adapters.id='houseMenuAdapters';document.body.append(adapters);
  for(const id of ['showRules','replayTutorialBtn','installAppBtn'])if($(id))adapters.append($(id));
  const entry=document.createElement('div');entry.id='houseFriendsEntry805';const host=$('friendsToggleBtn');host.before(entry);entry.append(host,$('joinBtn'));$('joinBtn').textContent='Join by Code';
+ $('scoreSpeed701').before($('bidProgress'));
+ const layout=$('ghTopLayout693');if(layout){(dev()?$('btnSolDiagIdentify').parentElement:adapters).append(layout);}
  old.hidden=true;
  const make=(id,title)=>{const d=document.createElement('dialog');d.id=id;d.className='house-public-dialog';d.setAttribute('aria-label',title);d.innerHTML='<header class="visual-head805"><button type="button" class="house-back" aria-label="Back to previous menu">‹ Back</button><div><h2 tabindex="-1" autofocus></h2></div><button type="button" class="visual-close805" aria-label="Close">×</button></header><div class="house-content"></div>';d.querySelector('h2').textContent=title;if(id==='houseMenu805')d.querySelector('h2').hidden=true;document.body.append(d);return d};
  const menu=make('houseMenu805','Menu'),sound=make('houseSound805','Sounds & Atmosphere'),details=make('houseDetails805','');
@@ -61,6 +63,7 @@ function init(){
  }
  function rules(){ $('showRules')?.click();const source=$('rulesModal').querySelector('.rules-text');reference('House Rules',source,()=>$('rulesModal').classList.add('hidden'));}
  function guide(){HORProgression.localCareer.showCareerGuide();const el=$('horCareerGuide');reference('Levels & awards guide',el,()=>el.style.display='none');}
+ function matchScore(){const body=detail('Match Score');note(body,`${$('scoreTeamNameA').textContent} ${$('scoreA').textContent} · ${$('scoreTeamNameB').textContent} ${$('scoreB').textContent}`);note(body,`First to ${$('targetDisplay').textContent}`);action(body,'Match statistics','Completed hands and results',()=>records('stats'));}
  function records(kind){const id=kind==='stats'?'stats':'history';$(id==='stats'?'btnStats':'btnHistory')?.click();const modal=$(id+'Modal'),source=$(id==='stats'?'statsBody':'historyBody');reference(id==='stats'?'Match statistics':'Hand history',source,()=>modal.classList.add('hidden'));action(details.querySelector('.house-content'),'Copy scores','',()=>$(id==='stats'?'statsCopy':'historyCopy')?.click());}
  function career(){const body=detail('My Career & Awards');action(body,'My career & achievement progress','Your level, statistics and earned awards',()=>{externalOpen=true;restoreControls();close(details);horShowMyCareer();});action(body,'Match statistics','Details from this game',()=>records('stats'));action(body,'Hand history','Review completed hands',()=>records('history'));action(body,'Levels & awards guide','Browse career requirements',guide);action(body,'Download career backup','Keep a copy of your saved progress',()=>HORProgression.protection.downloadBackup());action(body,'Restore career backup','Use your validated backup file',()=>HORProgression.localCareer.restoreCareerFromRecoveryCode());}
  addEventListener('hor-career-card-closed',e=>{if(!externalOpen)return;externalOpen=false;if(e.detail?.back){returning=true;career();returning=false;}else closeAll();releasePause();});
@@ -79,10 +82,11 @@ function init(){
  const heHead=$('houseEffects064')?.querySelector('.he064-head');if(heHead){const b=document.createElement('button');b.type='button';b.className='house-back';b.textContent='‹ Back';b.onclick=()=>$('he064Done').click();heHead.prepend(b);}
  action(main,'Volume Controls','Master, voices, game effects, character effects and ambience',volumes);action(main,'Room Ambience','Fireplace and room balance',roomBalance);action(main,'House Effects previews','Listen to sounds and preview animations',previews);
  function openSound(from=returnFocus){remember('Sounds & Atmosphere');if(!$('hostOptionsModal').classList.contains('hidden'))closeHostOptionsModal();open(sound,from);}
- const routes={'Join by Code':joinByCode,'Menu':()=>show(returnFocus),'My Profile':profile,'My Career & Awards':career,'Play With Friends':friends,'Sounds & Atmosphere':()=>openSound(),'Volume Controls':volumes,'Room Ambience':roomBalance,'Game Setup':tableSetup,'More table rules':advancedRules,'How to Play':how,'House Rules':rules,'Levels & awards guide':guide,'Match statistics':()=>records('stats'),'Hand history':()=>records('history')};
+ const routes={'Match Score':matchScore,'Join by Code':joinByCode,'Menu':()=>show(returnFocus),'My Profile':profile,'My Career & Awards':career,'Play With Friends':friends,'Sounds & Atmosphere':()=>openSound(),'Volume Controls':volumes,'Room Ambience':roomBalance,'Game Setup':tableSetup,'More table rules':advancedRules,'How to Play':how,'House Rules':rules,'Levels & awards guide':guide,'Match statistics':()=>records('stats'),'Hand history':()=>records('history')};
  // Latest owner-selected menu. This single definition is used at both triggers.
  const definition=[
   ['join','Join by Code',"Enter a friend's table code",'⌨',joinByCode],
+  ['score','Match Score','Running team scores and match statistics','♜',matchScore],
   ['profile','My Profile','Your name, avatar and voice','◇',profile],
   ['career','My Career & Awards','Level, statistics and achievement progress','★',career],
   ['friends','Play With Friends','Host, join or invite friends','♧',friends],
@@ -94,7 +98,7 @@ function init(){
   ['owner','Owner Tools','Local development tools','⌘',()=>{if(!dev())return;closeAll();legacyOpen();}]
  ];
  const buttons=new Map();for(const [id,title,description,icon,fn]of definition){const b=document.createElement('button');b.type='button';b.dataset.houseAction=id;b.innerHTML='<span class="house-icon" aria-hidden="true"></span><span class="house-copy"><b></b><small></small></span><span class="house-chevron" aria-hidden="true">›</span>';b.querySelector('.house-icon').textContent=icon;if(id==='friends')b.querySelector('.house-icon').innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="8" r="2.5"/><path d="M2 20v-3a6 6 0 0 1 12 0v3zm13 0v-3a7 7 0 0 0-1-4c4-1 8 1 8 5v2z"/></svg>';b.querySelector('b').textContent=title;b.querySelector('small').textContent=description;b.onclick=fn;nav.append(b);buttons.set(id,b);}
- function sync(){buttons.get('owner').hidden=!dev();buttons.get('install').hidden=!$('installAppBtn')||$('installAppBtn').classList.contains('hidden');buttons.get('leave').hidden=!(active()||seated());if(bidRequired()){
+ function sync(){buttons.get('score').hidden=!active();buttons.get('owner').hidden=!dev();buttons.get('install').hidden=!$('installAppBtn')||$('installAppBtn').classList.contains('hidden');buttons.get('leave').hidden=!(active()||seated());if(bidRequired()){
    const nativeOpen=menu.open||sound.open||details.open;
    const career=$('horPublicCareerCard'),careerOpen=career&&getComputedStyle(career).display!=='none',previewOpen=$('houseEffects064')&&!$('houseEffects064').hidden;
    const hadExternal=externalOpen||careerOpen||previewOpen;externalOpen=false;

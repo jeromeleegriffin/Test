@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '805-tabletjoin2';
+const APP_VERSION = '805-headerbid';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -10862,26 +10862,11 @@ function updateBidProgress() {
     ? players[bidder].team
     : (bidder % 2);
   const made = bidderTeam === 0 ? ptsA : ptsB;
-  const other = bidderTeam === 0 ? ptsB : ptsA;
   const need = Math.max(0, bid - made);
-  const label = (typeof teamLabel === 'function')
-    ? teamLabel
-    : (i) => (i === 1 ? 'Raven' : 'Griffin');
-  const us = label(bidderTeam);
-  const them = label(1 - bidderTeam);
-  const tricksDone = Array.isArray(recentTricks) ? recentTricks.length : 0;
-  const trickBit = tricksDone >= 3 ? ` · trick ${tricksDone}` : '';
+  const us = typeof teamLabel === 'function' ? teamLabel(bidderTeam) : (bidderTeam === 1 ? 'Raven' : 'Griffin');
   el.classList.remove('hidden', 'made', 'short');
-  let line;
-  if (phase === 'discard' || phase === 'trump') {
-    line = `${us} bid ${bid} · need ${need} more`;
-  } else if (need === 0) {
-    el.classList.add('made');
-    line = `${us} has it — ${made} / ${bid}${trickBit} · ${them} ${other}`;
-  } else {
-    el.classList.add('short');
-    line = `${us} ${made} / ${bid} — need ${need} more${trickBit} · ${them} ${other}`;
-  }
+  el.classList.add(need === 0 ? 'made' : 'short');
+  const line = `${us} ${made} of ${bid} · ${need === 0 ? 'Bid made' : `Need ${need} more`}`;
   el.textContent = line;
   el.title = line;
   if (felt) {
