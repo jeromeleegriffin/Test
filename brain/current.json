@@ -10,9 +10,9 @@
   "startupPrompt": "versions/AC/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
   "history": "history.html",
   "previousVersion": "AB",
-  "checkpoint": "approved-room-menu-friends-805",
-  "checkpointStatus": "DOCUMENTATION_CURRENT_805_DELIVERED_PHONE_REVIEW_PENDING",
-  "approvedWorkingBuild": "783",
+  "checkpoint": "official-pre-landscape-fallback-20261014",
+  "checkpointStatus": "OWNER_DESIGNATED_OFFICIAL_PRE_LANDSCAPE_FALLBACK_WITH_OPEN_ISSUES",
+  "approvedWorkingBuild": "805-ownerreview/805-atmosphere1",
   "testRootObservedBuild": "805-ownerreview",
   "gamePublicationStatus": "TEST_OWNER_REVIEW_REPAIRS_LIVE_SHARE_ICON_OPEN",
   "onScreenVersion": "805-ownerreview Test runtime; no new ZIP",
@@ -29,7 +29,7 @@
   "archive074Status": "GAME_REPAIR_CANDIDATE_NOT_ANDROID_APPROVED",
   "archive075Sha256": "c111cc8c38f5ee64f76a1950e4d540f24590dd3f715195d517b4d16445316eca",
   "archive075Status": "DOCUMENTATION_ONLY_NOT_A_PLAYABLE_BUILD",
-  "rollbackCandidate": "783",
+  "rollbackCandidate": "805-ownerreview/805-atmosphere1",
   "candidateStatus": "805_DELIVERED_PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED",
   "roomStateCheckpoint": "R531-room-state",
   "roomStateStatus": "OWNER_VERIFIED_FIXED",
@@ -42,7 +42,7 @@
   "kittyIntegrationStatus": "OWNER_APPROVED_PRESERVED_IN751",
   "kittyPortablePackageLibraryId": "libfile_aab3a1735ed081918c6780b8af61600c",
   "brainVerificationStatus": "AC_SESSION_EVIDENCE_RECONCILED",
-  "approvedWorkingBuildSha256": "813748886c0668aabf5ba06a9ae65a8a0878e7339a31bbbc3203716a1acd3b38",
+  "approvedWorkingBuildSha256": null,
   "latestLocalCandidateBuild": "805-stability",
   "discardIntegrationStatus": "OWNER_APPROVED_PRESERVED_IN751",
   "specialistCheckpointUpdatePolicy": "Every requested task must include a complete Brain status update; publish within task authorization, otherwise supply ready handoff",
@@ -58,7 +58,7 @@
   "signatureShuffleLibraryFileId": "libfile_809231d5167c8191bb1651de900b664a",
   "trumpVoiceStatus": "EXISTING_CLIPS_PRESERVED_779_WITH_HUMAN_VOICE_CHOICES",
   "trumpVoiceReviewLibraryFileId": "libfile_5c43ca8ca7088191af96e6fa6e980e55",
-  "mainDevelopmentCheckpoint": "../coordination/MAIN_DEVELOPMENT_STABILITY_20261014.md",
+  "mainDevelopmentCheckpoint": "../coordination/PRE_LANDSCAPE_FALLBACK_20261014.md",
   "smallBiddingStatus": "PRESERVED771_WITH_CHARACTER_STATUS_ANCHOR_REPAIRS",
   "railClearanceStatus": "PRESERVED771_EXISTING_SAFE_SUPPRESSION_LIMIT_UNCHANGED",
   "latestGameBuild": "805-ownerreview",
@@ -67,7 +67,7 @@
   "cleanFallbackCandidate": "766",
   "cleanFallbackStatus": "766_OWNER_APPROVED_HISTORICAL_FALLBACK",
   "testServerPlannedBuild": "805-ownerreview",
-  "testServerDeploymentStatus": "TEST_OWNER_REVIEW_LIVE_VERIFIED_ANDROID_PENDING_SHARE_ICON_OPEN",
+  "testServerDeploymentStatus": "OFFICIAL_PRE_LANDSCAPE_FALLBACK_ALREADY_LIVE_KNOWN_ISSUES_RETAINED",
   "defaultIntelligence": "CHALLENGER-X1 frozen card play with owner-authorized sampled bid-jump evaluation",
   "backupIntelligence": "Sol7 original frozen",
   "epaEnabled": false,
@@ -82,7 +82,7 @@
     "physicalTabletVerified": false,
     "implementedBuild": "771"
   },
-  "testServerDeploymentCommit": "1216deb1a2a43cc3d9531ba23ea81a506201f691",
+  "testServerDeploymentCommit": "0307ba69cceaaaf68317e6dffe3dd7d09e033ac6",
   "testServerUrl": "https://jeromeleegriffin.github.io/Test/",
   "testRootRollbackCommit": "b912530bcffe9b5de733721c7fd710b9aa492acf",
   "fullCastTrumpVoiceCheckpoint": "../coordination/FULL_CAST_TRUMP_VOICES_790.md",
@@ -153,8 +153,8 @@
   },
   "approvedVisualDesign": {
     "date": "2026-10-14",
-    "room": "B \u2014 Fireplace Priority",
-    "menu": "A \u2014 slim right overlay",
+    "room": "B — Fireplace Priority",
+    "menu": "A — slim right overlay",
     "sound": "Reviewed Sound & Atmosphere using actual mixer controls",
     "ownerDesignApproved": true,
     "owner805PhoneAccepted": false,
@@ -254,7 +254,7 @@
     "mainDevelopmentCheckpoint": "../coordination/SESSION_798_805.md"
   },
   "standingTestWorkflow": "../coordination/TEST_SITE_WORKFLOW.md",
-  "currentTestReleaseReceipt": "../coordination/WELCOME_ORNAMENT_RECEIPT.json",
+  "currentTestReleaseReceipt": "../coordination/releases/atmosphere-controls-20261014/LIVE_RECEIPT.json",
   "currentOwnerMenuDecision": "Latest explicit owner choice: shared midnight-blue/gold individually raised buttons, fixed non-scrolling pages; supersedes conflicting Menu A appearance history only.",
   "latestTestRepairCheckpoint": "../coordination/WELCOME_ORNAMENT_HANDOFF_20261014.md",
   "shareIconRepair": {
@@ -274,9 +274,9 @@
   },
   "currentTestSource": {
     "type": "GitHub Test runtime",
-    "commit": "4906beda73eca044d44af1e222971aed2b111b05",
+    "commit": "b551144768084fc81c12de03682eae4e78f8e600",
     "runtime": "805-ownerreview",
-    "source": "805-welcome plus scoped owner review repairs; original archives retained"
+    "cacheRevision": "805-atmosphere1"
   },
   "previousRuntimeLiveVerification": {
     "status": "LIVE_OWNER_CORRECTIONS_FILES_AND_BROWSER_VERIFIED",
@@ -515,5 +515,39 @@
   "animationMenuRemovalCommit": "7d6d4ae3696b2d1f9df856192eeeb5794aa845e1",
   "atmosphereControlsCheckpoint": "../coordination/ATMOSPHERE_CONTROLS_20261014.md",
   "atmosphereControlsStatus": "TEST_LIVE_VERIFIED_ANDROID_PENDING",
-  "atmosphereControlsCommit": "0307ba69cceaaaf68317e6dffe3dd7d09e033ac6"
+  "atmosphereControlsCommit": "0307ba69cceaaaf68317e6dffe3dd7d09e033ac6",
+  "previousApprovedCheckpointBeforePreLandscape": {
+    "approvedWorkingBuild": "783",
+    "approvedWorkingBuildSha256": "813748886c0668aabf5ba06a9ae65a8a0878e7339a31bbbc3203716a1acd3b38",
+    "rollbackCandidate": "783"
+  },
+  "preLandscapeFallback": {
+    "id": "805-ownerreview/805-atmosphere1",
+    "sourceCommit": "b551144768084fc81c12de03682eae4e78f8e600",
+    "runtimeCommit": "0307ba69cceaaaf68317e6dffe3dd7d09e033ac6",
+    "branch": "rollback/pre-landscape-20261014",
+    "record": "../coordination/PRE_LANDSCAPE_FALLBACK_20261014.md",
+    "status": "OWNER_DESIGNATED_OFFICIAL_PRE_LANDSCAPE_FALLBACK_WITH_OPEN_ISSUES",
+    "ownerDecisionAt": "2026-10-14T14:24:40-04:00",
+    "knownOpenIssues": [
+      "Onn tablet Menu and Leave Room inaccessible during bidding and play",
+      "Full name and level stat-card hit targets",
+      "Local nameplate/card touch overlap",
+      "Native Android share icon"
+    ],
+    "landscapePolicy": "ISOLATED_TEST_ZIP_ONLY_DO_NOT_PUBLISH",
+    "noNewZip": true,
+    "physicalAndroidFullyVerified": false
+  },
+  "approvedWorkingBuildCommit": "b551144768084fc81c12de03682eae4e78f8e600",
+  "approvedWorkingBuildHashNote": "Exact Git commit identifies complete current source; no new archive SHA256. Older783 archive hash retained in previousApprovedCheckpointBeforePreLandscape.",
+  "landscapeDevelopmentPolicy": {
+    "delivery": "ISOLATED_TEST_ZIP_ONLY",
+    "testSitePublishing": false,
+    "productionPublishing": false,
+    "reference": "809.zip",
+    "referenceSha256": "3fc14fa02bc54423a9d2d84cb392d08c61c227969c844b622bb9c9264ec1e432",
+    "artworkGeneration": "REQUIRES_EXPLICIT_GENERATE",
+    "implementationStarted": false
+  }
 }
