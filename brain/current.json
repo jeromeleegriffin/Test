@@ -508,5 +508,6 @@
     "verification": "../coordination/OWNER_REVIEW_VERIFICATION_20261014.json"
   },
   "menuFinishCheckpoint": "../coordination/MENU_FINISH_20261014.md",
-  "menuFinishStatus": "IMPLEMENTED_TEST_PUBLICATION_PENDING_ANDROID_REVIEW"
+  "menuFinishStatus": "TEST_LIVE_FILES_AND_BROWSER_VERIFIED_ANDROID_PENDING",
+  "menuFinishCommit": "b744951e5f02dbf1776a6f7b5cc076816490d8da"
 }
