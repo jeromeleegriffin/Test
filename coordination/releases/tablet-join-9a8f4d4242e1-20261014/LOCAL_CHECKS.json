@@ -1,0 +1,1120 @@
+{
+  "phoneScoreboardGeometryIdentical": true,
+  "before": [
+    {
+      "width": 393,
+      "height": 647,
+      "title": {
+        "x": 52.4453125,
+        "y": 58,
+        "width": 288.109375,
+        "height": 35.4375,
+        "top": 58,
+        "right": 340.5546875,
+        "bottom": 93.4375,
+        "left": 52.4453125
+      },
+      "contract": {
+        "x": 28.8125,
+        "y": 109,
+        "width": 335.375,
+        "height": 40.390625,
+        "top": 109,
+        "right": 364.1875,
+        "bottom": 149.390625,
+        "left": 28.8125
+      },
+      "modal": {
+        "x": 9.8125,
+        "y": 18,
+        "width": 373.375,
+        "height": 611,
+        "top": 18,
+        "right": 383.1875,
+        "bottom": 629,
+        "left": 9.8125
+      },
+      "actions": {
+        "x": 19.8125,
+        "y": 575,
+        "width": 353.375,
+        "height": 44,
+        "top": 575,
+        "right": 373.1875,
+        "bottom": 619,
+        "left": 19.8125
+      },
+      "body": {
+        "x": 19.8125,
+        "y": 98,
+        "width": 353.375,
+        "height": 469,
+        "top": 98,
+        "right": 373.1875,
+        "bottom": 567,
+        "left": 19.8125
+      },
+      "buttons": [
+        {
+          "text": "Full history",
+          "rect": {
+            "x": 19.8125,
+            "y": 575,
+            "width": 108.765625,
+            "height": 44,
+            "top": 575,
+            "right": 128.578125,
+            "bottom": 619,
+            "left": 19.8125
+          }
+        },
+        {
+          "text": "Copy night\u2019s scores",
+          "rect": {
+            "x": 135.578125,
+            "y": 575,
+            "width": 108.78125,
+            "height": 44,
+            "top": 575,
+            "right": 244.359375,
+            "bottom": 619,
+            "left": 135.578125
+          }
+        },
+        {
+          "text": "Next Hand",
+          "rect": {
+            "x": 251.359375,
+            "y": 575,
+            "width": 121.828125,
+            "height": 44,
+            "top": 575,
+            "right": 373.1875,
+            "bottom": 619,
+            "left": 251.359375
+          }
+        }
+      ]
+    },
+    {
+      "width": 667,
+      "height": 916,
+      "title": {
+        "x": 171.265625,
+        "y": 174.6875,
+        "width": 324.46875,
+        "height": 44.59375,
+        "top": 174.6875,
+        "right": 495.734375,
+        "bottom": 219.28125,
+        "left": 171.265625
+      },
+      "contract": {
+        "x": 144.5,
+        "y": 203.6875,
+        "width": 378,
+        "height": 48.390625,
+        "top": 203.6875,
+        "right": 522.5,
+        "bottom": 252.078125,
+        "left": 144.5
+      },
+      "modal": {
+        "x": 123.5,
+        "y": 132.6875,
+        "width": 420,
+        "height": 650.625,
+        "top": 132.6875,
+        "right": 543.5,
+        "bottom": 783.3125,
+        "left": 123.5
+      },
+      "actions": {
+        "x": 135.5,
+        "y": 725.3125,
+        "width": 396,
+        "height": 46,
+        "top": 725.3125,
+        "right": 531.5,
+        "bottom": 771.3125,
+        "left": 135.5
+      },
+      "body": {
+        "x": 135.5,
+        "y": 192.6875,
+        "width": 396,
+        "height": 524.625,
+        "top": 192.6875,
+        "right": 531.5,
+        "bottom": 717.3125,
+        "left": 135.5
+      },
+      "buttons": [
+        {
+          "text": "Full history",
+          "rect": {
+            "x": 135.5,
+            "y": 725.3125,
+            "width": 122.421875,
+            "height": 46,
+            "top": 725.3125,
+            "right": 257.921875,
+            "bottom": 771.3125,
+            "left": 135.5
+          }
+        },
+        {
+          "text": "Copy night\u2019s scores",
+          "rect": {
+            "x": 264.921875,
+            "y": 725.3125,
+            "width": 122.4375,
+            "height": 46,
+            "top": 725.3125,
+            "right": 387.359375,
+            "bottom": 771.3125,
+            "left": 264.921875
+          }
+        },
+        {
+          "text": "Next Hand",
+          "rect": {
+            "x": 394.359375,
+            "y": 725.3125,
+            "width": 137.140625,
+            "height": 46,
+            "top": 725.3125,
+            "right": 531.5,
+            "bottom": 771.3125,
+            "left": 394.359375
+          }
+        }
+      ]
+    },
+    {
+      "width": 534,
+      "height": 906,
+      "title": {
+        "x": 104.765625,
+        "y": 206.203125,
+        "width": 324.46875,
+        "height": 42.765625,
+        "top": 206.203125,
+        "right": 429.234375,
+        "bottom": 248.96875,
+        "left": 104.765625
+      },
+      "contract": {
+        "x": 78,
+        "y": 235.203125,
+        "width": 378,
+        "height": 48.390625,
+        "top": 235.203125,
+        "right": 456,
+        "bottom": 283.59375,
+        "left": 78
+      },
+      "modal": {
+        "x": 57,
+        "y": 164.203125,
+        "width": 420,
+        "height": 577.578125,
+        "top": 164.203125,
+        "right": 477,
+        "bottom": 741.78125,
+        "left": 57
+      },
+      "actions": {
+        "x": 69,
+        "y": 683.78125,
+        "width": 396,
+        "height": 46,
+        "top": 683.78125,
+        "right": 465,
+        "bottom": 729.78125,
+        "left": 69
+      },
+      "body": {
+        "x": 69,
+        "y": 224.203125,
+        "width": 396,
+        "height": 451.578125,
+        "top": 224.203125,
+        "right": 465,
+        "bottom": 675.78125,
+        "left": 69
+      },
+      "buttons": [
+        {
+          "text": "Full history",
+          "rect": {
+            "x": 69,
+            "y": 683.78125,
+            "width": 122.421875,
+            "height": 46,
+            "top": 683.78125,
+            "right": 191.421875,
+            "bottom": 729.78125,
+            "left": 69
+          }
+        },
+        {
+          "text": "Copy night\u2019s scores",
+          "rect": {
+            "x": 198.421875,
+            "y": 683.78125,
+            "width": 122.4375,
+            "height": 46,
+            "top": 683.78125,
+            "right": 320.859375,
+            "bottom": 729.78125,
+            "left": 198.421875
+          }
+        },
+        {
+          "text": "Next Hand",
+          "rect": {
+            "x": 327.859375,
+            "y": 683.78125,
+            "width": 137.140625,
+            "height": 46,
+            "top": 683.78125,
+            "right": 465,
+            "bottom": 729.78125,
+            "left": 327.859375
+          }
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "title": {
+        "x": 221.765625,
+        "y": 228.6875,
+        "width": 324.46875,
+        "height": 44.59375,
+        "top": 228.6875,
+        "right": 546.234375,
+        "bottom": 273.28125,
+        "left": 221.765625
+      },
+      "contract": {
+        "x": 195,
+        "y": 257.6875,
+        "width": 378,
+        "height": 48.390625,
+        "top": 257.6875,
+        "right": 573,
+        "bottom": 306.078125,
+        "left": 195
+      },
+      "modal": {
+        "x": 174,
+        "y": 186.6875,
+        "width": 420,
+        "height": 650.625,
+        "top": 186.6875,
+        "right": 594,
+        "bottom": 837.3125,
+        "left": 174
+      },
+      "actions": {
+        "x": 186,
+        "y": 779.3125,
+        "width": 396,
+        "height": 46,
+        "top": 779.3125,
+        "right": 582,
+        "bottom": 825.3125,
+        "left": 186
+      },
+      "body": {
+        "x": 186,
+        "y": 246.6875,
+        "width": 396,
+        "height": 524.625,
+        "top": 246.6875,
+        "right": 582,
+        "bottom": 771.3125,
+        "left": 186
+      },
+      "buttons": [
+        {
+          "text": "Full history",
+          "rect": {
+            "x": 186,
+            "y": 779.3125,
+            "width": 122.421875,
+            "height": 46,
+            "top": 779.3125,
+            "right": 308.421875,
+            "bottom": 825.3125,
+            "left": 186
+          }
+        },
+        {
+          "text": "Copy night\u2019s scores",
+          "rect": {
+            "x": 315.421875,
+            "y": 779.3125,
+            "width": 122.4375,
+            "height": 46,
+            "top": 779.3125,
+            "right": 437.859375,
+            "bottom": 825.3125,
+            "left": 315.421875
+          }
+        },
+        {
+          "text": "Next Hand",
+          "rect": {
+            "x": 444.859375,
+            "y": 779.3125,
+            "width": 137.140625,
+            "height": 46,
+            "top": 779.3125,
+            "right": 582,
+            "bottom": 825.3125,
+            "left": 444.859375
+          }
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "width": 393,
+      "height": 647,
+      "title": {
+        "x": 52.4453125,
+        "y": 58,
+        "width": 288.109375,
+        "height": 35.4375,
+        "top": 58,
+        "right": 340.5546875,
+        "bottom": 93.4375,
+        "left": 52.4453125
+      },
+      "contract": {
+        "x": 28.8125,
+        "y": 109,
+        "width": 335.375,
+        "height": 40.390625,
+        "top": 109,
+        "right": 364.1875,
+        "bottom": 149.390625,
+        "left": 28.8125
+      },
+      "modal": {
+        "x": 9.8125,
+        "y": 18,
+        "width": 373.375,
+        "height": 611,
+        "top": 18,
+        "right": 383.1875,
+        "bottom": 629,
+        "left": 9.8125
+      },
+      "actions": {
+        "x": 19.8125,
+        "y": 575,
+        "width": 353.375,
+        "height": 44,
+        "top": 575,
+        "right": 373.1875,
+        "bottom": 619,
+        "left": 19.8125
+      },
+      "body": {
+        "x": 19.8125,
+        "y": 98,
+        "width": 353.375,
+        "height": 469,
+        "top": 98,
+        "right": 373.1875,
+        "bottom": 567,
+        "left": 19.8125
+      },
+      "buttons": [
+        {
+          "text": "Full history",
+          "rect": {
+            "x": 19.8125,
+            "y": 575,
+            "width": 108.765625,
+            "height": 44,
+            "top": 575,
+            "right": 128.578125,
+            "bottom": 619,
+            "left": 19.8125
+          }
+        },
+        {
+          "text": "Copy night\u2019s scores",
+          "rect": {
+            "x": 135.578125,
+            "y": 575,
+            "width": 108.78125,
+            "height": 44,
+            "top": 575,
+            "right": 244.359375,
+            "bottom": 619,
+            "left": 135.578125
+          }
+        },
+        {
+          "text": "Next Hand",
+          "rect": {
+            "x": 251.359375,
+            "y": 575,
+            "width": 121.828125,
+            "height": 44,
+            "top": 575,
+            "right": 373.1875,
+            "bottom": 619,
+            "left": 251.359375
+          }
+        }
+      ]
+    },
+    {
+      "width": 667,
+      "height": 916,
+      "title": {
+        "x": 163.5,
+        "y": 193.703125,
+        "width": 340,
+        "height": 44.59375,
+        "top": 193.703125,
+        "right": 503.5,
+        "bottom": 238.296875,
+        "left": 163.5
+      },
+      "contract": {
+        "x": 84.5,
+        "y": 259.296875,
+        "width": 498,
+        "height": 48.390625,
+        "top": 259.296875,
+        "right": 582.5,
+        "bottom": 307.6875,
+        "left": 84.5
+      },
+      "modal": {
+        "x": 63.5,
+        "y": 139.703125,
+        "width": 540,
+        "height": 636.59375,
+        "top": 139.703125,
+        "right": 603.5,
+        "bottom": 776.296875,
+        "left": 63.5
+      },
+      "actions": {
+        "x": 75.5,
+        "y": 718.296875,
+        "width": 516,
+        "height": 46,
+        "top": 718.296875,
+        "right": 591.5,
+        "bottom": 764.296875,
+        "left": 75.5
+      },
+      "body": {
+        "x": 75.5,
+        "y": 248.296875,
+        "width": 516,
+        "height": 462,
+        "top": 248.296875,
+        "right": 591.5,
+        "bottom": 710.296875,
+        "left": 75.5
+      },
+      "buttons": [
+        {
+          "text": "Full history",
+          "rect": {
+            "x": 75.5,
+            "y": 718.296875,
+            "width": 160.890625,
+            "height": 46,
+            "top": 718.296875,
+            "right": 236.390625,
+            "bottom": 764.296875,
+            "left": 75.5
+          }
+        },
+        {
+          "text": "Copy night\u2019s scores",
+          "rect": {
+            "x": 243.390625,
+            "y": 718.296875,
+            "width": 160.890625,
+            "height": 46,
+            "top": 718.296875,
+            "right": 404.28125,
+            "bottom": 764.296875,
+            "left": 243.390625
+          }
+        },
+        {
+          "text": "Next Hand",
+          "rect": {
+            "x": 411.28125,
+            "y": 718.296875,
+            "width": 180.21875,
+            "height": 46,
+            "top": 718.296875,
+            "right": 591.5,
+            "bottom": 764.296875,
+            "left": 411.28125
+          }
+        }
+      ]
+    },
+    {
+      "width": 534,
+      "height": 906,
+      "title": {
+        "x": 96.984375,
+        "y": 194.828125,
+        "width": 340,
+        "height": 42.765625,
+        "top": 194.828125,
+        "right": 436.984375,
+        "bottom": 237.59375,
+        "left": 96.984375
+      },
+      "contract": {
+        "x": 37.015625,
+        "y": 258.59375,
+        "width": 459.953125,
+        "height": 48.390625,
+        "top": 258.59375,
+        "right": 496.96875,
+        "bottom": 306.984375,
+        "left": 37.015625
+      },
+      "modal": {
+        "x": 16.015625,
+        "y": 140.828125,
+        "width": 501.953125,
+        "height": 624.34375,
+        "top": 140.828125,
+        "right": 517.96875,
+        "bottom": 765.171875,
+        "left": 16.015625
+      },
+      "actions": {
+        "x": 28.015625,
+        "y": 707.171875,
+        "width": 477.953125,
+        "height": 46,
+        "top": 707.171875,
+        "right": 505.96875,
+        "bottom": 753.171875,
+        "left": 28.015625
+      },
+      "body": {
+        "x": 28.015625,
+        "y": 247.59375,
+        "width": 477.953125,
+        "height": 451.578125,
+        "top": 247.59375,
+        "right": 505.96875,
+        "bottom": 699.171875,
+        "left": 28.015625
+      },
+      "buttons": [
+        {
+          "text": "Full history",
+          "rect": {
+            "x": 28.015625,
+            "y": 707.171875,
+            "width": 148.6875,
+            "height": 46,
+            "top": 707.171875,
+            "right": 176.703125,
+            "bottom": 753.171875,
+            "left": 28.015625
+          }
+        },
+        {
+          "text": "Copy night\u2019s scores",
+          "rect": {
+            "x": 183.703125,
+            "y": 707.171875,
+            "width": 148.703125,
+            "height": 46,
+            "top": 707.171875,
+            "right": 332.40625,
+            "bottom": 753.171875,
+            "left": 183.703125
+          }
+        },
+        {
+          "text": "Next Hand",
+          "rect": {
+            "x": 339.40625,
+            "y": 707.171875,
+            "width": 166.5625,
+            "height": 46,
+            "top": 707.171875,
+            "right": 505.96875,
+            "bottom": 753.171875,
+            "left": 339.40625
+          }
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "title": {
+        "x": 214,
+        "y": 247.703125,
+        "width": 340,
+        "height": 44.59375,
+        "top": 247.703125,
+        "right": 554,
+        "bottom": 292.296875,
+        "left": 214
+      },
+      "contract": {
+        "x": 135,
+        "y": 313.296875,
+        "width": 498,
+        "height": 48.390625,
+        "top": 313.296875,
+        "right": 633,
+        "bottom": 361.6875,
+        "left": 135
+      },
+      "modal": {
+        "x": 114,
+        "y": 193.703125,
+        "width": 540,
+        "height": 636.59375,
+        "top": 193.703125,
+        "right": 654,
+        "bottom": 830.296875,
+        "left": 114
+      },
+      "actions": {
+        "x": 126,
+        "y": 772.296875,
+        "width": 516,
+        "height": 46,
+        "top": 772.296875,
+        "right": 642,
+        "bottom": 818.296875,
+        "left": 126
+      },
+      "body": {
+        "x": 126,
+        "y": 302.296875,
+        "width": 516,
+        "height": 462,
+        "top": 302.296875,
+        "right": 642,
+        "bottom": 764.296875,
+        "left": 126
+      },
+      "buttons": [
+        {
+          "text": "Full history",
+          "rect": {
+            "x": 126,
+            "y": 772.296875,
+            "width": 160.890625,
+            "height": 46,
+            "top": 772.296875,
+            "right": 286.890625,
+            "bottom": 818.296875,
+            "left": 126
+          }
+        },
+        {
+          "text": "Copy night\u2019s scores",
+          "rect": {
+            "x": 293.890625,
+            "y": 772.296875,
+            "width": 160.890625,
+            "height": 46,
+            "top": 772.296875,
+            "right": 454.78125,
+            "bottom": 818.296875,
+            "left": 293.890625
+          }
+        },
+        {
+          "text": "Next Hand",
+          "rect": {
+            "x": 461.78125,
+            "y": 772.296875,
+            "width": 180.21875,
+            "height": 46,
+            "top": 772.296875,
+            "right": 642,
+            "bottom": 818.296875,
+            "left": 461.78125
+          }
+        }
+      ]
+    }
+  ],
+  "topJoin": [
+    {
+      "width": 320,
+      "height": 568,
+      "firstVisibleEntry": "join",
+      "noMenuScroll": true,
+      "existingJoinHandlerInvoked": true,
+      "codeFormBack": true,
+      "seatedJoinRequiresSafeLeave": true
+    },
+    {
+      "width": 393,
+      "height": 647,
+      "firstVisibleEntry": "join",
+      "noMenuScroll": true,
+      "existingJoinHandlerInvoked": true,
+      "codeFormBack": true,
+      "seatedJoinRequiresSafeLeave": true
+    },
+    {
+      "width": 667,
+      "height": 916,
+      "firstVisibleEntry": "join",
+      "noMenuScroll": true,
+      "existingJoinHandlerInvoked": true,
+      "codeFormBack": true,
+      "seatedJoinRequiresSafeLeave": true
+    }
+  ],
+  "menu": [
+    {
+      "width": 320,
+      "height": 568,
+      "root": {
+        "h": 544,
+        "w": 286,
+        "top": 12,
+        "bottom": 556,
+        "scroll": 542,
+        "client": 542,
+        "bodyScroll": 420,
+        "bodyHeight": 420,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 117.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 178.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 252.5625
+          },
+          {
+            "text": "Play With FriendsHost, join or invite friends\u203a",
+            "bottom": 313.75
+          },
+          {
+            "text": "\u266aSounds & AtmosphereVoices, effects and the room a",
+            "bottom": 387.9375
+          },
+          {
+            "text": "\u2699Game SetupScore to win and selected table rules\u203a",
+            "bottom": 462.125
+          }
+        ],
+        "page": "Page 1 of 2"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 1
+        },
+        {
+          "name": "career",
+          "pages": 2
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 1
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    },
+    {
+      "width": 393,
+      "height": 647,
+      "root": {
+        "h": 620,
+        "w": 350,
+        "top": 12,
+        "bottom": 632,
+        "scroll": 618,
+        "client": 618,
+        "bodyScroll": 551,
+        "bodyHeight": 551,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 119.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 180.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 241.5625
+          },
+          {
+            "text": "Play With FriendsHost, join or invite friends\u203a",
+            "bottom": 302.75
+          },
+          {
+            "text": "\u266aSounds & AtmosphereVoices, effects and the room a",
+            "bottom": 363.9375
+          },
+          {
+            "text": "\u2699Game SetupScore to win and selected table rules\u203a",
+            "bottom": 425.125
+          },
+          {
+            "text": "?How to PlayRules, bidding, scoring and the Moon\u203a",
+            "bottom": 486.3125
+          },
+          {
+            "text": "\u2193Install on This PhoneKeep the House close at hand",
+            "bottom": 547.5
+          }
+        ],
+        "page": "Page 1 of 1"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 1
+        },
+        {
+          "name": "career",
+          "pages": 1
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 1
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    },
+    {
+      "width": 360,
+      "height": 480,
+      "root": {
+        "h": 456,
+        "w": 326,
+        "top": 12,
+        "bottom": 468,
+        "scroll": 454,
+        "client": 454,
+        "bodyScroll": 326,
+        "bodyHeight": 326,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 120.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 181.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 242.5625
+          },
+          {
+            "text": "Play With FriendsHost, join or invite friends\u203a",
+            "bottom": 303.75
+          },
+          {
+            "text": "\u266aSounds & AtmosphereVoices, effects and the room a",
+            "bottom": 364.9375
+          }
+        ],
+        "page": "Page 1 of 2"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 1
+        },
+        {
+          "name": "career",
+          "pages": 2
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 2
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    },
+    {
+      "width": 800,
+      "height": 360,
+      "root": {
+        "h": 336,
+        "w": 350,
+        "top": 12,
+        "bottom": 348,
+        "scroll": 334,
+        "client": 334,
+        "bodyScroll": 216,
+        "bodyHeight": 216,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 115.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 176.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 237.5625
+          }
+        ],
+        "page": "Page 1 of 3"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 3
+        },
+        {
+          "name": "career",
+          "pages": 2
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 2
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    }
+  ],
+  "changes": [
+    {
+      "path": "index.html",
+      "sha256": "1d6668065c861a00126b6dbfe0d9be4f1aaeaa73188a02e558fcce50b1d459e6"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "305178fa9b0e020d7303a39ddc2a2c016839593406ec0fef8925be4b8b7f9897"
+    },
+    {
+      "path": "game060.js",
+      "sha256": "7cbd59ea21a9237b67de14532a9c9151e898088cb4912c31743772bf587baadf"
+    },
+    {
+      "path": "hor-version.js",
+      "sha256": "77b28d4f88716c7f9300cf23807b4f6dba1f6159c66e745d37aa014db87f6522"
+    },
+    {
+      "path": "sw060.js",
+      "sha256": "77f03f21860ad568592cf38440e813640cf4dfd24add0c06be2899d4e56196c4"
+    },
+    {
+      "path": "menu-approved805.js",
+      "sha256": "0dd8f4cec9d95e3878584b746fea4230c75966ea845db2b3ed4f1ae03c3e5841"
+    },
+    {
+      "path": "tablet-scoreboard805.css",
+      "sha256": "8e60c7765baeeeb5e438997fc44d7041319e6146f56972d6a130069eeeb1c39b"
+    }
+  ]
+}

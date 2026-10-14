@@ -1,0 +1,10 @@
+/* Scoped tablet portrait repair. Phone and landscape rules retain ownership. */
+@media (orientation:portrait) and (min-width:521px){
+ #scoreModal:not(.showing-remaining) .modal-content.scoreboard-modal{width:min(94vw,540px)!important;padding-top:10px!important;}
+ #scoreModal:not(.showing-remaining) #scoreModalTitle{
+  position:relative!important;top:auto!important;left:auto!important;transform:none!important;
+  align-self:center!important;flex:0 0 auto!important;margin:42px 0 10px!important;
+ }
+ #scoreModal:not(.showing-remaining) .ghsb-team .sb-total{white-space:nowrap!important;font-size:clamp(1.8rem,5vw,2.5rem)!important;}
+ #scoreModal:not(.showing-remaining) .ghsb-team-icon{width:46px!important;height:56px!important;}
+}
