@@ -1,0 +1,17 @@
+{
+  "runtime": "805-tabletjoin2",
+  "commit": "350deb5ec88c6e3dcd6c305dc457a1d8d831987f",
+  "rollbackCommit": "58d0d879f1b073222d17370bb83e933fdd72ba72",
+  "intermediateMenuOnlyCommit": "8bc2f0b54226b8c9480025b4a0728b1f8f13c78e",
+  "pagesRunId": 38560447018,
+  "pagesConclusion": "success",
+  "changedServedFiles": 7,
+  "allChangedServedBytesMatch": true,
+  "directLandingJoin": "Visible beside Play With Friends; original form/confirm/Back reused",
+  "localChecks": "Three phone/tablet direct join tests and four complete navigation cases passed; tablet title/banner clear at534/667/768; phone393 scoreboard geometry identical",
+  "cloudflareWorker": "Not changed or verified; shared scoped integration handoff provided. Public403 and automatic review rejected broader account enumeration. Its native room transport must be preserved.",
+  "nativeAndroidAcceptance": false,
+  "productionTouched": false,
+  "newZip": false,
+  "standingWorkflow": "TEST_SITE_WORKFLOW.md"
+}
