@@ -5,7 +5,7 @@
   "updated": "2026-10-14",
   "approvedWorkingBuild": "783",
   "historicalNumbersThrough": 750,
-  "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
+  "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H\u2013U.",
   "nextNumberHint": 806,
   "nextNumberHintIsNotReservation": true,
   "records": [
@@ -180,7 +180,7 @@
         "archiveCRC": "PASS",
         "fileHashManifest": "PASS"
       },
-      "testLimits": "Chromium153 mobile/touch emulation; owl production timer callbacks invoked without 15–30-minute endurance wait. No physical Android/audio hardware, owner-installed cache upgrade, live PeerJS multiplayer or full scored match. Subjective shuffle realism and faint audibility await owner review.",
+      "testLimits": "Chromium153 mobile/touch emulation; owl production timer callbacks invoked without 15\u201330-minute endurance wait. No physical Android/audio hardware, owner-installed cache upgrade, live PeerJS multiplayer or full scored match. Subjective shuffle realism and faint audibility await owner review.",
       "deploymentStatus": "NOT_DEPLOYED",
       "ownerShuffleCorrection": {
         "date": "2026-10-11",
@@ -405,7 +405,7 @@
       "ownerAudioCorrection": {
         "date": "2026-10-11",
         "ownerQuote": "Now that video shows part of the sound cutting out.",
-        "scope": "763 audio split rejected: introduced622ms artificial silence at2.111–2.733s. Replace with764 uninterrupted native excerpt; retain correct first onset and visuals.",
+        "scope": "763 audio split rejected: introduced622ms artificial silence at2.111\u20132.733s. Replace with764 uninterrupted native excerpt; retain correct first onset and visuals.",
         "replacementCandidate": "764",
         "wholeGameApproval": false
       }
@@ -431,7 +431,7 @@
       "fileId": "file_000000008d0481f69c8ab21e9666a63b",
       "checkpointArtifactPath": "HANDOFF/BUILD_764/MASTER_BRAIN_READY_UPDATE.md",
       "checkpointStatus": "Complete Brain-ready checkpoint and both permanent rules; BrainW unchanged",
-      "scope": "Remove763 introduced622ms mid-recording gap. One native stereo excerpt3.014–5.10 from corrected release onset1.825; subsequent original cadence continuous.762visuals/gameplay/approved Raven preview/cabin preserved.",
+      "scope": "Remove763 introduced622ms mid-recording gap. One native stereo excerpt3.014\u20135.10 from corrected release onset1.825; subsequent original cadence continuous.762visuals/gameplay/approved Raven preview/cabin preserved.",
       "tests": {
         "productionSpeedsCueCount2NativeRate": "PASS",
         "production46FlightsIdentitySingleCompletion": "PASS",
@@ -478,7 +478,7 @@
       "previewLibraryFileId": "libfile_c876134f0db881919bdcfcc406350fb1",
       "checkpointArtifactPath": "HANDOFF/BUILD_765/MASTER_BRAIN_READY_UPDATE.md",
       "checkpointStatus": "Complete Brain-ready checkpoint with both permanent rules; BrainW unchanged",
-      "scope": "Separate COMPLETE native riffle3.014–3.80 and bridge3.80–5.10 at verified quiet boundary; align actual rendered frames73/127; validated bounded output-clock mapping. Preserve764visuals/normaltempo/pitch/all originalassets/gameplay.",
+      "scope": "Separate COMPLETE native riffle3.014\u20133.80 and bridge3.80\u20135.10 at verified quiet boundary; align actual rendered frames73/127; validated bounded output-clock mapping. Preserve764visuals/normaltempo/pitch/all originalassets/gameplay.",
       "tests": {
         "firstRiffleOfflineErrorMs": 2.125,
         "bridgeOfflineErrorMs": 3.599,
@@ -487,7 +487,7 @@
         "firstRiffleEncodedVideoErrorMs": 1.791,
         "bridgeEncodedVideoErrorMs": 3.265,
         "quietBoundary1x3xFourMsPeak": 0,
-        "fullSourceRangeRetainedOnce": "3.014–5.10",
+        "fullSourceRangeRetainedOnce": "3.014\u20135.10",
         "nativeRatesAndSpeedModes": "PASS",
         "production46FlightsIdentitySingleCompletion": "PASS",
         "muteCardVolumeZero": "PASS",
@@ -2104,7 +2104,7 @@
       "sourceGameBuild": "803 plus approved pending Friends/RoomB/MenuA and offline fixes"
     }
   ],
-  "testSiteBuild": "797",
+  "testSiteBuild": "805-stability",
   "previousApprovedWorkingBuild": "779",
   "publishedBrainApprovedBuild": "783",
   "publishedBrainVersion": "AC",
@@ -2123,11 +2123,29 @@
       "number": null,
       "status": "OWNER_PHONE_APPROVED",
       "approvalQuote": "Okay, everything worked."
+    },
+    {
+      "filename": "HouseStability-9a8f4d4242e1.zip",
+      "libraryFileId": "libfile_9aa904ab89c88191829e50ee9e0af68c",
+      "sha256": "ed0edd7e44c6cdc762daa5e0c817b36892a9f13efc04b08c63cb310e10d859e2",
+      "bytes": 155503581,
+      "number": null,
+      "status": "TEST_DEPLOYED_PENDING_OWNER_ANDROID_REVIEW",
+      "runtime": "805-stability",
+      "releaseId": "stability-9a8f4d4242e1-20261014",
+      "deployedCommit": "731fe47ffb0616413b42272e1311ce164a11673e",
+      "ownerDeploymentAuthorized": true,
+      "ownerAndroidAccepted": false
     }
   ],
   "latestDeliveredGameBuild": "805",
   "latestDeliveredGameStatus": "PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED",
   "latestDeliveredGameSha256": "1b7057efbb8eb39ff039867952ac4b74ab97f1e5cf18370a56357c4b4d91cc6e",
   "latestVisualReviewBuild": "804",
-  "lastReconciliation": "798–805 retrospectively registered from retained archive hashes; no earlier remote reservation is claimed"
+  "lastReconciliation": "798\u2013805 retrospectively registered from retained archive hashes; no earlier remote reservation is claimed",
+  "testSitePreviousBuild": "797",
+  "testSiteReleaseId": "stability-9a8f4d4242e1-20261014",
+  "testSiteRuntimeCommit": "731fe47ffb0616413b42272e1311ce164a11673e",
+  "standingTestWorkflow": "coordination/TEST_SITE_WORKFLOW.md",
+  "lastTestDeploymentReceipt": "coordination/releases/stability-9a8f4d4242e1-20261014/LIVE_RECEIPT.json"
 }
