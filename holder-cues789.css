@@ -58,8 +58,11 @@ body.in-game .lt-hand-wrap[data-holder-reduced="true"][data-holder-cue] { animat
  body.in-game .game-room>.hand-area>.holder-cue-wash793{
   display:block;position:absolute;left:0;right:0;bottom:0;height:var(--holder049-height);
   z-index:11;pointer-events:none!important;opacity:0;
-  clip-path:polygon(0 58%,4% 61%,96% 61%,100% 58%,100% 100%,0 100%);
-  background:linear-gradient(to bottom,transparent 56%,rgba(255,225,146,.9) 61%,rgba(255,210,105,.45) 69%,rgba(255,210,105,.23) 93%,rgba(255,235,170,.9) 100%);
+  /* The same raster registration as the furniture: brighten the complete
+     wooden center face, inside its brass frame, without touching end caps. */
+  clip-path:inset(55% 5.5% 7% 5.5%);
+  background:url("assets/cardholder/holder047.png") 50% 49.2% / 104.458% 253.333% no-repeat;
+  filter:brightness(1.65);
  }
  body.in-game .hand-area #holderPlaques784{z-index:12!important;}
  body.in-game .hand-area #holderIdentity784::after,
@@ -76,6 +79,16 @@ body.in-game .lt-hand-wrap[data-holder-reduced="true"][data-holder-cue] { animat
  body.in-game .hand-area[data-holder-reduced="true"][data-holder-cue]>.holder-cue-wash793,
  body.in-game .hand-area[data-holder-reduced="true"][data-holder-cue] #holderIdentity784::after,
  body.in-game .hand-area[data-holder-reduced="true"][data-holder-cue] #holderPlaques784 #trickPtsBar::after{animation:none!important;opacity:.65;}
+
+ /* Owner's phone correction: both cues belong on the straight front
+    strip. Keep both curved brass end caps and the backrest at normal brightness.
+    The existing wash/plaque cue owns the pulse, including reduced motion. */
+ body.in-game .game-room>.hand-area[data-holder-cue]>.hand-rail,
+ body.in-game .game-room>.hand-area[data-holder-cue]>.holder004-backrest,
+ body.in-game .game-room>.hand-area[data-holder-cue]::after{
+  animation:none!important;
+  filter:none!important;
+ }
 }
 @keyframes holder793-turn{0%,100%{opacity:.85}50%{opacity:0}}
 @keyframes holder793-win{0%,42.5%{opacity:1}15%,30%,72.5%,100%{opacity:0}}

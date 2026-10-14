@@ -17,8 +17,8 @@
   return assigned;
  }
  function assetPath(voice,color){if(!colors.includes(color)||voice==='silent')return null;if(cast[voice])return cast[voice].colors[color];if(voice==='jerome')return 'voices/jerome/trumps_are_'+color+'.ogg';return ['male','female'].includes(voice)?'assets/trump-voice/'+voice+'-'+color+'.wav':null;}
- function volume(){const v=window.he064Volumes?.gameplay;return Math.max(0,Math.min(1,Number.isFinite(v)?v:(window.he064Gain?window.he064Gain('card'):1)));}
- function allowed(preview=false){return !document.hidden&&(preview||document.body.classList.contains('in-game'))&&typeof soundMuted!=='undefined'&&!soundMuted&&soundCard&&volume()>0;}
+ function volume(){return 1;}
+ function allowed(preview=false){return !document.hidden&&(preview||document.body.classList.contains('in-game'))&&typeof soundMuted!=='undefined'&&!soundMuted&&window.HORAudioMixer.voicesAllowed();}
  function stop(reason){serial++;event=null;if(source){try{source.stop();}catch(_){}source=null;}activeGain=null;record('stop',{reason});}
  function load(voice,color){
   const path=assetPath(voice,color);if(!path)return Promise.resolve(null);
@@ -41,7 +41,7 @@
    whenAudioReady(ctx=>{
     clearTimeout(timeout);if(!current()){resolve(false);return;}
     const s=ctx.createBufferSource(),gain=ctx.createGain();s.buffer=buffer;gain.gain.value=.8*volume();
-    s.connect(gain);gain.connect(ctx.destination);source=s;activeGain=gain;
+    s.connect(gain);gain.connect(window.HORAudioMixer.output(ctx,'voices'));source=s;activeGain=gain;
     if(typeof presentationSounds035!=='undefined')presentationSounds035.add(s);
     s.onended=()=>{if(source===s){source=null;activeGain=null;}if(typeof presentationSounds035!=='undefined')presentationSounds035.delete(s);s.disconnect();gain.disconnect();};
     s.start();record(isPreview?'preview':'played',{id:e.id,color:e.color,voice:e.voice,avatar:e.avatar,chooser:e.chooser,path:assetPath(e.voice,e.color)});resolve(true);
@@ -73,7 +73,6 @@
  }
  function preview(avatar,preference){stop('preview');const voice=effectiveVoice(avatar,preference);if(voice==='silent')return Promise.resolve(false);event={voice,avatar,color:'red'};return announce(event,true);}
  addEventListener('pagehide',()=>{stop('pagehide');previous=null;});
- document.addEventListener('input',e=>{if(e.target?.matches('[data-vol=gameplay]')){const v=Math.max(0,Math.min(1,Number(e.target.value)/100));if(v===0)stop('zero-volume');else if(activeGain)activeGain.gain.value=.8*v;}});
  document.addEventListener('pointerdown',preload,{once:true,passive:true});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop('hidden');});
  new MutationObserver(()=>{if(!document.body.classList.contains('in-game')){if(event?.id)stop('left-table');previous=null;}}).observe(document.body,{attributes:true,attributeFilter:['class']});

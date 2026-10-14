@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '797';
+const APP_VERSION = '805-stability';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -67,8 +67,6 @@ let specialsAnytime = false;
 let mustTrumpWhenVoid = false;
 /** CrowsNest-style: if made, score only the bid amount (not full counters taken) */
 let bidOnlyScoring = false;
-/** If makers take more than bid, overage is subtracted from their score */
-let sandbagging = false;
 /** Nest counters go to 'lastTrick' (default partnership) or 'bidder' */
 let nestGoesTo = 'lastTrick';
 /** Who leads the first trick of play, relative to the bid winner:
@@ -376,7 +374,8 @@ function horShowMyCareer(){
   try{
     const prof=horMyCareerProfile();
     if(prof&&prof.enabled&&window.HORProgression&&HORProgression.localCareer&&HORProgression.localCareer.showCareerCard){HORProgression.localCareer.showCareerCard(prof);return true;}
-    if(window.HORProgression&&HORProgression.localCareer&&HORProgression.localCareer.showActivationPanel){HORProgression.localCareer.showActivationPanel();return false;}
+    if(window.HORHouseMenu805?.openCareer){HORHouseMenu805.openCareer();return false;}
+    if(window.HORHouseMenu805?.ownerToolsAvailable()&&window.HORProgression&&HORProgression.localCareer?.showActivationPanel){HORProgression.localCareer.showActivationPanel();return false;}
   }catch(e){console.error('[My Career]',e);}
   return false;
 }
@@ -385,7 +384,7 @@ function horWireMyCareerButtons(){document.querySelectorAll('[data-hor-my-career
 document.addEventListener('DOMContentLoaded',horWireMyCareerButtons);
 window.addEventListener('hor-career-ready',horWireMyCareerButtons);
 function horBroadcastCareerProfile(){const profile=horMyCareerProfile();if(isHost){const me=(players||[]).find(p=>p&&!p.isBot&&p.id===myPeerId);if(me)me.careerPublic=profile;broadcast({type:'careerProfile',id:myPeerId,profile});}else if(hostConnection&&hostConnection.open){hostConnection.send({type:'careerProfile',id:myPeerId,profile});}}
-function horCareerAnnouncement(ev){if(!ev||!window.HORProgression||!HORProgression.presentation||!window.horOtherCareerPopups)return;HORProgression.presentation.enqueue(Object.assign({remote:true},ev));}
+function horCareerAnnouncement(ev){/* Remote awards remain stored by their owner; never produce local pop-ups. */}
 window.horCareerLocalAnnouncement=function(ev){try{if(!horCareerModeOn()||!ev)return;if(isHost)broadcast({type:'careerAnnouncement',from:myPeerId,event:ev});else if(hostConnection&&hostConnection.open)hostConnection.send({type:'careerAnnouncement',from:myPeerId,event:ev});}catch(e){}};
 window.horCareerModeChanged=function(){try{horRefreshBotCareerProfiles();horBroadcastCareerProfile();renderUI();}catch(e){}};
 function horRefreshBotCareerProfiles(){
@@ -637,7 +636,7 @@ function savePreferredAvatar(id) {
 // Rook549: first-time humans get a random persistent avatar instead of AVATARS[0].
 // Existing/manual selections are never overwritten. Bots keep their existing assignment path.
 function validHumanVoice(value) {return ['avatar','male','female','silent'].includes(value)?value:'avatar';}
-function loadPreferredVoice() {try{if(window.HORFounderDev?.enabled&&localStorage.getItem(PLAYER_AVATAR_KEY)==='jerome_founder')return localStorage.getItem('horFounderVoiceV1')==='silent'?'silent':'male';const v=localStorage.getItem('griffinHousePlayerVoice');return ['male','female','silent'].includes(v)?v:'silent';}catch(_){return 'silent';}}
+function loadPreferredVoice() {try{if(window.HORFounderDev?.enabled&&localStorage.getItem(PLAYER_AVATAR_KEY)==='jerome_founder')return localStorage.getItem('horFounderVoiceV1')==='silent'?'silent':'male';const v=localStorage.getItem('griffinHousePlayerVoice');return ['male','female','silent'].includes(v)?v:'avatar';}catch(_){return 'silent';}}
 function savePreferredVoice(value) {try{if(window.HORFounderDev?.enabled&&localStorage.getItem(PLAYER_AVATAR_KEY)==='jerome_founder'){localStorage.setItem('horFounderVoiceV1',value==='silent'?'silent':'male');return;}localStorage.setItem('griffinHousePlayerVoice',validHumanVoice(value));}catch(_){}}
 function ensurePreferredAvatar() {
   const existing = loadPreferredAvatar();
@@ -695,7 +694,6 @@ try {
   window.horAvatarMotion = localStorage.getItem('horAvatarMotion') !== '0';
   window.horTvDisplay = localStorage.getItem('horTvDisplay') === '1';
   window.horHostKickMute = localStorage.getItem('horHostKickMute') === '1';
-  window.horOtherCareerPopups = localStorage.getItem('horOtherCareerPopups') === '1';
   document.body.classList.toggle('no-avatar-motion', window.horAvatarMotion === false);
   document.body.classList.toggle('hor-tv-display', !!window.horTvDisplay);
 } catch (e) {}
@@ -781,15 +779,6 @@ let horPingSentAt = 0;
 let horJoinConn = null;      // latest in-flight join DataConnection
 window.horLastPingMs = 0;
 
-function loadMyBank() {
-  try { return Math.max(0, parseInt(localStorage.getItem('horBank'), 10) || 0); } catch (e) { return 0; }
-}
-function saveMyBank(n) {
-  try { localStorage.setItem('horBank', String(Math.max(0, Math.floor(Number(n) || 0)))); } catch (e) {}
-}
-function tableMsgCost() {
-  return 100;
-}
 function pickBotTalkLine(kind, seat, ctx) {
   const me = (players[seat] && players[seat].name) || 'Bot';
   const other = (ctx && ctx.name) || 'them';
@@ -845,7 +834,7 @@ function pickBotTalkLine(kind, seat, ctx) {
       'Raise it. I like these cards.',
       'We’re going to the nest.',
       'Someone has to bid. Might as well be me.',
-      'Auction’s open. Wallet’s open.',
+      'Auction’s open. Let’s play.',
       'I didn’t come here to pass pretty.',
       'Bump it. The nest looks hungry.',
       'This hand has a number on it.',
@@ -1041,7 +1030,7 @@ function pickBotTalkLine(kind, seat, ctx) {
     winningTaunt: [
       'Scoreboard’s ugly for you. Get used to it.',
       'We’re not just winning, we’re renting this table.',
-      'Keep dealing. I like free money.',
+      'Keep dealing. I like these cards.',
       'This isn’t a comeback story. It’s a eulogy.',
       'You’re not losing, you’re spectating.',
       'I’d say good game, but it hasn’t been one — for you.',
@@ -1111,116 +1100,8 @@ function pickBotTalkLine(kind, seat, ctx) {
   if (!lines || !lines.length) return '';
   return lines[Math.floor(Math.random() * lines.length)];
 }
-function botMaybeTableTalk(kind, ctx) {
-  // Rook565 stabilization: bots never generate/send table chat. Human chat is untouched.
-  return;
-  if (!isHost) return;
-  if (!players || !players.length) return;
-  const now = Date.now();
-  if (window._botTalkAt && now - window._botTalkAt < 8000) return;
-  if (Math.random() > 0.42) return;
-  const cost = tableMsgCost();
-  const rich = [];
-  players.forEach((p, i) => {
-    if (p && p.isBot && bankOfSeat(i) >= cost) rich.push(i);
-  });
-  if (!rich.length) return;
-  let seat = rich[Math.floor(Math.random() * rich.length)];
-  if (ctx && typeof ctx.prefer === 'number' && rich.indexOf(ctx.prefer) >= 0 && Math.random() < 0.65) {
-    seat = ctx.prefer;
-  }
-  const text = pickBotTalkLine(kind, seat, ctx);
-  if (!text) return;
-  window._botTalkAt = now;
-  setSeatBank(seat, bankOfSeat(seat) - cost);
-  const nm = (players[seat] && players[seat].name) || 'Bot';
-  setTimeout(() => {
-    try { showTableMsgPopup(nm, text); } catch (e) {}
-    try { updateBankDisplays(); } catch (e) {}
-    try { broadcast({ type: 'tableMsg', name: nm, text, banks: players.map(p => p.bank || 0) }); } catch (e) {}
-  }, 450 + Math.floor(Math.random() * 800));
-}
-/** After a hand's scores land, let a random bot razz the table based on who's
- * actually ahead in the match (not just who made/set this one hand). Only
- * fires when there's a real gap, so it doesn't chirp on a near-tied game. */
-function botMaybeStandingsTaunt() {
-  // Rook565 stabilization: bots never generate/send standings taunts.
-  return;
-  if (!isHost) return;
-  if (!players || !players.length) return;
-  if (!game || !Array.isArray(game.scores)) return;
-  const now = Date.now();
-  if (window._botTalkAt && now - window._botTalkAt < 8000) return;
-  if (Math.random() > 0.42) return;
-  const diff = (game.scores[0] || 0) - (game.scores[1] || 0);
-  if (Math.abs(diff) < 20) return; // too close to bother taunting
-  const cost = tableMsgCost();
-  const rich = [];
-  players.forEach((p, i) => {
-    if (p && p.isBot && bankOfSeat(i) >= cost) rich.push(i);
-  });
-  if (!rich.length) return;
-  const seat = rich[Math.floor(Math.random() * rich.length)];
-  const seatIsAhead = (players[seat].team === 0) === (diff > 0);
-  const kind = seatIsAhead ? 'winningTaunt' : 'losingTaunt';
-  const text = pickBotTalkLine(kind, seat, {});
-  if (!text) return;
-  window._botTalkAt = now;
-  setSeatBank(seat, bankOfSeat(seat) - cost);
-  const nm = (players[seat] && players[seat].name) || 'Bot';
-  setTimeout(() => {
-    try { showTableMsgPopup(nm, text); } catch (e) {}
-    try { updateBankDisplays(); } catch (e) {}
-    try { broadcast({ type: 'tableMsg', name: nm, text, banks: players.map(p => p.bank || 0) }); } catch (e) {}
-  }, 450 + Math.floor(Math.random() * 800));
-}
-function bankOfSeat(idx) {
-  const list = (game && game.players && game.players.length) ? game.players : players;
-  const p = list && list[idx];
-  if (p && typeof p.bank === 'number') return p.bank;
-  if (players[idx] && typeof players[idx].bank === 'number') return players[idx].bank;
-  return 0;
-}
-function setSeatBank(idx, amount) {
-  const n = Math.max(0, Math.floor(Number(amount) || 0));
-  if (players[idx]) players[idx].bank = n;
-  if (game && game.players && game.players[idx]) game.players[idx].bank = n;
-  if ((players[idx] && players[idx].id === myPeerId) || idx === myIndex) saveMyBank(n);
-}
-function creditCapture(idx, pts) {
-  const add = Math.floor(Number(pts) || 0);
-  if (idx == null || idx < 0 || add <= 0) return;
-  setSeatBank(idx, bankOfSeat(idx) + add);
-  try { updateBankDisplays(); } catch (e) {}
-}
-function formatBank(n) { return '$' + Math.max(0, Math.floor(Number(n) || 0)); }
-function beerCost() { return 150; }
-function whisperCost() { return 200; }
-function buzzRemainMs(idx) {
-  const p = players[idx] || (game && game.players && game.players[idx]);
-  if (!p || !p.buzzUntil) return 0;
-  return Math.max(0, p.buzzUntil - Date.now());
-}
-function formatBuzzLeft(idx) {
-  const ms = buzzRemainMs(idx);
-  if (ms <= 0) return 'Buzz worn off';
-  const s = Math.ceil(ms / 1000);
-  const m = Math.floor(s / 60);
-  const r = s % 60;
-  return 'Buzzed · ' + m + ':' + String(r).padStart(2, '0') + ' left';
-}
-function clearAllBuzz() {
-  (players || []).forEach((p, i) => {
-    if (!p) return;
-    p.buzzUntil = 0;
-    if (game && game.players && game.players[i]) game.players[i].buzzUntil = 0;
-  });
-  document.querySelectorAll('.seat-bought-beer').forEach((el) => el.remove());
-}
-function isBuzzed(idx) {
-  const p = players[idx] || (game && game.players && game.players[idx]);
-  return !!(p && p.buzzUntil && Date.now() < p.buzzUntil);
-}
+function botMaybeTableTalk() {}
+function botMaybeStandingsTaunt() {}
 function seatSlotIdForIndex(idx) {
   const base = (myIndex >= 0) ? myIndex : 0;
   if (idx === base) return 'slot-me';
@@ -1229,57 +1110,6 @@ function seatSlotIdForIndex(idx) {
   if (idx === (base + 3) % 4) return 'slot-right';
   return 'slot-me';
 }
-function animateBeerToSeat(idx) {
-  const from = $('slot-me') || document.body;
-  const to = $(seatSlotIdForIndex(idx)) || document.body;
-  const fly = document.createElement('div');
-  fly.className = 'beer-fly';
-  fly.textContent = '🍺';
-  const a = from.getBoundingClientRect();
-  const b = to.getBoundingClientRect();
-  fly.style.left = (a.left + a.width / 2 - 16) + 'px';
-  fly.style.top = (a.top + a.height / 2 - 16) + 'px';
-  document.body.appendChild(fly);
-  void fly.offsetWidth;
-  fly.style.transform = 'translate(' + ((b.left + b.width / 2) - (a.left + a.width / 2)) + 'px,' + ((b.top + 18) - (a.top + a.height / 2)) + 'px)';
-  setTimeout(() => {
-    fly.classList.add('landed');
-    let mug = to.querySelector('.seat-bought-beer');
-    if (!mug) {
-      mug = document.createElement('span');
-      mug.className = 'seat-bought-beer';
-      mug.textContent = '🍺';
-      mug.title = 'Buzzed';
-      const rack = to.querySelector('.seat-top-rack') || to;
-      rack.appendChild(mug);
-    }
-    setTimeout(() => { try { fly.remove(); } catch (e) {} }, 280);
-  }, 720);
-}
-function buyBotBeer(idx) {
-  if (!buyBeerBots) return;
-  if (idx == null || idx < 0 || !players[idx] || !players[idx].isBot) return;
-  if (!isHost) {
-    try { if (hostConnection) hostConnection.send({ type: 'buyBeer', seat: idx }); } catch (e) {}
-    return;
-  }
-  const seat = (myIndex >= 0) ? myIndex : 0;
-  const cost = beerCost();
-  if (bankOfSeat(seat) < cost) {
-    try { alert('A beer costs $' + cost + '. Capture more counters first.'); } catch (e) {}
-    return;
-  }
-  setSeatBank(seat, bankOfSeat(seat) - cost);
-  players[idx].buzzUntil = Date.now() + 5 * 60 * 1000;
-  if (game && game.players && game.players[idx]) game.players[idx].buzzUntil = players[idx].buzzUntil;
-  animateBeerToSeat(idx);
-  try { updateBankDisplays(); } catch (e) {}
-  try {
-    broadcast({ type: 'botBeer', seat: idx, buzzUntil: players[idx].buzzUntil, banks: players.map(p => p.bank || 0) });
-  } catch (e) {}
-}
-window.buyBotBeer = buyBotBeer;
-
 function showTableMsgPopup(name, text) {
   if(window.HORRavenFight741?.deferCelebration(()=>showTableMsgPopup(name,text)))return;
   const el = $('tableMsgPopup');
@@ -1302,174 +1132,10 @@ function showTableMsgPopup(name, text) {
   if (btn) btn.onclick = (e) => { e.preventDefault(); e.stopPropagation(); close(); };
   el.onclick = (e) => { if (e.target === el) close(); };
 }
-function loadTableMsgDraft() {
-  try { return String(localStorage.getItem('horTableMsgDraft') || ''); } catch (e) { return ''; }
+function normalizeTargetScore(value) {
+  const n = Number(value);
+  return Number.isFinite(n) ? Math.max(1, Math.min(2000, Math.trunc(n))) : 500;
 }
-function saveTableMsgDraft(text) {
-  try { localStorage.setItem('horTableMsgDraft', String(text || '').slice(0, 80)); } catch (e) {}
-}
-function clearTableMsgDraft() {
-  try { localStorage.removeItem('horTableMsgDraft'); } catch (e) {}
-}
-function refreshTableMsgCostLine() {
-  const whisper = whisperTargetIdx >= 0;
-  const cost = whisper ? whisperCost() : tableMsgCost();
-  const bank = bankOfSeat(myIndex >= 0 ? myIndex : 0);
-  const line = $('tableMsgCostLine');
-  const title = $('tableMsgModal') && $('tableMsgModal').querySelector('h2');
-  const who = (whisper && players[whisperTargetIdx]) ? players[whisperTargetIdx].name : '';
-  if (title) title.textContent = whisper ? ('Message ' + who) : 'Message the table';
-  if (!line) return;
-  if (whisper) {
-    if (bank < cost) line.textContent = 'Private note · $' + cost + ' · Bank $' + bank + ' — need $' + cost;
-    else line.textContent = 'Private note to ' + who + ' · $' + cost + ' · Bank $' + bank;
-    return;
-  }
-  if (bank < cost) line.textContent = 'Costs $' + cost + ' · Bank $' + bank + ' — held until you have $' + cost;
-  else line.textContent = 'Costs $' + cost + ' · Bank $' + bank;
-}
-function pinTableMsgModal() {
-  const modal = $('tableMsgModal');
-  if (!modal || modal.classList.contains('hidden')) return;
-  const box = modal.querySelector('.modal-content');
-  if (!box) return;
-  let top = 8;
-  try {
-    if (window.visualViewport) {
-      top = Math.max(8, Math.round(window.visualViewport.offsetTop + 8));
-    }
-  } catch (e) {}
-  box.style.position = 'fixed';
-  box.style.left = '50%';
-  box.style.top = top + 'px';
-  box.style.transform = 'translateX(-50%)';
-  box.style.width = 'min(400px, 92vw)';
-  box.style.maxHeight = '42vh';
-}
-function openWhisperBuy(idx) {
-  if (!whisperHumans) return;
-  if (idx == null || idx < 0 || !players[idx] || players[idx].isBot) return;
-  if (idx === myIndex) return;
-  whisperTargetIdx = idx;
-  openTableMsgBuy({ whisper: true, keepWhisper: true });
-  const locked = horExpOn('partnerChatAfterNest') && game && game.phase !== 'play' && game.phase !== 'score';
-  const send = $('tableMsgSend');
-  if (send) send.disabled = !!locked;
-  if (locked) {
-    const line = $('tableMsgCostLine');
-    if (line) line.textContent = 'Partner chat stays closed until trump is chosen and the nest is buried.';
-    try { horToast('Partner chat opens after the nest is buried.'); } catch (e) {}
-  }
-}
-window.openWhisperBuy = openWhisperBuy;
-function openTableMsgBuy(opts) {
-  const modal = $('tableMsgModal');
-  if (!modal) return;
-  if (!(opts && opts.keepWhisper)) whisperTargetIdx = (opts && opts.whisper) ? whisperTargetIdx : -1;
-  refreshTableMsgCostLine();
-  const inp = $('tableMsgInput');
-  if (inp) inp.value = loadTableMsgDraft();
-  modal.classList.remove('hidden');
-  pinTableMsgModal();
-  try { if (inp) setTimeout(() => { inp.focus(); pinTableMsgModal(); }, 50); } catch (e) {}
-}
-function closeTableMsgBuy() {
-  const inp = $('tableMsgInput');
-  if (inp) saveTableMsgDraft(String(inp.value || '').trim());
-  const modal = $('tableMsgModal');
-  if (modal) modal.classList.add('hidden');
-  whisperTargetIdx = -1;
-}
-function holdTableMsgBuy() {
-  const inp = $('tableMsgInput');
-  saveTableMsgDraft(String((inp && inp.value) || '').trim());
-  closeTableMsgBuy();
-}
-function submitTableMsgBuy() {
-  const inp = $('tableMsgInput');
-  const text = String((inp && inp.value) || '').replace(/\s+/g, ' ').trim().slice(0, 80);
-  if (!text) return;
-  saveTableMsgDraft(text);
-  const whisperTo = whisperTargetIdx;
-  const cost = whisperTo >= 0 ? whisperCost() : tableMsgCost();
-  const seat = (myIndex >= 0) ? myIndex : 0;
-  if (bankOfSeat(seat) < cost) {
-    refreshTableMsgCostLine();
-    return;
-  }
-  if (isHost) {
-    setSeatBank(seat, bankOfSeat(seat) - cost);
-    clearTableMsgDraft();
-    if (inp) inp.value = '';
-    const fromName = (players[seat] && players[seat].name) || myName || 'Player';
-    closeTableMsgBuy();
-    if (whisperTo >= 0) {
-      if (horExpOn('partnerChatAfterNest') && game && game.phase !== 'play' && game.phase !== 'score') {
-        try { horToast('Partner chat opens after the nest is buried.'); } catch (e) {}
-        return;
-      }
-      showTableMsgPopup(fromName + ' → ' + ((players[whisperTo] && players[whisperTo].name) || 'them'), text);
-      try { updateBankDisplays(); } catch (e) {}
-      try {
-        broadcast({
-          type: 'whisper',
-          from: seat,
-          to: whisperTo,
-          fromId: players[seat] && players[seat].id,
-          toId: players[whisperTo] && players[whisperTo].id,
-          name: fromName,
-          text,
-          banks: players.map(p => p.bank || 0)
-        });
-      } catch (e) {}
-      return;
-    }
-    showTableMsgPopup(fromName, text);
-    try { updateBankDisplays(); } catch (e) {}
-    try { broadcast({ type: 'tableMsg', name: fromName, text, banks: players.map(p => p.bank || 0) }); } catch (e) {}
-    return;
-  }
-  try {
-    if (hostConnection && hostConnection.open) {
-      hostConnection.send(whisperTo >= 0
-        ? { type: 'buyWhisper', to: whisperTo, text }
-        : { type: 'buyTableMsg', text });
-    }
-  } catch (e) {}
-  clearTableMsgDraft();
-  if (inp) inp.value = '';
-  closeTableMsgBuy();
-}
-function updateBankDisplays() {
-  const seatBase = (typeof myIndex === 'number' && myIndex >= 0) ? myIndex : 0;
-  const map = {
-    partner: (seatBase + 2) % 4,
-    left: (seatBase + 1) % 4,
-    right: (seatBase + 3) % 4,
-    me: seatBase
-  };
-  Object.keys(map).forEach((slot) => {
-    const el = document.querySelector('[data-bank-slot="' + slot + '"]');
-    if (!el) return;
-    const idx = map[slot];
-    el.textContent = formatBank(bankOfSeat(idx));
-    el.classList.toggle('is-mine', slot === 'me');
-    el.title = slot === 'me' ? 'Tap to send a table message' : '';
-  });
-  document.querySelectorAll('.wait-seat-bank').forEach((el) => {
-    const seat = parseInt(el.getAttribute('data-wait-bank'), 10);
-    if (Number.isFinite(seat)) el.textContent = formatBank(bankOfSeat(seat));
-  });
-}
-function applyBanksFromList(list) {
-  if (!Array.isArray(list)) return;
-  list.forEach((amt, i) => {
-    if (players[i]) players[i].bank = Math.max(0, Math.floor(Number(amt) || 0));
-    if (game && game.players && game.players[i]) game.players[i].bank = players[i] ? players[i].bank : 0;
-  });
-  try { updateBankDisplays(); } catch (e) {}
-}
-
 function readTargetScoreFromUI() {
   const ts = $('opt-target-score');
   const custom = $('opt-target-score-custom');
@@ -1477,11 +1143,11 @@ function readTargetScoreFromUI() {
   if (ts.value === 'custom') {
     const raw = custom ? String(custom.value || '').replace(/[^\d]/g, '') : '';
     let v = parseInt(raw, 10);
-    if (!Number.isFinite(v) || v < 50) v = targetScore >= 50 ? targetScore : 500;
-    if (v > 5000) v = 5000;
+    if (!Number.isFinite(v) || v < 1) v = targetScore >= 1 ? targetScore : 500;
+    if (v > 2000) v = 2000;
     return v;
   }
-  return parseInt(ts.value, 10) || 500;
+  return normalizeTargetScore(ts.value);
 }
 
 function setCustomScoreVisible(show) {
@@ -1503,7 +1169,7 @@ function syncTargetScoreUI() {
   const ts = $('opt-target-score');
   const custom = $('opt-target-score-custom');
   if (!ts) return;
-  const presets = ['200', '300', '500', '1000'];
+  const presets = ['100', '500', '1000'];
   const cur = String(targetScore || 500);
   if (presets.includes(cur)) {
     ts.value = cur;
@@ -1567,12 +1233,12 @@ function wireTargetScoreUI() {
     const confirmCustomScore = (e) => {
       if (e) { e.preventDefault(); e.stopPropagation(); }
       const v = parseInt(String(custom.value || '').replace(/[^\d]/g, ''), 10);
-      if (!Number.isFinite(v) || v < 50) {
+      if (!Number.isFinite(v) || v < 1) {
         custom.focus();
         custom.select();
         return;
       }
-      targetScore = Math.min(5000, v);
+      targetScore = normalizeTargetScore(v);
       custom.value = String(targetScore);
       apply();
       try { custom.blur(); } catch (err) {}
@@ -1586,8 +1252,8 @@ function wireTargetScoreUI() {
       const digits = String(custom.value || '').replace(/[^\d]/g, '').slice(0, 4);
       if (custom.value !== digits) custom.value = digits;
       const v = parseInt(digits, 10);
-      if (Number.isFinite(v) && v >= 50) {
-        targetScore = Math.min(5000, v);
+      if (Number.isFinite(v) && v >= 1) {
+        targetScore = normalizeTargetScore(v);
         const td = $('targetDisplay');
         if (td) td.textContent = String(targetScore);
       }
@@ -1626,8 +1292,6 @@ let luckySpecialsMode = 'fixed';
 let luckySpinning = false;
 /** When host is the only human, allow the 🧪 experimental / perfect test deal */
 let experimentalHandOpt = false;
-let buyBeerBots = false;
-let whisperHumans = false;
 const PLAQUE_STYLES = {
   ink: { bg: '#111111', fg: '#ffffff', label: 'Black / white' },
   paper: { bg: '#f5f5f5', fg: '#111111', label: 'White / black' },
@@ -1699,26 +1363,6 @@ function applyPlaqueColors() {
     const team = (p && typeof p.team === 'number') ? p.team : (s % 2);
     paintNamePlaque(wait.querySelector('.wait-seat-name'), team);
   }
-  renderPlaquePickers();
-}
-function renderPlaquePickers() {
-  ['plaquePickA', 'plaquePickB'].forEach((id, team) => {
-    const host = $(id);
-    if (!host) return;
-    const cur = team === 0 ? plaqueA : plaqueB;
-    host.innerHTML = Object.keys(PLAQUE_STYLES).map((key) => {
-      const s = PLAQUE_STYLES[key];
-      return '<button type="button" class="plaque-swatch' + (key === cur ? ' active' : '') + '" data-plaque="' + key + '" style="background:' + s.bg + ';color:' + s.fg + '">' + s.label + '</button>';
-    }).join('');
-    host.querySelectorAll('[data-plaque]').forEach((btn) => {
-      btn.onclick = () => {
-        const key = btn.getAttribute('data-plaque');
-        if (team === 0) plaqueA = key; else plaqueB = key;
-        applyPlaqueColors();
-        try { localStorage.setItem('horPlaqueA', plaqueA); localStorage.setItem('horPlaqueB', plaqueB); } catch (e) {}
-      };
-    });
-  });
 }
 window.applyPlaqueColors = applyPlaqueColors;
 let whisperTargetIdx = -1;
@@ -1797,8 +1441,6 @@ function syncOptionsUI() {
   if (mtvEl) mtvEl.checked = !!mustTrumpWhenVoid;
   const bos = $('opt-bid-only');
   if (bos) bos.checked = !!bidOnlyScoring;
-  const sbag = $('opt-sandbagging');
-  if (sbag) sbag.checked = !!sandbagging;
   const ng = $('opt-nest-goes-to');
   if (ng) ng.value = nestGoesTo;
   const lo = $('opt-lead-order');
@@ -1833,22 +1475,8 @@ function syncOptionsUI() {
   if (nla) nla.checked = nestLastTrickAnim !== false;
   const ldw = $('opt-lay-down');
   if (ldw) ldw.checked = layDownWinningCards !== false;
-  const beerOpt = $('opt-buy-beer');
-  if (beerOpt) beerOpt.checked = !!buyBeerBots;
-  document.body.classList.toggle('buy-beer-on', !!buyBeerBots);
-  const whOpt = $('opt-whisper');
-  if (whOpt) whOpt.checked = !!whisperHumans;
-  document.body.classList.toggle('whisper-on', !!whisperHumans);
-  const avMo = $('opt-avatar-motion');
-  if (avMo) avMo.checked = window.horAvatarMotion !== false;
   document.body.classList.toggle('no-avatar-motion', window.horAvatarMotion === false);
-  const tvOpt = $('opt-tv-display');
-  if (tvOpt) tvOpt.checked = !!window.horTvDisplay;
   document.body.classList.toggle('hor-tv-display', !!window.horTvDisplay);
-  const kickMuteOpt = $('opt-host-kick-mute');
-  if (kickMuteOpt) kickMuteOpt.checked = !!window.horHostKickMute;
-  const otherCareerOpt = $('opt-other-career-popups');
-  if (otherCareerOpt) otherCareerOpt.checked = !!window.horOtherCareerPopups;
   const hsm = $('opt-hand-sort');
   if (hsm) hsm.value = normalizeHandSortMode(handSortMode);
   try { syncTargetScoreUI(); } catch (e) {
@@ -1907,7 +1535,7 @@ function broadcastPlaySettings() {
     type: 'settings',
     includeRed2, red2Points, includeRed1, includeOnes, onesHigh, includeRook, rookLowest,
     specialsAnytime, mustTrumpWhenVoid, turnTimeSec,
-    bidOnlyScoring, sandbagging, nestGoesTo, leadOrder, misdealOnNoCounters, screwTheDealer, comebackSpecialChance, openWidow, revealTopNest, forceNestReveal, shootMoonEnabled, botSpeed, handSortMode, timeoutPolicy,
+    bidOnlyScoring, nestGoesTo, leadOrder, misdealOnNoCounters, screwTheDealer, comebackSpecialChance, openWidow, revealTopNest, forceNestReveal, shootMoonEnabled, botSpeed, handSortMode, timeoutPolicy,
     partnerNeverKill, partnerFeedLast, dontStealPartnerBid, landscapeBidHints, nestLastTrickAnim, layDownWinningCards,
     minBid, targetScore, handSize, nestSizeDefault, ruleVariant, botDifficulty,
     luckySpecialsBoost, luckySpecialsEnabled, luckySpecialsMode, experimentalHandOpt,
@@ -2007,8 +1635,10 @@ function updateMuteButtons() {
 
 function toggleMute() {
   soundMuted = !soundMuted;
+  window.HORAudioMixer?.setMuted(soundMuted);
   if(soundMuted&&window.HORShuffle732)window.HORShuffle732.silence();
   if(soundMuted)window.HORTrumpVoice?.stop('mute-control');
+  if(soundMuted)window.HORBidVoice801?.stop();
   localStorage.setItem('rookMuted', soundMuted ? '1' : '0');
   updateMuteButtons();
   if (!soundMuted) ensureAudio();
@@ -2113,8 +1743,8 @@ function playNatural063(kind, volume=1, delayMs=0, category='card') {
   if(!buffer||!allowed()||Date.now()>target+250)return; // Never emit a stale cue after a slow load/resume.
   whenAudioReady(ctx=>{
    if(!allowed()||Date.now()>target+250)return;
-   const src=ctx.createBufferSource(),gain=ctx.createGain();src.buffer=buffer;gain.gain.value=Math.max(0,Math.min(1,volume))*(window.he064Gain?he064Gain(category):1);if(kind==="paper"||kind==="gather")src.playbackRate.value=0.97+Math.random()*0.06;
-   src.connect(gain);gain.connect(ctx.destination);presentationSounds035.add(src);if(category==="preview"&&window.he064Track)window.he064Track(src);
+   const src=ctx.createBufferSource(),gain=ctx.createGain();src.buffer=buffer;gain.gain.value=Math.max(0,Math.min(1,volume));if(kind==="paper"||kind==="gather")src.playbackRate.value=0.97+Math.random()*0.06;
+   src.connect(gain);gain.connect(window.HORAudioMixer.output(ctx,category));presentationSounds035.add(src);if(category==="preview"&&window.he064Track)window.he064Track(src);
    src.onended=()=>{presentationSounds035.delete(src);src.disconnect();gain.disconnect();};
    src.start(ctx.currentTime+Math.max(0,target-Date.now())/1000);
   });
@@ -2151,7 +1781,7 @@ function playCardSound() {
     source.buffer = cardLandingBuffers058[index];
     gain.gain.setValueAtTime(0.72, ctx.currentTime);
     source.connect(gain);
-    gain.connect(ctx.destination);
+    gain.connect(window.HORAudioMixer.output(ctx,'gameplay'));
     source.start(ctx.currentTime + 0.004);
     source.onended = () => { try { source.disconnect(); gain.disconnect(); } catch (_) {} };
   }, delay);
@@ -2186,7 +1816,7 @@ function playTurnSound(forcePreview = false) {
     gain.gain.exponentialRampToValueAtTime(p[4], t + .012);
     gain.gain.exponentialRampToValueAtTime(0.0001, t + p[3]);
     osc.connect(gain);
-    gain.connect(ctx.destination);
+    gain.connect(window.HORAudioMixer.output(ctx,'gameplay'));
     osc.start(t);
     osc.stop(t + p[3] + .015);
   });
@@ -2220,7 +1850,7 @@ function playRavenCalls060(count) {
     const gain = ctx.createGain();
     source.buffer = buffer;
     gain.gain.setValueAtTime(0.12, ctx.currentTime);
-    source.connect(gain); gain.connect(ctx.destination);
+    source.connect(gain); gain.connect(window.HORAudioMixer.output(ctx,'gameplay'));
     source.onended = () => { try { source.disconnect(); gain.disconnect(); } catch (_) {} };
     source.start(ctx.currentTime + 0.01);
   };
@@ -2356,7 +1986,7 @@ function playRiffleShuffleSound034() {
     g.gain.exponentialRampToValueAtTime(0.008, s + 0.04);
     noise.connect(bp);
     bp.connect(g);
-    g.connect(ctx.destination);
+    g.connect(window.HORAudioMixer.output(ctx,'gameplay'));
     noise.start(s);
     noise.stop(s + 0.06);
   }
@@ -2371,7 +2001,7 @@ function playRiffleShuffleSound034() {
     g.gain.exponentialRampToValueAtTime(0.08, s + 0.01);
     g.gain.exponentialRampToValueAtTime(0.001, s + 0.12);
     osc.connect(g);
-    g.connect(ctx.destination);
+    g.connect(window.HORAudioMixer.output(ctx,'gameplay'));
     osc.start(s);
     osc.stop(s + 0.14);
   }
@@ -2621,7 +2251,7 @@ function playLegacyDealCardSound035() {
   g.gain.exponentialRampToValueAtTime(0.01, t + 0.04);
   noise.connect(bp);
   bp.connect(g);
-  g.connect(ctx.destination);
+  g.connect(window.HORAudioMixer.output(ctx,'gameplay'));
   noise.start(t);
   noise.stop(t + 0.05);
 }
@@ -2962,8 +2592,8 @@ function teamScoreForSeat(seat) {
 }
 
 function moonBidAllowed(seat) {
-  if (!shootMoonEnabled) return false;
-  return teamScoreForSeat(seat) >= 0;
+  // A negative score does not restrict Moon bids. getMatchResult owns the losing threshold.
+  return !!shootMoonEnabled;
 }
 
 function bidCeilingFor(seat) {
@@ -3450,7 +3080,7 @@ function applyWaitingShareMode() {
     copyBtn.tabIndex = qrOk ? -1 : 0;
     if (!qrOk) copyBtn.textContent = 'Copy code';
   }
-  if (shareBtn) shareBtn.textContent = qrOk ? 'Share' : 'Share code';
+  if (shareBtn) shareBtn.textContent = qrOk ? 'Invite friends' : 'Share code';
   if (speak) {
     speak.textContent = qrOk
       ? 'Share this code or QR. Friends tap an open seat to sit.'
@@ -3800,7 +3430,7 @@ function createRoom(retryCount = 0) {
       try { finishHostHandoff(id); } catch (e) { console.error(e); }
       return;
     }
-    players = [{ id, name: myName, team: 0, isHost: true, isBot: false, seat: 0, bank: loadMyBank(), avatar: ensurePreferredAvatar() || AVATARS[0], voice: loadPreferredVoice(), careerPublic: horMyCareerProfile() }];
+    players = [{ id, name: myName, team: 0, isHost: true, isBot: false, seat: 0, avatar: ensurePreferredAvatar() || AVATARS[0], voice: loadPreferredVoice(), careerPublic: horMyCareerProfile() }];
     applyPreferredAvatarToMe();
     myIndex = 0;
     beerSeats = pickBeerSeats();
@@ -3842,6 +3472,15 @@ function createRoom(retryCount = 0) {
     if (!current()) return;
     const type = err && err.type;
     horClearHostCreateWatchdog();
+    // Once this peer opened, the local table already owns its game. Mobile
+    // background suspension can set peer.open=false while signaling recovers.
+    // Creation retries must never recreate that table or demote its host.
+    if (opened) {
+      horDebugLog('HOST: established table keeps local authority after signaling error: ' + type);
+      horSetHostCreateBusy(false);
+      try { if (hostPeer.disconnected && !hostPeer.destroyed) hostPeer.reconnect(); } catch (_) {}
+      return;
+    }
     if (!hostPeer.open && retryCount < 2 && ['unavailable-id','network','server-error','socket-error','socket-closed'].includes(type)) {
       cleanup();
       horSetHostCreateBusy(true, 'Retrying table connection…');
@@ -3941,7 +3580,7 @@ function joinRoom() {
     const currentConnection = () => !finished && current() && horJoinConn === conn;
     conn.on('open', () => {
       if (!currentConnection()) return;
-      const joinMsg = {type:'join',name:myName,id:myPeerId,spectator:!!isSpectator,bank:loadMyBank(),avatar:ensurePreferredAvatar()||AVATARS[0],voice:loadPreferredVoice(),appVersion:APP_VERSION,reconnect:true};
+      const joinMsg = {type:'join',name:myName,id:myPeerId,spectator:!!isSpectator,avatar:ensurePreferredAvatar()||AVATARS[0],voice:loadPreferredVoice(),appVersion:APP_VERSION,reconnect:true};
       if (pendingPreviewJoin) joinMsg.preview = true;
       if (!isSpectator && typeof pendingWelcomeSeat === 'number' && pendingWelcomeSeat >= 0 && pendingWelcomeSeat <= 3) joinMsg.preferredSeat = pendingWelcomeSeat;
       if (!horNetSendRaw(conn, joinMsg)) {
@@ -4200,7 +3839,6 @@ function horBeginClientReconnect() {
             name: myName,
             id: myPeerId,
             spectator: !!isSpectator,
-            bank: loadMyBank(),
             avatar: ensurePreferredAvatar(),
             voice: loadPreferredVoice(),
             reconnect: true,
@@ -4333,7 +3971,7 @@ function handleMessage(data, conn) {
               currentPlayer: game.currentPlayer,
               trick: game.trick,
               ledColor: game.ledColor,
-              players: players.map(p => ({ name: p.name, team: p.team, id: p.id, isBot: !!p.isBot, bank: p.bank || 0, avatar: p.avatar || playerAvatars[p.id] || '', voice: p.isBot ? 'avatar' : validHumanVoice(p.voice), careerPublic: p.careerPublic || null })),
+              players: players.map(p => ({ name: p.name, team: p.team, id: p.id, isBot: !!p.isBot, avatar: p.avatar || playerAvatars[p.id] || '', voice: p.isBot ? 'avatar' : validHumanVoice(p.voice), careerPublic: p.careerPublic || null })),
               dealer: game.dealer,
               nestCount: game.nest?.length || 0,
               handsCount: game.hands.map(h => h.length),
@@ -4382,7 +4020,7 @@ function handleMessage(data, conn) {
         if (players.find(p => p.id === data.id)) {
           return;
         }
-        players.push({ id: data.id, name: data.name, team: 0, isHost: false, isBot: false, seat: -1, bank: Math.max(0, Math.floor(Number(data.bank) || 0)), avatar: humanAvatarAllowed783(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0], voice: validHumanVoice(data.voice), careerPublic: null });
+        players.push({ id: data.id, name: data.name, team: 0, isHost: false, isBot: false, seat: -1, avatar: humanAvatarAllowed783(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0], voice: validHumanVoice(data.voice), careerPublic: null });
         if (data.id) playerAvatars[data.id] = humanAvatarAllowed783(avatarKey(data.avatar)) ? avatarKey(data.avatar) : AVATARS[0];
         const wantSeat = parseInt(data.preferredSeat, 10);
         let seatedOk = false;
@@ -4432,9 +4070,6 @@ function handleMessage(data, conn) {
       case 'play':
         if (game && game.phase === 'play') hostProcessPlay(data);
         break;
-      case 'buyBeer':
-        if (typeof data.seat === 'number') buyBotBeer(data.seat);
-        break;
       case 'claimAllTrumps':
         if (game && game.phase === 'play') hostProcessAllTrumpsClaim(data);
         break;
@@ -4470,63 +4105,6 @@ function handleMessage(data, conn) {
           conn.send({ type: 'players', players: publicPlayersSnapshot(), beerSeats });
         } catch (e) {}
         break;
-      case 'buyTableMsg':
-        (function () {
-          const text = String(data.text || '').replace(/\s+/g, ' ').trim().slice(0, 80);
-          if (!text) return;
-          const connId = conn && conn.peer;
-          const seat = players.findIndex(p => p.id === connId || p.id === data.id);
-          if (seat < 0) return;
-          const cost = tableMsgCost();
-          if (bankOfSeat(seat) < cost) {
-            try { conn.send({ type: 'message', text: 'Not enough bank for a table message ($' + cost + ').' }); } catch (e) {}
-            return;
-          }
-          setSeatBank(seat, bankOfSeat(seat) - cost);
-          const nm = (players[seat] && players[seat].name) || 'Player';
-          showTableMsgPopup(nm, text);
-          try { updateBankDisplays(); } catch (e) {}
-          broadcast({ type: 'tableMsg', name: nm, text, banks: players.map(p => p.bank || 0) });
-        })();
-        break;
-      case 'buyWhisper':
-        (function () {
-          if (!whisperHumans) return;
-          const text = String(data.text || '').replace(/\s+/g, ' ').trim().slice(0, 80);
-          if (!text) return;
-          const connId = conn && conn.peer;
-          const seat = players.findIndex(p => p.id === connId || p.id === data.id);
-          const to = data.to;
-          if (seat < 0 || typeof to !== 'number' || !players[to] || players[to].isBot) return;
-          if (horExpOn('partnerChatAfterNest') && game && game.phase !== 'play' && game.phase !== 'score') {
-            try { conn.send({ type: 'message', text: 'Private messages wait until the nest is buried.' }); } catch (e) {}
-            return;
-          }
-          if (players[seat] && players[seat].muted) {
-            try { conn.send({ type: 'message', text: 'You are muted at this table.' }); } catch (e) {}
-            return;
-          }
-          const cost = whisperCost();
-          if (bankOfSeat(seat) < cost) {
-            try { conn.send({ type: 'message', text: 'Not enough bank for a private message ($' + cost + ').' }); } catch (e) {}
-            return;
-          }
-          setSeatBank(seat, bankOfSeat(seat) - cost);
-          const nm = (players[seat] && players[seat].name) || 'Player';
-          if (seat === myIndex || to === myIndex) showTableMsgPopup(nm + ' (private)', text);
-          try { updateBankDisplays(); } catch (e) {}
-          broadcast({
-            type: 'whisper',
-            from: seat,
-            to,
-            fromId: players[seat] && players[seat].id,
-            toId: players[to] && players[to].id,
-            name: nm,
-            text,
-            banks: players.map(p => p.bank || 0)
-          });
-        })();
-        break;
       case 'newHostReady':
         broadcast({ type: 'switchHost', roomCode: data.roomCode, hostName: data.hostName });
         setTimeout(() => { try { horFollowNewHost(data.roomCode); } catch (e) {} }, 500);
@@ -4550,20 +4128,9 @@ function handleMessage(data, conn) {
         updateWaitingUI();
         break;
       case 'whisper':
-        if (Array.isArray(data.banks)) applyBanksFromList(data.banks);
         if (data.toId === myPeerId || data.fromId === myPeerId || data.to === myIndex || data.from === myIndex) {
           showTableMsgPopup((data.name || 'Player') + (data.to === myIndex ? ' (private)' : ' → you'), data.text);
         }
-        break;
-      case 'botBeer':
-        if (typeof data.seat === 'number' && players[data.seat]) {
-          players[data.seat].buzzUntil = data.buzzUntil;
-          if (game && game.players && game.players[data.seat]) game.players[data.seat].buzzUntil = data.buzzUntil;
-        }
-        if (Array.isArray(data.banks)) applyBanksFromList(data.banks);
-        try { animateBeerToSeat(data.seat); } catch (e) {}
-        break;
-      case 'buyBeer':
         break;
       case 'welcome':
         horDebugLog('CLIENT: welcome received, yourId=' + data.yourId + ', players=' + (data.players ? data.players.length : 0) + ', hostVersion=' + data.hostVersion);
@@ -4599,7 +4166,7 @@ function handleMessage(data, conn) {
         if (data.settings) {
           includeRed2 = !!data.settings.includeRed2;
           if (data.settings.red2Points) red2Points = data.settings.red2Points;
-          if (data.settings.targetScore) targetScore = data.settings.targetScore;
+          if (data.settings.targetScore) targetScore = normalizeTargetScore(data.settings.targetScore);
           if (typeof data.settings.layDownWinningCards === 'boolean') layDownWinningCards = data.settings.layDownWinningCards;
           if (typeof data.settings.revealTopNest === 'boolean') revealTopNest = data.settings.revealTopNest;
           if (typeof data.settings.comebackSpecialChance === 'boolean') comebackSpecialChance = data.settings.comebackSpecialChance;
@@ -4745,7 +4312,6 @@ function handleMessage(data, conn) {
         break;
       }
       case 'tableMsg':
-        if (Array.isArray(data.banks)) applyBanksFromList(data.banks);
         showTableMsgPopup(data.name, data.text);
         break;
       case 'specialCapture':
@@ -4780,7 +4346,6 @@ function handleMessage(data, conn) {
         if (typeof data.specialsAnytime === 'boolean') specialsAnytime = data.specialsAnytime;
         if (typeof data.mustTrumpWhenVoid === 'boolean') mustTrumpWhenVoid = data.mustTrumpWhenVoid;
         if (typeof data.bidOnlyScoring === 'boolean') bidOnlyScoring = data.bidOnlyScoring;
-        if (typeof data.sandbagging === 'boolean') sandbagging = data.sandbagging;
         if (data.nestGoesTo) nestGoesTo = data.nestGoesTo;
         if (data.leadOrder) leadOrder = data.leadOrder;
         if (typeof data.misdealOnNoCounters === 'boolean') misdealOnNoCounters = data.misdealOnNoCounters;
@@ -4805,7 +4370,7 @@ function handleMessage(data, conn) {
         if (data.handSize) handSize = data.handSize;
         if (data.nestSizeDefault) nestSizeDefault = data.nestSizeDefault;
         if (data.targetScore) {
-          targetScore = data.targetScore;
+          targetScore = normalizeTargetScore(data.targetScore);
           const td = $('targetDisplay');
           if (td) td.textContent = String(targetScore);
         }
@@ -4853,6 +4418,9 @@ function handleMessage(data, conn) {
           turnTimerInterval = setInterval(updateTurnTimerUI, 250);
           updateTurnTimerUI();
         }
+        break;
+      case 'bidVoice801':
+        window.HORBidVoice801?.receive(data);
         break;
       case 'moonHowl':
         window.HORMoonHowl?.play(data.id);
@@ -4991,103 +4559,6 @@ function showWaiting() {
       };
     });
 
-    const sa = $('opt-specials-anytime');
-    if (sa) {
-      sa.checked = !!specialsAnytime;
-      sa.onchange = () => {
-        specialsAnytime = sa.checked;
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
-    const bos = $('opt-bid-only');
-    if (bos) {
-      bos.checked = !!bidOnlyScoring;
-      bos.onchange = () => {
-        bidOnlyScoring = bos.checked;
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
-    const sbag = $('opt-sandbagging');
-    if (sbag) {
-      sbag.checked = !!sandbagging;
-      sbag.onchange = () => {
-        sandbagging = !!sbag.checked;
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
-    const ng = $('opt-nest-goes-to');
-    if (ng) {
-      ng.value = nestGoesTo;
-      ng.onchange = () => {
-        nestGoesTo = ng.value || 'lastTrick';
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
-    const lo = $('opt-lead-order');
-    if (lo) {
-      lo.value = leadOrder;
-      lo.onchange = () => {
-        leadOrder = lo.value || 'bidder';
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
-    const mdc = $('opt-misdeal-no-counters');
-    if (mdc) {
-      mdc.checked = !!misdealOnNoCounters;
-      mdc.onchange = () => {
-        misdealOnNoCounters = !!mdc.checked;
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
-    const std = $('opt-screw-dealer');
-    if (std) {
-      std.checked = !!screwTheDealer;
-      std.onchange = () => {
-        screwTheDealer = !!std.checked;
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
-    const cbComeback = $('opt-comeback-special-chance');
-    if (cbComeback) {
-      cbComeback.checked = !!comebackSpecialChance;
-      cbComeback.onchange = () => {
-        comebackSpecialChance = !!cbComeback.checked;
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
-    const rtn = $('opt-reveal-top-nest');
-    if (rtn) {
-      rtn.checked = !!revealTopNest;
-      rtn.onchange = () => {
-        revealTopNest = !!rtn.checked;
-        try { broadcastPlaySettings(); } catch (e) {}
-        try { renderTopNestPeek(); } catch (e) {}
-      };
-    }
-    const fnr = $('opt-force-nest-reveal');
-    if (fnr) {
-      fnr.value = forceNestReveal || '';
-      fnr.onchange = () => {
-        forceNestReveal = fnr.value || '';
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
-    const ow = $('opt-open-widow');
-    if (ow) {
-      ow.checked = !!openWidow;
-      ow.onchange = () => {
-        openWidow = !!ow.checked;
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
-    const stm = $('opt-shoot-moon');
-    if (stm) {
-      stm.checked = !!shootMoonEnabled;
-      stm.onchange = () => {
-        shootMoonEnabled = !!stm.checked;
-        try { broadcastPlaySettings(); } catch (e) {}
-      };
-    }
     const bs = $('opt-bot-speed');
     if (bs) {
       bs.value = botSpeed;
@@ -5111,44 +4582,6 @@ function showWaiting() {
     bindCoach('opt-landscape-hints', () => landscapeBidHints, v => { landscapeBidHints = v; });
     bindCoach('opt-nest-anim', () => nestLastTrickAnim, v => { nestLastTrickAnim = v; });
     bindCoach('opt-lay-down', () => layDownWinningCards, v => { layDownWinningCards = v; });
-    bindCoach('opt-buy-beer', () => buyBeerBots, v => {
-      buyBeerBots = v;
-      document.body.classList.toggle('buy-beer-on', !!v);
-    });
-    bindCoach('opt-whisper', () => whisperHumans, v => {
-      whisperHumans = v;
-      document.body.classList.toggle('whisper-on', !!v);
-    });
-    bindCoach('opt-avatar-motion', () => window.horAvatarMotion !== false, v => {
-      window.horAvatarMotion = v;
-      document.body.classList.toggle('no-avatar-motion', !v);
-      try { localStorage.setItem('horAvatarMotion', v ? '1' : '0'); } catch (e) {}
-    });
-    bindCoach('opt-tv-display', () => !!window.horTvDisplay, v => {
-      window.horTvDisplay = v;
-      document.body.classList.toggle('hor-tv-display', !!v);
-      try { localStorage.setItem('horTvDisplay', v ? '1' : '0'); } catch (e) {}
-    });
-    bindCoach('opt-host-kick-mute', () => !!window.horHostKickMute, v => {
-      window.horHostKickMute = v;
-      try { localStorage.setItem('horHostKickMute', v ? '1' : '0'); } catch (e) {}
-      try { document.querySelectorAll('.hor-kick-mute').forEach(n => { if (!v) n.remove(); }); } catch (e) {}
-    });
-    bindCoach('opt-other-career-popups', () => !!window.horOtherCareerPopups, v => {
-      window.horOtherCareerPopups = !!v;
-      try { localStorage.setItem('horOtherCareerPopups', v ? '1' : '0'); } catch (e) {}
-    });
-    const cardStyle = $('opt-card-style');
-    if (cardStyle) {
-      cardStyle.value = horCardStyle;
-      cardStyle.onchange = () => {
-        horCardStyle = cardStyle.value === 'original' ? 'original' : 'premium';
-        try { localStorage.setItem('horCardStyle', horCardStyle); } catch (e) {}
-        document.documentElement.classList.toggle('hor-original-cards', horCardStyle === 'original');
-        try { if (game && game.myHand) renderHand(game.phase === 'discard' && game.bidder === myIndex); } catch (e) {}
-        try { if (game && game.phase === 'discard' && game.bidder === myIndex) showDiscardOverlay(false); } catch (e) {}
-      };
-    }
     const hsm = $('opt-hand-sort');
     if (hsm) {
       hsm.value = normalizeHandSortMode(handSortMode);
@@ -5194,7 +4627,7 @@ function showWaiting() {
         try { broadcastPlaySettings(); } catch (e) {}
       };
     }
-    const sc = $('opt-sound-card'); if (sc) { sc.checked = soundCard; sc.onchange = () => { soundCard = sc.checked; if(!soundCard)window.HORTrumpVoice?.stop('card-sound-disabled'); }; }
+    const sc = $('opt-sound-card'); if (sc) { sc.checked = soundCard; sc.onchange = () => { soundCard = sc.checked; if(!soundCard){} }; }
     const st = $('opt-sound-turn'); if (st) { st.checked = soundTurn; st.onchange = () => { soundTurn = st.checked; try { localStorage.setItem('rookSoundTurn', soundTurn ? '1' : '0'); } catch (e) {} if (soundTurn) { try { playTurnSound(true); } catch (e) {} } }; }
     const sts = $('opt-turn-sound-choice');
     if (sts) {
@@ -5235,7 +4668,7 @@ function showWaiting() {
       avatarGrid.querySelectorAll('.avatar-choice').forEach(b => b.classList.toggle('selected', b.getAttribute('data-avatar') === current));
     }
 
-    applyGriffinDefaults({ broadcastChange: false });
+    syncOptionsUI(); // Keep the host's selected setup when opening the waiting room.
     ensureBotDifficultyOptions();
     wireRuleOptionControls();
     wireHostOptionsModal();
@@ -5294,7 +4727,6 @@ function openHostOptionsModal() {
   try { wireRuleOptionControls(); } catch (e) {}
   try { wireTargetScoreUI(); } catch (e) {}
   try { syncTargetScoreUI(); } catch (e) {}
-  try { refreshCardBackPickers(); } catch (e) {}
   try { syncQuickMenuSound(); } catch (e) {}
   // Rook685: Layout + Speed live in the upper menu's Display pane.
   // Make that pane the default whenever the menu opens so the existing
@@ -5348,6 +4780,19 @@ function wireRuleOptionControls() {
       try { broadcastPlaySettings(); } catch (e) {}
     };
   };
+  bindCheck('opt-specials-anytime', () => specialsAnytime, v => { specialsAnytime=v; });
+  bindCheck('opt-must-trump', () => mustTrumpWhenVoid, v => { mustTrumpWhenVoid=v; });
+  bindCheck('opt-bid-only', () => bidOnlyScoring, v => { bidOnlyScoring=v; });
+  bindCheck('opt-screw-dealer', () => screwTheDealer, v => { screwTheDealer=v; });
+  bindCheck('opt-misdeal-no-counters', () => misdealOnNoCounters, v => { misdealOnNoCounters=v; });
+  bindCheck('opt-comeback-special-chance', () => comebackSpecialChance, v => { comebackSpecialChance=v; });
+  bindCheck('opt-open-widow', () => openWidow, v => { openWidow=v; });
+  bindCheck('opt-shoot-moon', () => shootMoonEnabled, v => { shootMoonEnabled=v; });
+  const bindChoice=(id,read,write)=>{const el=$(id);if(!el)return;el.value=read();el.onchange=()=>{write(el.value);syncOptionsUI();broadcastPlaySettings();};};
+  bindChoice('opt-force-nest-reveal',()=>forceNestReveal,v=>{forceNestReveal=v;});
+  bindChoice('opt-nest-goes-to',()=>nestGoesTo,v=>{if(['lastTrick','bidder'].includes(v))nestGoesTo=v;});
+  bindChoice('opt-lead-order',()=>leadOrder,v=>{if(['bidder','leftOfBidder','rightOfBidder'].includes(v))leadOrder=v;});
+  bindCheck('opt-reveal-top-nest', () => revealTopNest, v => { revealTopNest = v; try { renderTopNestPeek(); } catch(e) {} });
   bindCheck('opt-include-ones', () => includeOnes, v => { includeOnes = v; onesHigh = v; });
   bindCheck('opt-include-red2', () => includeRed2, v => {
     includeRed2 = v;
@@ -5407,16 +4852,8 @@ function wireRuleOptionControls() {
       syncOptionsUI();
     };
   }
-  const ts = $('opt-target-score');
-  if (ts) {
-    ts.value = String(targetScore);
-    ts.onchange = () => {
-      targetScore = parseInt(ts.value, 10) || 500;
-      const td = $('targetDisplay');
-      if (td) td.textContent = String(targetScore);
-      try { broadcastPlaySettings(); } catch (e) {}
-    };
-  }
+  wireTargetScoreUI();
+
 }
 
 
@@ -5523,7 +4960,7 @@ function ensurePlayerSeats(list) {
 }
 
 // Host owns table identities. A human claim replaces the conflicting bot PERSONA,
-// keeping the same player id, seat, team, bank, cards, score, turn and reconnect fields.
+// keeping the same player id, seat, team, cards, score, turn and reconnect fields.
 function reconcileAvatarIdentities777() {
   if (!isHost || !Array.isArray(players)) return false;
   let changed = false;
@@ -5588,7 +5025,6 @@ function publicPlayersSnapshot() {
     isHost: !!p.isHost,
     isBot: !!p.isBot,
     seat: (typeof p.seat === 'number' ? p.seat : -1),
-    bank: p.bank || 0,
     avatar: p.avatar || playerAvatars[p.id] || '',
     voice: p.isBot ? 'avatar' : validHumanVoice(p.voice),
     botStyle: p.botStyle || '',
@@ -5641,7 +5077,7 @@ function updateBotButtons() {
     const empty = Math.max(0, 4 - seatedCount());
     fillBtn.disabled = empty <= 0;
     fillBtn.classList.toggle('hidden', empty <= 0);
-    fillBtn.textContent = empty > 0 ? `Fill ${empty} empty seat${empty === 1 ? '' : 's'} with bots` : '';
+    fillBtn.textContent = empty > 0 ? 'Fill seats' : '';
   }
 }
 
@@ -5923,7 +5359,6 @@ function addBot(seat, personaPick) {
     botStyle: persona.style,
     avatar: persona.avatar || AVATARS[botCount() % AVATARS.length],
     seat: target,
-    bank: 0,
     careerPublic: (horCareerModeOn() && window.HORProgression && HORProgression.localCareer && HORProgression.localCareer.botPublicProfile)
       ? HORProgression.localCareer.botPublicProfile(persona.name) : null,
   });
@@ -6004,8 +5439,7 @@ function hostAdmitAndClaim(seat, playerId, nameHint) {
       isHost: false,
       isBot: false,
       seat: -1,
-      bank: 0
-    };
+      };
     players.push(who);
   } else if (nameHint && !who.isBot) {
     who.name = String(nameHint).trim().slice(0, 18) || who.name;
@@ -6497,7 +5931,6 @@ function updateWaitingUI() {
         : (tag + ' · ' + (s % 2 === 0 ? teamA : teamB));
       el.innerHTML = face
         + '<span class="wait-seat-name"' + botNameAttr(p) + '><span class="wait-seat-name-text">' + escapeHtmlSafe(p.name) + '</span>' + horCareerBadgeHtml(p) + '</span>'
-        + '<span class="wait-seat-bank' + (p.id === myPeerId ? ' is-mine' : '') + '" data-wait-bank="' + s + '">' + formatBank(p.bank || 0) + '</span>'
         + '<span class="wait-seat-tag">' + seatTag + '</span>';
     } else if (isHost) {
       el.innerHTML = '<span class="wait-seat-name">Open</span>'
@@ -6540,25 +5973,7 @@ function updateWaitingUI() {
       startBtn.style.display = '';
       startBtn.setAttribute('aria-live', 'polite');
       startBtn.textContent = 'Start Game';
-      if (tableFull) {
-        startBtn.style.setProperty('background', '#ffe000', 'important');
-        startBtn.style.setProperty('background-image', 'none', 'important');
-        startBtn.style.setProperty('color', '#000', 'important');
-        startBtn.style.setProperty('border', '2px solid #000', 'important');
-        startBtn.style.setProperty('text-align', 'center', 'important');
-        startBtn.style.setProperty('display', 'flex', 'important');
-        startBtn.style.setProperty('align-items', 'center', 'important');
-        startBtn.style.setProperty('justify-content', 'center', 'important');
-      } else {
-        startBtn.style.removeProperty('background');
-        startBtn.style.removeProperty('background-image');
-        startBtn.style.removeProperty('color');
-        startBtn.style.removeProperty('border');
-        startBtn.style.removeProperty('text-align');
-        startBtn.style.removeProperty('display');
-        startBtn.style.removeProperty('align-items');
-        startBtn.style.removeProperty('justify-content');
-      }
+
     } else {
       startBtn.classList.add('hidden');
       startBtn.classList.remove('table-ready', 'table-waiting');
@@ -6573,6 +5988,7 @@ function updateWaitingUI() {
   }
   if (isHost) updateBotButtons();
   try { syncSoloHostExtrasUI(); } catch (e) {}
+  window.HORFriends803?.refresh();
 }
 
 
@@ -6625,31 +6041,25 @@ function showGame() {
 }
 
 function showVariantRules() {
-  const body = document.querySelector('#rulesModal .rules-text') || $('rulesModal');
+  const body = document.querySelector('#rulesModal .rules-text');
   if (!body) return;
-  const total = typeof totalCountersInDeck === 'function' ? totalCountersInDeck() : '—';
-  const sheet = `
-    <p><b>Hand</b> ${handSize} · <b>Nest</b> ${nestSizeDefault} · <b>Min bid</b> ${minBid} · <b>Play to</b> ${targetScore} · <b>Counters</b> ${total}</p>
-    <p><b>Rook</b> ${includeRook ? (rookLowest ? 'lowest trump' : 'highest trump') : 'off'} ·
-       <b>1s</b> ${includeOnes ? (onesHigh ? 'high in color (15 pts)' : '15 pts') : 'off'} ·
-       <b>Red 2</b> ${includeRed2 ? (red2Points + ' pts') : 'off'} ·
-       <b>Special Red 1</b> ${includeRed1 ? 'yes (highest, 30 pts)' : 'no'}</p>
-    <p><b>Scoring</b> ${bidOnlyScoring ? 'bid only when made' : (sandbagging ? 'sandbagging on' : 'full counters when made')} ·
-       <b>Nest</b> ${nestGoesTo === 'bidder' ? 'to bidding team' : 'to last-trick winner'}</p>
-    ${sandbagging ? '<p>Every 10 over the bid is 10 overpoints. At 100 overpoints, deduct 100.</p>' : ''}
-    <p>Four seats, partners opposite. Follow color if you can. Gold cards are legal on your turn — long-press a dim card to see why.</p>
-    <p class="rules-bots">Bots only use public information — they never see private hands.</p>
-  `;
-  let box = $('variantRulesBox');
-  if (!box && body.classList && body.classList.contains('rules-text')) {
-    box = document.createElement('div');
-    box.id = 'variantRulesBox';
-    body.insertBefore(box, body.firstChild);
-  }
-  if (box) box.innerHTML = sheet;
+  const total = totalCountersInDeck(), goal = game?.targetScore || targetScore;
+  const line = (title,text) => '<p><b>'+title+'</b> '+text+'</p>';
+  body.innerHTML = [
+    line('Teams & winning.', 'Four players, partners opposite. Reach '+goal+' points to win. A team at or below −'+goal+' loses; a team reaching the positive target takes precedence. If both reach a target in the same hand, the higher score wins; equal scores tie.'),
+    line('Deal & bidding.', 'Each player receives '+handSize+' cards, with '+nestSizeDefault+' in the nest. Minimum bid: '+minBid+'. Raise in steps of 5 or pass. The highest bidder takes the nest, discards back to '+handSize+' cards, and chooses trump.'),
+    line('First lead.', ({bidder:'The bid winner',leftOfBidder:'The player to the left of the bid winner',rightOfBidder:'The player to the right of the bid winner'}[leadOrder]||'The bid winner')+' leads the first trick. Each trick winner leads next.'),
+    line('Following color.', 'Follow the led color when you can. '+(specialsAnytime?'The included special cards may be played at any time.':'Included special cards follow the same legal-play rules as the other cards.')+' '+(mustTrumpWhenVoid?'If you cannot follow color, you must play trump when you have one.':'If you cannot follow color, you may play another legal card.')),
+    line('Winning tricks.', 'The highest trump wins a trick containing trump; otherwise the highest card of the led color wins. '+(includeOnes?(onesHigh?'1 is highest in its color.':'1 is low in its color.'):'1s are not included.')+' '+(includeRook?('The Bird is '+(rookLowest?'lowest':'above ordinary')+' trump.'):'The Bird is not included.')),
+    line('Special trump order.', (includeRed1?'Special Red One is highest. ':'')+(includeRook&&!rookLowest?'The Bird beats Red Two and ordinary trump. ':'')+(includeRed2?'Red Two is permanent trump and beats ordinary trump. ':'')+(includeRook&&rookLowest?'The Bird is lowest trump. ':'')),
+    line('Card points.', '5s score 5; 10s and 14s score 10. '+(includeOnes?'Each 1 scores 15. ':'')+(includeRook?'The Bird scores 20. ':'')+(includeRed2?'Red Two is ON and scores '+red2Points+'. ':'Red Two is OFF. ')+(includeRed1?'Special Red One scores 30. ':'')+'Total available: '+total+' points.'),
+    line('Nest & reveal.', 'Nest points go to '+(nestGoesTo==='bidder'?'the bidding team.':'the team taking the last trick.')+' Show Top Nest Card is '+(revealTopNest?'ON: everyone sees the top nest card during bidding.':'OFF: no top nest card is shown during bidding.')+' '+(openWidow?'The full nest is revealed to everyone when picked up.':'The full nest is not shown to opponents when picked up.')),
+    line('Scoring a bid.', 'Capture at least the bid in points. Make it: your team scores '+(bidOnlyScoring?'the bid amount only.':'all points it captured.')+' Miss it: your team loses the bid amount. Opponents score the points they captured.'),
+    line('Shoot the Moon.', shootMoonEnabled?('Bid all '+total+' available points. Your team must capture every point; losing a zero-point trick is allowed. Make it: your team wins the entire game immediately. Miss it: your team loses '+total+' points and opponents score only the points they captured.'):'Shoot the Moon is OFF at this table.'),
+    line('Other table rules.', (screwTheDealer?'If everyone passes, the dealer must bid the minimum.':'If everyone passes, the hand is redealt.')+' '+(misdealOnNoCounters?'A hand with no point cards causes a redeal.':'A hand with no point cards does not force a redeal.')+' '+(comebackSpecialChance?'The selected comeback special-card assist is ON.':'Comeback special-card assist is OFF.')+' '+(layDownWinningCards?'A player may use the existing lay-down action when the remaining tricks are guaranteed.':''))
+  ].join('');
 }
 
-// ========== Host Game Logic ==========
 function playToastClink() {
   playNatural063('clink',.65);
 }
@@ -6696,7 +6106,16 @@ function firstActorSeat(dealer) {
   return (Number.isFinite(d) ? d + 1 : 0) % 4;
 }
 
+function validateRuleSetup(){
+  if(minBid>maxBid()){
+    const message='Minimum bid '+minBid+' exceeds the '+maxBid()+' points in this deck. Lower the minimum bid or include more point cards in Game Setup.';
+    const out=$('messageArea');if(out)out.textContent=message;
+    alert(message);return false;
+  }
+  return true;
+}
 function hostStartGame() {
+  window.HORBidVoice801?.stop();
   window.HORMoonHowl?.stop();
   if (!isHost) return;
   if (tourCardOpen()) {
@@ -6714,6 +6133,7 @@ function hostStartGame() {
     return;
   }
 
+  if(!validateRuleSetup())return;
   // Apply only at a new game boundary; never replace a human or mutate a live hand.
   applyFavoritePartner042();
   // Seat order is the table: 0 bottom host side, 1 left, 2 partner, 3 right
@@ -6724,7 +6144,7 @@ function hostStartGame() {
 
   try { targetScore = readTargetScoreFromUI(); } catch (e) {
     const tsEl = $('opt-target-score');
-    if (tsEl) targetScore = parseInt(tsEl.value, 10) || 500;
+    if (tsEl) targetScore = normalizeTargetScore(parseInt(tsEl.value, 10) || 500);
   }
   const bdEl = $('opt-bot-difficulty');
   if (bdEl) botDifficulty = bdEl.value || 'extreme';
@@ -6736,15 +6156,6 @@ function hostStartGame() {
     const lbh = $('opt-landscape-hints'); if (lbh) landscapeBidHints = !!lbh.checked;
     const nla = $('opt-nest-anim'); if (nla) nestLastTrickAnim = !!nla.checked;
     const ldw = $('opt-lay-down'); if (ldw) layDownWinningCards = ldw.checked !== false;
-  } catch (e) {}
-  try {
-    (players || []).forEach((p, i) => {
-      if (!p) return;
-      p.bank = 0;
-      if (game && game.players && game.players[i]) game.players[i].bank = 0;
-    });
-    saveMyBank(0);
-    try { updateBankDisplays(); } catch (e) {}
   } catch (e) {}
   handHistory = [];
   resetPlayerStats();
@@ -6763,7 +6174,7 @@ function hostStartGame() {
     players: publicPlayersSnapshot(), // ROOK041: identities exist before first shuffle/deal render
     dealer: Math.floor(Math.random() * 4), // first hand of a match: random dealer / first-to-act
     scores: [0, 0], // team A, team B
-    sandbagOverpoints: [0, 0], // accumulated 10-point overage units for each team
+
     hands: [[], [], [], []],
     nest: [],
     bid: 0,
@@ -7076,6 +6487,7 @@ function applyComebackSpecialChance() {
 }
 
 function hostDealNow() {
+  window.HORBidVoice801?.stop();
   recentTricks = [];
   lastCompletedTrick = null;
   lastCompletedTrickWinner = null;
@@ -7592,13 +7004,18 @@ function closeApprovedMoonDeclaration() {
 function showApprovedMoonDeclaration(value, onBackDown) {
   closeApprovedMoonDeclaration();
   if (!shootMoonEnabled || !isShootMoonBid(value) || !moonBidAllowed(myIndex)) return false;
+  // Warm the confirmed cue while the player reviews the declaration so the
+  // wolf starts immediately on the second confirmation.
+  try { window.HORMoonHowl?.preload(); } catch (e) {}
   const ov = document.createElement('div');
   ov.className = 'moon-approved-overlay';
   ov.setAttribute('role', 'dialog');
   ov.setAttribute('aria-modal', 'true');
   ov.setAttribute('aria-label', 'Shoot the Moon confirmation');
   ov.innerHTML = '<div class="moon-approved-card">' +
-    '<img class="moon-approved-art" src="assets/images/shoot-the-moon-approved.jpg" alt="Shoot the Moon — 200 Points. You are declaring that you will capture all of the tricks this hand. If you fail, opponents receive 200 points.">' +
+    '<img class="moon-approved-art" src="assets/images/shoot-the-moon-approved.jpg" alt="Gold griffin under a full moon" aria-hidden="true">' +
+    '<div class="moon-live-points">' + value + ' POINTS</div>' +
+    '<div class="moon-live-rules"><span>Capture all ' + value + ' points. Zero-point tricks may be lost.</span><strong>MAKE IT: Win the entire game.</strong><span>MISS IT: Your team loses ' + value + ' points. Opponents score captured points.</span></div>' +
     '<div class="moon-approved-actions">' +
       '<button type="button" data-moon-confirm aria-label="Shoot the Moon">SHOOT THE MOON</button>' +
       '<button type="button" data-moon-back aria-label="Back Down">BACK DOWN</button>' +
@@ -7690,7 +7107,7 @@ function submitBid(val, opts) {
   }
   if (value !== 0 && isShootMoonBid(value) && !moonBidAllowed(myIndex)) {
     const ma = $('messageArea');
-    if (ma) ma.textContent = 'Shoot the moon is only allowed when your team is not in the hole.';
+    if (ma) ma.textContent = 'Shoot the Moon is turned off for this game.';
     return;
   }
   // Rook648: a human Moon bid must pass through the approved declaration gate.
@@ -7712,9 +7129,9 @@ function submitBid(val, opts) {
     return;
   }
   if (isHost) {
-    hostProcessBid({ player: myIndex, value, actionId: horNewActionId('bid') });
+    hostProcessBid({ player: myIndex, value, voiceLine: true, actionId: horNewActionId('bid') });
   } else {
-    const sent = horQueueClientAction({ type: 'bid', player: myIndex, value });
+    const sent = horQueueClientAction({ type: 'bid', player: myIndex, value, voiceLine: true });
     if (!sent) {
       const ma = $('messageArea');
       if (ma) ma.textContent = 'Bid saved — sending when the table reconnects…';
@@ -7734,7 +7151,7 @@ function submitBid(val, opts) {
 
 
 function hostProcessBid(data) {
-  if (!game || game.paused) return;
+  if (!game || game.phase !== 'bidding' || game.paused) return;
   if (nestAuctionLocked()) return;
   if (!data || data.player !== game.currentPlayer) return;
   if (players[data.player] && players[data.player].disconnected) return;
@@ -7768,6 +7185,7 @@ function hostProcessBid(data) {
     if (ma) ma.textContent = passMsg;
     broadcast({ type: 'message', text: passMsg });
     try { playSfx('pass', { broadcastNet: true }); } catch (e) {}
+    if (data.voiceLine === true || players[data.player]?.isBot) window.HORBidVoice801?.announce(data.player, 'pass', 0);
     try { botMaybeTableTalk('pass', { name: pname, prefer: data.player }); } catch (e) {}
     try { noteHumanAuction(data.player, 'pass', 0); } catch (e) {}
 
@@ -7805,6 +7223,13 @@ function hostProcessBid(data) {
     // House rule: Shoot the Moon — bidding every counter in the deck is an
     // all-or-nothing bid, flagged here and resolved at scoring time.
     game.shotTheMoon = !!(shootMoonEnabled && data.value === maxBid());
+    if (game.shotTheMoon) {
+      const howlId=(game.careerMatchId||(game.careerMatchId=crypto.randomUUID()))+':'+handHistory.length+':moon:'+data.player;
+      // The declaration screen preloads this clip; start it before bid UI/SFX
+      // work so the cue lands directly on the confirmed 200 bid.
+      window.HORMoonHowl?.play(howlId);
+      broadcast({type:'moonHowl',id:howlId});
+    }
     // Note: passCount is count of permanent passes, not reset — passers stay out
     game.bidStatus[data.player] = data.value;
     const bidMsg = game.shotTheMoon
@@ -7814,12 +7239,10 @@ function hostProcessBid(data) {
     if (ma) ma.textContent = bidMsg;
     broadcast({ type: 'message', text: bidMsg });
     try { playSfx('bid', { broadcastNet: true }); } catch (e) {}
+    if (data.voiceLine === true || players[data.player]?.isBot) window.HORBidVoice801?.announce(data.player, game.shotTheMoon ? 'shootMoon' : 'bid', data.value);
     try { botMaybeTableTalk('bid', { name: pname, prefer: data.player }); } catch (e) {}
     try { noteHumanAuction(data.player, 'bid', data.value); } catch (e) {}
     if (game.shotTheMoon) {
-      const howlId=(game.careerMatchId||(game.careerMatchId=crypto.randomUUID()))+':'+handHistory.length+':moon:'+data.player;
-      window.HORMoonHowl?.play(howlId);
-      broadcast({type:'moonHowl',id:howlId});
       finishBidding();
       return;
     }
@@ -8510,7 +7933,7 @@ function submitDiscard(ids) {
 
 
 function hostProcessDiscard(data) {
-  if (!game || game.phase !== 'discard') return; // already processed
+  if (!game || game.phase !== 'discard' || game.paused) return; // already processed or paused
   if (horRememberAction(data)) return;
   const bidderId = players[game.bidder] && players[game.bidder].id;
   const byPeer = data && data.peerId && bidderId && String(data.peerId) === String(bidderId);
@@ -8654,7 +8077,7 @@ function announceTrumpSelection(color) {
 
 
 function hostProcessTrump(data) {
-  if (!game || game.phase !== 'trump') return;
+  if (!game || game.phase !== 'trump' || game.paused || !data || !COLORS.includes(data.color)) return;
   if (data.player !== game.bidder) return;
   if (horRememberAction(data)) return;
   game.trump = data.color;
@@ -8739,7 +8162,7 @@ function hostTransferHost() {
       ledColor: game.ledColor, tricksTaken: game.tricksTaken, nestCards: game.nestCards,
       passCount: game.passCount, highestBid: game.highestBid, discardCount: game.discardCount,
       nestDiscardCount: game.nestDiscardCount, targetScore: game.targetScore,
-      nestPreview: game.nestPreview, topNestCard: game.topNestCard || null, nestRevealCards: game.nestRevealCards, sandbagOverpoints: game.sandbagOverpoints || [0, 0], paused: false,
+      nestPreview: game.nestPreview, topNestCard: game.topNestCard || null, nestRevealCards: game.nestRevealCards, paused: false,
     })),
     players: players.map(p => ({ ...p })),
     settings: { includeRed2, red2Points, includeRed1, includeOnes, onesHigh, includeRook, rookLowest,
@@ -8771,8 +8194,7 @@ function finishHostHandoff(newId) {
   const s = snapshot.settings || {};
   if (s.turnTimeSec != null) turnTimeSec = s.turnTimeSec;
   if (s.botDifficulty) botDifficulty = s.botDifficulty;
-  if (s.targetScore) targetScore = s.targetScore;
-  if (typeof s.sandbagging === 'boolean') sandbagging = s.sandbagging;
+  if (s.targetScore) targetScore = normalizeTargetScore(s.targetScore);
   if (typeof s.includeRed2 === 'boolean') includeRed2 = s.includeRed2;
   if (s.red2Points) red2Points = s.red2Points;
   matchStats = snapshot.matchStats || matchStats;
@@ -8839,6 +8261,12 @@ function hostTogglePause() {
     broadcast({ type: 'pause', paused: false });
     broadcastState();
     setPauseUI(false);
+    if (typeof game._resumeTrick === 'function') {
+      const resumeTrick = game._resumeTrick;
+      delete game._resumeTrick;
+      resumeTrick();
+      return;
+    }
     // Resume current phase prompts
     if (game.phase === 'play') hostPromptPlay();
     else if (game.phase === 'bidding') hostPromptBid();
@@ -9081,7 +8509,7 @@ function hostResyncClient(conn, playerId) {
       currentPlayer: game.currentPlayer,
       trick: game.trick,
       ledColor: game.ledColor,
-      players: players.map(p => ({ name: p.name, team: p.team, id: p.id, isBot: !!p.isBot, bank: p.bank || 0, disconnected: !!p.disconnected, avatar: p.avatar || playerAvatars[p.id] || '', voice: p.isBot ? 'avatar' : validHumanVoice(p.voice) })),
+      players: players.map(p => ({ name: p.name, team: p.team, id: p.id, isBot: !!p.isBot, disconnected: !!p.disconnected, avatar: p.avatar || playerAvatars[p.id] || '', voice: p.isBot ? 'avatar' : validHumanVoice(p.voice) })),
       dealer: game.dealer,
       nestCount: game.nest?.length || 0,
       handsCount: (game.hands || []).map(h => (h ? h.length : 0)),
@@ -9200,7 +8628,6 @@ function hostTryReclaimSeat(conn, data) {
   if (idx < 0) return false;
 
   const team = players[idx].team;
-  const keepBank = players[idx].bank || 0;
   players[idx] = {
     id: data.id,
     name: name || players[idx].replacedHumanName || players[idx].name || 'Player',
@@ -9211,7 +8638,6 @@ function hostTryReclaimSeat(conn, data) {
     isBot: false,
     isTempBot: false,
     disconnected: false,
-    bank: Math.max(keepBank, Math.floor(Number(data.bank) || 0))
   };
   hostCancelDisconnectGrace(data.id);
   connMap[data.id] = conn;
@@ -9333,7 +8759,7 @@ function cardIsDefiniteWinner(card, seat) {
         continue;
       }
       if (opp.color === card.color && compareCards(opp, card, card.color, trump) > 0) return false;
-      if (!mustFollow && isTrumpCard(opp, trump)) return false;
+      if ((!mustFollow || (specialsAnytime && isSpecialCard(opp))) && isTrumpCard(opp, trump)) return false;
     }
   }
   return true;
@@ -9450,7 +8876,7 @@ function hostDeclineClaim(player) {
 }
 
 function hostProcessAllTrumpsClaim(data) {
-  if (!isHost || !game || game.phase !== 'play') return;
+  if (!isHost || !game || game.phase !== 'play' || game.paused || !data || data.player !== game.currentPlayer) return;
   if (game.resolvingTrick || game.claimAnimating) return;
   const info = getRestClaimInfo();
   if (!info || data.player !== info.seat) return;
@@ -9535,13 +8961,17 @@ function hostProcessAllTrumpsClaim(data) {
   broadcastState();
 
   // Animation: land ~1.2s + hold 2s + fade 0.8s ≈ 4s total
-  setTimeout(() => {
-    if (!game || game.phase !== 'play') return;
+  const claimingGame = game, claimingAnimation = game.claimAnimation;
+  const finishClaim = () => {
+    if (game !== claimingGame || game.phase !== 'play' || game.claimAnimation !== claimingAnimation || !game.claimAnimating) return;
+    if (game.paused) { game._resumeTrick = finishClaim; return; }
+    delete game._resumeTrick;
     game.claimAnimation = null;
     game.claimAnimating = false;
     game.resolvingTrick = false;
     hostEndHand();
-  }, solScaledDelay(4000, 180));
+  };
+  setTimeout(finishClaim, solScaledDelay(4000, 180));
 }
 
 function relocateClaimLaydownLayer() {
@@ -9831,7 +9261,6 @@ function hostProcessPlay(data) {
     const team = players[winner.player].team;
     const trickPoints = game.trick.reduce((sum, t) => sum + cardPoints(t.card), 0);
     game.tricksTaken[team].push(...game.trick.map(t => t.card));
-    try { creditCapture(winner.player, trickPoints); } catch (e) {}
     try {
       const wStat = ps(winner.player);
       wStat.tricksWon++;
@@ -9899,8 +9328,11 @@ function hostProcessPlay(data) {
 
     // Give players a short, deliberate pause to see the winning trick before
     // the celebration overlay/fanfare starts.
+    const resolvingGame = game, resolvingCards = game.trick;
+    const ownsResolution = () => game === resolvingGame && game.trick === resolvingCards && game.phase === 'play' && game.resolvingTrick;
     if (pendingCaptureEvents.events.length) {
       setTimeout(() => {
+        if (!ownsResolution()) return;
         try {
           queueCaptureCelebrations(pendingCaptureEvents.events, pendingCaptureEvents.winnerName);
           broadcast({ type: 'specialCapture', kinds: pendingCaptureEvents.events, winnerName: pendingCaptureEvents.winnerName });
@@ -9908,8 +9340,10 @@ function hostProcessPlay(data) {
       }, solScaledDelay(850, 45));
     }
 
-    setTimeout(() => {
-      if (!game) return;
+    const finishTrick = () => {
+      if (!ownsResolution()) return;
+      if (game.paused) { game._resumeTrick = finishTrick; return; }
+      delete game._resumeTrick;
       try {
         lastCompletedTrick = game.trick.map(t => ({ player: t.player, card: { ...t.card } }));
         lastCompletedTrickWinner = winner.player;
@@ -9950,7 +9384,8 @@ function hostProcessPlay(data) {
         broadcastState();
         hostPromptPlay();
       }
-    }, solScaledDelay(2800, 700));
+    };
+    setTimeout(finishTrick, solScaledDelay(2800, 700));
   } else {
     game.currentPlayer = (game.currentPlayer + 1) % 4;
     broadcastState();
@@ -10093,7 +9528,6 @@ function hostEndHand() {
     game.tricksTaken[nestTeam].push(...nestSnapshot.map(c => ({ ...c })));
     try {
       const nestSeat = (nestGoesTo === 'bidder' && game.bidder != null) ? game.bidder : game.currentPlayer;
-      creditCapture(nestSeat, nestPtsShown);
       try {
         const nStat = ps(nestSeat);
         nStat.nestWins++;
@@ -10129,15 +9563,7 @@ function hostEndHand() {
 
   let made = false;
   let scoreDeltaA = 0, scoreDeltaB = 0;
-  let sandbagPenalty = 0;
-  let sandbagOverAdded = 0;
-  let sandbagDeduction = 0;
-  if (!Array.isArray(game.sandbagOverpoints) || game.sandbagOverpoints.length !== 2) {
-    game.sandbagOverpoints = [0, 0];
-  }
-  // Scoring: set → −bid. Made → full counters, bid-only, or optional sandbagging.
-  // Every complete 10 points over bid becomes 10 overpoints. At 100 accumulated
-  // overpoints, deduct 100 from that team's total score and carry the remainder.
+  // A made bid scores captured counters (or the selected bid-only amount). A set loses the bid.
   const applyMakerScore = (team, pts) => {
     const bid = game.bid;
     if (pts < bid) {
@@ -10149,19 +9575,8 @@ function hostEndHand() {
     let delta = pts;
     if (bidOnlyScoring) {
       delta = bid;
-    } else if (sandbagging && pts > bid) {
-      sandbagOverAdded = Math.floor((pts - bid) / 10) * 10;
-      if (sandbagOverAdded) {
-        game.sandbagOverpoints[team] += sandbagOverAdded;
-        sandbagPenalty = sandbagOverAdded;
-      }
-      const wholePenalties = Math.floor(game.sandbagOverpoints[team] / 100);
-      if (wholePenalties > 0) {
-        sandbagDeduction = wholePenalties * 100;
-        game.sandbagOverpoints[team] %= 100;
-      }
     }
-    const finalDelta = delta - (sandbagDeduction || 0);
+    const finalDelta = delta;
     if (team === 0) { scoreDeltaA = finalDelta; game.scores[0] += finalDelta; }
     else { scoreDeltaB = finalDelta; game.scores[1] += finalDelta; }
     return true;
@@ -10221,10 +9636,7 @@ function hostEndHand() {
     scoreDeltaA, scoreDeltaB,
     shotTheMoon: !!game.shotTheMoon,
     shotMoonResult,
-    sandbagPenalty: sandbagPenalty || 0,
-    sandbagOverAdded: sandbagOverAdded || 0,
-    sandbagDeduction: sandbagDeduction || 0,
-    sandbagOverpoints: (game.sandbagOverpoints || [0, 0]).slice(),
+
     nestWinnerName,
     nestPts: nestPtsShown,
     nestCards: nestSnapshot.map(c => ({ ...c })),
@@ -10284,7 +9696,6 @@ function hostEndHand() {
       bStat.moonAttempts++;
       if (shotMoonResult === 'made') bStat.moonMade++;
     }
-    if (sandbagOverAdded) bStat.bags += Math.floor(sandbagOverAdded / 10);
   } catch (e) {}
 
   summary.careerEvent={matchId:game.careerMatchId||(game.careerMatchId=crypto.randomUUID()),hand:handHistory.length,
@@ -10464,7 +9875,7 @@ function renderStatChips(s) {
   if (s.bigTricks) chips.push(`<span class="stat-chip chip-big" title="30+ point tricks">💥 ${s.bigTricks}</span>`);
   if (s.nestWins) chips.push(`<span class="stat-chip chip-nest" title="Nest captures">🪺 ${s.nestWins}</span>`);
   if (s.moonAttempts) chips.push(`<span class="stat-chip chip-moon" title="Shoot the Moon attempts / made">🌙 ${s.moonMade || 0}/${s.moonAttempts}</span>`);
-  if (s.bags) chips.push(`<span class="stat-chip chip-bag" title="Sandbag penalties">👝 ${s.bags}</span>`);
+  if (s.bags) chips.push(`<span class="stat-chip chip-bag" title="Historical bag record">👝 ${s.bags}</span>`);
   return chips.length ? `<div class="stat-chips">${chips.join('')}</div>` : '';
 }
 
@@ -10773,7 +10184,6 @@ function showScoreModal(summary) {
 
 
 function showWinCelebration(winner, scores) {
-  try { clearAllBuzz(); } catch (e) {}
   const ov = $('winOverlay');
   if (!ov) return;
   liftOverlayToBody(ov, 'overlay-top');
@@ -11150,7 +10560,7 @@ function broadcastState() {
     seq: horNetSeq,
     phase: game.phase,
     scores: game.scores,
-    sandbagOverpoints: game.sandbagOverpoints || [0, 0],
+
     bid: game.bid,
     highestBid: Number.isFinite(Number(game.highestBid)) ? game.highestBid : auctionHigh(),
     minBid: minBid,
@@ -11270,6 +10680,7 @@ function showLegacyLandscapeTrickNotice752() {
 }
 
 function applyState(data) {
+  if(data?.phase==='dealing'&&game?.phase!=='dealing')window.HORBidVoice801?.stop();
   if (typeof data.revealTopNest === 'boolean') revealTopNest = data.revealTopNest;
   if (!game) game = {};
   if (!isHost && horExpOn('netSequencing') && data && Number.isFinite(Number(data.seq))) {
@@ -11283,7 +10694,7 @@ function applyState(data) {
   Object.assign(game, {
     phase: data.phase,
     scores: data.scores,
-    sandbagOverpoints: Array.isArray(data.sandbagOverpoints) ? data.sandbagOverpoints : (game.sandbagOverpoints || [0, 0]),
+
     bid: data.bid,
     highestBid: (function () {
       const h = parseInt(data.highestBid, 10);
@@ -11303,7 +10714,7 @@ function applyState(data) {
     players: data.players,
     dealer: data.dealer,
     handsCount: data.handsCount,
-    targetScore: data.targetScore || game.targetScore || targetScore,
+    targetScore: normalizeTargetScore(data.targetScore || game.targetScore || targetScore),
     lastTrickWinner: (data.lastTrickWinner != null ? data.lastTrickWinner : null),
     resolvingTrick: !!data.resolvingTrick,
     paused: !!data.paused,
@@ -11339,16 +10750,14 @@ function applyState(data) {
       if (players[i] && players[i].id === sp.id) lp=players[i];
       else lp=players.find(p => p && p.id === sp.id) || null;
       if(lp){
-        if(typeof sp.bank==='number')lp.bank=sp.bank;
         if(sp.careerPublic&&sp.careerPublic.enabled)lp.careerPublic=sp.careerPublic;
         else if(!sp.isBot && sp.id!==myPeerId)lp.careerPublic=null;
       }
     });
-    try { updateBankDisplays(); } catch (e) {}
   }
   if (data.recentTricks) recentTricks = data.recentTricks;
   if (data.matchTricks) matchTricks = data.matchTricks;
-  if (data.targetScore) targetScore = data.targetScore;
+  if (data.targetScore) targetScore = normalizeTargetScore(data.targetScore);
   if (data.minBid) minBid = parseInt(data.minBid, 10) || minBid;
   showGame();
   renderUI();
@@ -11646,27 +11055,11 @@ function renderUI() {
   if ($('scoreA')) $('scoreA').textContent = game.scores[0];
   if ($('scoreB')) $('scoreB').textContent = game.scores[1];
   if ($('targetDisplay')) $('targetDisplay').textContent = String(game.targetScore || targetScore || 500);
-  const sandbagScore = $('sandbagScore');
-  const sandbagTotals = game.sandbagOverpoints || [0, 0];
-  if (sandbagScore) {
-    sandbagScore.classList.toggle('hidden', !sandbagging);
-    const sa = $('sandbagA'), sb = $('sandbagB');
-    if (sa) sa.textContent = Number(sandbagTotals[0] || 0);
-    if (sb) sb.textContent = Number(sandbagTotals[1] || 0);
-  }
   const ltA = $('ltScoreA'), ltB = $('ltScoreB'), ltT = $('ltTarget');
   if (ltA) ltA.textContent = game.scores[0];
   if (ltB) ltB.textContent = game.scores[1];
   try { if (typeof paintTeamChrome === 'function') paintTeamChrome(); } catch (e) {}
   if (ltT) ltT.textContent = String(game.targetScore || targetScore || 500);
-  const ltSand = $('ltSandbagScore');
-  const sb = game.sandbagOverpoints || [0, 0];
-  if (ltSand) {
-    ltSand.classList.toggle('hidden', !sandbagging);
-    const sa = $('ltSandA'), sbEl = $('ltSandB');
-    if (sa) sa.textContent = Number(sb[0] || 0);
-    if (sbEl) sbEl.textContent = Number(sb[1] || 0);
-  }
   if ($('phaseLabel')) $('phaseLabel').textContent = {
     dealing: 'Dealing',
     bidding: 'Bidding',
@@ -11805,7 +11198,6 @@ function renderUI() {
       const av = playerAvatars[meId] || (meP && meP.avatar) || AVATARS[seatBase % AVATARS.length];
       meNameEl.innerHTML = `<span class="seat-avatar">${avatarHTML(av)}</span><span class="seat-identity-copy"><span class="player-name-text">${escapeHtmlSafe(meName)}</span>${meP?horCareerBadgeHtml(meP):''}</span>`;
       applyBotNameAttr(meNameEl, meP);
-      try { updateBankDisplays(); } catch (e) {}
       try { horBindCareerBadges(meNameEl); } catch (e) { console.error('[Career badge bind]', e); }
     }
     const quietMe = isFirstHandOfMatch();
@@ -12874,7 +12266,6 @@ function runBotAction() {
   }
   const actor = (game.phase === 'discard' || game.phase === 'trump') ? game.bidder : game.currentPlayer;
   const prevDiff = botDifficulty;
-  if (isBuzzed(actor)) botDifficulty = 'easy';
   try {
 
   if (game.phase === 'bidding' && players[game.currentPlayer]?.isBot) {
@@ -13379,25 +12770,6 @@ function toggleFullscreen() {
   syncBrowserFitBtn();
 }
 
-function cycleTheme() {
-  const ids = (window.horRoomThemeIds && window.horRoomThemeIds.length)
-    ? window.horRoomThemeIds
-    : ['midnight', 'house', 'riverboat', 'cabin', 'speakeasy', 'slate', 'burgundy', 'ember', 'harbor', 'sandbar', 'ivy', 'frost', 'cocoa', 'plum', 'ink'];
-  let cur = 0;
-  ids.forEach((id, i) => {
-    if (document.body.classList.contains('room-theme-' + id)) cur = i;
-  });
-  const next = ids[(cur + 1) % ids.length];
-  if (typeof window.applyRoomTheme === 'function') window.applyRoomTheme(next, true);
-  else {
-    ids.forEach((id) => document.body.classList.remove('room-theme-' + id));
-    document.body.classList.add('room-theme-' + next);
-  }
-  try {
-    if (typeof horToast === 'function') horToast('Table: ' + next.replace(/^./, c => c.toUpperCase()));
-  } catch (e) {}
-}
-
 function hostDealPerfectHand() {
   if (!isHost || !game) return;
   if (!isHostOnlyHuman() || !experimentalHandOpt) {
@@ -13671,6 +13043,7 @@ bindClick('startBtn', () => {
 
 /** Offline practice: local host + 3 bots, no PeerJS / room code required */
 function startSoloPractice() {
+  if(!validateRuleSetup())return false;
   horCancelLobbyOperation043();
   teardownMultiplayerBeforeLobby();
   forgetRoomSession043();
@@ -13699,7 +13072,7 @@ function startSoloPractice() {
     myName = (($('hor-player-name') && $('hor-player-name').value) || '').trim() || myName || 'You';
     myPeerId = 'solo-' + Math.random().toString(36).slice(2, 9);
     roomCode = 'OFFLINE';
-    players = [{ id: myPeerId, name: myName, team: 0, isHost: true, isBot: false, seat: 0, bank: loadMyBank(), avatar: ensurePreferredAvatar() || AVATARS[0], voice: loadPreferredVoice(), careerPublic: horMyCareerProfile() }];
+    players = [{ id: myPeerId, name: myName, team: 0, isHost: true, isBot: false, seat: 0, avatar: ensurePreferredAvatar() || AVATARS[0], voice: loadPreferredVoice(), careerPublic: horMyCareerProfile() }];
     applyPreferredAvatarToMe();
 
     // 3 named persona bots (no network)
@@ -13804,6 +13177,7 @@ bindClick('botPickerClose', closeBotPicker);
 const _botPickModal = $('botPickerModal');
 if (_botPickModal) _botPickModal.addEventListener('click', (e) => { if (e.target === _botPickModal) closeBotPicker(); });
 function teardownMultiplayerBeforeLobby() {
+  window.HORBidVoice801?.stop();
   horCancelLobbyOperation043();
   // Rook520: an intentional Leave is final.  Mark it before closing PeerJS so
   // disconnect/error callbacks cannot recreate a session while teardown runs.
@@ -13871,10 +13245,10 @@ bindClick('toggleMuteLobby', toggleMute);
 })();
 bindClick('btnForceRefreshLobby', () => {
   // Manual escape hatch: clears this device's cached app files/service
-  // worker (not names, bank, or table settings) and reloads the latest
+  // worker (not names, career progress, or table settings) and reloads the latest
   // deployed version. For when a device is stuck on stale cached code that
   // the automatic version-mismatch check hasn't caught yet.
-  const ok = window.confirm('This will clear this app\'s cached files on this device and reload. Your name, bank, and settings are kept. Continue?');
+  const ok = window.confirm('This will clear this app\'s cached files on this device and reload. Your name, career progress, and settings are kept. Continue?');
   if (ok) horForceUpdate();
 });
 bindClick('btnMute', toggleMute);
@@ -13886,16 +13260,6 @@ bindClick('ltTabLast5', () => setLandscapeTab(true));
 
 bindClick('closeStats', () => { const m = $('statsModal'); if (m) m.classList.add('hidden'); });
 bindClick('btnTransferHost', hostTransferHost);
-bindClick('btnA11y', () => {
-  highContrast = !highContrast;
-  try { localStorage.setItem('rookHighContrast', highContrast ? '1' : '0'); } catch (e) {}
-  applyA11y();
-});
-bindClick('btnReduceMotion', () => {
-  reduceMotion = !reduceMotion;
-  try { localStorage.setItem('rookReduceMotion', reduceMotion ? '1' : '0'); } catch (e) {}
-  applyA11y();
-});
 applyA11y();
 
 // Always bind the in-game Game Options Done button from the global event-listener setup.
@@ -13907,8 +13271,8 @@ bindClick('closeHostOptionsBtn', (e) => {
 });
 
 function syncQuickMenuSound(){
-  const st=$('menuSoundQuickState'); if(st) st.textContent = muted ? 'Muted' : 'On';
-  const b=$('menuSoundQuick'); if(b) b.classList.toggle('is-muted',!!muted);
+  const st=$('menuSoundQuickState'); if(st) st.textContent = soundMuted ? 'Muted' : 'On';
+  const b=$('menuSoundQuick'); if(b) b.classList.toggle('is-muted',!!soundMuted);
 }
 bindClick('menuSoundQuick',()=>{ const b=$('btnMute'); if(b)b.click(); setTimeout(syncQuickMenuSound,0); });
 bindClick('menuStatsQuick',()=>{ closeHostOptionsModal(); const b=$('btnStats'); if(b)b.click(); });
@@ -13984,10 +13348,6 @@ bindClick('browserFitBtn2', toggleFullscreen);
 });
 syncBrowserFitBtn();
 setTimeout(syncBrowserFitBtn, 300);
-bindClick('btnTheme', cycleTheme);
-bindClick('btnCardBack', openCardBackModal);
-bindClick('btnCardBackLobby', openCardBackModal);
-bindClick('closeCardBackModal', closeCardBackModal);
 bindClick('btnPause', () => {
   if (typeof houseConfirm === 'function' && game && !game.paused) {
     houseConfirm({ title: 'Pause the table?', body: 'Everyone waits until you resume.', danger: false }).then((ok) => {
@@ -14172,69 +13532,8 @@ function applyCardBack(id, persist) {
   if (persist !== false) {
     try { localStorage.setItem('rookCardBack', cardBackId); } catch (e) {}
   }
-  document.querySelectorAll('.card-back-choice').forEach(btn => {
-    const on = btn.getAttribute('data-back') === cardBackId;
-    btn.classList.toggle('selected', on);
-    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-  });
-}
 
-function cardBackPickerHTML() {
-  return CARD_BACKS.map(b => `
-    <button type="button" class="card-back-choice${b.id === cardBackId ? ' selected' : ''}"
-      data-back="${b.id}" aria-pressed="${b.id === cardBackId ? 'true' : 'false'}"
-      title="${b.name}">
-      <span class="card-back-swatch cardback-preview-${b.id}" aria-hidden="true"></span>
-      <span class="card-back-name">${b.name}</span>
-      <span class="card-back-hint">${b.hint}</span>
-    </button>
-  `).join('');
 }
-
-function bindCardBackPicker(root) {
-  if (!root) return;
-  if (!root.dataset.filled) {
-    root.innerHTML = cardBackPickerHTML();
-    root.dataset.filled = '1';
-  } else {
-    root.querySelectorAll('.card-back-choice').forEach(btn => {
-      const on = btn.getAttribute('data-back') === cardBackId;
-      btn.classList.toggle('selected', on);
-    });
-  }
-  root.querySelectorAll('.card-back-choice').forEach(btn => {
-    btn.onclick = () => applyCardBack(btn.getAttribute('data-back'), true);
-  });
-}
-
-function refreshCardBackPickers() {
-  ['cardBackPickerHost', 'cardBackPickerModal'].forEach(id => bindCardBackPicker($(id)));
-}
-
-function openCardBackModal() {
-  const modal = $('cardBackModal');
-  if (!modal) return;
-  refreshCardBackPickers();
-  modal.classList.remove('hidden');
-}
-
-function closeCardBackModal() {
-  const modal = $('cardBackModal');
-  if (modal) modal.classList.add('hidden');
-}
-(function wireCardBackModal() {
-  const modal = $('cardBackModal');
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeCardBackModal();
-    });
-  }
-})();
-
-(function wireTableBank() {
-  // Rook529: Message Table purchase/composer UI was retired from player-facing play.
-  // Incoming legacy table-message rendering remains compatible, but no local control opens the composer.
-})();;
 
 (function initPrefs() {
   const t = parseInt(localStorage.getItem('rookTheme') || '0', 10);
@@ -14243,7 +13542,6 @@ function closeCardBackModal() {
   document.body.classList.add(THEMES[themeIndex]);
   try { cardBackId = normalizeCardBackId(localStorage.getItem('rookCardBack') || 'griffin'); } catch (e) { cardBackId = 'griffin'; }
   applyCardBack(cardBackId, false);
-  refreshCardBackPickers();
   updateMuteButtons();
 })();
 
@@ -14628,7 +13926,6 @@ function updateLandscapeTheater() {
       ${isFinalWinner ? '<div class="lt-win-stamp">WINS</div>' : ''}
       ${typeof renderCardHTML === 'function' ? renderCardHTML(t.card, false) : ''}
       <div class="lt-name">${nameOf(t.player)}</div>
-      <div class="lt-bank${isMe ? ' is-mine' : ''}">${formatBank(bankOfSeat(t.player))}</div>
       <div class="lt-roles">${roleBits.join(' ')}</div>
     </div>`;
     }).join('');
@@ -14662,7 +13959,7 @@ function updateLandscapeTheater() {
   const handEl = $('ltHand');
   const handLabel = $('ltHandLabel');
   if (handLabel) {
-    handLabel.innerHTML = 'Your hand <span class="seat-bank is-mine lt-hand-bank">' + formatBank(bankOfSeat(mySeat >= 0 ? mySeat : 0)) + '</span>';
+    handLabel.textContent = 'Your hand';
   }
   if (handEl) {
     const dealing = !!(game && game.phase === 'dealing');
@@ -15528,7 +14825,7 @@ function playRecordedCard035(kind, delayMs = 0) {
   gain.gain.value=kind==='reveal'?.5:1;
   let filter=null;
   if(kind==='reveal'){filter=ctx.createBiquadFilter();filter.type='lowpass';filter.frequency.value=2500;filter.Q.value=.5;src.connect(filter);filter.connect(gain);}else src.connect(gain);
-  gain.connect(ctx.destination);presentationSounds035.add(src);
+  gain.connect(window.HORAudioMixer.output(ctx,'gameplay'));presentationSounds035.add(src);
   src.onended=()=>{presentationSounds035.delete(src);src.disconnect();if(filter)filter.disconnect();gain.disconnect();};
   src.start(ctx.currentTime + Math.max(0,delayMs)/1000);
 }
@@ -15546,7 +14843,7 @@ function playShuffleSound() {
       source.buffer = buffer;
       gain.gain.setValueAtTime(0.58, ctx.currentTime);
       source.connect(gain);
-      gain.connect(ctx.destination);
+      gain.connect(window.HORAudioMixer.output(ctx,'gameplay'));
       source.onended = () => { try { source.disconnect(); gain.disconnect(); } catch (_) {} };
       source.start(ctx.currentTime + 0.01);
     });
@@ -15568,7 +14865,7 @@ function playDealCardSound(delayMs = 0) {
     // Dealt cards are close together; keep each familiar paper landing quiet.
     gain.gain.setValueAtTime(0.34, ctx.currentTime);
     source.connect(gain);
-    gain.connect(ctx.destination);
+    gain.connect(window.HORAudioMixer.output(ctx,'gameplay'));
     source.start(ctx.currentTime + 0.004);
     source.onended = () => { try { source.disconnect(); gain.disconnect(); } catch (_) {} };
   }, Math.max(0, Number(delayMs) || 0));
@@ -15838,7 +15135,7 @@ function playBirdNestReaction041() {
     for(let i=0;i<out.length;i++){let v=bytes.charCodeAt(i*2)|(bytes.charCodeAt(i*2+1)<<8);if(v>=32768)v-=65536;out[i]=v/32768;}
   }
   const source=ctx.createBufferSource();source.buffer=birdCrowdBuffer041;
-  source.connect(ctx.destination);presentationSounds035.add(source);
+  source.connect(window.HORAudioMixer.output(ctx,'gameplay'));presentationSounds035.add(source);
   source.onended=()=>{presentationSounds035.delete(source);source.disconnect();};
   source.start(ctx.currentTime+.04);
 }
@@ -15972,14 +15269,7 @@ try { syncFavoritePartner042(); } catch (_) {}
  const FAMILIES={paper:'Card movement',gather:'Gather cards',click:'Button',wood:'Wood tap',clink:'Glass clink',stamp:'Trump stamp',tick:'Clock tick',wings:'Wing flaps',applause:'Award applause'};
  const previewSources=new Set();
  let previewTimer=0, previewSnapshot=null;
- window.he064Volumes={gameplay:1,atmosphere:1,character:1};
- window.he064Gain=function(category){
-  const v=window.he064Volumes||{};
-  if(category==='preview')return v.gameplay ?? 1;
-  if(category==='character')return v.character||1;
-  if(category==='atmosphere')return v.atmosphere||1;
-  return v.gameplay||1;
- };
+ window.he064Gain=category=>window.HORAudioMixer?.level(category==='preview'?'gameplay':category==='character'||category==='atmosphere'?category:'gameplay')??1;
  function stopPreviewAudio(){
   previewSources.forEach(src=>{try{src.stop();}catch(e){}});
   previewSources.clear();
@@ -16059,8 +15349,7 @@ try { syncFavoritePartner042(); } catch (_) {}
   const body=root.querySelector('.he064-body');
   const sounds=document.createElement('section');sounds.dataset.hePane='sounds';
   const vols=document.createElement('div');vols.className='he064-vols';
-  vols.innerHTML='<label>Gameplay <input data-vol="gameplay" type="range" min="0" max="100" value="100"></label><label>Atmosphere <input data-vol="atmosphere" type="range" min="0" max="100" value="100"></label><label>Character <input data-vol="character" type="range" min="0" max="100" value="100"></label>';
-  vols.addEventListener('input',(e)=>{const k=e.target.getAttribute('data-vol');if(k)window.he064Volumes[k]=Number(e.target.value)/100;});
+  vols.textContent='Volumes and voice mute are in Sounds & Atmosphere → Volume Controls.';
   sounds.appendChild(vols);
   Object.entries(FAMILIES).forEach(([kind,title])=>{
    const row=document.createElement('div');row.className='he064-row';

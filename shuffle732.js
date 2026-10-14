@@ -61,7 +61,7 @@ function sound(){
  whenAudioReady(c=>{
   if(token!==generation||!active||soundMuted||!soundCard)return;
   const elapsed=(performance.now()-started)/1000;if(elapsed>=duration/1000)return;
-  const source=c.createBufferSource();source.buffer=buffer;source.playbackRate.value=buffer.duration/(duration/1000);source.connect(c.destination);sources.push(source);
+  const source=c.createBufferSource();source.buffer=buffer;source.playbackRate.value=buffer.duration/(duration/1000);source.connect(window.HORAudioMixer.output(c,'gameplay'));sources.push(source);
   source.onended=()=>{sources=sources.filter(s=>s!==source);source.disconnect()};
   source.start(c.currentTime,elapsed*source.playbackRate.value);source.stop(c.currentTime+Math.max(0,duration/1000-elapsed));
  });});

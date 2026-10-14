@@ -79,7 +79,7 @@
   try{
    ctx=ctx||new AudioCtx();running=true;const token=++epoch;
    await ctx.resume();if(token!==epoch||!allowed()){if(token===epoch)stop();return;}
-   bus=ctx.createGain();bus.gain.setValueAtTime(volume/30,ctx.currentTime);bus.connect(ctx.destination);
+   bus=ctx.createGain();bus.gain.setValueAtTime(volume/30,ctx.currentTime);bus.connect(window.HORAudioMixer.output(ctx,'atmosphere'));
    voice('fire',0,true,3);voice('wind',0,true,5);
    schedule('bird',120,240,token);schedule('crickets',180,360,token);
    schedule('owl',900,1800,token);schedule('wolf',480,900,token);schedule('rain',1200,2400,token);

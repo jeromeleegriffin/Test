@@ -9,7 +9,7 @@ window.HORShuffleLegacy732=legacy;
 let player=null,canvas=null,overlay=null,raf=0,active=false,mode='none',generation=0,started=0,duration=PLAY,minimal=false,soundRequested=false;
 let sources=[],last=null,stats=null;const buffers=new Map(),pending=new Map();
 const smooth=x=>{x=Math.max(0,Math.min(1,x));return x*x*(3-2*x)};
-function gain(){return Math.max(0,Math.min(1,Number(window.he064Volumes?.gameplay??1)))}
+function gain(){return Math.max(0,Math.min(1,1))}
 function silence(){for(const s of sources){try{s.node.stop();s.node.disconnect();s.envelope?.disconnect();s.gain.disconnect()}catch(_){}}sources=[];legacy.silence()}
 function stop(){generation++;active=false;cancelAnimationFrame(raf);raf=0;silence();legacy.stop();if(player){player.close();stats=player.inspect();player=null}canvas?.remove();canvas=null;overlay?.classList.remove('signature-shuffle');overlay=null;mode='none';soundRequested=false}
 function geometry(t){
@@ -56,7 +56,7 @@ function sound(){
   // Frame73 is first visibly moving riffle frame; frame127 begins visible bridge release.
   for(const [begin,end,phase,attack] of [[.18,.76,.18,0],[3.014,3.80,73/30,.008],[3.80,5.10,3.80,0]]){
    const from=(presentationTime(phase*1000)/1000-attack)*scale,to=from+(end-begin)*scale;if(elapsed>=to)continue;
-   const at=Math.max(elapsed,from,c.currentTime-epoch),length=to-at;if(length<=0)continue;const node=c.createBufferSource(),g=c.createGain(),envelope=c.createGain();node.buffer=buffer;node.playbackRate.value=ratio;g.gain.value=gain();node.connect(envelope);envelope.connect(g);g.connect(c.destination);
+   const at=Math.max(elapsed,from,c.currentTime-epoch),length=to-at;if(length<=0)continue;const node=c.createBufferSource(),g=c.createGain(),envelope=c.createGain();node.buffer=buffer;node.playbackRate.value=ratio;g.gain.value=gain();node.connect(envelope);envelope.connect(g);g.connect(window.HORAudioMixer.output(c,'gameplay'));
    const when=Math.max(c.currentTime,epoch+at),fade=Math.min(.008,length/3);envelope.gain.setValueAtTime(0,when);envelope.gain.linearRampToValueAtTime(1,when+fade);envelope.gain.setValueAtTime(1,when+length-fade);envelope.gain.linearRampToValueAtTime(0,when+length);
    const item={node,gain:g,envelope,ctx:c,sourceBegin:begin,sourceEnd:end,phase,attack,presentationFrom:from,scheduledWhen:when,outputLatency:c.outputLatency||0};sources.push(item);node.onended=()=>{sources=sources.filter(s=>s!==item);try{node.disconnect();envelope.disconnect();g.disconnect()}catch(_){}};
    node.start(when,(begin*scale+(at-from))*ratio,length*ratio);

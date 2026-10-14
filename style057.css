@@ -6615,12 +6615,6 @@ body:not(.in-game) #app {
     color: #fff;
     font-size: 1.12em;
   }
-  .lt-sandbag-score {
-    color: #ffcc80;
-    border-left: 1px solid rgba(255,204,128,.35);
-    padding-left: clamp(.35rem, 1vw, .7rem);
-  }
-  .lt-sandbag-score b { color: #ffd54f; }
 
   /* Full-page landscape hand-result/end-game screen. */
   .lt-endgame {
@@ -6776,15 +6770,6 @@ body:not(.in-game) #app {
 
 /* ===== Portrait top score: running sandbag total ===== */
 @media (orientation: portrait) {
-  .sandbag-score {
-    color: #ffcc80;
-    font-weight: 800;
-    white-space: nowrap;
-  }
-  .sandbag-score b {
-    color: #ffd54f;
-  }
-  .sandbag-score.hidden { display: none !important; }
 }
 
 /* Red 2 — one framed 2:3 asset for hand, table, portrait, landscape.
@@ -7267,104 +7252,6 @@ body.cardback-aftermath {
   --card-back-image: url("assets/images/cardback-aftermath.jpg");
 }
 
-.card-back-picker {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.55rem;
-  margin: 0.4rem 0 0.15rem;
-}
-.card-back-choice {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.28rem;
-  padding: 0.45rem 0.3rem 0.4rem;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(0,0,0,0.18);
-  color: inherit;
-  cursor: pointer;
-  min-width: 0;
-}
-.card-back-choice:hover {
-  border-color: rgba(201,162,39,0.55);
-  background: rgba(201,162,39,0.08);
-}
-.card-back-choice.selected {
-  border-color: #c9a227;
-  box-shadow: 0 0 0 2px rgba(201,162,39,0.35);
-  background: rgba(201,162,39,0.12);
-}
-.card-back-swatch {
-  width: 52px;
-  height: 76px;
-  border-radius: 6px;
-  border: 2px solid var(--card-back-border, #c9a227);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.35);
-  position: relative;
-  overflow: hidden;
-  flex: 0 0 auto;
-}
-.card-back-name {
-  font-size: 0.68rem;
-  font-weight: 800;
-  line-height: 1.15;
-  text-align: center;
-}
-.card-back-hint {
-  font-size: 0.58rem;
-  opacity: 0.65;
-  text-align: center;
-}
-.card-back-modal { max-width: min(420px, 94vw); }
-.card-back-modal h2 { margin-bottom: 0.25rem; }
-
-/* Picker tiles use their own art, never the active body card-back vars */
-.card-back-swatch.cardback-preview-classic {
-  background: #0a0a0c url("assets/images/cardback-classic.jpg") center / cover no-repeat;
-  border-color: #c9a227;
-}
-.card-back-swatch.cardback-preview-raven {
-  background: #0a0c12 url("assets/images/cardback-raven.jpg") center / cover no-repeat;
-  border-color: #c9a227;
-}
-.card-back-swatch.cardback-preview-griffin {
-  background: #0e2418 url("assets/images/cardback-griffin.jpg") center / cover no-repeat;
-  border-color: #d4b24a;
-}
-.card-back-swatch.cardback-preview-felt {
-  background: #12331f url("assets/images/cardback-felt.jpg") center / cover no-repeat;
-  border-color: #d4b24a;
-}
-.card-back-swatch.cardback-preview-crimson {
-  background: #4a0b12 url("assets/images/cardback-crimson.jpg") center / cover no-repeat;
-  border-color: #e0bc3a;
-}
-.card-back-swatch.cardback-preview-midnight {
-  background: #12102a url("assets/images/cardback-midnight.jpg") center / cover no-repeat;
-  border-color: #c9a227;
-}
-.card-back-swatch.cardback-preview-faceoff {
-  background: #0a0c12 url("assets/images/cardback-faceoff.jpg") center / cover no-repeat;
-  border-color: #d4b24a;
-}
-.card-back-swatch.cardback-preview-clash {
-  background: #0a0c12 url("assets/images/cardback-clash.jpg") center / cover no-repeat;
-  border-color: #e0bc3a;
-}
-.card-back-swatch.cardback-preview-aerial {
-  background: #0a0c12 url("assets/images/cardback-aerial.jpg") center / cover no-repeat;
-  border-color: #c9a227;
-}
-.card-back-swatch.cardback-preview-dive {
-  background: #0e2418 url("assets/images/cardback-dive.jpg") center / cover no-repeat;
-  border-color: #d4b24a;
-}
-.card-back-swatch.cardback-preview-aftermath {
-  background: #0a0c12 url("assets/images/cardback-aftermath.jpg") center / cover no-repeat;
-  border-color: #c9a227;
-}
-
 /* Remaining-hand reveal: keep Rook / Red 2 art visible on tiny scoreboard cards */
 #scoreModal.showing-remaining .modal-content.scoreboard-modal,
 #scoreModal.showing-remaining #scoreModalBody {
@@ -7460,9 +7347,6 @@ body.remaining-open #ltEndGame {
 }
 
 @media (max-width: 420px) {
-  .card-back-picker { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem; }
-  .card-back-swatch { width: 40px; height: 58px; }
-  .card-back-name { font-size: 0.62rem; }
 }
 
 
@@ -8785,18 +8669,6 @@ body.reduce-motion .nest-beat { animation:none !important; transition:none !impo
   transform: scale(.7);
 }
 
-.room-theme-picker { display:flex; flex-wrap:wrap; gap:.35rem; margin:.3rem 0 .15rem; }
-.room-theme-btn {
-  border:1px solid rgba(201,162,39,.4);
-  background:rgba(0,0,0,.28);
-  color:#f4ead0;
-  border-radius:999px;
-  padding:.28rem .65rem;
-  font-size:.78rem;
-  cursor:pointer;
-}
-.room-theme-btn.active { border-color:#c9a227; background:rgba(201,162,39,.22); }
-
 body.room-theme-midnight,
 body.room-theme-midnight #lobby,
 body.room-theme-midnight #waiting,
@@ -9943,9 +9815,6 @@ body.gfx-seatPlaques .player-slot .name[data-plaque-team="1"] {
 .player-slot.is-turn .name[data-plaque-team] {
   box-shadow: 0 0 0 2px #ffd54f, 0 0 10px rgba(255,213,79,.4);
 }
-.plaque-picker { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.35rem; }
-.plaque-swatch { min-height:2rem; border:1px solid #5c4a22; border-radius:8px; padding:.2rem .45rem; font-size:.75rem; cursor:pointer; }
-.plaque-swatch.active { outline:2px solid #c9a227; }
 .table-msg-popup { pointer-events:auto; }
 .table-msg-close { margin-top:.55rem; width:100%; }
 @media (orientation: landscape) {
@@ -11719,16 +11588,6 @@ body.no-avatar-motion .wait-seat-av {
   border: 1px solid rgba(212,175,55,.65);
   text-decoration: none;
   box-shadow: 0 1px 0 rgba(255,255,255,.08) inset;
-}
-#cardBackModal .card-back-choice {
-  background: rgba(8, 14, 28, 0.65);
-  border: 1px solid rgba(212,175,55,.28);
-  color: #f0e6d0;
-}
-#cardBackModal .card-back-choice.selected {
-  border-color: #e8c96a;
-  background: rgba(201,162,39,.16);
-  box-shadow: 0 0 0 2px rgba(232,201,106,.28);
 }
 #newPlayersModal .new-player-row {
   background: #10182c;
@@ -14863,7 +14722,6 @@ body.cardback-griffin{
   --card-back-size:cover!important;
   --card-back-image:url("assets/images/cardback-griffin-clean.jpg?v=631")!important;
 }
-.card-back-swatch.cardback-preview-griffin{background:#090a0b url("assets/images/cardback-griffin-clean.jpg?v=631") center/cover no-repeat!important;}
 
 /* Restore the previously approved newer STAMP THE TRUMP presentation from Rook586.
    Logic remains Rook590; only presentation ownership is restored. */
@@ -15087,7 +14945,7 @@ nn/* ===== Rook595 — failed-fix reset + viewport menu + approved opaque bid sh
   border:0!important;
   box-shadow:none!important;
 }
-#topBar.score-collapsed #scoreRow>span:not(.target-label):not(.sandbag-score){
+#topBar.score-collapsed #scoreRow>span:not(.target-label){
   background:rgba(10,12,12,.82)!important;
   border:1px solid rgba(213,174,77,.42)!important;
   border-radius:7px!important;
