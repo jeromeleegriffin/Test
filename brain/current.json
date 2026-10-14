@@ -13,9 +13,9 @@
   "checkpoint": "approved-room-menu-friends-805",
   "checkpointStatus": "DOCUMENTATION_CURRENT_805_DELIVERED_PHONE_REVIEW_PENDING",
   "approvedWorkingBuild": "783",
-  "testRootObservedBuild": "805-bidpopup",
-  "gamePublicationStatus": "TEST_BIDDING_POPUP_DEPLOYED_PRODUCTION_UNCHANGED",
-  "onScreenVersion": "805-bidpopup Test runtime;805 archive remains historical review package",
+  "testRootObservedBuild": "805-ownerfix2",
+  "gamePublicationStatus": "TEST_OWNER_CORRECTIONS_DEPLOYED_PRODUCTION_UNCHANGED",
+  "onScreenVersion": "805-ownerfix2 Test runtime; no new ZIP",
   "liveCommit": "1f3a6382baccca6bf9d0f2102698c8a39d38fa30",
   "liveTable": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
   "foundationVersion": "H",
@@ -61,14 +61,14 @@
   "mainDevelopmentCheckpoint": "../coordination/MAIN_DEVELOPMENT_STABILITY_20261014.md",
   "smallBiddingStatus": "PRESERVED771_WITH_CHARACTER_STATUS_ANCHOR_REPAIRS",
   "railClearanceStatus": "PRESERVED771_EXISTING_SAFE_SUPPRESSION_LIMIT_UNCHANGED",
-  "latestGameBuild": "805-bidpopup",
+  "latestGameBuild": "805-ownerfix2",
   "latestGameLibraryFileId": "libfile_9aa904ab89c88191829e50ee9e0af68c",
   "latestGameFilename": "HouseStability-9a8f4d4242e1.zip",
   "cleanFallbackCandidate": "766",
   "cleanFallbackStatus": "766_OWNER_APPROVED_HISTORICAL_FALLBACK",
-  "testServerPlannedBuild": "805-bidpopup",
-  "testServerDeploymentStatus": "TEST_BIDDING_POPUP_LIVE_VERIFIED_ANDROID_PENDING",
-  "defaultIntelligence": "CHALLENGER-X1 original frozen",
+  "testServerPlannedBuild": "805-ownerfix2",
+  "testServerDeploymentStatus": "TEST_OWNER_CORRECTIONS_LIVE_VERIFIED_ANDROID_PENDING",
+  "defaultIntelligence": "CHALLENGER-X1 frozen card play with owner-authorized sampled bid-jump evaluation",
   "backupIntelligence": "Sol7 original frozen",
   "epaEnabled": false,
   "sha256": "b08cbd55c46fdb5fb532c7a040935990d5b3b0d6d9078133bb3b1e08cfe0de5b",
@@ -82,9 +82,9 @@
     "physicalTabletVerified": false,
     "implementedBuild": "771"
   },
-  "testServerDeploymentCommit": "dd3ae7995216c6e19f44ead10c47cf4a36db1b48",
+  "testServerDeploymentCommit": "cb3fc725f835b66badc55bdda26e41a8e81d454e",
   "testServerUrl": "https://jeromeleegriffin.github.io/Test/",
-  "testRootRollbackCommit": "f88f14618754166acb0bbc2749017af924468c77",
+  "testRootRollbackCommit": "bc00492a5cd5cac3d6744d8676c5c523adadffc8",
   "fullCastTrumpVoiceCheckpoint": "../coordination/FULL_CAST_TRUMP_VOICES_790.md",
   "fullCastTrumpVoiceStatus": "790_TRUMP_ROUTING_PRESERVED;801_BID_PASS_MOON_QUEUE_IN805;PHONE_REVIEW_PENDING",
   "fullCastTrumpVoiceLibraryFileId": "libfile_25682ceb2d4c81919546ac624ee3119d",
@@ -129,15 +129,15 @@
     "bytes": 145217741,
     "status": "DOWNLOAD_ONLY_NOT_DEPLOYED"
   },
-  "pagesWorkflowRunId": "38568591516",
+  "pagesWorkflowRunId": "38574703710",
   "pagesWorkflowConclusion": "success",
   "liveAssetVerification": {
-    "status": "LIVE_BIDDING_POPUP_FILES_VERIFIED",
-    "runtime": "805-bidpopup",
-    "changedServedFiles": 7,
+    "status": "LIVE_OWNER_CORRECTIONS_FILES_AND_BROWSER_VERIFIED",
+    "runtime": "805-ownerfix2",
+    "changedServedFiles": 13,
     "activeServiceWorkerControllerVerified": false,
     "offlineReloadVerified": false,
-    "limit": "Earlier805-stability hosted offline/X1 checks preserved separately; fresh hosted worker/offline not recertified for this marker."
+    "limit": "Fresh hosted browser smoke uses blocked service worker; prior offline checks retained, not recertified."
   },
   "deployedTestReleasePackage": {
     "filename": "797.zip",
@@ -254,9 +254,9 @@
     "mainDevelopmentCheckpoint": "../coordination/SESSION_798_805.md"
   },
   "standingTestWorkflow": "../coordination/TEST_SITE_WORKFLOW.md",
-  "currentTestReleaseReceipt": "../coordination/BIDDING_POPUP_RECEIPT.json",
+  "currentTestReleaseReceipt": "../coordination/OWNER_CORRECTIONS_RECEIPT.json",
   "currentOwnerMenuDecision": "Latest explicit owner choice: shared midnight-blue/gold individually raised buttons, fixed non-scrolling pages; supersedes conflicting Menu A appearance history only.",
-  "latestTestRepairCheckpoint": "../coordination/BIDDING_POPUP_HANDOFF_20261014.md",
+  "latestTestRepairCheckpoint": "../coordination/OWNER_CORRECTIONS_HANDOFF_20261014.md",
   "shareIconRepair": {
     "runtime": "805-shareicon",
     "commit": "cb14bdf2c1794453e9e06ffa3ce15a2a86805b74",
@@ -274,13 +274,13 @@
   },
   "currentTestSource": {
     "type": "GitHub Test runtime",
-    "commit": "dd3ae7995216c6e19f44ead10c47cf4a36db1b48",
-    "runtime": "805-bidpopup",
-    "sourceArchive": "HouseStability-9a8f4d4242e1.zip plus share-icon, tablet/direct-join, header and corrected five-point bidding/popup deltas; no new ZIP"
+    "commit": "cb3fc725f835b66badc55bdda26e41a8e81d454e",
+    "runtime": "805-ownerfix2",
+    "source": "805-bidpopup plus owner corrections; original archives retained"
   },
   "previousRuntimeLiveVerification": {
-    "status": "LIVE_COMPACT_HEADER_FILES_VERIFIED",
-    "runtime": "805-headercompact",
+    "status": "LIVE_BIDDING_POPUP_FILES_VERIFIED",
+    "runtime": "805-bidpopup",
     "changedServedFiles": 7,
     "activeServiceWorkerControllerVerified": false,
     "offlineReloadVerified": false,
@@ -356,5 +356,91 @@
     "productionTouched": false,
     "newZip": false,
     "standingWorkflow": "TEST_SITE_WORKFLOW.md"
+  },
+  "ownerCorrections": {
+    "runtime": "805-ownerfix2",
+    "commit": "cb3fc725f835b66badc55bdda26e41a8e81d454e",
+    "rollbackCommit": "bc00492a5cd5cac3d6744d8676c5c523adadffc8",
+    "pagesRunId": 38574703710,
+    "pagesConclusion": "success",
+    "changedServedFiles": 13,
+    "allChangedServedBytesMatch": true,
+    "hashes": [
+      {
+        "path": "manifest.json",
+        "sha256": "7dda49a249425fbca23e956e4eb69474edd678d07306ce27f9dc8c8590839c73"
+      },
+      {
+        "path": "index.html",
+        "sha256": "a26b644aa67a26080d2833ee8f87d418832c6c5917d3f48bbb45c2b79f504017"
+      },
+      {
+        "path": "polish.js",
+        "sha256": "9cb2c722d3833711f1304cc31066a261206da4e3673439f121ee16d4bf14ced8"
+      },
+      {
+        "path": "landing783.js",
+        "sha256": "abd84de058541a74320d02687804f5525d6a4dbe5afce32020ea6ad311c2a131"
+      },
+      {
+        "path": "landing783.css",
+        "sha256": "5a62f5b8224024d88aba197c886429e4ca2b8db293a97a75c41507c395ba4789"
+      },
+      {
+        "path": "game060.js",
+        "sha256": "4a441f365bc8c1d9d4a4f72d99d2143c4e0959e14f21c70636c3684c03e6ef84"
+      },
+      {
+        "path": "responsive-review.css",
+        "sha256": "b9ffd2a660fb5f2891a72b3924abce41920e0ade12ebb315cc6957b0e90dfe82"
+      },
+      {
+        "path": "human-bid-voices801.js",
+        "sha256": "caced91612ff492174ad995c45c539a3ff2ccc1a468fca9d36b96756b5a2b0f3"
+      },
+      {
+        "path": "hor-version.js",
+        "sha256": "eb8831957abdbbf4c33810918910038e617ec46d92960e03849722520bc9f531"
+      },
+      {
+        "path": "sw060.js",
+        "sha256": "1c59b4b211d782f82e86bd4e0d55950346f510e8e7a520aee7ad233a17698aae"
+      },
+      {
+        "path": "x1/bidding.js",
+        "sha256": "c2b56d03a1505de5e2f508b05d6c2872ee0bee46ac77712b80ec11fe1adffb0b"
+      },
+      {
+        "path": "x1/worker.js",
+        "sha256": "725934cfdb1ce9c19c4b29cfae148878923b9555d760ccb3acef84af242806ae"
+      },
+      {
+        "path": "x1/integration.js",
+        "sha256": "80a6677e4779d53222f87d89f25aaa303708ce25314ca1e818e66aa2d49bca97"
+      }
+    ],
+    "browser": {
+      "runtime": "805-ownerfix2",
+      "joinAction": true,
+      "backRestoresOffline": true,
+      "publicMenu": true,
+      "pageErrors": [],
+      "serviceWorker": "Blocked for fresh runtime smoke; offline certification not repeated"
+    },
+    "tests": "Three complete native offline hands at1x/3x/MAX,40/24/32 X1 decisions, no fallback,200 points each. Bid/popup/timer, Moon late queue+next hand, strategic jumps/private-input boundary, four menus and six viewport access fixtures passed.",
+    "moonLimit": "Late-auction queue refill confirmed and repaired; exact original Android sequence not independently captured. Physical listening pending.",
+    "strategyLimit": "Sampled-auction comparison, not a measured human intimidation/win-rate claim. Core/play/Sol7/partner policy preserved.",
+    "watchOnly": "Hidden from public join panel pending deferred multiplayer verification; implementation retained.",
+    "tabletLimit": "Emulated viewports and actual click checks, not physical onn8.1-inch certification.",
+    "cloudflare": "Deferred by owner until current fixes complete; no Worker/account/server tests performed.",
+    "productionTouched": false,
+    "newZip": false,
+    "ownerAndroidAccepted": false,
+    "preservation": {
+      "unchangedAssetFiles": 925,
+      "unchangedCoreAndLegacyBots": true,
+      "unchangedTrumpVoiceAndProgression": true
+    },
+    "rotationAndJoinKeyboard": "Passed six viewport fixtures, restore to original phone parent, actual Menu click, required-bid hide/restore, Enter routed to join not offline."
   }
 }

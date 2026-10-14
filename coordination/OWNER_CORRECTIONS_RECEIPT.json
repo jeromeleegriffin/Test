@@ -1,0 +1,86 @@
+{
+  "runtime": "805-ownerfix2",
+  "commit": "cb3fc725f835b66badc55bdda26e41a8e81d454e",
+  "rollbackCommit": "bc00492a5cd5cac3d6744d8676c5c523adadffc8",
+  "pagesRunId": 38574703710,
+  "pagesConclusion": "success",
+  "changedServedFiles": 13,
+  "allChangedServedBytesMatch": true,
+  "hashes": [
+    {
+      "path": "manifest.json",
+      "sha256": "7dda49a249425fbca23e956e4eb69474edd678d07306ce27f9dc8c8590839c73"
+    },
+    {
+      "path": "index.html",
+      "sha256": "a26b644aa67a26080d2833ee8f87d418832c6c5917d3f48bbb45c2b79f504017"
+    },
+    {
+      "path": "polish.js",
+      "sha256": "9cb2c722d3833711f1304cc31066a261206da4e3673439f121ee16d4bf14ced8"
+    },
+    {
+      "path": "landing783.js",
+      "sha256": "abd84de058541a74320d02687804f5525d6a4dbe5afce32020ea6ad311c2a131"
+    },
+    {
+      "path": "landing783.css",
+      "sha256": "5a62f5b8224024d88aba197c886429e4ca2b8db293a97a75c41507c395ba4789"
+    },
+    {
+      "path": "game060.js",
+      "sha256": "4a441f365bc8c1d9d4a4f72d99d2143c4e0959e14f21c70636c3684c03e6ef84"
+    },
+    {
+      "path": "responsive-review.css",
+      "sha256": "b9ffd2a660fb5f2891a72b3924abce41920e0ade12ebb315cc6957b0e90dfe82"
+    },
+    {
+      "path": "human-bid-voices801.js",
+      "sha256": "caced91612ff492174ad995c45c539a3ff2ccc1a468fca9d36b96756b5a2b0f3"
+    },
+    {
+      "path": "hor-version.js",
+      "sha256": "eb8831957abdbbf4c33810918910038e617ec46d92960e03849722520bc9f531"
+    },
+    {
+      "path": "sw060.js",
+      "sha256": "1c59b4b211d782f82e86bd4e0d55950346f510e8e7a520aee7ad233a17698aae"
+    },
+    {
+      "path": "x1/bidding.js",
+      "sha256": "c2b56d03a1505de5e2f508b05d6c2872ee0bee46ac77712b80ec11fe1adffb0b"
+    },
+    {
+      "path": "x1/worker.js",
+      "sha256": "725934cfdb1ce9c19c4b29cfae148878923b9555d760ccb3acef84af242806ae"
+    },
+    {
+      "path": "x1/integration.js",
+      "sha256": "80a6677e4779d53222f87d89f25aaa303708ce25314ca1e818e66aa2d49bca97"
+    }
+  ],
+  "browser": {
+    "runtime": "805-ownerfix2",
+    "joinAction": true,
+    "backRestoresOffline": true,
+    "publicMenu": true,
+    "pageErrors": [],
+    "serviceWorker": "Blocked for fresh runtime smoke; offline certification not repeated"
+  },
+  "tests": "Three complete native offline hands at1x/3x/MAX,40/24/32 X1 decisions, no fallback,200 points each. Bid/popup/timer, Moon late queue+next hand, strategic jumps/private-input boundary, four menus and six viewport access fixtures passed.",
+  "moonLimit": "Late-auction queue refill confirmed and repaired; exact original Android sequence not independently captured. Physical listening pending.",
+  "strategyLimit": "Sampled-auction comparison, not a measured human intimidation/win-rate claim. Core/play/Sol7/partner policy preserved.",
+  "watchOnly": "Hidden from public join panel pending deferred multiplayer verification; implementation retained.",
+  "tabletLimit": "Emulated viewports and actual click checks, not physical onn8.1-inch certification.",
+  "cloudflare": "Deferred by owner until current fixes complete; no Worker/account/server tests performed.",
+  "productionTouched": false,
+  "newZip": false,
+  "ownerAndroidAccepted": false,
+  "preservation": {
+    "unchangedAssetFiles": 925,
+    "unchangedCoreAndLegacyBots": true,
+    "unchangedTrumpVoiceAndProgression": true
+  },
+  "rotationAndJoinKeyboard": "Passed six viewport fixtures, restore to original phone parent, actual Menu click, required-bid hide/restore, Enter routed to join not offline."
+}
