@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '805-headercompact';
+const APP_VERSION = '805-bidpopup';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -5281,6 +5281,7 @@ function hideBotStyleTip() {
 }
 function showBotStyleTip(name, ev) {
   if (ev) { ev.preventDefault(); ev.stopPropagation(); }
+  if(window.HORBidRepair737?.required()){horToast('Finish your bid before viewing a player.');return false;}
   const tip = $('botStyleTip');
   if (!tip) return;
   let p = personaByName(name);
@@ -6047,7 +6048,7 @@ function showVariantRules() {
   const line = (title,text) => '<p><b>'+title+'</b> '+text+'</p>';
   body.innerHTML = [
     line('Teams & winning.', 'Four players, partners opposite. Reach '+goal+' points to win. A team at or below −'+goal+' loses; a team reaching the positive target takes precedence. If both reach a target in the same hand, the higher score wins; equal scores tie.'),
-    line('Deal & bidding.', 'Each player receives '+handSize+' cards, with '+nestSizeDefault+' in the nest. Minimum bid: '+minBid+'. Raise in steps of 5 or pass. The highest bidder takes the nest, discards back to '+handSize+' cards, and chooses trump.'),
+    line('Deal & bidding.', 'Each player receives '+handSize+' cards, with '+nestSizeDefault+' in the nest. Minimum bid: '+minBid+'. Bid any amount divisible by five above the current bid, or pass. You may raise by 5, 10, 15, 20, 25 or more. The +5 and −5 buttons are shortcuts; tap the bid amount to enter an exact number. The highest bidder takes the nest, discards back to '+handSize+' cards, and chooses trump.'),
     line('First lead.', ({bidder:'The bid winner',leftOfBidder:'The player to the left of the bid winner',rightOfBidder:'The player to the right of the bid winner'}[leadOrder]||'The bid winner')+' leads the first trick. Each trick winner leads next.'),
     line('Following color.', 'Follow the led color when you can. '+(specialsAnytime?'The included special cards may be played at any time.':'Included special cards follow the same legal-play rules as the other cards.')+' '+(mustTrumpWhenVoid?'If you cannot follow color, you must play trump when you have one.':'If you cannot follow color, you may play another legal card.')),
     line('Winning tricks.', 'The highest trump wins a trick containing trump; otherwise the highest card of the led color wins. '+(includeOnes?(onesHigh?'1 is highest in its color.':'1 is low in its color.'):'1s are not included.')+' '+(includeRook?('The Bird is '+(rookLowest?'lowest':'above ordinary')+' trump.'):'The Bird is not included.')),
@@ -6891,7 +6892,7 @@ function syncPortraitWaitBanner() { syncWaitBanners(); }
 function syncLandscapeKittyWait() { syncWaitBanners(); }
 
 function showBidUI() {
-  try { hideBotStyleTip(); } catch (e) {}
+  try { if(window.HORBidRepair737?.required()){const tip=$('botStyleTip');if(tip&&!tip.classList.contains('hidden')){hideBotStyleTip();horToast('Your bid is due. Player details are available after bidding.');}} } catch (e) {}
   if (nestAuctionLocked()) return;
   const landscape = !!(window.matchMedia && window.matchMedia('(orientation: landscape)').matches);
   const nextMin = auctionNextMin();
@@ -6907,7 +6908,7 @@ function showBidUI() {
       <div class="bid-meta" aria-hidden="true"></div>
       <div class="bid-stepper">
         <button type="button" class="btn" id="bidMinus" aria-label="Lower bid">−5</button>
-        <span id="bidValue" class="bid-value${isShootMoonBid(suggested) ? ' is-moon' : ''}">${suggested}</span>
+        <span id="bidValue" contenteditable="plaintext-only" inputmode="numeric" role="textbox" aria-label="Bid amount, multiples of five" title="Tap to enter any bid divisible by five" class="bid-value${isShootMoonBid(suggested) ? ' is-moon' : ''}">${suggested}</span>
         <button type="button" class="btn" id="bidPlus" aria-label="Raise bid">+5</button>
       </div>
       <div class="bid-buttons">
@@ -6927,15 +6928,16 @@ function showBidUI() {
   {
     const valEl = $('bidValue');
     const confBtn = $('bidConfirm');
-    const sync = () => {
+    const sync = (editing=false) => {
       if (valEl) {
-        valEl.textContent = String(suggested);
+        if(!editing) valEl.textContent = String(suggested);
         valEl.classList.toggle('is-moon', isShootMoonBid(suggested));
       }
       if (confBtn) {
-        confBtn.disabled = suggested < nextMin || suggested > ceiling;
-        confBtn.setAttribute('data-live-bid', String(suggested));
-        if (isShootMoonBid(suggested)) {
+        confBtn.disabled = !Number.isSafeInteger(suggested) || suggested % 5 !== 0 || suggested < nextMin || suggested > ceiling;
+        confBtn.setAttribute('data-live-bid', Number.isSafeInteger(suggested)?String(suggested):'');
+        if (!Number.isSafeInteger(suggested) || suggested % 5 !== 0){confBtn.textContent='Use multiples of 5';confBtn.classList.remove('bid-shoot-moon');}
+        else if (isShootMoonBid(suggested)) {
           confBtn.innerHTML = '<img class="moon-approved-button795" src="assets/images/shoot-moon-crescent-approved.png" alt="Shoot the Moon">';
           confBtn.classList.add('bid-shoot-moon');
         } else {
@@ -6946,7 +6948,8 @@ function showBidUI() {
       _ltBidSuggested = suggested;
       try { syncLandscapeBidBar(); } catch (e) {}
     };
-    if (confBtn) confBtn.disabled = suggested < nextMin || suggested > ceiling;
+    if (confBtn) confBtn.disabled = !Number.isSafeInteger(suggested) || suggested % 5 !== 0 || suggested < nextMin || suggested > ceiling;
+    if(valEl){valEl.onfocus=()=>{const range=document.createRange();range.selectNodeContents(valEl);const selection=getSelection();selection.removeAllRanges();selection.addRange(range);};valEl.oninput=()=>{const raw=valEl.textContent.trim();suggested=/^\d+$/.test(raw)?Number(raw):NaN;sync(true);};valEl.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();if(!confBtn.disabled)confBtn.click();}};}
     const minus = $('bidMinus');
     const plus = $('bidPlus');
     const conf = $('bidConfirm');
@@ -6955,12 +6958,12 @@ function showBidUI() {
     if (minus) minus.onclick = (e) => {
       e.preventDefault(); e.stopPropagation();
       try { playSfx('bidDown'); } catch (err) {}
-      if (suggested - 5 >= nextMin) { suggested -= 5; sync(); }
+      suggested = Math.max(nextMin, (Number.isSafeInteger(suggested)&&suggested%5===0?suggested:nextMin)-5); sync();
     };
     if (plus) plus.onclick = (e) => {
       e.preventDefault(); e.stopPropagation();
       try { playSfx('bidUp'); } catch (err) {}
-      if (suggested + 5 <= ceiling) { suggested += 5; sync(); }
+      suggested = Math.min(ceiling, (Number.isSafeInteger(suggested)&&suggested%5===0?suggested:nextMin)+5); sync();
     };
     // Hold repeats the same legal +/-5 click operation; the auction remains authoritative.
     window.HORBidHold795?.bind(minus, plus, () => game?.phase==='bidding' && game.currentPlayer===myIndex && !game.paused && !isSpectator);
@@ -7157,8 +7160,9 @@ function hostProcessBid(data) {
   if (players[data.player] && players[data.player].disconnected) return;
   if (horRememberAction(data)) return;
   if (data.value !== 0) {
-    data.value = parseInt(data.value, 10);
-    if (!Number.isFinite(data.value)) return;
+    if (!['number','string'].includes(typeof data.value) || String(data.value).trim()==='') return;
+    data.value = Number(data.value);
+    if (!Number.isSafeInteger(data.value)) return;
   }
   // Once you pass, you are out of this auction — ignore further bids from you
   if (hasPassedBid(data.player) && data.value !== 0) return;
@@ -7173,6 +7177,7 @@ function hostProcessBid(data) {
     hostPromptBid();
     return;
   }
+  if(data.value!==0 && (data.value % 5 !== 0 || data.value < (Number(minBid)||100) || data.value<=auctionHigh() || data.value>maxBid() || (isShootMoonBid(data.value)&&!moonBidAllowed(data.player)))) return;
   clearTurnTimer();
   if (!game.bidStatus) game.bidStatus = [null, null, null, null];
   const pname = (players[data.player] && players[data.player].name) || ('P' + (data.player + 1));
@@ -7215,7 +7220,7 @@ function hostProcessBid(data) {
     }
   } else {
     const high = auctionHigh();
-    if (data.value <= high || data.value > maxBid() || data.value % 5 !== 0) return;
+    if (data.value <= high || data.value > maxBid()) return;
     if (isShootMoonBid(data.value) && !moonBidAllowed(data.player)) return;
     game.highestBid = data.value;
     game.bid = data.value;

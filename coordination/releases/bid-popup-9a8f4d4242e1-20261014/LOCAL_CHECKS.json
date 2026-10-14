@@ -1,0 +1,1337 @@
+{
+  "popupAndHost": [
+    {
+      "source": "header-compact-repairs",
+      "personaClearedByBidUI": true,
+      "careerClearedByBidSafety": true
+    },
+    {
+      "source": "bidding-popup-repairs",
+      "personaStaysOutsideRequiredBid": true,
+      "closeWorks": true,
+      "requiredBidNoPopupFlash": true,
+      "exactHumanBid": true,
+      "accepted": [
+        {
+          "value": 125,
+          "high": 125,
+          "invalidTimerRetained": null
+        },
+        {
+          "value": 135,
+          "high": 135,
+          "invalidTimerRetained": null
+        },
+        {
+          "value": 195,
+          "high": 195,
+          "invalidTimerRetained": null
+        },
+        {
+          "value": 121,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 123,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 199,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 120,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 69,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 201,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 121.5,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": "121.5",
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": "abc",
+          "high": 120,
+          "invalidTimerRetained": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "botsUnchanged": {
+    "bots.js": true,
+    "x1/core.js": true,
+    "x1/bidding.js": true,
+    "x1/integration.js": true,
+    "x1/worker.js": true
+  },
+  "menus": [
+    {
+      "width": 320,
+      "height": 568,
+      "root": {
+        "h": 544,
+        "w": 286,
+        "top": 12,
+        "bottom": 556,
+        "scroll": 542,
+        "client": 542,
+        "bodyScroll": 420,
+        "bodyHeight": 420,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 117.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 178.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 252.5625
+          },
+          {
+            "text": "Play With FriendsHost, join or invite friends\u203a",
+            "bottom": 313.75
+          },
+          {
+            "text": "\u266aSounds & AtmosphereVoices, effects and the room a",
+            "bottom": 387.9375
+          },
+          {
+            "text": "\u2699Game SetupScore to win and selected table rules\u203a",
+            "bottom": 462.125
+          }
+        ],
+        "page": "Page 1 of 2"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 1
+        },
+        {
+          "name": "career",
+          "pages": 2
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 1
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    },
+    {
+      "width": 393,
+      "height": 647,
+      "root": {
+        "h": 620,
+        "w": 350,
+        "top": 12,
+        "bottom": 632,
+        "scroll": 618,
+        "client": 618,
+        "bodyScroll": 551,
+        "bodyHeight": 551,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 119.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 180.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 241.5625
+          },
+          {
+            "text": "Play With FriendsHost, join or invite friends\u203a",
+            "bottom": 302.75
+          },
+          {
+            "text": "\u266aSounds & AtmosphereVoices, effects and the room a",
+            "bottom": 363.9375
+          },
+          {
+            "text": "\u2699Game SetupScore to win and selected table rules\u203a",
+            "bottom": 425.125
+          },
+          {
+            "text": "?How to PlayRules, bidding, scoring and the Moon\u203a",
+            "bottom": 486.3125
+          },
+          {
+            "text": "\u2193Install on This PhoneKeep the House close at hand",
+            "bottom": 547.5
+          }
+        ],
+        "page": "Page 1 of 1"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 1
+        },
+        {
+          "name": "career",
+          "pages": 1
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 1
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    },
+    {
+      "width": 360,
+      "height": 480,
+      "root": {
+        "h": 456,
+        "w": 326,
+        "top": 12,
+        "bottom": 468,
+        "scroll": 454,
+        "client": 454,
+        "bodyScroll": 326,
+        "bodyHeight": 326,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 120.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 181.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 242.5625
+          },
+          {
+            "text": "Play With FriendsHost, join or invite friends\u203a",
+            "bottom": 303.75
+          },
+          {
+            "text": "\u266aSounds & AtmosphereVoices, effects and the room a",
+            "bottom": 364.9375
+          }
+        ],
+        "page": "Page 1 of 2"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 1
+        },
+        {
+          "name": "career",
+          "pages": 2
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 2
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    },
+    {
+      "width": 800,
+      "height": 360,
+      "root": {
+        "h": 336,
+        "w": 350,
+        "top": 12,
+        "bottom": 348,
+        "scroll": 334,
+        "client": 334,
+        "bodyScroll": 216,
+        "bodyHeight": 216,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 115.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 176.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 237.5625
+          }
+        ],
+        "page": "Page 1 of 3"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 3
+        },
+        {
+          "name": "career",
+          "pages": 2
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 2
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    }
+  ],
+  "max": {
+    "hands": [
+      {
+        "hand": 1,
+        "pace": 99,
+        "elapsedMs": 7956,
+        "history": 1,
+        "scores": [
+          40,
+          160
+        ],
+        "summary": {
+          "pointsA": 40,
+          "pointsB": 160,
+          "bid": 115,
+          "bidderTeam": 1,
+          "made": true,
+          "trump": "red",
+          "scores": [
+            40,
+            160
+          ],
+          "scoreDeltaA": 40,
+          "scoreDeltaB": 160,
+          "shotTheMoon": false,
+          "shotMoonResult": null,
+          "nestWinnerName": "Halo",
+          "nestPts": 40,
+          "nestCards": [
+            {
+              "color": "green",
+              "rank": 10,
+              "id": "green-10"
+            },
+            {
+              "color": "green",
+              "rank": 5,
+              "id": "green-5"
+            },
+            {
+              "color": "yellow",
+              "rank": 10,
+              "id": "yellow-10"
+            },
+            {
+              "color": "yellow",
+              "rank": 6,
+              "id": "yellow-6"
+            },
+            {
+              "color": "black",
+              "rank": 10,
+              "id": "black-10"
+            },
+            {
+              "color": "black",
+              "rank": 5,
+              "id": "black-5"
+            }
+          ],
+          "claimRevealHands": [
+            {
+              "player": 0,
+              "name": "SOL",
+              "team": 0,
+              "cards": [
+                {
+                  "color": "yellow",
+                  "rank": 1,
+                  "id": "yellow-1"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 12,
+                  "id": "yellow-12"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 5,
+                  "id": "yellow-5"
+                },
+                {
+                  "color": "black",
+                  "rank": 12,
+                  "id": "black-12"
+                },
+                {
+                  "color": "black",
+                  "rank": 7,
+                  "id": "black-7"
+                }
+              ]
+            },
+            {
+              "player": 1,
+              "name": "Halo",
+              "team": 1,
+              "cards": [
+                {
+                  "color": "red",
+                  "rank": 2,
+                  "id": "red-2"
+                },
+                {
+                  "color": "red",
+                  "rank": 14,
+                  "id": "red-14"
+                },
+                {
+                  "color": "red",
+                  "rank": 10,
+                  "id": "red-10"
+                },
+                {
+                  "color": "black",
+                  "rank": 1,
+                  "id": "black-1"
+                },
+                {
+                  "color": "black",
+                  "rank": 14,
+                  "id": "black-14"
+                }
+              ]
+            },
+            {
+              "player": 2,
+              "name": "Brandy",
+              "team": 0,
+              "cards": [
+                {
+                  "color": "green",
+                  "rank": 12,
+                  "id": "green-12"
+                },
+                {
+                  "color": "green",
+                  "rank": 9,
+                  "id": "green-9"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 13,
+                  "id": "yellow-13"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 8,
+                  "id": "yellow-8"
+                },
+                {
+                  "color": "black",
+                  "rank": 13,
+                  "id": "black-13"
+                }
+              ]
+            },
+            {
+              "player": 3,
+              "name": "Marrow",
+              "team": 1,
+              "cards": [
+                {
+                  "color": "yellow",
+                  "rank": 14,
+                  "id": "yellow-14"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 11,
+                  "id": "yellow-11"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 7,
+                  "id": "yellow-7"
+                },
+                {
+                  "color": "black",
+                  "rank": 11,
+                  "id": "black-11"
+                },
+                {
+                  "color": "black",
+                  "rank": 8,
+                  "id": "black-8"
+                }
+              ]
+            }
+          ],
+          "claimer": 1,
+          "claimerName": "Halo",
+          "claimReason": null,
+          "lastTricks": [
+            {
+              "winner": 1,
+              "plays": [
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "green",
+                    "rank": 1,
+                    "id": "green-1"
+                  }
+                },
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "red",
+                    "rank": 11,
+                    "id": "red-11"
+                  }
+                },
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "green",
+                    "rank": 6,
+                    "id": "green-6"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "black",
+                    "rank": 9,
+                    "id": "black-9"
+                  }
+                }
+              ],
+              "trump": "red",
+              "ledColor": "green"
+            },
+            {
+              "winner": 0,
+              "plays": [
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "red",
+                    "rank": 12,
+                    "id": "red-12"
+                  }
+                },
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "black",
+                    "rank": 6,
+                    "id": "black-6"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "green",
+                    "rank": 8,
+                    "id": "green-8"
+                  }
+                },
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "rook",
+                    "rank": 99,
+                    "id": "rook"
+                  }
+                }
+              ],
+              "trump": "red",
+              "ledColor": "red"
+            },
+            {
+              "winner": 1,
+              "plays": [
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "red",
+                    "rank": 8,
+                    "id": "red-8"
+                  }
+                },
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "green",
+                    "rank": 14,
+                    "id": "green-14"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 9,
+                    "id": "yellow-9"
+                  }
+                },
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "red",
+                    "rank": 6,
+                    "id": "red-6"
+                  }
+                }
+              ],
+              "trump": "red",
+              "ledColor": "red"
+            }
+          ],
+          "careerEvent": {
+            "matchId": "2c6ab76b-0d76-4c91-a1dc-1f1c618b49b3",
+            "hand": 1,
+            "players": [
+              {
+                "id": "solo-cexy93r",
+                "name": "SOL",
+                "isBot": true,
+                "team": 0,
+                "avatar": "hw03"
+              },
+              {
+                "id": "bot-1791982920038-ctrq",
+                "name": "Halo",
+                "isBot": true,
+                "team": 1,
+                "avatar": "halo"
+              },
+              {
+                "id": "bot-1791982920040-z6oh",
+                "name": "Brandy",
+                "isBot": true,
+                "team": 0,
+                "avatar": "brandy"
+              },
+              {
+                "id": "bot-1791982920041-2zn6",
+                "name": "Marrow",
+                "isBot": true,
+                "team": 1,
+                "avatar": "marrow"
+              }
+            ],
+            "stats": [
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 40,
+                "tricksWon": 1,
+                "trickPtsSum": 40,
+                "rookCaptures": 1,
+                "red2Captures": 0,
+                "bigTricks": 0,
+                "nestWins": 0,
+                "nestPts": 0,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 1,
+                "highBid": 115,
+                "bidSum": 115,
+                "bidsMade": 1,
+                "bidsSet": 0,
+                "points": 160,
+                "tricksWon": 8,
+                "trickPtsSum": 120,
+                "rookCaptures": 0,
+                "red2Captures": 1,
+                "bigTricks": 0,
+                "nestWins": 1,
+                "nestPts": 40,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 40,
+                "tricksWon": 1,
+                "trickPtsSum": 40,
+                "rookCaptures": 0,
+                "red2Captures": 0,
+                "bigTricks": 0,
+                "nestWins": 0,
+                "nestPts": 0,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 160,
+                "tricksWon": 0,
+                "trickPtsSum": 120,
+                "rookCaptures": 0,
+                "red2Captures": 0,
+                "bigTricks": 0,
+                "nestWins": 0,
+                "nestPts": 40,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              }
+            ],
+            "extras": [
+              {
+                "bestTrickPoints": 20
+              },
+              {
+                "bestTrickPoints": 15
+              },
+              {
+                "bestTrickPoints": 20
+              },
+              {}
+            ],
+            "bidder": 1,
+            "tricksPerHand": 10,
+            "completed": false,
+            "winnerTeam": null,
+            "summary": {
+              "pointsA": 40,
+              "pointsB": 160,
+              "bid": 115,
+              "made": true,
+              "trump": "red",
+              "scores": [
+                40,
+                160
+              ]
+            }
+          }
+        },
+        "engine": {
+          "requested": "x1",
+          "active": "x1",
+          "reason": "",
+          "ready": true,
+          "initializationError": "",
+          "lastDecision": {
+            "phase": "play",
+            "engine": "x1",
+            "hand": 27,
+            "seat": 3,
+            "epa": false
+          },
+          "epa": false,
+          "partnerSeat": null,
+          "hand": 28,
+          "pending": false
+        },
+        "decisions": [
+          {
+            "hand": 8,
+            "seat": 1,
+            "ms": 211,
+            "seed": "17834349111129236139",
+            "card": 18,
+            "search": [
+              128,
+              10,
+              12,
+              133.984375,
+              136.09375,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 9,
+            "seat": 2,
+            "ms": 0.10000000894069672,
+            "seed": "16952693457130596374",
+            "card": 41,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 10,
+            "seat": 3,
+            "ms": 0.20000000298023224,
+            "seed": "16358050155017135229",
+            "card": 14,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 11,
+            "seat": 0,
+            "ms": 59.599999994039536,
+            "seed": "10922736828177495280",
+            "card": 10,
+            "search": [
+              128,
+              3,
+              10,
+              198.1640625,
+              198.1640625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 12,
+            "seat": 2,
+            "ms": 159.20000000298023,
+            "seed": "13164799236959284461",
+            "card": 8,
+            "search": [
+              128,
+              9,
+              1,
+              21.171875,
+              36.8359375,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 13,
+            "seat": 3,
+            "ms": 39.599999994039536,
+            "seed": "11002113229036981164",
+            "card": 2,
+            "search": [
+              128,
+              2,
+              2,
+              -193.0859375,
+              -193.0859375,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 14,
+            "seat": 0,
+            "ms": 40.70000000298023,
+            "seed": "11755454151755411674",
+            "card": 6,
+            "search": [
+              128,
+              2,
+              6,
+              211.40625,
+              211.40625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 15,
+            "seat": 1,
+            "ms": 131.90000000596046,
+            "seed": "14741098994197424117",
+            "card": 12,
+            "search": [
+              128,
+              9,
+              12,
+              123.75,
+              123.75,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 16,
+            "seat": 1,
+            "ms": 97.5,
+            "seed": "10823591163786827136",
+            "card": 13,
+            "search": [
+              128,
+              8,
+              13,
+              124.609375,
+              124.609375,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 17,
+            "seat": 2,
+            "ms": 62.400000005960464,
+            "seed": "8103952276776167466",
+            "card": 9,
+            "search": [
+              128,
+              8,
+              1,
+              26.1328125,
+              30.8203125,
+              8002,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 18,
+            "seat": 3,
+            "ms": 58.900000005960464,
+            "seed": "4009648570701660055",
+            "card": 24,
+            "search": [
+              128,
+              8,
+              22,
+              -93.7109375,
+              -90.078125,
+              6396,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 19,
+            "seat": 0,
+            "ms": 23.599999994039536,
+            "seed": "11072935589780885655",
+            "card": 11,
+            "search": [
+              128,
+              2,
+              45,
+              -0.8203125,
+              45.234375,
+              5802,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 20,
+            "seat": 1,
+            "ms": 49.3999999910593,
+            "seed": "10815865037647820629",
+            "card": 17,
+            "search": [
+              128,
+              7,
+              39,
+              111.40625,
+              120,
+              7978,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 21,
+            "seat": 2,
+            "ms": 43.79999999701977,
+            "seed": "5208536266729423477",
+            "card": 31,
+            "search": [
+              128,
+              7,
+              1,
+              -7.34375,
+              5.5859375,
+              6931,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 22,
+            "seat": 3,
+            "ms": 45.70000000298023,
+            "seed": "6200430342235872727",
+            "card": 3,
+            "search": [
+              128,
+              7,
+              22,
+              -26.9921875,
+              -23.5546875,
+              6609,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 23,
+            "seat": 0,
+            "ms": 0.10000000894069672,
+            "seed": "8991296790446440133",
+            "card": 45,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 24,
+            "seat": 0,
+            "ms": 36.20000000298023,
+            "seed": "8393023851393791155",
+            "card": 40,
+            "search": [
+              128,
+              6,
+              27,
+              -38.75,
+              -14.8828125,
+              6179,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 25,
+            "seat": 1,
+            "ms": 32.79999999701977,
+            "seed": "10649065230958730490",
+            "card": 16,
+            "search": [
+              128,
+              6,
+              16,
+              120,
+              120,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 26,
+            "seat": 2,
+            "ms": 24.100000008940697,
+            "seed": "8900993714535877653",
+            "card": 1,
+            "search": [
+              128,
+              3,
+              1,
+              101.40625,
+              101.40625,
+              7514,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 27,
+            "seat": 3,
+            "ms": 29.599999994039536,
+            "seed": "14048683957048092907",
+            "card": 34,
+            "search": [
+              128,
+              6,
+              29,
+              -131.3671875,
+              -116.7578125,
+              7035,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          }
+        ],
+        "fallbacks": []
+      }
+    ],
+    "errors": [],
+    "missing": [],
+    "mode": "Native diagnostic bot play; saved career untouched; actual screenshots taken during progression"
+  },
+  "changes": [
+    {
+      "path": "index.html",
+      "sha256": "11316d43a371083fe38ed2e73fcae4a0b159d8887956edcd6a9c0b6bc379567c"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "2e7d5c36424c31443f4bb8c4b62e949c098ef3a22c04b6b8ec2f14b06c6cc252"
+    },
+    {
+      "path": "game060.js",
+      "sha256": "e5eda3483104c28e8e78727a2d675bdb9000bb1dd2bae10b0c6829d4c363e996"
+    },
+    {
+      "path": "hor-version.js",
+      "sha256": "ab377f820e834acaceac1b1bc6fac916198f15310d55534e4fa5ff9facac43bc"
+    },
+    {
+      "path": "sw060.js",
+      "sha256": "4107b8c777ded2541689a7bab886e4d134edb73fcfcfa4f892a9b75747a7858a"
+    },
+    {
+      "path": "polish.js",
+      "sha256": "a270f73475fd1c28805ccb31223538a72aae369d4ff50b4037bf67c435f82c3a"
+    },
+    {
+      "path": "progression.js",
+      "sha256": "8d5955690982432dd2c532297d3fe12c7c1e879b7ff3860c827a19540ef3b40e"
+    }
+  ]
+}

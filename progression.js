@@ -130,6 +130,7 @@ function recordRelationships(){return {ok:true,source:'atomic-hand-event'};}
 function publicProfile(){return P.careerAdapters.profile();}
 function botPublicProfile(name){return P.careerAdapters.profile('bot',P.offline.botActorId(name),name);}
 function showCareerCard(profile){
+ if(window.HORBidRepair737?.required()){window.horToast?.('Finish your bid before viewing a player.');return false;}
  if(!profile||!profile.enabled)return false;
  const esc=x=>String(x==null?'':x).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
  const num=x=>Math.max(0,Number(x)||0).toLocaleString();
