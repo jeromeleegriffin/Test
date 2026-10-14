@@ -1,7 +1,7 @@
-// Griffin House of Rooks — 805-stability runtime marker, no gameplay ownership.
-window.HOR_LIVE_VERSION = '805-stability';
-window.HOR_BUILD = '805-stability';
-window.GHR_BUILD = "Rook805-stability · Stability audit repairs; prior navigation and career corrections retained";
+// Griffin House of Rooks — 805-shareicon runtime marker, no gameplay ownership.
+window.HOR_LIVE_VERSION = '805-shareicon';
+window.HOR_BUILD = '805-shareicon';
+window.GHR_BUILD = "Rook805-shareicon · Sharing icon identity refresh; stability repairs retained";
 window.HORRuntimeTruth = async function () {
   const controller = navigator.serviceWorker && navigator.serviceWorker.controller;
   const worker = controller ? await new Promise(resolve => {
@@ -12,7 +12,7 @@ window.HORRuntimeTruth = async function () {
   }) : null;
   return {page:window.HOR_PAGE_BUILD, script:window.HOR_SCRIPT_BUILD,
     marker:window.HOR_BUILD, worker, controller:controller && controller.scriptURL,
-    coherent:window.HOR_PAGE_BUILD === '805-stability' && window.HOR_SCRIPT_BUILD === '805-stability' &&
-      window.HOR_BUILD === '805-stability' && !!worker && worker.build === '805-stability' &&
-      worker.cache === 'house-of-rooks-805-stability'};
+    coherent:window.HOR_PAGE_BUILD === '805-shareicon' && window.HOR_SCRIPT_BUILD === '805-shareicon' &&
+      window.HOR_BUILD === '805-shareicon' && !!worker && worker.build === '805-shareicon' &&
+      worker.cache === 'house-of-rooks-805-shareicon'};
 };
