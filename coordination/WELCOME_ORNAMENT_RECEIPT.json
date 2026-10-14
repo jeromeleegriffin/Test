@@ -1,0 +1,50 @@
+{
+  "runtime": "805-welcome",
+  "commit": "14cc08d7978fd28bc9b5f9086c1259d6b935194a",
+  "rollbackCommit": "b40c1163b95f3ab8f97f06ef06c94892e4e75cb4",
+  "pagesRunId": 38577856753,
+  "pagesConclusion": "success",
+  "changedServedFiles": 6,
+  "allChangedServedBytesMatch": true,
+  "hashes": [
+    {
+      "path": "manifest.json",
+      "sha256": "2e598c78121d836b343d317ae47b3f44b07ded207ca692ed66ab8e7400a6abd5"
+    },
+    {
+      "path": "index.html",
+      "sha256": "fe249551d47993ed7f23a632453b73653e1a1b3c2a137b4ae570163366b4a928"
+    },
+    {
+      "path": "landing783.css",
+      "sha256": "58ed1406b11f16c59508c004049c60c057c029ce300bcdce1df74ce5587a10f9"
+    },
+    {
+      "path": "game060.js",
+      "sha256": "70ea8c5d46b6bb72130a8be7945b7f27908f3fcb32a9a504094692f641711be8"
+    },
+    {
+      "path": "hor-version.js",
+      "sha256": "e7f5ab3eccb120a9271c039695c2263ecb29dc5a18b36e5cd5c70e8c38812e47"
+    },
+    {
+      "path": "sw060.js",
+      "sha256": "40e11b317fb496c8600b5c9ed177599a3bfe10072d656e4cc01a2fdd566c494d"
+    }
+  ],
+  "browser": {
+    "runtime": "805-welcome",
+    "joinAction": true,
+    "backRestoresOffline": true,
+    "publicMenu": true,
+    "pageErrors": [],
+    "serviceWorker": "Blocked for fresh runtime smoke; offline certification not repeated"
+  },
+  "tests": "Home/join at five emulated phone/tablet sizes and Change player. No panel scrolling; viewport bounds; input; Back; hit targets. Before/after393 captures. No page errors. All prior assets unchanged.",
+  "scope": "Ornate green/gold landing and join presentation. Fixed entrance focus no longer scrolls scene. Script handshake marker corrected from stale805-bidpopup to805-welcome.",
+  "limits": "Physical Android appearance and keyboard acceptance pending. Prior full-hand/audio/X1 testing retained, not rerun for presentation. Fresh service-worker offline run not repeated.",
+  "cloudflare": "Deferred by owner; untouched",
+  "productionTouched": false,
+  "newZip": false,
+  "ownerAndroidAccepted": false
+}
