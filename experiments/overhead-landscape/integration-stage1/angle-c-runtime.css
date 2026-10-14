@@ -212,3 +212,11 @@ body.in-game.angle-c-runtime #scoreModal .ghsb-team-icon{width:28px!important;he
 body.in-game.angle-c-runtime #scoreModal .sb-total{font-size:28px!important;line-height:1!important;}
 body.in-game.angle-c-runtime #scoreModal :is(.sb-label,.sb-delta,.ghsb-contract,.ghsb-summary,.ghsb-nest-title){font-size:12px!important;line-height:1.15!important;}
 }
+/* Each score detail is a separate one-screen view; summary returns to scores. */
+@media (orientation:landscape){
+body.in-game.angle-c-runtime #scoreModal .gh-approved-scoreboard:has(>details[open]) > :not(details[open]){display:none!important;}
+body.in-game.angle-c-runtime #scoreModal .gh-approved-scoreboard > details[open] > summary::before{content:'‹ Back to score · ';}
+body.in-game.angle-c-runtime #scoreModal .gh-approved-scoreboard > details > summary{min-height:44px!important;display:flex!important;align-items:center!important;cursor:pointer;}
+body.in-game.angle-c-runtime #scoreModal .ghsb-details{font-size:12px!important;line-height:1.2!important;gap:5px!important;padding:6px!important;}
+body.in-game.angle-c-runtime #scoreModal .ghsb-result-line{font-size:12px!important;line-height:1.2!important;}
+}
