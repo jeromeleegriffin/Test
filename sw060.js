@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
 const BUILD = '805-ownerreview';
-const CACHE = 'house-of-rooks-805-ownerreview';
+const CACHE = 'house-of-rooks-805-menu-finish1';
 const SHELL = [
  "./owner-review805.css?v=805-ownerreview",
  "./assets/images/avatar-raven-approved.jpg",
@@ -478,7 +478,7 @@ const SHELL = [
  "./assets/characters077/willow-right.webp",
  "./assets/characters077/willow-top.webp",
  './room-approved805.css?v=805-ownerreview','./room-approved805.js?v=805-ownerreview',
- './menu-approved805.css?v=805-ownerreview','./menu-approved805.js?v=805-ownerreview',
+ './menu-approved805.css?v=805-menu-finish1','./menu-approved805.js?v=805-menu-finish1',
  './assets/approved805/griffin-logo.png','./assets/approved805/ceiling-wood.png',
  './landing783.css?v=805-ownerreview','./landing783.js?v=805-ownerreview',
  './hor-version.js?v=805-ownerreview',

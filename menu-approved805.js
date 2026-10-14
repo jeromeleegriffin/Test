@@ -119,3 +119,20 @@ function init(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
+
+/* Legacy list menus keep existing controls and handlers, with explicit pages instead of scrolling. */
+(()=>{'use strict';
+ for(const [modalId,bodyId,shellSelector] of [['historyModal','historyBody','.history-sheet'],['botPickerModal','botPickerGrid','.modal-content']]){
+  const modal=document.getElementById(modalId),body=document.getElementById(bodyId),shell=modal?.querySelector(shellSelector);if(!body||!shell)continue;
+  shell.classList.add('house-legacy-paged');body.classList.add('house-legacy-pagebody');
+  const nav=document.createElement('nav');nav.className='house-legacy-nav';nav.setAttribute('aria-label','Menu pages');nav.innerHTML='<button type="button">Previous</button><span role="status" aria-live="polite"></span><button type="button">Next</button>';body.after(nav);
+  const buttons=nav.querySelectorAll('button');let pages=[],page=0,frame=0;
+  function paint(){[...body.children].forEach((e,i)=>e.toggleAttribute('data-house-legacy-hidden',!pages[page]?.includes(i)));buttons[0].disabled=page===0;buttons[1].disabled=page>=pages.length-1;nav.querySelector('span').textContent='Page '+(page+1)+' of '+Math.max(1,pages.length);nav.hidden=pages.length<=1;}
+  function layout(reset=false){if(modal.classList.contains('hidden'))return;if(reset)page=0;const items=[...body.children];items.forEach(e=>e.removeAttribute('data-house-legacy-hidden'));nav.hidden=false;pages=[];let group=[],top=0;const available=Math.max(1,body.clientHeight-12);
+   for(let i=0;i<items.length;i++){const e=items[i],r=e.getBoundingClientRect();if(!group.length){top=r.top;group=[i];continue;}if(r.bottom-top>available+1){pages.push(group);group=[i];top=r.top;}else group.push(i);}
+   if(group.length)pages.push(group);page=Math.min(page,Math.max(0,pages.length-1));paint();}
+  function schedule(reset=false){cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>layout(reset));}
+  buttons[0].onclick=()=>{page=Math.max(0,page-1);paint()};buttons[1].onclick=()=>{page=Math.min(pages.length-1,page+1);paint()};
+  new MutationObserver(()=>schedule(true)).observe(body,{childList:true});new MutationObserver(()=>schedule(true)).observe(modal,{attributes:true,attributeFilter:['class']});addEventListener('resize',()=>schedule());
+ }
+})();

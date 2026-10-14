@@ -117,3 +117,34 @@ body:not(.house-owner-local) label[for=opt-force-nest-reveal],body:not(.house-ow
  .moon-live-rules{left:calc(64dvh + 12px);top:28%;width:calc(100% - 64dvh - 24px);height:48%;font-size:14px;line-height:1.4;gap:12px;background:none;border:0}
  .moon-approved-actions{width:64dvh!important;right:auto!important}
 }
+
+/* Shared finish for remaining legacy menus; game artwork and table surfaces excluded. */
+:root{--house-menu-surface:repeating-linear-gradient(0deg,#ffffff02 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,#00000009 0 1px,transparent 1px 3px),radial-gradient(ellipse at 20% 0,#1a314ccc,transparent 65%),linear-gradient(155deg,#0c2035fa,#071324fc);--house-menu-button:linear-gradient(150deg,#1b3550,#10253c 60%,#0b1e33)}
+:is(.identity-dialog,#horPublicCareerCard,.history-sheet,.tutorial-card,.no-service-card,#hostOptionsModal .gh-menu-shell,.table-msg-box),.modal:not(#scoreModal):not(#moonModal)>.modal-content{background:var(--house-menu-surface)!important;color:#eee5d0!important;border:1px solid #a9915c!important;border-radius:15px!important;box-shadow:0 18px 55px #000a,inset 0 1px 0 #ebd9aa25!important}
+:is(.identity-dialog,#horPublicCareerCard,.history-sheet,.tutorial-card,.no-service-card,#hostOptionsModal .gh-menu-shell,.table-msg-box) :is(button,select),.modal:not(#scoreModal):not(#moonModal)>.modal-content :is(button,select),.identity-choice :is(button,select){background:var(--house-menu-button)!important;color:#f1e8d4!important;border:1px solid #b0975d99!important;border-radius:9px!important;box-shadow:inset 0 1px 0 #d7e9ff18,0 3px 6px #0004!important}
+:is(.identity-dialog,#horPublicCareerCard,.history-sheet,.tutorial-card,.no-service-card,.table-msg-box) button:active,.modal:not(#scoreModal)>.modal-content button:active{box-shadow:inset 0 2px 4px #0008!important;filter:brightness(1.13)}
+:is(.identity-dialog,#horPublicCareerCard,.history-sheet,.tutorial-card,.no-service-card,.table-msg-box) button:focus-visible,.modal:not(#scoreModal)>.modal-content button:focus-visible{outline:2px solid #ead28b!important;outline-offset:2px}
+.identity-grid button[aria-pressed=true],.identity-collections button[aria-pressed=true]{background:linear-gradient(145deg,#294560,#15334c)!important;border-color:#e1c16b!important;outline:2px solid #d6b55c!important}
+.identity-dialog h2,.history-title,.tutorial-title,.modal:not(#scoreModal)>.modal-content h2{color:#ecdbac!important;text-shadow:0 1px 2px #000!important}
+.identity-dialog::backdrop{background:#02091699}
+.identity-avatar img{background:#10263b}
+.identity-dialog-head button[data-close]{min-width:28px!important;min-height:28px!important;width:28px;height:28px;padding:0!important;flex-shrink:0}
+#horPublicCareerCard .career-stat,#horPublicCareerCard .career-ach,.history-item,.bot-pick,.stat-player-card,.stats-hero,.team-compare{background:linear-gradient(145deg,#152e47,#0c2035)!important;color:#eee5d0!important;border-color:#a9915c66!important;box-shadow:inset 0 1px 0 #ffffff0b!important}
+.history-hand-head,.history-field,.history-running{background:transparent!important;color:#eee5d0!important;border-color:#a9915c55!important}
+.history-sheet::before,.history-sheet::after{background:none!important;box-shadow:none!important}
+.house-legacy-paged{display:flex!important;flex-direction:column!important;gap:8px!important;height:min(650px,calc(100dvh - 24px))!important;max-height:calc(100dvh - 24px)!important;box-sizing:border-box!important;overflow:hidden!important;padding:14px!important}
+.house-legacy-pagebody{flex:1!important;min-height:0!important;overflow:hidden!important;align-content:start!important}
+.house-legacy-pagebody>[data-house-legacy-hidden]{display:none!important}
+.house-legacy-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0;margin:0!important}
+.house-legacy-nav[hidden]{display:none!important}
+.house-legacy-nav button{min-height:40px;padding:6px 12px;font:14px Georgia,serif}
+.house-legacy-nav span{color:#cfbc8a;font:12px Georgia,serif;text-align:center}
+.house-legacy-paged>.history-actions,.house-legacy-paged>#botPickerClose,.house-legacy-paged>h2,.house-legacy-paged>p{flex-shrink:0!important;margin:0!important}
+.house-legacy-paged .bot-picker-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+.house-legacy-paged .bot-pick{min-width:0!important;padding:8px!important;font-size:12px!important}
+.house-legacy-paged .bot-pick img{width:46px!important;height:46px!important;object-fit:cover}
+.house-legacy-paged .bot-pick span{font-size:11px!important;line-height:1.25!important}
+@media(max-height:480px){.house-legacy-paged{gap:5px!important;padding:9px!important}.house-legacy-paged .history-item{padding:7px!important;font-size:12px!important}.house-legacy-paged .history-grid{gap:4px!important}}
+.house-legacy-paged>#botPickerClose{flex:0 0 42px!important;height:42px!important;min-height:42px!important;max-height:42px!important;padding:6px 12px!important;width:100%!important}
+.house-legacy-paged>.history-actions{flex:0 0 auto!important}
+.house-legacy-paged>.history-actions button{min-height:40px!important;padding:6px 12px!important}
