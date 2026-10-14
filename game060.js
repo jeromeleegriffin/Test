@@ -12943,9 +12943,10 @@ function setLobbyJoining(on) {
     const input = $('hor-room-code');
     if (input) {
       try {
-        input.focus();
+        input.focus({ preventScroll: true });
         input.select();
-        input.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        // The fixed entrance already fits the viewport; scrolling shifts its scene.
+        if (!lobbyEl?.classList.contains('landing783')) input.scrollIntoView({ block: 'center', behavior: 'smooth' });
       } catch (e) {
         try { input.focus(); } catch (e2) {}
       }
