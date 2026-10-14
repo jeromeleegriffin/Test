@@ -1,0 +1,91 @@
+--- a/index.html
++++ b/index.html
+@@ -134,7 +134,7 @@
+ <link rel="stylesheet" href="room-approved805.css?v=805-ownerreview">
+ <link rel="stylesheet" href="menu-approved805.css?v=805-atmosphere1">
+ <link rel="stylesheet" href="owner-review805.css?v=805-ownerreview">
+-</head>
++<link rel="stylesheet" href="angle-c-runtime.css"></head>
+ <body class="theme-classic cardback-griffin room-theme-midnight">
+ <div id="matchHeader706" aria-label="Match score and game speed"><div class="scores" id="scoreRow">
+ <button aria-expanded="true" class="score-collapse-btn" id="btnScoreCollapse" title="Collapse match scoreboard" type="button">▴</button>
+@@ -1154,5 +1154,5 @@
+ <script src="landing783.js?v=805-ownerreview"></script>
+ <script src="room-approved805.js?v=805-ownerreview"></script>
+ <script src="menu-approved805.js?v=805-atmosphere1"></script>
+-</body>
++<script src="angle-c-runtime.js"></script></body>
+ </html>
+--- a/game060.js
++++ b/game060.js
+@@ -8046,7 +8046,7 @@
+   } else {
+     dock.style.left=''; dock.style.top=''; dock.style.transform='';
+   }
+-  if (!landscape && window.HORTrump714 && window.HORTrump714.choose(dock, submitTrump, game)) return;
++  if ((!landscape || window.HORAngleC?.active()) && window.HORTrump714 && window.HORTrump714.choose(dock, submitTrump, game)) return;
+   dock.classList.remove('decision-mode-bid');
+     dock.classList.add('decision-mode-trump');
+   let html = '<div class="decision-console-title">STAMP THE TRUMP</div><div class="stamp-trump-grid">';
+@@ -13924,7 +13924,7 @@
+         roleBits.push('<span class="lt-badge lt-you">Me</span>');
+       }
+       const teamCls = teamOf(t.player) === 0 ? 'team-a' : 'team-b';
+-      return `<div class="lt-play ${teamCls} ${isFinalWinner ? 'winner' : ''} ${isLeading ? 'leading' : ''} ${isPartner ? 'partner' : ''} ${isMe ? 'you' : ''} ${isLatest ? 'latest' : ''} ${isRookPulse ? 'rook-play-pulse' : ''}">
++      return `<div data-c-seat="${seatSlotIdForIndex(t.player)}" data-c-play="${horCurrentHandVisualIndex()}:${t.player}:${t.card.id}" class="lt-play ${teamCls} ${isFinalWinner ? 'winner' : ''} ${isLeading ? 'leading' : ''} ${isPartner ? 'partner' : ''} ${isMe ? 'you' : ''} ${isLatest ? 'latest' : ''} ${isRookPulse ? 'rook-play-pulse' : ''}">
+       <div class="lt-order">${ord}</div>
+       ${isFinalWinner ? '<div class="lt-win-stamp">WINS</div>' : ''}
+       ${typeof renderCardHTML === 'function' ? renderCardHTML(t.card, false) : ''}
+--- a/approved-bid-portrait.js
++++ b/approved-bid-portrait.js
+@@ -9,7 +9,7 @@
+       if (updating) return;
+       updating = true;
+       try {
+-        const active = portrait.matches && dock.classList.contains('decision-mode-bid') && !dock.classList.contains('hidden');
++        const active = (portrait.matches || window.HORAngleC?.active()) && dock.classList.contains('decision-mode-bid') && !dock.classList.contains('hidden');
+         let surface = Array.from(dock.children).find(el => el.classList.contains('approved-bid-surface'));
+         if (!active) {
+           if (dock.classList.contains('approved-bid-portrait')) dock.classList.remove('approved-bid-portrait');
+--- a/trump714.js
++++ b/trump714.js
+@@ -10,7 +10,8 @@
+  const panel={left:126,right:2067,top:244,bottom:466};
+  const plaque={cx:(panel.left+panel.right)/2,cy:(panel.top+panel.bottom)/2,width:1000,height:1000*342/2022};
+  let tentativeTrump=null, choiceKey=null, confirmGroup=null, fallbackDock=null;
+- const portrait=()=>matchMedia('(orientation:portrait)').matches;
++ const landscapeAdapter=()=>window.HORLandscapeTrumpGeometry?.active()?window.HORLandscapeTrumpGeometry:null;
++ const portrait=()=>!!landscapeAdapter()||matchMedia('(orientation:portrait)').matches;
+  const reduced=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
+  let ready=false, root, canvas, ctx, stamp, lid, closed, buttons=[], dockRef, submitRef;
+  let last=null, accepted=null, markColor=null, current=null, currentMe=-1, opts={};
+@@ -68,6 +69,7 @@
+  function ownsPortrait(){return ready&&portrait();}
+  function position(){
+   if(!root||root.hidden)return;
++  if(landscapeAdapter()){landscapeAdapter().position(root);return;}
+   const rear=document.querySelector('.holder004-backrest');const hand=document.getElementById('myHand');
+   const y=rear&&rear.getBoundingClientRect().height?rear.getBoundingClientRect().top+1:hand?hand.getBoundingClientRect().top-6:innerHeight-65;
+   root.style.top=Math.max(48,y-root.getBoundingClientRect().height)+'px';
+@@ -111,6 +113,7 @@
+  function timing(fn,at,token){clockTimers.push(setTimeout(()=>{if(token===epoch)fn();},at));}
+  function animate(el,frames,settings){const a=el.animate(frames,{fill:'forwards',...settings});motions.push(a);return a;}
+  function geometry(){
++  if(landscapeAdapter())return landscapeAdapter().geometry();
+   const scale=Math.max(innerWidth/875,innerHeight/1797);
+   return {scale,left:(innerWidth-875*scale)/2,top:0,x:440*scale+(innerWidth-875*scale)/2,y:850*scale};
+  }
+@@ -124,7 +127,7 @@
+   canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,innerWidth,innerHeight);
+   const tmp=document.createElement('canvas');tmp.width=mask.w;tmp.height=mask.h;const tc=tmp.getContext('2d');const out=tc.createImageData(mask.w,mask.h);const rgb=pigment[color];
+   for(let i=0;i<mask.alpha.length;i++){const k=i*4;const a=mask.alpha[i];out.data[k]=rgb[0];out.data[k+1]=rgb[1];out.data[k+2]=rgb[2];out.data[k+3]=Math.round(a*.94);}
+-  tc.putImageData(out,0,0);ctx.drawImage(tmp,geo.left+mask.x*geo.scale,mask.y*geo.scale,mask.w*geo.scale,mask.h*geo.scale);
++  tc.putImageData(out,0,0);if(landscapeAdapter())landscapeAdapter().paint(ctx,tmp);else ctx.drawImage(tmp,geo.left+mask.x*geo.scale,mask.y*geo.scale,mask.w*geo.scale,mask.h*geo.scale);
+  }
+  function sound(){try{if(typeof playNatural063==='function')playNatural063('stamp',.6);}catch(_){}}
+  // The approved raster is one camera-facing view. Keep its handle upright;
+@@ -246,3 +249,4 @@
+  new MutationObserver(()=>{if(!document.body.classList.contains('in-game')&&root&&(running||!root.hidden||markColor)){stop('left-table');paint(null);last=null;accepted=null;}}).observe(document.body,{attributes:true,attributeFilter:['class']});
+  window.HORTrump714={choose,chooseFallback,sync,ownsPortrait,inspect:()=>({panel,plaque,tentativeTrump,choiceKey,ready,running,pending,accepted,markColor,visible:!!root&&!root.hidden,trace:trace.slice(),pose,inkColor,maskReady:!!mask})};
+ })();
++
