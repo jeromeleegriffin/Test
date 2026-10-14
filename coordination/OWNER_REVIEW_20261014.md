@@ -9,3 +9,5 @@ Evidence: Node syntax and diff whitespace checks; actual-function VM/jsdom check
 OPEN: Android native share icon remains reported wrong. Current favicon/manifest assets are House assets. Web Share cannot explicitly set native preview icon; root cause on device remains unverified. Do not claim resolved or ask owner to clear player data.
 
 Historical instructions/records remain preserved. Full foundational H-through-AC reread was not completed in this repair session; current source, owner scope and current coordination workflow were used. Release metadata will record served-byte/Pages evidence after publication.
+
+Publication checkpoint: commit 4906beda73eca044d44af1e222971aed2b111b05 is on Test main. All 17 uploaded blobs matched local git hashes before the atomic leased ref update. At 14:57 UTC Pages had not created a run for this commit and live HTML still referenced 805-welcome. Deployment verification is pending; do not describe the repair as live until served bytes match.
