@@ -1,11 +1,11 @@
-# Landscape Test deployment authorization
+# Landscape publication hold — latest owner correction
 
-Owner Jerome Griffin, October 14, 2026, 17:33 EDT:
+CURRENT: DO NOT DEPLOY the angle C placement preview. Continue isolated development. Production remains protected.
 
-> You can go ahead and deploy. You don't have to make a zip. You can go ahead and deploy to the test server.
+At 17:33 EDT October 14, 2026 Jerome briefly authorized Test deployment without a ZIP. At 17:35 EDT he corrected that instruction after learning this is still a placement preview:
 
-This explicitly supersedes the landscape-only ZIP/no-Test-publication restriction in PRE_LANDSCAPE_FALLBACK_20261014.md, MASTER_CONTROL.md and the registry's preLandscapeFallback.landscapePolicy. Test deployment is authorized; a ZIP is not required. Production remains protected. Preserve rollback/pre-landscape-20261014 and portrait behavior.
+> Recover. Did you get that message? I said if it's just a replacement preview, then never mind, don't update the test server. Continue where you's at and do this right. Recover yourself.
 
-Current isolated C checkpoint: afb22bf5fd95afc92cfef124029963edd19e8ad7 on work/overhead-landscape-20261014. It is a placement study, NOT a complete playable integration. Five landscape-size trump checks passed. Real game state, selectable character artwork, and full-game regression integration remain unfinished. Authorization does not establish release readiness. No runtime deployment was performed by this documentation commit.
+The interrupted authorization documentation write succeeded; this correction supersedes it. NO runtime or Test deployment was performed. Do not treat the earlier entry as permission to deploy the unfinished preview or as standing authorization to publish the landscape overhaul.
 
-Next: finish isolated playable integration, run targeted regression checks, then deploy to Test and verify served files. Do not replace the playable root with the placement-study harness. No further routine deployment approval is required for this authorized scope.
+Continue from isolated checkpoint afb22bf5fd95afc92cfef124029963edd19e8ad7 on work/overhead-landscape-20261014. Preserve the official pre-landscape fallback b551144768084fc81c12de03682eae4e78f8e600 and rollback/pre-landscape-20261014. Finish actual playable integration and targeted regression testing before delivery decisions. No restart, no new ZIP now, no production change.
