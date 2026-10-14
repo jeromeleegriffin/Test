@@ -45,3 +45,22 @@ Every task must leave a complete durable Brain/specialist checkpoint; publish on
 ## Next updated game ZIP — owner-requested responsive repair (2026-10-11)
 
 Read [RESPONSIVE_TABLET_NEXT_UPDATE.md](RESPONSIVE_TABLET_NEXT_UPDATE.md) before preparing the next updated playable game ZIP. Jerome explicitly requested this be carried by the Master Brain so he need not repeat it in another Work prompt. Reproduce on the latest verified source, implement confirmed scoped repairs while protecting approved phone pixels, and record remaining blockers. Pending until validated or explicitly waived. This does not authorize artwork, redesign, deployment or an unrelated task interruption. Carry the record into successor Brain/handoffs. Separate chats must read it; they are not automatically notified.
+
+
+## 2026-10-14 — PERMANENT OWNER DIRECTIVE: FRESH MASTER BRAIN CHECK ON EVERY REPAIR REQUEST
+
+Owner Jerome Griffin explicitly directed Game Repairs specialist Zoey to stay current for EVERY new Griffin House repair request, and to preserve this rule in durable project records. This rule applies to this specialist and every successor.
+
+Before diagnosing, proposing a fix, preparing a Work prompt, editing, testing, or citing a build as current:
+1. Fetch the LIVE GitHub `brain/current.json` anew for that request. Never assume a version from earlier conversation remains current.
+2. Read the CURRENT version's full START HERE and Master Brain, plus coordination/START_HERE.md, OPERATING_RULES.md, MASTER_CONTROL.md, GAME_REPAIRS.md, BUILD_REGISTRY.json, BUILD_NUMBERING.md, and relevant active session/pending specialist records.
+3. Fulfill the existing permanent complete-history rule: read foundational Master Bank H in full and each published successor chronologically through the current pointer, including applicable original authorities, supersessions, references, and rejected work. Reuse genuinely verified prior reads where complete and unchanged; disclose any outstanding unread material instead of claiming full compliance.
+4. Verify and separately state (a) approved working build, (b) latest delivered/local candidate, (c) deployed Test runtime, and (d) protected production. Check exact archive SHA-256 and owner Android acceptance when relevant.
+5. Compare the new request with completed, unfinished, rejected, pending, and overlapping specialist work before proposing action. The owner's actual Android pixels and observations prevail over simulations.
+6. Do not claim visibility into other chats' unpublished work or automatic notifications. Read shared durable records explicitly. Do not require the owner to relay routine messages.
+7. Preserve all original archives, player data, approved geometry, and rollback checkpoints. No game change, deployment, new ZIP, or Master Brain pointer advancement without separate applicable owner authorization.
+8. For every successor handoff, carry this rule together with the full verbatim Master Brain reading and self-perpetuating continuity rules.
+
+Snapshot at directive time (NOT a future authority): published pointer AC; delivered 805 pending Android acceptance; Test 797; approved rollback 783; protected production 531. These values MUST be refreshed on the next request.
+
+This specialist-record publication does not change `brain/current.json`, game files, or production. Incorporation into a future full Master Brain release requires the normal coordinated publication process.
