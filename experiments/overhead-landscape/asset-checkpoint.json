@@ -1,0 +1,131 @@
+{
+  "status": "GENERATED_DRAFT_LAYERS_NOT_INTEGRATED",
+  "notes": "Scale/registration shifted. Holder lip occlusion and side orientations still require assembly validation. Only four reference identities. No deployment.",
+  "assets": [
+    {
+      "name": "room-table",
+      "path": "landscape-work/assets/overhead/room-table-v1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "alphaRange": null,
+      "bounds": null,
+      "sha256": "f2516c4e96bd24ce5ff2e0badcbc7216e01658f966499c9f20af1f3a672c6d66"
+    },
+    {
+      "name": "cinder-top",
+      "path": "landscape-work/assets/overhead/cinder-top-v1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        41,
+        0,
+        1401,
+        811
+      ],
+      "sha256": "961a6a3c1787c2079db69f3eecfc27ca7710d37b154d306c8797eaceead46f14"
+    },
+    {
+      "name": "dagger-left",
+      "path": "landscape-work/assets/overhead/dagger-left-v1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        19,
+        25,
+        1652,
+        910
+      ],
+      "sha256": "3d767017b4cc520449fecd8629bf74751400b9fd07f7bd39fb0272d66aa3dfc0"
+    },
+    {
+      "name": "crow-right",
+      "path": "landscape-work/assets/overhead/crow-right-v1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        0,
+        33,
+        1632,
+        941
+      ],
+      "sha256": "f07cd82215ee905f28d56f9c15133841b32d8f9d728411058024c928d1d32822"
+    },
+    {
+      "name": "jerome-bottom",
+      "path": "landscape-work/assets/overhead/jerome-bottom-v1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        33,
+        29,
+        1604,
+        941
+      ],
+      "sha256": "963b5fa61051552a44ea952f9bc9da3114ddfc1fdf05283b1974ac34490bcc4f"
+    },
+    {
+      "name": "human-holder",
+      "path": "landscape-work/assets/overhead/human-holder-v1.png",
+      "size": [
+        2172,
+        724
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        21,
+        49,
+        2157,
+        724
+      ],
+      "sha256": "3f2893ab1e9628e00d00fe8701b77ee5f7616caea0ae44e60711e0f2d6e94067"
+    },
+    {
+      "name": "opponent-holder",
+      "path": "landscape-work/assets/overhead/opponent-holder-v1.png",
+      "size": [
+        2172,
+        724
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bounds": [
+        291,
+        65,
+        2158,
+        629
+      ],
+      "sha256": "09614dbacfdcf43055396c2495f6c33ab39633b840b5a04c66c0d1aeacd8c4a4"
+    }
+  ]
+}
