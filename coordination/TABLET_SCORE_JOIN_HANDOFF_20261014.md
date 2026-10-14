@@ -1,6 +1,6 @@
 # Tablet scoreboard and top Join by Code — 2026-10-14
 
-Owner Jerome requested tablet graphics fixes without changing phone view and a clearly visible code-entry option at the top of the menu. Reference20.png is from griffin-room-local-poc.jeromeleegriffin.workers.dev, a separate active Cloudflare proof of concept. No Cloudflare Worker/backend changes were performed here.
+Latest owner correction: code entry must be visible OUTSIDE the hamburger menu. Keep the original joinBtn on the landing page beside Play With Friends, label it Join by Code, and reuse its existing form. The prior top-menu-only implementation is superseded; menu access remains supplementary. Tested direct landing access at320/393/667CSSpx; no menu opening required. Tablet repair remains intact. Reference20.png is from griffin-room-local-poc.jeromeleegriffin.workers.dev, a separate active Cloudflare proof of concept. No Cloudflare Worker/backend changes were performed here.
 
 Verified latest main source:805-shareicon, runtimecb14bdf2c1794453e9e06ffa3ce15a2a86805b74; metadata head58d0d879f1b073222d17370bb83e933fdd72ba72; BrainAC. Existing standing direct Test workflow authorizes this requested scoped rollout to GitHub Test. Production remains protected. H–AC and prior coordination reads reused unchanged; current pointer/registry/specialist responsive rules refreshed.
 
@@ -14,7 +14,7 @@ Cloudflare coordination: public Worker fetch returned403 in this environment, so
 
 Portable integration:
 1. Load tablet-scoreboard805.css after the active baseline CSS. Scope remains portrait>=521px and scoreboard selectors only. Include it in that frontend's offline assets.
-2. Add Join by Code as the first public-menu action (same definition on both triggers), routed to THAT frontend's existing native code-entry flow. Keep safe leave/confirmation when seated and required-bid touch locks. It may remain under Friends too.
+2. Expose Join by Code directly on the landing/friends entry screen beside Play With Friends, routed to THAT frontend's existing native code-entry flow; supplementary menu access is allowed. Keep safe leave/confirmation when seated and required-bid touch locks. It may remain under Friends too.
 3. Compare phone scoreboard screenshots/rectangles before/after, plus tablet widths534/667/768, code entry/Back, all menu pages without scroll and live two-device joins. Do not claim Cloudflare live integration from these GitHub Test tests.
 
-Runtime805-tabletjoin is an unnumbered scoped Test review update; no new ZIP or official build number. Rollback uses exact parent58d0d879f1b073222d17370bb83e933fdd72ba72 via a forward runtime-only commit, preserving later docs and browser data. Current live receipt follows Pages/served-byte verification. Earlier icon update remains owner Android unverified; do not claim Bed Time preview resolved. Both permanent complete-bank and chat-continuity authorities remain unchanged and must pass forward verbatim in successor handoffs.
+Runtime805-tabletjoin2 is an unnumbered scoped Test review update; no new ZIP or official build number. Rollback uses exact parent58d0d879f1b073222d17370bb83e933fdd72ba72 via a forward runtime-only commit, preserving later docs and browser data. Current live receipt follows Pages/served-byte verification. Earlier icon update remains owner Android unverified; do not claim Bed Time preview resolved. Both permanent complete-bank and chat-continuity authorities remain unchanged and must pass forward verbatim in successor handoffs.

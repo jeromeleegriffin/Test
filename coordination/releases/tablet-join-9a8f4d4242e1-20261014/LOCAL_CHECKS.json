@@ -769,6 +769,8 @@
       "width": 320,
       "height": 568,
       "firstVisibleEntry": "join",
+      "directLandingJoinVisible": true,
+      "directLandingJoinOpensForm": true,
       "noMenuScroll": true,
       "existingJoinHandlerInvoked": true,
       "codeFormBack": true,
@@ -778,6 +780,8 @@
       "width": 393,
       "height": 647,
       "firstVisibleEntry": "join",
+      "directLandingJoinVisible": true,
+      "directLandingJoinOpensForm": true,
       "noMenuScroll": true,
       "existingJoinHandlerInvoked": true,
       "codeFormBack": true,
@@ -787,6 +791,8 @@
       "width": 667,
       "height": 916,
       "firstVisibleEntry": "join",
+      "directLandingJoinVisible": true,
+      "directLandingJoinOpensForm": true,
       "noMenuScroll": true,
       "existingJoinHandlerInvoked": true,
       "codeFormBack": true,
@@ -1090,31 +1096,31 @@
   "changes": [
     {
       "path": "index.html",
-      "sha256": "1d6668065c861a00126b6dbfe0d9be4f1aaeaa73188a02e558fcce50b1d459e6"
+      "sha256": "4274563aff15c0879d92dd6c288f70642bc673e177726e83cd89129971e78ee7"
     },
     {
       "path": "manifest.json",
-      "sha256": "305178fa9b0e020d7303a39ddc2a2c016839593406ec0fef8925be4b8b7f9897"
+      "sha256": "733e1e6af266849b7e8a8333fa042a36ea165563ca3d9c4bc0d97b7337ef9901"
     },
     {
       "path": "game060.js",
-      "sha256": "7cbd59ea21a9237b67de14532a9c9151e898088cb4912c31743772bf587baadf"
+      "sha256": "02344c66b4822b770311789372d1fa85f2d37e165b12067d2bfe3693b2740055"
     },
     {
       "path": "hor-version.js",
-      "sha256": "77b28d4f88716c7f9300cf23807b4f6dba1f6159c66e745d37aa014db87f6522"
+      "sha256": "c5098a8434263efa233c1596cca9af0d9b60db56a79bd8c38f21a5ec294b81c4"
     },
     {
       "path": "sw060.js",
-      "sha256": "77f03f21860ad568592cf38440e813640cf4dfd24add0c06be2899d4e56196c4"
+      "sha256": "5e1d0d818bdeb34b6153eeae4e2759dad795ccb71aaa975b34358f9ec618f0e0"
     },
     {
       "path": "menu-approved805.js",
-      "sha256": "0dd8f4cec9d95e3878584b746fea4230c75966ea845db2b3ed4f1ae03c3e5841"
+      "sha256": "a27b290298254e7f6d6c686619362ff802b7128e9b1645cacdcf7ed9191fa44c"
     },
     {
       "path": "tablet-scoreboard805.css",
-      "sha256": "8e60c7765baeeeb5e438997fc44d7041319e6146f56972d6a130069eeeb1c39b"
+      "sha256": "ca50a9a506890f3d6553145a959a1ed92dbfc9796761944c3252d425b02251fe"
     }
   ]
 }
