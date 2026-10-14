@@ -3,7 +3,8 @@
     {
       "source": "header-compact-repairs",
       "personaClearedByBidUI": true,
-      "careerClearedByBidSafety": true
+      "careerClearedByBidSafety": true,
+      "invalidBidClearsAuthoritativeTurnTimer": true
     },
     {
       "source": "bidding-popup-repairs",

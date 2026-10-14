@@ -2104,7 +2104,7 @@
       "sourceGameBuild": "803 plus approved pending Friends/RoomB/MenuA and offline fixes"
     }
   ],
-  "testSiteBuild": "805-headercompact",
+  "testSiteBuild": "805-bidpopup",
   "previousApprovedWorkingBuild": "779",
   "publishedBrainApprovedBuild": "783",
   "publishedBrainVersion": "AC",
@@ -2143,9 +2143,9 @@
   "latestDeliveredGameSha256": "1b7057efbb8eb39ff039867952ac4b74ab97f1e5cf18370a56357c4b4d91cc6e",
   "latestVisualReviewBuild": "804",
   "lastReconciliation": "798\u2013805 retrospectively registered from retained archive hashes; no earlier remote reservation is claimed",
-  "testSitePreviousBuild": "805-headerbid",
-  "testSiteReleaseId": "header-compact-9a8f4d4242e1-20261014",
-  "testSiteRuntimeCommit": "f4d16b73369d487ff3df9127f7d9228a38aee898",
+  "testSitePreviousBuild": "805-headercompact",
+  "testSiteReleaseId": "bid-popup-9a8f4d4242e1-20261014",
+  "testSiteRuntimeCommit": "dd3ae7995216c6e19f44ead10c47cf4a36db1b48",
   "standingTestWorkflow": "coordination/TEST_SITE_WORKFLOW.md",
-  "lastTestDeploymentReceipt": "coordination/HEADER_COMPACT_RECEIPT.json"
+  "lastTestDeploymentReceipt": "coordination/BIDDING_POPUP_RECEIPT.json"
 }

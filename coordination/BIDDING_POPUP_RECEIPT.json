@@ -1,0 +1,19 @@
+{
+  "runtime": "805-bidpopup",
+  "commit": "dd3ae7995216c6e19f44ead10c47cf4a36db1b48",
+  "rollbackCommit": "f88f14618754166acb0bbc2749017af924468c77",
+  "pagesRunId": 38568591516,
+  "pagesConclusion": "success",
+  "changedServedFiles": 7,
+  "allChangedServedBytesMatch": true,
+  "biddingAndPopup": "Bids divisible by five; larger jumps allowed; editable amount; required-bid popup guards; invalid bids retain turn timer",
+  "localChecks": "Corrected candidate popup/host/UI tests and4menu cases passed; native MAX X1 hand20searches/no fallback/200points conservation/no page errors or missing assets. Five bot/X1 files byte-identical to baseline. Rejected-bid fixture verifies actual turnTimer, turnTimerInterval and deadline are retained; baseline loses turnTimer. Android pending.",
+  "cloudflareWorker": "Not changed or verified; shared scoped integration handoff provided. Public403 and automatic review rejected broader account enumeration. Its native room transport must be preserved.",
+  "ownerToolsAuthorization": "No live founder authentication; layout retained in isolated localhost dev Owner Tools, never name/avatar-gated",
+  "singlePointExperiment": "Superseded before publication; forbidden by latest owner decision",
+  "popupCauseLimit": "Confirmed bid-related paths reproduced; exact original Android phase not captured",
+  "nativeAndroidAcceptance": false,
+  "productionTouched": false,
+  "newZip": false,
+  "standingWorkflow": "TEST_SITE_WORKFLOW.md"
+}
