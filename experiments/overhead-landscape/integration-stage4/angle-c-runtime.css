@@ -1,0 +1,228 @@
+/* R714 portrait presentation. All furniture is independent raster artwork. */
+#trumpCase714, #trumpInk714 { display:none; }
+@media (orientation:landscape) {
+ #trumpCase714 {
+  display:block; position:fixed; z-index:12000; box-sizing:border-box;
+  width:min(92vw,400px); aspect-ratio:2.86; left:50%; transform:translateX(-50%);
+  pointer-events:none; perspective:700px; isolation:isolate;
+ }
+ #trumpCase714[hidden], #trumpInk714[hidden] { display:none!important; }
+ #trumpCase714 .tc-art {position:absolute;pointer-events:none;}
+ #trumpCase714 svg {display:block;width:100%;height:100%;overflow:hidden;pointer-events:none;}
+ #trumpCase714 .tc-base {left:0;bottom:0;width:100%;aspect-ratio:1980/481;z-index:2;}
+ #trumpCase714 .tc-lid {left:.4%;top:0;width:84.3%;aspect-ratio:2081/412;z-index:1;transform-origin:50% 100%;}
+ #trumpCase714 .tc-closed {left:.2%;top:42%;width:85%;aspect-ratio:2095/392;z-index:5;opacity:0;transform-origin:50% 0;}
+ #trumpCase714 .tc-stamp {left:84.5%;bottom:9%;width:14.8%;aspect-ratio:677/1027;z-index:7;transform-origin:50% 84.518%;filter:drop-shadow(1px 3px 2px rgba(0,0,0,.35));}
+ #trumpCase714 .tc-pad {
+  all:unset;position:absolute;box-sizing:border-box;top:48%;width:17.4%;height:43%;
+  pointer-events:auto;cursor:pointer;z-index:4;touch-action:manipulation;
+  font:700 9px Georgia,serif;color:#f4dfb2;text-align:center;border-radius:5px;
+ }
+ #trumpCase714 .tc-pad:nth-of-type(1){left:5.8%;}
+ #trumpCase714 .tc-pad:nth-of-type(2){left:24.6%;}
+ #trumpCase714 .tc-pad:nth-of-type(3){left:43.4%;}
+ #trumpCase714 .tc-pad:nth-of-type(4){left:62.2%;}
+ #trumpCase714 .tc-pad span {position:absolute;left:0;right:0;bottom:1px;text-shadow:0 1px 2px #130b04;letter-spacing:.025em;}
+ #trumpCase714 .tc-pad:focus-visible {outline:2px solid #ffdf85;outline-offset:1px;}
+ #trumpCase714 .tc-pad[data-selected] {box-shadow:inset 0 0 0 1px #ffdf85,0 0 8px rgba(240,190,85,.3);}
+ #trumpCase714 .tc-pad:disabled {pointer-events:none;cursor:default;}
+ #trumpCase714 .tc-access {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
+ body.in-game #decisionConsole.trump714-owned {display:none!important;visibility:hidden!important;pointer-events:none!important;}
+ body.trump714-avatar #slot-me {opacity:0!important;pointer-events:none!important;}
+ #trumpInk714 {display:block;position:fixed;inset:0;pointer-events:none;z-index:2;}
+}
+@media (prefers-reduced-motion:reduce) {#trumpCase714 {scroll-behavior:auto;}}
+
+/* R742: remote chooser's stamp flies from its seat; no bottom case props. */
+@media (orientation:landscape) {
+ #trumpCase714.tc-directional .tc-base,
+ #trumpCase714.tc-directional .tc-lid,
+ #trumpCase714.tc-directional .tc-closed,
+ #trumpCase714.tc-directional .tc-pads {visibility:hidden;}
+}
+
+/* R746: approved pixels, projected working face and local contact shadow. */
+@media (orientation:landscape){
+ body.never-apply-portrait-room-art #hor-room-bg::after{background-image:url("assets/trump746/table-faint.png")!important}
+ #trumpCase714 .tc-stamp canvas{display:block;width:100%;height:100%;pointer-events:none}
+ #trumpCase714 .tc-stamp{filter:none}
+ .tc-contact-shadow746{position:fixed;z-index:11999;border-radius:50%;background:#000;filter:blur(2px);transform:translate(-50%,-50%);pointer-events:none}
+ .tc-contact-shadow746[hidden]{display:none!important}
+}
+
+/* 795: authored brass pixels in the lid SVG. CSS owns interaction only. */
+#trumpCase714 .tc-confirm {pointer-events:auto;cursor:pointer;touch-action:manipulation;}
+#trumpCase714 .tc-confirm[aria-disabled="true"] {pointer-events:none;cursor:default;}
+#trumpCase714 .tc-confirm:focus-visible {outline:none;}
+#trumpCase714 .tc-confirm:focus-visible .tc-confirm-hit {stroke:#ffedb1;stroke-width:7;}
+.tc-fallback-confirm {touch-action:manipulation;}
+.tc-fallback-confirm svg {display:block;width:100%;height:auto;}
+.tc-fallback-confirm:focus-visible {outline:2px solid #ffedb1;}
+
+
+/* Frozen native artwork; portrait only. The R706 dock rectangle is inherited.
+   No root dimensions, anchor, transforms, seat styles or landscape rules change. */
+@layer approvedPortraitBidAsset {
+@media (orientation: landscape) {
+body #decisionConsole.approved-bid-portrait.decision-mode-bid:not(.hidden) {
+  background: none !important;
+  box-shadow: none !important;
+  pointer-events: none !important;
+}
+body #decisionConsole.approved-bid-portrait::before,
+body #decisionConsole.approved-bid-portrait::after,
+body #decisionConsole.approved-bid-portrait .approved-bid-surface :where(*)::before,
+body #decisionConsole.approved-bid-portrait .approved-bid-surface :where(*)::after {
+  content: none !important; display: none !important;
+}
+body #decisionConsole.approved-bid-portrait :where(.approved-bid-surface, .approved-bid-surface *) {
+  all: unset !important;
+  box-sizing: border-box !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+}
+body #decisionConsole.approved-bid-portrait .approved-bid-surface {
+  display: block !important;
+  position: absolute !important;
+  height: 100% !important;
+  width: auto !important;
+  max-width: 100% !important;
+  aspect-ratio: 701 / 290 !important;
+  left: 50% !important;
+  top: 0 !important;
+  transform: translateX(-50%) !important;
+  container-type: size !important;
+  pointer-events: none !important;
+}
+body #decisionConsole.approved-bid-portrait .approved-bid-art {
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+body #decisionConsole.approved-bid-portrait .bid-console-title,
+body #decisionConsole.approved-bid-portrait .felt-bid-name,
+body #decisionConsole.approved-bid-portrait .bid-meta {
+  display: none !important;
+}
+body #decisionConsole.approved-bid-portrait .bid-stepper,
+body #decisionConsole.approved-bid-portrait .bid-buttons {
+  display: contents !important;
+}
+body #decisionConsole.approved-bid-portrait :is(#bidMinus,#bidPlus,#bidValue,#bidConfirm,#bidPassBtn) {
+  display: flex !important;
+  position: absolute !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffecad !important;
+  font-weight: 900 !important;
+  font-size: 8.8cqw !important;
+  line-height: 1 !important;
+  text-shadow: 0 1px 1px #573009 !important;
+  white-space: nowrap !important;
+  z-index: 1 !important;
+}
+body #decisionConsole.approved-bid-portrait :is(#bidMinus,#bidPlus,#bidConfirm,#bidPassBtn) {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  touch-action: manipulation !important;
+  user-select: none !important;
+}
+body #decisionConsole.approved-bid-portrait #bidValue {
+  font-size: 9.4cqw !important;
+  pointer-events: none !important;
+}
+body #decisionConsole.approved-bid-portrait :is(#bidConfirm,#bidPassBtn) {
+  font-size: 6.8cqw !important;
+  padding-bottom: 2.853cqw !important;
+  text-transform: uppercase !important;
+}
+body #decisionConsole.approved-bid-portrait #bidConfirmVal {
+  display: inline !important;
+  font: inherit !important;
+  margin-left: .16em !important;
+}
+body #decisionConsole.approved-bid-portrait button:focus-visible {
+  outline: 2px solid #fff0b7 !important;
+  outline-offset: -5px !important;
+}
+body #decisionConsole.approved-bid-portrait button:active {
+  color: #ffffff !important;
+}
+body #decisionConsole.approved-bid-portrait button:disabled {
+  opacity: .55 !important;
+  cursor: default !important;
+}
+/* Exact approved crescent/button study pixels, within the unchanged bid hit box. */
+body #decisionConsole.approved-bid-portrait #bidConfirm.bid-shoot-moon {padding:0 !important;}
+body #decisionConsole.approved-bid-portrait #bidConfirm .moon-approved-button795 {display:block!important;width:100%!important;height:100%!important;max-width:100%!important;min-width:0!important;object-fit:contain!important;pointer-events:none!important;}
+body #decisionConsole.approved-bid-portrait :is(#bidMinus,#bidPlus) {touch-action:none!important;user-select:none!important;-webkit-user-select:none!important;-webkit-touch-callout:none!important;}
+/* Existing Moon dialog remains the only gate. Yield only this painted surface,
+   preserving root geometry used by the unchanged R706 seat observer. */
+body:has(> .moon-approved-overlay) #decisionConsole.approved-bid-portrait .approved-bid-surface {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+body:has(> .moon-approved-overlay) #decisionConsole.approved-bid-portrait .approved-bid-surface button {
+  pointer-events: none !important;
+}
+body #decisionConsole.approved-bid-portrait #bidMinus { left: 4.9928673324% !important; top: 25.1724137931% !important; width: 21.2553495007% !important; height: 34.4827586207% !important; }
+body #decisionConsole.approved-bid-portrait #bidPlus { left: 73.6091298146% !important; top: 25.1724137931% !important; width: 20.9700427960% !important; height: 34.4827586207% !important; }
+body #decisionConsole.approved-bid-portrait #bidValue { left: 38.3737517832% !important; top: 33.7931034483% !important; width: 23.6804564907% !important; height: 18.9655172414% !important; }
+body #decisionConsole.approved-bid-portrait #bidConfirm { left: 4.9928673324% !important; top: 60.6896551724% !important; width: 45.0784593438% !important; height: 34.4827586207% !important; }
+body #decisionConsole.approved-bid-portrait #bidPassBtn { left: 53.9229671897% !important; top: 60.6896551724% !important; width: 40.6562054208% !important; height: 34.4827586207% !important; }
+}
+}
+#bidConfirm .moon-approved-button795 {display:block;width:100%;height:100%;max-width:100%;min-width:0;object-fit:contain;pointer-events:none;}
+#bidMinus,#bidPlus {touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+
+@media (orientation: landscape) {
+body.in-game.angle-c-runtime #landscapeTheater {position:fixed!important;inset:0!important;width:100%!important;height:100%!important;border:0!important;max-width:none!important;max-height:none!important;padding:0!important;background:#080d12 url('assets/angle-c/clean-scene-v1.png') center/contain no-repeat!important;overflow:hidden!important;}
+body.in-game.angle-c-runtime #landscapeTheater::before,body.in-game.angle-c-runtime #landscapeTheater::after{display:none!important}
+body.in-game.angle-c-runtime #landscapeTheater :is(.lt-inner,.lt-view,.lt-hand-controls,.lt-hand-wrap):not(.hidden){position:static!important;display:contents!important;background:none!important;border:none!important;padding:0!important;}
+body.in-game.angle-c-runtime #landscapeTheater :is(.lt-decor,.lt-header,.lt-meta,.lt-footer,.lt-hand-label,.lt-hand-controls>.lt-tab){display:none!important}
+body.in-game.angle-c-runtime #ltHand {position:fixed!important;left:var(--c-hand-x)!important;top:var(--c-hand-y)!important;width:var(--c-hand-w)!important;height:var(--c-card-h)!important;display:flex!important;justify-content:center!important;gap:var(--c-card-gap)!important;padding:0!important;overflow:visible!important;transform:none!important;}
+body.in-game.angle-c-runtime #ltHand .card-face{flex:0 0 var(--c-card-w)!important;width:var(--c-card-w)!important;height:var(--c-card-h)!important;margin:0!important;min-width:0!important;max-width:none!important;}
+body.in-game.angle-c-runtime #decisionConsole.decision-mode-bid:not(.hidden){position:fixed!important;left:50%!important;top:var(--c-bid-y)!important;bottom:auto!important;transform:translateX(-50%)!important;width:320px!important;height:132.38px!important;max-width:calc(100vw - 16px)!important;}
+body.in-game.angle-c-runtime #ltPlays {position:fixed!important;left:var(--c-plays-x)!important;top:var(--c-plays-y)!important;width:var(--c-plays-w)!important;height:var(--c-plays-h)!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:3px!important;padding:0!important;}
+body.in-game.angle-c-runtime #ltPlays .lt-play{margin:0!important;padding:0!important;background:none!important;border:0!important;min-width:0!important;}
+body.in-game.angle-c-runtime #ltPlays .card-face{width:var(--c-play-w)!important;height:var(--c-play-h)!important;}
+body.in-game.angle-c-runtime #ltPlays .lt-play :is(.lt-name,.lt-play-name){display:none!important}
+body.in-game.angle-c-runtime #angleCNotice{display:block;position:fixed;right:4px;bottom:2px;z-index:200000;font:10px system-ui;color:white;background:#000c;padding:2px 4px;pointer-events:none}
+}
+#angleCNotice{display:none}
+
+@media (orientation:landscape){body.in-game.angle-c-runtime #landscapeTheater .hidden{display:none!important}body.in-game.angle-c-runtime #ltPlays :is(.lt-bid-grid,.lt-bidding,.lt-empty){display:none!important}}@media (orientation:landscape){
+body.in-game.angle-c-runtime .tutorial-overlay{visibility:visible!important;z-index:210000!important}
+body.in-game.angle-c-runtime #ltPlays .lt-bid-board{display:none!important}
+}
+@media (orientation:landscape){
+body.in-game.angle-c-runtime #scoreModal:not(.showing-remaining) .scoreboard-modal{display:grid!important;grid-template-columns:minmax(0,1fr) 150px!important;grid-template-rows:auto minmax(0,1fr)!important;gap:8px!important;width:min(760px,calc(100vw - 24px))!important;max-height:calc(100dvh - 16px)!important;padding:8px!important;overflow:hidden!important;}
+body.in-game.angle-c-runtime #scoreModal .scoreboard-modal::before{display:none!important}
+body.in-game.angle-c-runtime #scoreModal #scoreModalTitle{position:static!important;transform:none!important;grid-column:1/-1!important;margin:0!important;font-size:18px!important;padding:2px!important;}
+body.in-game.angle-c-runtime #scoreModalBody{grid-column:1!important;min-height:0!important;margin:0!important;padding:0!important;font-size:12px!important;overflow:visible!important;}
+body.in-game.angle-c-runtime #scoreModal .score-modal-actions{grid-column:2!important;grid-row:2!important;display:flex!important;flex-direction:column!important;justify-content:center!important;gap:6px!important;margin:0!important;}
+body.in-game.angle-c-runtime #scoreModal .score-modal-actions .btn{min-height:44px!important;font-size:12px!important;padding:5px!important;}
+body.in-game.angle-c-runtime #scoreModal .gh-approved-scoreboard{padding:0!important;gap:3px!important;}
+body.in-game.angle-c-runtime #scoreModal :is(.ghsb-team,.scoreboard-team){min-height:60px!important;padding:3px!important;gap:4px!important;}
+body.in-game.angle-c-runtime #scoreModal .ghsb-team-icon{width:28px!important;height:32px!important;}
+body.in-game.angle-c-runtime #scoreModal .sb-total{font-size:28px!important;line-height:1!important;}
+body.in-game.angle-c-runtime #scoreModal :is(.sb-label,.sb-delta,.ghsb-contract,.ghsb-summary,.ghsb-nest-title){font-size:12px!important;line-height:1.15!important;}
+}
+/* Each score detail is a separate one-screen view; summary returns to scores. */
+@media (orientation:landscape){
+body.in-game.angle-c-runtime #scoreModal .gh-approved-scoreboard:has(>details[open]) > :not(details[open]){display:none!important;}
+body.in-game.angle-c-runtime #scoreModal .gh-approved-scoreboard > details[open] > summary::before{content:'‹ Back to score · ';}
+body.in-game.angle-c-runtime #scoreModal .gh-approved-scoreboard > details > summary{min-height:44px!important;display:flex!important;align-items:center!important;cursor:pointer;}
+body.in-game.angle-c-runtime #scoreModal .ghsb-details{font-size:12px!important;line-height:1.2!important;gap:5px!important;padding:6px!important;}
+body.in-game.angle-c-runtime #scoreModal .ghsb-result-line{font-size:12px!important;line-height:1.2!important;}
+}
+
+@media (orientation:landscape){
+body.in-game.angle-c-runtime #ltPlays{inset:0!important;width:100vw!important;height:100dvh!important;pointer-events:none!important;}
+body.in-game.angle-c-runtime #ltPlays .lt-play[data-c-seat]{position:fixed!important;left:var(--c-toss-x)!important;top:var(--c-toss-y)!important;width:var(--c-play-w)!important;height:var(--c-play-h)!important;transform:translate(-50%,-50%) scaleY(.62) rotate(var(--c-toss-angle))!important;}
+body.in-game.angle-c-runtime #ltPlays .lt-play :is(.lt-order,.lt-win-stamp,.lt-roles){display:none!important;}
+}
