@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "height": 568,
+      "pages": 7,
+      "effects": 13,
+      "settingsPersist": true,
+      "errors": []
+    },
+    {
+      "width": 393,
+      "height": 740,
+      "pages": 5,
+      "effects": 13,
+      "settingsPersist": true,
+      "errors": []
+    },
+    {
+      "width": 800,
+      "height": 1100,
+      "pages": 5,
+      "effects": 13,
+      "settingsPersist": true,
+      "errors": []
+    },
+    {
+      "width": 800,
+      "height": 360,
+      "pages": 13,
+      "effects": 13,
+      "settingsPersist": true,
+      "errors": []
+    }
+  ],
+  "scheduler": {
+    "pass": true,
+    "checks": [
+      "First storm exactly 12 minutes",
+      "Second storm exactly 12 minutes later",
+      "Thunder voice created",
+      "Individual gain updated",
+      "Hidden page cancels timers",
+      "Return starts fresh interval without burst",
+      "Zero thunder suppresses storm",
+      "Cricket setting saved",
+      "Stop clears timers"
+    ],
+    "method": "Actual ambience module in virtual timer and Web Audio harness; no 24-minute real-time wait"
+  },
+  "rules": [
+    {
+      "width": 320,
+      "height": 568,
+      "pages": 5,
+      "rulesFit": true,
+      "effectVolumeAndVariationPersist": true
+    },
+    {
+      "width": 393,
+      "height": 740,
+      "pages": 4,
+      "rulesFit": true,
+      "effectVolumeAndVariationPersist": true
+    },
+    {
+      "width": 800,
+      "height": 1100,
+      "pages": 4,
+      "rulesFit": true,
+      "effectVolumeAndVariationPersist": true
+    },
+    {
+      "width": 800,
+      "height": 360,
+      "pages": 10,
+      "rulesFit": true,
+      "effectVolumeAndVariationPersist": true
+    }
+  ],
+  "changes": [
+    {
+      "path": "cabin-ambience041.js",
+      "sha256": "5d01d9875e8a6f706c666bbd18ccc13bfad733ef7b1b86c8bd9f8ef97cd6676d"
+    },
+    {
+      "path": "moon-howl.js",
+      "sha256": "4e2efdef2ba67adb7e25cf14bb52a61781b744fcc6333c07b9fd6cce91d739ca"
+    },
+    {
+      "path": "game060.js",
+      "sha256": "2c39265c5024f3bdcf331a0a8510ad229dbf0c9be71ad2c8699339ffc13817ad"
+    },
+    {
+      "path": "menu-approved805.js",
+      "sha256": "6a25d6ec1cfc1638bde8f2a2808f3871c604786dc71a10579c4f703c9c430a7f"
+    },
+    {
+      "path": "menu-approved805.css",
+      "sha256": "a54b8ff0ffbebc75f2d48e49a96a7e0c191b4f9358198037720b0e7921bca252"
+    },
+    {
+      "path": "index.html",
+      "sha256": "7c613615478d2f3d9be778edfd74dc054070a18a944a4d56926096b4f2ee46c1"
+    },
+    {
+      "path": "sw060.js",
+      "sha256": "b126aaccc9a687ab54b1eefcc9e9f9177e9afdb129cc9caafb4c04568039c8c3"
+    }
+  ]
+}

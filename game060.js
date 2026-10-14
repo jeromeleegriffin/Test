@@ -1722,6 +1722,8 @@ function preloadNatural063(){
 const naturalBags063=new Map();
 const naturalPreferencesKey='horNaturalSoundPreferencesV1';
 let naturalPreferences063={};
+const naturalLevels063={};try{const saved=JSON.parse(localStorage.getItem('horNaturalLevelsV1')||'{}');for(const key of Object.keys(naturalCounts063))if(Number.isFinite(saved[key]))naturalLevels063[key]=Math.max(0,Math.min(100,saved[key]));}catch(_){}
+function setNaturalLevel063(kind,value){naturalLevels063[kind]=Math.max(0,Math.min(100,Number(value)||0));try{localStorage.setItem('horNaturalLevelsV1',JSON.stringify(naturalLevels063));}catch(_){horToast('Sound volume could not be saved.');}}
 try { const saved=JSON.parse(localStorage.getItem(naturalPreferencesKey)||'{}');
  for(const [kind,count] of Object.entries(naturalCounts063)){
   const value=saved[kind];
@@ -1758,7 +1760,7 @@ function playNatural063(kind, volume=1, delayMs=0, category='card', previewIndex
   if(!buffer||!allowed()||Date.now()>target+250)return; // Never emit a stale cue after a slow load/resume.
   whenAudioReady(ctx=>{
    if(!allowed()||Date.now()>target+250)return;
-   const src=ctx.createBufferSource(),gain=ctx.createGain();src.buffer=buffer;gain.gain.value=Math.max(0,Math.min(1,volume));if(kind==="paper"||kind==="gather")src.playbackRate.value=0.97+Math.random()*0.06;
+   const src=ctx.createBufferSource(),gain=ctx.createGain();src.buffer=buffer;gain.gain.value=Math.max(0,Math.min(1,volume))*(naturalLevels063[kind]??100)/100;if(kind==="paper"||kind==="gather")src.playbackRate.value=0.97+Math.random()*0.06;
    src.connect(gain);gain.connect(window.HORAudioMixer.output(ctx,category));presentationSounds035.add(src);if(category==="preview"&&window.he064Track)window.he064Track(src);
    src.onended=()=>{presentationSounds035.delete(src);src.disconnect();gain.disconnect();};
    src.start(ctx.currentTime+Math.max(0,target-Date.now())/1000);
@@ -15282,7 +15284,7 @@ function applyFavoritePartner042() {
 try { syncFavoritePartner042(); } catch (_) {}
 
 (function(){
- const FAMILIES={paper:'Card movement',gather:'Gather cards',click:'Button',wood:'Wood tap',clink:'Glass clink',stamp:'Trump stamp',tick:'Clock tick',wings:'Wing flaps',applause:'Award applause'};
+ const FAMILIES={smoothcard735:'Card lift',smoothcard736down:'Card set down',bidup735:'Bid increase',biddown735:'Bid decrease',paper:'Card movement',gather:'Gather cards',click:'Button',wood:'Wood tap',clink:'Glass clink',stamp:'Trump stamp',tick:'Clock tick',wings:'Wing flaps',applause:'Award applause'};
  const previewSources=new Set();
  window.he064Gain=category=>window.HORAudioMixer?.level(category==='preview'?'gameplay':category==='character'||category==='atmosphere'?category:'gameplay')??1;
  function stopPreviewAudio(){
@@ -15341,6 +15343,7 @@ try { syncFavoritePartner042(); } catch (_) {}
    play.onclick=async()=>{if(sel.value==='rotate'){stopPreviewAudio();for(let n=0;n<count;n++){await loadNatural063(kind,n+1);track(playNatural063(kind,.65,n*380,'preview',n+1));}}else playFamily(kind,Number(sel.value));};
    stop.onclick=stopPreviewAudio;
    row.append(document.createTextNode(title+' '),sel,play,stop);
+   const label=document.createElement('label');label.className='he-volume';label.textContent='Volume ';const output=document.createElement('output'),slider=document.createElement('input');slider.type='range';slider.min='0';slider.max='100';slider.value=String(naturalLevels063[kind]??100);slider.setAttribute('aria-label',title+' volume');output.textContent=slider.value+'%';slider.oninput=()=>{stopPreviewAudio();setNaturalLevel063(kind,slider.value);output.textContent=slider.value+'%';};label.append(output,slider);row.append(label);
    sounds.appendChild(row);
   });
   body.append(sounds);

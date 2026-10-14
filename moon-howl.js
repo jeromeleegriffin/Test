@@ -2,7 +2,7 @@
 (function(){'use strict';
 const seen=new Set();let source=null,gain=null,serial=0,bufferPromise=null;const history=[];
 try{for(const id of JSON.parse(sessionStorage.getItem('horMoonHeardV2')||'[]'))seen.add(id);}catch(_){}
-const volume=()=>1;
+const volume=()=>{try{const v=localStorage.getItem('horMoonHowlVolumeV1');return v===null?1:Math.max(0,Math.min(1,Number(v)/100||0));}catch(_){return 1;}};
 const allowed=()=>!document.hidden&&document.body.classList.contains('in-game')&&typeof soundMuted!=='undefined'&&!soundMuted&&soundCard&&volume()>0;
 function stop(){serial++;try{source?.stop();}catch(_){}source=null;gain=null;}
 function load(){return bufferPromise||(bufferPromise=fetch('assets/audio/cabin041/wolf.wav').then(r=>{if(!r.ok)throw Error('Wolf audio unavailable');return r.arrayBuffer();}).then(b=>ensureAudio().decodeAudioData(b)).catch(()=>{bufferPromise=null;return null;}));}

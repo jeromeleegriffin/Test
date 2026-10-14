@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
 const BUILD = '805-ownerreview';
-const CACHE = 'house-of-rooks-805-menu-finish2';
+const CACHE = 'house-of-rooks-805-atmosphere1';
 const SHELL = [
  "./owner-review805.css?v=805-ownerreview",
  "./assets/images/avatar-raven-approved.jpg",
@@ -478,14 +478,14 @@ const SHELL = [
  "./assets/characters077/willow-right.webp",
  "./assets/characters077/willow-top.webp",
  './room-approved805.css?v=805-ownerreview','./room-approved805.js?v=805-ownerreview',
- './menu-approved805.css?v=805-menu-finish2','./menu-approved805.js?v=805-menu-finish2',
+ './menu-approved805.css?v=805-atmosphere1','./menu-approved805.js?v=805-atmosphere1',
  './assets/approved805/griffin-logo.png','./assets/approved805/ceiling-wood.png',
  './landing783.css?v=805-ownerreview','./landing783.js?v=805-ownerreview',
  './hor-version.js?v=805-ownerreview',
  './friends803.js?v=805-ownerreview','./friends803.css?v=805-ownerreview',
  './audio-mixer.js?v=805-ownerreview','./audio-mixer.css?v=805-ownerreview',
  './career-phone-test.js?v=career-phone-test-v1',
- './career-core.js?v=805-ownerreview','./moon-howl.js?v=805-ownerreview','./progression.js?v=805-ownerreview','./assets/audio/cabin041/wolf.wav',
+ './career-core.js?v=805-ownerreview','./moon-howl.js?v=805-atmosphere1','./progression.js?v=805-ownerreview','./assets/audio/cabin041/wolf.wav',
  './bid-hold795.js?v=795', './assets/trump714/confirm-brass.png', './assets/images/shoot-moon-crescent-approved.png',
  './voices/jerome/trumps_are_red.ogg','./voices/jerome/trumps_are_green.ogg','./voices/jerome/trumps_are_black.ogg','./voices/jerome/trumps_are_yellow.ogg','./founder-profile785.js','./JEROME.html','./holder-identity784.js', './holder-identity784.css', './assets/images/bid-plaque-quiet-r654.png',
  './landing783.js', './landing783.css',
@@ -662,7 +662,7 @@ const SHELL = [
   './kitty736.css?v=795',
   './holder004.css?v=732',
   './holder004.js?v=732',
-  './game060.js?v=805-menu-finish2',
+  './game060.js?v=805-atmosphere1',
   './assets/cardholder/holder047.png',
   './assets/cardholder/connector050.png',
   './assets/cardholder/backrest004.png',
@@ -690,7 +690,7 @@ const SHELL = [
   './bots.js',
   './bots.js?v=805-ownerreview',
   './cabin-ambience041.js',
-  './cabin-ambience041.js?v=805-ownerreview',
+  './cabin-ambience041.js?v=805-atmosphere1',
   './fire-glow-controller060.js?v=063',
   './game.js',
   './game.js?v=732',

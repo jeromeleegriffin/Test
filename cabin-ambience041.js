@@ -13,6 +13,11 @@
  const storedFire=saved('rookFireVolume758');
  let fireVolume=storedFire===null?DEFAULT_FIRE_VOLUME:Math.max(0,Math.min(100,Number(storedFire)||0));
  let owlsEnabled=saved('rookOwls758')!=='0';
+ const defaults={wind:100,bird:100,crickets:100,owl:100,wolf:100,rain:100,thunder:65,stormMinutes:12,cricketRate:1};
+ const settings={...defaults};try{const data=JSON.parse(saved('horAmbientSoundsV1')||'{}');for(const key of Object.keys(defaults))if(Number.isFinite(data[key]))settings[key]=Math.max(key==='stormMinutes'?6:key==='cricketRate'?.5:0,Math.min(key==='stormMinutes'?60:key==='cricketRate'?2:100,data[key]));}catch(_){}
+ let stormDue=0,stormCalls=0;
+ function setSound(key,value){if(!(key in defaults)||!Number.isFinite(Number(value)))return;settings[key]=Math.max(key==='stormMinutes'?6:key==='cricketRate'?.5:0,Math.min(key==='stormMinutes'?60:key==='cricketRate'?2:100,Number(value)));remember('horAmbientSoundsV1',JSON.stringify(settings));if(key==='stormMinutes'||key==='cricketRate'){stop();sync();}else sync();}
+ const soundLevel=name=>name==='fire'?fireVolume/100:(settings[name]??100)/100;
  let owlDue=0,owlCalls=0,pageActive=true;
  let ctx=null,bus=null,unlocked=false,running=false,epoch=0,rainUntil=0,busyUntil=0;
  const buffers=new Map(),voices=new Set(),timers=new Set();
@@ -22,15 +27,20 @@
  const allowed=()=>pageActive && screenVisible() && enabled && volume>0 && !document.hidden && document.body.classList.contains('in-game') && !(typeof soundMuted!=='undefined' && soundMuted);
  function buffer(name){
   if(buffers.has(name))return buffers.get(name);
+  if(name==='thunder'){
+   const b=ctx.createBuffer(1,RATE*9,RATE),out=b.getChannelData(0);let low=0;
+   for(let i=0;i<out.length;i++){low=.985*low+.015*(Math.random()*2-1);const t=i/RATE;out[i]=low*3.5*Math.min(1,t*5)*Math.exp(-t/3)*(0.65+0.35*Math.sin(t*2.3)**2);}
+   buffers.set(name,b);return b;
+  }
   const raw=atob(PCM[name]),b=ctx.createBuffer(1,raw.length/2,RATE),out=b.getChannelData(0);
   for(let i=0;i<out.length;i++){let v=raw.charCodeAt(i*2)|(raw.charCodeAt(i*2+1)<<8);if(v>=32768)v-=65536;out[i]=v/32768;}
   buffers.set(name,b);return b;
  }
  function later(fn,ms){const id=setTimeout(()=>{timers.delete(id);fn();},ms);timers.add(id);return id;}
  function voice(name,seconds=0,loop=false,fade=2){
-  if(!running||!allowed())return null;
+  if(!running||!allowed()||soundLevel(name)<=0)return null;
   const source=ctx.createBufferSource(),gain=ctx.createGain(),now=ctx.currentTime;
-  source.buffer=buffer(name);source.loop=loop;source.connect(gain);const level=ctx.createGain();level.gain.value=name==='fire'?fireVolume/100:1;gain.connect(level);level.connect(bus);
+  source.buffer=buffer(name);source.loop=loop;source.connect(gain);const level=ctx.createGain();level.gain.value=soundLevel(name);gain.connect(level);level.connect(bus);
   const duration=seconds||source.buffer.duration;
   const f=Math.min(fade,duration/3);
   gain.gain.setValueAtTime(0,now);gain.gain.linearRampToValueAtTime(1,now+f);
@@ -48,11 +58,12 @@
   }
  }
  function schedule(kind,lo,hi,token){
-  const delay=random(lo,hi)*1000;if(kind==='owl')owlDue=Date.now()+delay;
+  const delay=random(lo,hi)*1000/(kind==='crickets'?settings.cricketRate:1);if(kind==='owl')owlDue=Date.now()+delay;
   later(()=>{
    if(token!==epoch||!running)return;
    if(!allowed()){sync();return;}
    const now=ctx.currentTime;
+   if(soundLevel(kind)<=0||(kind==='rain'&&now<rainUntil)){schedule(kind,lo,hi,token);return;}
    if(kind==='rain'){
     const duration=random(60,120);rainUntil=now+duration+15;busyUntil=rainUntil;
     hushWildlife();voice('rain',duration,true,10);
@@ -65,8 +76,17 @@
    schedule(kind,lo,hi,token);
   },delay);
  }
+ function storm(token){
+  const delay=settings.stormMinutes*60000;stormDue=Date.now()+delay;
+  later(()=>{if(token!==epoch||!running)return;if(!allowed()){sync();return;}
+   if(settings.thunder>0){const now=ctx.currentTime;stormCalls++;rainUntil=now+90;busyUntil=rainUntil;hushWildlife();
+    for(const v of voices)if(v.name==='rain')v.stop();voice('rain',75,true,8);voice('thunder',0,false,.3);
+    for(const seconds of [22,49])later(()=>{if(token===epoch&&running&&allowed()&&settings.thunder>0)voice('thunder',0,false,.3);},seconds*1000);
+   }storm(token);
+  },delay);
+ }
  function stop(){
-  running=false;owlDue=0;epoch++;timers.forEach(clearTimeout);timers.clear();rainUntil=0;busyUntil=0;
+  running=false;owlDue=0;stormDue=0;epoch++;timers.forEach(clearTimeout);timers.clear();rainUntil=0;busyUntil=0;
   const token=epoch,oldBus=bus;bus=null;
   if(ctx && oldBus){const now=ctx.currentTime;oldBus.gain.cancelScheduledValues(now);oldBus.gain.setValueAtTime(oldBus.gain.value,now);oldBus.gain.linearRampToValueAtTime(0,now+.12);}
   for(const v of voices){try{v.source.stop(ctx.currentTime+.13);}catch(_){}}voices.clear();
@@ -74,15 +94,15 @@
  }
  async function sync(){
   if(!allowed() || !unlocked){if(running)stop();return;}
-  if(running){for(const v of voices)if(v.name==='fire')v.level.gain.setTargetAtTime(fireVolume/100,ctx.currentTime,.25);if(bus)bus.gain.setTargetAtTime(volume/30,ctx.currentTime,.25);return;}
+  if(running){for(const v of voices)v.level.gain.setTargetAtTime(soundLevel(v.name),ctx.currentTime,.25);if(bus)bus.gain.setTargetAtTime(volume/30,ctx.currentTime,.25);return;}
   const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!AudioCtx)return;
   try{
    ctx=ctx||new AudioCtx();running=true;const token=++epoch;
    await ctx.resume();if(token!==epoch||!allowed()){if(token===epoch)stop();return;}
    bus=ctx.createGain();bus.gain.setValueAtTime(volume/30,ctx.currentTime);bus.connect(window.HORAudioMixer.output(ctx,'atmosphere'));
    voice('fire',0,true,3);voice('wind',0,true,5);
-   schedule('bird',120,240,token);schedule('crickets',180,360,token);
-   schedule('owl',900,1800,token);schedule('wolf',480,900,token);schedule('rain',1200,2400,token);
+   schedule('bird',120,240,token);schedule('crickets',120,240,token);
+   schedule('owl',900,1800,token);schedule('wolf',480,900,token);schedule('rain',1200,2400,token);storm(token);
   }catch(_){stop();}
  }
  function controls(){
@@ -98,7 +118,7 @@
   const owl=document.getElementById('opt-owl-ambience');
   if(owl){owl.checked=owlsEnabled;owl.onchange=()=>{owlsEnabled=owl.checked;remember('rookOwls758',owlsEnabled?'1':'0');if(!owlsEnabled)for(const v of voices)if(v.name==='owl')v.stop();};}
  }
- window.CabinAmbience041={sync,stop,inspect:()=>({running,enabled,volume,fireVolume,owlsEnabled,owlDue,owlCalls,timers:timers.size,voices:[...voices].map(v=>({name:v.name,level:v.level.gain.value})),busGain:bus?.gain.value??0})};
+ window.CabinAmbience041={sync,stop,setSound,settings:()=>({...settings}),inspect:()=>({running,enabled,volume,fireVolume,owlsEnabled,owlDue,owlCalls,stormDue,stormCalls,settings:{...settings},timers:timers.size,voices:[...voices].map(v=>({name:v.name,level:v.level.gain.value})),busGain:bus?.gain.value??0})};
  function init(){
   controls();
   document.addEventListener('pointerdown',()=>{unlocked=true;sync();},{passive:true});

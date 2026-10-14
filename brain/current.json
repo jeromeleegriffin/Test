@@ -512,5 +512,7 @@
   "menuFinishCommit": "b744951e5f02dbf1776a6f7b5cc076816490d8da",
   "animationMenuRemovalCheckpoint": "../coordination/ANIMATION_MENU_REMOVAL_20261014.md",
   "animationMenuRemovalStatus": "TEST_LIVE_VERIFIED_ANDROID_PENDING",
-  "animationMenuRemovalCommit": "7d6d4ae3696b2d1f9df856192eeeb5794aa845e1"
+  "animationMenuRemovalCommit": "7d6d4ae3696b2d1f9df856192eeeb5794aa845e1",
+  "atmosphereControlsCheckpoint": "../coordination/ATMOSPHERE_CONTROLS_20261014.md",
+  "atmosphereControlsStatus": "BROWSER_TESTED_TEST_PUBLICATION_ANDROID_PENDING"
 }
