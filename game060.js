@@ -15284,23 +15284,13 @@ try { syncFavoritePartner042(); } catch (_) {}
 (function(){
  const FAMILIES={paper:'Card movement',gather:'Gather cards',click:'Button',wood:'Wood tap',clink:'Glass clink',stamp:'Trump stamp',tick:'Clock tick',wings:'Wing flaps',applause:'Award applause'};
  const previewSources=new Set();
- let previewTimer=0, previewSnapshot=null;
  window.he064Gain=category=>window.HORAudioMixer?.level(category==='preview'?'gameplay':category==='character'||category==='atmosphere'?category:'gameplay')??1;
  function stopPreviewAudio(){
   previewSources.forEach(src=>{try{src.stop();}catch(e){}});
   previewSources.clear();
-  if(previewTimer){clearTimeout(previewTimer);previewTimer=0;}
  }
  function track(src){if(src)previewSources.add(src);return src;}
  window.he064Track=track;
- function snapshot(){
-  return JSON.stringify({
-   trick:(game&&game.trick||[]).length,
-   scores:game&&game.scores||null,
-   phase:game&&game.phase||null,
-   hand:(game&&game.myHand||[]).length
-  });
- }
  function openMenu(){
   const root=document.getElementById('houseEffects064');
   if(!root)return;
@@ -15311,16 +15301,10 @@ try { syncFavoritePartner042(); } catch (_) {}
  }
  function closeMenu(){
   stopPreviewAudio();
-  const stage=document.getElementById('he064Stage');
-  if(stage)stage.remove();
   const root=document.getElementById('houseEffects064');
   if(root){root.hidden=true;root.setAttribute('aria-hidden','true');}
-  document.body.classList.remove('he064-open','he064-previewing');
+  document.body.classList.remove('he064-open');
   const opener=document.getElementById('openHouseEffects064');if(opener)opener.focus({preventScroll:true});
- }
- function showTab(name){
-  document.querySelectorAll('[data-he-tab]').forEach(b=>b.classList.toggle('is-on',b.getAttribute('data-he-tab')===name));
-  document.querySelectorAll('[data-he-pane]').forEach(p=>p.hidden=p.getAttribute('data-he-pane')!==name);
  }
  async function playFamily(kind,index){
   stopPreviewAudio();
@@ -15328,26 +15312,6 @@ try { syncFavoritePartner042(); } catch (_) {}
   await loadNatural063(kind,index);
   track(playNatural063(kind,.65,0,'preview',index));
  }
- function stageFight(order){
-  stopPreviewAudio();
-  const old=document.getElementById('he064Stage');if(old)old.remove();
-  window.HORRavenFight741?.cancel('preview restart');
-  previewSnapshot=snapshot();
-  const menu=document.getElementById('houseEffects064');if(menu)menu.hidden=true;
-  document.body.classList.add('he064-previewing');
-  const stage=document.createElement('div');stage.id='he064Stage';
-  const deck=makeDeck(),black=deck.find(c=>c.id==='rook')||{id:'rook',color:'rook',rank:99},red=deck.find(c=>c.id==='red-2')||{id:'red-2',color:'red',rank:2};
-  stage.innerHTML='<div class="raven-preview741 red">'+renderCardHTML(red,false)+'</div><div class="raven-preview741 black">'+renderCardHTML(black,false)+'</div><button type="button" id="he064StopStage">Stop</button>';
-  document.body.appendChild(stage);
-  if(order==='black-first')stage.classList.add('raven-swap741');
-  let finished=false;
-  function finishPreview(){if(finished)return;finished=true;stopPreviewAudio();stage.remove();document.body.classList.remove('he064-previewing');if(snapshot()!==previewSnapshot)console.warn('House Effects preview changed game state');openMenu();}
-  stage.querySelector('#he064StopStage').onclick=()=>window.HORRavenFight741?.cancel('preview stop');
-  window.HORRavenFight741.ready.then(ok=>{if(!stage.isConnected)return;if(!ok){finishPreview();return;}const reduced=reduceMotion||matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(!window.HORRavenFight741.play({blackCardElement:stage.querySelector('.black .card-face'),redCardElement:stage.querySelector('.red .card-face'),preview:true,reducedMotion:reduced,duration:reduced?700:2750,onDone:finishPreview}))finishPreview();
-  });
- }
-
  function init(){
   const host=document.querySelector('.gh-menu-sound .gh-sound-panel');if(!host||document.getElementById('houseEffects064'))return;
   const launch=document.createElement('button');
@@ -15356,7 +15320,7 @@ try { syncFavoritePartner042(); } catch (_) {}
   host.appendChild(launch);
   const root=document.createElement('div');
   root.id='houseEffects064';root.hidden=true;root.setAttribute('aria-hidden','true');
-  root.innerHTML='<div class="he064-shell" role="dialog" aria-label="House Effects"><header class="he064-head"><div><b>House Effects</b><small>Sound choices save automatically</small></div><div class="he064-tabs"><button type="button" data-he-tab="sounds" class="is-on">Sounds</button><button type="button" data-he-tab="animations">Animations</button></div></header><div class="he064-body"></div><footer class="he064-foot"><button type="button" id="he064Done">Done</button></footer></div>';
+  root.innerHTML='<div class="he064-shell" role="dialog" aria-label="House Effects"><header class="he064-head"><div><b>House Effects</b><small>Sound choices save automatically</small></div></header><div class="he064-body"></div><footer class="he064-foot"><button type="button" id="he064Done">Done</button></footer></div>';
   document.body.appendChild(root);
   const body=root.querySelector('.he064-body');
   const sounds=document.createElement('section');sounds.dataset.hePane='sounds';
@@ -15379,18 +15343,7 @@ try { syncFavoritePartner042(); } catch (_) {}
    row.append(document.createTextNode(title+' '),sel,play,stop);
    sounds.appendChild(row);
   });
-  const anim=document.createElement('section');anim.dataset.hePane='animations';anim.hidden=true;
-  anim.innerHTML='<p>Bird Fight preview uses the real table and card art. It does not change the hand, score, or turn.</p>';
-  [['red-first','Red Two, then Black Bird'],['black-first','Black Bird, then Red Two']].forEach(([order,label])=>{
-   const b=document.createElement('button');b.type='button';b.textContent=label;b.onclick=()=>stageFight(order);anim.appendChild(b);
-  });
-  const replay=document.createElement('button');replay.type='button';replay.textContent='Replay last';
-  let last='red-first';
-  anim.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{if(b.textContent.indexOf('Red Two,')===0)last='red-first';if(b.textContent.indexOf('Black')===0)last='black-first';}));
-  replay.onclick=()=>stageFight(last);
-  anim.appendChild(replay);
-  body.append(sounds,anim);
-  root.querySelectorAll('[data-he-tab]').forEach(b=>b.onclick=()=>showTab(b.getAttribute('data-he-tab')));
+  body.append(sounds);
   root.querySelector('#he064Done').onclick=closeMenu;
   root.addEventListener('pointerdown',(e)=>e.stopPropagation());
   root.addEventListener('click',(e)=>e.stopPropagation());
