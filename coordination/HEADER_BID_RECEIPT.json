@@ -1,0 +1,18 @@
+{
+  "runtime": "805-headerbid",
+  "commit": "d99baa3ba669cac8e800d4ccd61803f94f96fd07",
+  "rollbackCommit": "dd15999aa6d0f7e4a40756251cca89fab813afa4",
+  "pagesRunId": 38562226484,
+  "pagesConclusion": "success",
+  "changedServedFiles": 7,
+  "allChangedServedBytesMatch": true,
+  "bidHeader": "Bid progress at top; running match totals under Match Score in shared menu; generic phase label removed; public Layout removed; original speed handlers retained",
+  "localChecks": "Four header and four full menu fixtures passed; native offline MAX hand32X1 searches/no fallback/200points conserved/no page errors or missing local assets. Physical Android acceptance pending.",
+  "cloudflareWorker": "Not changed or verified; shared scoped integration handoff provided. Public403 and automatic review rejected broader account enumeration. Its native room transport must be preserved.",
+  "nativePausedRenderCheck": "Real offline play paused for screenshot: bid text correct, no overlap, same header geometry as fixture",
+  "ownerToolsAuthorization": "No live founder authentication; layout retained in isolated localhost dev Owner Tools, never name/avatar-gated",
+  "nativeAndroidAcceptance": false,
+  "productionTouched": false,
+  "newZip": false,
+  "standingWorkflow": "TEST_SITE_WORKFLOW.md"
+}
