@@ -10,6 +10,7 @@
   const queue = [];
   let serial = 0;
   let eventCounter = 0;
+  let moonContext = null;
 
   function soundAllowed(){
     try {
@@ -42,7 +43,7 @@
     return Number.isInteger(n) && allowedAmounts.has(n) ? String(n) : null;
   }
   function context(){return {game:typeof game==='undefined'?null:game,hand:typeof handHistory==='undefined'?0:handHistory.length};}
-  function current(event){const now=context(),p=seatPlayer(Number(event.player));return event.originGame===now.game&&event.originHand===now.hand&&p&&p.id===event.originActor&&genderFor(p)!==null&&(!now.game||!['play','score','waiting','lobby','deal','dealing'].includes(now.game.phase));}
+  function current(event){const now=context(),p=seatPlayer(Number(event.player));if(now.game?.shotTheMoon && event.action !== 'shootMoon')return false;return event.originGame===now.game&&event.originHand===now.hand&&p&&p.id===event.originActor&&genderFor(p)!==null&&(!now.game||!['play','score','waiting','lobby','deal','dealing'].includes(now.game.phase));}
   function pathFor(gender, clip){
     return 'assets/human-bid-voice801/' + gender + '/' + clip + '.mp3';
   }
@@ -111,6 +112,12 @@
     if (!event || !event.id || seen.has(event.id)) return;
     const seat = Number(event.player);
     if (!seatPlayer(seat)) return;
+    const now = context();
+    const moonAlreadyDeclared = moonContext && moonContext.game === now.game && moonContext.hand === now.hand;
+    // A late auction packet must not refill the queue after the Moon flush.
+    // Duplicate declarations with a new packet ID are also quiet for this hand.
+    if (moonAlreadyDeclared || (now.game?.shotTheMoon && event.action !== 'shootMoon')) return;
+    if (event.action === 'shootMoon') moonContext = now;
     seen.add(event.id);
     if (seen.size > 96) seen.delete(seen.values().next().value);
     // A confirmed Moon ends the auction. Old bids/Pass must not drain after

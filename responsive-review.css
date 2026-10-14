@@ -25,3 +25,7 @@
  body.in-game #scoreSpeed701 button, body.in-game #portraitLastTrickButton,
  body.in-game #btnScoreCollapse {min-height:40px!important;}
 }
+/* Reparented navigation retains its screen ownership and comfortable targets. */
+body:not(.in-game) > .in-game-leave{display:none!important}
+body.in-game > .in-game-leave{display:flex;flex-direction:column;gap:4px}
+body.in-game > .in-game-leave button{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important}

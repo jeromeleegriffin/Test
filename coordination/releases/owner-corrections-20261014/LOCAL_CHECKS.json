@@ -1,0 +1,4016 @@
+{
+  "bid": [
+    {
+      "source": "header-compact-repairs",
+      "personaClearedByBidUI": true,
+      "careerClearedByBidSafety": true,
+      "invalidBidClearsAuthoritativeTurnTimer": true
+    },
+    {
+      "source": "current-owner-repairs",
+      "personaStaysOutsideRequiredBid": true,
+      "closeWorks": true,
+      "requiredBidNoPopupFlash": true,
+      "exactHumanBid": true,
+      "accepted": [
+        {
+          "value": 125,
+          "high": 125,
+          "invalidTimerRetained": null
+        },
+        {
+          "value": 135,
+          "high": 135,
+          "invalidTimerRetained": null
+        },
+        {
+          "value": 195,
+          "high": 195,
+          "invalidTimerRetained": null
+        },
+        {
+          "value": 121,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 123,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 199,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 120,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 69,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 201,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": 121.5,
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": "121.5",
+          "high": 120,
+          "invalidTimerRetained": true
+        },
+        {
+          "value": "abc",
+          "high": 120,
+          "invalidTimerRetained": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "moon": [
+    {
+      "dir": "bidding-popup-repairs",
+      "started": [
+        "assets/human-bid-voice801/female/120.mp3",
+        "assets/human-bid-voice801/male/moon-2.mp3",
+        "assets/human-bid-voice801/female/pass.mp3",
+        "assets/human-bid-voice801/female/125.mp3"
+      ],
+      "lateAuctionVoices": 2
+    },
+    {
+      "dir": "current-owner-repairs",
+      "started": [
+        "assets/human-bid-voice801/female/120.mp3",
+        "assets/human-bid-voice801/male/moon-2.mp3",
+        "assets/human-bid-voice801/female/130.mp3",
+        "assets/human-bid-voice801/male/moon-2.mp3"
+      ],
+      "lateAuctionVoices": 0
+    }
+  ],
+  "strategy": {
+    "passed": true,
+    "jumps": [
+      {
+        "v": {
+          "h": [
+            9,
+            10,
+            16,
+            28,
+            14,
+            18,
+            0,
+            44,
+            15,
+            36
+          ],
+          "seat": 0,
+          "dealer": 3,
+          "high": 105,
+          "bidder": 1,
+          "history": [
+            [
+              1,
+              105
+            ]
+          ],
+          "scores": [
+            0,
+            350
+          ],
+          "passed": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "limit": 200,
+          "target": 500,
+          "revealed": null,
+          "moon": true
+        },
+        "result": {
+          "bid": 125,
+          "cap": 135,
+          "reason": "evaluated pressure jump",
+          "samples": 128,
+          "evaluations": [
+            {
+              "bid": 110,
+              "gain": 0,
+              "se": 0
+            },
+            {
+              "bid": 115,
+              "gain": 1.6247313830482573,
+              "se": 5.962309077415801
+            },
+            {
+              "bid": 120,
+              "gain": -2.417886867272484,
+              "se": 2.1750437033526655
+            },
+            {
+              "bid": 125,
+              "gain": 5.704334204971859,
+              "se": 3.607159667758642
+            }
+          ],
+          "effectiveSamples": 63.96778613389281
+        }
+      },
+      {
+        "v": {
+          "h": [
+            2,
+            42,
+            28,
+            36,
+            44,
+            22,
+            3,
+            8,
+            20,
+            25
+          ],
+          "seat": 0,
+          "dealer": 3,
+          "high": 100,
+          "bidder": 1,
+          "history": [
+            [
+              1,
+              100
+            ]
+          ],
+          "scores": [
+            400,
+            100
+          ],
+          "passed": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "limit": 200,
+          "target": 500,
+          "revealed": null,
+          "moon": true
+        },
+        "result": {
+          "bid": 120,
+          "cap": 130,
+          "reason": "evaluated pressure jump",
+          "samples": 128,
+          "evaluations": [
+            {
+              "bid": 105,
+              "gain": 0,
+              "se": 0
+            },
+            {
+              "bid": 110,
+              "gain": 6.578688364544035,
+              "se": 8.869215315895255
+            },
+            {
+              "bid": 115,
+              "gain": -10.565617022258392,
+              "se": 5.149125605707677
+            },
+            {
+              "bid": 120,
+              "gain": 13.03049091630191,
+              "se": 7.123950273192105
+            }
+          ],
+          "effectiveSamples": 79.07716083273762
+        }
+      },
+      {
+        "v": {
+          "h": [
+            28,
+            8,
+            27,
+            9,
+            7,
+            14,
+            41,
+            5,
+            12,
+            2
+          ],
+          "seat": 0,
+          "dealer": 3,
+          "high": 105,
+          "bidder": 1,
+          "history": [
+            [
+              1,
+              105
+            ]
+          ],
+          "scores": [
+            0,
+            350
+          ],
+          "passed": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "limit": 200,
+          "target": 500,
+          "revealed": null,
+          "moon": true
+        },
+        "result": {
+          "bid": 115,
+          "cap": 125,
+          "reason": "evaluated pressure jump",
+          "samples": 128,
+          "evaluations": [
+            {
+              "bid": 110,
+              "gain": 0,
+              "se": 0
+            },
+            {
+              "bid": 115,
+              "gain": 10.575389630655586,
+              "se": 7.339459162132394
+            }
+          ],
+          "effectiveSamples": 77.0431279220697
+        }
+      }
+    ],
+    "minimumRaiseWhenNoGain": true,
+    "partnerPolicyPreserved": true,
+    "rejectsPrivateOpponentInput": true
+  },
+  "menus": [
+    {
+      "width": 320,
+      "height": 568,
+      "root": {
+        "h": 544,
+        "w": 286,
+        "top": 12,
+        "bottom": 556,
+        "scroll": 542,
+        "client": 542,
+        "bodyScroll": 420,
+        "bodyHeight": 420,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 117.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 178.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 252.5625
+          },
+          {
+            "text": "Play With FriendsHost, join or invite friends\u203a",
+            "bottom": 313.75
+          },
+          {
+            "text": "\u266aSounds & AtmosphereVoices, effects and the room a",
+            "bottom": 387.9375
+          },
+          {
+            "text": "\u2699Game SetupScore to win and selected table rules\u203a",
+            "bottom": 462.125
+          }
+        ],
+        "page": "Page 1 of 2"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 1
+        },
+        {
+          "name": "career",
+          "pages": 2
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 1
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    },
+    {
+      "width": 393,
+      "height": 647,
+      "root": {
+        "h": 620,
+        "w": 350,
+        "top": 12,
+        "bottom": 632,
+        "scroll": 618,
+        "client": 618,
+        "bodyScroll": 551,
+        "bodyHeight": 551,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 119.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 180.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 241.5625
+          },
+          {
+            "text": "Play With FriendsHost, join or invite friends\u203a",
+            "bottom": 302.75
+          },
+          {
+            "text": "\u266aSounds & AtmosphereVoices, effects and the room a",
+            "bottom": 363.9375
+          },
+          {
+            "text": "\u2699Game SetupScore to win and selected table rules\u203a",
+            "bottom": 425.125
+          },
+          {
+            "text": "?How to PlayRules, bidding, scoring and the Moon\u203a",
+            "bottom": 486.3125
+          },
+          {
+            "text": "\u2193Install on This PhoneKeep the House close at hand",
+            "bottom": 547.5
+          }
+        ],
+        "page": "Page 1 of 1"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 1
+        },
+        {
+          "name": "career",
+          "pages": 1
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 1
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    },
+    {
+      "width": 360,
+      "height": 480,
+      "root": {
+        "h": 456,
+        "w": 326,
+        "top": 12,
+        "bottom": 468,
+        "scroll": 454,
+        "client": 454,
+        "bodyScroll": 326,
+        "bodyHeight": 326,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 120.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 181.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 242.5625
+          },
+          {
+            "text": "Play With FriendsHost, join or invite friends\u203a",
+            "bottom": 303.75
+          },
+          {
+            "text": "\u266aSounds & AtmosphereVoices, effects and the room a",
+            "bottom": 364.9375
+          }
+        ],
+        "page": "Page 1 of 2"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 1
+        },
+        {
+          "name": "career",
+          "pages": 2
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 2
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    },
+    {
+      "width": 800,
+      "height": 360,
+      "root": {
+        "h": 336,
+        "w": 350,
+        "top": 12,
+        "bottom": 348,
+        "scroll": 334,
+        "client": 334,
+        "bodyScroll": 216,
+        "bodyHeight": 216,
+        "visible": [
+          {
+            "text": "\u2328Join by CodeEnter a friend's table code\u203a",
+            "bottom": 115.1875
+          },
+          {
+            "text": "\u25c7My ProfileYour name, avatar and voice\u203a",
+            "bottom": 176.375
+          },
+          {
+            "text": "\u2605My Career & AwardsLevel, statistics and achieveme",
+            "bottom": 237.5625
+          }
+        ],
+        "page": "Page 1 of 3"
+      },
+      "checks": [
+        {
+          "name": "profile",
+          "pages": 3
+        },
+        {
+          "name": "career",
+          "pages": 2
+        },
+        {
+          "name": "friends",
+          "pages": 1
+        },
+        {
+          "name": "sound",
+          "pages": 1
+        },
+        {
+          "name": "setup",
+          "pages": 2
+        },
+        {
+          "name": "rules",
+          "pages": 1
+        }
+      ],
+      "alwaysOnCareers": true,
+      "setupDynamicRules": true,
+      "audioBackChain": true,
+      "careerBackAndClose": true,
+      "offlinePause": true,
+      "multiplayerNotPaused": true,
+      "bidGuard": true,
+      "errors": []
+    }
+  ],
+  "max": {
+    "hands": [
+      {
+        "hand": 1,
+        "pace": 99,
+        "elapsedMs": 10612,
+        "history": 1,
+        "scores": [
+          175,
+          25
+        ],
+        "summary": {
+          "pointsA": 175,
+          "pointsB": 25,
+          "bid": 115,
+          "bidderTeam": 0,
+          "made": true,
+          "trump": "yellow",
+          "scores": [
+            175,
+            25
+          ],
+          "scoreDeltaA": 175,
+          "scoreDeltaB": 25,
+          "shotTheMoon": false,
+          "shotMoonResult": null,
+          "nestWinnerName": "Ivy",
+          "nestPts": 0,
+          "nestCards": [
+            {
+              "color": "green",
+              "rank": 11,
+              "id": "green-11"
+            },
+            {
+              "color": "green",
+              "rank": 6,
+              "id": "green-6"
+            },
+            {
+              "color": "red",
+              "rank": 11,
+              "id": "red-11"
+            },
+            {
+              "color": "black",
+              "rank": 9,
+              "id": "black-9"
+            },
+            {
+              "color": "black",
+              "rank": 8,
+              "id": "black-8"
+            },
+            {
+              "color": "black",
+              "rank": 6,
+              "id": "black-6"
+            }
+          ],
+          "claimRevealHands": [
+            {
+              "player": 0,
+              "name": "SOL",
+              "team": 0,
+              "cards": [
+                {
+                  "color": "green",
+                  "rank": 12,
+                  "id": "green-12"
+                },
+                {
+                  "color": "red",
+                  "rank": 14,
+                  "id": "red-14"
+                }
+              ]
+            },
+            {
+              "player": 1,
+              "name": "Moss",
+              "team": 1,
+              "cards": [
+                {
+                  "color": "green",
+                  "rank": 13,
+                  "id": "green-13"
+                },
+                {
+                  "color": "green",
+                  "rank": 5,
+                  "id": "green-5"
+                }
+              ]
+            },
+            {
+              "player": 2,
+              "name": "Ivy",
+              "team": 0,
+              "cards": [
+                {
+                  "color": "red",
+                  "rank": 2,
+                  "id": "red-2"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 1,
+                  "id": "yellow-1"
+                }
+              ]
+            },
+            {
+              "player": 3,
+              "name": "Emberlyn",
+              "team": 1,
+              "cards": [
+                {
+                  "color": "green",
+                  "rank": 10,
+                  "id": "green-10"
+                },
+                {
+                  "color": "red",
+                  "rank": 5,
+                  "id": "red-5"
+                }
+              ]
+            }
+          ],
+          "claimer": 2,
+          "claimerName": "Ivy",
+          "claimReason": null,
+          "lastTricks": [
+            {
+              "winner": 2,
+              "plays": [
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "black",
+                    "rank": 10,
+                    "id": "black-10"
+                  }
+                },
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "red",
+                    "rank": 12,
+                    "id": "red-12"
+                  }
+                },
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 14,
+                    "id": "yellow-14"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "red",
+                    "rank": 13,
+                    "id": "red-13"
+                  }
+                }
+              ],
+              "trump": "yellow",
+              "ledColor": "black"
+            },
+            {
+              "winner": 0,
+              "plays": [
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 10,
+                    "id": "yellow-10"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "red",
+                    "rank": 7,
+                    "id": "red-7"
+                  }
+                },
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "rook",
+                    "rank": 99,
+                    "id": "rook"
+                  }
+                },
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "green",
+                    "rank": 9,
+                    "id": "green-9"
+                  }
+                }
+              ],
+              "trump": "yellow",
+              "ledColor": "yellow"
+            },
+            {
+              "winner": 2,
+              "plays": [
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "black",
+                    "rank": 13,
+                    "id": "black-13"
+                  }
+                },
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "black",
+                    "rank": 14,
+                    "id": "black-14"
+                  }
+                },
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 5,
+                    "id": "yellow-5"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "green",
+                    "rank": 7,
+                    "id": "green-7"
+                  }
+                }
+              ],
+              "trump": "yellow",
+              "ledColor": "black"
+            }
+          ],
+          "careerEvent": {
+            "matchId": "3dad9583-bc4c-4014-a48d-ab66e66ebf4e",
+            "hand": 1,
+            "players": [
+              {
+                "id": "solo-ra8lm8m",
+                "name": "SOL",
+                "isBot": true,
+                "team": 0,
+                "avatar": "hw08"
+              },
+              {
+                "id": "bot-1791984972952-stxw",
+                "name": "Moss",
+                "isBot": true,
+                "team": 1,
+                "avatar": "moss"
+              },
+              {
+                "id": "bot-1791984972957-a2ty",
+                "name": "Ivy",
+                "isBot": true,
+                "team": 0,
+                "avatar": "ivy"
+              },
+              {
+                "id": "bot-1791984972957-xs8q",
+                "name": "Emberlyn",
+                "isBot": true,
+                "team": 1,
+                "avatar": "emberlyn"
+              }
+            ],
+            "stats": [
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 175,
+                "tricksWon": 2,
+                "trickPtsSum": 175,
+                "rookCaptures": 1,
+                "red2Captures": 0,
+                "bigTricks": 2,
+                "nestWins": 0,
+                "nestPts": 0,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 25,
+                "tricksWon": 0,
+                "trickPtsSum": 25,
+                "rookCaptures": 0,
+                "red2Captures": 0,
+                "bigTricks": 0,
+                "nestWins": 0,
+                "nestPts": 0,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 1,
+                "highBid": 115,
+                "bidSum": 115,
+                "bidsMade": 1,
+                "bidsSet": 0,
+                "points": 175,
+                "tricksWon": 5,
+                "trickPtsSum": 175,
+                "rookCaptures": 0,
+                "red2Captures": 1,
+                "bigTricks": 0,
+                "nestWins": 1,
+                "nestPts": 0,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 25,
+                "tricksWon": 3,
+                "trickPtsSum": 25,
+                "rookCaptures": 0,
+                "red2Captures": 0,
+                "bigTricks": 0,
+                "nestWins": 0,
+                "nestPts": 0,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              }
+            ],
+            "extras": [
+              {
+                "bestTrickPoints": 30
+              },
+              {},
+              {
+                "bestTrickPoints": 20
+              },
+              {
+                "bestTrickPoints": 15
+              }
+            ],
+            "bidder": 2,
+            "tricksPerHand": 10,
+            "completed": false,
+            "winnerTeam": null,
+            "summary": {
+              "pointsA": 175,
+              "pointsB": 25,
+              "bid": 115,
+              "made": true,
+              "trump": "yellow",
+              "scores": [
+                175,
+                25
+              ]
+            }
+          }
+        },
+        "engine": {
+          "requested": "x1",
+          "active": "x1",
+          "reason": "",
+          "ready": true,
+          "initializationError": "",
+          "lastDecision": {
+            "phase": "play",
+            "engine": "x1",
+            "hand": 39,
+            "seat": 3,
+            "epa": false
+          },
+          "epa": false,
+          "partnerSeat": null,
+          "hand": 40,
+          "pending": false
+        },
+        "decisions": [
+          {
+            "hand": 8,
+            "seat": 2,
+            "ms": 330.29999999701977,
+            "seed": "14568997475850043044",
+            "card": 23,
+            "search": [
+              128,
+              10,
+              23,
+              125.546875,
+              125.546875,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 9,
+            "seat": 3,
+            "ms": 56.099999994039536,
+            "seed": "12652745431408342299",
+            "card": 26,
+            "search": [
+              128,
+              2,
+              26,
+              24.5703125,
+              24.5703125,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 10,
+            "seat": 0,
+            "ms": 62.5,
+            "seed": "13373461553810822566",
+            "card": 21,
+            "search": [
+              128,
+              3,
+              21,
+              -48.1640625,
+              -48.1640625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 11,
+            "seat": 1,
+            "ms": 0.09999999403953552,
+            "seed": "8158518773150353984",
+            "card": 24,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 12,
+            "seat": 3,
+            "ms": 152.1000000089407,
+            "seed": "4730985405687913892",
+            "card": 43,
+            "search": [
+              128,
+              9,
+              11,
+              51.2109375,
+              64.6484375,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 13,
+            "seat": 0,
+            "ms": 48.29999999701977,
+            "seed": "16867422000651808375",
+            "card": 37,
+            "search": [
+              128,
+              3,
+              37,
+              -15.5078125,
+              -15.5078125,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 14,
+            "seat": 1,
+            "ms": 38.1000000089407,
+            "seed": "8295266441295982229",
+            "card": 32,
+            "search": [
+              128,
+              2,
+              32,
+              24.8046875,
+              24.8046875,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 15,
+            "seat": 2,
+            "ms": 38.5,
+            "seed": "14496102739451889288",
+            "card": 36,
+            "search": [
+              128,
+              2,
+              36,
+              88.125,
+              88.125,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 16,
+            "seat": 3,
+            "ms": 111.90000000596046,
+            "seed": "12690825753027265977",
+            "card": 11,
+            "search": [
+              128,
+              8,
+              11,
+              28.3984375,
+              28.3984375,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 17,
+            "seat": 0,
+            "ms": 23.200000002980232,
+            "seed": "16382627232079846361",
+            "card": 13,
+            "search": [
+              128,
+              2,
+              13,
+              -18.046875,
+              -18.046875,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 18,
+            "seat": 1,
+            "ms": 28.100000008940697,
+            "seed": "5382866208856225599",
+            "card": 14,
+            "search": [
+              128,
+              3,
+              14,
+              24.2578125,
+              24.2578125,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 19,
+            "seat": 2,
+            "ms": 0.09999999403953552,
+            "seed": "11590923962931934625",
+            "card": 41,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 20,
+            "seat": 2,
+            "ms": 49.5,
+            "seed": "12718074364312263934",
+            "card": 27,
+            "search": [
+              128,
+              7,
+              27,
+              108.3984375,
+              108.3984375,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 21,
+            "seat": 3,
+            "ms": 0,
+            "seed": "5335296864029071560",
+            "card": 28,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 22,
+            "seat": 0,
+            "ms": 21.299999997019768,
+            "seed": "7224569080231917044",
+            "card": 22,
+            "search": [
+              128,
+              2,
+              22,
+              28.515625,
+              28.515625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 23,
+            "seat": 1,
+            "ms": 48.20000000298023,
+            "seed": "10365719123633382700",
+            "card": 15,
+            "search": [
+              128,
+              7,
+              15,
+              47.5390625,
+              47.5390625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 24,
+            "seat": 3,
+            "ms": 39.19999998807907,
+            "seed": "9657118388231625573",
+            "card": 9,
+            "search": [
+              128,
+              6,
+              2,
+              -126.953125,
+              -116.640625,
+              7396,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 25,
+            "seat": 0,
+            "ms": 18.200000002980232,
+            "seed": "1122008045142682692",
+            "card": 40,
+            "search": [
+              128,
+              2,
+              40,
+              60.8984375,
+              60.8984375,
+              7451,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 26,
+            "seat": 1,
+            "ms": 30.200000002980232,
+            "seed": "12005975925123158338",
+            "card": 3,
+            "search": [
+              128,
+              4,
+              3,
+              -9.296875,
+              -9.296875,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 27,
+            "seat": 2,
+            "ms": 31.400000005960464,
+            "seed": "17046456058901810826",
+            "card": 30,
+            "search": [
+              128,
+              6,
+              30,
+              111.171875,
+              111.171875,
+              8208,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 28,
+            "seat": 0,
+            "ms": 31.200000002980232,
+            "seed": "13227576228515281769",
+            "card": 38,
+            "search": [
+              128,
+              5,
+              38,
+              84.921875,
+              84.921875,
+              6077,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 29,
+            "seat": 1,
+            "ms": 0,
+            "seed": "3377583276255089543",
+            "card": 39,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 30,
+            "seat": 2,
+            "ms": 25.400000005960464,
+            "seed": "11546990070279144933",
+            "card": 20,
+            "search": [
+              128,
+              5,
+              20,
+              110.703125,
+              110.703125,
+              8151,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 31,
+            "seat": 3,
+            "ms": 26.200000002980232,
+            "seed": "10083480160489274608",
+            "card": 2,
+            "search": [
+              128,
+              5,
+              2,
+              -142.734375,
+              -142.734375,
+              5395,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 32,
+            "seat": 2,
+            "ms": 27.5,
+            "seed": "7400542582842039256",
+            "card": 25,
+            "search": [
+              128,
+              4,
+              25,
+              105.625,
+              105.625,
+              7519,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 33,
+            "seat": 3,
+            "ms": 21.200000002980232,
+            "seed": "1873136247637403968",
+            "card": 12,
+            "search": [
+              128,
+              4,
+              12,
+              -141.953125,
+              -141.953125,
+              5756,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 34,
+            "seat": 0,
+            "ms": 0,
+            "seed": "4156410197614882690",
+            "card": 45,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 35,
+            "seat": 1,
+            "ms": 18.900000005960464,
+            "seed": "12774499741901559881",
+            "card": 4,
+            "search": [
+              128,
+              4,
+              4,
+              -138.046875,
+              -138.046875,
+              4749,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 36,
+            "seat": 0,
+            "ms": 28.600000008940697,
+            "seed": "5491545347448236649",
+            "card": 35,
+            "search": [
+              256,
+              3,
+              19,
+              143.515625,
+              150,
+              8941,
+              16896,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 37,
+            "seat": 1,
+            "ms": 27.599999994039536,
+            "seed": "12127316919599704605",
+            "card": 17,
+            "search": [
+              256,
+              3,
+              17,
+              -141.23046875,
+              -141.23046875,
+              9271,
+              16896,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 38,
+            "seat": 2,
+            "ms": 27.900000005960464,
+            "seed": "11349323252555243556",
+            "card": 29,
+            "search": [
+              256,
+              3,
+              29,
+              150,
+              150,
+              16896,
+              16896,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 39,
+            "seat": 3,
+            "ms": 25.700000002980232,
+            "seed": "5430852419942975859",
+            "card": 18,
+            "search": [
+              256,
+              3,
+              18,
+              -146.6015625,
+              -146.6015625,
+              9787,
+              16896,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          }
+        ],
+        "fallbacks": []
+      }
+    ],
+    "errors": [],
+    "missing": [],
+    "mode": "Native diagnostic bot play; saved career untouched; actual screenshots taken during progression"
+  },
+  "one": {
+    "hands": [
+      {
+        "hand": 1,
+        "pace": 1,
+        "elapsedMs": 151538,
+        "history": 1,
+        "scores": [
+          110,
+          -115
+        ],
+        "summary": {
+          "pointsA": 110,
+          "pointsB": 90,
+          "bid": 115,
+          "bidderTeam": 1,
+          "made": false,
+          "trump": "black",
+          "scores": [
+            110,
+            -115
+          ],
+          "scoreDeltaA": 110,
+          "scoreDeltaB": -115,
+          "shotTheMoon": false,
+          "shotMoonResult": null,
+          "nestWinnerName": "Wager",
+          "nestPts": 5,
+          "nestCards": [
+            {
+              "color": "green",
+              "rank": 8,
+              "id": "green-8"
+            },
+            {
+              "color": "green",
+              "rank": 6,
+              "id": "green-6"
+            },
+            {
+              "color": "green",
+              "rank": 5,
+              "id": "green-5"
+            },
+            {
+              "color": "red",
+              "rank": 8,
+              "id": "red-8"
+            },
+            {
+              "color": "red",
+              "rank": 7,
+              "id": "red-7"
+            },
+            {
+              "color": "red",
+              "rank": 6,
+              "id": "red-6"
+            }
+          ],
+          "claimRevealHands": null,
+          "claimer": null,
+          "claimerName": null,
+          "claimReason": null,
+          "lastTricks": [
+            {
+              "winner": 2,
+              "plays": [
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 8,
+                    "id": "yellow-8"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "red",
+                    "rank": 11,
+                    "id": "red-11"
+                  }
+                },
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "green",
+                    "rank": 7,
+                    "id": "green-7"
+                  }
+                },
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "green",
+                    "rank": 14,
+                    "id": "green-14"
+                  }
+                }
+              ],
+              "trump": "black",
+              "ledColor": "yellow"
+            },
+            {
+              "winner": 2,
+              "plays": [
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 13,
+                    "id": "yellow-13"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 11,
+                    "id": "yellow-11"
+                  }
+                },
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "red",
+                    "rank": 13,
+                    "id": "red-13"
+                  }
+                },
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "red",
+                    "rank": 1,
+                    "id": "red-1"
+                  }
+                }
+              ],
+              "trump": "black",
+              "ledColor": "yellow"
+            },
+            {
+              "winner": 2,
+              "plays": [
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "green",
+                    "rank": 12,
+                    "id": "green-12"
+                  }
+                },
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "green",
+                    "rank": 1,
+                    "id": "green-1"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "green",
+                    "rank": 11,
+                    "id": "green-11"
+                  }
+                },
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "green",
+                    "rank": 10,
+                    "id": "green-10"
+                  }
+                }
+              ],
+              "trump": "black",
+              "ledColor": "green"
+            }
+          ],
+          "careerEvent": {
+            "matchId": "dd56cfe7-7dbc-4716-bd07-ca8c4dbbeacc",
+            "hand": 1,
+            "players": [
+              {
+                "id": "solo-9f5ccn0",
+                "name": "SOL",
+                "isBot": true,
+                "team": 0,
+                "avatar": "hw21"
+              },
+              {
+                "id": "bot-1791985062744-olcp",
+                "name": "Brandy",
+                "isBot": true,
+                "team": 1,
+                "avatar": "brandy"
+              },
+              {
+                "id": "bot-1791985062746-ee8z",
+                "name": "Wager",
+                "isBot": true,
+                "team": 0,
+                "avatar": "wager"
+              },
+              {
+                "id": "bot-1791985062747-2xet",
+                "name": "Titan",
+                "isBot": true,
+                "team": 1,
+                "avatar": "titan"
+              }
+            ],
+            "stats": [
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 110,
+                "tricksWon": 2,
+                "trickPtsSum": 105,
+                "rookCaptures": 1,
+                "red2Captures": 0,
+                "bigTricks": 1,
+                "nestWins": 0,
+                "nestPts": 5,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 1,
+                "highBid": 115,
+                "bidSum": 115,
+                "bidsMade": 0,
+                "bidsSet": 1,
+                "points": 90,
+                "tricksWon": 4,
+                "trickPtsSum": 90,
+                "rookCaptures": 0,
+                "red2Captures": 0,
+                "bigTricks": 1,
+                "nestWins": 0,
+                "nestPts": 0,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 110,
+                "tricksWon": 3,
+                "trickPtsSum": 105,
+                "rookCaptures": 0,
+                "red2Captures": 0,
+                "bigTricks": 0,
+                "nestWins": 1,
+                "nestPts": 5,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 90,
+                "tricksWon": 1,
+                "trickPtsSum": 90,
+                "rookCaptures": 0,
+                "red2Captures": 1,
+                "bigTricks": 0,
+                "nestWins": 0,
+                "nestPts": 0,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              }
+            ],
+            "extras": [
+              {
+                "bestTrickPoints": 35
+              },
+              {
+                "bestTrickPoints": 30
+              },
+              {
+                "bestTrickPoints": 25
+              },
+              {
+                "bestTrickPoints": 20
+              }
+            ],
+            "bidder": 1,
+            "tricksPerHand": 10,
+            "completed": false,
+            "winnerTeam": null,
+            "summary": {
+              "pointsA": 110,
+              "pointsB": 90,
+              "bid": 115,
+              "made": false,
+              "trump": "black",
+              "scores": [
+                110,
+                -115
+              ]
+            }
+          }
+        },
+        "engine": {
+          "requested": "x1",
+          "active": "x1",
+          "reason": "",
+          "ready": true,
+          "initializationError": "",
+          "lastDecision": {
+            "phase": "play",
+            "engine": "x1",
+            "hand": 47,
+            "seat": 1,
+            "epa": false
+          },
+          "epa": false,
+          "partnerSeat": null,
+          "hand": 48,
+          "pending": false
+        },
+        "decisions": [
+          {
+            "hand": 8,
+            "seat": 1,
+            "ms": 198.09999999403954,
+            "seed": "10896384289898499120",
+            "card": 31,
+            "search": [
+              128,
+              10,
+              31,
+              -29.7265625,
+              -29.7265625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 9,
+            "seat": 2,
+            "ms": 46.3999999910593,
+            "seed": "12644133485895832963",
+            "card": 35,
+            "search": [
+              128,
+              2,
+              34,
+              16.7578125,
+              37.1484375,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 10,
+            "seat": 3,
+            "ms": 43.3999999910593,
+            "seed": "264352491343477924",
+            "card": 38,
+            "search": [
+              128,
+              2,
+              38,
+              -139.0234375,
+              -139.0234375,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 11,
+            "seat": 0,
+            "ms": 73.6000000089407,
+            "seed": "31143170226250835",
+            "card": 39,
+            "search": [
+              128,
+              4,
+              39,
+              233.5546875,
+              233.5546875,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 12,
+            "seat": 0,
+            "ms": 154.70000000298023,
+            "seed": "2180972952848633398",
+            "card": 25,
+            "search": [
+              128,
+              9,
+              25,
+              241.015625,
+              241.015625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 13,
+            "seat": 1,
+            "ms": 0.09999999403953552,
+            "seed": "13908988001163941816",
+            "card": 42,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 14,
+            "seat": 2,
+            "ms": 82.20000000298023,
+            "seed": "7210345286366303714",
+            "card": 21,
+            "search": [
+              128,
+              4,
+              21,
+              38.8671875,
+              38.8671875,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 15,
+            "seat": 3,
+            "ms": 56,
+            "seed": "11032140383803392824",
+            "card": 20,
+            "search": [
+              128,
+              4,
+              20,
+              -135.703125,
+              -135.703125,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 16,
+            "seat": 1,
+            "ms": 110.29999999701977,
+            "seed": "2766382793468624140",
+            "card": 33,
+            "search": [
+              128,
+              8,
+              33,
+              -75.15625,
+              -75.15625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 17,
+            "seat": 2,
+            "ms": 0.09999999403953552,
+            "seed": "6219754112566732557",
+            "card": 34,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 18,
+            "seat": 3,
+            "ms": 0,
+            "seed": "14093524539491238188",
+            "card": 44,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 19,
+            "seat": 0,
+            "ms": 32.20000000298023,
+            "seed": "10386818867586156412",
+            "card": 36,
+            "search": [
+              128,
+              3,
+              45,
+              177.578125,
+              192.3828125,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 20,
+            "seat": 3,
+            "ms": 74,
+            "seed": "17042611606675055223",
+            "card": 24,
+            "search": [
+              128,
+              7,
+              24,
+              -166.6015625,
+              -166.6015625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 21,
+            "seat": 0,
+            "ms": 0.09999999403953552,
+            "seed": "6174136794396738955",
+            "card": 29,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 22,
+            "seat": 1,
+            "ms": 90.70000000298023,
+            "seed": "9055764046255970651",
+            "card": 43,
+            "search": [
+              128,
+              7,
+              37,
+              -7.1484375,
+              6.171875,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 23,
+            "seat": 2,
+            "ms": 38.70000000298023,
+            "seed": "1926291153120803605",
+            "card": 22,
+            "search": [
+              128,
+              3,
+              22,
+              11.0546875,
+              11.0546875,
+              8252,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 24,
+            "seat": 1,
+            "ms": 50,
+            "seed": "11148243384839013014",
+            "card": 37,
+            "search": [
+              128,
+              6,
+              15,
+              6.0546875,
+              50.078125,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 25,
+            "seat": 2,
+            "ms": 37,
+            "seed": "1201575050835560952",
+            "card": 17,
+            "search": [
+              128,
+              6,
+              23,
+              31.953125,
+              44.921875,
+              8314,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 26,
+            "seat": 3,
+            "ms": 36.20000000298023,
+            "seed": "9002683583081171515",
+            "card": 27,
+            "search": [
+              128,
+              6,
+              4,
+              -11.0546875,
+              2.0703125,
+              7580,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 27,
+            "seat": 0,
+            "ms": 28,
+            "seed": "9658526228343963051",
+            "card": 32,
+            "search": [
+              128,
+              2,
+              45,
+              28.046875,
+              94.8828125,
+              7542,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 28,
+            "seat": 1,
+            "ms": 30.399999991059303,
+            "seed": "11084641565509283798",
+            "card": 30,
+            "search": [
+              128,
+              5,
+              15,
+              -68.75,
+              2.2265625,
+              7727,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 29,
+            "seat": 2,
+            "ms": 41.70000000298023,
+            "seed": "6236055601677599644",
+            "card": 19,
+            "search": [
+              128,
+              5,
+              23,
+              92.96875,
+              139.3359375,
+              8221,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 30,
+            "seat": 3,
+            "ms": 35.900000005960464,
+            "seed": "9599944936548866099",
+            "card": 4,
+            "search": [
+              128,
+              5,
+              4,
+              -15.9375,
+              -15.9375,
+              7989,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 31,
+            "seat": 0,
+            "ms": 0,
+            "seed": "3116968447223700206",
+            "card": 45,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 32,
+            "seat": 0,
+            "ms": 19.400000005960464,
+            "seed": "3647196134863305692",
+            "card": 10,
+            "search": [
+              128,
+              4,
+              18,
+              44.6484375,
+              51.796875,
+              7944,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 33,
+            "seat": 1,
+            "ms": 13.300000011920929,
+            "seed": "1534171514546790281",
+            "card": 15,
+            "search": [
+              128,
+              2,
+              15,
+              -40.15625,
+              -40.15625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 34,
+            "seat": 2,
+            "ms": 34.19999998807907,
+            "seed": "8071461088117679725",
+            "card": 8,
+            "search": [
+              128,
+              4,
+              23,
+              200.078125,
+              206.40625,
+              8451,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 35,
+            "seat": 3,
+            "ms": 15.700000002980232,
+            "seed": "5988753130320981258",
+            "card": 14,
+            "search": [
+              128,
+              2,
+              14,
+              -99.5703125,
+              -99.5703125,
+              6750,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 36,
+            "seat": 1,
+            "ms": 27.400000005960464,
+            "seed": "14927117479962059035",
+            "card": 7,
+            "search": [
+              256,
+              3,
+              7,
+              8.984375,
+              8.984375,
+              13529,
+              16896,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 37,
+            "seat": 2,
+            "ms": 0,
+            "seed": "14703979424468568342",
+            "card": 40,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 38,
+            "seat": 3,
+            "ms": 0.09999999403953552,
+            "seed": "11098483758205258831",
+            "card": 6,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 39,
+            "seat": 0,
+            "ms": 19.899999991059303,
+            "seed": "6079135868539200441",
+            "card": 5,
+            "search": [
+              256,
+              2,
+              5,
+              146.26953125,
+              146.26953125,
+              12421,
+              16896,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 40,
+            "seat": 2,
+            "ms": 18.5,
+            "seed": "10033538077617549509",
+            "card": 28,
+            "search": [
+              256,
+              2,
+              28,
+              225,
+              225,
+              16233,
+              16896,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 41,
+            "seat": 3,
+            "ms": 0,
+            "seed": "8496043131581208763",
+            "card": 26,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 42,
+            "seat": 0,
+            "ms": 18.100000008940697,
+            "seed": "440590906245398947",
+            "card": 18,
+            "search": [
+              256,
+              2,
+              2,
+              158.8671875,
+              159.90234375,
+              14001,
+              16896,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 43,
+            "seat": 1,
+            "ms": 17,
+            "seed": "1001401670038314508",
+            "card": 41,
+            "search": [
+              256,
+              2,
+              9,
+              -225,
+              -220.01953125,
+              6984,
+              16896,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 44,
+            "seat": 2,
+            "ms": 0,
+            "seed": "17422928539503353145",
+            "card": 23,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 45,
+            "seat": 3,
+            "ms": 0,
+            "seed": "17175053309668818790",
+            "card": 16,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 46,
+            "seat": 0,
+            "ms": 0,
+            "seed": "9836984678545559320",
+            "card": 2,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 47,
+            "seat": 1,
+            "ms": 0,
+            "seed": "1689330219933505548",
+            "card": 9,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          }
+        ],
+        "fallbacks": []
+      }
+    ],
+    "errors": [],
+    "missing": [],
+    "mode": "Native diagnostic bot play; saved career untouched; actual screenshots taken during progression"
+  },
+  "three": {
+    "hands": [
+      {
+        "hand": 1,
+        "pace": 3,
+        "elapsedMs": 35869,
+        "history": 1,
+        "scores": [
+          200,
+          0
+        ],
+        "summary": {
+          "pointsA": 200,
+          "pointsB": 0,
+          "bid": 115,
+          "bidderTeam": 0,
+          "made": true,
+          "trump": "black",
+          "scores": [
+            200,
+            0
+          ],
+          "scoreDeltaA": 200,
+          "scoreDeltaB": 0,
+          "shotTheMoon": false,
+          "shotMoonResult": null,
+          "nestWinnerName": "SOL",
+          "nestPts": 15,
+          "nestCards": [
+            {
+              "color": "red",
+              "rank": 12,
+              "id": "red-12"
+            },
+            {
+              "color": "red",
+              "rank": 9,
+              "id": "red-9"
+            },
+            {
+              "color": "red",
+              "rank": 8,
+              "id": "red-8"
+            },
+            {
+              "color": "red",
+              "rank": 5,
+              "id": "red-5"
+            },
+            {
+              "color": "yellow",
+              "rank": 10,
+              "id": "yellow-10"
+            },
+            {
+              "color": "yellow",
+              "rank": 8,
+              "id": "yellow-8"
+            }
+          ],
+          "claimRevealHands": [
+            {
+              "player": 0,
+              "name": "SOL",
+              "team": 0,
+              "cards": [
+                {
+                  "color": "rook",
+                  "rank": 99,
+                  "id": "rook"
+                },
+                {
+                  "color": "red",
+                  "rank": 2,
+                  "id": "red-2"
+                },
+                {
+                  "color": "black",
+                  "rank": 1,
+                  "id": "black-1"
+                },
+                {
+                  "color": "black",
+                  "rank": 14,
+                  "id": "black-14"
+                }
+              ]
+            },
+            {
+              "player": 1,
+              "name": "Flint",
+              "team": 1,
+              "cards": [
+                {
+                  "color": "red",
+                  "rank": 11,
+                  "id": "red-11"
+                },
+                {
+                  "color": "red",
+                  "rank": 10,
+                  "id": "red-10"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 11,
+                  "id": "yellow-11"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 9,
+                  "id": "yellow-9"
+                }
+              ]
+            },
+            {
+              "player": 2,
+              "name": "Hollow",
+              "team": 0,
+              "cards": [
+                {
+                  "color": "green",
+                  "rank": 12,
+                  "id": "green-12"
+                },
+                {
+                  "color": "green",
+                  "rank": 7,
+                  "id": "green-7"
+                },
+                {
+                  "color": "green",
+                  "rank": 6,
+                  "id": "green-6"
+                },
+                {
+                  "color": "red",
+                  "rank": 13,
+                  "id": "red-13"
+                }
+              ]
+            },
+            {
+              "player": 3,
+              "name": "Cobalt",
+              "team": 1,
+              "cards": [
+                {
+                  "color": "green",
+                  "rank": 8,
+                  "id": "green-8"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 12,
+                  "id": "yellow-12"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 7,
+                  "id": "yellow-7"
+                },
+                {
+                  "color": "yellow",
+                  "rank": 5,
+                  "id": "yellow-5"
+                }
+              ]
+            }
+          ],
+          "claimer": 0,
+          "claimerName": "SOL",
+          "claimReason": null,
+          "lastTricks": [
+            {
+              "winner": 0,
+              "plays": [
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "green",
+                    "rank": 10,
+                    "id": "green-10"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "green",
+                    "rank": 13,
+                    "id": "green-13"
+                  }
+                },
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "black",
+                    "rank": 10,
+                    "id": "black-10"
+                  }
+                },
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "green",
+                    "rank": 11,
+                    "id": "green-11"
+                  }
+                }
+              ],
+              "trump": "black",
+              "ledColor": "green"
+            },
+            {
+              "winner": 2,
+              "plays": [
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 13,
+                    "id": "yellow-13"
+                  }
+                },
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 14,
+                    "id": "yellow-14"
+                  }
+                },
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 1,
+                    "id": "yellow-1"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "yellow",
+                    "rank": 6,
+                    "id": "yellow-6"
+                  }
+                }
+              ],
+              "trump": "black",
+              "ledColor": "yellow"
+            },
+            {
+              "winner": 0,
+              "plays": [
+                {
+                  "player": 0,
+                  "card": {
+                    "color": "red",
+                    "rank": 1,
+                    "id": "red-1"
+                  }
+                },
+                {
+                  "player": 1,
+                  "card": {
+                    "color": "red",
+                    "rank": 7,
+                    "id": "red-7"
+                  }
+                },
+                {
+                  "player": 2,
+                  "card": {
+                    "color": "red",
+                    "rank": 6,
+                    "id": "red-6"
+                  }
+                },
+                {
+                  "player": 3,
+                  "card": {
+                    "color": "red",
+                    "rank": 14,
+                    "id": "red-14"
+                  }
+                }
+              ],
+              "trump": "black",
+              "ledColor": "red"
+            }
+          ],
+          "careerEvent": {
+            "matchId": "eb397628-c228-4a6a-a5e9-830de51c5100",
+            "hand": 1,
+            "players": [
+              {
+                "id": "solo-kzmrng6",
+                "name": "SOL",
+                "isBot": true,
+                "team": 0,
+                "avatar": "hm19"
+              },
+              {
+                "id": "bot-1791985065492-gvgc",
+                "name": "Flint",
+                "isBot": true,
+                "team": 1,
+                "avatar": "flint"
+              },
+              {
+                "id": "bot-1791985065494-gocf",
+                "name": "Hollow",
+                "isBot": true,
+                "team": 0,
+                "avatar": "hollow"
+              },
+              {
+                "id": "bot-1791985065495-r96r",
+                "name": "Cobalt",
+                "isBot": true,
+                "team": 1,
+                "avatar": "cobalt"
+              }
+            ],
+            "stats": [
+              {
+                "hands": 1,
+                "bidsWon": 1,
+                "highBid": 115,
+                "bidSum": 115,
+                "bidsMade": 1,
+                "bidsSet": 0,
+                "points": 200,
+                "tricksWon": 8,
+                "trickPtsSum": 185,
+                "rookCaptures": 1,
+                "red2Captures": 1,
+                "bigTricks": 0,
+                "nestWins": 1,
+                "nestPts": 15,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 0,
+                "tricksWon": 0,
+                "trickPtsSum": 0,
+                "rookCaptures": 0,
+                "red2Captures": 0,
+                "bigTricks": 0,
+                "nestWins": 0,
+                "nestPts": 0,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 200,
+                "tricksWon": 2,
+                "trickPtsSum": 185,
+                "rookCaptures": 0,
+                "red2Captures": 0,
+                "bigTricks": 0,
+                "nestWins": 0,
+                "nestPts": 15,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              },
+              {
+                "hands": 1,
+                "bidsWon": 0,
+                "highBid": 0,
+                "bidSum": 0,
+                "bidsMade": 0,
+                "bidsSet": 0,
+                "points": 0,
+                "tricksWon": 0,
+                "trickPtsSum": 0,
+                "rookCaptures": 0,
+                "red2Captures": 0,
+                "bigTricks": 0,
+                "nestWins": 0,
+                "nestPts": 0,
+                "moonAttempts": 0,
+                "moonMade": 0,
+                "bags": 0,
+                "gamesPlayed": 0,
+                "gamesWon": 0
+              }
+            ],
+            "extras": [
+              {
+                "bestTrickPoints": 25
+              },
+              {},
+              {
+                "bestTrickPoints": 25
+              },
+              {}
+            ],
+            "bidder": 0,
+            "tricksPerHand": 10,
+            "completed": false,
+            "winnerTeam": null,
+            "summary": {
+              "pointsA": 200,
+              "pointsB": 0,
+              "bid": 115,
+              "made": true,
+              "trump": "black",
+              "scores": [
+                200,
+                0
+              ]
+            }
+          }
+        },
+        "engine": {
+          "requested": "x1",
+          "active": "x1",
+          "reason": "",
+          "ready": true,
+          "initializationError": "",
+          "lastDecision": {
+            "phase": "play",
+            "engine": "x1",
+            "hand": 31,
+            "seat": 1,
+            "epa": false
+          },
+          "epa": false,
+          "partnerSeat": null,
+          "hand": 32,
+          "pending": false
+        },
+        "decisions": [
+          {
+            "hand": 8,
+            "seat": 0,
+            "ms": 258.8999999910593,
+            "seed": "5060200327543964284",
+            "card": 31,
+            "search": [
+              128,
+              10,
+              31,
+              177.34375,
+              177.34375,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 9,
+            "seat": 1,
+            "ms": 0.20000000298023224,
+            "seed": "6596188062611443548",
+            "card": 34,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 10,
+            "seat": 2,
+            "ms": 68.1000000089407,
+            "seed": "6230344700892300236",
+            "card": 38,
+            "search": [
+              128,
+              2,
+              33,
+              -127.5,
+              -107.1875,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 11,
+            "seat": 3,
+            "ms": 56.30000001192093,
+            "seed": "9704724043574511662",
+            "card": 36,
+            "search": [
+              128,
+              2,
+              36,
+              1.71875,
+              1.71875,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 12,
+            "seat": 2,
+            "ms": 192.79999999701977,
+            "seed": "10648235167733159780",
+            "card": 9,
+            "search": [
+              128,
+              9,
+              1,
+              -171.3671875,
+              -153.90625,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 13,
+            "seat": 3,
+            "ms": 85.79999999701977,
+            "seed": "4527985555840561385",
+            "card": 0,
+            "search": [
+              128,
+              3,
+              3,
+              11.71875,
+              15.5078125,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 14,
+            "seat": 0,
+            "ms": 165.79999999701977,
+            "seed": "11080256073754707499",
+            "card": 32,
+            "search": [
+              128,
+              9,
+              28,
+              179.296875,
+              184.21875,
+              8704,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 15,
+            "seat": 1,
+            "ms": 69,
+            "seed": "6219479018594215650",
+            "card": 4,
+            "search": [
+              128,
+              3,
+              4,
+              -41.7578125,
+              -41.7578125,
+              7608,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 16,
+            "seat": 0,
+            "ms": 166.90000000596046,
+            "seed": "15852497234969846167",
+            "card": 37,
+            "search": [
+              128,
+              8,
+              37,
+              186.171875,
+              186.171875,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 17,
+            "seat": 1,
+            "ms": 75.70000000298023,
+            "seed": "4004819435060049044",
+            "card": 40,
+            "search": [
+              128,
+              8,
+              12,
+              -65,
+              -54.1015625,
+              7621,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 18,
+            "seat": 2,
+            "ms": 0,
+            "seed": "16446451375168041862",
+            "card": 33,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 19,
+            "seat": 3,
+            "ms": 0.10000000894069672,
+            "seed": "8447498019978213857",
+            "card": 30,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 20,
+            "seat": 0,
+            "ms": 70.59999999403954,
+            "seed": "7076393739263769472",
+            "card": 41,
+            "search": [
+              128,
+              7,
+              41,
+              184.921875,
+              184.921875,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 21,
+            "seat": 1,
+            "ms": 32.70000000298023,
+            "seed": "2182211089748041011",
+            "card": 12,
+            "search": [
+              128,
+              3,
+              12,
+              -69.6875,
+              -69.6875,
+              7536,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 22,
+            "seat": 2,
+            "ms": 20.80000001192093,
+            "seed": "12500164295865215509",
+            "card": 11,
+            "search": [
+              128,
+              2,
+              11,
+              -33.2421875,
+              -33.2421875,
+              7161,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 23,
+            "seat": 3,
+            "ms": 0.09999999403953552,
+            "seed": "15938571460581221147",
+            "card": 19,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 24,
+            "seat": 0,
+            "ms": 49.1000000089407,
+            "seed": "1387586933915277872",
+            "card": 28,
+            "search": [
+              128,
+              6,
+              28,
+              185.15625,
+              185.15625,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 25,
+            "seat": 1,
+            "ms": 35.5,
+            "seed": "12970470176290789140",
+            "card": 29,
+            "search": [
+              128,
+              3,
+              24,
+              -79.5703125,
+              -61.953125,
+              7480,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 26,
+            "seat": 2,
+            "ms": 0,
+            "seed": "6691217287626623187",
+            "card": 42,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 27,
+            "seat": 3,
+            "ms": 27.299999997019768,
+            "seed": "15918993821524153505",
+            "card": 21,
+            "search": [
+              128,
+              4,
+              21,
+              -186.328125,
+              -186.328125,
+              6444,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 28,
+            "seat": 2,
+            "ms": 28,
+            "seed": "5194274428375248379",
+            "card": 5,
+            "search": [
+              128,
+              5,
+              1,
+              50.78125,
+              75.625,
+              6880,
+              8704,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 29,
+            "seat": 3,
+            "ms": 26.5,
+            "seed": "16847210148764518208",
+            "card": 8,
+            "search": [
+              128,
+              2,
+              8,
+              -177.65625,
+              -177.65625,
+              6498,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 30,
+            "seat": 0,
+            "ms": 28.100000008940697,
+            "seed": "3332251222944316928",
+            "card": 35,
+            "search": [
+              128,
+              5,
+              35,
+              200,
+              200,
+              8704,
+              8704,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          },
+          {
+            "hand": 31,
+            "seat": 1,
+            "ms": 0,
+            "seed": "7195227084507342327",
+            "card": 6,
+            "search": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "epa": false
+          }
+        ],
+        "fallbacks": []
+      }
+    ],
+    "errors": [],
+    "missing": [],
+    "mode": "Native diagnostic bot play; saved career untouched; actual screenshots taken during progression"
+  },
+  "geometryLog": "join 320 {\n  rect: {\n    x: 27,\n    y: 213.640625,\n    width: 266,\n    height: 178.5625,\n    top: 213.640625,\n    right: 293,\n    bottom: 392.203125,\n    left: 27\n  },\n  scroll: 179\n}\nbuttons 320 [\n  {\n    id: 'btnToggleTopOpts',\n    text: '\u2630',\n    rect: {\n      x: 261.953125,\n      y: 369.25,\n      width: 44,\n      height: 44,\n      top: 369.25,\n      right: 305.953125,\n      bottom: 413.25,\n      left: 261.953125\n    },\n    display: 'flex'\n  },\n  {\n    id: 'leaveReplaceBtn',\n    text: '\u2190',\n    rect: {\n      x: 261.953125,\n      y: 413.25,\n      width: 44,\n      height: 44,\n      top: 413.25,\n      right: 305.953125,\n      bottom: 457.25,\n      left: 261.953125\n    },\n    display: 'flex'\n  }\n]\njoin 393 {\n  rect: {\n    x: 27,\n    y: 300.640625,\n    width: 339,\n    height: 178.5625,\n    top: 300.640625,\n    right: 366,\n    bottom: 479.203125,\n    left: 27\n  },\n  scroll: 179\n}\nbuttons 393 [\n  {\n    id: 'btnToggleTopOpts',\n    text: '\u2630',\n    rect: {\n      x: 329.703125,\n      y: 463.53125,\n      width: 44,\n      height: 44,\n      top: 463.53125,\n      right: 373.703125,\n      bottom: 507.53125,\n      left: 329.703125\n    },\n    display: 'flex'\n  },\n  {\n    id: 'leaveReplaceBtn',\n    text: '\u2190',\n    rect: {\n      x: 329.703125,\n      y: 507.53125,\n      width: 44,\n      height: 44,\n      top: 507.53125,\n      right: 373.703125,\n      bottom: 551.53125,\n      left: 329.703125\n    },\n    display: 'flex'\n  }\n]\njoin 600 {\n  rect: {\n    x: 83,\n    y: 393.640625,\n    width: 434,\n    height: 178.5625,\n    top: 393.640625,\n    right: 517,\n    bottom: 572.203125,\n    left: 83\n  },\n  scroll: 179\n}\nbuttons 600 [\n  {\n    id: 'btnToggleTopOpts',\n    text: '\u2630',\n    rect: {\n      x: 544,\n      y: 600.8125,\n      width: 44,\n      height: 44,\n      top: 600.8125,\n      right: 588,\n      bottom: 644.8125,\n      left: 544\n    },\n    display: 'flex'\n  },\n  {\n    id: 'leaveReplaceBtn',\n    text: '\u2190',\n    rect: {\n      x: 544,\n      y: 644.8125,\n      width: 44,\n      height: 44,\n      top: 644.8125,\n      right: 588,\n      bottom: 688.8125,\n      left: 544\n    },\n    display: 'flex'\n  }\n]\njoin 800 {\n  rect: {\n    x: 183,\n    y: 523.640625,\n    width: 434,\n    height: 178.5625,\n    top: 523.640625,\n    right: 617,\n    bottom: 702.203125,\n    left: 183\n  },\n  scroll: 179\n}\nbuttons 800 [\n  {\n    id: 'btnToggleTopOpts',\n    text: '\u2630',\n    rect: {\n      x: 744,\n      y: 814,\n      width: 44,\n      height: 44,\n      top: 814,\n      right: 788,\n      bottom: 858,\n      left: 744\n    },\n    display: 'flex'\n  },\n  {\n    id: 'leaveReplaceBtn',\n    text: '\u2190',\n    rect: {\n      x: 744,\n      y: 858,\n      width: 44,\n      height: 44,\n      top: 858,\n      right: 788,\n      bottom: 902,\n      left: 744\n    },\n    display: 'flex'\n  }\n]\njoin 1024 {\n  rect: {\n    x: 581.203125,\n    y: 375.640625,\n    width: 394.078125,\n    height: 178.5625,\n    top: 375.640625,\n    right: 975.28125,\n    bottom: 554.203125,\n    left: 581.203125\n  },\n  scroll: 179\n}\nbuttons 1024 [\n  {\n    id: 'btnToggleTopOpts',\n    text: '\u2630',\n    rect: {\n      x: 968,\n      y: 400,\n      width: 44,\n      height: 44,\n      top: 400,\n      right: 1012,\n      bottom: 444,\n      left: 968\n    },\n    display: 'block'\n  },\n  {\n    id: 'leaveReplaceBtn',\n    text: '\u2190',\n    rect: {\n      x: 965.609375,\n      y: 448,\n      width: 44,\n      height: 44,\n      top: 448,\n      right: 1009.609375,\n      bottom: 492,\n      left: 965.609375\n    },\n    display: 'flex'\n  }\n]\njoin 800 {\n  rect: {\n    x: 458,\n    y: 145.25,\n    width: 300,\n    height: 178.5625,\n    top: 145.25,\n    right: 758,\n    bottom: 323.8125,\n    left: 458\n  },\n  scroll: 179\n}\nbuttons 800 [\n  {\n    id: 'btnToggleTopOpts',\n    text: '\u2630',\n    rect: {\n      x: 744,\n      y: 164,\n      width: 44,\n      height: 44,\n      top: 164,\n      right: 788,\n      bottom: 208,\n      left: 744\n    },\n    display: 'block'\n  },\n  {\n    id: 'leaveReplaceBtn',\n    text: '\u2190',\n    rect: {\n      x: 741.609375,\n      y: 212,\n      width: 44,\n      height: 44,\n      top: 212,\n      right: 785.609375,\n      bottom: 256,\n      left: 741.609375\n    },\n    display: 'flex'\n  }\n]\n",
+  "changes": [
+    {
+      "path": "manifest.json",
+      "sha256": "7453a094785c88267a81a3658ced6d979209d7dc4a27c268f41dbc2187d22f41"
+    },
+    {
+      "path": "index.html",
+      "sha256": "5b4a9f7e7ea8db5d21cb3c65225aeadb49505d934a07e9a92702cc2d14f09212"
+    },
+    {
+      "path": "polish.js",
+      "sha256": "9cb2c722d3833711f1304cc31066a261206da4e3673439f121ee16d4bf14ced8"
+    },
+    {
+      "path": "landing783.css",
+      "sha256": "5a62f5b8224024d88aba197c886429e4ca2b8db293a97a75c41507c395ba4789"
+    },
+    {
+      "path": "game060.js",
+      "sha256": "4a441f365bc8c1d9d4a4f72d99d2143c4e0959e14f21c70636c3684c03e6ef84"
+    },
+    {
+      "path": "responsive-review.css",
+      "sha256": "b9ffd2a660fb5f2891a72b3924abce41920e0ade12ebb315cc6957b0e90dfe82"
+    },
+    {
+      "path": "human-bid-voices801.js",
+      "sha256": "caced91612ff492174ad995c45c539a3ff2ccc1a468fca9d36b96756b5a2b0f3"
+    },
+    {
+      "path": "hor-version.js",
+      "sha256": "b509a6e616e32a25ee311e7c63fedb4084ea4065893bf6c0a0b29e073f9d57c8"
+    },
+    {
+      "path": "sw060.js",
+      "sha256": "2edd7aa65e3fe3fc40a7d9696c782c9299e3c0534460ac76fe71872175fa0356"
+    },
+    {
+      "path": "x1/bidding.js",
+      "sha256": "c2b56d03a1505de5e2f508b05d6c2872ee0bee46ac77712b80ec11fe1adffb0b"
+    },
+    {
+      "path": "x1/worker.js",
+      "sha256": "725934cfdb1ce9c19c4b29cfae148878923b9555d760ccb3acef84af242806ae"
+    },
+    {
+      "path": "x1/integration.js",
+      "sha256": "80a6677e4779d53222f87d89f25aaa303708ce25314ca1e818e66aa2d49bca97"
+    }
+  ]
+}

@@ -829,7 +829,7 @@
     },
     bidding: {
       title: 'The auction is on',
-      html: '<p>Someone is bidding. Bid any amount divisible by five above the current bid or pass. You may raise by 5, 10, 15, 20, 25 or more. The +5 and −5 buttons are shortcuts; tap the amount to enter an exact bid. Three passes and the high bidder buys the nest.</p><p>Counters that score: 5s, 10s, 14s, 1s (15), the Bird (20), Red 2 (20 when it is in).</p>'
+      html: '<p>Someone is bidding. Bid any amount divisible by five above the current bid or pass. You may raise by 5, 10, 15, 20, 25 or more. Tap or hold +5 and −5 to choose the amount, then confirm your bid. Three passes and the high bidder buys the nest.</p><p>Counters that score: 5s, 10s, 14s, 1s (15), the Bird (20), Red 2 (20 when it is in).</p>'
     },
     myBid: {
       title: 'Your bid',

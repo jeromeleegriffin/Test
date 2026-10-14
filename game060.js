@@ -3089,7 +3089,7 @@ function applyWaitingShareMode() {
   if (hint) {
     hint.textContent = qrOk
       ? 'Same website + this table code. Keep this tab open.'
-      : 'QR will not work here — it would send a phone-only link the other person cannot open. Guest: Join with a code → type the 4 letters → Sit down.';
+      : 'QR will not work here — it would send a phone-only link the other person cannot open. Guest: Join with a code → type the 4 letters → Take Your Seat.';
   }
 }
 
@@ -6048,7 +6048,7 @@ function showVariantRules() {
   const line = (title,text) => '<p><b>'+title+'</b> '+text+'</p>';
   body.innerHTML = [
     line('Teams & winning.', 'Four players, partners opposite. Reach '+goal+' points to win. A team at or below −'+goal+' loses; a team reaching the positive target takes precedence. If both reach a target in the same hand, the higher score wins; equal scores tie.'),
-    line('Deal & bidding.', 'Each player receives '+handSize+' cards, with '+nestSizeDefault+' in the nest. Minimum bid: '+minBid+'. Bid any amount divisible by five above the current bid, or pass. You may raise by 5, 10, 15, 20, 25 or more. The +5 and −5 buttons are shortcuts; tap the bid amount to enter an exact number. The highest bidder takes the nest, discards back to '+handSize+' cards, and chooses trump.'),
+    line('Deal & bidding.', 'Each player receives '+handSize+' cards, with '+nestSizeDefault+' in the nest. Minimum bid: '+minBid+'. Bid any amount divisible by five above the current bid, or pass. You may raise by 5, 10, 15, 20, 25 or more. Tap or hold +5 and −5 to choose the amount, then confirm your bid. The highest bidder takes the nest, discards back to '+handSize+' cards, and chooses trump.'),
     line('First lead.', ({bidder:'The bid winner',leftOfBidder:'The player to the left of the bid winner',rightOfBidder:'The player to the right of the bid winner'}[leadOrder]||'The bid winner')+' leads the first trick. Each trick winner leads next.'),
     line('Following color.', 'Follow the led color when you can. '+(specialsAnytime?'The included special cards may be played at any time.':'Included special cards follow the same legal-play rules as the other cards.')+' '+(mustTrumpWhenVoid?'If you cannot follow color, you must play trump when you have one.':'If you cannot follow color, you may play another legal card.')),
     line('Winning tricks.', 'The highest trump wins a trick containing trump; otherwise the highest card of the led color wins. '+(includeOnes?(onesHigh?'1 is highest in its color.':'1 is low in its color.'):'1s are not included.')+' '+(includeRook?('The Bird is '+(rookLowest?'lowest':'above ordinary')+' trump.'):'The Bird is not included.')),
@@ -6908,7 +6908,7 @@ function showBidUI() {
       <div class="bid-meta" aria-hidden="true"></div>
       <div class="bid-stepper">
         <button type="button" class="btn" id="bidMinus" aria-label="Lower bid">−5</button>
-        <span id="bidValue" contenteditable="plaintext-only" inputmode="numeric" role="textbox" aria-label="Bid amount, multiples of five" title="Tap to enter any bid divisible by five" class="bid-value${isShootMoonBid(suggested) ? ' is-moon' : ''}">${suggested}</span>
+        <span id="bidValue" aria-live="polite" aria-label="Selected bid" class="bid-value${isShootMoonBid(suggested) ? ' is-moon' : ''}">${suggested}</span>
         <button type="button" class="btn" id="bidPlus" aria-label="Raise bid">+5</button>
       </div>
       <div class="bid-buttons">
@@ -6928,9 +6928,9 @@ function showBidUI() {
   {
     const valEl = $('bidValue');
     const confBtn = $('bidConfirm');
-    const sync = (editing=false) => {
+    const sync = () => {
       if (valEl) {
-        if(!editing) valEl.textContent = String(suggested);
+        valEl.textContent = String(suggested);
         valEl.classList.toggle('is-moon', isShootMoonBid(suggested));
       }
       if (confBtn) {
@@ -6949,7 +6949,6 @@ function showBidUI() {
       try { syncLandscapeBidBar(); } catch (e) {}
     };
     if (confBtn) confBtn.disabled = !Number.isSafeInteger(suggested) || suggested % 5 !== 0 || suggested < nextMin || suggested > ceiling;
-    if(valEl){valEl.onfocus=()=>{const range=document.createRange();range.selectNodeContents(valEl);const selection=getSelection();selection.removeAllRanges();selection.addRange(range);};valEl.oninput=()=>{const raw=valEl.textContent.trim();suggested=/^\d+$/.test(raw)?Number(raw):NaN;sync(true);};valEl.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();if(!confBtn.disabled)confBtn.click();}};}
     const minus = $('bidMinus');
     const plus = $('bidPlus');
     const conf = $('bidConfirm');
@@ -13466,7 +13465,7 @@ setInterval(horDiagBotNavigate,900);
       roomCode = r;
       setLobbyJoining(true);
       const status = $('lobbyStatus');
-      if (status) status.textContent = 'Table ' + r + ' — enter your name and tap Sit down.';
+      if (status) status.textContent = 'Table ' + r + ' — enter your name and tap Take Your Seat.';
       try {
         const sess = loadSession();
         if (sess && sess.myName) {
@@ -14861,6 +14860,21 @@ function playDealCardSound(delayMs = 0) {
   }, Math.max(0, Number(delayMs) || 0));
 }
 function positionRailControls035(controls) {
+  // Tablet room scaling creates a containing block for fixed descendants.
+  // Keep the existing buttons/handlers in viewport space on larger viewports.
+  if (!controls._railHome035) controls._railHome035 = controls.parentNode;
+  const viewportNavigation = innerWidth >= 521;
+  const home = viewportNavigation ? document.body : controls._railHome035;
+  if (controls.parentNode !== home) home.appendChild(controls);
+  if (viewportNavigation) {
+    controls.style.setProperty('left','auto','important');
+    controls.style.setProperty('right','max(12px, env(safe-area-inset-right))','important');
+    controls.style.setProperty('top','auto','important');
+    controls.style.setProperty('bottom','max(104px, 18dvh, env(safe-area-inset-bottom))','important');
+    controls.style.setProperty('transform','none','important');
+    controls.style.setProperty('translate','none','important');
+    return;
+  }
   if (!isPortraitViewport()) {
     ['left','top','right','bottom','transform','translate'].forEach(k=>controls.style.removeProperty(k));return;
   }

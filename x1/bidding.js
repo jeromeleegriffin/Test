@@ -44,7 +44,7 @@ function validate(v){
 function rngFor(v){let x=2166136261;for(const c of JSON.stringify([v.h,v.seat,v.dealer,v.high,v.bidder,v.history,v.scores,v.passed,v.limit,v.target,v.revealed,v.moon]))x=Math.imul(x^c.charCodeAt(0),16777619)>>>0;return n=>{x=(x+0x6D2B79F5)>>>0;let t=x;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)%n;};}
 function auction(hands,v,raise,shifts){
  const active=v.passed.map(x=>!x),hist=v.history.filter(x=>x[1]>0).map(x=>x.slice());let high=v.high,bidder=v.bidder;
- if(raise){high+=5;bidder=v.seat;hist.push([v.seat,high]);if(v.moon&&high===200)return {bidder,bid:high};}else active[v.seat]=false;
+ if(raise){high=typeof raise==='number'?raise:high+5;bidder=v.seat;hist.push([v.seat,high]);if(v.moon&&high===200)return {bidder,bid:high};}else active[v.seat]=false;
  for(let cur=(v.seat+1)%4,guard=0;guard<160;guard++,cur=(cur+1)%4){
   if(bidder>=0&&active.filter(Boolean).length<=1)return {bidder,bid:high};
   if(!active[cur])continue;
@@ -58,6 +58,31 @@ function utility(points,a,v){const delta=points.slice();if(points[a.bidder%2]<a.
  // Match result dominates a one-hand margin; otherwise use score difference.
  if(terminal)return s[team]===s[1-team]?0:s[team]>s[1-team]?400:-400;
  return Math.max(-399,Math.min(399,s[team]-s[1-team]));
+}
+// Compare modest legal jumps with the minimum raise on the same sampled deals.
+// Opponent cards are sampled from unseen cards, never read from the live game.
+function decideJump(v){
+ validate(v);
+ const cap=C.ceiling(v.h,{seat:v.seat,high:v.high,history:v.history,scores:v.scores}),ask=v.high+5;
+ if(cap<ask||ask>v.limit)return {bid:0,cap,reason:'original ceiling',samples:0};
+ if(v.bidder<0||v.bidder%2===v.seat%2)return {bid:ask,cap,reason:'minimum raise',samples:0};
+ const candidates=[ask,...[10,15,20,25].map(n=>v.high+n).filter(n=>n<=Math.min(cap-10,v.limit,195))];
+ if(candidates.length===1)return {bid:ask,cap,reason:'minimum raise; insufficient jump reserve',samples:0};
+ const rng=rngFor(v),unknown=ALL.filter(c=>!v.h.includes(c)&&c!==v.revealed),maxima=Array(4).fill(0),rows=[];
+ for(const [seat,bid]of v.history)maxima[seat]=Math.max(maxima[seat],bid);
+ for(let i=0;i<128;i++){
+  const cards=unknown.slice();for(let j=cards.length-1;j>0;j--){const k=rng(j+1);[cards[j],cards[k]]=[cards[k],cards[j]];}
+  const n=v.revealed===null?6:5,nest=cards.slice(0,n);if(v.revealed!==null)nest.unshift(v.revealed);
+  const hs=[];let offset=n;for(let seat=0;seat<4;seat++){hs[seat]=seat===v.seat?v.h.slice():cards.slice(offset,offset+10);if(seat!==v.seat)offset+=10;}
+  const shifts=Array.from({length:4},(_,seat)=>seat===v.seat?0:[-20,0,20][rng(3)]);let w=1;
+  for(let seat=0;seat<4;seat++)if(seat!==v.seat&&maxima[seat]){const c=C.ceiling(hs[seat],{seat,high:maxima[seat]-5,history:[],scores:v.scores})+shifts[seat];w*=Math.max(.02,1/(1+Math.exp(Math.max(-40,Math.min(40,(maxima[seat]-c)/10)))));}
+  const cache={},values=candidates.map(bid=>{const a=auction(hs,v,bid,shifts),pts=cache[a.bidder]||(cache[a.bidder]=contract(hs,nest,a.bidder));return utility(pts,a,v);});
+  rows.push({w,values});
+ }
+ const sw=rows.reduce((n,r)=>n+r.w,0),neff=sw*sw/rows.reduce((n,r)=>n+r.w*r.w,0);
+ const evaluations=candidates.map((bid,j)=>{const gain=rows.reduce((n,r)=>n+r.w*(r.values[j]-r.values[0]),0)/sw,variance=rows.reduce((n,r)=>n+r.w*(r.values[j]-r.values[0]-gain)**2,0)/sw,se=Math.sqrt(variance/Math.max(1,neff-1));return {bid,gain,se};});
+ let best=evaluations[0];for(const e of evaluations.slice(1))if(e.gain>2+.5*e.se&&e.gain-.5*e.se>best.gain-.5*best.se)best=e;
+ return {bid:best.bid,cap,reason:best.bid===ask?'minimum raise preferred':'evaluated pressure jump',samples:128,evaluations,effectiveSamples:neff};
 }
 function decide(v){validate(v);const cap=C.ceiling(v.h,{seat:v.seat,high:v.high,history:v.history,scores:v.scores}),ask=v.high+5;
  const baseline=cap>=ask&&ask<=v.limit;if(v.bidder!==(v.seat+2)%4||!baseline)return {bid:baseline?ask:0,cap,reason:'original ceiling',samples:0};
@@ -73,5 +98,5 @@ function decide(v){validate(v);const cap=C.ceiling(v.h,{seat:v.seat,high:v.high,
  // paired uncertainty margin, without an unconditional 75% success veto.
  const take=gain>2+.5*se;return {bid:take?ask:0,cap,reason:take?'team-value takeover':'support partner',samples:256,gain,se,effectiveSamples:neff,pMake:avg(r=>r.made?1:0),pControl:avg(r=>r.own?1:0)};
 }
-const api={decide,contract,move,validate};if(typeof module!=='undefined')module.exports=api;root.X1Bidding=api;
+const api={decide,decideJump,contract,move,validate};if(typeof module!=='undefined')module.exports=api;root.X1Bidding=api;
 })(globalThis);

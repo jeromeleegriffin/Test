@@ -37,3 +37,14 @@
 #landingPanel783 #soloPracticeBtn{height:44px!important;min-height:44px!important;font:700 21px Georgia,serif!important;letter-spacing:0!important}
 #landingPanel783 .identity-voice button,#landingPanel783 .identity-avatar small:last-child{font-family:Georgia,serif!important;font-weight:600!important}
 @media(orientation:landscape){#landingScene783{width:55vw;right:auto;overflow:hidden;background-position:center top}#landingScene783 svg{width:max(55vw,48.6923dvh);height:max(112.9543vw,100dvh);left:50%;top:0}#landingPartner783{top:14%}}
+
+/* Join has exactly one primary seat action. Offline entry stays on the home view. */
+#lobby.joining #soloPracticeBtn{display:none!important}
+#landingPanel783{border:2px solid #b99a51;box-shadow:inset 0 0 0 3px #10251d,inset 0 0 0 4px #776333,0 8px 24px #0009;background:radial-gradient(ellipse at 50% 0,#23473555,transparent 65%),repeating-linear-gradient(35deg,#10271e 0px,#10271e 1px,#10291f 2px,#10291f 3px);}
+#lobby #landingPanel783 #joinForm #joinConfirmBtn{flex:1 1 100%!important;width:100%!important;grid-column:1/-1;border:2px solid #eed28a;border-radius:10px;background:linear-gradient(115deg,#bc892a,#f6da85 48%,#b38029)!important;box-shadow:inset 0 2px 2px #fff0b8,inset 0 -3px 4px #69430d66,0 3px 6px #0006;color:#19190d!important;font:700 21px Georgia!important;min-height:44px;}
+#landingPanel783 #joinConfirmBtn:active{transform:translateY(1px)}
+#landingPanel783 #hor-room-code{border:1px solid #cfb365;box-shadow:inset 0 2px 5px #0008;background:#081316;color:#f4e6bf;}
+#lobby #landingPanel783 #landingGreeting783 strong{font:600 clamp(22px,5.8vw,31px)/1.15 Georgia,serif!important;color:#f4df9d;text-shadow:0 2px 2px #000}
+#lobby #landingPanel783 #joinForm{gap:10px;background:transparent}
+#lobby #landingPanel783 #joinForm #spectateBtn{display:none!important}
+#lobby #landingPanel783 #joinForm #joinCancelBtn{flex:1 1 100%;min-height:36px!important;padding:5px!important;font:600 16px Georgia!important;background:linear-gradient(#183049,#0b192a)!important}
