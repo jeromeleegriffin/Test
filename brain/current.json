@@ -227,5 +227,27 @@
   },
   "historicalApprovedWorkingBuildStatus": "783 is retained as earlier approved rollback; it is not the latest delivered build",
   "historicalCandidateStatusBeforeAC": "OWNER_PHONE_APPROVED_NOT_DEPLOYED",
-  "latestOwnerPhoneReviewScope": "Historical build 794 acceptance; no final owner Android acceptance of 805 has been recorded."
+  "latestOwnerPhoneReviewScope": "Historical build 794 acceptance; no final owner Android acceptance of 805 has been recorded.",
+  "pendingHolderTurnCorrection": {
+    "status": "IMPLEMENTED_LOCALLY_NOT_PACKAGED_OR_DEPLOYED",
+    "baseBuild": "805",
+    "date": "2026-10-14",
+    "ownerRequest": "Keep the your-turn flash on the straight front strip; both curved end caps stay at normal brightness.",
+    "source": "../coordination/pending/holder-turn-straight-strip/holder-cues789.css",
+    "record": "../coordination/pending/holder-turn-straight-strip/README.md",
+    "verification": "../coordination/pending/holder-turn-straight-strip/verification.json",
+    "baseCssSha256": "d16a78630d5b9e781f008cacb016c1f475282f5d66d956544a351bdb70acd8d3",
+    "pendingCssSha256": "f3ec35567999dde3f32998c0db39c6ae3548e74950d9897fc56bfcf75e2ce0a4",
+    "ownerPhoneVerified": false,
+    "newZipAuthorized": false
+  },
+  "latestOwnerPhoneFeedback": {
+    "build": "805",
+    "date": "2026-10-14",
+    "status": "CORRECTION_REQUESTED_NOT_OVERALL_ACCEPTANCE",
+    "reference": "1791958247860.jpeg",
+    "issue": "Your-turn flash reaches both curved holder corners.",
+    "approvedChange": "Keep the your-turn flash on the straight front strip; both curved end caps stay at normal brightness.",
+    "record": "../coordination/pending/holder-turn-straight-strip/README.md"
+  }
 }
