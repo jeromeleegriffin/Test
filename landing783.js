@@ -60,7 +60,7 @@ function saveName(explicit=false){window.HORFounderProfile785?.syncName();const 
 function restoreView(){lobby.classList.toggle('landing-returning',returning);greeting.firstChild===edit||greeting.querySelector('strong')?.remove();const t=document.createElement('strong');t.textContent='Welcome back, '+input.value.trim();greeting.prepend(t)}
 input.addEventListener('change',()=>{saveName(true);chooseRoster()});
 for(const id of ['soloPracticeBtn','friendsToggleBtn','joinConfirmBtn','spectateBtn'])document.getElementById(id)?.addEventListener('click',()=>{saveName();menu.hidden=true;returning=!!input.value.trim()},true);
-input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();solo.click()}});
+input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();(lobby.classList.contains('joining')?document.getElementById('joinConfirmBtn'):solo).click()}});
 window.HORLanding783={refreshIdentity:()=>{const editing=!lobby.classList.contains('landing-returning');returning=!!input.value.trim();restoreView();if(editing)lobby.classList.remove('landing-returning');chooseRoster()},rosterForStart:()=>roster.slice(),inspect:()=>({roster:roster.map(p=>({name:p.name,avatar:p.avatar,style:p.style})),returning}),refresh:chooseRoster};
 lobby.classList.add('landing783');restoreView();chooseRoster();
 // Returning from a game shows saved identity and a new eligible random table.
