@@ -1,0 +1,17 @@
+{
+  "runtime": "805-headercompact",
+  "commit": "f4d16b73369d487ff3df9127f7d9228a38aee898",
+  "rollbackCommit": "b236dab2ac954fa57ac4d06c3bf2ef067d855a41",
+  "pagesRunId": 38564515983,
+  "pagesConclusion": "success",
+  "changedServedFiles": 7,
+  "allChangedServedBytesMatch": true,
+  "bidHeader": "Bid progress at top with original match totals directly beneath; speed buttons32px high; Match Score menu access retained",
+  "localChecks": "Four compact header fixtures passed: scores beneath progress, large/negative totals contained,32px speeds, handlers and menu access. Prior headerbid menu/nativeX1 hand tests retained, not rerun for DOM/CSS-only change; Android pending.",
+  "cloudflareWorker": "Not changed or verified; shared scoped integration handoff provided. Public403 and automatic review rejected broader account enumeration. Its native room transport must be preserved.",
+  "ownerToolsAuthorization": "No live founder authentication; layout retained in isolated localhost dev Owner Tools, never name/avatar-gated",
+  "nativeAndroidAcceptance": false,
+  "productionTouched": false,
+  "newZip": false,
+  "standingWorkflow": "TEST_SITE_WORKFLOW.md"
+}
