@@ -1,7 +1,7 @@
-// Griffin House of Rooks — 805-headerbid runtime marker, no gameplay ownership.
-window.HOR_LIVE_VERSION = '805-headerbid';
-window.HOR_BUILD = '805-headerbid';
-window.GHR_BUILD = "Rook805-headerbid · Tablet scoreboard spacing and top Join by Code; prior repairs retained";
+// Griffin House of Rooks — 805-headercompact runtime marker, no gameplay ownership.
+window.HOR_LIVE_VERSION = '805-headercompact';
+window.HOR_BUILD = '805-headercompact';
+window.GHR_BUILD = "Rook805-headercompact · Bid progress above match totals; smaller speed buttons; prior repairs retained";
 window.HORRuntimeTruth = async function () {
   const controller = navigator.serviceWorker && navigator.serviceWorker.controller;
   const worker = controller ? await new Promise(resolve => {
@@ -12,7 +12,7 @@ window.HORRuntimeTruth = async function () {
   }) : null;
   return {page:window.HOR_PAGE_BUILD, script:window.HOR_SCRIPT_BUILD,
     marker:window.HOR_BUILD, worker, controller:controller && controller.scriptURL,
-    coherent:window.HOR_PAGE_BUILD === '805-headerbid' && window.HOR_SCRIPT_BUILD === '805-headerbid' &&
-      window.HOR_BUILD === '805-headerbid' && !!worker && worker.build === '805-headerbid' &&
-      worker.cache === 'house-of-rooks-805-headerbid'};
+    coherent:window.HOR_PAGE_BUILD === '805-headercompact' && window.HOR_SCRIPT_BUILD === '805-headercompact' &&
+      window.HOR_BUILD === '805-headercompact' && !!worker && worker.build === '805-headercompact' &&
+      worker.cache === 'house-of-rooks-805-headercompact'};
 };

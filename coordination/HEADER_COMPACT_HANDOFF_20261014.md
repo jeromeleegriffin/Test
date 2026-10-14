@@ -1,0 +1,11 @@
+# Compact bid header refinement — 2026-10-14
+
+Latest owner correction: match scores may sit underneath the top bid-progress display; shrink the speed buttons. This supersedes menu-only placement for running totals. Match Score menu access remains supplementary. Baseline BrainAC refreshed, latest deployed805-headerbid d99baa3ba669cac8e800d4ccd61803f94f96fd07, metadata b236dab2ac954fa57ac4d06c3bf2ef067d855a41. Preserve original header-repairs, earlier checkpoints, artwork, gameplay, player data and both permanent complete-bank/chat-continuity rules; H–AC reads reused unchanged. Standing TEST_SITE_WORKFLOW permits this scoped Test update; no production/new ZIP/new official number.
+
+Existing scoreTeamNameA/B and scoreA/B spans moved into a small second line beneath authoritative bidProgress in the permanent header. No duplicate score model or updater. Wrapping keeps four-digit/negative totals inside narrow phones. Speed1x/3x/MAX and LAST buttons reduced40to32px high with narrower widths; handlers and speed engine unchanged. Original bid-navigation protections and menu access preserved. No table/card/bid geometry or art changes. Public Layout remains removed; isolated dev Owner Tools retained, no name/avatar-based privilege.
+
+Four320/393/667/800 phone/tablet/landscape fixtures verify totals below progress, four-digit and negative-score containment,32px speed buttons, exact speed handlers, progress/Bid made, supplementary Match Score, no public Layout and phase label. Screenshots inspected. Prior full menu/navigation and native offline MAX/X1 hand tests remain applicable because this delta changes DOM placement/CSS only; not repeated without reason. Native Android acceptance pending. New runtime805-headercompact. Exact hashes and served-byte checks in receipt.
+
+Cloudflare copy unchanged/unverified; port this presentation into its own room client via shared coordination, not wholesale replacement. Existing public403/private account-list automatic-review block preserved. No automatic other-chat notification. See HEADER_COMPACT_HANDOFF_20261014.md and TABLET_SCORE_JOIN_HANDOFF_20261014.md for prior scoped decisions and native transport limits.
+
+Rollback: forward runtime-only commit restoring baseline b236dab2ac954fa57ac4d06c3bf2ef067d855a41 files, preserving newer coordination and browser data.

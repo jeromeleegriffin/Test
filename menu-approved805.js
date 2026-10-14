@@ -10,7 +10,7 @@ function init(){
  const adapters=document.createElement('div');adapters.hidden=true;adapters.id='houseMenuAdapters';document.body.append(adapters);
  for(const id of ['showRules','replayTutorialBtn','installAppBtn'])if($(id))adapters.append($(id));
  const entry=document.createElement('div');entry.id='houseFriendsEntry805';const host=$('friendsToggleBtn');host.before(entry);entry.append(host,$('joinBtn'));$('joinBtn').textContent='Join by Code';
- $('scoreSpeed701').before($('bidProgress'));
+ const stack=document.createElement('div');stack.id='headerContractStack805';const totals=document.createElement('div');totals.id='headerMatchTotals805';totals.setAttribute('aria-label','Match score');$('scoreSpeed701').before(stack);stack.append($('bidProgress'),totals);totals.append(...document.querySelectorAll('.header-match-total')); 
  const layout=$('ghTopLayout693');if(layout){(dev()?$('btnSolDiagIdentify').parentElement:adapters).append(layout);}
  old.hidden=true;
  const make=(id,title)=>{const d=document.createElement('dialog');d.id=id;d.className='house-public-dialog';d.setAttribute('aria-label',title);d.innerHTML='<header class="visual-head805"><button type="button" class="house-back" aria-label="Back to previous menu">‹ Back</button><div><h2 tabindex="-1" autofocus></h2></div><button type="button" class="visual-close805" aria-label="Close">×</button></header><div class="house-content"></div>';d.querySelector('h2').textContent=title;if(id==='houseMenu805')d.querySelector('h2').hidden=true;document.body.append(d);return d};
