@@ -1,0 +1,6 @@
+# Stage4: playable hand spacing
+Continues stage2 playable runtime and stage3 isolated artwork studies. No artwork replacement, deployment or ZIP.
+Changed only angle-c-runtime.js and angle-c-runtime.css in local integration. Card gaps now scale with the scene and are included inside the 620-scene-unit hand width. Preserved original stage2 hand baseline Y675 and all gameplay handlers. The study's Y700/front-lip/avatar layers are not yet live.
+Executed integration-c-trick.cjs on actual offline engine at844x390/MAX: +/-5 taps, pass, bot discard/trump, human legal card taps, completed hand, score, Next Hand -> dealing. No JS errors. Resize check passed.
+The four-card geometry sample raced trick collection and produced zero-size rectangles. Do not count this run as fresh four-card visual verification; it verifies gameplay progression only. No repeated test needed for unchanged played-card geometry in this narrow spacing change.
+Restore stage2 angle-c-runtime.js/css to roll back. Other integration files unchanged. Current live scene still marked fixed-cast integration; stage3 actual-avatar composition is separate and unfinished. Next work: live identity layers/occlusion, then menu/leave touch sizing and remaining human bid/discard/trump tests.
