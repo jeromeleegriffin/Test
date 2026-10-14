@@ -163,7 +163,7 @@ function showCareerCard(profile){
  #horPublicCareerCard button{min-width:44px;min-height:38px;padding:5px 10px;border:1px solid #b88a31;border-radius:8px;background:#182019;color:#fff;font:inherit;touch-action:manipulation}
  #horPublicCareerCard button:disabled{opacity:.35}
  #horPublicCareerCard .career-head,#horPublicCareerCard .career-nav{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-shrink:0}
- #horPublicCareerCard .career-body{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:7px}
+ #horPublicCareerCard .career-body{flex:1;min-height:0;overflow:auto;display:flex;flex-direction:column;gap:7px}
  #horPublicCareerCard .career-points{padding:7px;border:1px solid #b88a3155;border-radius:7px}
  #horPublicCareerCard .career-points strong{color:#e7c66b;font-size:16px}
  #horPublicCareerCard .career-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
@@ -209,6 +209,7 @@ function showCareerCard(profile){
      const rows=[['Games Played',num(profile.gamesPlayed)],['Games Won',num(profile.gamesWon)+' ('+winpct+'%)']];
      const partner=best?esc(best.name)+' · '+num(best.wins)+' wins · '+Math.round(best.wins/best.games*100)+'%':'No verified partnership history yet';
      body='<div class="career-points"><strong>'+num(profile.points)+'</strong> Career Points · '+(profile.nextThreshold?num(Math.max(0,profile.nextThreshold-profile.points))+' to next level':'Maximum level')+'</div><div class="career-stats">'+rows.map(([k,v])=>'<div class="career-stat"><span>'+k+'</span><strong>'+v+'</strong></div>').join('')+'</div><div class="career-stat"><span>Best Bot Partner</span><strong>'+partner+'</strong></div><div class="career-stat"><span>Achievements Earned</span><strong>'+num(profile.achievementCount)+' / '+(families.length*5+feats.length)+(profile.retiredAchievementCount?' + '+num(profile.retiredAchievementCount)+' retired':'')+'</strong></div>';
+     if(profile.personaTitle||profile.personaHabit||profile.personaHow)body='<div class="career-stat career-persona"><span>Playing persona</span><strong>'+esc(profile.personaTitle||'House Player')+'</strong><div>'+esc(profile.personaHabit||'')+'</div><small>'+esc(profile.personaHow||'')+'</small></div>'+body;
    }else{
      const chunk=entries.slice((page-1)*perPage(),page*perPage());
      body=chunk.map(a=>{const pct=a.complete?100:(a.target?Math.min(100,Math.max(0,a.value/a.target*100)):0);return '<div class="career-ach"><div><b>'+esc(a.name)+'</b> · '+esc(a.earned)+'</div><small>'+esc(a.detail)+'</small><div class="career-meter"><i style="width:'+pct+'%"></i></div><small>'+(a.complete?'Completed':num(a.value)+' / '+num(a.target)+' · '+num(a.remaining)+' more needed')+'</small></div>';}).join('');

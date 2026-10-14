@@ -11322,7 +11322,7 @@ function showScoreModal(summary) {
         &lt;div&gt;&lt;b&gt;Trump:&lt;/b&gt; &lt;span class=&quot;ghsb-trump ghsb-trump-${trumpClass}&quot;&gt;${trumpName}&lt;/span&gt;&lt;/div&gt;
         &lt;div&gt;&lt;b&gt;Counters taken:&lt;/b&gt; ${escapeHtmlSafe(labelA)} ${summary.pointsA} · ${escapeHtmlSafe(labelB)} ${summary.pointsB} · total ${totalTaken} / ${deckTotal}&lt;/div&gt;
         &lt;div&gt;&lt;b&gt;Hands played:&lt;/b&gt; ${handHistory.length || 1}&lt;/div&gt;
-        &lt;div&gt;${escapeHtmlSafe(resultLine)}&lt;/div&gt;
+        &lt;div class=&quot;ghsb-result-line&quot;&gt;${escapeHtmlSafe(resultLine)}&lt;/div&gt;
         &lt;button type=&quot;button&quot; id=&quot;scoreDetailsRemaining805&quot; class=&quot;btn&quot;&gt;Show remaining cards&lt;/button&gt;
       &lt;/div&gt;&lt;/details&gt;
     &lt;/div&gt;`;

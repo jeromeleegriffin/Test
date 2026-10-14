@@ -19,7 +19,8 @@ function refresh(){
   button.dataset.position=position;button.classList.toggle('friends-empty',!p);button.classList.toggle('friends-person',!!p);
   if(!p){button.innerHTML=(off===2?'<span class="friends-seat-role804">Partner</span>':'')+'<span class="friends-seat-choice804">+ '+(isHost?'Choose bot':'Sit here')+'</span><small>Open for a friend</small>';button.setAttribute('aria-label',(off===2?'Partner':'Open')+' seat. '+(isHost?'Choose a bot':'Join this seat'));}
   else {button.innerHTML='<strong>'+escapeHtmlSafe(p.name)+horCareerBadgeHtml(p)+'</strong><small>'+(p.id===myPeerId?'You'+(p.isHost?' · Host':''):p.isBot?(isHost?'Bot · tap to remove':'Bot · tap to replace'):p.isHost?'Host':'Friend')+'</small>';button.setAttribute('aria-label',p.name+(p.isBot?(isHost?', remove bot':', replace bot'):', seated'));}
-  button.onclick=()=>onWaitSeatClick(seat);
+  button.onclick=e=>{if(p&&p.id===myPeerId){e.preventDefault();e.stopPropagation();horShowCareerForPlayer(p);}else onWaitSeatClick(seat);};
+  if(p&&p.id===myPeerId)button.setAttribute('aria-label',p.name+', view stat card');
   if(!off)continue;
   const spec=specs[off-1],body=svg.querySelector('[data-seat="'+spec.pose+'"]'),fg=svg.querySelector('[data-foreground="'+spec.pose+'"]'),avatar=p&&((typeof playerAvatars!=='undefined'&&playerAvatars[p.id])||p.avatar),c=studio.characters[avatar];
   body.style.display=p?'':'none';fg.style.display='none';if(!p){body.removeAttribute('href');continue;}
@@ -30,6 +31,7 @@ function refresh(){
   body.setAttribute('href',c?'assets/characters077/'+c.poses[spec.pose]:avatarSrc(avatar));
   if(c?.foreground?.[spec.pose]){fg.setAttribute('href','assets/characters077/'+c.foreground[spec.pose]);fg.style.display='';}
  }
+ horBindCareerBadges(root);
  document.getElementById('friendsHeading803').textContent=seatedCount()===4?'Your table is ready':'Waiting for friends';
  document.getElementById('friendsSeatHint803').textContent=seatedCount()===4?(isHost?'Ready when you are':'Waiting for the host to start'):isHost?'Tap an open seat to choose a bot':'Tap an open seat to sit down';
  document.getElementById('waitingStatus').textContent=seatedCount()+' of 4 seated';

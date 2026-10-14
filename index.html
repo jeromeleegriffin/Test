@@ -24,18 +24,18 @@ html,body{background-color:#0a180f}
     (function () {
       // Rook522: remember the build only. Service-worker activation owns updates.
       // Never redirect/reload here: competing page + SW reload paths caused loops.
-      var BUILD = '805-welcome';
+      var BUILD = '805-ownerreview';
       window.HOR_PAGE_BUILD = BUILD;
       try { localStorage.setItem('horBuild', BUILD); } catch (e) {}
     })();
   </script>
-<link href="manifest.json?v=805-welcome" rel="manifest"/>
-<link href="assets/images/house-of-rooks-192.png?v=805-welcome" rel="icon" type="image/png" sizes="192x192"/>
-<link href="assets/images/house-of-rooks-apple-touch.png?v=805-welcome" rel="apple-touch-icon" sizes="180x180"/>
-<script src="hor-version.js?v=805-welcome"></script>
+<link href="manifest.json?v=805-ownerreview" rel="manifest"/>
+<link href="assets/images/house-of-rooks-192.png?v=805-ownerreview" rel="icon" type="image/png" sizes="192x192"/>
+<link href="assets/images/house-of-rooks-apple-touch.png?v=805-ownerreview" rel="apple-touch-icon" sizes="180x180"/>
+<script src="hor-version.js?v=805-ownerreview"></script>
 <link href="style057.css?v=795" rel="stylesheet"/>
-<link href="tablet-scoreboard805.css?v=805-welcome" rel="stylesheet"/>
-<link href="header-bid805.css?v=805-welcome" rel="stylesheet"/>
+<link href="tablet-scoreboard805.css?v=805-ownerreview" rel="stylesheet"/>
+<link href="header-bid805.css?v=805-ownerreview" rel="stylesheet"/>
 <link href="rook510.css?v=732" rel="stylesheet"/>
 <link href="rook513.css?v=732" rel="stylesheet"/>
 <link href="kitty736.css?v=795" rel="stylesheet"/>
@@ -43,7 +43,7 @@ html,body{background-color:#0a180f}
 <link href="house738.css?v=738" rel="stylesheet"/>
 <link href="laid-down-refinement.css?v=795" rel="stylesheet"/>
 <link href="unified-bidding752.css?v=795" rel="stylesheet"/>
-<link href="holder-cues789.css?v=805-welcome" rel="stylesheet"/>
+<link href="holder-cues789.css?v=805-ownerreview" rel="stylesheet"/>
 <link href="bid-repair737.css?v=737" rel="stylesheet"/>
 <link href="trump-hand739.css?v=795" rel="stylesheet"/>
 <link href="rook518-trump.css?v=732" rel="stylesheet"/>
@@ -124,15 +124,16 @@ html,body{background-color:#0a180f}
 <link rel="stylesheet" href="signature-shuffle.css?v=795">
 <link rel="stylesheet" href="raven-fight741.css?v=795">
 <link rel="stylesheet" href="characters077.css?v=795">
-<link rel="stylesheet" href="responsive-review.css?v=805-welcome">
+<link rel="stylesheet" href="responsive-review.css?v=805-ownerreview">
 <link rel="stylesheet" href="holder-identity784.css?v=795">
 <script defer src="responsive-review.js?v=795"></script>
 <link rel="stylesheet" href="asset-loading772.css?v=795">
 <link rel="stylesheet" href="identity-choice.css?v=795"/>
-<link rel="stylesheet" href="landing783.css?v=805-welcome">
-<link rel="stylesheet" href="friends803.css?v=805-welcome"/>
-<link rel="stylesheet" href="room-approved805.css?v=805-welcome">
-<link rel="stylesheet" href="menu-approved805.css?v=805-welcome">
+<link rel="stylesheet" href="landing783.css?v=805-ownerreview">
+<link rel="stylesheet" href="friends803.css?v=805-ownerreview"/>
+<link rel="stylesheet" href="room-approved805.css?v=805-ownerreview">
+<link rel="stylesheet" href="menu-approved805.css?v=805-ownerreview">
+<link rel="stylesheet" href="owner-review805.css?v=805-ownerreview">
 </head>
 <body class="theme-classic cardback-griffin room-theme-midnight">
 <div id="matchHeader706" aria-label="Match score and game speed"><div class="scores" id="scoreRow">
@@ -1075,20 +1076,20 @@ html,body{background-color:#0a180f}
       paintInstall();
     })();
   </script>
-<link rel="stylesheet" href="audio-mixer.css?v=805-welcome">
-<script src="audio-mixer.js?v=805-welcome"></script>
+<link rel="stylesheet" href="audio-mixer.css?v=805-ownerreview">
+<script src="audio-mixer.js?v=805-ownerreview"></script>
 <script src="rules.js?v=rook044"></script>
-<script src="bots.js?v=805-welcome"></script>
+<script src="bots.js?v=805-ownerreview"></script>
 <script src="unified-bidding752.js?v=795"></script>
 <script src="holder-cues789.js?v=795"></script>
 <script src="trump-voices790.js?v=795"></script>
-<script src="trump-voice.js?v=805-welcome"></script>
+<script src="trump-voice.js?v=805-ownerreview"></script>
 <script src="human-avatars.js?v=795"></script>
 <script src="founder-dev.js?v=795"></script>
 <script src="holder-identity784.js?v=795"></script>
 <script src="bid-hold795.js?v=795"></script>
-<script src="game060.js?v=805-welcome"></script>
-<script src="human-bid-voices801.js?v=805-welcome"></script>
+<script src="game060.js?v=805-ownerreview"></script>
+<script src="human-bid-voices801.js?v=805-ownerreview"></script>
 <script src="asset-loading772.js?v=795"></script>
 <script src="character-library774.js?v=795"></script>
 <script src="characters077.js?v=795"></script>
@@ -1098,13 +1099,13 @@ html,body{background-color:#0a180f}
 <script src="rook510-avatars.js?v=732"></script>
 <script src="rook512-room.js?v=732"></script>
 <script src="rook513.js?v=732"></script>
-<script src="polish.js?v=805-welcome"></script>
+<script src="polish.js?v=805-ownerreview"></script>
 <script src="founder-profile785.js?v=795"></script>
 <script src="identity-choice.js?v=795"></script>
 <!-- Careers, levels and local-human award notifications remain enabled. -->
-<script src="career-core.js?v=805-welcome"></script>
-<script src="progression.js?v=805-welcome"></script>
-<script src="moon-howl.js?v=805-welcome"></script>
+<script src="career-core.js?v=805-ownerreview"></script>
+<script src="progression.js?v=805-ownerreview"></script>
+<script src="moon-howl.js?v=805-ownerreview"></script>
 <div id="horBootError"></div>
 <script>
     window.addEventListener('error', function (ev) {
@@ -1118,7 +1119,7 @@ html,body{background-color:#0a180f}
   </script>
 <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw060.js?v=805-welcome', { updateViaCache: 'none' })
+      navigator.serviceWorker.register('sw060.js?v=805-ownerreview', { updateViaCache: 'none' })
         .then(function (reg) { try { reg.update(); } catch (e) {} })
         .catch(() => {});
       // Rook522: do not reload on controllerchange. The new worker takes control
@@ -1133,25 +1134,25 @@ html,body{background-color:#0a180f}
 <script src="bid-repair737.js?v=737"></script>
 <script src="trump-hand739.js?v=795"></script>
 <script src="raven-timeline741.js?v=795"></script>
-<script src="raven-audio761.js?v=805-welcome"></script>
+<script src="raven-audio761.js?v=805-ownerreview"></script>
 <script src="raven-fight741.js?v=795"></script>
 <script src="approved-bid-portrait.js?v=732"></script>
 <script>
   // New installs start with a quiet hint of ambience; saved user settings win.
   try { if (localStorage.getItem('rookCabinVolume041') === null) localStorage.setItem('rookCabinVolume041', '6'); } catch (_) {}
 </script>
-<script src="cabin-ambience041.js?v=805-welcome"></script>
+<script src="cabin-ambience041.js?v=805-ownerreview"></script>
 <script src="fire-glow-controller060.js?v=064"></script>
 <script src="house736.js?v=736"></script>
 <script src="holder004.js?v=732"></script>
 
 <script src="trump714.js?v=795"></script>
-<script src="shuffle732.js?v=805-welcome"></script>
+<script src="shuffle732.js?v=805-ownerreview"></script>
 <script src="shuffle-asset.js?v=795"></script>
-<script src="signature-shuffle.js?v=805-welcome"></script>
-<script src="friends803.js?v=805-welcome"></script>
-<script src="landing783.js?v=805-welcome"></script>
-<script src="room-approved805.js?v=805-welcome"></script>
-<script src="menu-approved805.js?v=805-welcome"></script>
+<script src="signature-shuffle.js?v=805-ownerreview"></script>
+<script src="friends803.js?v=805-ownerreview"></script>
+<script src="landing783.js?v=805-ownerreview"></script>
+<script src="room-approved805.js?v=805-ownerreview"></script>
+<script src="menu-approved805.js?v=805-ownerreview"></script>
 </body>
 </html>

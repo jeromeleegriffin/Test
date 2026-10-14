@@ -45,7 +45,7 @@
   function context(){return {game:typeof game==='undefined'?null:game,hand:typeof handHistory==='undefined'?0:handHistory.length};}
   function current(event){const now=context(),p=seatPlayer(Number(event.player));if(now.game?.shotTheMoon && event.action !== 'shootMoon')return false;return event.originGame===now.game&&event.originHand===now.hand&&p&&p.id===event.originActor&&genderFor(p)!==null&&(!now.game||!['play','score','waiting','lobby','deal','dealing'].includes(now.game.phase));}
   function pathFor(gender, clip){
-    return 'assets/human-bid-voice801/' + gender + '/' + clip + '.mp3';
+    return 'assets/human-bid-voice801/' + gender + '/' + clip + '.mp3' + (clip.startsWith('moon-') ? '?v=805-ownerreview' : '');
   }
   function load(gender, clip){
     const key = pathFor(gender, clip);

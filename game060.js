@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '805-welcome';
+const APP_VERSION = '805-ownerreview';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -293,20 +293,20 @@ function horShowCareerForPlayer(p){
         const bp=personaByName(p.name);
         view.personaTitle=bp ? ((typeof STYLE_TITLES!=='undefined'&&STYLE_TITLES[bp.style])||bp.style||'House Player') : 'House Player';
         view.personaHabit=bp ? ((typeof STYLE_HABIT!=='undefined'&&STYLE_HABIT[bp.style])||bp.blurb||'') : '';
+        view.personaHow=bp ? (STYLE_HOWTO[bp.style]||bp.blurb||'') : '';
       }else if(p){
         const hp=humanPersonaCard(p.name);
         view.personaTitle=hp.title||'House Player';
         view.personaHabit=hp.habit||'';
-        view.personaHow=hp.blurb||'';
+        view.personaHow=hp.how||hp.blurb||'';
       }
     }catch(e){}
     HORProgression.localCareer.showCareerCard(view);
     return true;
   }
-  // A visible star must never be a dead control. Fall back to the persona card.
-  try{ if(p&&p.name){ showBotStyleTip(p.name); return true; } }catch(e){}
   return false;
 }
+
 function horCareerBadgeHtml(p){
   const prof=horCareerProfileForPlayer(p);
   if(!prof||!prof.enabled){
@@ -1720,6 +1720,20 @@ function preloadNatural063(){
  for(const [kind,count] of Object.entries(naturalCounts063))for(let i=1;i<=count;i++)loadNatural063(kind,i);
 }
 const naturalBags063=new Map();
+const naturalPreferencesKey='horNaturalSoundPreferencesV1';
+let naturalPreferences063={};
+try { const saved=JSON.parse(localStorage.getItem(naturalPreferencesKey)||'{}');
+ for(const [kind,count] of Object.entries(naturalCounts063)){
+  const value=saved[kind];
+  if(value==='rotate'||(Number.isInteger(value)&&value>=1&&value<=count))naturalPreferences063[kind]=value;
+ }
+} catch (_) {}
+function setNaturalPreference063(kind,value){
+ const count=naturalCounts063[kind];
+ if(!count||!(value==='rotate'||(Number.isInteger(value)&&value>=1&&value<=count)))return false;
+ naturalPreferences063[kind]=value;naturalBags063.delete(kind);
+ try {localStorage.setItem(naturalPreferencesKey,JSON.stringify(naturalPreferences063));return true;} catch(_){horToast('Sound choice works now, but this browser could not save it.');return false;}
+}
 function nextNaturalIndex063(kind,count){
  let bag=naturalBags063.get(kind);
  const last=naturalLast063.get(kind);
@@ -1733,11 +1747,12 @@ function nextNaturalIndex063(kind,count){
  naturalLast063.set(kind,index);
  return index;
 }
-function playNatural063(kind, volume=1, delayMs=0, category='card') {
+function playNatural063(kind, volume=1, delayMs=0, category='card', previewIndex=null) {
  const allowed=()=>!soundMuted && !document.hidden && (category==='turn'?soundTurn:category==='tick'?soundTick:category==='preview'?true:soundCard);
  if(!allowed()||!naturalCounts063[kind])return null;
  const count=naturalCounts063[kind];
- const index=nextNaturalIndex063(kind,count);
+ const choice=category==='preview'?previewIndex:naturalPreferences063[kind];
+ const index=Number.isInteger(choice)&&choice>=1&&choice<=count?choice:nextNaturalIndex063(kind,count);
  const requested=Date.now(),target=requested+Math.max(0,delayMs);
  loadNatural063(kind,index).then(buffer=>{
   if(!buffer||!allowed()||Date.now()>target+250)return; // Never emit a stale cue after a slow load/resume.
@@ -3786,6 +3801,12 @@ function horToast(text) {
     el = document.createElement('div'); el.id = 'horNetworkToast'; el.className = 'hor-network-toast';
     document.body.appendChild(el);
   }
+  el.classList.toggle('bid-guidance805',/bid.*(?:viewing|details)|details.*bidding/i.test(text));
+  if(el.classList.contains('bid-guidance805')){
+    const dock=document.getElementById('decisionConsole');
+    const r=dock?.getBoundingClientRect();
+    el.style.setProperty('--bid-guidance-bottom',r&&r.height?Math.max(12,innerHeight-r.top+10)+'px':'28vh');
+  }
   el.textContent = text; el.classList.add('show');
   (window.HORRavenFight741?.stopClock||clearTimeout)(el.__t); el.__t = (window.HORRavenFight741?.later||setTimeout)(() => el.classList.remove('show'), 2600);
 }
@@ -5282,25 +5303,11 @@ function hideBotStyleTip() {
 function showBotStyleTip(name, ev) {
   if (ev) { ev.preventDefault(); ev.stopPropagation(); }
   if(window.HORBidRepair737?.required()){horToast('Finish your bid before viewing a player.');return false;}
-  const tip = $('botStyleTip');
-  if (!tip) return;
-  let p = personaByName(name);
-  if (!p) {
-    const hp = humanPersonaCard(name);
-    p = { name: hp.name, style: hp.style, blurb: hp.how };
-  }
-  if (!p) return;
-  const extra = '';
-  tip.innerHTML = '<button type="button" class="bot-style-tip-close" aria-label="Close player persona">×</button>' + botHowToHTML(p) + extra;
-  // Keep the persona above table-owned stacking contexts and status pills.
-  if (tip.parentNode !== document.body) document.body.appendChild(tip);
-  tip.classList.remove('hidden');
-  const x = ev && ev.clientX ? ev.clientX : 24;
-  const y = ev && ev.clientY ? ev.clientY : 24;
-  const rect = tip.getBoundingClientRect();
-  tip.style.left = Math.max(8, Math.min(window.innerWidth - rect.width - 8, x - 20)) + 'px';
-  tip.style.top = Math.max(8, Math.min(window.innerHeight - rect.height - 8, y + 12)) + 'px';
+  hideBotStyleTip();
+  const p=horResolveCareerPlayer('',name) || (players||[]).find(p=>p&&p.name===name);
+  return p ? horShowCareerForPlayer(p) : false;
 }
+
 function botNameAttr(p) {
   if (!p || !p.name) return '';
   return ' data-botname="' + escapeHtmlSafe(p.name) + '"';
@@ -10122,7 +10129,7 @@ function showScoreModal(summary) {
   const totalTaken = Number(summary.pointsA || 0) + Number(summary.pointsB || 0);
   const deckTotal = typeof totalCountersInDeck === 'function' ? totalCountersInDeck() : '—';
   const griffinIcon = 'assets/images/griffin-icon.png?v=635';
-  const ravenIcon = 'assets/images/avatar-raven.svg?v=635';
+  const ravenIcon = 'assets/images/avatar-raven-approved.jpg';
   const labelA = (typeof teamLabel === 'function') ? teamLabel(0) : 'Griffin';
   const labelB = (typeof teamLabel === 'function') ? teamLabel(1) : 'Raven';
   const bidderLabel = summary.bidderTeam === 0 ? labelA : labelB;
@@ -10131,24 +10138,23 @@ function showScoreModal(summary) {
   const resultLine = `${bidderLabel} bid ${formatBidAmount(summary.bid)}, took ${took} → ${bidderDelta >= 0 ? '+' : ''}${bidderDelta}. Nest ${nestPts} to ${nestWinner}. Running total: ${labelA} ${summary.scores[0]} · ${labelB} ${summary.scores[1]} (to ${goal}).`;
 
   const nestMarkup = `
-    <section class="ghsb-nest" aria-label="Nest cards">
-      <div class="ghsb-nest-title">Nest — ${nestWinner}${nestPts ? ` · ${nestPts} pts` : ''}</div>
+    <details class="ghsb-nest" aria-label="Nest cards">
+      <summary class="ghsb-nest-title">Nest: ${escapeHtmlSafe(nestWinner)} · ${nestPts} points</summary>
       <div class="ghsb-nest-cards">
         ${nest.length ? nest.map(c => {
           const html = typeof nestCardMarkup === 'function' ? nestCardMarkup(c) : '';
           return `<div class="ghsb-nest-card">${html}</div>`;
         }).join('') : '<div class="ghsb-nest-empty">No nest cards recorded</div>'}
       </div>
-    </section>`;
+    </details>`;
 
   body.innerHTML = `
     <div class="scoreboard gh-approved-scoreboard ${summary.made ? 'made-hand' : 'set-hand'}">
       <div class="score-banner ghsb-contract ${summary.made ? 'banner-made' : 'banner-set'}">
-        <span class="ghsb-contract-icon">${summary.made ? '✓' : '×'}</span>
-        <span>${summary.made ? 'BID MADE!' : 'SET!'}</span>
+        <span>${escapeHtmlSafe(bidderLabel)} ${summary.made ? 'made the bid' : 'was set'}</span>
       </div>
 
-      <div class="ghsb-result-line">${resultLine}</div>
+
 
       <div class="ghsb-matchup">
         <div class="scoreboard-team ghsb-team ghsb-team-a ${summary.scores[0] >= summary.scores[1] ? 'leading' : ''}">
@@ -10171,18 +10177,23 @@ function showScoreModal(summary) {
       </div>
 
       <div class="scoreboard-goal ghsb-goal"><span>First to <b>${goal}</b></span></div>
+      <div class="ghsb-summary">Bid ${formatBidAmount(summary.bid)} · <span class="ghsb-trump ghsb-trump-${trumpClass}">${trumpName}</span> trump · Hand ${handHistory.length || 1}</div>
       ${nestMarkup}
-
-      <div class="scoreboard-detail ghsb-details">
-        <div><b>Bid:</b> ${formatBidAmount(summary.bid)} by Team ${teamName} <span class="ghsb-made-chip ${summary.made ? 'is-made' : 'is-set'}">${summary.made ? '✓ Made' : '× Set'}</span></div>
+      <details class="ghsb-hand-details"><summary>Hand details</summary><div class="scoreboard-detail ghsb-details">
+        <div><b>Bid:</b> ${formatBidAmount(summary.bid)} by ${escapeHtmlSafe(bidderLabel)} <span class="ghsb-made-chip ${summary.made ? 'is-made' : 'is-set'}">${summary.made ? '✓ Made' : '× Set'}</span></div>
         <div><b>Trump:</b> <span class="ghsb-trump ghsb-trump-${trumpClass}">${trumpName}</span></div>
-        <div><b>Counters taken:</b> A ${summary.pointsA} · B ${summary.pointsB} · total ${totalTaken} / ${deckTotal}</div>
+        <div><b>Counters taken:</b> ${escapeHtmlSafe(labelA)} ${summary.pointsA} · ${escapeHtmlSafe(labelB)} ${summary.pointsB} · total ${totalTaken} / ${deckTotal}</div>
         <div><b>Hands played:</b> ${handHistory.length || 1}</div>
-      </div>
+        <div class="ghsb-result-line">${escapeHtmlSafe(resultLine)}</div>
+        <button type="button" id="scoreDetailsRemaining805" class="btn">Show remaining cards</button>
+      </div></details>
     </div>`;
 
   modal.classList.remove('hidden');
   wireScoreModalActions(summary);
+  const remaining=$('scoreDetailsRemaining805'),original=$('scoreModalRevealHands');
+  if(remaining){remaining.hidden=!original||original.classList.contains('hidden');remaining.onclick=()=>original?.click();}
+  $('scoreModalHistory').textContent='History';$('scoreModalCopy').textContent='Copy scores';
 }
 
 
@@ -15315,11 +15326,7 @@ try { syncFavoritePartner042(); } catch (_) {}
   stopPreviewAudio();
   if(soundMuted)return;
   await loadNatural063(kind,index);
-  const before=naturalLast063.get(kind);
-  naturalLast063.set(kind,index===1?2:index-1);
-  naturalBags063.set(kind,[index]);
-  track(playNatural063(kind,.65,0,'preview'));
-  if(before==null)naturalLast063.delete(kind);else naturalLast063.set(kind,index);
+  track(playNatural063(kind,.65,0,'preview',index));
  }
  function stageFight(order){
   stopPreviewAudio();
@@ -15344,12 +15351,12 @@ try { syncFavoritePartner042(); } catch (_) {}
  function init(){
   const host=document.querySelector('.gh-menu-sound .gh-sound-panel');if(!host||document.getElementById('houseEffects064'))return;
   const launch=document.createElement('button');
-  launch.type='button';launch.id='openHouseEffects064';launch.textContent='House Effects preview';
+  launch.type='button';launch.id='openHouseEffects064';launch.textContent='Sound variations & effects';
   launch.onclick=(e)=>{e.preventDefault();e.stopPropagation();openMenu();};
   host.appendChild(launch);
   const root=document.createElement('div');
   root.id='houseEffects064';root.hidden=true;root.setAttribute('aria-hidden','true');
-  root.innerHTML='<div class="he064-shell" role="dialog" aria-label="House Effects"><header class="he064-head"><div><b>House Effects</b><small>Preview only</small></div><div class="he064-tabs"><button type="button" data-he-tab="sounds" class="is-on">Sounds</button><button type="button" data-he-tab="animations">Animations</button></div></header><div class="he064-body"></div><footer class="he064-foot"><button type="button" id="he064Done">Done</button></footer></div>';
+  root.innerHTML='<div class="he064-shell" role="dialog" aria-label="House Effects"><header class="he064-head"><div><b>House Effects</b><small>Sound choices save automatically</small></div><div class="he064-tabs"><button type="button" data-he-tab="sounds" class="is-on">Sounds</button><button type="button" data-he-tab="animations">Animations</button></div></header><div class="he064-body"></div><footer class="he064-foot"><button type="button" id="he064Done">Done</button></footer></div>';
   document.body.appendChild(root);
   const body=root.querySelector('.he064-body');
   const sounds=document.createElement('section');sounds.dataset.hePane='sounds';
@@ -15362,9 +15369,12 @@ try { syncFavoritePartner042(); } catch (_) {}
    const sel=document.createElement('select');
    for(let i=1;i<=count;i++){const o=document.createElement('option');o.value=String(i);o.textContent='Variation '+i;sel.appendChild(o);}
    if(count>1){const o=document.createElement('option');o.value='rotate';o.textContent='Rotation';sel.appendChild(o);}
+   sel.value=String(naturalPreferences063[kind]??(count>1?'rotate':1));
+   sel.setAttribute('aria-label',title+' variation');sel.dataset.soundFamily=kind;
+   sel.onchange=()=>{stopPreviewAudio();setNaturalPreference063(kind,sel.value==='rotate'?'rotate':Number(sel.value));};
    const play=document.createElement('button');play.type='button';play.textContent='Play';
    const stop=document.createElement('button');stop.type='button';stop.textContent='Stop';
-   play.onclick=async()=>{if(sel.value==='rotate'){stopPreviewAudio();for(let n=0;n<count;n++){await loadNatural063(kind,n+1);track(playNatural063(kind,.65,n*380,'preview'));}}else playFamily(kind,Number(sel.value));};
+   play.onclick=async()=>{if(sel.value==='rotate'){stopPreviewAudio();for(let n=0;n<count;n++){await loadNatural063(kind,n+1);track(playNatural063(kind,.65,n*380,'preview',n+1));}}else playFamily(kind,Number(sel.value));};
    stop.onclick=stopPreviewAudio;
    row.append(document.createTextNode(title+' '),sel,play,stop);
    sounds.appendChild(row);

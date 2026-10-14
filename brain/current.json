@@ -492,5 +492,14 @@
     "productionTouched": false,
     "newZip": false,
     "ownerAndroidAccepted": false
+  },
+  "ownerReview": {
+    "runtime": "805-ownerreview",
+    "status": "IMPLEMENTED_TEST_PUBLICATION_PENDING_VERIFICATION",
+    "record": "../coordination/OWNER_REVIEW_20261014.md",
+    "rollbackCommit": "b912530bcffe9b5de733721c7fd710b9aa492acf",
+    "nativeShareIcon": "UNRESOLVED_ANDROID_ICON",
+    "ownerAndroidAccepted": false,
+    "productionTouched": false
   }
 }
