@@ -1,0 +1,23 @@
+{
+  "number": "805",
+  "filename": "805.zip",
+  "bytes": 145217741,
+  "sha256": "1b7057efbb8eb39ff039867952ac4b74ab97f1e5cf18370a56357c4b4d91cc6e",
+  "purpose": "Approved Room B/Menu A/logo/no-chair Friends integration, master mute correction, reduced motion, offline art coverage; delivered phone-test game.",
+  "kind": "PLAYABLE_TEST_GAME",
+  "libraryFileId": "libfile_2b8ed9e804308191bfbb831663e06368",
+  "libraryResolution": "CONFIRMED_METADATA_AND_MATCHING_BYTE_LENGTH",
+  "deployed": false,
+  "ownerOverallPhoneAccepted": false,
+  "reservationId": "retrospective-session-9c4bf0ddeeca-805-20261014",
+  "workstream": "Main game visual/audio/career continuation",
+  "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
+  "registrationType": "RETROSPECTIVE_RECONCILIATION_NOT_PRIOR_RESERVATION",
+  "registeredAt": "2026-10-14",
+  "ownerApproved": false,
+  "physicalAndroidTestEvidence": "NOT_ESTABLISHED_FOR_THIS_ARCHIVE",
+  "deploymentStatus": "NOT_DEPLOYED",
+  "production531": "PROTECTED",
+  "testLimits": "No final805 owner Android acceptance; no live cross-device multiplayer; deployed-site/phone SW/offline unverified; see AC scope",
+  "sourceGameBuild": "803 plus approved pending Friends/RoomB/MenuA and offline fixes"
+}

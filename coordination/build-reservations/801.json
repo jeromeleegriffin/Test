@@ -1,0 +1,23 @@
+{
+  "number": "801",
+  "filename": "801.zip",
+  "bytes": 145379159,
+  "sha256": "72a5b3e48f2a8ccb415273a005e4640f7ba8e634977788f54db639303134b8fe",
+  "purpose": "Automatic bot bid/Pass dispatch and serialized speech; original Moon takes; 6.75-second howl with 1.9-second fade.",
+  "kind": "PLAYABLE_TEST_GAME",
+  "libraryFileId": null,
+  "libraryResolution": "NOT_RESOLVED_IN_CURRENT_LIBRARY_SEARCH; exact local archive hashed",
+  "deployed": false,
+  "ownerOverallPhoneAccepted": false,
+  "reservationId": "retrospective-session-9c4bf0ddeeca-801-20261014",
+  "workstream": "Main game visual/audio/career continuation",
+  "status": "DELIVERED_HISTORICAL_TEST_CANDIDATE",
+  "registrationType": "RETROSPECTIVE_RECONCILIATION_NOT_PRIOR_RESERVATION",
+  "registeredAt": "2026-10-14",
+  "ownerApproved": false,
+  "physicalAndroidTestEvidence": "NOT_ESTABLISHED_FOR_THIS_ARCHIVE",
+  "deploymentStatus": "NOT_DEPLOYED",
+  "production531": "PROTECTED",
+  "testLimits": "No final805 owner Android acceptance; no live cross-device multiplayer; deployed-site/phone SW/offline unverified; see AC scope",
+  "sourceGameBuild": "800"
+}

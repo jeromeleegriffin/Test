@@ -1,0 +1,23 @@
+{
+  "number": "799",
+  "filename": "799.zip",
+  "bytes": 143961576,
+  "sha256": "7c71c0edd97451b71711cd18d273beea31ce79b2000ea712b2991888760f7217",
+  "purpose": "Wolf-only trim/preload; speech files unchanged. Historical no-spoken-Moon assertion was wrong and superseded by 800.",
+  "kind": "PLAYABLE_TEST_GAME",
+  "libraryFileId": null,
+  "libraryResolution": "NOT_RESOLVED_IN_CURRENT_LIBRARY_SEARCH; exact local archive hashed",
+  "deployed": false,
+  "ownerOverallPhoneAccepted": false,
+  "reservationId": "retrospective-session-9c4bf0ddeeca-799-20261014",
+  "workstream": "Main game visual/audio/career continuation",
+  "status": "DELIVERED_HISTORICAL_TEST_CANDIDATE",
+  "registrationType": "RETROSPECTIVE_RECONCILIATION_NOT_PRIOR_RESERVATION",
+  "registeredAt": "2026-10-14",
+  "ownerApproved": false,
+  "physicalAndroidTestEvidence": "NOT_ESTABLISHED_FOR_THIS_ARCHIVE",
+  "deploymentStatus": "NOT_DEPLOYED",
+  "production531": "PROTECTED",
+  "testLimits": "No final805 owner Android acceptance; no live cross-device multiplayer; deployed-site/phone SW/offline unverified; see AC scope",
+  "sourceGameBuild": "798"
+}

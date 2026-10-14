@@ -1,0 +1,23 @@
+{
+  "number": "804",
+  "filename": "804.zip",
+  "bytes": 51861265,
+  "sha256": "c8396ab7e15aeb34bed5a94cf7be2596b65e4a1bac5bdf10fce7d4a4ebe49b79",
+  "purpose": "VISUAL REVIEW ONLY: three room studies, menu A/B, sound study and evidence. Not a playable game.",
+  "kind": "VISUAL_REVIEW_NOT_GAME",
+  "libraryFileId": "libfile_ed83e4d32bf48191a5d65a12510568f5",
+  "libraryResolution": "CONFIRMED_METADATA_AND_MATCHING_BYTE_LENGTH",
+  "deployed": false,
+  "ownerOverallPhoneAccepted": false,
+  "reservationId": "retrospective-session-9c4bf0ddeeca-804-20261014",
+  "workstream": "Main game visual/audio/career continuation",
+  "status": "DELIVERED_VISUAL_REVIEW_NOT_GAME",
+  "registrationType": "RETROSPECTIVE_RECONCILIATION_NOT_PRIOR_RESERVATION",
+  "registeredAt": "2026-10-14",
+  "ownerApproved": false,
+  "physicalAndroidTestEvidence": "NOT_ESTABLISHED_FOR_THIS_ARCHIVE",
+  "deploymentStatus": "NOT_DEPLOYED",
+  "production531": "PROTECTED",
+  "testLimits": "No final805 owner Android acceptance; no live cross-device multiplayer; deployed-site/phone SW/offline unverified; see AC scope",
+  "sourceGameBuild": "800 visual authority +803/pending source"
+}

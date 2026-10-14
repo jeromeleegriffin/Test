@@ -1,0 +1,332 @@
+{
+  "build": "805",
+  "releaseRuntime": {
+    "scope": "Fresh isolated Chromium context on localhost. Production and owner device untouched.",
+    "checks": [
+      "Release 805 page, script, marker and active service-worker/cache agree",
+      "Service worker installs, activates and controls the actual candidate page",
+      "All six approved UI runtime files are cached",
+      "Offline reload restores Room B and the approved menu while preserving career data",
+      "Offline menu works and Take Your Seat starts a real solo game",
+      "Every selectable character pose is cached; all three offline seats render full character artwork"
+    ],
+    "errors": [],
+    "httpFailures": [],
+    "offlineRequests": [],
+    "serviceWorker": {
+      "controller": "http://127.0.0.1:8096/sw060.js?v=805",
+      "state": "activated",
+      "scope": "http://127.0.0.1:8096/",
+      "cacheKeys": [
+        "house-of-rooks-805"
+      ]
+    },
+    "runtime": {
+      "page": "805",
+      "script": "805",
+      "marker": "805",
+      "worker": {
+        "build": "805",
+        "cache": "house-of-rooks-805"
+      },
+      "controller": "http://127.0.0.1:8096/sw060.js?v=805",
+      "coherent": true
+    },
+    "newFiles": [
+      {
+        "file": "room-approved805.css?v=805",
+        "cached": true
+      },
+      {
+        "file": "room-approved805.js?v=805",
+        "cached": true
+      },
+      {
+        "file": "menu-approved805.css?v=805",
+        "cached": true
+      },
+      {
+        "file": "menu-approved805.js?v=805",
+        "cached": true
+      },
+      {
+        "file": "assets/approved805/griffin-logo.png",
+        "cached": true
+      },
+      {
+        "file": "assets/approved805/ceiling-wood.png",
+        "cached": true
+      }
+    ],
+    "game": {
+      "phase": "dealing",
+      "players": [
+        {
+          "name": "Rita",
+          "isBot": false
+        },
+        {
+          "name": "Pike",
+          "isBot": true
+        },
+        {
+          "name": "Drift",
+          "isBot": true
+        },
+        {
+          "name": "Brandy",
+          "isBot": true
+        }
+      ],
+      "controller": true
+    },
+    "rosterArtwork": {
+      "poseFiles": 352,
+      "missing": []
+    },
+    "status": "completed"
+  },
+  "staticResources": {
+    "rootIndex": true,
+    "indexReferences": 81,
+    "shellEntries": 912,
+    "missingLocalReferences": [],
+    "metadataVersion": "805"
+  },
+  "retainedIntegrationEvidence": {
+    "completed_checks": [
+      "Menu backdrop consumes a tap directly above Take Your Seat",
+      "Repeated menu open/Escape returns focus",
+      "Join, Rules, Change Player and House Tour retain existing handlers",
+      "Change Partner preserves its dialog and Room B after roster repaint",
+      "Voice level and independent mute use the actual persisted mixer",
+      "Rendered audio confirms master mute silences existing output on all four buses and restores preferences",
+      "Sound panel fits four phone sizes; expanded details scroll and Done is reachable",
+      "Career, identity and audio preferences survive menu use and direct reload",
+      "Game entry works; sound panel is reachable during play without stacked menus",
+      "Actual rail Leave + confirmation returns to landing with canonical career preserved",
+      "Friends starts with three open seats; Fill seats adds three bots and enables Start using a local broker stub",
+      "New room layer stays disabled in landscape",
+      "Reduced motion stops the moved fireplace and lantern animations",
+      "Filled Friends table starts a real game with its seated bots",
+      "Service worker installs, activates and controls the actual candidate page",
+      "All six approved UI runtime files are cached",
+      "Offline reload restores Room B and the approved menu while preserving career data",
+      "Offline menu works and Take Your Seat starts a real solo game",
+      "Every selectable character pose is cached; all three offline seats render full character artwork"
+    ],
+    "javascript_errors": [],
+    "audio_rendering": {
+      "read": [
+        {
+          "channel": "voices",
+          "off": 0,
+          "on": 0.33941117241329805
+        },
+        {
+          "channel": "gameplay",
+          "off": 0,
+          "on": 0.7071066247576926
+        },
+        {
+          "channel": "character",
+          "off": 0,
+          "on": 0.7071066247576926
+        },
+        {
+          "channel": "atmosphere",
+          "off": 0,
+          "on": 0.7071066247576926
+        }
+      ],
+      "preferencesUnchanged": true
+    },
+    "phone_viewports": [
+      {
+        "vp": {
+          "width": 320,
+          "height": 568
+        },
+        "bounds": {
+          "x": 17,
+          "y": 27.265625,
+          "right": 303,
+          "bottom": 540.71875,
+          "scroll": 511,
+          "client": 511
+        }
+      },
+      {
+        "vp": {
+          "width": 393,
+          "height": 568
+        },
+        "bounds": {
+          "x": 21.5,
+          "y": 27.265625,
+          "right": 371.5,
+          "bottom": 540.71875,
+          "scroll": 511,
+          "client": 511
+        }
+      },
+      {
+        "vp": {
+          "width": 393,
+          "height": 740
+        },
+        "bounds": {
+          "x": 21.5,
+          "y": 87.53125,
+          "right": 371.5,
+          "bottom": 652.46875,
+          "scroll": 563,
+          "client": 563
+        }
+      },
+      {
+        "vp": {
+          "width": 430,
+          "height": 932
+        },
+        "bounds": {
+          "x": 40,
+          "y": 183.53125,
+          "right": 390,
+          "bottom": 748.46875,
+          "scroll": 563,
+          "client": 563
+        }
+      }
+    ],
+    "resolved_check_interruptions": [
+      "Leave-return harness initially omitted the existing DOM confirmation; the actual confirmation path subsequently passed.",
+      "Reduced-motion CSS specificity failed; corrected in room-approved805.css and all five moved animation types subsequently passed."
+    ],
+    "limits": [
+      "Physical Android visual/audio acceptance unverified",
+      "Cross-device multiplayer unverified; local broker stub used for Friends",
+      "Active service-worker control and offline reload unverified on owner Android and deployed site; local candidate test passed",
+      "Full offline match not tested; initial background cache installation must complete"
+    ],
+    "offline_followup": {
+      "scope": "Fresh isolated Chromium context on localhost. Production and owner device untouched.",
+      "checks": [
+        "Service worker installs, activates and controls the actual candidate page",
+        "All six approved UI runtime files are cached",
+        "Offline reload restores Room B and the approved menu while preserving career data",
+        "Offline menu works and Take Your Seat starts a real solo game",
+        "Every selectable character pose is cached; all three offline seats render full character artwork"
+      ],
+      "errors": [],
+      "httpFailures": [],
+      "offlineRequests": [],
+      "serviceWorker": {
+        "controller": "http://127.0.0.1:8095/sw060.js?v=803",
+        "state": "activated",
+        "scope": "http://127.0.0.1:8095/",
+        "cacheKeys": [
+          "house-of-rooks-803"
+        ]
+      },
+      "newFiles": [
+        {
+          "file": "room-approved805.css?v=approved-1",
+          "cached": true
+        },
+        {
+          "file": "room-approved805.js?v=approved-1",
+          "cached": true
+        },
+        {
+          "file": "menu-approved805.css?v=approved-1",
+          "cached": true
+        },
+        {
+          "file": "menu-approved805.js?v=approved-1",
+          "cached": true
+        },
+        {
+          "file": "assets/approved805/griffin-logo.png",
+          "cached": true
+        },
+        {
+          "file": "assets/approved805/ceiling-wood.png",
+          "cached": true
+        }
+      ],
+      "game": {
+        "phase": "dealing",
+        "players": [
+          {
+            "name": "Rita",
+            "isBot": false
+          },
+          {
+            "name": "Nix",
+            "isBot": true
+          },
+          {
+            "name": "Hollow",
+            "isBot": true
+          },
+          {
+            "name": "Copper",
+            "isBot": true
+          }
+        ],
+        "controller": true
+      },
+      "rosterArtwork": {
+        "poseFiles": 352,
+        "missing": []
+      },
+      "status": "completed"
+    },
+    "offline_cache_change": {
+      "added_entries": 461,
+      "added_bytes": 47987834,
+      "new_artwork_files": 0,
+      "runtime_changed_file": "sw060.js"
+    },
+    "source_preservation": {
+      "original_file_count": 1547,
+      "unchanged_original_files": 1543,
+      "changed_original_files": [
+        "index.html",
+        "game060.js",
+        "audio-mixer.js",
+        "sw060.js"
+      ],
+      "new_files": [
+        "INTEGRATION-CHECKPOINT.txt",
+        "assets/approved805/ceiling-wood.png",
+        "assets/approved805/griffin-logo.png",
+        "menu-approved805.css",
+        "menu-approved805.js",
+        "room-approved805.css",
+        "room-approved805.js"
+      ],
+      "protected_checks": [
+        "friends803.css",
+        "friends803.js",
+        "characters077.js",
+        "characters077.css",
+        "landing783.js",
+        "landing783.css",
+        "assets/trump746/table-faint.png",
+        "assets/house736/lantern-approved.png"
+      ],
+      "deleted_files": []
+    }
+  },
+  "limits": [
+    "Physical Android visual/audio acceptance unverified",
+    "Live cross-device multiplayer unverified",
+    "Deployed-site service-worker control and offline reload unverified",
+    "Complete offline match unverified",
+    "ZIP loader behavior on owner device unverified"
+  ],
+  "production531": "PROTECTED",
+  "deployed": false
+}

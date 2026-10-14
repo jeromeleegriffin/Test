@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "brainVersion": "AC",
+      "updated": "2026-10-14",
+      "browse": "versions/AC/index.html",
+      "artifact": "",
+      "sha256": "b08cbd55c46fdb5fb532c7a040935990d5b3b0d6d9078133bb3b1e08cfe0de5b",
+      "sha256Scope": "primaryDocumentation",
+      "documentationOnly": true,
+      "manifest": "versions/AC/inventory.json",
+      "archiveStatus": "AC complete session catch-up;805 delivered, not deployed;804 visual review;Test797;production531 protected"
+    },
+    {
       "brainVersion": "AB",
       "updated": "2026-10-13",
       "browse": "versions/AB/index.html",

@@ -1,0 +1,23 @@
+{
+  "number": "803",
+  "filename": "803.zip",
+  "bytes": 145002341,
+  "sha256": "9a2da16be782e819dea19012b267e235cdf5f9f64ab251df7ce7d63c9560a894",
+  "purpose": "Audio mixer, 70% default voices, negative-score Moon, active money retirement, old landing removal, initial Friends design rejected visually.",
+  "kind": "PLAYABLE_TEST_GAME",
+  "libraryFileId": "libfile_98e81223c9508191b8d7ce308c2b0ef9",
+  "libraryResolution": "CONFIRMED_METADATA_AND_MATCHING_BYTE_LENGTH",
+  "deployed": false,
+  "ownerOverallPhoneAccepted": false,
+  "reservationId": "retrospective-session-9c4bf0ddeeca-803-20261014",
+  "workstream": "Main game visual/audio/career continuation",
+  "status": "DELIVERED_HISTORICAL_TEST_CANDIDATE",
+  "registrationType": "RETROSPECTIVE_RECONCILIATION_NOT_PRIOR_RESERVATION",
+  "registeredAt": "2026-10-14",
+  "ownerApproved": false,
+  "physicalAndroidTestEvidence": "OWNER_ISSUES_REPORTED",
+  "deploymentStatus": "NOT_DEPLOYED",
+  "production531": "PROTECTED",
+  "testLimits": "No final805 owner Android acceptance; no live cross-device multiplayer; deployed-site/phone SW/offline unverified; see AC scope",
+  "sourceGameBuild": "802"
+}

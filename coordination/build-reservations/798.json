@@ -1,0 +1,23 @@
+{
+  "number": "798",
+  "filename": "798.zip",
+  "bytes": 144021494,
+  "sha256": "d872b7c8059542b60b2fcf4b6a9a25c0b3aac54c9a403f1e098ddab338d90f4f",
+  "purpose": "Approved male/female bid and Pass clips, selected voice routing; initial bot dispatch attempt.",
+  "kind": "PLAYABLE_TEST_GAME",
+  "libraryFileId": null,
+  "libraryResolution": "NOT_RESOLVED_IN_CURRENT_LIBRARY_SEARCH; exact local archive hashed",
+  "deployed": false,
+  "ownerOverallPhoneAccepted": false,
+  "reservationId": "retrospective-session-9c4bf0ddeeca-798-20261014",
+  "workstream": "Main game visual/audio/career continuation",
+  "status": "DELIVERED_HISTORICAL_TEST_CANDIDATE",
+  "registrationType": "RETROSPECTIVE_RECONCILIATION_NOT_PRIOR_RESERVATION",
+  "registeredAt": "2026-10-14",
+  "ownerApproved": false,
+  "physicalAndroidTestEvidence": "NOT_ESTABLISHED_FOR_THIS_ARCHIVE",
+  "deploymentStatus": "NOT_DEPLOYED",
+  "production531": "PROTECTED",
+  "testLimits": "No final805 owner Android acceptance; no live cross-device multiplayer; deployed-site/phone SW/offline unverified; see AC scope",
+  "sourceGameBuild": "797"
+}
