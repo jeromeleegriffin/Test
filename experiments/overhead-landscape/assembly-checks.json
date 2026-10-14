@@ -1,0 +1,96 @@
+{
+  "errors": [],
+  "checks": [
+    {
+      "width": 1672,
+      "height": 941,
+      "handCount": 10,
+      "cards": 40
+    },
+    {
+      "width": 1672,
+      "height": 941,
+      "handCount": 11,
+      "cards": 44
+    },
+    {
+      "width": 1672,
+      "height": 941,
+      "handCount": 6,
+      "cards": 24
+    },
+    {
+      "width": 1672,
+      "height": 941,
+      "handCount": 1,
+      "cards": 4
+    },
+    {
+      "width": 1672,
+      "height": 941,
+      "handCount": 0,
+      "cards": 0
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "handCount": 10,
+      "cards": 40
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "handCount": 11,
+      "cards": 44
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "handCount": 6,
+      "cards": 24
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "handCount": 1,
+      "cards": 4
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "handCount": 0,
+      "cards": 0
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "handCount": 10,
+      "cards": 40
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "handCount": 11,
+      "cards": 44
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "handCount": 6,
+      "cards": 24
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "handCount": 1,
+      "cards": 4
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "handCount": 0,
+      "cards": 0
+    }
+  ],
+  "scope": "Static artwork assembly only; no real gameplay or physical Android test"
+}
