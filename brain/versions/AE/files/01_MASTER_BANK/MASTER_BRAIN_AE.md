@@ -78,3 +78,11 @@ Retrieve the actual ZIP file and provide a clickable sandbox file link.
 Do not substitute a web download URL or a preview-only reference.
 
 Owner instruction recorded October 15, 2026. Preserve this delivery rule in future Master Brain updates and chat handoffs.
+
+## Owner confirmation — ZIP delivery and Shoot the Moon Concept A (2026-10-15)
+
+Jerome confirmed the actual ZIP delivered through a clickable sandbox file link worked. This is the required ZIP delivery method; do not substitute a web download URL or preview-only reference.
+
+Jerome selected Concept A from Shoot_the_Moon_Three_Concepts_Review.zip (Library libfile_efb50a34cb5c819189b8ef9e2554e940). Direction selected only: the screenshot-cropped artwork is not approved as a finished asset. He requests a Work prompt to build a complete physical asset under Master Bank H section 3 (Premium Bid Box construction standard), with the moon/griffin intact and a natural attachment hooking onto the TOP of the existing Bid Box. Preserve existing Bid Box controls, geometry, holder, cards, table and characters. This attachment is not authorization for a new Bid Box-to-card-holder connector.
+
+Current scope: prepare the asset-building prompt. Future deliverable should be isolated finished transparent artwork and actual-screenshot fit previews for owner review; no game build, gameplay changes or deployment authorized. No image generation performed in this documentation task. Existing Generate authorization rule remains.
