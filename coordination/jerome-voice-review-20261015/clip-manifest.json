@@ -1,0 +1,446 @@
+{
+  "masterSha256": "1fd90c4a8794993515c7af2e0930cfedb7b45d45e311a8e038dce34bd51fe9c7",
+  "clips": [
+    {
+      "name": "100",
+      "start": 28.1135,
+      "end": 29.2288,
+      "text": "I'll be at 100.",
+      "path": "voices/jerome/events/100.mp3",
+      "sha256": "af1fb64009316dcc4135449a1632cdada97b6d68a83e0318573dc6744982ab28",
+      "duration": 1.1153,
+      "gain": 0.4911
+    },
+    {
+      "name": "105",
+      "start": 30.3715,
+      "end": 31.5314,
+      "text": "105",
+      "path": "voices/jerome/events/105.mp3",
+      "sha256": "673a054ba32755fb4f51f0336c12958b7d669e345a6f803577b7b3c1046f3522",
+      "duration": 1.1599,
+      "gain": 0.4672
+    },
+    {
+      "name": "110",
+      "start": 32.5843,
+      "end": 34.0533,
+      "text": "Let's go 110.",
+      "path": "voices/jerome/events/110.mp3",
+      "sha256": "6efcc3c30e0734b0aba411de6751c3daa21c41301d333217bcc01c498f52649d",
+      "duration": 1.469,
+      "gain": 0.5727
+    },
+    {
+      "name": "115",
+      "start": 34.8192,
+      "end": 36.1562,
+      "text": "115",
+      "path": "voices/jerome/events/115.mp3",
+      "sha256": "c89c72914583d7ebfc6b6c1bcb2d4ea6868f6f94840f7b6b8e45614757965270",
+      "duration": 1.337,
+      "gain": 0.5588
+    },
+    {
+      "name": "120",
+      "start": 36.8915,
+      "end": 38.0658,
+      "text": "a hundred and twenty",
+      "path": "voices/jerome/events/120.mp3",
+      "sha256": "602af00fa139345ed6edf3948088d7330f75cdc3fdcf9d1a057593c6b0ed9b04",
+      "duration": 1.1743,
+      "gain": 0.5903
+    },
+    {
+      "name": "125",
+      "start": 38.6081,
+      "end": 40.0405,
+      "text": "125.",
+      "path": "voices/jerome/events/125.mp3",
+      "sha256": "bcc718a9d3438fc496f1ded288e1d701241b4dcf02a6a3d50b09bcd95d9befa1",
+      "duration": 1.4324,
+      "gain": 0.4333
+    },
+    {
+      "name": "130",
+      "start": 40.6575,
+      "end": 41.7971,
+      "text": "130",
+      "path": "voices/jerome/events/130.mp3",
+      "sha256": "33f286ac730c82b0f2e5d9c886751ce1dd4e49f6991329d7384353ceeede7084",
+      "duration": 1.1396,
+      "gain": 0.4929
+    },
+    {
+      "name": "135",
+      "start": 42.7421,
+      "end": 44.0732,
+      "text": "135",
+      "path": "voices/jerome/events/135.mp3",
+      "sha256": "20f0d59243f1ea621cdc1641a795248907a68cfa969c3771e560bba02de3b084",
+      "duration": 1.3311,
+      "gain": 0.4845
+    },
+    {
+      "name": "140",
+      "start": 44.4933,
+      "end": 45.6444,
+      "text": "a hundred and forty",
+      "path": "voices/jerome/events/140.mp3",
+      "sha256": "cee16a457349e70bdaffc8e39dc5132d72856de546c1e066c24963a9e11bf475",
+      "duration": 1.1511,
+      "gain": 0.4817
+    },
+    {
+      "name": "145",
+      "start": 46.1187,
+      "end": 47.6194,
+      "text": "145",
+      "path": "voices/jerome/events/145.mp3",
+      "sha256": "3f8b1948c9a7ee57f64696eed79cd68ced3986b9140e6e37a61f67a00900ac10",
+      "duration": 1.5007,
+      "gain": 0.5201
+    },
+    {
+      "name": "150",
+      "start": 48.0151,
+      "end": 49.3646,
+      "text": "150",
+      "path": "voices/jerome/events/150.mp3",
+      "sha256": "499029f1264a5893b0390ad59c8d3ad1f493f4789e9ec83a7126ecd952ab72af",
+      "duration": 1.3495,
+      "gain": 0.6309
+    },
+    {
+      "name": "155",
+      "start": 49.6349,
+      "end": 51.0774,
+      "text": "155",
+      "path": "voices/jerome/events/155.mp3",
+      "sha256": "a64810b0221ee923eb412f2b856b69a0583e5b6d13dc89167ba4784de1fc28a6",
+      "duration": 1.4425,
+      "gain": 0.5896
+    },
+    {
+      "name": "160",
+      "start": 51.4038,
+      "end": 52.7389,
+      "text": "a hundred and sixty",
+      "path": "voices/jerome/events/160.mp3",
+      "sha256": "4bcff753e1dafcc023cc8c2d624ecb19e4eafe6549a994d63c04149fd384b016",
+      "duration": 1.3351,
+      "gain": 0.7049
+    },
+    {
+      "name": "165",
+      "start": 53.1364,
+      "end": 54.5964,
+      "text": "165",
+      "path": "voices/jerome/events/165.mp3",
+      "sha256": "d0568396e782db530b2fec0872af1141f0b7ea3d1ae0132cf449a9a182a4ca0e",
+      "duration": 1.46,
+      "gain": 0.6036
+    },
+    {
+      "name": "170",
+      "start": 54.9987,
+      "end": 56.3601,
+      "text": "170",
+      "path": "voices/jerome/events/170.mp3",
+      "sha256": "863887251759604fabe74208d1dc27fcbed3c174357f22b7bbbffa94a9db388c",
+      "duration": 1.3614,
+      "gain": 0.5237
+    },
+    {
+      "name": "175",
+      "start": 56.5148,
+      "end": 58.0782,
+      "text": "175",
+      "path": "voices/jerome/events/175.mp3",
+      "sha256": "a9d73801efd550127529333fcf35be6cc7d264d0babe76d1ff2c856edc46523d",
+      "duration": 1.5634,
+      "gain": 0.6544
+    },
+    {
+      "name": "180",
+      "start": 58.33,
+      "end": 59.4,
+      "text": "a hundred and eighty",
+      "path": "voices/jerome/events/180.mp3",
+      "sha256": "499395f4745637ad4eb8db0ed185e10e857458a7ac306bd8f86a1387ce1bfa63",
+      "duration": 1.07,
+      "gain": 0.51
+    },
+    {
+      "name": "185",
+      "start": 59.57,
+      "end": 60.97,
+      "text": "a hundred and eighty five",
+      "path": "voices/jerome/events/185.mp3",
+      "sha256": "c004108681ab2ba26dd25648ecf0785a1b3fa2c15f48afef6cb0f5f6eca2b0df",
+      "duration": 1.4,
+      "gain": 0.8094
+    },
+    {
+      "name": "190",
+      "start": 61.2623,
+      "end": 62.5409,
+      "text": "a hundred and ninety",
+      "path": "voices/jerome/events/190.mp3",
+      "sha256": "fa51b84d23c68560d2b05a8e18f61c9f7920e331ba8fa2981b9b5e07f0afa2f2",
+      "duration": 1.2786,
+      "gain": 0.4792
+    },
+    {
+      "name": "195",
+      "start": 63.785,
+      "end": 65.7037,
+      "text": "195",
+      "path": "voices/jerome/events/195.mp3",
+      "sha256": "77ab5d38e1b78f513292b02f24ee3593bbeb74759dab8eb3c40750dc8c591bb2",
+      "duration": 1.9187,
+      "gain": 0.4714
+    },
+    {
+      "name": "pass-1",
+      "start": 69.4361,
+      "end": 70.4116,
+      "text": "I'll pass.",
+      "path": "voices/jerome/events/pass-1.mp3",
+      "sha256": "bbc8eb105c36055b32f94da944b7fd8436e9503e90004525b7f7b7df919bf058",
+      "duration": 0.9755,
+      "gain": 0.6086
+    },
+    {
+      "name": "pass-2",
+      "start": 70.9487,
+      "end": 71.6643,
+      "text": "Pass.",
+      "path": "voices/jerome/events/pass-2.mp3",
+      "sha256": "d4ca3356de870f72c54e517527e53e82d39a827c6369cbbb1038ee819aae07bc",
+      "duration": 0.7156,
+      "gain": 0.5216
+    },
+    {
+      "name": "moon-1",
+      "start": 68.0265,
+      "end": 69.2552,
+      "text": "Shoot the moon!",
+      "path": "voices/jerome/events/moon-1.mp3",
+      "sha256": "064c24c4c87197e4159938d08785bfa72f636d7e2c3d03580d6c6dc7e1b7bd5f",
+      "duration": 1.2287,
+      "gain": 0.635
+    },
+    {
+      "name": "moon-2",
+      "start": 75.422,
+      "end": 76.4397,
+      "text": "I'm going for it.",
+      "path": "voices/jerome/events/moon-2.mp3",
+      "sha256": "6089235b748e73ca94f7cef6a755169aa93e9fc4522eb34e3b7223de66ccbedb",
+      "duration": 1.0177,
+      "gain": 0.5123
+    },
+    {
+      "name": "moon-3",
+      "start": 77.56,
+      "end": 78.58,
+      "text": "I'm shooting the moon",
+      "path": "voices/jerome/events/moon-3.mp3",
+      "sha256": "188b41bd8cce839130c388e8ce9ad4f4acc19574560680c5422ef41e5c5bf389",
+      "duration": 1.02,
+      "gain": 0.5334
+    },
+    {
+      "name": "trump-red-2",
+      "start": 13.2907,
+      "end": 14.4356,
+      "text": "red is trump",
+      "path": "voices/jerome/events/trump-red-2.mp3",
+      "sha256": "7f086a83216de9cd90d6e09dcfccbe98bd60d3500698672121466a89badfac88",
+      "duration": 1.1449,
+      "gain": 0.4971
+    },
+    {
+      "name": "trump-red-3",
+      "start": 20.3015,
+      "end": 21.4026,
+      "text": "I'm calling red",
+      "path": "voices/jerome/events/trump-red-3.mp3",
+      "sha256": "67680c279c82addb1515d3202f18d8c2c885d81348a0654b7738da85760773dc",
+      "duration": 1.1011,
+      "gain": 0.5075
+    },
+    {
+      "name": "trump-green-2",
+      "start": 15.0144,
+      "end": 16.1883,
+      "text": "green is trump",
+      "path": "voices/jerome/events/trump-green-2.mp3",
+      "sha256": "ee423efddcada660536cbd777d8b9bce33993f66b1af00637d83fd1574b6595d",
+      "duration": 1.1739,
+      "gain": 0.5704
+    },
+    {
+      "name": "trump-green-3",
+      "start": 22.056,
+      "end": 23.3442,
+      "text": "I'm calling green",
+      "path": "voices/jerome/events/trump-green-3.mp3",
+      "sha256": "871e064810d8d9aa59627e5029ce7b04b65eb9f19ac4c4cf0f1b136684fe720c",
+      "duration": 1.2882,
+      "gain": 0.6603
+    },
+    {
+      "name": "trump-black-2",
+      "start": 16.7706,
+      "end": 17.9765,
+      "text": "black is trump",
+      "path": "voices/jerome/events/trump-black-2.mp3",
+      "sha256": "511468d095613c1342cfc0919dfadffb809c8c973d9ec36ad537814c7fc4ad5f",
+      "duration": 1.2059,
+      "gain": 0.6066
+    },
+    {
+      "name": "trump-black-3",
+      "start": 23.9149,
+      "end": 25.235,
+      "text": "I'm calling black",
+      "path": "voices/jerome/events/trump-black-3.mp3",
+      "sha256": "d45efb3ec07c0e37995879f74f74cb70bbce022b2f8ee7411f09e91db2e23e65",
+      "duration": 1.3201,
+      "gain": 0.4717
+    },
+    {
+      "name": "trump-yellow-2",
+      "start": 18.5588,
+      "end": 19.7948,
+      "text": "yellow is trump",
+      "path": "voices/jerome/events/trump-yellow-2.mp3",
+      "sha256": "c3c1c094e8377728aebe07128f722b92e44ae5d6d453e78e7b152e7d22209022",
+      "duration": 1.236,
+      "gain": 0.5124
+    },
+    {
+      "name": "trump-yellow-3",
+      "start": 25.768,
+      "end": 27.0529,
+      "text": "I'm calling yellow",
+      "path": "voices/jerome/events/trump-yellow-3.mp3",
+      "sha256": "5a8887808c1b563ca71077a5c300a73294cbacb0969ae505c1b2c373f966e0e0",
+      "duration": 1.2849,
+      "gain": 0.5995
+    },
+    {
+      "name": "set-opponent-1",
+      "start": 87.8578,
+      "end": 88.5589,
+      "text": "Gotcha!",
+      "path": "voices/jerome/events/set-opponent-1.mp3",
+      "sha256": "ecc83c37687672cd7db7516e95c423d2e5fbfb247e48ae1289e4632f5cb447a1",
+      "duration": 0.7011,
+      "gain": 0.4927
+    },
+    {
+      "name": "set-opponent-2",
+      "start": 89.0161,
+      "end": 90.3386,
+      "text": "Not this time, buddy.",
+      "path": "voices/jerome/events/set-opponent-2.mp3",
+      "sha256": "38e4c2dc04e92a350ef2e21f95c9b7ea5e140a9f3b618e91a0c95ba893554f56",
+      "duration": 1.3225,
+      "gain": 0.4818
+    },
+    {
+      "name": "made-1",
+      "start": 96.2377,
+      "end": 97.6681,
+      "text": "Now we're talking.",
+      "path": "voices/jerome/events/made-1.mp3",
+      "sha256": "0948e8ab0334027c1a23204b58dff9b1ff8ceae9d53f1d58bcb099c565b29dd3",
+      "duration": 1.4304,
+      "gain": 0.5175
+    },
+    {
+      "name": "made-2",
+      "start": 122.234,
+      "end": 123.749,
+      "text": "That's what I'm talking about.",
+      "path": "voices/jerome/events/made-2.mp3",
+      "sha256": "db68c20db95c2cd2e9d25f412d360622974f1408f0d6d8ab882414319cb822db",
+      "duration": 1.515,
+      "gain": 0.4842
+    },
+    {
+      "name": "got-set-1",
+      "start": 125.315,
+      "end": 126.759,
+      "text": "Well, we're still in this.",
+      "path": "voices/jerome/events/got-set-1.mp3",
+      "sha256": "efa9bfbfc57901e64f3626709e1c1284108ab4990f53eec1da5890365a0b3a5c",
+      "duration": 1.444,
+      "gain": 0.4952
+    },
+    {
+      "name": "got-set-2",
+      "start": 135.154,
+      "end": 136.605,
+      "text": "We can still pull it off.",
+      "path": "voices/jerome/events/got-set-2.mp3",
+      "sha256": "3f6fef055b5b9d4959945c2526647a641e759accdd99acc5fac9aaec08cf98bd",
+      "duration": 1.451,
+      "gain": 0.4068
+    },
+    {
+      "name": "good-game-1",
+      "start": 114.858,
+      "end": 115.602,
+      "text": "Good time.",
+      "path": "voices/jerome/events/good-game-1.mp3",
+      "sha256": "50734f623ebd5078beb0d645108c5770fa8db9d0ff2b171f10f200a57f26eb27",
+      "duration": 0.744,
+      "gain": 0.4915
+    },
+    {
+      "name": "good-game-2",
+      "start": 144.03,
+      "end": 145.084,
+      "text": "Good game, guys.",
+      "path": "voices/jerome/events/good-game-2.mp3",
+      "sha256": "14980f3c12978f58a64bd0a0c860b253d4758ac2de7529ab4e18778ff2262e4c",
+      "duration": 1.054,
+      "gain": 0.3951
+    },
+    {
+      "name": "win-1",
+      "start": 139.091,
+      "end": 140.256,
+      "text": "Well, that's a win.",
+      "path": "voices/jerome/events/win-1.mp3",
+      "sha256": "a290cd230bd79adb2122e08a2b7b4260c5f9aca823a6893b16fe75a9c8d1f941",
+      "duration": 1.165,
+      "gain": 0.5098
+    },
+    {
+      "name": "lose-1",
+      "start": 141.005,
+      "end": 143.138,
+      "text": "Ah better luck next time",
+      "path": "voices/jerome/events/lose-1.mp3",
+      "sha256": "68c3e7433c4e76eda1538ee022b1eb778108dabd860c74e2d376ee62ee05863e",
+      "duration": 2.133,
+      "gain": 0.5181
+    },
+    {
+      "name": "lose-2",
+      "start": 149.11,
+      "end": 150.865,
+      "text": "You win some, you lose some.",
+      "path": "voices/jerome/events/lose-2.mp3",
+      "sha256": "8250b5c7a4d9eea80fe12bcd6d1fe3fdc8e5bde7642f06fe0b0f4a7593bc0d47",
+      "duration": 1.755,
+      "gain": 0.5649
+    }
+  ],
+  "notes": "180/185 and Moon/lets-win-this were merged by silence detection; independently word-aligned and split. Short Good game corroborated by Library master transcript and full ASR; isolated ASR misheard game as time."
+}

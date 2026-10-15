@@ -1,0 +1,32 @@
+{
+  "status": "ISOLATED_TEST_PUBLICATION_PENDING",
+  "runtime": "810-rita-jerome-voice-review-20261015",
+  "sourceRuntime": "810-rita-review-20261015",
+  "sourceMain": "fc0b66c3aa84699225ac6fb7b4631c4030a30919",
+  "reviewUrl": "https://jeromeleegriffin.github.io/Test/builds/rita-review-20261015/",
+  "auditionUrl": "https://jeromeleegriffin.github.io/Test/builds/rita-review-20261015/voice-review.html",
+  "master": {
+    "filename": "Voice 261012_034339.m4a",
+    "libraryFileId": "libfile_cc50cf117d208191b731421fb14ee816",
+    "sha256": "1fd90c4a8794993515c7af2e0930cfedb7b45d45e311a8e038dce34bd51fe9c7",
+    "untouched": true
+  },
+  "originalDerivedClips": 44,
+  "originalTrumpOggsRetained": 4,
+  "rotation": {
+    "jeromeMoon": 3,
+    "jeromePass": 2,
+    "jeromeTrumpTakesPerColor": 3,
+    "existingMaleFemaleMoon": 2,
+    "otherMappedReactions": "Rotate within event bank; one result reaction at hand/match completion"
+  },
+  "roles": [
+    "Jerome bot",
+    "Jerome playable human"
+  ],
+  "voiceQueue": "One simultaneous spoken source across bids, Pass, Moon, trump and result reactions",
+  "tests": "16 started simulated sources, max concurrent1; bot/human authentic routing,180/185 separate, Pass/Moon/trump rotation, duplicate Moon guards, Silent, stale pending event, result dedup, generic voices and persisted counters passed. All44 MP3s decode; critical split ASR verified. Syntax passes.",
+  "limits": "No subjective listening or physical Android audio timing; no fresh complete match/live cross-device multiplayer/installed offline upgrade certification.",
+  "scope": "Isolated Rita review subdirectory updated; main Test runtime and production unchanged. No new game ZIP/number.",
+  "rollbackBranch": "rollback/pre-jerome-voice-review-20261015"
+}
