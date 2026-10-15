@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "brainVersion": "AE",
+      "updated": "2026-10-15",
+      "browse": "versions/AE/index.html",
+      "artifact": "",
+      "sha256": "f781c8e0c79fa5a0bba1568dfddc484d15c22a4414ff8cae43cefc03044e28a5",
+      "sha256Scope": "primaryDocumentation",
+      "documentationOnly": true,
+      "manifest": "versions/AE/inventory.json",
+      "archiveStatus": "810 owner-approved current release; exact runtime published to both repositories; landscape isolated."
+    },
+    {
       "brainVersion": "AD",
       "updated": "2026-10-15",
       "browse": "versions/AD/index.html",
@@ -241,4 +252,3 @@
     "B"
   ]
 }
-

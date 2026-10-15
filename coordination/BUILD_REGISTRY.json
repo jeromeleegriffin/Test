@@ -3,7 +3,7 @@
   "authority": "Test/main coordination/BUILD_REGISTRY.json",
   "policy": "coordination/BUILD_NUMBERING.md",
   "updated": "2026-10-15",
-  "approvedWorkingBuild": "805-ownerreview/805-atmosphere1",
+  "approvedWorkingBuild": "810",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
   "nextNumberHint": 811,
@@ -2144,21 +2144,26 @@
     {
       "number": "810",
       "reservationId": "loading-reconcile-9a8f4d-20261015",
-      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED",
+      "status": "OWNER_APPROVED_DEPLOYED_BOTH",
       "date": "2026-10-15",
       "workstream": "Main loading integration; landscape held separately",
       "sourceCommit": "f487af34130adc91f90ce542fee8b826969120a0",
       "sourcePackageSha256": "ecf9464a4b41271ffa9e058fab86403a7ddde916596b545bae22e8b95dc2ef63",
-      "task": "Complete newest-source game ZIP with supplied loader, first-card investigation and exact dependency checks; no deployment",
+      "task": "Complete loading integration; owner approved latest release and deployment to Test and actual Rook on 2026-10-15.",
       "filename": "810.zip",
       "bytes": 142859199,
       "sha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
       "runtimeFiles": 1498,
       "libraryFileId": "libfile_e853285ef0308191a811470c6f089203",
-      "ownerApproved": false,
+      "ownerApproved": true,
       "physicalAndroidTested": false,
-      "deployed": false,
-      "checkpoint": "coordination/LOADING_810_20261015.md"
+      "deployed": true,
+      "checkpoint": "coordination/LOADING_810_20261015.md",
+      "deploymentStatus": "DEPLOYED_TEST_AND_ACTUAL_ROOK",
+      "ownerDecisionAt": "2026-10-15T12:41:55-04:00",
+      "releaseReceipt": "coordination/releases/810-approved/LIVE_RECEIPT.json",
+      "testReleaseCommit": "9dba4bd7070b14a217b68d42764d82719bee9617",
+      "productionReleaseCommit": "7a5ede7773deb267c26647f9e4ec7f6215b54d80"
     }
   ],
   "testSiteBuild": "805-ownerreview",
@@ -2224,4 +2229,3 @@
     "physicalAndroidFullyVerified": false
   }
 }
-
