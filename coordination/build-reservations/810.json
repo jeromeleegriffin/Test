@@ -1,0 +1,10 @@
+{
+  "number": "810",
+  "reservationId": "loading-reconcile-9a8f4d-20261015",
+  "status": "RESERVED",
+  "date": "2026-10-15",
+  "workstream": "Main loading integration; landscape held separately",
+  "sourceCommit": "f487af34130adc91f90ce542fee8b826969120a0",
+  "sourcePackageSha256": "ecf9464a4b41271ffa9e058fab86403a7ddde916596b545bae22e8b95dc2ef63",
+  "task": "Complete newest-source game ZIP with supplied loader, first-card investigation and exact dependency checks; no deployment"
+}
