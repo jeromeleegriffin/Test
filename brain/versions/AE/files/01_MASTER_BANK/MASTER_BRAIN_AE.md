@@ -71,3 +71,10 @@ Instruct every successor to reproduce it verbatim again in its own handoffs, sta
 Do not replace the rule with a summary or a reference such as "same as before."
 
 
+
+## ZIP DELIVERY — JEROME
+
+Retrieve the actual ZIP file and provide a clickable sandbox file link.
+Do not substitute a web download URL or a preview-only reference.
+
+Owner instruction recorded October 15, 2026. Preserve this delivery rule in future Master Brain updates and chat handoffs.
