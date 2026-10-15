@@ -3,7 +3,7 @@
   "authority": "Test/main coordination/BUILD_REGISTRY.json",
   "policy": "coordination/BUILD_NUMBERING.md",
   "updated": "2026-10-15",
-  "approvedWorkingBuild": "810",
+  "approvedWorkingBuild": "810-moon-bidtext-review",
   "historicalNumbersThrough": 750,
   "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
   "nextNumberHint": 811,
@@ -2166,7 +2166,7 @@
       "productionReleaseCommit": "7a5ede7773deb267c26647f9e4ec7f6215b54d80"
     }
   ],
-  "testSiteBuild": "805-ownerreview",
+  "testSiteBuild": "810-moon-bidtext-review",
   "previousApprovedWorkingBuild": "783",
   "publishedBrainApprovedBuild": "783",
   "publishedBrainVersion": "AD",
@@ -2200,16 +2200,16 @@
       "ownerAndroidAccepted": false
     }
   ],
-  "latestDeliveredGameBuild": "810",
-  "latestDeliveredGameStatus": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED",
-  "latestDeliveredGameSha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
+  "latestDeliveredGameBuild": "810-moon-bidtext-review",
+  "latestDeliveredGameStatus": "OWNER_APPROVED",
+  "latestDeliveredGameSha256": "d5fa04321795e4c58c6b5a8577cf5dce9266d377ecbdefe66acced5089811f08",
   "latestVisualReviewBuild": "804",
   "lastReconciliation": "798–805 retrospectively registered from retained archive hashes; no earlier remote reservation is claimed",
   "testSitePreviousBuild": "805-ownerfix2",
-  "testSiteReleaseId": "805-atmosphere1",
-  "testSiteRuntimeCommit": "0307ba69cceaaaf68317e6dffe3dd7d09e033ac6",
+  "testSiteReleaseId": "moon-approved-20261015",
+  "testSiteRuntimeCommit": "3d41595f0a6ee4850c54aaf6e1d7bfd51891ca06",
   "standingTestWorkflow": "coordination/TEST_SITE_WORKFLOW.md",
-  "lastTestDeploymentReceipt": "coordination/releases/atmosphere-controls-20261014/LIVE_RECEIPT.json",
+  "lastTestDeploymentReceipt": "coordination/releases/moon-approved-20261015/LIVE_RECEIPT.json",
   "preLandscapeFallback": {
     "id": "805-ownerreview/805-atmosphere1",
     "sourceCommit": "b551144768084fc81c12de03682eae4e78f8e600",
@@ -2227,5 +2227,22 @@
     "landscapePolicy": "ISOLATED_TEST_ZIP_ONLY_DO_NOT_PUBLISH",
     "noNewZip": true,
     "physicalAndroidFullyVerified": false
+  },
+  "currentRuntimeRelease": {
+    "releaseId": "moon-approved-20261015",
+    "runtime": "810-moon-bidtext-review",
+    "status": "OWNER_APPROVED_DEPLOYED_BOTH",
+    "artifact": {
+      "filename": "Griffin_House_Moon_Bid_Text_Matched_Review.zip",
+      "bytes": 147679847,
+      "sha256": "d5fa04321795e4c58c6b5a8577cf5dce9266d377ecbdefe66acced5089811f08",
+      "libraryFileId": "libfile_ddcce3113ddc81919946aacbd7f5b8f8",
+      "runtimeFiles": 1502,
+      "status": "OWNER_APPROVED_DEPLOYED_BOTH"
+    },
+    "testCommit": "3d41595f0a6ee4850c54aaf6e1d7bfd51891ca06",
+    "productionCommit": "72fa8d188b4d34b01dc31aeddf3c7231cde1af7b",
+    "receipt": "coordination/releases/moon-approved-20261015/LIVE_RECEIPT.json",
+    "newNumberReserved": false
   }
 }

@@ -10,13 +10,13 @@
   "startupPrompt": "versions/AE/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
   "history": "history.html",
   "previousVersion": "AD",
-  "checkpoint": "owner-approved-810-20261015",
-  "checkpointStatus": "OWNER_APPROVED_CURRENT_RELEASE",
-  "approvedWorkingBuild": "810",
-  "testRootObservedBuild": "810",
-  "gamePublicationStatus": "810_OWNER_APPROVED_DEPLOYED_BOTH",
-  "onScreenVersion": "810",
-  "liveCommit": "7a5ede7773deb267c26647f9e4ec7f6215b54d80",
+  "checkpoint": "moon-approved-20261015",
+  "checkpointStatus": "OWNER_APPROVED_DEPLOYED_BOTH",
+  "approvedWorkingBuild": "810-moon-bidtext-review",
+  "testRootObservedBuild": "810-moon-bidtext-review",
+  "gamePublicationStatus": "OWNER_APPROVED_DEPLOYED_BOTH",
+  "onScreenVersion": "810-moon-bidtext-review",
+  "liveCommit": "72fa8d188b4d34b01dc31aeddf3c7231cde1af7b",
   "liveTable": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
   "foundationVersion": "H",
   "foundationArtifact": "artifacts/GRIFFIN_HOUSE_MASTER_BANK_2026-10-06_H_MASTER_BRAIN.zip",
@@ -33,7 +33,7 @@
   "candidateStatus": "OWNER_APPROVED",
   "roomStateCheckpoint": "R531-room-state",
   "roomStateStatus": "OWNER_VERIFIED_FIXED",
-  "archiveStatus": "Immutable 810.zip approved as latest release; landscape remains separate.",
+  "archiveStatus": "Exact approved Moon review ZIP promoted unchanged; original810.zip preserved",
   "codexWriteTestCommit": "ec5e1ef48b3c7881bb5b355aaad602b86b5b9173",
   "codexWriteTestStatus": "VERIFIED_SMALL_TEXT_FILE_TEMPORARY_BRANCH",
   "workCodexWriteStatus": "VERIFIED_CONNECTED_GITHUB_API_TEST_MAIN_TEXT_UPDATE",
@@ -42,11 +42,11 @@
   "kittyIntegrationStatus": "OWNER_APPROVED_PRESERVED_IN751",
   "kittyPortablePackageLibraryId": "libfile_aab3a1735ed081918c6780b8af61600c",
   "brainVerificationStatus": "AE_OWNER_APPROVED_RELEASE",
-  "approvedWorkingBuildSha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
-  "latestLocalCandidateBuild": "810",
+  "approvedWorkingBuildSha256": "d5fa04321795e4c58c6b5a8577cf5dce9266d377ecbdefe66acced5089811f08",
+  "latestLocalCandidateBuild": "810-moon-bidtext-review",
   "discardIntegrationStatus": "OWNER_APPROVED_PRESERVED_IN751",
   "specialistCheckpointUpdatePolicy": "Every requested task must include a complete Brain status update; publish within task authorization, otherwise supply ready handoff",
-  "latestLocalCandidateSha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
+  "latestLocalCandidateSha256": "d5fa04321795e4c58c6b5a8577cf5dce9266d377ecbdefe66acced5089811f08",
   "latestLocalCandidateStatus": "OWNER_APPROVED",
   "buildRegistry": "../coordination/BUILD_REGISTRY.json",
   "buildNumberingPolicy": "../coordination/BUILD_NUMBERING.md",
@@ -58,16 +58,16 @@
   "signatureShuffleLibraryFileId": "libfile_809231d5167c8191bb1651de900b664a",
   "trumpVoiceStatus": "EXISTING_CLIPS_PRESERVED_779_WITH_HUMAN_VOICE_CHOICES",
   "trumpVoiceReviewLibraryFileId": "libfile_5c43ca8ca7088191af96e6fa6e980e55",
-  "mainDevelopmentCheckpoint": "../coordination/releases/810-approved/LIVE_RECEIPT.json",
+  "mainDevelopmentCheckpoint": "../coordination/releases/moon-approved-20261015/LIVE_RECEIPT.json",
   "smallBiddingStatus": "PRESERVED771_WITH_CHARACTER_STATUS_ANCHOR_REPAIRS",
   "railClearanceStatus": "PRESERVED771_EXISTING_SAFE_SUPPRESSION_LIMIT_UNCHANGED",
-  "latestGameBuild": "810",
-  "latestGameLibraryFileId": "libfile_e853285ef0308191a811470c6f089203",
-  "latestGameFilename": "810.zip",
+  "latestGameBuild": "810-moon-bidtext-review",
+  "latestGameLibraryFileId": "libfile_ddcce3113ddc81919946aacbd7f5b8f8",
+  "latestGameFilename": "Griffin_House_Moon_Bid_Text_Matched_Review.zip",
   "cleanFallbackCandidate": "766",
   "cleanFallbackStatus": "766_OWNER_APPROVED_HISTORICAL_FALLBACK",
-  "testServerPlannedBuild": "810",
-  "testServerDeploymentStatus": "810_DEPLOYED_LIVE_CHANGED_FILES_HASH_VERIFIED",
+  "testServerPlannedBuild": "810-moon-bidtext-review",
+  "testServerDeploymentStatus": "LIVE_HASH_VERIFIED",
   "defaultIntelligence": "CHALLENGER-X1 frozen card play with owner-authorized sampled bid-jump evaluation",
   "backupIntelligence": "Sol7 original frozen",
   "epaEnabled": false,
@@ -82,7 +82,7 @@
     "physicalTabletVerified": false,
     "implementedBuild": "771"
   },
-  "testServerDeploymentCommit": "9dba4bd7070b14a217b68d42764d82719bee9617",
+  "testServerDeploymentCommit": "3d41595f0a6ee4850c54aaf6e1d7bfd51891ca06",
   "testServerUrl": "https://jeromeleegriffin.github.io/Test/",
   "testRootRollbackCommit": "b912530bcffe9b5de733721c7fd710b9aa492acf",
   "fullCastTrumpVoiceCheckpoint": "../coordination/FULL_CAST_TRUMP_VOICES_790.md",
@@ -114,39 +114,37 @@
   "latestOwnerPhoneReview": {
     "status": "PASS_OWNER_REPORTED",
     "reviewer": "Jerome Griffin",
-    "reportedAt": "2026-10-12T22:30:44-04:00",
-    "build": "794",
-    "quote": "That's supposed to say everything did pass.",
-    "context": "Owner corrected the preceding message: everything passed his phone test of delivered794.",
-    "scope": "Overall owner phone acceptance of the delivered794 build. Individual test counts, device measurements and haptic timings were not supplied; do not invent them.",
-    "deploymentAuthorized": false
+    "reportedAt": "2026-10-15T18:29:43-04:00",
+    "build": "810-moon-bidtext-review",
+    "quote": "Everything checks out. Make this the new live version. Push it to both repositories, test and house of rooks",
+    "scope": "Final approved Moon/Bid Box candidate; not exhaustive physical-device certification.",
+    "deploymentAuthorized": true
   },
   "testRepository": "JeromeLeeGriffin/Test",
   "releasePackage": {
-    "filename": "810.zip",
-    "bytes": 142859199,
-    "sha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
-    "runtimeFiles": 1498,
-    "libraryFileId": "libfile_e853285ef0308191a811470c6f089203",
+    "filename": "Griffin_House_Moon_Bid_Text_Matched_Review.zip",
+    "bytes": 147679847,
+    "sha256": "d5fa04321795e4c58c6b5a8577cf5dce9266d377ecbdefe66acced5089811f08",
+    "libraryFileId": "libfile_ddcce3113ddc81919946aacbd7f5b8f8",
+    "runtimeFiles": 1502,
     "status": "OWNER_APPROVED_DEPLOYED_BOTH"
   },
-  "pagesWorkflowRunId": "38771606831",
+  "pagesWorkflowRunId": "38821157572",
   "pagesWorkflowConclusion": "success",
   "liveAssetVerification": {
-    "status": "11_CHANGED_LIVE_FILE_HASHES_VERIFIED",
-    "runtime": "810",
-    "changedServedFiles": 11,
+    "status": "15_CHANGED_LIVE_FILES_HASH_VERIFIED_BOTH",
+    "runtime": "810-moon-bidtext-review",
+    "changedServedFiles": 15,
     "activeServiceWorkerControllerVerified": false,
     "offlineReloadVerified": false,
-    "limit": "Local 810 offline passed; live installed-device upgrade not recertified.",
-    "browserStartup": "PASS_CLOUD_BROWSER_LANDING"
+    "browserStartup": "PASS_CLOUD_BROWSER_LOBBY_BOTH"
   },
   "deployedTestReleasePackage": {
-    "filename": "810.zip",
-    "bytes": 142859199,
-    "sha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
-    "runtimeFiles": 1498,
-    "libraryFileId": "libfile_e853285ef0308191a811470c6f089203",
+    "filename": "Griffin_House_Moon_Bid_Text_Matched_Review.zip",
+    "bytes": 147679847,
+    "sha256": "d5fa04321795e4c58c6b5a8577cf5dce9266d377ecbdefe66acced5089811f08",
+    "libraryFileId": "libfile_ddcce3113ddc81919946aacbd7f5b8f8",
+    "runtimeFiles": 1502,
     "status": "OWNER_APPROVED_DEPLOYED_BOTH"
   },
   "previousPortableDocumentation": {
@@ -163,10 +161,10 @@
     "deployedSiteVerified": false
   },
   "currentCandidateAcceptance": {
-    "build": "810",
+    "build": "810-moon-bidtext-review",
     "packagingAuthorized": true,
     "ownerApproved": true,
-    "ownerDecisionAt": "2026-10-15T12:41:55-04:00",
+    "ownerDecisionAt": "2026-10-15T18:29:43-04:00",
     "physicalAndroidExhaustivelyVerified": false,
     "deployed": true
   },
@@ -203,7 +201,7 @@
     "mainDevelopmentCheckpoint": "../coordination/SESSION_798_805.md"
   },
   "standingTestWorkflow": "../coordination/TEST_SITE_WORKFLOW.md",
-  "currentTestReleaseReceipt": "../coordination/releases/810-approved/LIVE_RECEIPT.json",
+  "currentTestReleaseReceipt": "../coordination/releases/moon-approved-20261015/LIVE_RECEIPT.json",
   "currentOwnerMenuDecision": "Latest explicit owner choice: shared midnight-blue/gold individually raised buttons, fixed non-scrolling pages; supersedes conflicting Menu A appearance history only.",
   "latestTestRepairCheckpoint": "../coordination/WELCOME_ORNAMENT_HANDOFF_20261014.md",
   "shareIconRepair": {
@@ -223,8 +221,8 @@
   },
   "currentTestSource": {
     "type": "GitHub Test runtime",
-    "commit": "9dba4bd7070b14a217b68d42764d82719bee9617",
-    "runtime": "810"
+    "commit": "3d41595f0a6ee4850c54aaf6e1d7bfd51891ca06",
+    "runtime": "810-moon-bidtext-review"
   },
   "previousRuntimeLiveVerification": {
     "status": "LIVE_OWNER_CORRECTIONS_FILES_AND_BROWSER_VERIFIED",
@@ -487,8 +485,8 @@
     "noNewZip": true,
     "physicalAndroidFullyVerified": false
   },
-  "approvedWorkingBuildCommit": "9dba4bd7070b14a217b68d42764d82719bee9617",
-  "approvedWorkingBuildHashNote": "Immutable 810.zip SHA-256; exact runtime manifest in release record.",
+  "approvedWorkingBuildCommit": "3d41595f0a6ee4850c54aaf6e1d7bfd51891ca06",
+  "approvedWorkingBuildHashNote": "Immutable Griffin_House_Moon_Bid_Text_Matched_Review.zip SHA-256; exact1502 runtime manifest in current release receipt.",
   "landscapeDevelopmentPolicy": {
     "delivery": "ISOLATED_TEST_ZIP_ONLY",
     "testSitePublishing": false,
@@ -507,7 +505,7 @@
     "commit": "f487af34130adc91f90ce542fee8b826969120a0",
     "patch": "../coordination/releases/loading810-20261015/810.patch"
   },
-  "testSiteVerificationNote": "All1498 runtime Git blobs and all11 changed live HTTP file hashes match810. Cloud browser reached the live Test landing screen; local complete-hand/offline evidence retained. Physical device cache upgrade not recertified.",
+  "testSiteVerificationNote": "All1502 runtime Git blobs and all15 changed served SHA256 hashes match approved artifact on BOTH sites. Cloud browser reached both lobbies. Installed-device SW/offline upgrade remains unverified.",
   "historicalApprovedVisualDesign": {
     "date": "2026-10-14",
     "room": "B — Fireplace Priority",
@@ -564,32 +562,43 @@
     "reviewReportLibraryId": "libfile_f8c593b87fc48191a3f24e8ffc0c7157",
     "approvedDirectionLibraryId": "libfile_9e4ea76738d0819187b13a44af2b49c8"
   },
-  "productionBuild": "810",
-  "productionDeploymentCommit": "7a5ede7773deb267c26647f9e4ec7f6215b54d80",
+  "productionBuild": "810-moon-bidtext-review",
+  "productionDeploymentCommit": "72fa8d188b4d34b01dc31aeddf3c7231cde1af7b",
   "productionDeploymentStatus": "LIVE_HASH_VERIFIED",
   "currentReleaseApproval": {
-    "build": "810",
+    "releaseId": "moon-approved-20261015",
+    "runtime": "810-moon-bidtext-review",
     "status": "OWNER_APPROVED_DEPLOYED_BOTH",
     "owner": "Jerome Griffin",
-    "ownerDecisionAt": "2026-10-15T12:41:55-04:00",
-    "ownerQuote": "Lock it down as the most recent ... Push this to the actual Rook repository and the test repository.",
-    "sha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
-    "libraryFileId": "libfile_e853285ef0308191a811470c6f089203",
-    "deploymentStatus": "COMPLETE",
-    "physicalAndroidExhaustivelyVerified": false,
-    "landscapeIncluded": false,
-    "rollback": {
-      "Test": {
-        "branch": "rollback/pre-810-20261015",
-        "commit": "4ec1020cb178fe8d6a179eb0c5f5d8e8acf82909"
-      },
-      "Griffin-House-of-Rooks": {
-        "branch": "rollback/pre-810-20261015",
-        "commit": "542d7d5be8a5183b5d759cfcdc15051529d777a1"
-      }
+    "ownerApprovalAt": "2026-10-15T18:29:43-04:00",
+    "deploymentAuthorizedAt": "2026-10-15T18:33:33-04:00",
+    "ownerQuote": "Everything checks out. Make this the new live version. Push it to both repositories, test and house of rooks",
+    "zip": {
+      "filename": "Griffin_House_Moon_Bid_Text_Matched_Review.zip",
+      "bytes": 147679847,
+      "sha256": "d5fa04321795e4c58c6b5a8577cf5dce9266d377ecbdefe66acced5089811f08",
+      "libraryFileId": "libfile_ddcce3113ddc81919946aacbd7f5b8f8"
     },
-    "productionCommit": "7a5ede7773deb267c26647f9e4ec7f6215b54d80",
-    "testCommit": "9dba4bd7070b14a217b68d42764d82719bee9617"
+    "runtimePaths": 1502,
+    "unchangedPriorRuntimePaths": 1487,
+    "changedOrNewRuntimePaths": 15,
+    "previousOfficial": "810",
+    "rollbackBranch": "rollback/pre-moon-20261015-1833",
+    "preReleaseHeads": {
+      "Test": "6c2156624406765501b2c00463fa671da3daf8f6",
+      "Griffin-House-of-Rooks": "87fb13419242786d6d99d285d0ab40dc622c2c29"
+    },
+    "checks": {
+      "package": "All ZIP CRC and manifest hashes pass; runtime bytes match approved ZIP",
+      "state": "14 UI/state tests, real adapter checks, 11 host progression/scoring fixture cases",
+      "phone": "Owner screenshots reviewed; owner explicitly approved and reported everything checks out",
+      "limits": "No assistant-run real browser, subjective listening, full played Moon hand, live multiplayer or installed worker/offline upgrade for this candidate. Landscape remains paused and excluded."
+    },
+    "runtimeLabelPolicy": "Retain exact tested artifact runtime/cache labels; no silent renumber or rebuild.",
+    "deploymentStatus": "COMPLETE",
+    "productionCommit": "72fa8d188b4d34b01dc31aeddf3c7231cde1af7b",
+    "testCommit": "3d41595f0a6ee4850c54aaf6e1d7bfd51891ca06",
+    "receipt": "../coordination/releases/moon-approved-20261015/LIVE_RECEIPT.json"
   },
   "zipDeliveryPolicy": "Retrieve the actual ZIP file and provide a clickable sandbox file link. Do not substitute a web download URL or a preview-only reference.",
   "zipDeliveryConfirmedByOwner": "2026-10-15: actual sandbox ZIP link worked",
@@ -598,5 +607,42 @@
     "status": "DIRECTION_SELECTED_FINISHED_ASSET_REQUESTED",
     "reviewLibraryFileId": "libfile_efb50a34cb5c819189b8ef9e2554e940",
     "scope": "Asset work prompt; no runtime integration or deployment"
-  }
+  },
+  "previousOfficialReleaseCheckpoint": {
+    "runtime": "810",
+    "approval": {
+      "build": "810",
+      "status": "OWNER_APPROVED_DEPLOYED_BOTH",
+      "owner": "Jerome Griffin",
+      "ownerDecisionAt": "2026-10-15T12:41:55-04:00",
+      "ownerQuote": "Lock it down as the most recent ... Push this to the actual Rook repository and the test repository.",
+      "sha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
+      "libraryFileId": "libfile_e853285ef0308191a811470c6f089203",
+      "deploymentStatus": "COMPLETE",
+      "physicalAndroidExhaustivelyVerified": false,
+      "landscapeIncluded": false,
+      "rollback": {
+        "Test": {
+          "branch": "rollback/pre-810-20261015",
+          "commit": "4ec1020cb178fe8d6a179eb0c5f5d8e8acf82909"
+        },
+        "Griffin-House-of-Rooks": {
+          "branch": "rollback/pre-810-20261015",
+          "commit": "542d7d5be8a5183b5d759cfcdc15051529d777a1"
+        }
+      },
+      "productionCommit": "7a5ede7773deb267c26647f9e4ec7f6215b54d80",
+      "testCommit": "9dba4bd7070b14a217b68d42764d82719bee9617"
+    },
+    "releasePackage": {
+      "filename": "810.zip",
+      "bytes": 142859199,
+      "sha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
+      "runtimeFiles": 1498,
+      "libraryFileId": "libfile_e853285ef0308191a811470c6f089203",
+      "status": "OWNER_APPROVED_DEPLOYED_BOTH"
+    },
+    "record": "../coordination/releases/810-approved/LIVE_RECEIPT.json"
+  },
+  "releaseSupplement": "../coordination/releases/moon-approved-20261015/CHECKPOINT.md"
 }
