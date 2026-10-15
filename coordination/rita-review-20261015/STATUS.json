@@ -1,0 +1,47 @@
+{
+  "status": "ISOLATED_TEST_REVIEW_NOT_PRODUCTION_APPROVED",
+  "name": "Rita",
+  "avatarId": "rita",
+  "persona": "partnerFirst",
+  "voice": "female",
+  "humanSelectable": true,
+  "sourceRuntime": "810-moon-bidtext-review",
+  "sourceHead": "e9acbe91507f5ad8e2f150f132c76d2f1b2e73b8",
+  "reviewPath": "builds/rita-review-20261015/",
+  "runtime": "810-rita-review-20261015",
+  "runtimeTree": "5c11d1c4e55973f2e09dd0f266208be97a6b4938",
+  "runtimeFiles": 1508,
+  "changedPaths": [
+    "sw060.js",
+    "rita-avatar.js",
+    "index.html",
+    "hor-version.js",
+    "rita-bot.js",
+    "game060.js",
+    "x1/integration.js",
+    "assets/characters077/human/rita-right.webp",
+    "assets/characters077/human/rita-left.webp",
+    "assets/characters077/human/rita-portrait.webp",
+    "assets/characters077/human/rita-top.webp"
+  ],
+  "checks": [
+    "Node syntax",
+    "Bot unique/idempotent",
+    "Human avatar allowed and portrait path",
+    "Female bot/human default and Silent",
+    "Real four-color female audio assets",
+    "Rita X1 Partner First route",
+    "Eligibility boundary retained",
+    "Actual addBot Rita creation",
+    "Actual human-priority duplicate resolution preserving bot ID/team",
+    "All1508 candidate Git blobs verified",
+    "Existing character renderer, bot core and voice audio code unchanged"
+  ],
+  "limits": [
+    "In-game seated pose/phone review pending",
+    "Full hand/match not rerun",
+    "Subjective listening and installed offline upgrade not newly certified"
+  ],
+  "productionChanged": false,
+  "mainTestRuntimeChanged": false
+}
