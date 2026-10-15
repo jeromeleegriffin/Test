@@ -230,8 +230,13 @@
   else if(current?.phase==='trump'&&current.bidder===currentMe&&!opts.spectator&&!current.paused&&dockRef&&submitRef)choose(dockRef,submitRef,current);
   position();
  }
- const preload=[...Object.keys(specs),'confirm-brass'].map(name=>new Promise(resolve=>{const im=new Image();im.onload=()=>{try{if(name==='stamp'){stampSource=im;buildMaterials(im);}resolve(true);}catch(error){log('asset-error',String(error));resolve(false);}};im.onerror=()=>resolve(false);im.src=assetRoot+name+'.png';}));
- Promise.all(preload).then(values=>{ready=values.every(Boolean);log('assets',ready);});
+ function prepareMaterials(){
+  const preload=[...Object.keys(specs),'confirm-brass'].map(name=>window.HORAssetLoading772.image(assetRoot+name+'.png').then(im=>{
+   if(name==='stamp'){stampSource=im;buildMaterials(im);}return true;
+  }).catch(error=>{log('asset-error',String(error));return false;}));
+  Promise.all(preload).then(values=>{ready=values.every(Boolean);log('assets',ready);});
+ }
+ prepareMaterials();document.addEventListener('hor-artwork-retry',()=>{if(!ready)prepareMaterials();});
  const faintTable=new Image();faintTable.onload=()=>{document.body.classList.add('trump746-faint');log('faint-table',true);};faintTable.onerror=()=>log('faint-table',false);faintTable.src='assets/trump746/table-faint.png';
  const table=new Image();table.onload=()=>{
   // Actual-pixel mask: the approved pale crest has a distinct red/blue ratio

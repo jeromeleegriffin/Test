@@ -68,20 +68,8 @@ function cardColorWord(card) {
 /** Red 2 art: try assets/images/Red2.png → assets/images/Red2.webp → Red2.jpg → plain text face (no broken icon) */
 window.__red2ImgError = function (img) {
   if (!img) return;
-  const step = img.dataset.fallback || '1';
-  if (step === '1') {
-    img.dataset.fallback = '2';
-    img.src = 'assets/images/Red2.webp?v=632';
-    return;
-  }
-  img.onerror = null;
-  const parent = img.parentElement;
-  if (parent) {
-    parent.className = 'c-stack';
-    parent.innerHTML = '<div class="c-bar top"></div><div class="c-num">2</div><div class="c-color">trump</div><div class="c-bar bot"></div>';
-  }
-  const face = parent && parent.closest('.card-face');
-  if (face) face.classList.remove('red2-art');
+  img.style.display = 'none';
+  if (img.nextElementSibling) img.nextElementSibling.style.display = 'flex';
 };
 
 function cardInnerHTML(card) {

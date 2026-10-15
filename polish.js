@@ -1629,17 +1629,21 @@
     };
   }
 
-  // card art: prefer compact webp
+  // Keep the active bird artwork and a readable identity until decoding completes.
+  function birdFaceLoading(stack, imageClass, src, alt, label) {
+    return `<div class="c-stack ${stack}"><img class="${imageClass}" src="${src}" alt="${alt}" draggable="false" onload="this.style.display='block';this.nextElementSibling.style.display='none'" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="asset-bird-fallback772">${label}</span></div>`;
+  }
+  // card art: preserve the existing selected premium/original URLs
   const _inner = window.cardInnerHTML;
   window.cardInnerHTML = function (card) {
     const premium = !document.documentElement.classList.contains('hor-original-cards');
     if (card && (card.color === 'rook' || card.id === 'rook')) {
-      if (premium) return '<div class="c-stack rook-stack premium-raven"><img class="rook-bird-img" src="assets/images/RookPremium.png?v=632" alt="Black Raven" draggable="false"></div>';
-      return '<div class="c-stack rook-stack"><img class="rook-bird-img" src="assets/images/Rook.webp" alt="Bird" draggable="false" onerror="this.src=\'assets/images/Rook.png\'"></div>';
+      if (premium) return birdFaceLoading('rook-stack premium-raven', 'rook-bird-img', 'assets/images/RookPremium.png?v=632', 'Black Raven', 'BLACK BIRD');
+      return birdFaceLoading('rook-stack', 'rook-bird-img', 'assets/images/Rook.webp', 'Black Raven', 'BLACK BIRD');
     }
     if (card && typeof isRed2 === 'function' && isRed2(card) && includeRed2) {
-      if (premium) return '<div class="c-stack red2-stack premium-raven"><img class="red2-img" src="assets/images/Red2Premium.png?v=632" alt="Fictional Red Raven 2" draggable="false"></div>';
-      return '<div class="c-stack red2-stack"><img class="red2-img" src="assets/images/Red2-card.webp" alt="Red 2" draggable="false" onerror="this.src=\'assets/images/Red2.png\'"></div>';
+      if (premium) return birdFaceLoading('red2-stack premium-raven', 'red2-img', 'assets/images/Red2Premium.png?v=632', 'Red 2', 'RED 2');
+      return birdFaceLoading('red2-stack', 'red2-img', 'assets/images/Red2-card.webp', 'Red 2', 'RED 2');
     }
     const html = _inner.apply(this, arguments);
     return html;

@@ -2,9 +2,15 @@
  * Author: Jerome Griffin
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
-const BUILD = '805-ownerreview';
-const CACHE = 'house-of-rooks-808-local';
+const BUILD = '810';
+const CACHE = 'house-of-rooks-810-loading';
 const SHELL = [
+ "./assets/bidbox-approved/bidbox_complete_blank.png?v=712",
+ "./assets/images/griffin-icon.png",
+ "./assets/images/griffin-icon.png?v=631",
+ "./assets/images/cardback-signature.png",
+ "./assets/images/cardback-griffin-clean.jpg",
+
  "./owner-review805.css?v=805-ownerreview",
  "./assets/images/avatar-raven-approved.jpg",
  "./tablet-scoreboard805.css?v=805-ownerreview",
@@ -480,9 +486,9 @@ const SHELL = [
  './room-approved805.css?v=805-ownerreview','./room-approved805.js?v=805-ownerreview',
  './menu-approved805.css?v=805-atmosphere1','./menu-approved805.js?v=805-atmosphere1',
  './assets/approved805/griffin-logo.png','./assets/approved805/ceiling-wood.png',
- './landing783.css?v=805-ownerreview','./landing783.js?v=805-ownerreview',
- './hor-version.js?v=805-ownerreview',
- './friends803.js?v=805-ownerreview','./friends803.css?v=805-ownerreview',
+ './landing783.css?v=805-ownerreview','./landing783.js?v=810-loading',
+ './hor-version.js?v=810',
+ './friends803.js?v=810-loading','./friends803.css?v=805-ownerreview',
  './audio-mixer.js?v=805-ownerreview','./audio-mixer.css?v=805-ownerreview',
  './career-phone-test.js?v=career-phone-test-v1',
  './career-core.js?v=805-ownerreview','./moon-howl.js?v=805-atmosphere1','./progression.js?v=805-ownerreview','./assets/audio/cabin041/wolf.wav',
@@ -538,9 +544,9 @@ const SHELL = [
  './assets/cards/numbered/yellow-8.png',
  './assets/cards/numbered/yellow-9.png',
 
- './character-library774.js?v=795',"./assets/images/avatar-claire.svg","./assets/images/avatar-june.svg","./assets/images/avatar-tess.svg","./assets/images/avatar-marcus.svg","./assets/images/avatar-owen.svg","./assets/images/avatar-daniel.svg","./assets/images/avatar-sofia.svg","./assets/images/avatar-rafael.svg","./assets/images/avatar-samir.svg", './asset-loading772.js?v=795','./asset-loading772.css?v=795',
+ './character-library774.js?v=795',"./assets/images/avatar-claire.svg","./assets/images/avatar-june.svg","./assets/images/avatar-tess.svg","./assets/images/avatar-marcus.svg","./assets/images/avatar-owen.svg","./assets/images/avatar-daniel.svg","./assets/images/avatar-sofia.svg","./assets/images/avatar-rafael.svg","./assets/images/avatar-samir.svg", './asset-loading772.js?v=810-loading','./asset-loading772.css?v=795',
  './responsive-review.js?v=795','./responsive-review.css?v=795',
- './characters077.js?v=795','./characters077.css?v=795',
+ './characters077.js?v=810-loading','./characters077.css?v=795',
  './x1/bidding.js','./x1/core.js','./x1/sha256.js','./x1/worker.js','./x1/integration.js?v=808-local',
  './trump-voices790.js?v=795', './trump-voice.js?v=805-ownerreview',
  './human-bid-voices801.js?v=808-local',
@@ -626,7 +632,7 @@ const SHELL = [
   './assets/audio/natural063/smoothcard736down-01.wav',
   './shuffle732.css?v=732','./shuffle732.js?v=805-ownerreview',
   './assets/audio/shuffle732/1.wav','./assets/audio/shuffle732/2.wav','./assets/audio/shuffle732/3.wav','./assets/audio/shuffle732/4.wav',
-  './trump714.css?v=795', './trump714.js?v=795',
+  './trump714.css?v=795', './trump714.js?v=810-loading',
   './assets/trump714/case.png', './assets/trump714/lid-inner.png',
   './assets/trump714/lid-outer.png', './assets/trump714/stamp.png',
   './assets/trump746/table-faint.png',
@@ -662,7 +668,7 @@ const SHELL = [
   './kitty736.css?v=795',
   './holder004.css?v=732',
   './holder004.js?v=732',
-  './game060.js?v=808-local',
+  './game060.js?v=810',
   './assets/cardholder/holder047.png',
   './assets/cardholder/connector050.png',
   './assets/cardholder/backrest004.png',
@@ -681,9 +687,9 @@ const SHELL = [
   './vendor/peerjs.min.js',
   './vendor/peerjs.min.js?v=rook044',
   './style057.css?v=795',
-  './rules.js?v=rook044',
+  './rules.js?v=810-loading',
   './game.js?v=rook044',
-  './polish.js?v=805-ownerreview',
+  './polish.js?v=810-loading',
   './shuffle-statistics.html',
   './rules.js',
   './rules.js?v=732',
@@ -851,8 +857,19 @@ const SHELL = [
   './rook513.css','./rook513.css?v=732','./rook513.js','./rook513.js?v=732',
   './rook514.css','./rook514.css?v=732','./rook518-trump.css','./rook518-trump.css?v=808-local','./assets/images/room-card-club-514.jpg','./assets/images/avatar-jerome.png',
 ];
-self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
+// This candidate changes no existing artwork. Reuse exact-URL image bytes from
+// the immediate source cache only; do not search arbitrary historical caches.
+self.addEventListener('install', e => {
+ e.waitUntil((async()=>{
+  const c=await caches.open(CACHE),prior=await caches.open('house-of-rooks-808-local');
+  let next=0;await Promise.all(Array.from({length:6},async()=>{
+   while(next<SHELL.length){const path=SHELL[next++],request=new Request(new URL(path,self.location));
+    const reusable=/\.(png|webp|jpg|jpeg|svg)(\?|$)/i.test(path);
+    const hit=reusable?await prior.match(request):null;
+    if(hit)await c.put(request,hit);else await c.add(request);
+   }
+  }));await self.skipWaiting();
+ })());
 });
 self.addEventListener('activate', (e) => {
   e.waitUntil(
@@ -885,7 +902,7 @@ self.addEventListener('fetch', (e) => {
   // Network-first for the app's HTML/JS/CSS; cache is only an offline fallback.
   const path = url.pathname;
   const isAppAsset = /\.(html|js|css)$/.test(path) || path.endsWith('/');
-  const forceFresh = url.searchParams.has('fresh') || url.searchParams.has('v');
+  const forceFresh = url.searchParams.has('fresh') || (url.searchParams.has('v') && !/\.(png|webp|jpg|jpeg|svg)$/i.test(path));
 
   const isHtml = /\.html$/.test(path) || path.endsWith('/');
   if (isHtml) {

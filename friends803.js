@@ -27,9 +27,12 @@ function refresh(){
   const special=avatar==='cobalt'&&spec.pose==='top',g=special?{x:272.5,y:295,w:330}:spec;
   for(const [k,v] of Object.entries({x:g.x,y:g.y,width:g.w,height:g.w*1.5}))body.setAttribute(k,v);
   body.setAttribute('clip-path','url(#friends-cs077-'+(special?'cobalt-top':spec.pose==='top'?'far-outside':'outside')+')');
-  body.onerror=()=>{body.onerror=null;body.setAttribute('href',avatarSrc(avatar));body.setAttribute('x',spec.x+spec.w*.18);body.setAttribute('y',spec.y+15);body.setAttribute('width',spec.w*.64);body.setAttribute('height',spec.w*.64);};
-  body.setAttribute('href',c?'assets/characters077/'+c.poses[spec.pose]:avatarSrc(avatar));
-  if(c?.foreground?.[spec.pose]){fg.setAttribute('href','assets/characters077/'+c.foreground[spec.pose]);fg.style.display='';}
+  const bodyPath=c?'assets/characters077/'+c.poses[spec.pose]:avatarSrc(avatar),armPath=c?.foreground?.[spec.pose]?'assets/characters077/'+c.foreground[spec.pose]:null;
+  body.removeAttribute('href');fg.removeAttribute('href');
+  window.HORAssetLoading772.requireImages([bodyPath,armPath].filter(Boolean)).then(()=>{
+   if(renderKey!==key||!body.isConnected)return;
+   body.setAttribute('href',bodyPath);if(armPath){fg.setAttribute('href',armPath);fg.style.display='';}
+  }).catch(()=>{});
  }
  horBindCareerBadges(root);
  document.getElementById('friendsHeading803').textContent=seatedCount()===4?'Your table is ready':'Waiting for friends';
@@ -43,6 +46,7 @@ function refresh(){
  const copy=document.getElementById('copyCodeBtn');copy.classList.remove('hidden');copy.removeAttribute('aria-hidden');copy.tabIndex=0;copy.textContent='';
  const title=document.getElementById('friendsTableOptions804');title.tabIndex=isHost?0:-1;title.setAttribute('role',isHost?'button':'text');title.onclick=()=>{if(isHost)openHostOptionsModal()};title.onkeydown=e=>{if(isHost&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openHostOptionsModal()}};
 }
+document.addEventListener('hor-artwork-retry',()=>{renderKey='';refresh();});
 window.HORFriends803={refresh:()=>{renderKey='';refresh();}};
 new MutationObserver(()=>{renderKey='';refresh();}).observe(root,{attributes:true,attributeFilter:['class']});
 refresh();

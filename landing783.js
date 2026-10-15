@@ -47,11 +47,11 @@ function paint(){
   const g=p.avatar==='cobalt'&&s.pose==='top'?{x:272.5,y:295,w:330}:s;
   for(const [k,v]of Object.entries({x:g.x,y:g.y,width:g.w,height:g.w*1.5}))body.setAttribute(k,v);
   body.setAttribute('clip-path',`url(#landing-cs077-${p.avatar==='cobalt'&&s.pose==='top'?'cobalt-top':s.pose==='top'?'far-outside':'outside'})`);
-  body.addEventListener('error',()=>{ // Same cached portrait fallback as the game when an unvisited body is unavailable offline.
-   body.dataset.fallback='portrait';body.setAttribute('href',avatarSrc(p.avatar));body.setAttribute('x',s.x+s.w*.18);body.setAttribute('y',s.y+15);body.setAttribute('width',s.w*.64);body.setAttribute('height',s.w*.64);
-  },{once:true});
-  body.setAttribute('href','assets/characters077/'+c.poses[s.pose]);body.style.display='';
-  fg.style.display=c.foreground?.[s.pose]?'':'none';if(c.foreground?.[s.pose])fg.setAttribute('href','assets/characters077/'+c.foreground[s.pose]);
+  const bodyPath='assets/characters077/'+c.poses[s.pose],armPath=c.foreground?.[s.pose]?'assets/characters077/'+c.foreground[s.pose]:null;
+  body.removeAttribute('href');fg.removeAttribute('href');body.style.display='';fg.style.display=armPath?'':'none';
+  window.HORAssetLoading772.requireImages([bodyPath,armPath].filter(Boolean)).then(()=>{
+   if(!body.isConnected)return;body.setAttribute('href',bodyPath);if(armPath)fg.setAttribute('href',armPath);
+  }).catch(()=>{});
   const label=document.createElementNS('http://www.w3.org/2000/svg','text');label.setAttribute('x',s.label[0]);label.setAttribute('y',s.label[1]+18);label.setAttribute('text-anchor','middle');label.setAttribute('class','landing-seat-name');label.textContent=p.name;svg.append(label);
  }
  scene.replaceChildren(svg);
@@ -61,6 +61,7 @@ function restoreView(){lobby.classList.toggle('landing-returning',returning);gre
 input.addEventListener('change',()=>{saveName(true);chooseRoster()});
 for(const id of ['soloPracticeBtn','friendsToggleBtn','joinConfirmBtn','spectateBtn'])document.getElementById(id)?.addEventListener('click',()=>{saveName();menu.hidden=true;returning=!!input.value.trim()},true);
 input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();(lobby.classList.contains('joining')?document.getElementById('joinConfirmBtn'):solo).click()}});
+document.addEventListener('hor-artwork-retry',paint);
 window.HORLanding783={refreshIdentity:()=>{const editing=!lobby.classList.contains('landing-returning');returning=!!input.value.trim();restoreView();if(editing)lobby.classList.remove('landing-returning');chooseRoster()},rosterForStart:()=>roster.slice(),inspect:()=>({roster:roster.map(p=>({name:p.name,avatar:p.avatar,style:p.style})),returning}),refresh:chooseRoster};
 lobby.classList.add('landing783');restoreView();chooseRoster();
 // Returning from a game shows saved identity and a new eligible random table.
