@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
 const BUILD = '805-ownerreview';
-const CACHE = 'house-of-rooks-805-atmosphere1';
+const CACHE = 'house-of-rooks-808-local';
 const SHELL = [
  "./owner-review805.css?v=805-ownerreview",
  "./assets/images/avatar-raven-approved.jpg",
@@ -541,9 +541,9 @@ const SHELL = [
  './character-library774.js?v=795',"./assets/images/avatar-claire.svg","./assets/images/avatar-june.svg","./assets/images/avatar-tess.svg","./assets/images/avatar-marcus.svg","./assets/images/avatar-owen.svg","./assets/images/avatar-daniel.svg","./assets/images/avatar-sofia.svg","./assets/images/avatar-rafael.svg","./assets/images/avatar-samir.svg", './asset-loading772.js?v=795','./asset-loading772.css?v=795',
  './responsive-review.js?v=795','./responsive-review.css?v=795',
  './characters077.js?v=795','./characters077.css?v=795',
- './x1/bidding.js','./x1/core.js','./x1/sha256.js','./x1/worker.js','./x1/integration.js',
+ './x1/bidding.js','./x1/core.js','./x1/sha256.js','./x1/worker.js','./x1/integration.js?v=808-local',
  './trump-voices790.js?v=795', './trump-voice.js?v=805-ownerreview',
- './human-bid-voices801.js?v=805-ownerreview',
+ './human-bid-voices801.js?v=808-local',
  './assets/human-bid-voice801/male/moon-1.mp3?v=805-ownerreview','./assets/human-bid-voice801/male/moon-2.mp3?v=805-ownerreview','./assets/human-bid-voice801/female/moon-1.mp3?v=805-ownerreview','./assets/human-bid-voice801/female/moon-2.mp3?v=805-ownerreview',
  './assets/human-bid-voice801/female/pass.mp3',
  './assets/human-bid-voice801/female/100.mp3',
@@ -662,7 +662,7 @@ const SHELL = [
   './kitty736.css?v=795',
   './holder004.css?v=732',
   './holder004.js?v=732',
-  './game060.js?v=805-atmosphere1',
+  './game060.js?v=808-local',
   './assets/cardholder/holder047.png',
   './assets/cardholder/connector050.png',
   './assets/cardholder/backrest004.png',
@@ -709,7 +709,7 @@ const SHELL = [
   './hor-version.js',
   './hor-version.js?v=736',
   './approved-bid-portrait.js?v=732',
-  './approved-bid-portrait.css?v=795',
+  './approved-bid-portrait.css?v=808-local',
   './assets/bidbox-approved/bidbox_complete_blank.png?v=732',
   './assets/bidbox-approved/asset_map.json',
   './assets/images/wait-nest-portrait.jpg?v=732',
@@ -849,7 +849,7 @@ const SHELL = [
   './assets/images/cardback-aftermath.jpg',
   './rook512-room.js','./rook512-room.js?v=732',
   './rook513.css','./rook513.css?v=732','./rook513.js','./rook513.js?v=732',
-  './rook514.css','./rook514.css?v=732','./rook518-trump.css','./rook518-trump.css?v=732','./assets/images/room-card-club-514.jpg','./assets/images/avatar-jerome.png',
+  './rook514.css','./rook514.css?v=732','./rook518-trump.css','./rook518-trump.css?v=808-local','./assets/images/room-card-club-514.jpg','./assets/images/avatar-jerome.png',
 ];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));

@@ -14,5 +14,5 @@ window.HORRuntimeTruth = async function () {
     marker:window.HOR_BUILD, worker, controller:controller && controller.scriptURL,
     coherent:window.HOR_PAGE_BUILD === '805-ownerreview' && window.HOR_SCRIPT_BUILD === '805-ownerreview' &&
       window.HOR_BUILD === '805-ownerreview' && !!worker && worker.build === '805-ownerreview' &&
-      worker.cache === 'house-of-rooks-805-ownerreview'};
+      worker.cache === 'house-of-rooks-808-local'};
 };

@@ -5387,6 +5387,12 @@ function closeBotPicker() {
   if (m) m.classList.add('hidden');
 }
 
+function rankedBotPartners(pool){
+ const record=p=>{try{const rel=window.HORProgression?.localCareer?.relationshipRead?.(p.name);const games=Math.max(0,Number(rel?.partnerGames)||0);return {games,wins:Math.max(0,Math.min(games,Number(rel?.partnerWins)||0))};}catch(_){return {games:0,wins:0};}};
+ const rows=pool.map((p,index)=>({p,index,...record(p)})),adjusted=r=>(r.wins+3)/(r.games+6);
+ rows.sort((a,b)=>!!a.games!==!!b.games?(a.games?-1:1):a.games?(adjusted(b)-adjusted(a)||b.games-a.games||a.index-b.index):(Number(b.p.style==='partnerFirst')-Number(a.p.style==='partnerFirst')||a.index-b.index));
+ return rows;
+}
 function openBotPicker(seat) {
   const m = $('botPickerModal');
   const grid = $('botPickerGrid');
@@ -5394,17 +5400,17 @@ function openBotPicker(seat) {
     addBot(seat);
     return;
   }
-  const pool = availableBotPersonas();
+  const pool = rankedBotPartners(availableBotPersonas());
   if (!pool.length) {
     addBot(seat);
     return;
   }
-  grid.innerHTML = pool.map(p =>
+  grid.innerHTML = pool.map(({p,games,wins}) =>
     '<button type="button" class="bot-pick" data-bot="' + p.name + '">'
     + '<img src="' + avatarSrc(p.avatar) + '" alt="">'
     + '<b>' + p.name + '</b>'
     + '<i>' + (STYLE_TITLES[p.style] || p.style) + '</i>'
-    + '<span>' + (STYLE_HOWTO[p.style] || p.blurb || '') + '</span>'
+    + '<span>' + (games ? (wins+' wins · '+games+' games · '+Math.round(100*wins/games)+'% together') : 'Not yet partnered · '+(STYLE_HOWTO[p.style] || p.blurb || '')) + '</span>'
     + '</button>'
   ).join('');
   grid.querySelectorAll('.bot-pick').forEach(btn => {

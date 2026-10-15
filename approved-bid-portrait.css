@@ -116,3 +116,7 @@ body #decisionConsole.approved-bid-portrait #bidPassBtn { left: 53.9229671897% !
 }
 #bidConfirm .moon-approved-button795 {display:block;width:100%;height:100%;max-width:100%;min-width:0;object-fit:contain;pointer-events:none;}
 #bidMinus,#bidPlus {touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+
+/* 808 readability; no geometry changes. */
+@media(orientation:portrait){body #decisionConsole.approved-bid-portrait #bidValue{color:#fff1b9!important;-webkit-text-stroke:.35px rgba(51,25,3,.85)!important;text-shadow:0 1px 1px #170d05,0 2px 3px #170d05,0 0 5px rgba(255,216,113,.55)!important;}body #decisionConsole.approved-bid-portrait :is(#bidMinus,#bidPlus,#bidConfirm,#bidPassBtn){text-shadow:0 1px 2px #1b1007,0 0 3px rgba(255,219,126,.35)!important;}}
+body.in-game .card-face{box-shadow:0 2px 3px rgba(0,0,0,.32),0 6px 11px rgba(0,0,0,.16)}body.in-game .gh-nest-card{filter:drop-shadow(0 4px 5px rgba(0,0,0,.46)) drop-shadow(0 8px 10px rgba(0,0,0,.18))}body.in-game .bid-badge.bid-high{border:2px solid #ffe2a0;box-shadow:0 0 0 1px rgba(76,38,5,.72),0 0 9px rgba(255,207,103,.42);font-weight:900}

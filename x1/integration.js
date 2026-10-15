@@ -18,6 +18,35 @@ function eligiblePartner(seat,phase="play"){
   return partner;
  }catch(_){return null;}
 }
+
+function anchorPartnerRoute(seat,legal){
+ try{
+  const actor=game?.players?.[seat];
+  if(!actor?.isBot||actor.name!=='Anchor'||actor.botStyle!=='partnerFirst')return null;
+  const partner=eligiblePartner(seat,'play');
+  if(partner===null||!Array.isArray(game.hands?.[partner])||game.currentPlayer!==seat||!legal?.length)return null;
+  const partnerHand=game.hands[partner],trump=game.trump,myTeam=actor.team;
+  const voids=COLORS.filter(col=>col!==trump&&!partnerHand.some(c=>c.color===col&&!isPermanentTrump(c)));
+  const bidderTeam=game.bidder>=0?game.players[game.bidder]?.team:null;
+  const bid=game.bid||game.highestBid||0;
+  const protecting=bidderTeam===myTeam&&teamCapturedPoints(myTeam)<bid;
+  const setting=bidderTeam!==null&&bidderTeam!==myTeam&&teamCapturedPoints(bidderTeam)<bid;
+  const partnerTrump=partnerHand.filter(c=>isTrumpCard(c,trump));
+  const cheap=arr=>arr.slice().sort((a,b)=>effectiveRank(a)-effectiveRank(b))[0]||null;
+  const pointy=arr=>arr.slice().sort((a,b)=>cardPoints(b)-cardPoints(a)||effectiveRank(b)-effectiveRank(a))[0]||null;
+  if(!game.ledColor){
+   for(const col of voids){const g=legal.filter(c=>c.color===col&&!isPermanentTrump(c));if(g.length)return cheap(g);}
+   if(partnerTrump.length<=2&&protecting){const g=legal.filter(c=>!isTrumpCard(c,trump)&&cardPoints(c)===0);if(g.length)return cheap(g);}
+   if(setting&&partnerTrump.some(c=>isPermanentTrump(c)||effectiveRank(c)>=14)){const g=legal.filter(c=>!isTrumpCard(c,trump));if(g.length)return cheap(g);}
+   return null;
+  }
+  const winner=currentTrickWinner(),pts=trickPointsSoFar();
+  if(winner?.player===partner&&pts>0){const g=legal.filter(c=>cardPoints(c)>0&&!isPermanentTrump(c));if(g.length)return pointy(g);const zero=legal.filter(c=>cardPoints(c)===0&&!isPermanentTrump(c));if(zero.length)return cheap(zero);}
+  if(winner&&game.players[winner.player]?.team!==myTeam&&pts>=5&&setting){const g=legal.filter(c=>compareCards(c,winner.card,game.ledColor,trump)>0);if(g.length)return g.slice().sort((a,b)=>(isPermanentTrump(a)?100:0)-(isPermanentTrump(b)?100:0)||effectiveRank(a)-effectiveRank(b))[0];}
+  if(protecting&&partnerTrump.length<=2&&pts<10){const g=legal.filter(c=>!isPermanentTrump(c)&&cardPoints(c)===0);if(g.length)return cheap(g);}
+ }catch(e){console.warn('[Partner route] X1 retained',e);}
+ return null;
+}
 function authority(){return JSON.stringify({host:isHost,offline:isSoloPractice,room:roomCode,connected:!!hostConnection,peers:Object.keys(connMap||{}),active,paused:!!game?.paused,hand:game?.handNumber,players:(game?.players||[]).map(p=>[p.id,p.seat,p.team,p.isBot]),roster:(players||[]).map(p=>[p.id,p.seat,p.team,p.isBot])});}
 const id=c=>{if(c.id==='rook')return 45;if(c.id==='red-2')return 44;let col=C.colors.indexOf(c.color),rank=Number(c.rank);if(col<0||c.id==='red1-special')throw Error('unsupported card');if(rank===1)return 40+col;if(rank<5||rank>14)throw Error('unsupported rank');return col*10+rank-5;};
 function record(phase,engine=active){lastDecision={phase,engine,hand:epoch,seat:game&&(phase==='discard'||phase==='trump'?game.bidder:game.currentPlayer)};paint();}
@@ -55,7 +84,7 @@ botDiscard=function(){if(!isHost||!game||game.paused||game.phase!=='discard')ret
 botChooseTrump=function(){if(!isHost||!game||game.paused||game.phase!=='trump')return;record('trump');if(active==='legacy')return original.trump();let tr=plannedTrump??C.trump(game.hands[game.bidder].map(id));hostProcessTrump({player:game.bidder,color:C.colors[tr]});};
 botPlay=function(){if(!isHost||!game||game.paused||game.phase!=='play'||game.resolvingTrick||game.claimAnimating)return;contractGuard();if(active==='legacy'){record('play');return original.play();}if(pending)return;if(active==='sol7')return solPlay();let seat=game.currentPlayer,g=game,handEpoch=epoch,{v,payload}=view(seat),fingerprint=JSON.stringify(v),entitlement=authority(),request=++seq;
  let response=new Promise(resolve=>{pending={id:request,resolve,timer:setTimeout(()=>{if(!pending||pending.id!==request)return;pending=null;initError='X1 worker did not respond within 60 seconds';ready=false;if(worker)worker.terminate();worker=null;resolve({error:initError});},60000)};try{if(!worker)throw Error(initError||'worker unavailable');worker.postMessage({id:request,v,payload});}catch(e){let p=pending;pending=null;clearTimeout(p.timer);resolve({error:String(e)});}});
- response.then(r=>{if(!isHost||epoch!==handEpoch||game!==g||!game||game.phase!=='play'||game.currentPlayer!==seat)return;let current=view(seat);if(JSON.stringify(current.v)!==fingerprint||authority()!==entitlement){scheduleBot();return;}if(game.paused){scheduleBot();return;}if(r.error||r.card<0){logFallback(r.error||'X1 sampling failure '+r.card);solPlay();return;}let card=game.hands[seat].find(c=>id(c)===r.card);if(!card||!canPlay(card,game.hands[seat],game.ledColor,game.trump)){logFallback('X1 returned an illegal card');solPlay();return;}metrics.decisions.push({hand:epoch,seat,ms:r.ms,seed:r.seed,card:r.card,search:r.out,epa:Object.prototype.hasOwnProperty.call(v,'partnerMask')});if(metrics.decisions.length>2000)metrics.decisions.shift();if(game.paused){scheduleBot();return;}record('play','x1');lastDecision.epa=Object.prototype.hasOwnProperty.call(v,'partnerMask');hostProcessPlay({player:seat,cardId:card.id});}).catch(e=>{logFallback(String(e));if(isHost&&game===g&&epoch===handEpoch&&game.phase==='play'&&game.currentPlayer===seat)solPlay();});};
+ response.then(r=>{if(!isHost||epoch!==handEpoch||game!==g||!game||game.phase!=='play'||game.currentPlayer!==seat)return;let current=view(seat);if(JSON.stringify(current.v)!==fingerprint||authority()!==entitlement){scheduleBot();return;}if(game.paused){scheduleBot();return;}if(r.error||r.card<0){logFallback(r.error||'X1 sampling failure '+r.card);solPlay();return;}let card=game.hands[seat].find(c=>id(c)===r.card);if(!card||!canPlay(card,game.hands[seat],game.ledColor,game.trump)){logFallback('X1 returned an illegal card');solPlay();return;}metrics.decisions.push({hand:epoch,seat,ms:r.ms,seed:r.seed,card:r.card,search:r.out,epa:Object.prototype.hasOwnProperty.call(v,'partnerMask')});if(metrics.decisions.length>2000)metrics.decisions.shift();if(game.paused){scheduleBot();return;}const legal=game.hands[seat].filter(c=>canPlay(c,game.hands[seat],game.ledColor,game.trump));const routed=anchorPartnerRoute(seat,legal);if(routed&&legal.some(c=>c.id===routed.id))card=routed;record('play','x1');lastDecision.epa=Object.prototype.hasOwnProperty.call(v,'partnerMask');lastDecision.partnerRoute=!!routed;hostProcessPlay({player:seat,cardId:card.id});}).catch(e=>{logFallback(String(e));if(isHost&&game===g&&epoch===handEpoch&&game.phase==='play'&&game.currentPlayer===seat)solPlay();});};
 function bind(){let s=document.getElementById('x1MainSelector');if(s&&!s.__x1){s.__x1=true;s.addEventListener('change',()=>{if(!horDeveloperToolsEnabled()||!isHost){paint();return;}requested=s.value==='sol7'?'sol7':'x1';try{localStorage.setItem(key,requested);}catch(e){}paint();});}paint();}
 const play=hostProcessPlay;hostProcessPlay=function(){const g=game,count=g?.hands?.reduce((n,h)=>n+h.length,0);const r=play.apply(this,arguments);if(game!==g||g?.hands?.reduce((n,h)=>n+h.length,0)!==count)cancelPending();return r;};
 const pause=hostTogglePause;hostTogglePause=function(){cancelPending();return pause.apply(this,arguments);};

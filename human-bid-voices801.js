@@ -10,6 +10,8 @@
   const queue = [];
   let serial = 0;
   let eventCounter = 0;
+  let moonSpokenContext = null;
+  function moonHandKey(){return {game:typeof game==='undefined'?null:game,hand:typeof handHistory==='undefined'?0:handHistory.length};}
   let moonContext = null;
 
   function soundAllowed(){
@@ -118,6 +120,7 @@
     // Duplicate declarations with a new packet ID are also quiet for this hand.
     if (moonAlreadyDeclared || (now.game?.shotTheMoon && event.action !== 'shootMoon')) return;
     if (event.action === 'shootMoon') moonContext = now;
+    if(event.action==='shootMoon'){const ctx=moonHandKey();if(moonSpokenContext&&moonSpokenContext.game===ctx.game&&moonSpokenContext.hand===ctx.hand)return;moonSpokenContext=ctx;stop();}
     seen.add(event.id);
     if (seen.size > 96) seen.delete(seen.values().next().value);
     // A confirmed Moon ends the auction. Old bids/Pass must not drain after
