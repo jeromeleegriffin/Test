@@ -656,6 +656,32 @@
     "commit": "109fc555c7d7f061fe2d1507fecc9bd4bac345df",
     "record": "../coordination/rita-review-20261015/STATUS.json",
     "productionIncluded": false,
+    "rootTestRuntimeIncluded": false,
+    "reviewRuntime": "810-rita-jerome-voice-review-20261015",
+    "latestReviewCommit": "f4b02417d579a4702af6234b4802b8aba00cfec8",
+    "includesJeromeOriginalVoice": true
+  },
+  "jeromeVoiceReview": {
+    "status": "ISOLATED_TEST_LIVE_PENDING_OWNER_LISTENING",
+    "record": "../coordination/jerome-voice-review-20261015/STATUS.json",
+    "checkpoint": "../coordination/jerome-voice-review-20261015/CHECKPOINT.md",
+    "reviewUrl": "https://jeromeleegriffin.github.io/Test/builds/rita-review-20261015/",
+    "auditionUrl": "https://jeromeleegriffin.github.io/Test/builds/rita-review-20261015/voice-review.html",
+    "runtime": "810-rita-jerome-voice-review-20261015",
+    "commit": "f4b02417d579a4702af6234b4802b8aba00cfec8",
+    "roles": [
+      "Jerome bot",
+      "Jerome playable human"
+    ],
+    "rotation": {
+      "jeromeMoon": 3,
+      "jeromePass": 2,
+      "jeromeTrumpTakesPerColor": 3,
+      "existingMaleFemaleMoon": 2,
+      "otherMappedReactions": "Rotate within event bank; one result reaction at hand/match completion"
+    },
+    "singleSpokenSource": true,
+    "productionIncluded": false,
     "rootTestRuntimeIncluded": false
   }
 }

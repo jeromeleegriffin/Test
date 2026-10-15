@@ -29,6 +29,9 @@ async function main(){
  for(const gender of ['male','female']){const seq=[lines.resolve(gender,'shootMoon'),lines.resolve(gender,'shootMoon'),lines.resolve(gender,'shootMoon')];assert(seq[0].includes('moon-1'));assert(seq[1].includes('moon-2'));assert.equal(seq[0],seq[2]);}
  c.game={phase:'bidding',careerMatchId:'match'};c.players[1].avatar='rita';api.announce(1,'bid',100);api.announce(0,'pass');await drain();assert(requested.some(x=>x.includes('female/100.mp3')));assert.equal(maxActive,1);
  assert(Object.keys(JSON.parse(store.horVoiceRotationV1)).length>0);
+ // A denied audio unlock must release the shared queue rather than pin it forever.
+ let deadline=null,ended=false;const qctx=vm.createContext({window:{HORAudioMixer:{output:()=>({})}},document:{hidden:false,addEventListener(){}},queueMicrotask,setTimeout:f=>{deadline=f;return 1},clearTimeout(){},whenAudioReady(){}});
+ vm.runInContext(fs.readFileSync(root+'voice-queue.js','utf8'),qctx);qctx.window.HORVoiceQueue.enqueueBuffer({}, {id:'blocked',owner:'test',valid:()=>true,onEnd:()=>ended=true});await tick();assert.equal(qctx.window.HORVoiceQueue.inspect().active,'blocked');deadline();await tick();assert(ended);assert.equal(qctx.window.HORVoiceQueue.inspect().active,null);
  console.log(JSON.stringify({status:'PASS',maxSimultaneousSpokenSources:maxActive,started:sources.length,checks:['Jerome bot/human authentic bank','180/185 separate paths','Pass rotation','Three Moon takes','Duplicate Moon suppression','Bid/trump serialization','Three trump takes','Silent','Stale hand cancellation','Result deduplication','Result categories','Other voices retain two Moon takes','Rotation persisted']}));
 }
 main().catch(e=>{console.error(e);process.exitCode=1});

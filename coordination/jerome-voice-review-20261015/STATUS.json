@@ -1,5 +1,5 @@
 {
-  "status": "ISOLATED_TEST_PUBLICATION_PENDING",
+  "status": "ISOLATED_TEST_LIVE_PENDING_OWNER_LISTENING",
   "runtime": "810-rita-jerome-voice-review-20261015",
   "sourceRuntime": "810-rita-review-20261015",
   "sourceMain": "fc0b66c3aa84699225ac6fb7b4631c4030a30919",
@@ -28,5 +28,19 @@
   "tests": "16 started simulated sources, max concurrent1; bot/human authentic routing,180/185 separate, Pass/Moon/trump rotation, duplicate Moon guards, Silent, stale pending event, result dedup, generic voices and persisted counters passed. All44 MP3s decode; critical split ASR verified. Syntax passes.",
   "limits": "No subjective listening or physical Android audio timing; no fresh complete match/live cross-device multiplayer/installed offline upgrade certification.",
   "scope": "Isolated Rita review subdirectory updated; main Test runtime and production unchanged. No new game ZIP/number.",
-  "rollbackBranch": "rollback/pre-jerome-voice-review-20261015"
+  "rollbackBranch": "rollback/pre-jerome-voice-review-20261015",
+  "runtimeCommit": "f4b02417d579a4702af6234b4802b8aba00cfec8",
+  "initialRuntimeCommit": "23b89aad0451310ad0e663728b3a4c735cad5c6e",
+  "runtimeTree": "2525faf21dfc02c8b6634f42d00c23b4ff04ea75",
+  "runtimeFiles": 1555,
+  "pagesRunId": 38825615228,
+  "pagesConclusion": "success",
+  "liveChangedFilesVerified": 53,
+  "browserChecks": [
+    "Final combined game startup reaches lobby",
+    "Selecting human Jerome shows Jerome · original recordings / Silent",
+    "Hear Voice clicked with no visible unavailable message during observation",
+    "Standalone voice review media loads and Moon button rotates moon-1,moon-2,moon-3"
+  ],
+  "testAddition": "Blocked audio-unlock queue recovers under deterministic deadline fixture."
 }
