@@ -71,7 +71,7 @@
   "defaultIntelligence": "CHALLENGER-X1 frozen card play with owner-authorized sampled bid-jump evaluation",
   "backupIntelligence": "Sol7 original frozen",
   "epaEnabled": false,
-  "sha256": "f527f70177253d3952285c5618b3085195cb5c8f76192588e53a3817923cbc90",
+  "sha256": "fa1e236f03987c675721a65f2a06432fc9f54f8ae23a2e340a5bf8f1b2a84480",
   "sha256Scope": "primaryDocumentation",
   "pendingResponsiveTabletRepair": {
     "status": "IMPLEMENTED771_OWNER_APPROVED_PHYSICAL_TABLET_UNVERIFIED",
@@ -591,5 +591,12 @@
     "productionCommit": "7a5ede7773deb267c26647f9e4ec7f6215b54d80",
     "testCommit": "9dba4bd7070b14a217b68d42764d82719bee9617"
   },
-  "zipDeliveryPolicy": "Retrieve the actual ZIP file and provide a clickable sandbox file link. Do not substitute a web download URL or a preview-only reference."
+  "zipDeliveryPolicy": "Retrieve the actual ZIP file and provide a clickable sandbox file link. Do not substitute a web download URL or a preview-only reference.",
+  "zipDeliveryConfirmedByOwner": "2026-10-15: actual sandbox ZIP link worked",
+  "shootTheMoonAssetStudy": {
+    "selectedConcept": "A",
+    "status": "DIRECTION_SELECTED_FINISHED_ASSET_REQUESTED",
+    "reviewLibraryFileId": "libfile_efb50a34cb5c819189b8ef9e2554e940",
+    "scope": "Asset work prompt; no runtime integration or deployment"
+  }
 }
