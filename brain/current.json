@@ -71,7 +71,7 @@
   "defaultIntelligence": "CHALLENGER-X1 frozen card play with owner-authorized sampled bid-jump evaluation",
   "backupIntelligence": "Sol7 original frozen",
   "epaEnabled": false,
-  "sha256": "f781c8e0c79fa5a0bba1568dfddc484d15c22a4414ff8cae43cefc03044e28a5",
+  "sha256": "f527f70177253d3952285c5618b3085195cb5c8f76192588e53a3817923cbc90",
   "sha256Scope": "primaryDocumentation",
   "pendingResponsiveTabletRepair": {
     "status": "IMPLEMENTED771_OWNER_APPROVED_PHYSICAL_TABLET_UNVERIFIED",
@@ -590,5 +590,6 @@
     },
     "productionCommit": "7a5ede7773deb267c26647f9e4ec7f6215b54d80",
     "testCommit": "9dba4bd7070b14a217b68d42764d82719bee9617"
-  }
+  },
+  "zipDeliveryPolicy": "Retrieve the actual ZIP file and provide a clickable sandbox file link. Do not substitute a web download URL or a preview-only reference."
 }
