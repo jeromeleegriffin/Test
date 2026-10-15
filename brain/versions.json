@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "brainVersion": "AD",
+      "updated": "2026-10-15",
+      "browse": "versions/AD/index.html",
+      "artifact": "",
+      "sha256": "8fc2ae35aefa95a0dac17686a0a9b691ea4247f8f74eda7d07052d270f25cc6f",
+      "sha256Scope": "primaryDocumentation",
+      "documentationOnly": true,
+      "manifest": "versions/AD/inventory.json",
+      "archiveStatus": "810 complete loading review ZIP delivered; no runtime deployment; Android review pending; landscape isolated"
+    },
+    {
       "brainVersion": "AC",
       "updated": "2026-10-14",
       "browse": "versions/AC/index.html",
@@ -230,3 +241,4 @@
     "B"
   ]
 }
+

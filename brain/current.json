@@ -1,15 +1,15 @@
 {
   "project": "Griffin House of Rooks",
-  "brainVersion": "AC",
+  "brainVersion": "AD",
   "status": "CURRENT",
-  "updated": "2026-10-14",
-  "browse": "versions/AC/index.html",
+  "updated": "2026-10-15",
+  "browse": "versions/AD/index.html",
   "artifact": "",
-  "document": "versions/AC/files/01_MASTER_BANK/MASTER_BRAIN_AC.md",
-  "manifest": "versions/AC/inventory.json",
-  "startupPrompt": "versions/AC/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+  "document": "versions/AD/files/01_MASTER_BANK/MASTER_BRAIN_AD.md",
+  "manifest": "versions/AD/inventory.json",
+  "startupPrompt": "versions/AD/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
   "history": "history.html",
-  "previousVersion": "AB",
+  "previousVersion": "AC",
   "checkpoint": "official-pre-landscape-fallback-20261014",
   "checkpointStatus": "OWNER_DESIGNATED_OFFICIAL_PRE_LANDSCAPE_FALLBACK_WITH_OPEN_ISSUES",
   "approvedWorkingBuild": "805-ownerreview/805-atmosphere1",
@@ -30,10 +30,10 @@
   "archive075Sha256": "c111cc8c38f5ee64f76a1950e4d540f24590dd3f715195d517b4d16445316eca",
   "archive075Status": "DOCUMENTATION_ONLY_NOT_A_PLAYABLE_BUILD",
   "rollbackCandidate": "805-ownerreview/805-atmosphere1",
-  "candidateStatus": "805_DELIVERED_PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED",
+  "candidateStatus": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED",
   "roomStateCheckpoint": "R531-room-state",
   "roomStateStatus": "OWNER_VERIFIED_FIXED",
-  "archiveStatus": "AC complete session catch-up;805 delivered, not deployed;804 visual review;Test797;production531 protected",
+  "archiveStatus": "810 complete loading review ZIP delivered; no runtime deployment; Android review pending; landscape isolated",
   "codexWriteTestCommit": "ec5e1ef48b3c7881bb5b355aaad602b86b5b9173",
   "codexWriteTestStatus": "VERIFIED_SMALL_TEXT_FILE_TEMPORARY_BRANCH",
   "workCodexWriteStatus": "VERIFIED_CONNECTED_GITHUB_API_TEST_MAIN_TEXT_UPDATE",
@@ -41,13 +41,13 @@
   "kittyDesignStatus": "OWNER_APPROVED_749_AND_RECONFIRMED_THROUGH750",
   "kittyIntegrationStatus": "OWNER_APPROVED_PRESERVED_IN751",
   "kittyPortablePackageLibraryId": "libfile_aab3a1735ed081918c6780b8af61600c",
-  "brainVerificationStatus": "AC_SESSION_EVIDENCE_RECONCILED",
+  "brainVerificationStatus": "AD_LOADING_SOURCE_RECONCILED",
   "approvedWorkingBuildSha256": null,
-  "latestLocalCandidateBuild": "805-stability",
+  "latestLocalCandidateBuild": "810",
   "discardIntegrationStatus": "OWNER_APPROVED_PRESERVED_IN751",
   "specialistCheckpointUpdatePolicy": "Every requested task must include a complete Brain status update; publish within task authorization, otherwise supply ready handoff",
-  "latestLocalCandidateSha256": "ed0edd7e44c6cdc762daa5e0c817b36892a9f13efc04b08c63cb310e10d859e2",
-  "latestLocalCandidateStatus": "TEST_DEPLOYED_PENDING_ANDROID_ACCEPTANCE",
+  "latestLocalCandidateSha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
+  "latestLocalCandidateStatus": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED",
   "buildRegistry": "../coordination/BUILD_REGISTRY.json",
   "buildNumberingPolicy": "../coordination/BUILD_NUMBERING.md",
   "signatureShuffleStatus": "765_FULL_PHASE_SYNC_PRESERVED_IN_APPROVED771",
@@ -58,12 +58,12 @@
   "signatureShuffleLibraryFileId": "libfile_809231d5167c8191bb1651de900b664a",
   "trumpVoiceStatus": "EXISTING_CLIPS_PRESERVED_779_WITH_HUMAN_VOICE_CHOICES",
   "trumpVoiceReviewLibraryFileId": "libfile_5c43ca8ca7088191af96e6fa6e980e55",
-  "mainDevelopmentCheckpoint": "../coordination/PRE_LANDSCAPE_FALLBACK_20261014.md",
+  "mainDevelopmentCheckpoint": "../coordination/LOADING_810_20261015.md",
   "smallBiddingStatus": "PRESERVED771_WITH_CHARACTER_STATUS_ANCHOR_REPAIRS",
   "railClearanceStatus": "PRESERVED771_EXISTING_SAFE_SUPPRESSION_LIMIT_UNCHANGED",
-  "latestGameBuild": "805-ownerreview",
-  "latestGameLibraryFileId": "libfile_9aa904ab89c88191829e50ee9e0af68c",
-  "latestGameFilename": "HouseStability-9a8f4d4242e1.zip",
+  "latestGameBuild": "810",
+  "latestGameLibraryFileId": "libfile_e853285ef0308191a811470c6f089203",
+  "latestGameFilename": "810.zip",
   "cleanFallbackCandidate": "766",
   "cleanFallbackStatus": "766_OWNER_APPROVED_HISTORICAL_FALLBACK",
   "testServerPlannedBuild": "805-ownerreview",
@@ -71,7 +71,7 @@
   "defaultIntelligence": "CHALLENGER-X1 frozen card play with owner-authorized sampled bid-jump evaluation",
   "backupIntelligence": "Sol7 original frozen",
   "epaEnabled": false,
-  "sha256": "b08cbd55c46fdb5fb532c7a040935990d5b3b0d6d9078133bb3b1e08cfe0de5b",
+  "sha256": "8fc2ae35aefa95a0dac17686a0a9b691ea4247f8f74eda7d07052d270f25cc6f",
   "sha256Scope": "primaryDocumentation",
   "pendingResponsiveTabletRepair": {
     "status": "IMPLEMENTED771_OWNER_APPROVED_PHYSICAL_TABLET_UNVERIFIED",
@@ -123,11 +123,12 @@
   },
   "testRepository": "JeromeLeeGriffin/Test",
   "releasePackage": {
-    "filename": "805.zip",
-    "libraryFileId": "libfile_2b8ed9e804308191bfbb831663e06368",
-    "sha256": "1b7057efbb8eb39ff039867952ac4b74ab97f1e5cf18370a56357c4b4d91cc6e",
-    "bytes": 145217741,
-    "status": "DOWNLOAD_ONLY_NOT_DEPLOYED"
+    "filename": "810.zip",
+    "bytes": 142859199,
+    "sha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
+    "runtimeFiles": 1498,
+    "libraryFileId": "libfile_e853285ef0308191a811470c6f089203",
+    "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED"
   },
   "pagesWorkflowRunId": "38577856753",
   "pagesWorkflowConclusion": "success",
@@ -215,8 +216,7 @@
     "deployedSiteVerified": false
   },
   "currentCandidateAcceptance": {
-    "build": "805",
-    "designApproved": true,
+    "build": "810",
     "packagingAuthorized": true,
     "ownerOverallPhoneAccepted": false,
     "deployed": false
@@ -549,5 +549,16 @@
     "referenceSha256": "3fc14fa02bc54423a9d2d84cb392d08c61c227969c844b622bb9c9264ec1e432",
     "artworkGeneration": "REQUIRES_EXPLICIT_GENERATE",
     "implementationStarted": false
-  }
+  },
+  "landscapeCheckpoint": {
+    "branch": "work/overhead-landscape-20261014",
+    "commit": "073457d875a93d2a9b73e434e05d233b924c2f4e",
+    "status": "ISOLATED_INCOMPLETE_NOT_DEPLOYED"
+  },
+  "latestCandidateSource": {
+    "commit": "f487af34130adc91f90ce542fee8b826969120a0",
+    "patch": "../coordination/releases/loading810-20261015/810.patch"
+  },
+  "testSiteVerificationNote": "No fresh live-site verification in AD; prior Test source/deployment fields are historical observations, not 810 deployment."
 }
+

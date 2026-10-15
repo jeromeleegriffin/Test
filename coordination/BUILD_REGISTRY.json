@@ -2144,18 +2144,27 @@
     {
       "number": "810",
       "reservationId": "loading-reconcile-9a8f4d-20261015",
-      "status": "RESERVED",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED",
       "date": "2026-10-15",
       "workstream": "Main loading integration; landscape held separately",
       "sourceCommit": "f487af34130adc91f90ce542fee8b826969120a0",
       "sourcePackageSha256": "ecf9464a4b41271ffa9e058fab86403a7ddde916596b545bae22e8b95dc2ef63",
-      "task": "Complete newest-source game ZIP with supplied loader, first-card investigation and exact dependency checks; no deployment"
+      "task": "Complete newest-source game ZIP with supplied loader, first-card investigation and exact dependency checks; no deployment",
+      "filename": "810.zip",
+      "bytes": 142859199,
+      "sha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
+      "runtimeFiles": 1498,
+      "libraryFileId": "libfile_e853285ef0308191a811470c6f089203",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deployed": false,
+      "checkpoint": "coordination/LOADING_810_20261015.md"
     }
   ],
   "testSiteBuild": "805-ownerreview",
   "previousApprovedWorkingBuild": "783",
   "publishedBrainApprovedBuild": "783",
-  "publishedBrainVersion": "AC",
+  "publishedBrainVersion": "AD",
   "temporaryPackages": [
     {
       "filename": "Career-Test-3a04d861.zip",
@@ -2186,9 +2195,9 @@
       "ownerAndroidAccepted": false
     }
   ],
-  "latestDeliveredGameBuild": "805",
-  "latestDeliveredGameStatus": "PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED",
-  "latestDeliveredGameSha256": "1b7057efbb8eb39ff039867952ac4b74ab97f1e5cf18370a56357c4b4d91cc6e",
+  "latestDeliveredGameBuild": "810",
+  "latestDeliveredGameStatus": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW_NOT_DEPLOYED",
+  "latestDeliveredGameSha256": "c7f2f30ddc6daecdcb47852dffaf1261c45e44b1267e18213da01a2fdc43f0d7",
   "latestVisualReviewBuild": "804",
   "lastReconciliation": "798–805 retrospectively registered from retained archive hashes; no earlier remote reservation is claimed",
   "testSitePreviousBuild": "805-ownerfix2",
@@ -2215,3 +2224,4 @@
     "physicalAndroidFullyVerified": false
   }
 }
+

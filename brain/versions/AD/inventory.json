@@ -1,0 +1,38 @@
+{
+  "brainVersion": "AD",
+  "parentVersion": "AC",
+  "updated": "2026-10-15",
+  "documentationOnly": true,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 11544,
+      "sha256": "154054e58e8ec896ff62ab5026eb1deafc6d22b1179f8c2788ce9e48e9a43b97"
+    },
+    {
+      "path": "files/01_MASTER_BANK/COMPLETE_BANK_READING_RULE.md",
+      "bytes": 1192,
+      "sha256": "f664507c5e5daf666cf8ab49e9838340c6c41162a342b76851feadbd430453cc"
+    },
+    {
+      "path": "files/01_MASTER_BANK/CHAT_CONTINUITY_RULE.md",
+      "bytes": 1869,
+      "sha256": "22fe23e76e33d934657f19fd8a54a83cabe7ffa98b73e158b02f5ab5ea0ed514"
+    },
+    {
+      "path": "files/01_MASTER_BANK/MASTER_BRAIN_AD.md",
+      "bytes": 11086,
+      "sha256": "8fc2ae35aefa95a0dac17686a0a9b691ea4247f8f74eda7d07052d270f25cc6f"
+    },
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 4122,
+      "sha256": "4f66265224db2c4ababbb840956014c0d8764d00782d5b32cf1d5911eff3afac"
+    },
+    {
+      "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+      "bytes": 4122,
+      "sha256": "4f66265224db2c4ababbb840956014c0d8764d00782d5b32cf1d5911eff3afac"
+    }
+  ]
+}
