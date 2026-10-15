@@ -644,5 +644,18 @@
     },
     "record": "../coordination/releases/810-approved/LIVE_RECEIPT.json"
   },
-  "releaseSupplement": "../coordination/releases/moon-approved-20261015/CHECKPOINT.md"
+  "releaseSupplement": "../coordination/releases/moon-approved-20261015/CHECKPOINT.md",
+  "ritaCharacterReview": {
+    "status": "ISOLATED_TEST_LIVE_PENDING_OWNER_PHONE_REVIEW",
+    "name": "Rita",
+    "avatar": "rita",
+    "botPersona": "partnerFirst",
+    "defaultVoice": "female",
+    "humanSelectable": true,
+    "reviewUrl": "https://jeromeleegriffin.github.io/Test/builds/rita-review-20261015/",
+    "commit": "109fc555c7d7f061fe2d1507fecc9bd4bac345df",
+    "record": "../coordination/rita-review-20261015/STATUS.json",
+    "productionIncluded": false,
+    "rootTestRuntimeIncluded": false
+  }
 }

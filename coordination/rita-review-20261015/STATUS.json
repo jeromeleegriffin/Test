@@ -1,5 +1,5 @@
 {
-  "status": "ISOLATED_TEST_REVIEW_NOT_PRODUCTION_APPROVED",
+  "status": "ISOLATED_TEST_LIVE_PENDING_OWNER_PHONE_REVIEW",
   "name": "Rita",
   "avatarId": "rita",
   "persona": "partnerFirst",
@@ -38,10 +38,23 @@
     "Existing character renderer, bot core and voice audio code unchanged"
   ],
   "limits": [
-    "In-game seated pose/phone review pending",
-    "Full hand/match not rerun",
-    "Subjective listening and installed offline upgrade not newly certified"
+    "Three portrait seat fits require owner phone review; cloud browser was landscape",
+    "No new full-hand or match certification",
+    "No subjective voice listening or installed offline upgrade certification"
   ],
   "productionChanged": false,
-  "mainTestRuntimeChanged": false
+  "mainTestRuntimeChanged": false,
+  "commit": "109fc555c7d7f061fe2d1507fecc9bd4bac345df",
+  "pagesRunId": 38822974329,
+  "pagesConclusion": "success",
+  "url": "https://jeromeleegriffin.github.io/Test/builds/rita-review-20261015/",
+  "liveChangedFilesVerified": 11,
+  "browserChecks": [
+    "Live startup reaches lobby",
+    "Rita appears in human avatar picker and selection persists in picker",
+    "Partner picker shows Rita · Partner first",
+    "Favorite partner selection seats Rita at actual offline table",
+    "Landscape fallback displays Rita portrait"
+  ],
+  "rollbackBranch": "rollback/pre-rita-review-20261015"
 }
