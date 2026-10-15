@@ -64,3 +64,15 @@ Before diagnosing, proposing a fix, preparing a Work prompt, editing, testing, o
 Snapshot at directive time (NOT a future authority): published pointer AC; delivered 805 pending Android acceptance; Test 797; approved rollback 783; protected production 531. These values MUST be refreshed on the next request.
 
 This specialist-record publication does not change `brain/current.json`, game files, or production. Incorporation into a future full Master Brain release requires the normal coordinated publication process.
+
+
+## 2026-10-15 — 808 loading merge / first-card freeze investigation (read-only checkpoint)
+Owner reported Android freeze after bid, discard, and first Black Bird play in 808-loading-review.zip, 3x selected. No Android runtime diagnostics captured. The package is REJECTED FOR PROMOTION pending root cause.
+
+Source evidence: original 808-local-playable.zip SHA256 c22e19719963d1d26aa15a99606280d5a2d919d5514fd6bbe932089db2390a22 (1558 files); merged 808-loading-review.zip SHA256 6066d7101204894d83fd7d854cf8e8539083e19f086ad3729e01defac70fba3e (1558 files); Work loading review SHA256 ecf9464a4b41271ffa9e058fab86403a7ddde916596b545bae22e8b95dc2ef63. Preserved pre-landscape commit b551144768084fc81c12de03682eae4e78f8e600; separate experimental landscape branch work/overhead-landscape-20261014 excluded.
+
+Merged package changes exactly ten files; 1548 unchanged. game060.js, bots.js, x1/core.js, x1/integration.js, x1/worker.js, x1/sha256.js and x1/bidding.js were retained from local808. X1 integration/worker Git blobs differ from pre-landscape commit; full source equivalence NOT established. X1 files exist and SW references them, but real worker decisions, fallback, complete hand and offline reload were NOT run or certified.
+
+Verified loader source risk: asset-loading772.js requireImages() calls show() for any newly required source, including images discovered by a gameplay MutationObserver. show() adds html.house-loading; index.html CSS hides the game while that class is active. Thus a gameplay-time image request can reactivate blocking loading UI. This is an actual source defect/risk, NOT proven root cause of the owner's freeze (the screenshot did not show an overlay). Browser testing was blocked by local loopback navigation policy. No fix, new ZIP, deployment or production changes authorized/performed in this checkpoint.
+
+Next: instrument real turn/phase/paused/resolvingTrick/botTimer/X1 worker and loader states at first-card transition; isolate baseline 808 versus merged loading behavior; test actual X1 decisions/fallback and offline startup in an executable environment. Preserve approved animation and image preload assets. Do not promote or create new ZIP until owner requests it.
