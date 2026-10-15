@@ -1,0 +1,12 @@
+{
+  "voices/jerome/trumps_are_red.ogg": "1d81dcbeb9cb5e9135e16791e7edfefbf82451403e7ac75f5b2f6669daf5acbb",
+  "voices/jerome/trumps_are_green.ogg": "cf63eb6da2674be647dd7ad1c2b7894d9dc5977f31122f9837a647dcc7367c5a",
+  "voices/jerome/trumps_are_black.ogg": "8a5b9ca070e0cb899b1e9c4cb0db09f8245eb2ca2912da8713d1e108fb5f927c",
+  "voices/jerome/trumps_are_yellow.ogg": "4aeaaacb59e2a56b95338cd1e6f994f330d3fd32207cc4831c092d5399d5be44",
+  "x1/bidding.js": "c2b56d03a1505de5e2f508b05d6c2872ee0bee46ac77712b80ec11fe1adffb0b",
+  "x1/core.js": "54295f5da5c3011050c739b4528dc798cb4ba06d09d76ac9305c78d9430edd20",
+  "x1/sha256.js": "2dc5b474cae25050759e51ea4b9fb2edf08fdfd71d86ffa5b03813221b17cfd9",
+  "x1/worker.js": "725934cfdb1ce9c19c4b29cfae148878923b9555d760ccb3acef84af242806ae",
+  "x1/integration.js": "80a6677e4779d53222f87d89f25aaa303708ce25314ca1e818e66aa2d49bca97",
+  "vendor/peerjs.min.js": "ad5d8870d1e389914f9cba8d35be313c4327c69ee0a221e482e9bf7621136fe5"
+}
