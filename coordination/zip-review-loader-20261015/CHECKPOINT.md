@@ -1,0 +1,10 @@
+# Separate ZIP review loader — 2026-10-15 ET
+Owner reported landscapeStage8 game stuck at assetloading0% on tablet. Owner explicitly required preserving the existing phone loader and approved a NEW separate loader.
+Existing GriffinHousePlayer.html and player/GriffinHousePlayer.html are untouched. No gameZIP, game runtime, landscapewebsite publication, original loader settings, player data or serviceworker change.
+New URL: https://jeromeleegriffin.github.io/Test/GriffinHouseZipReview.html
+Source finding: old loader rewrites HTML src/href only; CSS url() and runtime JS image/fetch/Worker requests still use relative paths with a blob document lacking a filesystem base. This is a concrete incompatible startup path; actual tablet trace not captured.
+New loader uses perZIP blob map: rewrite stylesheet URLs relative to original CSS directories; adapt Worker importScripts URLs; inject a preview-frame-only resolver for image/media src, SVG attributes, HTML insertion, CSS styles, fetch, XHR and Workers.
+No cacheclear or unregister operation remains in new loader. Prevent only game serviceworker registration inside blob preview; preserve existing registrations and all saved data. Original loader cache behavior remains unchanged per explicit owner requirement.
+Checks: JSsyntax, runtimebridgefixtures for images/SVG/HTML/CSS/fetch/Worker, nestedCSS and X1import reconstruction, bootstrap injection before game, zero cache/worker deletion pass.
+Limits: current browser/physicalAndroid startup/audio/X1/gameplay not verified. Owner should open newloader, OPEN ONE ZIP, select same Griffin_House_Angle_C_Landscape_Stage8_Review.zip. No FRESH or storageclear. If still blocked, collect visible error/counter state before further changes.
+BrainAE and approvedMoon release unchanged; landscape stays isolated pendingownerreview. This is scoped durable supplement; full reading/continuity rules remain in landscape stage8 README and prelandscape fallback authority. No claims of notifying other chats.
