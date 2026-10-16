@@ -1,0 +1,28 @@
+{
+  "library": {
+    "operation": "create_library_file",
+    "status": "succeeded",
+    "path": "/Griffin_House_Landscape_Supported_Angled_Cards.zip",
+    "file_id": "file_000000004bd481f688bcc89fb05bc118",
+    "library_file_id": "libfile_1d3755cc250c8191930463708c5ce903",
+    "file_name": "Griffin_House_Landscape_Supported_Angled_Cards.zip",
+    "current_version_number": 0,
+    "restored_from_version_number": null,
+    "xattrs": [
+      {
+        "name": "user.library-file-version",
+        "value": "0"
+      }
+    ],
+    "directory_id": "libdir_f3ea6bcdf910819187adf1dd8b5a3852",
+    "mime_type": "application/zip",
+    "library_artifact_type": "other",
+    "file_size_bytes": 11038545,
+    "external_connectors_accessed": false
+  },
+  "sha256": "e5c48a899469c28e7d6898006215c98b4f10af2706f7dd2ea56409c795f291a3",
+  "status": "ISOLATED_OWNER_TABLET_REVIEW_PENDING",
+  "fix": "8px inward side-card bases; 14px outward top lean; fixed raised wood backing using existing backrest004 raster. Counts 10/6/3/1/0 remain.",
+  "verification": "Full and empty native SVG renders inspected. All counts and lean geometry asserted; actual loader clip rewriting and ZIP CRC pass.",
+  "reconstruct": "Restore assets from canonical ZIP. No live deployment; pose changes banked."
+}
