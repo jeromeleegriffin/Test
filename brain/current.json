@@ -919,5 +919,14 @@
     "sourceLibraryFileId": "libfile_7d48cb5a3e288191af77808b9d11be45",
     "deployed": false,
     "method": "Fixed 68-degree fan for 7–16; overlap increases inside fixed finished grip; original card aspect; preserve 0–6"
+  },
+  "landscapeFullTableCandidate": {
+    "status": "DELIVERED_PENDING_OWNER_REVIEW",
+    "record": "../coordination/landscape-daniel-018-full-table-20261016.md",
+    "libraryFileId": "libfile_58e95529ab048191b5d57ea142559384",
+    "sha256": "2fa7d1422759af69f67cc315716e43bcb0978d3eabb8868e71255abbf6867886",
+    "bytes": 15803252,
+    "approvedFallback": "017",
+    "deployed": false
   }
 }
