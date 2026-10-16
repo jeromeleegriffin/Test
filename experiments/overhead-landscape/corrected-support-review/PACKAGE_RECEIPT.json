@@ -1,0 +1,28 @@
+{
+  "library": {
+    "operation": "create_library_file",
+    "status": "succeeded",
+    "path": "/Griffin_House_Landscape_Corrected_Support.zip",
+    "file_id": "file_00000000435081f5ba5edc778f46d809",
+    "library_file_id": "libfile_c089334019b0819183cec5b4cb4d8e68",
+    "file_name": "Griffin_House_Landscape_Corrected_Support.zip",
+    "current_version_number": 0,
+    "restored_from_version_number": null,
+    "xattrs": [
+      {
+        "name": "user.library-file-version",
+        "value": "0"
+      }
+    ],
+    "directory_id": "libdir_f3ea6bcdf910819187adf1dd8b5a3852",
+    "mime_type": "application/zip",
+    "library_artifact_type": "other",
+    "file_size_bytes": 11038452,
+    "external_connectors_accessed": false
+  },
+  "sha256": "c1f8e69b0f64be340eeef7b08993d3244b1a1c480a24821a5ca7f65a0e801e66",
+  "correction": "Owner: lean away from player; cards on player-side of wooden back. Reverse lean; wood felt-facing and in front of lower card sections.",
+  "status": "ISOLATED_TABLET_REVIEW_PENDING",
+  "limitation": "Side rows appear narrow from this camera; further visual tuning may be needed. Native render inspected, not Android verified.",
+  "reconstruct": "Restore assets from ZIP. No live deployment."
+}
