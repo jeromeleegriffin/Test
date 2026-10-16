@@ -1,0 +1,26 @@
+{
+  "approved-cardback.png": {
+    "bytes": 2305664,
+    "sha256": "0c631917b589471cb84583f28b59bba67eeb4036f294d6065492b8c92412d45d"
+  },
+  "README.md": {
+    "bytes": 640,
+    "sha256": "c9a28bb10c2f08be6951a54151227dc11d17ddf083370a73ac298ffd7380c49d"
+  },
+  "left-holder-v1.webp": {
+    "bytes": 176720,
+    "sha256": "4376205c0cd61d5da37cc0cbd0f666be25eb46d1e2a7dd9fbcd8a04f7d644c1b"
+  },
+  "left-holder-v1.png": {
+    "bytes": 827865,
+    "sha256": "1266c8dd7507b5d4fbc6cb05d0b4aae43da62875c13598065a0accbb336ae536"
+  },
+  "right-holder-v1.webp": {
+    "bytes": 154080,
+    "sha256": "e1ece10d890531cff880fbf7b6e3044c96229e3c825da0e09a7c29e907502779"
+  },
+  "right-holder-v1.png": {
+    "bytes": 776693,
+    "sha256": "4ebb74818c1fbad1230b71a676017e2e18dbf31bfff6d66d0845f3e705f795d1"
+  }
+}
