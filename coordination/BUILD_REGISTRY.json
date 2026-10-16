@@ -2220,6 +2220,32 @@
       "task": "Angle C isolated phone-review game; descriptive filename per owner later preference",
       "workstream": "Landscape continuation",
       "checkpoint": "375cb6e454b133226651e19869ea4ad3aa8d50bb"
+    },
+    {
+      "filename": "Griffin_House_Angle_C_Tablet_Stage9_Review.zip",
+      "bytes": 152187961,
+      "sha256": "e55e79af9237a09b06859295248e32d3d689841592cac5efdb592aaccae3a221",
+      "runtimeFiles": 1561,
+      "changedFiles": [
+        "angle-c-characters.js",
+        "angle-c-runtime.css",
+        "game060.js",
+        "hor-version.js",
+        "index.html",
+        "sw060.js"
+      ],
+      "shellDependencies": 989,
+      "crc": "PASS",
+      "allRuntimeHashes": "PASS",
+      "ownerApproved": false,
+      "physicalTabletVerified": false,
+      "deployed": false,
+      "libraryFileId": "libfile_46e592826200819194e939e6c4fa3e97",
+      "fileId": "file_000000008f3c81f492cb4a5cf1371689",
+      "status": "DELIVERED_PENDING_OWNER_TABLET_REVIEW",
+      "number": null,
+      "task": "Tablet-specific Angle C repair; phone layout preserved",
+      "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a"
     }
   ],
   "latestDeliveredGameBuild": "810-moon-bidtext-review",
