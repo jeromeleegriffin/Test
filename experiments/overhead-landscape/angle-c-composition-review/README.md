@@ -1,0 +1,9 @@
+# Angle C comparison preview — 2026-10-15 ET
+Composition-only review. Not a game, not a new approved camera, not published to live websites.
+Rootindex.html supports ApprovedC/Newlayers toggles andFullscreen; usesactualgeneratedlayerWebPs, unchangedemptytableplate, realnumberedcards andexactoriginalCreferencePNG.
+New testroster: Rafaelleft/Sparktop/Danielright/Jeromerear. No substitution ofthisfixedcastintoarbitrarygameidentities. Body/foregroundarm copies use provisionalSVGclipregions; railoverlapnotpixelcertified. Jeromepartialhead/back,handsbelowforegroundcardholder. Checkbothapprovedandcandidateviewonactualtablet.
+OriginalCreferencesource Librarylibfile_5fe56a47835881919b6b15257c45d958; SHA256faff2f6dc70003bbdf490d6fbf6546c679dd36e1f013fecb89f86c223d8f8903. Newlayercheckpointb65019cbfcc092955126be1c84c83df402b2d3c1 on work/overhead-landscape-20261014; assetmanifest/generationinstructions there. Built-inimagegen used; standardWebPencodingonlyaftergeneration.
+Verified sourcealllocalrefs, exactoriginalreferencehash, JSsyntax, fullZIPCRC andmanifest. BrowservisualQAunavailable; usertabletfitstillpending. Do notcallthiscompletedgameplayorclaimexactregistration frommath.
+Tabletlandingcorrection separatelyprepared, notincludedinthiscompositiononlypreview. Leadpillbankedonly. BothliveRita/Jeromevoicegames/originalloaderunchanged.
+Fullreading/continuityrules inheritedfromlandscapeintegration-stage8/README.md; supplementnotnewBrainversion. Next: ownervisualcomparison, correctspecificoverlapifneeded, then integrateapprovedlayerswithactualauthoritativeseats/hands/bid/trump withoutrestarting.
+

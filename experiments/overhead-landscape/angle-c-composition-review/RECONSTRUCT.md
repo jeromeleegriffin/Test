@@ -1,0 +1,1 @@
+Canonical complete preview is the Library ZIP identified in PACKAGE_RECEIPT.json. Extract its root index.html and assets together. Source HTML/manifest are preserved here; asset references require the ZIP assets directory. This folder is not a deployed website and does not replace a game runtime.
