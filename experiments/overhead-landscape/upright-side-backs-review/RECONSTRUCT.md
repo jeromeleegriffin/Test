@@ -1,0 +1,1 @@
+Extract the complete canonical Library ZIP identified in PACKAGE_RECEIPT.json. It includes all assets, exact approved reference, source, and manifest at root. Source files are preserved here without duplicating all image payloads. This is not a deployed website or game.

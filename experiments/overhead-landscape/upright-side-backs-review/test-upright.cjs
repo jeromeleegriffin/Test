@@ -1,0 +1,4 @@
+const assert=require('assert'),api=require('../landscape-upright-review/upright-backs.js');let checked=0;
+for(const pose of ['left','top','right'])for(const count of[0,1,4,10,16]){const cards=api.project(pose,count);assert.equal(cards.length,count);for(const c of cards){const [a,b,cc,d,e,f]=c.matrix;const bottom={x:a*50+cc*140+e,y:b*50+d*140+f},top={x:a*50+e,y:b*50+f};assert(Math.abs(bottom.x-c.base.x)<1e-6);assert(Math.abs(bottom.y-c.base.y)<1e-6);assert(Math.abs(top.x-bottom.x)<1e-6);assert(Math.abs(bottom.y-top.y-c.rise)<1e-6);assert(a*d-b*cc>0);assert(top.y>=0&&bottom.y<941&&top.x>=0&&top.x<1672);checked++;}}
+assert.equal(api.project('left',-1).length,0);assert.equal(api.project('right',17).length,0);assert.equal(api.project('bad',10).length,0);
+console.log(checked+' projected card cases pass: bottom centers on slot; top edges rise vertically; valid non-flat raster plane; invalid counts suppressed.');
