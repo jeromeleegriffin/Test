@@ -1,0 +1,34 @@
+{
+  "filename": "Griffin_House_Landscape_Holder_Slot_Repair_Review.zip",
+  "bytes": 30032855,
+  "sha256": "ec1b91bb86d98b34d889a1a22248619dc076682a593e88fe4e5b19f4f8b42911",
+  "entries": 42,
+  "status": "ISOLATED_VISUAL_REPAIR_REVIEW_PENDING_OWNER_ANDROID",
+  "liveChanged": false,
+  "checks": "Native visual review of five counts and four closeups; loader attributes, real card provenance, counts and lean geometry; 1340102 protected pixels exact; archive CRC and all file hashes pass",
+  "limits": "Not playable, owner-approved or Android/browser verified",
+  "library": {
+    "operation": "create_library_file",
+    "status": "succeeded",
+    "path": "/Griffin_House_Landscape_Holder_Slot_Repair_Review.zip",
+    "file_id": "file_00000000f86481f6bb715f4e65879a73",
+    "library_file_id": "libfile_89af2d56d1e48191ac37a397e26383c8",
+    "file_name": "Griffin_House_Landscape_Holder_Slot_Repair_Review.zip",
+    "current_version_number": 0,
+    "restored_from_version_number": null,
+    "xattrs": [
+      {
+        "name": "user.library-file-version",
+        "value": "0"
+      }
+    ],
+    "directory_id": "libdir_f3ea6bcdf910819187adf1dd8b5a3852",
+    "mime_type": "application/zip",
+    "library_artifact_type": "other",
+    "file_size_bytes": 30032855,
+    "external_connectors_accessed": false
+  },
+  "reconstruction": "Restore remaining assets and evidence from canonical ZIP. Four extracted holder PNG/WebP assets are independently committed with source markup and test harness.",
+  "baseCommit": "10ec7978eaeeda8ee62a7e55332a043866836a49",
+  "sourceCheckpoint": "1c02529a01e9382e218aa9bfdbefa11c2e24dc60"
+}

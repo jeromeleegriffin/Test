@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "CAMERA_APPROVED_UPRIGHT_BACKS_PENDING_REVIEW",
+    "status": "ISOLATED_HOLDER_SLOT_REPAIR_PENDING_OWNER_REVIEW",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Owner review of upright side card backs in holders; then connect approved projection to existing public counts in isolated game. Keep approved camera and actor placement.",
+    "next": "Owner review of holder-slot repair ZIP; preserve approved black-leather scene and original live runtime. Do not reuse rejected rotated product-view holders or stretched wood-strip patches.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -819,6 +819,29 @@
       "libraryFileId": "libfile_413d147655288191ae4f75518bf618b9",
       "fileId": "file_00000000e4ac81f6bd1a76a48c7a3710",
       "checkpoint": "c41ef22e512041038e30b8aa4f6f1f529a1770d9"
+    },
+    "latestVisualRepair": {
+      "record": "../coordination/landscape-holder-slot-repair-20261015/STATUS.json",
+      "checkpoint": "1c02529a01e9382e218aa9bfdbefa11c2e24dc60",
+      "branch": "work/overhead-landscape-20261014",
+      "artifact": {
+        "filename": "Griffin_House_Landscape_Holder_Slot_Repair_Review.zip",
+        "bytes": 30032855,
+        "sha256": "ec1b91bb86d98b34d889a1a22248619dc076682a593e88fe4e5b19f4f8b42911",
+        "libraryFileId": "libfile_89af2d56d1e48191ac37a397e26383c8"
+      },
+      "game": false,
+      "deployed": false,
+      "ownerApproved": false,
+      "physicalAndroidVerified": false,
+      "method": "Finished physical holder artwork authored in exact scene, registered alpha layers, original dynamic card pixels; top full wood foreground occlusion and bottom retaining lip",
+      "verification": "Native visual review of five counts and four closeups; loader attributes, real card provenance, counts and lean geometry; 1340102 protected pixels exact; archive CRC and all file hashes pass"
+    },
+    "materialDecision": {
+      "default": "black-leather",
+      "alternate": "walnut retained for later option",
+      "camera": "approved Angle C",
+      "poses": "banked landscape-only, not implemented"
     }
   },
   "previousRuntimeRelease": {
@@ -871,5 +894,11 @@
     "record": "../coordination/banked-ideas/BOTTOM_PLAYER_LEAD_PILL_20261015.json",
     "request": "Show a small pill labeled Lead beside the bottom/local player's name and existing status information when that player is leading.",
     "ownerQuote": "We need to, if I'm leading at the bottom, you need to put lead, pill down there, probably beside the, the name and the other stuff down there."
+  },
+  "bankedLandscapeCharacterPoses": {
+    "status": "BANKED_NOT_IMPLEMENTED",
+    "scope": "landscape only",
+    "record": "../coordination/landscape-holder-slot-repair-20261015/STATUS.json",
+    "plan": "Whole-character pose variants for bidding/turns and occasional idle glances; subtle crossfade. Table/cards first. Portrait unchanged; full animation deferred to possible Unity build."
   }
 }
