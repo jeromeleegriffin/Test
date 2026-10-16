@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "018_APPROVED_PRE_HAND_PLAYABLE_SIZE_REVIEW_IN_PROGRESS",
+    "status": "018_APPROVED_PRE_HAND_PLAYABLE_SIZE_REVIEW_DELIVERED",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Owner paused cards-in-hands development. Build isolated playable ZIP with approved pre-hand black-leather elevated scene to evaluate table/card size; do not widen table or move players yet. No deployment.",
+    "next": "Owner evaluates pre-hand playable table/card size. Preserve approved 017/018; do not widen table or reposition players before direction from size review.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -930,5 +930,21 @@
     "deployed": false,
     "ownerApprovalDate": "2026-10-16",
     "ownerQuote": "Looks good. I approve that."
+  },
+  "landscapePlayableSizeReview": {
+    "status": "DELIVERED_PENDING_OWNER_REVIEW",
+    "record": "../coordination/landscape-pre-hand-playable-size-review-20261016.md",
+    "sourceCheckpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
+    "recordCommit": "819e2c09dfe93938309575ffc7e95b99b8d63137",
+    "filename": "Griffin_House_Pre_Hand_Playable_Size_Review.zip",
+    "bytes": 158769113,
+    "sha256": "ded379c01bf759b69827d0538a8794ce198ca80566781d95ddae5aeb9f04c535",
+    "libraryFileId": "libfile_32a9f9dc207481919868c4cc99b9b5c4",
+    "deployed": false,
+    "tableWidened": false,
+    "playersRepositioned": false,
+    "cardsInHandsIncluded": false,
+    "browserVerification": "Complete hand to scoreboard in Chromium at tablet size and inside unchanged original ZIP loader at phone landscape; no script errors",
+    "limitations": "Fixed artwork cast; archived pre-hand holder defects retained for size study. No physical Android/full match/multiplayer verification."
   }
 }
