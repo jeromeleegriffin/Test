@@ -2246,6 +2246,38 @@
       "number": null,
       "task": "Tablet-specific Angle C repair; phone layout preserved",
       "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a"
+    },
+    {
+      "filename": "Griffin_House_Angle_C_Composition_Review.zip",
+      "bytes": 9313227,
+      "sha256": "2df93479ebbe55c213a54cd08421f8df75d012e8be62b982f3f6e55199a70222",
+      "status": "COMPOSITION_ONLY_PENDING_OWNER_REVIEW",
+      "game": false,
+      "deployed": false,
+      "entries": 19,
+      "crc": "PASS",
+      "allFileHashes": "PASS",
+      "libraryFileId": "libfile_1fc7f647b9b88191a108b2c743414821",
+      "fileId": "file_0000000079a881f680d4c86006d5bd62",
+      "number": null,
+      "workstream": "Landscape isolated composition review"
+    },
+    {
+      "filename": "Griffin_House_Angle_C_Upright_Card_Back_Review.zip",
+      "bytes": 11606635,
+      "sha256": "c40bb33a2d52b4aba18c8c7b3ebf3bbd5d9adf3faae7ef45d3d4e8ac97e58ea2",
+      "status": "UPRIGHT_BACKS_PREVIEW_PENDING_OWNER_REVIEW",
+      "cameraApproved": true,
+      "game": false,
+      "deployed": false,
+      "entries": 21,
+      "projectionCases": 93,
+      "allFileHashes": "PASS",
+      "originalCameraAndActorTransforms": "UNCHANGED",
+      "libraryFileId": "libfile_413d147655288191ae4f75518bf618b9",
+      "fileId": "file_00000000e4ac81f6bd1a76a48c7a3710",
+      "number": null,
+      "workstream": "Landscape isolated composition review"
     }
   ],
   "latestDeliveredGameBuild": "810-moon-bidtext-review",

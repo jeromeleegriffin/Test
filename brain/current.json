@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "OWNER_REJECTED_CAMERA_COMPOSITION",
+    "status": "CAMERA_APPROVED_UPRIGHT_BACKS_PENDING_REVIEW",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Owner compares original C versus newly generated layers in standalone composition ZIP. Camera/rail/hand registration pending, not a gameplay candidate.",
+    "next": "Owner review of upright side card backs in holders; then connect approved projection to existing public counts in isolated game. Keep approved camera and actor placement.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -783,6 +783,42 @@
       "record": "../coordination/angle-c-composition-review-20261015/PACKAGE_RECEIPT.json",
       "ownerApproved": false,
       "visualTabletFitVerified": false
+    },
+    "cameraApproval": {
+      "status": "OWNER_APPROVED_ANGLE_AND_COMPOSITION",
+      "date": "2026-10-15T21:42:26-04:00",
+      "ownerQuote": "But everything, the angle and stuff looks good. Uh, continue.",
+      "approvedCompositionArtifact": {
+        "filename": "Griffin_House_Angle_C_Composition_Review.zip",
+        "bytes": 9313227,
+        "sha256": "2df93479ebbe55c213a54cd08421f8df75d012e8be62b982f3f6e55199a70222",
+        "status": "COMPOSITION_ONLY_PENDING_OWNER_REVIEW",
+        "game": false,
+        "deployed": false,
+        "entries": 19,
+        "crc": "PASS",
+        "allFileHashes": "PASS",
+        "libraryFileId": "libfile_1fc7f647b9b88191a108b2c743414821",
+        "fileId": "file_0000000079a881f680d4c86006d5bd62"
+      },
+      "scope": "Camera/angle and improved composition; left/right standing card backs still require correction. Does not approve full gameplay integration.",
+      "preserveCameraAndActorTransforms": true
+    },
+    "uprightBacksReview": {
+      "filename": "Griffin_House_Angle_C_Upright_Card_Back_Review.zip",
+      "bytes": 11606635,
+      "sha256": "c40bb33a2d52b4aba18c8c7b3ebf3bbd5d9adf3faae7ef45d3d4e8ac97e58ea2",
+      "status": "UPRIGHT_BACKS_PREVIEW_PENDING_OWNER_REVIEW",
+      "cameraApproved": true,
+      "game": false,
+      "deployed": false,
+      "entries": 21,
+      "projectionCases": 93,
+      "allFileHashes": "PASS",
+      "originalCameraAndActorTransforms": "UNCHANGED",
+      "libraryFileId": "libfile_413d147655288191ae4f75518bf618b9",
+      "fileId": "file_00000000e4ac81f6bd1a76a48c7a3710",
+      "checkpoint": "c41ef22e512041038e30b8aa4f6f1f529a1770d9"
     }
   },
   "previousRuntimeRelease": {
