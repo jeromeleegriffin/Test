@@ -798,5 +798,11 @@
     "installedDeviceServiceWorkerUpgradeVerified": false,
     "physicalAndroidVoiceListeningVerified": false,
     "fullLiveMatchVerified": false
+  },
+  "bankedBottomPlayerLeadPill": {
+    "status": "BANKED_NOT_IMPLEMENTED",
+    "record": "../coordination/banked-ideas/BOTTOM_PLAYER_LEAD_PILL_20261015.json",
+    "request": "Show a small pill labeled Lead beside the bottom/local player's name and existing status information when that player is leading.",
+    "ownerQuote": "We need to, if I'm leading at the bottom, you need to put lead, pill down there, probably beside the, the name and the other stuff down there."
   }
 }
