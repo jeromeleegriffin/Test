@@ -490,7 +490,7 @@
     "reference": "809.zip",
     "referenceSha256": "3fc14fa02bc54423a9d2d84cb392d08c61c227969c844b622bb9c9264ec1e432",
     "artworkGeneration": "REQUIRES_EXPLICIT_GENERATE",
-    "implementationStarted": false
+    "implementationStarted": true
   },
   "landscapeCheckpoint": {
     "branch": "work/overhead-landscape-20261014",
@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "OWNER_REJECTED_REPAIR_BLOCKED",
+    "status": "DANIEL_017_APPROVED_FULL_TABLE_INTEGRATION_PENDING",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Need a camera-matched physical holder/card construction with explicit groove and supporting plane. Do not resume by adjusting arbitrary SVG offsets or masks. Solve and visually prove one real card before counts and other seats.",
+    "next": "Recover locked 017 source via landscapeGripApproval; integrate exact approved Daniel grip, then other seats individually. Do not resume rejected holders.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -907,5 +907,17 @@
     "scope": "landscape only",
     "record": "../coordination/landscape-holder-slot-repair-20261015/STATUS.json",
     "plan": "Whole-character pose variants for bidding/turns and occasional idle glances; subtle crossfade. Table/cards first. Portrait unchanged; full animation deferred to possible Unity build."
+  },
+  "landscapeGripApproval": {
+    "status": "OWNER_APPROVED_LOCKED",
+    "date": "2026-10-16",
+    "record": "../coordination/landscape-daniel-017-approved-20261016.md",
+    "scope": "Daniel isolated 0–16 review; full-table integration pending",
+    "runtime": "017.zip",
+    "sha256": "c165dc8c94e0c8e78be931dad438fbdd7dc590ec79bf27a9e92e3be8d99019e7",
+    "libraryFileId": "libfile_800a96f61fe081919f8abeada283c649",
+    "sourceLibraryFileId": "libfile_7d48cb5a3e288191af77808b9d11be45",
+    "deployed": false,
+    "method": "Fixed 68-degree fan for 7–16; overlap increases inside fixed finished grip; original card aspect; preserve 0–6"
   }
 }
