@@ -1,0 +1,12 @@
+{
+  "owner": "Jerome Griffin",
+  "authorizedAt": "2026-10-15T21:08:02-04:00",
+  "quote": "Go ahead and push it to the live sites, both of them. Don't include this landscape stuff that we've been doing.",
+  "sourceReviewCommit": "f4b02417d579a4702af6234b4802b8aba00cfec8",
+  "sourceSubdirectory": "builds/rita-review-20261015",
+  "runtime": "810-rita-jerome-voice-review-20261015",
+  "runtimeFiles": 1555,
+  "landscapeIncluded": false,
+  "studioIncluded": false,
+  "status": "OWNER_APPROVED_DEPLOYMENT_IN_PROGRESS"
+}
