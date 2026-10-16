@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "018_APPROVED_PRE_HAND_PLAYABLE_SIZE_REVIEW_DELIVERED",
+    "status": "WIDE_STATIC_PLAYABLE_DELIVERED_PENDING_REVIEW",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Owner evaluates pre-hand playable table/card size. Preserve approved 017/018; do not widen table or reposition players before direction from size review.",
+    "next": "Owner reviews wide static-player playable ZIP. Cards-in-hands/animation paused; 017/018 approvals preserved. Dedicated Moon attachment and trump stamp landscape sizing still pending. No deployment yet.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -946,5 +946,18 @@
     "cardsInHandsIncluded": false,
     "browserVerification": "Complete hand to scoreboard in Chromium at tablet size and inside unchanged original ZIP loader at phone landscape; no script errors",
     "limitations": "Fixed artwork cast; archived pre-hand holder defects retained for size study. No physical Android/full match/multiplayer verification."
+  },
+  "landscapeWideStaticPlayable": {
+    "status": "DELIVERED_PENDING_OWNER_REVIEW",
+    "record": "../coordination/landscape-wide-static-playable-20261016.md",
+    "recordCommit": "dee1ef3ee34af2088d64a2dca19c6b1a29b187ab",
+    "filename": "Griffin_House_Wide_Static_Playable_Review.zip",
+    "bytes": 159771753,
+    "sha256": "fe9526764b428b56cfe07232e69a60b9bf003f1a50669cf298257efa40c1ed6c",
+    "libraryFileId": "libfile_572085d11ab48191b32f2ce7fe2c899e",
+    "deployed": false,
+    "method": "New wide1850x850 finished scene, static people outward, uniform cover without side bars; dynamic original cards86x129; smaller bid console",
+    "verification": "Complete hand through unchanged ZIP loader to score; no script errors; saved ZIP size/hash/CRC verified",
+    "limitations": "Fixed artwork cast; interim holders; Moon attachment and trump stamp sizing pending; physical Android not verified"
   }
 }
