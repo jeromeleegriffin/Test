@@ -1,0 +1,8 @@
+{
+  "defaultRail": "black-leather",
+  "walnut": {
+    "asset": "assets/walnut-retained-concept.png",
+    "status": "retained material concept only, not integrated alternate renderer"
+  },
+  "poses": "BANKED_LANDSCAPE_ONLY_NOT_IMPLEMENTED"
+}
