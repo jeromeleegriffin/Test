@@ -2198,6 +2198,28 @@
       "deployedCommit": "731fe47ffb0616413b42272e1311ce164a11673e",
       "ownerDeploymentAuthorized": true,
       "ownerAndroidAccepted": false
+    },
+    {
+      "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
+      "bytes": 152188183,
+      "sha256": "35bcc83cd3e7305bf0f1bd9ecccc48613897399fe5a320073a5d9e56c67e0063",
+      "runtimeFiles": 1561,
+      "archiveEntries": 1568,
+      "archiveCRC": "PASS",
+      "manifestVerification": "ALL_RUNTIME_FILES_EXACT",
+      "ownerApproved": false,
+      "physicalAndroidTested": false,
+      "deployed": false,
+      "sourceCheckpoint": "0a00f7c7fdca04ca7d53bb4741b95bf544f95bd6",
+      "libraryFileId": "libfile_06a6d8b4ec0881919e657313223c8f53",
+      "fileId": "file_0000000086e4822f883265679e5d9829",
+      "status": "DELIVERED_PENDING_OWNER_ANDROID_REVIEW",
+      "geometryMathCases": 15,
+      "fullCurrentBrowserGameVerified": false,
+      "number": null,
+      "task": "Angle C isolated phone-review game; descriptive filename per owner later preference",
+      "workstream": "Landscape continuation",
+      "checkpoint": "375cb6e454b133226651e19869ea4ad3aa8d50bb"
     }
   ],
   "latestDeliveredGameBuild": "810-moon-bidtext-review",
