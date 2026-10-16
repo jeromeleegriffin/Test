@@ -685,7 +685,7 @@
     "rootTestRuntimeIncluded": false
   },
   "landscapeReview": {
-    "status": "ISOLATED_TABLET_ZIP_PENDING_OWNER_REVIEW",
+    "status": "OWNER_REJECTED_CAMERA_COMPOSITION",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Owner tablet visual/touch review in separate asset-compatible ZIP loader",
+    "next": "Recover/reconcile exact approved C layers and match visual composition before further layout changes or review ZIP; no new art without explicit Generate.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -734,6 +734,24 @@
       "fullCurrentBrowserGameVerified": false
     },
     "device": "Owner-confirmed 8.1-inch Onn Android tablet; phone unavailable and not yet checked",
-    "loaderUrl": "https://jeromeleegriffin.github.io/Test/GriffinHouseZipReview.html"
+    "loaderUrl": "https://jeromeleegriffin.github.io/Test/GriffinHouseZipReview.html",
+    "cameraCorrection": {
+      "date": "2026-10-15",
+      "status": "OWNER_REJECTED_CAMERA_COMPOSITION",
+      "ownerQuote": "The view we agreed upon showed my avatar some too and at a higher angle.",
+      "device": "8.1-inch Onn tablet; phone not yet reviewed",
+      "reference": {
+        "filename": "Low-Angle Library Card Game.png",
+        "libraryFileId": "libfile_5fe56a47835881919b6b15257c45d958",
+        "fileId": "file_00000000ea88820ca261e8490cf0be9e",
+        "sha256": "faff2f6dc70003bbdf490d6fbf6546c679dd36e1f013fecb89f86c223d8f8903",
+        "dimensions": "1672x941",
+        "historicalGeneratedFilename": "exec-06225aab-67ac-470b-8978-c4d472919608.png",
+        "visualInspected": true
+      },
+      "finding": "Approved C looks down over players; prominent foreground cards and local head/back/shoulders/hands partly visible. Delivered stage8/9 reuse upright frontal portrait poses and omit local layer for non-Jerome identities. Stage3 CHARACTER_COMPOSITION.md explicitly labels this an unapproved alternative study. Functional checkpoint was incorrectly treated as design fidelity.",
+      "required": "Return to exact approved composition and avatar visibility; do not substitute upright frontal portraits, silently change selected identity, or claim choosing Jerome alone fixes camera. Do not patch camera via arbitrary tablet-only head shifts. Reconcile matching existing layers with reference before next game ZIP. Preserve rules, portrait, original loader and live games.",
+      "limits": "No new image generation authorized. Existing roster has no registered approved AngleC pose set per original layer audit; recover matching sources first. No replacement camera/game/art implementation claimed by this correction."
+    }
   }
 }

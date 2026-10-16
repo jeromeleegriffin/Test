@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-15",
+  "status": "OWNER_REJECTED_CAMERA_COMPOSITION",
+  "ownerQuote": "The view we agreed upon showed my avatar some too and at a higher angle.",
+  "device": "8.1-inch Onn tablet; phone not yet reviewed",
+  "reference": {
+    "filename": "Low-Angle Library Card Game.png",
+    "libraryFileId": "libfile_5fe56a47835881919b6b15257c45d958",
+    "fileId": "file_00000000ea88820ca261e8490cf0be9e",
+    "sha256": "faff2f6dc70003bbdf490d6fbf6546c679dd36e1f013fecb89f86c223d8f8903",
+    "dimensions": "1672x941",
+    "historicalGeneratedFilename": "exec-06225aab-67ac-470b-8978-c4d472919608.png",
+    "visualInspected": true
+  },
+  "finding": "Approved C looks down over players; prominent foreground cards and local head/back/shoulders/hands partly visible. Delivered stage8/9 reuse upright frontal portrait poses and omit local layer for non-Jerome identities. Stage3 CHARACTER_COMPOSITION.md explicitly labels this an unapproved alternative study. Functional checkpoint was incorrectly treated as design fidelity.",
+  "required": "Return to exact approved composition and avatar visibility; do not substitute upright frontal portraits, silently change selected identity, or claim choosing Jerome alone fixes camera. Do not patch camera via arbitrary tablet-only head shifts. Reconcile matching existing layers with reference before next game ZIP. Preserve rules, portrait, original loader and live games.",
+  "limits": "No new image generation authorized. Existing roster has no registered approved AngleC pose set per original layer audit; recover matching sources first. No replacement camera/game/art implementation claimed by this correction."
+}
