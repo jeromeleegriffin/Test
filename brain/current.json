@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "LOWERED_HOLDER_019_DELIVERED_PENDING_REVIEW",
+    "status": "OPEN_FELT_020_DELIVERED_PENDING_OWNER_REVIEW",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Owner reviews019 lowered local holder; bottom head/shoulders removed, resting hands retained. Preserve017/018. Played-card flattening, remaining header/menu/animation refinements pending. No deployment.",
+    "next": "Review020: no bottom hands/near rail; opponents holders/backs removed for open-felt static study; local holder lower. Continue UI and animation review. Preserve locked017/018. No deployment.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -973,5 +973,20 @@
     "scope": "Lowered local holder/head out of view; same hand size; Moon registration fix; trump chooser fit",
     "verification": "Phone/tablet visual checks; full hand through original ZIP loader; CRC/full file manifest",
     "limitations": "Physical Android, full matches/multiplayer and all special animations unverified; remaining UI pending"
+  },
+  "landscapeOpenFelt020": {
+    "status": "DELIVERED_PENDING_OWNER_REVIEW",
+    "record": "../coordination/landscape-open-felt-020-20261016.md",
+    "recordCommit": "062e0a912179e307764140565e01902e412495fa",
+    "filename": "020.zip",
+    "libraryFilename": "020(2).zip",
+    "libraryFileId": "libfile_78b1f2a0402081919c5c30b9c29859d2",
+    "bytes": 162548332,
+    "sha256": "7d5e996f2360f71146891b314ff7a1343730307f2facd3785c57815da817ce8b",
+    "deployed": false,
+    "ownerApproved": false,
+    "scope": "Remove bottom hands/near rail and opponent holders/backs; lower local holder; improve played cards; clear discard/score overlap",
+    "verification": "Moon and ordinary bid hands; phone/tablet visuals; complete original ZIP-loader hand; CRC/all manifest hashes",
+    "limitations": "No physical Android/full match/multiplayer/exhaustive animation verification; static cast independent of roster; side crop on narrower tablet"
   }
 }
