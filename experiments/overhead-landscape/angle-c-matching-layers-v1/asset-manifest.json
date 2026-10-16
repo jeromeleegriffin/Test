@@ -1,0 +1,66 @@
+{
+  "rafael-left-angle-c-v1.webp": {
+    "source": "rafael-left-angle-c-v1.png",
+    "size": [
+      1206,
+      1305
+    ],
+    "alphaBounds": [
+      0,
+      17,
+      1206,
+      1305
+    ],
+    "bytes": 412422,
+    "sha256": "3d788cb014c6c923fa0aa632a4d621de8bffe750d3ec602342d41dbcd77ca23e",
+    "gitSha": "3723d96c3e17bf23db4493c785cde2b46aaedb11"
+  },
+  "daniel-right-angle-c-v1.webp": {
+    "source": "daniel-right-angle-c-v1.png",
+    "size": [
+      1184,
+      1328
+    ],
+    "alphaBounds": [
+      0,
+      0,
+      1184,
+      1328
+    ],
+    "bytes": 353586,
+    "sha256": "18a632b4e424c07e7b10be36cce5ef49b11684959bee6d4f5b68e9ddd9cf349a",
+    "gitSha": "783cdf8dd57d35d67babe8000af5c76bebe40bba"
+  },
+  "spark-top-angle-c-v1.webp": {
+    "source": "spark-top-angle-c-v1.png",
+    "size": [
+      1671,
+      941
+    ],
+    "alphaBounds": [
+      97,
+      0,
+      1518,
+      941
+    ],
+    "bytes": 166424,
+    "sha256": "3e2ffc20238c27958c3fbef83038fe48f332b79c3e7fb9c96cf5ec9e52c92870",
+    "gitSha": "748f8c425fc9604e35cf108fb5f5f606305ac28b"
+  },
+  "jerome-rear-angle-c-v2.webp": {
+    "source": "jerome-rear-angle-c-v2.png",
+    "size": [
+      1672,
+      941
+    ],
+    "alphaBounds": [
+      178,
+      279,
+      1493,
+      941
+    ],
+    "bytes": 147828,
+    "sha256": "a22bec017df21d48f39fc0a2e0bd0743aa036f02003f4544279f3affd1b3a8a4",
+    "gitSha": "ff2e3e29f0fa784edaff96ee080315276ee7e974"
+  }
+}

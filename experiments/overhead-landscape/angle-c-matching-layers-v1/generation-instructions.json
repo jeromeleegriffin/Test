@@ -1,0 +1,38 @@
+{
+  "mode": "Built-in image_gen",
+  "status": "GENERATED_NOT_OWNER_APPROVED_NOT_IN_GAME",
+  "scope": "First test roster only: Rafael left, Spark top, Daniel right, Jerome local rear",
+  "approvedCamera": {
+    "libraryFileId": "libfile_5fe56a47835881919b6b15257c45d958",
+    "filename": "Low-Angle Library Card Game.png",
+    "sha256": "faff2f6dc70003bbdf490d6fbf6546c679dd36e1f013fecb89f86c223d8f8903"
+  },
+  "commonPrompt": "Use the original C image as exact elevated camera/forward-leaning pose reference, and each existing approved character image as identity/wardrobe reference. One photorealistic character only, transparent RGBA background, warm amber firelight, no table/rail/holders/cards/UI/text/chair/other people. Camera looks down over shoulders and hair, not upright frontal portrait.",
+  "subjects": [
+    {
+      "asset": "spark-top-angle-c-v1.webp",
+      "sourceGeneration": "exec-8356435c-5c6b-439f-a4dc-295f0df3b905.png",
+      "identity": "assets/characters077/spark-top.webp",
+      "prompt": "Adult woman Spark; long brown curls, hoop earrings, burgundy collared blouse. Replace top-center person from camera reference; lean forward, head slightly down, both forearms forward and relaxed hands at table edge. Requested1672x941transparentcanvas, subjecttopcenter x590..1100,y0..330. Output canvas is1671x941; placement not honored exactly and needs registration."
+    },
+    {
+      "asset": "rafael-left-angle-c-v1.webp",
+      "sourceGeneration": "exec-50f598ea-cd3d-4006-8e94-c7e35fb013f5.png",
+      "identity": "assets/characters077/rafael-left.png",
+      "prompt": "Adult man Rafael; dark curls, short beard, charcoal patterned button-up, rolled sleeves. Lean inward-right from LEFT seat, downward camera sees hair/back-side of head/inward cheek. Both forearms and relaxed hands on unseen table edge, full hands visible, legs maycrop."
+    },
+    {
+      "asset": "daniel-right-angle-c-v1.webp",
+      "sourceGeneration": "exec-b5db3e6c-3095-4234-bf49-e2a180802aaf.png",
+      "identity": "assets/characters077/daniel-right.png",
+      "prompt": "Adult East Asian man Daniel; swept blackhair, clean-shaven, rust sweater, darktrousers. Lean inward-left from RIGHT seat, downwardcamera sees top ofhair/inwardcheek. Bothforearms/hands reach unseen tableedge. Fullhands, noobjects."
+    },
+    {
+      "asset": "jerome-rear-angle-c-v2.webp",
+      "sourceGeneration": "exec-ef7d8676-e717-4352-a8cd-9dc17164b331.png",
+      "identity": "integration-stage6/assets/angle-c/jerome-rear-source-v1.png",
+      "prompt": "LocalJerome seenfrombehind; patterned blacknewsboycap/jacket, whitecuffs, maturehands. Match bottomforegroundperson of C, head/back/shoulderspartvisible, relaxedhands forward oneachside; noface. Requested1672x941canvas subjectx350..1350,y690..941, capcenter835,handcenters525/1145,y785. Output placement notexact; fitrequired."
+    }
+  ],
+  "formatting": "Generated PNG originals preserved in generated_images and automatically retained generated-image records. Project WebPs use Pillow standard RGBA->WebP quality94 method6 only; no repainting, background removal or pose edits via code."
+}
