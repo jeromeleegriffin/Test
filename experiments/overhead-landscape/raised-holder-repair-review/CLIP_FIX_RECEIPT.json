@@ -1,0 +1,27 @@
+{
+  "rootCause": "Loader cssFor rewrites url(#clip) to double-quoted url inside already double-quoted HTML attribute. Invalid clip attributes expose full table overlays, masking players and cards.",
+  "repair": "Single outer quote on all eight clip-path attributes survives actual loader rewrite",
+  "verification": "Reproduced malformed previous attributes; fixed rewritten document parsed with eight valid clip references and thirty card elements",
+  "ownerTablet": "PENDING",
+  "library": {
+    "operation": "create_library_file",
+    "status": "succeeded",
+    "path": "/Griffin_House_Angle_C_Loader_Clip_Fix.zip",
+    "file_id": "file_00000000d39081f6bc847567d3f26055",
+    "library_file_id": "libfile_e398a6d4dd4c8191bbaac22db47e414a",
+    "file_name": "Griffin_House_Angle_C_Loader_Clip_Fix.zip",
+    "current_version_number": 0,
+    "restored_from_version_number": null,
+    "xattrs": [
+      {
+        "name": "user.library-file-version",
+        "value": "0"
+      }
+    ],
+    "directory_id": "libdir_f3ea6bcdf910819187adf1dd8b5a3852",
+    "mime_type": "application/zip",
+    "library_artifact_type": "other",
+    "file_size_bytes": 12680489,
+    "external_connectors_accessed": false
+  }
+}
