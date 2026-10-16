@@ -1,0 +1,39 @@
+{
+  "file": "Griffin_House_Angle_C_Raised_Holder_Repair.zip",
+  "sha256": "c8a55b556f34f31c7f18867d2a730b84d4dcc516c73f8095e53629acbed6f6f1",
+  "size": 12680423,
+  "status": "ISOLATED_TABLET_REVIEW_PENDING",
+  "camera": "owner approved; exact four character image transforms preserved",
+  "fixes": [
+    "30 static SVG card backs; no JS mounting dependency",
+    "Cards above foreground arm layers",
+    "Three actual walnut holder back panels and front lips",
+    "Card source dimensions corrected to 1042x1509"
+  ],
+  "verification": [
+    "Static source assertions and complete ZIP CRC pass",
+    "Inkscape composition render inspected: all three card rows visible and standing, raised holders visible"
+  ],
+  "limits": "Native SVG render checked; Android browser/ZIP loader still requires owner tablet check. No live game or original loader modified.",
+  "library": {
+    "operation": "create_library_file",
+    "status": "succeeded",
+    "path": "/Griffin_House_Angle_C_Raised_Holder_Repair.zip",
+    "file_id": "file_000000008d70820c8c8f50b8fd1ed737",
+    "library_file_id": "libfile_945f2e5b55848191be8521fa6f76a4e0",
+    "file_name": "Griffin_House_Angle_C_Raised_Holder_Repair.zip",
+    "current_version_number": 0,
+    "restored_from_version_number": null,
+    "xattrs": [
+      {
+        "name": "user.library-file-version",
+        "value": "0"
+      }
+    ],
+    "directory_id": "libdir_f3ea6bcdf910819187adf1dd8b5a3852",
+    "mime_type": "application/zip",
+    "library_artifact_type": "other",
+    "file_size_bytes": 12680423,
+    "external_connectors_accessed": false
+  }
+}

@@ -1,0 +1,1 @@
+Restore the assets directory from the canonical ZIP identified by PACKAGE_RECEIPT.json. Source index and projection module are checkpointed here. Earlier upright preview failed owner tablet review; this replacement is not yet owner reviewed. Keep approved composition/camera and isolation hold. Do not deploy landscape or modify original loader.
