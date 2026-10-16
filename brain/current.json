@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "ISOLATED_HOLDER_SLOT_REPAIR_PENDING_OWNER_REVIEW",
+    "status": "OWNER_REJECTED_REPAIR_BLOCKED",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Owner review of holder-slot repair ZIP; preserve approved black-leather scene and original live runtime. Do not reuse rejected rotated product-view holders or stretched wood-strip patches.",
+    "next": "Need a camera-matched physical holder/card construction with explicit groove and supporting plane. Do not resume by adjusting arbitrary SVG offsets or masks. Solve and visually prove one real card before counts and other seats.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -835,13 +835,20 @@
       "ownerApproved": false,
       "physicalAndroidVerified": false,
       "method": "Finished physical holder artwork authored in exact scene, registered alpha layers, original dynamic card pixels; top full wood foreground occlusion and bottom retaining lip",
-      "verification": "Native visual review of five counts and four closeups; loader attributes, real card provenance, counts and lean geometry; 1340102 protected pixels exact; archive CRC and all file hashes pass"
+      "verification": "Prior assistant native visual pass withdrawn: owner screenshots 71472/71470/71468 demonstrate incorrect card seating. Geometry/archive checks do not establish physical correctness.",
+      "status": "OWNER_REJECTED"
     },
     "materialDecision": {
       "default": "black-leather",
       "alternate": "walnut retained for later option",
       "camera": "approved Angle C",
       "poses": "banked landscape-only, not implemented"
+    },
+    "constructionProof": {
+      "status": "THREE_ATTEMPTS_FAILED_NO_REVIEW_ZIP",
+      "checkpoint": "9b7ec7b1dfdffeb08040eb782024339aa74d472b",
+      "branch": "work/overhead-landscape-20261014",
+      "record": "experiments/overhead-landscape/holder-construction-proof-20261016/STATUS.json"
     }
   },
   "previousRuntimeRelease": {
