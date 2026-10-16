@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Recover/reconcile exact approved C layers and match visual composition before further layout changes or review ZIP; no new art without explicit Generate.",
+    "next": "Fit and visually compare actual matching layers to original approved C before another game candidate. Existing stage8/9 camera remains rejected.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -752,6 +752,20 @@
       "finding": "Approved C looks down over players; prominent foreground cards and local head/back/shoulders/hands partly visible. Delivered stage8/9 reuse upright frontal portrait poses and omit local layer for non-Jerome identities. Stage3 CHARACTER_COMPOSITION.md explicitly labels this an unapproved alternative study. Functional checkpoint was incorrectly treated as design fidelity.",
       "required": "Return to exact approved composition and avatar visibility; do not substitute upright frontal portraits, silently change selected identity, or claim choosing Jerome alone fixes camera. Do not patch camera via arbitrary tablet-only head shifts. Reconcile matching existing layers with reference before next game ZIP. Preserve rules, portrait, original loader and live games.",
       "limits": "No new image generation authorized. Existing roster has no registered approved AngleC pose set per original layer audit; recover matching sources first. No replacement camera/game/art implementation claimed by this correction."
+    },
+    "matchingLayers": {
+      "status": "GENERATED_PENDING_COMPOSITION_AND_OWNER_REVIEW",
+      "commit": "b65019cbfcc092955126be1c84c83df402b2d3c1",
+      "path": "experiments/overhead-landscape/angle-c-matching-layers-v1",
+      "identitySeats": [
+        "Spark top",
+        "Rafael left",
+        "Daniel right",
+        "Jerome local rear"
+      ],
+      "method": "built-in image generation with originalCcameraandapprovedidentityreferences",
+      "runtimeIncluded": false,
+      "ownerApproved": false
     }
   },
   "previousRuntimeRelease": {
