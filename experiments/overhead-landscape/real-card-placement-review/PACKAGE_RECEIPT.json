@@ -1,0 +1,28 @@
+{
+  "library": {
+    "operation": "create_library_file",
+    "status": "succeeded",
+    "path": "/Griffin_House_Landscape_Real_Card_Placement.zip",
+    "file_id": "file_00000000729c81f6a772a15533053312",
+    "library_file_id": "libfile_299c813dd6688191b2d445db0f15245c",
+    "file_name": "Griffin_House_Landscape_Real_Card_Placement.zip",
+    "current_version_number": 0,
+    "restored_from_version_number": null,
+    "xattrs": [
+      {
+        "name": "user.library-file-version",
+        "value": "0"
+      }
+    ],
+    "directory_id": "libdir_f3ea6bcdf910819187adf1dd8b5a3852",
+    "mime_type": "application/zip",
+    "library_artifact_type": "other",
+    "file_size_bytes": 10994345,
+    "external_connectors_accessed": false
+  },
+  "sha256": "1c75820378aa0a15ff8da529929bcd663d4cb735e031d75207b55227af8c8d9f",
+  "state": "ISOLATED_VISUAL_REVIEW_NOT_PLAYABLE",
+  "verification": "Native SVG render inspected; 10/6/3/1/0 card counts at four seats, actual loader clipping rewrite, asset presence and ZIP CRC pass. Tablet unverified.",
+  "reconstruct": "Restore assets from canonical ZIP",
+  "next": "Owner card placement review, then separate table/actor production layers and integrate current gameplay without altering portrait; pose changes BANKED."
+}

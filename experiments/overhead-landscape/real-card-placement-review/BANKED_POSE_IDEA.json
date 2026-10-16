@@ -1,0 +1,6 @@
+{
+  "status": "BANKED_NOT_IMPLEMENTED",
+  "scope": "landscape only; portrait unchanged",
+  "plan": "Complete character pose variants, subtle short crossfades, game-event triggers for bidding/turns and occasional idle glances. Avoid synchronized changes. Full animation reserved for possible Unity build.",
+  "priority": "After table, holders, cards and geometry approved"
+}
