@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "DANIEL_017_APPROVED_FULL_TABLE_INTEGRATION_PENDING",
+    "status": "018_APPROVED_PRE_HAND_PLAYABLE_SIZE_REVIEW_IN_PROGRESS",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Recover locked 017 source via landscapeGripApproval; integrate exact approved Daniel grip, then other seats individually. Do not resume rejected holders.",
+    "next": "Owner paused cards-in-hands development. Build isolated playable ZIP with approved pre-hand black-leather elevated scene to evaluate table/card size; do not widen table or move players yet. No deployment.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -921,12 +921,14 @@
     "method": "Fixed 68-degree fan for 7–16; overlap increases inside fixed finished grip; original card aspect; preserve 0–6"
   },
   "landscapeFullTableCandidate": {
-    "status": "DELIVERED_PENDING_OWNER_REVIEW",
+    "status": "OWNER_APPROVED_LOCKED",
     "record": "../coordination/landscape-daniel-018-full-table-20261016.md",
     "libraryFileId": "libfile_58e95529ab048191b5d57ea142559384",
     "sha256": "2fa7d1422759af69f67cc315716e43bcb0978d3eabb8868e71255abbf6867886",
     "bytes": 15803252,
     "approvedFallback": "017",
-    "deployed": false
+    "deployed": false,
+    "ownerApprovalDate": "2026-10-16",
+    "ownerQuote": "Looks good. I approve that."
   }
 }
