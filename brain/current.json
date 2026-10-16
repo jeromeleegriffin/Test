@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Fit and visually compare actual matching layers to original approved C before another game candidate. Existing stage8/9 camera remains rejected.",
+    "next": "Owner compares original C versus newly generated layers in standalone composition ZIP. Camera/rail/hand registration pending, not a gameplay candidate.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -766,6 +766,23 @@
       "method": "built-in image generation with originalCcameraandapprovedidentityreferences",
       "runtimeIncluded": false,
       "ownerApproved": false
+    },
+    "compositionPreview": {
+      "filename": "Griffin_House_Angle_C_Composition_Review.zip",
+      "bytes": 9313227,
+      "sha256": "2df93479ebbe55c213a54cd08421f8df75d012e8be62b982f3f6e55199a70222",
+      "status": "COMPOSITION_ONLY_PENDING_OWNER_REVIEW",
+      "game": false,
+      "deployed": false,
+      "entries": 19,
+      "crc": "PASS",
+      "allFileHashes": "PASS",
+      "libraryFileId": "libfile_1fc7f647b9b88191a108b2c743414821",
+      "fileId": "file_0000000079a881f680d4c86006d5bd62",
+      "checkpoint": "15b029021e97077878b1f23a0f1104da2d8e2ad2",
+      "record": "../coordination/angle-c-composition-review-20261015/PACKAGE_RECEIPT.json",
+      "ownerApproved": false,
+      "visualTabletFitVerified": false
     }
   },
   "previousRuntimeRelease": {
