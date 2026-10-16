@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "WIDE_STATIC_PLAYABLE_DELIVERED_PENDING_REVIEW",
+    "status": "LOWERED_HOLDER_019_DELIVERED_PENDING_REVIEW",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Owner reviews wide static-player playable ZIP. Cards-in-hands/animation paused; 017/018 approvals preserved. Dedicated Moon attachment and trump stamp landscape sizing still pending. No deployment yet.",
+    "next": "Owner reviews019 lowered local holder; bottom head/shoulders removed, resting hands retained. Preserve017/018. Played-card flattening, remaining header/menu/animation refinements pending. No deployment.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -959,5 +959,19 @@
     "method": "New wide1850x850 finished scene, static people outward, uniform cover without side bars; dynamic original cards86x129; smaller bid console",
     "verification": "Complete hand through unchanged ZIP loader to score; no script errors; saved ZIP size/hash/CRC verified",
     "limitations": "Fixed artwork cast; interim holders; Moon attachment and trump stamp sizing pending; physical Android not verified"
+  },
+  "landscapeLoweredHolder019": {
+    "status": "DELIVERED_PENDING_OWNER_REVIEW",
+    "record": "../coordination/landscape-lowered-holder-019-20261016.md",
+    "filename": "019.zip",
+    "libraryFilename": "019(2).zip",
+    "libraryFileId": "libfile_332f90bd82fc819192d8b67c62b57d15",
+    "bytes": 160658866,
+    "sha256": "1dc3bf5cd4fa65893554512c0008cdac8284f92ae03041310122aad41022965f",
+    "deployed": false,
+    "ownerApproved": false,
+    "scope": "Lowered local holder/head out of view; same hand size; Moon registration fix; trump chooser fit",
+    "verification": "Phone/tablet visual checks; full hand through original ZIP loader; CRC/full file manifest",
+    "limitations": "Physical Android, full matches/multiplayer and all special animations unverified; remaining UI pending"
   }
 }
