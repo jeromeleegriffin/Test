@@ -1,0 +1,29 @@
+{
+  "library": {
+    "operation": "create_library_file",
+    "status": "succeeded",
+    "path": "/Griffin_House_Finished_Holder_Asset_Fit.zip",
+    "file_id": "file_00000000ceac81f681631818ba5e662e",
+    "library_file_id": "libfile_b34f017d73b081919ec9f39cd4219401",
+    "file_name": "Griffin_House_Finished_Holder_Asset_Fit.zip",
+    "current_version_number": 0,
+    "restored_from_version_number": null,
+    "xattrs": [
+      {
+        "name": "user.library-file-version",
+        "value": "0"
+      }
+    ],
+    "directory_id": "libdir_f3ea6bcdf910819187adf1dd8b5a3852",
+    "mime_type": "application/zip",
+    "library_artifact_type": "other",
+    "file_size_bytes": 11634541,
+    "external_connectors_accessed": false
+  },
+  "sha256": "43dcac8f9e71a23a0d76abe5f7534ba76a8af33d12395376b3885fd07df619d5",
+  "status": "ISOLATED_FINISHED_ASSET_FIT_REVIEW_PENDING",
+  "method": "Full authored transparent raster physical holders, uniform scale/rotation only. Existing dynamic card pixels behind wood backs. Two felt-only patches remove rejected trays; soft mask integration.",
+  "evidence": "Native full/one/empty SVG render inspected. Card counts and loader rewriting verified. Final soft-edge patch refinement source-checked, not visually rerendered. Android review pending.",
+  "reconstruct": "Restore assets folder from canonical ZIP. Master holder WebPs independently committed in ../finished-holder-assets-v1. Do not reuse rejected stretched backing patches.",
+  "restrictions": "No live or portrait changes. Exact scene perspective, contact shadow and card angle await acceptance."
+}
