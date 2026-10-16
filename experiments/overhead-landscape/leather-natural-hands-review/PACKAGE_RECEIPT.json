@@ -1,0 +1,27 @@
+{
+  "library": {
+    "operation": "create_library_file",
+    "status": "succeeded",
+    "path": "/Griffin_House_Black_Leather_Natural_Hands_Review.zip",
+    "file_id": "file_0000000036ac820c975d3637c3b9400c",
+    "library_file_id": "libfile_b67889153e688191b7a4304cf8ce6acf",
+    "file_name": "Griffin_House_Black_Leather_Natural_Hands_Review.zip",
+    "current_version_number": 0,
+    "restored_from_version_number": null,
+    "xattrs": [
+      {
+        "name": "user.library-file-version",
+        "value": "0"
+      }
+    ],
+    "directory_id": "libdir_f3ea6bcdf910819187adf1dd8b5a3852",
+    "mime_type": "application/zip",
+    "library_artifact_type": "other",
+    "file_size_bytes": 6602899,
+    "external_connectors_accessed": false
+  },
+  "ownerDecision": "Black leather default; preserve walnut for future game option. Side hands clear of holders; top and bottom okay. Use real approved left lamp asset.",
+  "state": "VISUAL_PREVIEW_ONLY_NOT_PLAYABLE_OR_DEPLOYED",
+  "reconstruct": "Restore assets directory from canonical ZIP.",
+  "next": "Owner review; split accepted scene into game layers without baked cards; apply hand update to walnut; keep portrait and live sites unchanged."
+}

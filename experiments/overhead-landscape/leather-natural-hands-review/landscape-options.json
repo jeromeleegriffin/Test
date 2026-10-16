@@ -1,0 +1,24 @@
+{
+  "defaultRail": "black-leather",
+  "rails": {
+    "black-leather": {
+      "asset": "assets/leather-natural-hands-v1.png",
+      "status": "side hands revised; owner review pending"
+    },
+    "walnut": {
+      "asset": "assets/walnut-retained-concept-v1.png",
+      "status": "retained approved material concept for later option; side hand revisions not yet applied"
+    }
+  },
+  "lamp": {
+    "asset": "assets/lantern-clipped.svg",
+    "source": "exact existing approved asset; unchanged bytes",
+    "rect": [
+      60,
+      12,
+      105,
+      157.5
+    ]
+  },
+  "scope": "isolated visual concept only; live runtime unchanged"
+}
