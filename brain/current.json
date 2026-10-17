@@ -1047,6 +1047,35 @@
       "entries": 1572,
       "loaderVerification": "Actual811.zip opened in unchanged original ZIP loader; expected runtime and approved1848px scene loaded; zero page errors",
       "physicalAndroidAccepted": false
+    },
+    "latestAudit": {
+      "status": "TWO_FULL_MATCHES_COMPLETE_ISSUES_FOUND",
+      "record": "../coordination/811-two-match-audit-20261017.md",
+      "evidence": "../coordination/811-two-match-audit-evidence-20261017.json",
+      "build": "811",
+      "fullMatches": 2,
+      "hands": 9,
+      "landscapeFinal": [
+        50,
+        525
+      ],
+      "portraitFinal": [
+        260,
+        510
+      ],
+      "pageErrors": 0,
+      "confirmedIssues": [
+        "Landscape History closes score but does not open",
+        "Landscape Last Trick inaccessible",
+        "Post-match landscape controls overlap",
+        "Achievement toast covers played cards",
+        "Prior-hand contract progress during next trump choice",
+        "Short landscape crops top player",
+        "Known fixed cast/roster mismatch"
+      ],
+      "runtimeChanged": false,
+      "deployed": false,
+      "physicalAndroidVerified": false
     }
   }
 }
