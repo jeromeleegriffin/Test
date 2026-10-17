@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "LANDSCAPE_REPAIR_021_DELIVERED_PENDING_OWNER_REVIEW",
+    "status": "OWNER_FIXES_IMPLEMENTED_LOCAL_PENDING_REVIEW",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Owner021 review; continue static playable landscape UI. Preserve locked017/018. No deployment.",
+    "next": "Review repaired021 candidate; retain isolated landscape and deployment hold. Both-orientation trump-choice sorting implemented.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -991,7 +991,7 @@
     "ownerFeedback": "Graphics degraded; translucent cards; trump stamp/achievements/levels/fire/lamp need repair. Open-felt layout direction retained."
   },
   "landscapeRepair021": {
-    "status": "OWNER_FEEDBACK_REPAIRS_AUTHORIZED_NOT_DEPLOYED",
+    "status": "OWNER_FIXES_IMPLEMENTED_LOCAL_NOT_DEPLOYED",
     "record": "../coordination/landscape-repair-021-20261017.md",
     "recordCommit": "89b22c344260fee5908ef9bfe16efee79f7dc987",
     "filename": "021.zip",
@@ -1008,13 +1008,17 @@
   "landscapeOwnerReviewBank": {
     "record": "../coordination/landscape-owner-review-bank-20261016.md",
     "recordCommit": "f0b2f2bcc63ae2f94b888a6caa1306528bc7004f",
-    "status": "OWNER_AUTHORIZED_IMPLEMENTATION_20261016",
+    "status": "IMPLEMENTED_LOCAL_REVIEW_CANDIDATE_NOT_DEPLOYED",
     "deploymentHold": true,
     "artApproved": true,
-    "artIntegrated": false,
+    "artIntegrated": true,
     "auditLibraryFileId": "libfile_49bd5341a3f08191b4d5709ffafe414b",
-    "sourceCheckpointLibraryFileId": "libfile_e4c8e5a1e9dc819182514b54420b70ba",
-    "sharedTrumpSorting": "BOTH_ORIENTATIONS_PENDING_IMPLEMENTATION",
-    "latestOwnerInstruction": "That's enough for now. Let's go ahead and get these changes and fixes in."
+    "sourceCheckpointLibraryFileId": "libfile_48903882513881918eb932b8f33611da",
+    "sharedTrumpSorting": "IMPLEMENTED_BOTH_ORIENTATIONS_IN_CANDIDATE",
+    "latestOwnerInstruction": "That's enough for now. Let's go ahead and get these changes and fixes in.",
+    "implementationRecord": "../coordination/landscape-owner-fixes-implemented-20261016.md",
+    "implementationCommit": "866628f278eb69cc5ba0e94db055cd13ca0c3473",
+    "verification": "3 real hands 1x/3x/MAX; zero page errors; focused layout and sort checks",
+    "remaining": "Fixed scene cast; physical Android and offline reload not verified"
   }
 }
