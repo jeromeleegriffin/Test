@@ -1076,6 +1076,25 @@
       "runtimeChanged": false,
       "deployed": false,
       "physicalAndroidVerified": false
+    },
+    "ownerFeedback71616": {
+      "status": "IMPLEMENTED_TESTED_NOT_PACKAGED_OR_DEPLOYED",
+      "record": "../coordination/pending/811-owner-feedback-20261017/SOURCE_CHECKPOINT.json",
+      "changes": [
+        "Upper-left compact header clears top face",
+        "Landscape felt trump mark2x width/height",
+        "Compact local name/level/status strip",
+        "Top nameplate clear of Moon plaque",
+        "Lead persists throughout trick; full auction/turn/choice labels"
+      ],
+      "verification": {
+        "realHands": 2,
+        "pageErrors": 0,
+        "persistentLeadObservations": 80,
+        "missingLead": 0
+      },
+      "delivered811Unchanged": true,
+      "otherAuditRepairsPending": true
     }
   }
 }
