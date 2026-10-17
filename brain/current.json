@@ -685,7 +685,7 @@
     "releaseReceipt": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json"
   },
   "landscapeReview": {
-    "status": "OWNER_FIXES_IMPLEMENTED_LOCAL_PENDING_REVIEW",
+    "status": "DELIVERED_PENDING_OWNER_REVIEW",
     "branch": "work/overhead-landscape-20261014",
     "checkpoint": "9bd8debf48e69e42a6c5764869526a4800dc280a",
     "runtime": "angle-c-tablet-stage9-20261015",
@@ -714,7 +714,7 @@
     },
     "productionIncluded": false,
     "testSiteIncluded": false,
-    "next": "Review repaired021 candidate; retain isolated landscape and deployment hold. Both-orientation trump-choice sorting implemented.",
+    "next": "Owner review of811.zip; landscape remains isolated and not deployed.",
     "previousArtifact": {
       "filename": "Griffin_House_Angle_C_Landscape_Stage8_Review.zip",
       "bytes": 152188183,
@@ -1008,7 +1008,7 @@
   "landscapeOwnerReviewBank": {
     "record": "../coordination/landscape-owner-review-bank-20261016.md",
     "recordCommit": "f0b2f2bcc63ae2f94b888a6caa1306528bc7004f",
-    "status": "IMPLEMENTED_LOCAL_REVIEW_CANDIDATE_NOT_DEPLOYED",
+    "status": "DELIVERED_PENDING_OWNER_REVIEW",
     "deploymentHold": true,
     "artApproved": true,
     "artIntegrated": true,
@@ -1024,6 +1024,29 @@
     "offlineVerification": "LOCAL_CHROMIUM_CONTROLLED_OFFLINE_RELOAD_AND_BID200_PASS_ZERO_FAILED_REQUESTS",
     "continuedRecordCommit": "095f63b5213648e2b19978a79fbe3acf85fdb72d",
     "scoreboardParity": "IMPLEMENTED_NO_SCROLL_PORTRAIT_AND_LANDSCAPE_WITH_DETAIL_VIEWS",
-    "portraitTrumpChooser": "UNSCOPED_CSS_ROOT_CAUSE_FIXED_REAL_ROTATED_HAND_COMPLETED"
+    "portraitTrumpChooser": "UNSCOPED_CSS_ROOT_CAUSE_FIXED_REAL_ROTATED_HAND_COMPLETED",
+    "reviewPackage": {
+      "number": "811",
+      "reservationId": "landscape-all-fixes-fc88757ff6dd-20261017",
+      "status": "DELIVERED_PENDING_OWNER_REVIEW",
+      "workstream": "Isolated landscape and shared portrait repairs",
+      "task": "Playable combined owner repair review",
+      "sourceSha256": "fc7b06add1ff2ccb3b68ff9b9225845ff7d5029a3a9e2977e7e09988cfec15bd",
+      "sourceCheckpointLibraryFileId": "libfile_48903882513881918eb932b8f33611da",
+      "date": "2026-10-17",
+      "deployed": false,
+      "ownerApproved": false,
+      "filename": "811.zip",
+      "bytes": 166219874,
+      "sha256": "9c75578920f328cc05d2c3f498f5c3bee94e8952eee5586cb0f9e8c18c065e78",
+      "libraryFileId": "libfile_020aa6a0ba608191b686e4633c214f98",
+      "fileId": "file_00000000cf3c81f598a589da4a421722",
+      "runtime": "811-owner-repair-review-20261017",
+      "crc": "PASS",
+      "allFileHashes": "PASS",
+      "entries": 1572,
+      "loaderVerification": "Actual811.zip opened in unchanged original ZIP loader; expected runtime and approved1848px scene loaded; zero page errors",
+      "physicalAndroidAccepted": false
+    }
   }
 }
