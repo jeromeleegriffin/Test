@@ -1019,6 +1019,9 @@
     "implementationRecord": "../coordination/landscape-owner-fixes-implemented-20261016.md",
     "implementationCommit": "866628f278eb69cc5ba0e94db055cd13ca0c3473",
     "verification": "3 real hands 1x/3x/MAX; zero page errors; focused layout and sort checks",
-    "remaining": "Fixed scene cast; physical Android and offline reload not verified"
+    "remaining": "Fixed scene cast; physical Android and full offline match not verified",
+    "sourceCheckpointVersion": 1,
+    "offlineVerification": "LOCAL_CHROMIUM_CONTROLLED_OFFLINE_RELOAD_AND_BID200_PASS_ZERO_FAILED_REQUESTS",
+    "continuedRecordCommit": "095f63b5213648e2b19978a79fbe3acf85fdb72d"
   }
 }
