@@ -1,0 +1,12 @@
+{
+  "number": "811",
+  "reservationId": "landscape-all-fixes-fc88757ff6dd-20261017",
+  "status": "RESERVED",
+  "workstream": "Isolated landscape and shared portrait repairs",
+  "task": "Playable combined owner repair review",
+  "sourceSha256": "fc7b06add1ff2ccb3b68ff9b9225845ff7d5029a3a9e2977e7e09988cfec15bd",
+  "sourceCheckpointLibraryFileId": "libfile_48903882513881918eb932b8f33611da",
+  "date": "2026-10-17",
+  "deployed": false,
+  "ownerApproved": false
+}
