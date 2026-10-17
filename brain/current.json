@@ -1018,10 +1018,12 @@
     "latestOwnerInstruction": "That's enough for now. Let's go ahead and get these changes and fixes in.",
     "implementationRecord": "../coordination/landscape-owner-fixes-implemented-20261016.md",
     "implementationCommit": "866628f278eb69cc5ba0e94db055cd13ca0c3473",
-    "verification": "3 real hands 1x/3x/MAX; zero page errors; focused layout and sort checks",
+    "verification": "Prior3hands plus portrait chooser hand; scoreboard390x680/844x290/1280x650 verified",
     "remaining": "Fixed scene cast; physical Android and full offline match not verified",
-    "sourceCheckpointVersion": 1,
+    "sourceCheckpointVersion": 2,
     "offlineVerification": "LOCAL_CHROMIUM_CONTROLLED_OFFLINE_RELOAD_AND_BID200_PASS_ZERO_FAILED_REQUESTS",
-    "continuedRecordCommit": "095f63b5213648e2b19978a79fbe3acf85fdb72d"
+    "continuedRecordCommit": "095f63b5213648e2b19978a79fbe3acf85fdb72d",
+    "scoreboardParity": "IMPLEMENTED_NO_SCROLL_PORTRAIT_AND_LANDSCAPE_WITH_DETAIL_VIEWS",
+    "portraitTrumpChooser": "UNSCOPED_CSS_ROOT_CAUSE_FIXED_REAL_ROTATED_HAND_COMPLETED"
   }
 }
