@@ -30,3 +30,6 @@ Three-hand run preceded final kitty-row, modal-close suppression and cache-marke
 The large approved scene remains a fixed cast; actual roster appears in thumbnails/names. Full identity-matched landscape pose assets remain unresolved, not silently substituted.
 Physical Android/Onn acceptance, multiplayer, full match, natural level-up and offline reload remain unverified. Headless trophy glyph issue not established on Android.
 Landscape remains isolated and deployment on hold. Shared trump sorting is implemented in the candidate source; no production release has occurred.
+
+## Continued release checks
+Active service-worker control and offline reload verified in isolated Chromium at1280x800. Page/script/worker/cache agree. Offline scene, shuffle/deal and human bidding through200 worked. Found missing full-cast audio cache coverage; added464 existing MP3 files (about13MB). Repeated check: zero page errors and zero failed requests;1457 cache entries, no missing local dependencies. Expanded landscape header to viewport width: speed control bounds x1159–1263 at1280wide, away from top face. Portrait unaffected. Larger Moon plaque and bid box fit above hand. Same source-checkpoint Library item updated to version1 (4259631bytes). No Android or full offline match certification; fixed-cast limitation and deployment hold remain.
