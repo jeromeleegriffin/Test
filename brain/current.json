@@ -991,7 +991,7 @@
     "ownerFeedback": "Graphics degraded; translucent cards; trump stamp/achievements/levels/fire/lamp need repair. Open-felt layout direction retained."
   },
   "landscapeRepair021": {
-    "status": "DELIVERED_PENDING_OWNER_REVIEW",
+    "status": "OWNER_FEEDBACK_REPAIRS_AUTHORIZED_NOT_DEPLOYED",
     "record": "../coordination/landscape-repair-021-20261017.md",
     "recordCommit": "89b22c344260fee5908ef9bfe16efee79f7dc987",
     "filename": "021.zip",
@@ -1004,5 +1004,17 @@
     "scope": "Opaque larger cards; clear trump case/contact alignment; career levels/queued notices; registered subtle fire/wick flicker; recovered scene candidate",
     "verification": "Ordinary bid and original ZIP-loader full hands; exact stamp contact; phone/tablet visuals; read-only notice previews; advancing FX clocks; CRC/full manifest",
     "limitations": "Artwork requires owner review; static cast; narrow tablet crop; physical Android/full matches/multiplayer/exhaustive animations unverified"
+  },
+  "landscapeOwnerReviewBank": {
+    "record": "../coordination/landscape-owner-review-bank-20261016.md",
+    "recordCommit": "f0b2f2bcc63ae2f94b888a6caa1306528bc7004f",
+    "status": "OWNER_AUTHORIZED_IMPLEMENTATION_20261016",
+    "deploymentHold": true,
+    "artApproved": true,
+    "artIntegrated": false,
+    "auditLibraryFileId": "libfile_49bd5341a3f08191b4d5709ffafe414b",
+    "sourceCheckpointLibraryFileId": "libfile_e4c8e5a1e9dc819182514b54420b70ba",
+    "sharedTrumpSorting": "BOTH_ORIENTATIONS_PENDING_IMPLEMENTATION",
+    "latestOwnerInstruction": "That's enough for now. Let's go ahead and get these changes and fixes in."
   }
 }
