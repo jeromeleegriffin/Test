@@ -1,0 +1,406 @@
+{
+  "build": "811-owner-repair-review-20261017",
+  "archiveSha256": "9c75578920f328cc05d2c3f498f5c3bee94e8952eee5586cb0f9e8c18c065e78",
+  "matches": [
+    {
+      "orientation": "landscape",
+      "viewport": [
+        844,
+        390
+      ],
+      "hands": 4,
+      "elapsedMs": 201566,
+      "pageErrors": [],
+      "scores": [
+        [
+          70,
+          130
+        ],
+        [
+          -125,
+          300
+        ],
+        [
+          -75,
+          450
+        ],
+        [
+          50,
+          525
+        ]
+      ],
+      "scoreboardChecks": [
+        {
+          "phase": "score",
+          "viewport": [
+            844,
+            390
+          ],
+          "overflow": [],
+          "text": "Scoreboard\nRaven made the bid\n\nRaven bid 115, took 130 \u2192 +130. Nest 10 to Sable. Running total: Griffin 70 \u00b7 Raven 130 (to 500).\n\nGriffin\n70\n+70 this hand\nVS\nRaven\n130\n+130 this hand\nFirst to 500\nBid 115 \u00b7 Green trump \u00b7 Hand 1\nNest: Sable \u00b7 10 points\nHand details\nHistory\nCopy scores\nNext Hand"
+        },
+        {
+          "phase": "score",
+          "viewport": [
+            844,
+            390
+          ],
+          "overflow": [],
+          "text": "Scoreboard\nGriffin was set\n\nGriffin bid 195, took 30 \u2192 set, \u2212195. Nest 30 to Finch. Running total: Griffin -125 \u00b7 Raven 300 (to 500).\n\nGriffin\n-125\n-195 this hand\nVS\nRaven\n300\n+170 this hand\nFirst to 500\nBid 195 \u00b7 Green trump \u00b7 Hand 2\nNest: Finch \u00b7 30 points\nHand details\nHistory\nCopy scores\nNext Hand"
+        },
+        {
+          "phase": "score",
+          "viewport": [
+            844,
+            390
+          ],
+          "overflow": [],
+          "text": "Scoreboard\nRaven made the bid\n\nRaven bid 100, took 150 \u2192 +150. Nest 15 to Finch. Running total: Griffin -75 \u00b7 Raven 450 (to 500).\n\nGriffin\n-75\n+50 this hand\nVS\nRaven\n450\n+150 this hand\nFirst to 500\nBid 100 \u00b7 Red trump \u00b7 Hand 3\nNest: Finch \u00b7 15 points\nHand details\nHistory\nCopy scores\nNext Hand"
+        },
+        {
+          "phase": "score",
+          "viewport": [
+            844,
+            390
+          ],
+          "overflow": [],
+          "text": "Scoreboard\nGriffin made the bid\n\nGriffin bid 100, took 125 \u2192 +125. Nest 5 to Copper. Running total: Griffin 50 \u00b7 Raven 525 (to 500).\n\nGriffin\n50\n+125 this hand\nVS\nRaven\n525\n+75 this hand\nFirst to 500\nBid 100 \u00b7 Red trump \u00b7 Hand 4\nNest: Copper \u00b7 5 points\nHand details\nHistory\nCopy scores\nOK"
+        }
+      ]
+    },
+    {
+      "orientation": "portrait",
+      "viewport": [
+        390,
+        680
+      ],
+      "hands": 5,
+      "elapsedMs": 193962,
+      "pageErrors": [],
+      "scores": [
+        [
+          115,
+          85
+        ],
+        [
+          -80,
+          250
+        ],
+        [
+          -45,
+          415
+        ],
+        [
+          95,
+          475
+        ],
+        [
+          260,
+          510
+        ]
+      ],
+      "scoreboardChecks": [
+        {
+          "phase": "score",
+          "viewport": [
+            390,
+            680
+          ],
+          "overflow": [],
+          "text": "Scoreboard\nGriffin made the bid\nGriffin\n115\n+115 this hand\nVS\nRaven\n85\n+85 this hand\nFirst to 500\nBid 115 \u00b7 Green trump \u00b7 Hand 1\nNest: Nettle \u00b7 5 points\nHand details\nHistory\nCopy scores\nNext Hand"
+        },
+        {
+          "phase": "score",
+          "viewport": [
+            390,
+            680
+          ],
+          "overflow": [],
+          "text": "Scoreboard\nGriffin was set\nGriffin\n-80\n-195 this hand\nVS\nRaven\n250\n+165 this hand\nFirst to 500\nBid 195 \u00b7 Green trump \u00b7 Hand 2\nNest: Shade \u00b7 35 points\nHand details\nHistory\nCopy scores\nNext Hand"
+        },
+        {
+          "phase": "score",
+          "viewport": [
+            390,
+            680
+          ],
+          "overflow": [],
+          "text": "Scoreboard\nRaven made the bid\nGriffin\n-45\n+35 this hand\nVS\nRaven\n415\n+165 this hand\nFirst to 500\nBid 120 \u00b7 Red trump \u00b7 Hand 3\nNest: Quill \u00b7 5 points\nHand details\nHistory\nCopy scores\nNext Hand"
+        },
+        {
+          "phase": "score",
+          "viewport": [
+            390,
+            680
+          ],
+          "overflow": [],
+          "text": "Scoreboard\nGriffin made the bid\nGriffin\n95\n+140 this hand\nVS\nRaven\n475\n+60 this hand\nFirst to 500\nBid 115 \u00b7 Black trump \u00b7 Hand 4\nNest: Nettle \u00b7 10 points\nHand details\nHistory\nCopy scores\nNext Hand"
+        },
+        {
+          "phase": "score",
+          "viewport": [
+            390,
+            680
+          ],
+          "overflow": [],
+          "text": "Scoreboard\nGriffin made the bid\nGriffin\n260\n+165 this hand\nVS\nRaven\n510\n+35 this hand\nFirst to 500\nBid 110 \u00b7 Yellow trump \u00b7 Hand 5\nNest: Nettle \u00b7 5 points\nHand details\nHistory\nCopy scores\nOK"
+        }
+      ]
+    }
+  ],
+  "menuChecks": [
+    {
+      "route": "score",
+      "page": 0,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nMatch Score\n\u00d7\n\nGriffin 0 \u00b7 Raven 0\n\nFirst to 500\n\nMatch statistics\nCompleted hands and results",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "profile",
+      "page": 0,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nMy Profile\n\u00d7\nWhat shall we call you?\nPrevious\nPage 1 of 4\nNext",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "profile",
+      "page": 1,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nMy Profile\n\u00d7\nYour avatar\nElias\nChange\nVoice\nMale\nFemale\nSilent\nHear Voice\nPrevious\nPage 2 of 4\nNext",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "profile",
+      "page": 2,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nMy Profile\n\u00d7\n\nYour name choice is saved for your next table.\n\nChoose a Favorite Partner\nFor your next offline game\nPrevious\nPage 3 of 4\nNext",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "profile",
+      "page": 3,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nMy Profile\n\u00d7\nSave & Back\nPrevious\nPage 4 of 4\nNext",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "career",
+      "page": 0,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nMy Career & Awards\n\u00d7\nMy career & achievement progress\nYour level, statistics and earned awards\nMatch statistics\nDetails from this game\nPrevious\nPage 1 of 3\nNext",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "career",
+      "page": 1,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nMy Career & Awards\n\u00d7\nHand history\nReview completed hands\nLevels & awards guide\nBrowse career requirements\nPrevious\nPage 2 of 3\nNext",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "career",
+      "page": 2,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nMy Career & Awards\n\u00d7\nDownload career backup\nKeep a copy of your saved progress\nRestore career backup\nUse your validated backup file\nPrevious\nPage 3 of 3\nNext",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "sound",
+      "page": 0,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nSounds & Atmosphere\n\u00d7\nVolume Controls\nMaster, voices, game effects, character effects and ambience\nPrevious\nPage 1 of 3\nNext",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "sound",
+      "page": 1,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nSounds & Atmosphere\n\u00d7\nRoom Ambience\nFireplace and room balance\nGame & Character Effects\nTurn tones, bird calls and the Moon howl\nPrevious\nPage 2 of 3\nNext",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "sound",
+      "page": 2,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nSounds & Atmosphere\n\u00d7\nHouse Effects previews\nSound variations and individual volumes\nPrevious\nPage 3 of 3\nNext",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "setup",
+      "page": 0,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nGame Setup\n\u00d7\n\nRules are locked for this game. Leave the table to set up a new game.\n\nView current rules\nSelected score and options",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "rules",
+      "page": 0,
+      "size": [
+        844,
+        290
+      ],
+      "text": "\u2039 Back\nHow to Play\n\u00d7\nHouse rules\nBidding, scoring and Shoot the Moon\nHouse Tour\nReplay the existing guided tips\nI'm experienced\nSkip beginner tips for your player",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "score",
+      "page": 0,
+      "size": [
+        390,
+        680
+      ],
+      "text": "\u2039 Back\nMatch Score\n\u00d7\n\nGriffin 0 \u00b7 Raven 0\n\nFirst to 500\n\nMatch statistics\nCompleted hands and results",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "profile",
+      "page": 0,
+      "size": [
+        390,
+        680
+      ],
+      "text": "\u2039 Back\nMy Profile\n\u00d7\nWhat shall we call you?\nYour avatar\nIngrid\nChange\nVoice\nMale\nFemale\nSilent\nHear Voice\n\nYour name choice is saved for your next table.\n\nChoose a Favorite Partner\nFor your next offline game\nSave & Back",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "career",
+      "page": 0,
+      "size": [
+        390,
+        680
+      ],
+      "text": "\u2039 Back\nMy Career & Awards\n\u00d7\nMy career & achievement progress\nYour level, statistics and earned awards\nMatch statistics\nDetails from this game\nHand history\nReview completed hands\nLevels & awards guide\nBrowse career requirements\nDownload career backup\nKeep a copy of your saved progress\nRestore career backup\nUse your validated backup file",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "sound",
+      "page": 0,
+      "size": [
+        390,
+        680
+      ],
+      "text": "\u2039 Back\nSounds & Atmosphere\n\u00d7\nVolume Controls\nMaster, voices, game effects, character effects and ambience\nRoom Ambience\nFireplace and room balance\nGame & Character Effects\nTurn tones, bird calls and the Moon howl\nHouse Effects previews\nSound variations and individual volumes",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "setup",
+      "page": 0,
+      "size": [
+        390,
+        680
+      ],
+      "text": "\u2039 Back\nGame Setup\n\u00d7\n\nRules are locked for this game. Leave the table to set up a new game.\n\nView current rules\nSelected score and options",
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "route": "rules",
+      "page": 0,
+      "size": [
+        390,
+        680
+      ],
+      "text": "\u2039 Back\nHow to Play\n\u00d7\nHouse rules\nBidding, scoring and Shoot the Moon\nHouse Tour\nReplay the existing guided tips\nI'm experienced\nSkip beginner tips for your player",
+      "overflow": false,
+      "clipped": []
+    }
+  ],
+  "historyFixture": [
+    {
+      "viewport": [
+        844,
+        290
+      ],
+      "visible": false,
+      "scoreVisible": false,
+      "text": "\n\nHand HistoryMatch-by-match record\nPreviousNext\n\nCopy scores\nClose\n\n\n",
+      "scroll": []
+    },
+    {
+      "viewport": [
+        390,
+        680
+      ],
+      "visible": true,
+      "scoreVisible": false,
+      "text": "Hand History\n\nMatch-by-match record\n\nHand 1\nBID MADE\nBID\n115\nBIDDER TEAM\nRaven\nTRUMP\nGreen\nHAND SCORE\nGriffin 70 \u00b7 Raven 130\nMatch score\nGriffin 70 \u00b7 Raven 130\nHand 2\nBID SET\nBID\n195\nBIDDER TEAM\nGriffin\nTRUMP\nGreen\nHAND SCORE\nGriffin 30 \u00b7 Raven 170\nMatch score\nGriffin -125 \u00b7 Raven 300\nPrevious\nPage 1 of 2\nNext\nCopy scores\nClose",
+      "scroll": []
+    }
+  ],
+  "endingFixture": [
+    {
+      "viewport": [
+        844,
+        290
+      ],
+      "visible": true,
+      "scoreVisible": false,
+      "text": "MATCH COMPLETE\nRaven Wins!\nFinal\nGriffin 50 \u00b7 Raven 525\nHands\n0 made \u00b7 0 set\nBiggest capture\n\u2014\nFirst chair\nYou\nNo highlight tricks recorded this match.\nCopy night\u2019s scores\nWaiting Room\nRematch",
+      "scroll": []
+    },
+    {
+      "viewport": [
+        390,
+        680
+      ],
+      "visible": true,
+      "scoreVisible": false,
+      "text": "MATCH COMPLETE\nRaven Wins!\n\nFinal A 50 \u2013 B 525\n\nFinal\nGriffin 50 \u00b7 Raven 525\nHands\n0 made \u00b7 0 set\nBiggest capture\n\u2014\nFirst chair\nYou\nNo highlight tricks recorded this match.\nCopy night\u2019s scores\nWaiting Room\nRematch",
+      "scroll": []
+    }
+  ]
+}
