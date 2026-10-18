@@ -1,0 +1,40 @@
+{
+  "site": "Griffin-House-of-Rooks",
+  "errors": [],
+  "failedAssets": [
+    {
+      "url": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/review836.css?v=846-source-cleanup",
+      "status": 503
+    }
+  ],
+  "checks": [
+    {
+      "name": "Live page/script/marker coherent 846",
+      "ok": true
+    },
+    {
+      "name": "Essential artwork loading finishes",
+      "ok": true
+    },
+    {
+      "name": "Live offline deal reaches usable auction",
+      "ok": true
+    },
+    {
+      "name": "Landscape review caption removed",
+      "ok": true
+    },
+    {
+      "name": "Portrait rotation retains current auction",
+      "ok": true
+    }
+  ],
+  "state": {
+    "phase": "bidding",
+    "build": "846-source-cleanup",
+    "loadedScene": [],
+    "bid": "100",
+    "qrLocal": true,
+    "shuffle": "none"
+  }
+}

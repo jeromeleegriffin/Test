@@ -7,7 +7,9 @@ window.Brain = (() => {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 12000);
     try {
-      const response = await fetch(new URL(path, base), {cache:'no-store', credentials:'omit', signal:controller.signal});
+      const url = new URL(path, base);
+      url.searchParams.set('fresh', 'brain');
+      const response = await fetch(url, {cache:'no-store', credentials:'omit', signal:controller.signal});
       if (!response.ok) throw Error('HTTP ' + response.status);
       return await response.json();
     } finally { clearTimeout(timer); }
@@ -71,9 +73,10 @@ window.Brain = (() => {
       if (!h || !Array.isArray(h.versions)) throw Error('Invalid history index');
       // The history index can lag a freshly published documentation-only pointer.
       // Include the verified current pointer without changing historical entries.
-      const currentIndexed = h.versions.some(v => v.brainVersion === m.brainVersion && v.browse === m.browse &&
+      const currentBrowse = new URL(m.browse).pathname.slice(base.pathname.length);
+      const currentIndexed = h.versions.some(v => v.brainVersion === m.brainVersion && v.browse === currentBrowse &&
         (!m.sha256 || v.sha256 === m.sha256));
-      const sourceEntries = currentIndexed ? h.versions : [{brainVersion:m.brainVersion, browse:m.browse, updated:m.updated}, ...h.versions.filter(v => v.brainVersion !== m.brainVersion)];
+      const sourceEntries = currentIndexed ? h.versions : [{brainVersion:m.brainVersion, browse:currentBrowse, updated:m.updated}, ...h.versions.filter(v => v.brainVersion !== m.brainVersion)];
       const entries = sourceEntries.map(v => {
         if (!v || typeof v.brainVersion !== 'string' || !/^[A-Za-z0-9_-]+$/.test(v.brainVersion) || (v.browse !== 'versions/' + v.brainVersion + '/index.html' && v.browse !== 'versions/' + v.brainVersion + '/files/00_START_HERE/START_HERE.md')) throw Error('Invalid historical version');
         return {...v, browse:path(v.browse)};
@@ -92,3 +95,4 @@ window.Brain = (() => {
   }
   return {player,status,openCurrent,history};
 })();
+

@@ -1,0 +1,991 @@
+{
+  "site": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
+  "results": [
+    {
+      "path": "angle-c-characters.js",
+      "expected": "baa2a5ac3ecbe4ee6298348c2269c1bb73230813dbf4658dbc7b83a6993376b4",
+      "ok": true,
+      "status": 200,
+      "actual": "baa2a5ac3ecbe4ee6298348c2269c1bb73230813dbf4658dbc7b83a6993376b4",
+      "bytes": 18653
+    },
+    {
+      "path": "angle-c-runtime.css",
+      "expected": "11d9ed7ee356e1fc881f814accf724af2701154dbeaf5104a55bbcbc024415ff",
+      "ok": true,
+      "status": 200,
+      "actual": "11d9ed7ee356e1fc881f814accf724af2701154dbeaf5104a55bbcbc024415ff",
+      "bytes": 54480
+    },
+    {
+      "path": "angle-c-runtime.js",
+      "expected": "4bd3f833c1b39694bade1b7c9fe12107132cc28714b6b842a2f5ef42a1591939",
+      "ok": true,
+      "status": 200,
+      "actual": "4bd3f833c1b39694bade1b7c9fe12107132cc28714b6b842a2f5ef42a1591939",
+      "bytes": 8140
+    },
+    {
+      "path": "approved-bid-portrait.css",
+      "expected": "afe27c80799cecdaf496793c7234bf54dc6b50dbf8c2d6e6f72fcabea5133a97",
+      "ok": true,
+      "status": 200,
+      "actual": "afe27c80799cecdaf496793c7234bf54dc6b50dbf8c2d6e6f72fcabea5133a97",
+      "bytes": 7144
+    },
+    {
+      "path": "approved-bid-portrait.js",
+      "expected": "68f3af547d5969840460e78814b257a8c2284bacf2447fa1837b0d80df3810ff",
+      "ok": true,
+      "status": 200,
+      "actual": "68f3af547d5969840460e78814b257a8c2284bacf2447fa1837b0d80df3810ff",
+      "bytes": 2464
+    },
+    {
+      "path": "asset-loading772.css",
+      "expected": "db26b2528946ff5fad8fb6a791972210dd7c6451e45267dc15df0a91938558b5",
+      "ok": true,
+      "status": 200,
+      "actual": "db26b2528946ff5fad8fb6a791972210dd7c6451e45267dc15df0a91938558b5",
+      "bytes": 1706
+    },
+    {
+      "path": "asset-loading772.js",
+      "expected": "80680841561e681fe77ee5b046e399792d90fbadbd44d8c9c1d4ef13a3f89816",
+      "ok": true,
+      "status": 200,
+      "actual": "80680841561e681fe77ee5b046e399792d90fbadbd44d8c9c1d4ef13a3f89816",
+      "bytes": 13042
+    },
+    {
+      "path": "assets/audio/cabin041/pcm-data.js",
+      "expected": "f397a4939045e1c0ba118fb3741fb9605a03f4ab51799dc972e64b105db9a8f7",
+      "ok": true,
+      "status": 200,
+      "actual": "f397a4939045e1c0ba118fb3741fb9605a03f4ab51799dc972e64b105db9a8f7",
+      "bytes": 2519850
+    },
+    {
+      "path": "assets/audio/presentation-pcm.js",
+      "expected": "0b592e90924ac9ebe41e1d3cb7bc84d792393bef4e15c9fff5b9bbcfb7740716",
+      "ok": true,
+      "status": 200,
+      "actual": "0b592e90924ac9ebe41e1d3cb7bc84d792393bef4e15c9fff5b9bbcfb7740716",
+      "bytes": 297098
+    },
+    {
+      "path": "assets/images/bid-dock-transparent-r684.png",
+      "expected": "74bab7a258e78f4611f9f3a10519735739dae8f100e7cc8089b0173d768eb7dd",
+      "ok": true,
+      "status": 200,
+      "actual": "74bab7a258e78f4611f9f3a10519735739dae8f100e7cc8089b0173d768eb7dd",
+      "bytes": 1210550
+    },
+    {
+      "path": "assets/images/house-of-rooks-192.png",
+      "expected": "c99f834c04cb45e9cdf0fc1fadb28a2e9e8fc268acb720a71d2a1bae0c10bca8",
+      "ok": true,
+      "status": 200,
+      "actual": "c99f834c04cb45e9cdf0fc1fadb28a2e9e8fc268acb720a71d2a1bae0c10bca8",
+      "bytes": 40428
+    },
+    {
+      "path": "assets/images/house-of-rooks-apple-touch.png",
+      "expected": "5b5fd1aa45e202d06cc9660231ec7fd58c4a2f25c92e421662050b2cdfdb6fa5",
+      "ok": true,
+      "status": 200,
+      "actual": "5b5fd1aa45e202d06cc9660231ec7fd58c4a2f25c92e421662050b2cdfdb6fa5",
+      "bytes": 36260
+    },
+    {
+      "path": "assets/signature-shuffle/manifest.json",
+      "expected": "7075152790cf5392c3a702789d849ea17650fcfe178caafc0e0f3b4afb1d77c9",
+      "ok": true,
+      "status": 200,
+      "actual": "7075152790cf5392c3a702789d849ea17650fcfe178caafc0e0f3b4afb1d77c9",
+      "bytes": 377
+    },
+    {
+      "path": "audio-mixer.css",
+      "expected": "c90d6fbdf1711cc174609a79c2305c5c4a6e31f89e8950c84cc4b5c1342f2d8a",
+      "ok": true,
+      "status": 200,
+      "actual": "c90d6fbdf1711cc174609a79c2305c5c4a6e31f89e8950c84cc4b5c1342f2d8a",
+      "bytes": 755
+    },
+    {
+      "path": "audio-mixer.js",
+      "expected": "dae22496ddfc69ea2ba3f8aa989ae976e4ec8c9837b08bc0362386a6ba5e7e12",
+      "ok": true,
+      "status": 200,
+      "actual": "dae22496ddfc69ea2ba3f8aa989ae976e4ec8c9837b08bc0362386a6ba5e7e12",
+      "bytes": 5263
+    },
+    {
+      "path": "bid-hold795.js",
+      "expected": "c2971dbedbc9cae82b01fb8208599bb6bf87f17f8bff7fb6ea315f2e7f9152b9",
+      "ok": true,
+      "status": 200,
+      "actual": "c2971dbedbc9cae82b01fb8208599bb6bf87f17f8bff7fb6ea315f2e7f9152b9",
+      "bytes": 2969
+    },
+    {
+      "path": "bid-repair737.css",
+      "expected": "c031affc054308a8a7838bcf8acd55cdcc9c2a1e9059e85dc8aee46601b20b5a",
+      "ok": true,
+      "status": 200,
+      "actual": "c031affc054308a8a7838bcf8acd55cdcc9c2a1e9059e85dc8aee46601b20b5a",
+      "bytes": 493
+    },
+    {
+      "path": "bid-repair737.js",
+      "expected": "55f8666e82c3d91f9b76deaadfebf5a26713e3f0577a95f2d7bab575ee563cf4",
+      "ok": true,
+      "status": 200,
+      "actual": "55f8666e82c3d91f9b76deaadfebf5a26713e3f0577a95f2d7bab575ee563cf4",
+      "bytes": 1951
+    },
+    {
+      "path": "bots.js",
+      "expected": "c0a7fd0940d30c95f02ec364d04220db1326c7d016a1b36e69483156de84702b",
+      "ok": true,
+      "status": 200,
+      "actual": "c0a7fd0940d30c95f02ec364d04220db1326c7d016a1b36e69483156de84702b",
+      "bytes": 30843
+    },
+    {
+      "path": "cabin-ambience041.js",
+      "expected": "342a51b2701820fd7320d6660f59c2a0a83a2f881e86835bd98aeccf2239704c",
+      "ok": true,
+      "status": 200,
+      "actual": "342a51b2701820fd7320d6660f59c2a0a83a2f881e86835bd98aeccf2239704c",
+      "bytes": 12571
+    },
+    {
+      "path": "career-core.js",
+      "expected": "adeef95b2680b0a753185025afb8fd89dc0b5de2274ed183770e8004b7a79352",
+      "ok": true,
+      "status": 200,
+      "actual": "adeef95b2680b0a753185025afb8fd89dc0b5de2274ed183770e8004b7a79352",
+      "bytes": 41836
+    },
+    {
+      "path": "character-library774.js",
+      "expected": "f860856670ed19ecc549b646e92c69c31094215e5495485eee99d06f860799f2",
+      "ok": true,
+      "status": 200,
+      "actual": "f860856670ed19ecc549b646e92c69c31094215e5495485eee99d06f860799f2",
+      "bytes": 1114
+    },
+    {
+      "path": "characters077.css",
+      "expected": "98acf2f3dcec19e2f0d5f6435560b496282234a7d75a3365bdf6eef5ba331584",
+      "ok": true,
+      "status": 200,
+      "actual": "98acf2f3dcec19e2f0d5f6435560b496282234a7d75a3365bdf6eef5ba331584",
+      "bytes": 3164
+    },
+    {
+      "path": "characters077.js",
+      "expected": "eccc48215fcd2ca009ed4dc62b21337f4535f8636c7c8d8ebff221a7f09de6d8",
+      "ok": true,
+      "status": 200,
+      "actual": "eccc48215fcd2ca009ed4dc62b21337f4535f8636c7c8d8ebff221a7f09de6d8",
+      "bytes": 24418
+    },
+    {
+      "path": "fire-glow-controller060.js",
+      "expected": "538b9381da88e5462219267a80e66279a178b2d915103efda48cf3eb4f2091a0",
+      "ok": true,
+      "status": 200,
+      "actual": "538b9381da88e5462219267a80e66279a178b2d915103efda48cf3eb4f2091a0",
+      "bytes": 1170
+    },
+    {
+      "path": "founder-dev.js",
+      "expected": "dd8e7c05f45400180c7c8bb1f0fd52061754b6f149ae1d6b4bf342034318e5f9",
+      "ok": true,
+      "status": 200,
+      "actual": "dd8e7c05f45400180c7c8bb1f0fd52061754b6f149ae1d6b4bf342034318e5f9",
+      "bytes": 227
+    },
+    {
+      "path": "founder-profile785.js",
+      "expected": "5252387083b0283cc95213e7987d2640a044de14599796a1e69044cf3b61a7f6",
+      "ok": true,
+      "status": 200,
+      "actual": "5252387083b0283cc95213e7987d2640a044de14599796a1e69044cf3b61a7f6",
+      "bytes": 1975
+    },
+    {
+      "path": "friends803.css",
+      "expected": "4a36457d92b814f2c296c54b33043fa51030442632ae851b70d88bbb0c656c46",
+      "ok": true,
+      "status": 200,
+      "actual": "4a36457d92b814f2c296c54b33043fa51030442632ae851b70d88bbb0c656c46",
+      "bytes": 18477
+    },
+    {
+      "path": "friends803.js",
+      "expected": "0f2f80d3dbf20d80604c45104eb0ecd89ab683ee0d9a88066f7bd695cfe228dc",
+      "ok": true,
+      "status": 200,
+      "actual": "0f2f80d3dbf20d80604c45104eb0ecd89ab683ee0d9a88066f7bd695cfe228dc",
+      "bytes": 7124
+    },
+    {
+      "path": "game060.js",
+      "expected": "e9c8605dfb334e79fd76ad370cbf0e49cd4e8b49e89f87641805bc394549a7a0",
+      "ok": true,
+      "status": 200,
+      "actual": "e9c8605dfb334e79fd76ad370cbf0e49cd4e8b49e89f87641805bc394549a7a0",
+      "bytes": 644919
+    },
+    {
+      "path": "hand-order838.js",
+      "expected": "d21933a60a042e66a25bc77857f9a1ae154a173a6992076da824c6c13e5a943e",
+      "ok": true,
+      "status": 200,
+      "actual": "d21933a60a042e66a25bc77857f9a1ae154a173a6992076da824c6c13e5a943e",
+      "bytes": 2795
+    },
+    {
+      "path": "header-bid805.css",
+      "expected": "56bc5dbc64e5eef8ccbb0e44c8b8a9550dc71eae196f2ca4ecf8fed89188a547",
+      "ok": true,
+      "status": 200,
+      "actual": "56bc5dbc64e5eef8ccbb0e44c8b8a9550dc71eae196f2ca4ecf8fed89188a547",
+      "bytes": 2654
+    },
+    {
+      "path": "holder-cues789.css",
+      "expected": "2c522dd54fc09172615c3c8a2ded825c63d9a10d1b10c8d16ee0e0f0d0769d02",
+      "ok": true,
+      "status": 200,
+      "actual": "2c522dd54fc09172615c3c8a2ded825c63d9a10d1b10c8d16ee0e0f0d0769d02",
+      "bytes": 5848
+    },
+    {
+      "path": "holder-cues789.js",
+      "expected": "33d2857d426a3abce1954d39e2e125c857c99713abbd94eca303c4384eea54a0",
+      "ok": true,
+      "status": 200,
+      "actual": "33d2857d426a3abce1954d39e2e125c857c99713abbd94eca303c4384eea54a0",
+      "bytes": 10155
+    },
+    {
+      "path": "holder-identity784.css",
+      "expected": "4b574262cfc5bf365806c863300838d8198a7f4bdb85d460ff09994711e530be",
+      "ok": true,
+      "status": 200,
+      "actual": "4b574262cfc5bf365806c863300838d8198a7f4bdb85d460ff09994711e530be",
+      "bytes": 4754
+    },
+    {
+      "path": "holder-identity784.js",
+      "expected": "60d0f35d42ed5843aeb490d6dbf09ca5f7134f280592336c96a9eda042379c51",
+      "ok": true,
+      "status": 200,
+      "actual": "60d0f35d42ed5843aeb490d6dbf09ca5f7134f280592336c96a9eda042379c51",
+      "bytes": 5209
+    },
+    {
+      "path": "holder004.css",
+      "expected": "9cdb776ed118f5242617d38b328167f3bc0a11f281332782561fb1284619f9b2",
+      "ok": true,
+      "status": 200,
+      "actual": "9cdb776ed118f5242617d38b328167f3bc0a11f281332782561fb1284619f9b2",
+      "bytes": 2693
+    },
+    {
+      "path": "holder004.js",
+      "expected": "e9ecb9b5e4dede953cc3a146a0b8ebf42fc676441d4e1a6ee5b6b1f596383c76",
+      "ok": true,
+      "status": 200,
+      "actual": "e9ecb9b5e4dede953cc3a146a0b8ebf42fc676441d4e1a6ee5b6b1f596383c76",
+      "bytes": 2313
+    },
+    {
+      "path": "hor-version.js",
+      "expected": "52a39816f5f69c33a784f36573f2813f8feaaf569848002f29354df5d4b319be",
+      "ok": true,
+      "status": 200,
+      "actual": "52a39816f5f69c33a784f36573f2813f8feaaf569848002f29354df5d4b319be",
+      "bytes": 1249
+    },
+    {
+      "path": "house736.css",
+      "expected": "8e3d0b95f60f73cc66d2259f2e57d4bc40cceee1e117af4684a77e5efd19ceea",
+      "ok": true,
+      "status": 200,
+      "actual": "8e3d0b95f60f73cc66d2259f2e57d4bc40cceee1e117af4684a77e5efd19ceea",
+      "bytes": 4904
+    },
+    {
+      "path": "house736.js",
+      "expected": "ce6dc090d92c03c993d2699f39c46f09621273f5061735c2c019ac693ca24078",
+      "ok": true,
+      "status": 200,
+      "actual": "ce6dc090d92c03c993d2699f39c46f09621273f5061735c2c019ac693ca24078",
+      "bytes": 2212
+    },
+    {
+      "path": "house738.css",
+      "expected": "95a5f91d504c6f2dab7236b518bf01dba04d88f8c5fab8ea6f8e6deee77316d0",
+      "ok": true,
+      "status": 200,
+      "actual": "95a5f91d504c6f2dab7236b518bf01dba04d88f8c5fab8ea6f8e6deee77316d0",
+      "bytes": 2581
+    },
+    {
+      "path": "human-avatars.js",
+      "expected": "ffc4c47b5fdb80a6b9301449e3d8f1746feac48c2e5a681f5754e86d08a8a811",
+      "ok": true,
+      "status": 200,
+      "actual": "ffc4c47b5fdb80a6b9301449e3d8f1746feac48c2e5a681f5754e86d08a8a811",
+      "bytes": 16235
+    },
+    {
+      "path": "human-bid-voices801.js",
+      "expected": "bbbace1787786868b031609a6c78f3b6a94af222653186b2d8351a06231db765",
+      "ok": true,
+      "status": 200,
+      "actual": "bbbace1787786868b031609a6c78f3b6a94af222653186b2d8351a06231db765",
+      "bytes": 9403
+    },
+    {
+      "path": "identity-choice.css",
+      "expected": "773b89c88a2400f759f9602d68a5d9b95afd9575ebfa079051d2212a42010cf2",
+      "ok": true,
+      "status": 200,
+      "actual": "773b89c88a2400f759f9602d68a5d9b95afd9575ebfa079051d2212a42010cf2",
+      "bytes": 3182
+    },
+    {
+      "path": "identity-choice.js",
+      "expected": "20e76053948427c7560d1a692e202be8ed0389625512755079fc0701b40c44d9",
+      "ok": true,
+      "status": 200,
+      "actual": "20e76053948427c7560d1a692e202be8ed0389625512755079fc0701b40c44d9",
+      "bytes": 7441
+    },
+    {
+      "path": "index.html",
+      "expected": "9068414a8811c12ea1120a0ff9967416fb4cfef24212588d9662eb46ca56ba8c",
+      "ok": true,
+      "status": 200,
+      "actual": "9068414a8811c12ea1120a0ff9967416fb4cfef24212588d9662eb46ca56ba8c",
+      "bytes": 106832
+    },
+    {
+      "path": "jerome-voice-lines.js",
+      "expected": "08e4c48d0a425a19edfe7ee4d23dacc0668a2924fbe428fa1eaacf804647ef52",
+      "ok": true,
+      "status": 200,
+      "actual": "08e4c48d0a425a19edfe7ee4d23dacc0668a2924fbe428fa1eaacf804647ef52",
+      "bytes": 3451
+    },
+    {
+      "path": "kitty736.css",
+      "expected": "25021f83e224b0546543a100fd22635723b223f1fd08e9b42918d9168d8f978f",
+      "ok": true,
+      "status": 200,
+      "actual": "25021f83e224b0546543a100fd22635723b223f1fd08e9b42918d9168d8f978f",
+      "bytes": 23987
+    },
+    {
+      "path": "laid-down-refinement.css",
+      "expected": "a440f11ffbafd1fa7e15cc2c90eda1ede204f8a65180f801a6f3ea21659fe9b6",
+      "ok": true,
+      "status": 200,
+      "actual": "a440f11ffbafd1fa7e15cc2c90eda1ede204f8a65180f801a6f3ea21659fe9b6",
+      "bytes": 4177
+    },
+    {
+      "path": "landing783.css",
+      "expected": "5e10b100d9113d71a41ed37f1b35bff7508d61f163755ecf3c20238b89e181ba",
+      "ok": true,
+      "status": 200,
+      "actual": "5e10b100d9113d71a41ed37f1b35bff7508d61f163755ecf3c20238b89e181ba",
+      "bytes": 17093
+    },
+    {
+      "path": "landing783.js",
+      "expected": "5afed6933de9403a0a84a3fba57093c58a9dacb4648dea3e38de38fafcc3e4b2",
+      "ok": true,
+      "status": 200,
+      "actual": "5afed6933de9403a0a84a3fba57093c58a9dacb4648dea3e38de38fafcc3e4b2",
+      "bytes": 10278
+    },
+    {
+      "path": "landscape-discard812.css",
+      "expected": "8840c455b15e0d5e2b20d8097c4fa85843f8d750b5b4ec997dd74eb0f5b9983d",
+      "ok": true,
+      "status": 200,
+      "actual": "8840c455b15e0d5e2b20d8097c4fa85843f8d750b5b4ec997dd74eb0f5b9983d",
+      "bytes": 13044
+    },
+    {
+      "path": "landscape-nest813.css",
+      "expected": "c3d4c6badaac0d6526b031c316e9b46cf57857774b8f57acdbde52273da91bc5",
+      "ok": true,
+      "status": 200,
+      "actual": "c3d4c6badaac0d6526b031c316e9b46cf57857774b8f57acdbde52273da91bc5",
+      "bytes": 28406
+    },
+    {
+      "path": "landscape-polish.css",
+      "expected": "4603258ed0b7ce0dfd6f8d6fe4aee62ec97c3aa2079132c2df696d2f255b68b4",
+      "ok": true,
+      "status": 200,
+      "actual": "4603258ed0b7ce0dfd6f8d6fe4aee62ec97c3aa2079132c2df696d2f255b68b4",
+      "bytes": 8972
+    },
+    {
+      "path": "landscape-polish.js",
+      "expected": "040bdb12a089b143742cd697abc54a95ddf49f33970da2b545f06a75c9bf37b6",
+      "ok": true,
+      "status": 200,
+      "actual": "040bdb12a089b143742cd697abc54a95ddf49f33970da2b545f06a75c9bf37b6",
+      "bytes": 9527
+    },
+    {
+      "path": "manifest.json",
+      "expected": "bc7705b79a17c445eba0347c99bcac0a1b9dbde75b77983647139ae70e133234",
+      "ok": true,
+      "status": 200,
+      "actual": "bc7705b79a17c445eba0347c99bcac0a1b9dbde75b77983647139ae70e133234",
+      "bytes": 1084
+    },
+    {
+      "path": "menu-approved805.css",
+      "expected": "260409c1ec6c773a29b8a2a8f78f9f21b9deb5d5a2dbc798d0e533b57c791c8d",
+      "ok": true,
+      "status": 200,
+      "actual": "260409c1ec6c773a29b8a2a8f78f9f21b9deb5d5a2dbc798d0e533b57c791c8d",
+      "bytes": 25784
+    },
+    {
+      "path": "menu-approved805.js",
+      "expected": "b3bfea2be8238a86c3818f8a3d754f6f0dedcc283dcecc60298b3a54414266cb",
+      "ok": true,
+      "status": 200,
+      "actual": "b3bfea2be8238a86c3818f8a3d754f6f0dedcc283dcecc60298b3a54414266cb",
+      "bytes": 43486
+    },
+    {
+      "path": "moon-howl.js",
+      "expected": "612d0f5c8f85dd3da631b414f0b7e53c2f7664112b28e41cbd051e461ff96dfa",
+      "ok": true,
+      "status": 200,
+      "actual": "612d0f5c8f85dd3da631b414f0b7e53c2f7664112b28e41cbd051e461ff96dfa",
+      "bytes": 3312
+    },
+    {
+      "path": "moon-plaque.css",
+      "expected": "ea6d831dec79e5cf42575107e287e0a7e2b039b191bd385d0c8cd01acbc2a5c3",
+      "ok": true,
+      "status": 200,
+      "actual": "ea6d831dec79e5cf42575107e287e0a7e2b039b191bd385d0c8cd01acbc2a5c3",
+      "bytes": 4237
+    },
+    {
+      "path": "nest-manual838.css",
+      "expected": "5836ff7bffaa4e64201c212e7179e4999313bdeeae6f09df8f1ee7394855b406",
+      "ok": true,
+      "status": 200,
+      "actual": "5836ff7bffaa4e64201c212e7179e4999313bdeeae6f09df8f1ee7394855b406",
+      "bytes": 9931
+    },
+    {
+      "path": "nest-manual838.js",
+      "expected": "ceb1054adb657190a8a9cb3a16f9cd761e8dccb7d0efbdbcfe456cdeb2a4cc1e",
+      "ok": true,
+      "status": 200,
+      "actual": "ceb1054adb657190a8a9cb3a16f9cd761e8dccb7d0efbdbcfe456cdeb2a4cc1e",
+      "bytes": 14924
+    },
+    {
+      "path": "nest-reveal838.css",
+      "expected": "cc96d0e17e7ae6c91aef66e26b16e9e1f749bac4019bbbfe9c51435443f28d50",
+      "ok": true,
+      "status": 200,
+      "actual": "cc96d0e17e7ae6c91aef66e26b16e9e1f749bac4019bbbfe9c51435443f28d50",
+      "bytes": 1174
+    },
+    {
+      "path": "nest-reveal838.js",
+      "expected": "f81a913825dff1c343082a312fc5a008e4bea46786313726d804124fa83dd73f",
+      "ok": true,
+      "status": 200,
+      "actual": "f81a913825dff1c343082a312fc5a008e4bea46786313726d804124fa83dd73f",
+      "bytes": 4310
+    },
+    {
+      "path": "owner-review805.css",
+      "expected": "446a830293291a00ff5da46f63efa1af448bd18d6d1b74914003c893b431ebee",
+      "ok": true,
+      "status": 200,
+      "actual": "446a830293291a00ff5da46f63efa1af448bd18d6d1b74914003c893b431ebee",
+      "bytes": 6481
+    },
+    {
+      "path": "partner833.css",
+      "expected": "f1c63dd131f1352fa6610ae2840cedff07aec86f3b25ec6a06159e44ff7dde15",
+      "ok": true,
+      "status": 200,
+      "actual": "f1c63dd131f1352fa6610ae2840cedff07aec86f3b25ec6a06159e44ff7dde15",
+      "bytes": 2236
+    },
+    {
+      "path": "polish.js",
+      "expected": "ae9d662d9776423b916bac539c2439b03cb1e4910c569e3559381a329d2941bf",
+      "ok": true,
+      "status": 200,
+      "actual": "ae9d662d9776423b916bac539c2439b03cb1e4910c569e3559381a329d2941bf",
+      "bytes": 65831
+    },
+    {
+      "path": "privacy.html",
+      "expected": "cc2164f591475e600903c61e95ecf870709513c4b2178f78a059c82b98103247",
+      "ok": true,
+      "status": 200,
+      "actual": "cc2164f591475e600903c61e95ecf870709513c4b2178f78a059c82b98103247",
+      "bytes": 1582
+    },
+    {
+      "path": "progression.js",
+      "expected": "acf060ee61efc456d10b8fe90b9ebb1a1b0513a677eea5392119da28b5aeb38a",
+      "ok": true,
+      "status": 200,
+      "actual": "acf060ee61efc456d10b8fe90b9ebb1a1b0513a677eea5392119da28b5aeb38a",
+      "bytes": 44079
+    },
+    {
+      "path": "qrcode845.js",
+      "expected": "3ee72de9f69c668f9567363a9358df955960bae9000d9ebd66414670f88e8735",
+      "ok": true,
+      "status": 200,
+      "actual": "3ee72de9f69c668f9567363a9358df955960bae9000d9ebd66414670f88e8735",
+      "bytes": 33168
+    },
+    {
+      "path": "raven-audio761.js",
+      "expected": "6f9a51dbdffba11fe9c063144a16d138bfc5e50538d605bb15e03510146c1f96",
+      "ok": true,
+      "status": 200,
+      "actual": "6f9a51dbdffba11fe9c063144a16d138bfc5e50538d605bb15e03510146c1f96",
+      "bytes": 5094
+    },
+    {
+      "path": "raven-fight741.css",
+      "expected": "feb1e8a08c21be3cc37ad2afe5312a3762d07a7773c62be6b8c67249d4d18b5d",
+      "ok": true,
+      "status": 200,
+      "actual": "feb1e8a08c21be3cc37ad2afe5312a3762d07a7773c62be6b8c67249d4d18b5d",
+      "bytes": 1404
+    },
+    {
+      "path": "raven-fight741.js",
+      "expected": "be98e63250c9f009eafde16a4f836f3760d91d0fba2fadba5d046f8518d9975e",
+      "ok": true,
+      "status": 200,
+      "actual": "be98e63250c9f009eafde16a4f836f3760d91d0fba2fadba5d046f8518d9975e",
+      "bytes": 16065
+    },
+    {
+      "path": "raven-landscape837.js",
+      "expected": "bf1d6f8e4f15d6cb9310325ece1c5b82091615b71ce8c435a9e18cf4ebaad628",
+      "ok": true,
+      "status": 200,
+      "actual": "bf1d6f8e4f15d6cb9310325ece1c5b82091615b71ce8c435a9e18cf4ebaad628",
+      "bytes": 7719
+    },
+    {
+      "path": "raven-timeline741.js",
+      "expected": "f991a34fda7a54569f386b906a5b3476369893ac977acfbf0e20bbeabeb05627",
+      "ok": true,
+      "status": 200,
+      "actual": "f991a34fda7a54569f386b906a5b3476369893ac977acfbf0e20bbeabeb05627",
+      "bytes": 3063
+    },
+    {
+      "path": "responsive-review.css",
+      "expected": "23a2822c588746c8240a491a68f7f4dc65582612cb64d269a14682f2efbf2134",
+      "ok": true,
+      "status": 200,
+      "actual": "23a2822c588746c8240a491a68f7f4dc65582612cb64d269a14682f2efbf2134",
+      "bytes": 1769
+    },
+    {
+      "path": "responsive-review.js",
+      "expected": "104aebb9581f7d2292760f5a41b1f9795607aa4431c206ab7e49f3af92fb4a27",
+      "ok": true,
+      "status": 200,
+      "actual": "104aebb9581f7d2292760f5a41b1f9795607aa4431c206ab7e49f3af92fb4a27",
+      "bytes": 1967
+    },
+    {
+      "path": "review835.css",
+      "expected": "2f46425846224628b17d598c33cdabdd43616e0ccecdd86e0de80f8c779d68ba",
+      "ok": true,
+      "status": 200,
+      "actual": "2f46425846224628b17d598c33cdabdd43616e0ccecdd86e0de80f8c779d68ba",
+      "bytes": 10822
+    },
+    {
+      "path": "review835.js",
+      "expected": "8ad6f45268cb71d45242ad39c7e6740e47227082146bfc108d5b497c0582e739",
+      "ok": true,
+      "status": 200,
+      "actual": "8ad6f45268cb71d45242ad39c7e6740e47227082146bfc108d5b497c0582e739",
+      "bytes": 2454
+    },
+    {
+      "path": "review836.css",
+      "expected": "d33a5abb1535038bba6f2b5e893acc398ec3719737194949f59cb0b3d2896c45",
+      "ok": true,
+      "status": 200,
+      "actual": "d33a5abb1535038bba6f2b5e893acc398ec3719737194949f59cb0b3d2896c45",
+      "bytes": 17955
+    },
+    {
+      "path": "review836.js",
+      "expected": "95a558a0fb42a2b8ecc2f7f0a490b047bd774023f659a0edda8478a21a018b40",
+      "ok": true,
+      "status": 200,
+      "actual": "95a558a0fb42a2b8ecc2f7f0a490b047bd774023f659a0edda8478a21a018b40",
+      "bytes": 865
+    },
+    {
+      "path": "review839.css",
+      "expected": "2b62b6f45868e32d960b8f86010815de92d16c3f90e2c5668646511366670a11",
+      "ok": true,
+      "status": 200,
+      "actual": "2b62b6f45868e32d960b8f86010815de92d16c3f90e2c5668646511366670a11",
+      "bytes": 11061
+    },
+    {
+      "path": "review839.js",
+      "expected": "7860bd07ececb3dde185f302954b0ae5ee90874d78394f54bafabbc26bd0ae94",
+      "ok": true,
+      "status": 200,
+      "actual": "7860bd07ececb3dde185f302954b0ae5ee90874d78394f54bafabbc26bd0ae94",
+      "bytes": 1720
+    },
+    {
+      "path": "rita-avatar.js",
+      "expected": "a93fa483a3bc7ebcab10716884041dee33cc2b2f74f32d2eed8180ea724628b3",
+      "ok": true,
+      "status": 200,
+      "actual": "a93fa483a3bc7ebcab10716884041dee33cc2b2f74f32d2eed8180ea724628b3",
+      "bytes": 500
+    },
+    {
+      "path": "rita-bot.js",
+      "expected": "63c180899e26469c40cd418685b9ab2e0bed67db89efd9fa652fd8be0c349eb3",
+      "ok": true,
+      "status": 200,
+      "actual": "63c180899e26469c40cd418685b9ab2e0bed67db89efd9fa652fd8be0c349eb3",
+      "bytes": 311
+    },
+    {
+      "path": "rook510-avatars.js",
+      "expected": "2d2508ebf173dbabf936ff5313c64b7fe60d9f4d8a818f000205a1a59f6a24df",
+      "ok": true,
+      "status": 200,
+      "actual": "2d2508ebf173dbabf936ff5313c64b7fe60d9f4d8a818f000205a1a59f6a24df",
+      "bytes": 3811
+    },
+    {
+      "path": "rook510.css",
+      "expected": "9cfce1e3adc00eb19e157b63bbccf427bb537f07de0db2a47687095834e12c0b",
+      "ok": true,
+      "status": 200,
+      "actual": "9cfce1e3adc00eb19e157b63bbccf427bb537f07de0db2a47687095834e12c0b",
+      "bytes": 3402
+    },
+    {
+      "path": "rook512-room.js",
+      "expected": "0d652a5b6ccec1d721ed70ca0b5d18a27749a689b00869c36e034e62dc841239",
+      "ok": true,
+      "status": 200,
+      "actual": "0d652a5b6ccec1d721ed70ca0b5d18a27749a689b00869c36e034e62dc841239",
+      "bytes": 3764
+    },
+    {
+      "path": "rook513.css",
+      "expected": "fc06da2652bb12d51d5fbc52ef6340ca14ae7f48accdd14c6608d3ea79e1febd",
+      "ok": true,
+      "status": 200,
+      "actual": "fc06da2652bb12d51d5fbc52ef6340ca14ae7f48accdd14c6608d3ea79e1febd",
+      "bytes": 6278
+    },
+    {
+      "path": "rook513.js",
+      "expected": "d9ad7c20eec1d89b985a7675603c54fe04ff9907ab24ca8cf943136b3aa304f2",
+      "ok": true,
+      "status": 200,
+      "actual": "d9ad7c20eec1d89b985a7675603c54fe04ff9907ab24ca8cf943136b3aa304f2",
+      "bytes": 1224
+    },
+    {
+      "path": "rook514.css",
+      "expected": "898b2dbca3cfbc5a82a46b18c304cc67d3010c73854f02de4afabe04d6f47538",
+      "ok": true,
+      "status": 200,
+      "actual": "898b2dbca3cfbc5a82a46b18c304cc67d3010c73854f02de4afabe04d6f47538",
+      "bytes": 15797
+    },
+    {
+      "path": "rook518-trump.css",
+      "expected": "4d76b25d0c0cfd2cf0c2ee7f9166dc9d7114ac132271272d50f31e6e027c6874",
+      "ok": true,
+      "status": 200,
+      "actual": "4d76b25d0c0cfd2cf0c2ee7f9166dc9d7114ac132271272d50f31e6e027c6874",
+      "bytes": 13949
+    },
+    {
+      "path": "room-approved805.css",
+      "expected": "1a4048599a0e670e7669a2db1f3d23cba782735d4f3197e9074e6d937225441a",
+      "ok": true,
+      "status": 200,
+      "actual": "1a4048599a0e670e7669a2db1f3d23cba782735d4f3197e9074e6d937225441a",
+      "bytes": 6297
+    },
+    {
+      "path": "room-approved805.js",
+      "expected": "94f814e5dfbb3b5da28569392cb0cd7870d85bbc97ca41bbc9175c70469f3d97",
+      "ok": true,
+      "status": 200,
+      "actual": "94f814e5dfbb3b5da28569392cb0cd7870d85bbc97ca41bbc9175c70469f3d97",
+      "bytes": 3831
+    },
+    {
+      "path": "room830.css",
+      "expected": "16d6b5111763532b663587818d6cc990c120d16bdbf1c31f8d1e053788c9b996",
+      "ok": true,
+      "status": 200,
+      "actual": "16d6b5111763532b663587818d6cc990c120d16bdbf1c31f8d1e053788c9b996",
+      "bytes": 16742
+    },
+    {
+      "path": "room830.js",
+      "expected": "29895b8fd8c19c855fe9e387755f1f869bd74eb4eb0385a5f9551f08762fa64f",
+      "ok": true,
+      "status": 200,
+      "actual": "29895b8fd8c19c855fe9e387755f1f869bd74eb4eb0385a5f9551f08762fa64f",
+      "bytes": 4692
+    },
+    {
+      "path": "room831.css",
+      "expected": "891516fd5143c44a3c10ed1abc00493eb5f11614b6c9797a577efe79d3726264",
+      "ok": true,
+      "status": 200,
+      "actual": "891516fd5143c44a3c10ed1abc00493eb5f11614b6c9797a577efe79d3726264",
+      "bytes": 5851
+    },
+    {
+      "path": "room831.js",
+      "expected": "51f38debc5a30037d9d8412f5ba47f52690cf21705714dc11d5050e6aa0bfd2b",
+      "ok": true,
+      "status": 200,
+      "actual": "51f38debc5a30037d9d8412f5ba47f52690cf21705714dc11d5050e6aa0bfd2b",
+      "bytes": 3846
+    },
+    {
+      "path": "room832.css",
+      "expected": "f4a8426566df930342d3793bfe3349472d66b406892cff57f7905443b7af8e4a",
+      "ok": true,
+      "status": 200,
+      "actual": "f4a8426566df930342d3793bfe3349472d66b406892cff57f7905443b7af8e4a",
+      "bytes": 5420
+    },
+    {
+      "path": "room832.js",
+      "expected": "8bb6ff5b3b5f30ec4d8f9b9a40fab5e14c9284958f1df1e4867e198fac1c05d9",
+      "ok": true,
+      "status": 200,
+      "actual": "8bb6ff5b3b5f30ec4d8f9b9a40fab5e14c9284958f1df1e4867e198fac1c05d9",
+      "bytes": 1618
+    },
+    {
+      "path": "rules.js",
+      "expected": "880e17e2290f307a5029681f293f1bdd6db034cf93a80d0bf2d1f2ba5da74286",
+      "ok": true,
+      "status": 200,
+      "actual": "880e17e2290f307a5029681f293f1bdd6db034cf93a80d0bf2d1f2ba5da74286",
+      "bytes": 9409
+    },
+    {
+      "path": "shuffle-asset.js",
+      "expected": "3b8064fe7801b51de3bf3c7450f12031395904ce0359380bc37017d5f678c3d8",
+      "ok": true,
+      "status": 200,
+      "actual": "3b8064fe7801b51de3bf3c7450f12031395904ce0359380bc37017d5f678c3d8",
+      "bytes": 4182
+    },
+    {
+      "path": "signature-shuffle.css",
+      "expected": "7af7abe797f473a77a032887a3ef068907984d4f10d26f287be92a3adf47c414",
+      "ok": true,
+      "status": 200,
+      "actual": "7af7abe797f473a77a032887a3ef068907984d4f10d26f287be92a3adf47c414",
+      "bytes": 566
+    },
+    {
+      "path": "signature-shuffle.js",
+      "expected": "6d8a11f543ee8be26c13b589ab3becee939d2db7cc36e57a4c3f72b32a65e948",
+      "ok": true,
+      "status": 200,
+      "actual": "6d8a11f543ee8be26c13b589ab3becee939d2db7cc36e57a4c3f72b32a65e948",
+      "bytes": 11143
+    },
+    {
+      "path": "style057.css",
+      "expected": "63779bc8f6809d00c405bdd67e3eb20bc1251f65f9e27a466a78d0a7b53d6e40",
+      "ok": true,
+      "status": 200,
+      "actual": "63779bc8f6809d00c405bdd67e3eb20bc1251f65f9e27a466a78d0a7b53d6e40",
+      "bytes": 663047
+    },
+    {
+      "path": "sw060.js",
+      "expected": "eebcbb0d765b45e12309aba4d99dd2aa0ced7fe75234f01f5f9e2c52ac6b27ed",
+      "ok": true,
+      "status": 200,
+      "actual": "eebcbb0d765b45e12309aba4d99dd2aa0ced7fe75234f01f5f9e2c52ac6b27ed",
+      "bytes": 69312
+    },
+    {
+      "path": "tablet-scoreboard805.css",
+      "expected": "515e279050b804463ca4a1c504a1fa908f98866aabbf180decfd74b61413b0b2",
+      "ok": true,
+      "status": 200,
+      "actual": "515e279050b804463ca4a1c504a1fa908f98866aabbf180decfd74b61413b0b2",
+      "bytes": 1490
+    },
+    {
+      "path": "trump-hand739.css",
+      "expected": "03ea91352cfe69ac23f60d60acea39b22b1caad88721077a4abdfa801e4c73bf",
+      "ok": true,
+      "status": 200,
+      "actual": "03ea91352cfe69ac23f60d60acea39b22b1caad88721077a4abdfa801e4c73bf",
+      "bytes": 978
+    },
+    {
+      "path": "trump-hand739.js",
+      "expected": "dc05bb557fa2e8c1e877257fe704792ae63f7a164203eb2880e93b084bd32707",
+      "ok": true,
+      "status": 200,
+      "actual": "dc05bb557fa2e8c1e877257fe704792ae63f7a164203eb2880e93b084bd32707",
+      "bytes": 2270
+    },
+    {
+      "path": "trump-voice.js",
+      "expected": "1b3461c3516e515e26b3708517aa4ad1a7caf7bb55770d717c6e022a78f62b46",
+      "ok": true,
+      "status": 200,
+      "actual": "1b3461c3516e515e26b3708517aa4ad1a7caf7bb55770d717c6e022a78f62b46",
+      "bytes": 7878
+    },
+    {
+      "path": "trump-voices790.js",
+      "expected": "691aa469e5e82315f815b8935fa0095785013bb8f6207e5ef45b67cfc8853334",
+      "ok": true,
+      "status": 200,
+      "actual": "691aa469e5e82315f815b8935fa0095785013bb8f6207e5ef45b67cfc8853334",
+      "bytes": 42856
+    },
+    {
+      "path": "trump714.css",
+      "expected": "68db71c244772703841eef8f5961a4e9f4793f9ee8dbe6f290f8620632e76c58",
+      "ok": true,
+      "status": 200,
+      "actual": "68db71c244772703841eef8f5961a4e9f4793f9ee8dbe6f290f8620632e76c58",
+      "bytes": 4727
+    },
+    {
+      "path": "trump714.js",
+      "expected": "d30c9152f8fea07de5a2e77e0fd29f6649c7442739c81dc8093ea8ba2a7fec09",
+      "ok": true,
+      "status": 200,
+      "actual": "d30c9152f8fea07de5a2e77e0fd29f6649c7442739c81dc8093ea8ba2a7fec09",
+      "bytes": 28971
+    },
+    {
+      "path": "ui-audit841.css",
+      "expected": "d63e1cf735da9347b6f96fb5be19a79ea295ea5264c84fdfa77f4d0be2f9887b",
+      "ok": true,
+      "status": 200,
+      "actual": "d63e1cf735da9347b6f96fb5be19a79ea295ea5264c84fdfa77f4d0be2f9887b",
+      "bytes": 3837
+    },
+    {
+      "path": "ui-audit841.js",
+      "expected": "e94a12d57d54dc9a3e819eb1597c394ccb80b35722354d47f9f7d099eedd35b1",
+      "ok": true,
+      "status": 200,
+      "actual": "e94a12d57d54dc9a3e819eb1597c394ccb80b35722354d47f9f7d099eedd35b1",
+      "bytes": 2719
+    },
+    {
+      "path": "unified-bidding752.css",
+      "expected": "ee29ae487a9e80379e4996c3db94afa2822436cb243b681f514c51d3e3a6ffdc",
+      "ok": true,
+      "status": 200,
+      "actual": "ee29ae487a9e80379e4996c3db94afa2822436cb243b681f514c51d3e3a6ffdc",
+      "bytes": 310
+    },
+    {
+      "path": "unified-bidding752.js",
+      "expected": "145e1e50b6f017b355a3b1fac5ed1e23a8fd090445807085fa3111a1bc28408f",
+      "ok": true,
+      "status": 200,
+      "actual": "145e1e50b6f017b355a3b1fac5ed1e23a8fd090445807085fa3111a1bc28408f",
+      "bytes": 5062
+    },
+    {
+      "path": "voice-queue.js",
+      "expected": "0e6fb1705c02c31a1bca1f8550b32a6317b073e38436ffa4166a900c0d676324",
+      "ok": true,
+      "status": 200,
+      "actual": "0e6fb1705c02c31a1bca1f8550b32a6317b073e38436ffa4166a900c0d676324",
+      "bytes": 2995
+    },
+    {
+      "path": "x1/bidding.js",
+      "expected": "c2b56d03a1505de5e2f508b05d6c2872ee0bee46ac77712b80ec11fe1adffb0b",
+      "ok": true,
+      "status": 200,
+      "actual": "c2b56d03a1505de5e2f508b05d6c2872ee0bee46ac77712b80ec11fe1adffb0b",
+      "bytes": 10377
+    },
+    {
+      "path": "x1/core.js",
+      "expected": "54295f5da5c3011050c739b4528dc798cb4ba06d09d76ac9305c78d9430edd20",
+      "ok": true,
+      "status": 200,
+      "actual": "54295f5da5c3011050c739b4528dc798cb4ba06d09d76ac9305c78d9430edd20",
+      "bytes": 10690
+    },
+    {
+      "path": "x1/integration.js",
+      "expected": "6d3ba9427f42ee4b2312cfea51686597010307286ac8c6761766d2d3a609f473",
+      "ok": true,
+      "status": 200,
+      "actual": "6d3ba9427f42ee4b2312cfea51686597010307286ac8c6761766d2d3a609f473",
+      "bytes": 17192
+    },
+    {
+      "path": "x1/worker.js",
+      "expected": "725934cfdb1ce9c19c4b29cfae148878923b9555d760ccb3acef84af242806ae",
+      "ok": true,
+      "status": 200,
+      "actual": "725934cfdb1ce9c19c4b29cfae148878923b9555d760ccb3acef84af242806ae",
+      "bytes": 837
+    }
+  ],
+  "complete": true,
+  "expectedCount": 123
+}

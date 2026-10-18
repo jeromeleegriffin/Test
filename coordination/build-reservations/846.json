@@ -2,7 +2,7 @@
   "number": "846",
   "reservationId": "professional-cleanup-20261018-846",
   "date": "2026-10-18",
-  "status": "RESERVED",
+  "status": "OWNER_REQUESTED_DEPLOYED_BOTH",
   "workstream": "Professional source cleanup and live landscape review-caption removal",
   "task": "Audit active source; remove verified dead code and duplicate CSS; improve maintainability; deploy tested cleanup to both live sites",
   "sourceCommit": "26cf989cedfc6e7bde269f1b22690afeaa558a45",
@@ -12,5 +12,14 @@
   "sourceTestHead": "8c49f17a654028d369f6fe52e66925164fdb54fc",
   "sourceProductionHead": "be2054a9d730162fbeae20ad8b8511438e9d6cfc",
   "ownerAuthorization": "2026-10-18 request for whole-code professional cleanup and removal of experimental build number on live servers",
-  "gameZipRequested": false
+  "gameZipRequested": false,
+  "deployed": true,
+  "testReleaseCommit": "71dee12ecdeb41d8edc91a9b02adc4e5716b5d9b",
+  "productionReleaseCommit": "01e809d5079510fad9fe61a6c73633e94b637460",
+  "sourceManifest": "coordination/releases/846-cleanup/SOURCE_MANIFEST.json",
+  "sourceFiles": 1650,
+  "gameZipCreated": false,
+  "ownerRequestedCleanup": true,
+  "physicalAndroidNewlyVerified": false,
+  "releaseReceipt": "coordination/releases/846-cleanup/LIVE_RECEIPT.json"
 }
