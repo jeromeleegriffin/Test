@@ -1,9 +1,16 @@
-# Griffin House of Rooks — R712 staging source
+# Griffin House of Rooks
 
-Repository-clean copy prepared from protected R712 archive.
+A four-player partnership Rook game by Jerome Griffin, built for phones and tablets.
 
-Source archive SHA-256: `fb36cb316802aafd81b64e6acb23e208894225277d58b83664e008f307d1584c`
+Open `index.html` through a local server or the existing ZIP loader. The published application needs no production npm packages or build step.
 
-Cleanup removed only review/forensic packages, Android packaging source, legacy archive copies, release/history/instruction documents, build-only verification material, and duplicate non-runtime files. Runtime HTML/JS/CSS, manifests, service worker, privacy page, workers, and all game assets were preserved byte-for-byte.
+For developers, start with [DEVELOPING.md](DEVELOPING.md). It explains module ownership, script and stylesheet ordering, approved assets, frozen intelligence, saved-data compatibility and validation. Run `npm ci` followed by `npm run check` before changing the source.
 
-No gameplay, bidding, Bid Box, card, avatar, table, speed, landscape, or runtime source was edited during cleanup.
+Current runtime: **846-source-cleanup**. Runtime identity is available to support tools through `HORRuntimeTruth()`; the experimental landscape corner caption has been removed.
+
+Historical review notes inherited from the exact Build 845 source are preserved unchanged under [docs/history/build-845-inherited](docs/history/build-845-inherited/). They describe earlier checkpoints and are not current test receipts. Current source hashes, regression results and release status are in `coordination/releases/846-cleanup/` in the Test repository. The current Master Brain pointer is `brain/current.json`.
+
+Live sites:
+
+- https://jeromeleegriffin.github.io/Test/
+- https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/
