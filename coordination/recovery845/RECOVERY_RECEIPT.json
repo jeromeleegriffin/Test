@@ -1,0 +1,36 @@
+{
+  "project": "Griffin House of Rooks",
+  "build": "845-share-shuffle",
+  "date": "2026-10-18",
+  "status": "RECOVERED_EXACT_SOURCE_DOCUMENTATION_STAGED_NO_DEPLOYMENT",
+  "repository": "JeromeLeeGriffin/Test",
+  "branch": "work/recovery-845-20261018",
+  "sourceCommit": "26cf989cedfc6e7bde269f1b22690afeaa558a45",
+  "sourcePath": "builds/845",
+  "runtimeTree": "9e0ee5871c17b33c7a70367759d67194c25b32fc",
+  "archive": {
+    "filename": "845.zip",
+    "bytes": 193187658,
+    "sha256": "6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f",
+    "libraryFileId": "libfile_14b9911e71788191993b618bf2336fcb"
+  },
+  "files": 1642,
+  "comparedToTestMain": {
+    "same": 1516,
+    "changed": 22,
+    "new": 104
+  },
+  "staged28Tree": "7945c7bc046aca7575b242d8b4255d201a3df807",
+  "originalUploadReceipts": 71,
+  "runtimeBlobsReuploaded": 0,
+  "deploymentHold": true,
+  "liveHeads": {
+    "Test": "83e12363809b66420ff09d292504855390f1168b",
+    "Griffin-House-of-Rooks": "555e1163a826687dccf9cb2e4d60af09119669b9"
+  },
+  "rollbackBranch": "rollback/pre-845-20261018",
+  "gameSourceChanged": false,
+  "physicalAndroidNewlyVerified": false,
+  "browserAuditNewlyRun": false,
+  "fullHistoricalReadingNewlyCertified": false
+}

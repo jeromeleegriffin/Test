@@ -504,8 +504,8 @@
   "testSiteVerificationNote": "All1502 runtime Git blobs and all15 changed served SHA256 hashes match approved artifact on BOTH sites. Cloud browser reached both lobbies. Installed-device SW/offline upgrade remains unverified.",
   "historicalApprovedVisualDesign": {
     "date": "2026-10-14",
-    "room": "B — Fireplace Priority",
-    "menu": "A — slim right overlay",
+    "room": "B \u2014 Fireplace Priority",
+    "menu": "A \u2014 slim right overlay",
     "sound": "Reviewed Sound & Atmosphere using actual mixer controls",
     "ownerDesignApproved": true,
     "owner805PhoneAccepted": false,
@@ -912,13 +912,13 @@
     "status": "OWNER_APPROVED_LOCKED",
     "date": "2026-10-16",
     "record": "../coordination/landscape-daniel-017-approved-20261016.md",
-    "scope": "Daniel isolated 0–16 review; full-table integration pending",
+    "scope": "Daniel isolated 0\u201316 review; full-table integration pending",
     "runtime": "017.zip",
     "sha256": "c165dc8c94e0c8e78be931dad438fbdd7dc590ec79bf27a9e92e3be8d99019e7",
     "libraryFileId": "libfile_800a96f61fe081919f8abeada283c649",
     "sourceLibraryFileId": "libfile_7d48cb5a3e288191af77808b9d11be45",
     "deployed": false,
-    "method": "Fixed 68-degree fan for 7–16; overlap increases inside fixed finished grip; original card aspect; preserve 0–6"
+    "method": "Fixed 68-degree fan for 7\u201316; overlap increases inside fixed finished grip; original card aspect; preserve 0\u20136"
   },
   "landscapeFullTableCandidate": {
     "status": "OWNER_APPROVED_LOCKED",
@@ -1096,5 +1096,45 @@
       "delivered811Unchanged": true,
       "otherAuditRepairsPending": true
     }
+  },
+  "recovery845": {
+    "project": "Griffin House of Rooks",
+    "build": "845-share-shuffle",
+    "date": "2026-10-18",
+    "status": "RECOVERED_EXACT_SOURCE_DOCUMENTATION_STAGED_NO_DEPLOYMENT",
+    "repository": "JeromeLeeGriffin/Test",
+    "branch": "work/recovery-845-20261018",
+    "sourceCommit": "26cf989cedfc6e7bde269f1b22690afeaa558a45",
+    "sourcePath": "builds/845",
+    "runtimeTree": "9e0ee5871c17b33c7a70367759d67194c25b32fc",
+    "archive": {
+      "filename": "845.zip",
+      "bytes": 193187658,
+      "sha256": "6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f",
+      "libraryFileId": "libfile_14b9911e71788191993b618bf2336fcb"
+    },
+    "files": 1642,
+    "comparedToTestMain": {
+      "same": 1516,
+      "changed": 22,
+      "new": 104
+    },
+    "staged28Tree": "7945c7bc046aca7575b242d8b4255d201a3df807",
+    "originalUploadReceipts": 71,
+    "runtimeBlobsReuploaded": 0,
+    "deploymentHold": true,
+    "liveHeads": {
+      "Test": "83e12363809b66420ff09d292504855390f1168b",
+      "Griffin-House-of-Rooks": "555e1163a826687dccf9cb2e4d60af09119669b9"
+    },
+    "rollbackBranch": "rollback/pre-845-20261018",
+    "gameSourceChanged": false,
+    "physicalAndroidNewlyVerified": false,
+    "browserAuditNewlyRun": false,
+    "fullHistoricalReadingNewlyCertified": false,
+    "document": "recovery/845/MASTER_BRAIN_845_RECOVERY.md",
+    "handoff": "recovery/845/Griffin_Build_845_Comprehensive_Handoff.txt",
+    "startupPrompt": "recovery/845/Griffin_Build_845_Next_Chat_Prompt.txt",
+    "publicationScope": "ISOLATED_RECOVERY_BRANCH_ONLY_MAIN_POINTER_UNCHANGED"
   }
 }

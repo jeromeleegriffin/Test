@@ -1,0 +1,71 @@
+GRIFFIN HOUSE OF ROOKS — CONTINUE VERIFIED BUILD 845 RECOVERY
+
+DO NOT START OVER. Do not rebuild, overwrite newer work, deploy or modify either live main branch. Read the comprehensive handoff and original per-build records first.
+
+Repository JeromeLeeGriffin/Test. Recovery branch work/recovery-845-20261018.
+Pinned exact source commit 26cf989cedfc6e7bde269f1b22690afeaa558a45, path builds/845.
+Exact runtime tree 9e0ee5871c17b33c7a70367759d67194c25b32fc, 1,642 matching files.
+Original 845.zip: 193187658 bytes; SHA256 6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f; Library libfile_14b9911e71788191993b618bf2336fcb.
+Published Brain AE remains historical/current on main. Isolated recovery supplement is brain/recovery/845/MASTER_BRAIN_845_RECOVERY.md; read branch brain/current.json, coordination/recovery845/ and current main pointer/registry.
+Test/main and rollback/pre-845-20261018 were verified at 83e12363809b66420ff09d292504855390f1168b. Production/main and its matching rollback were 555e1163a826687dccf9cb2e4d60af09119669b9. Refresh before any mutation.
+
+The original 28 successful staged files are confirmed in tree 7945c7bc046aca7575b242d8b4255d201a3df807. Original ledger has 71 receipts, later through x1/integration.js. Every required 845 runtime blob was already on GitHub; recovery reused them and anchored exact source. Do not repeat runtime uploads. No game code/art changed. No deployment occurred. The recovery branch root is intentionally older live game: builds/845 is the candidate, so a blind branch merge is not a release.
+
+Preserve QR offline encoding/quiet-zone/layout, Griffin same-origin wrapper identity, approved shuffle in both orientations, 844 privacy/reconnect/action-context/finish-audio repairs and all 829–843 owner changes. Archive contains exact art/audio and authoring notes. Native Android share-sheet branding/installed fullscreen, real WAN reconnect and cross-device fight timing remain unverified; do not claim desktop tests prove them. Do not clear saves, service workers or caches. Do not generate art unless Jerome explicitly says Generate.
+
+Current authorization: recovery and durable documentation only. Live deployment requires explicit new approval. If owner next approves release, follow handoff deployment procedure, exact allowlist and expected-head checks. Preserve both current live heads and all rollback/history. No new game number is needed for unchanged 845.
+
+Retrieve actual ZIP bytes for delivery and give Jerome a clickable sandbox file link, never only a web URL. Before new gameplay development, complete full H-through-current reading and relevant authorities; do not claim the recovery session repeated every historical reading or browser test.
+
+You MUST reproduce BOTH complete permanent rules below verbatim in every future handoff, START HERE and startup prompt, and explicitly require your successor to do the same through every following chat. Preserve the same obligation in future Brain updates.
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+
