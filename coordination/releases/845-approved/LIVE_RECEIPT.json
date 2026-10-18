@@ -1,0 +1,62 @@
+{
+  "project": "Griffin House of Rooks",
+  "build": "845-share-shuffle",
+  "date": "2026-10-18",
+  "status": "DEPLOYED_BOTH_GIT_HTTP_BROWSER_VERIFIED",
+  "ownerReply": "Okay, so you just go ahead and follow the instructions you gave me there.",
+  "authorizationContext": "Reply to proposed next release step of updating both live sites; assistant stated dual deployment before acting.",
+  "ownerAuthorizedRelease": true,
+  "sourceRepository": "JeromeLeeGriffin/Test",
+  "sourceCommit": "26cf989cedfc6e7bde269f1b22690afeaa558a45",
+  "sourcePath": "builds/845",
+  "runtimeTree": "9e0ee5871c17b33c7a70367759d67194c25b32fc",
+  "archiveSha256": "6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f",
+  "archiveBytes": 193187658,
+  "runtimeFiles": 1642,
+  "testRuntimeCommit": "95dbe0929ee05899e5f02f358f3a83f4ffab84e3",
+  "productionRuntimeCommit": "be2054a9d730162fbeae20ad8b8511438e9d6cfc",
+  "testPagesRun": 39159018984,
+  "productionPagesRun": 39159354088,
+  "productionImportRun": 39158843779,
+  "testPagesConclusion": "success",
+  "productionPagesConclusion": "success",
+  "servedFileChecksPerSite": 135,
+  "testServedMatches": 135,
+  "productionServedMatches": 135,
+  "nativeReleaseChecks": 13,
+  "nativeFullHandScores": [
+    -195,
+    120
+  ],
+  "freshWorkerOfflinePassed": true,
+  "offlineQrPassed": true,
+  "testLiveBrowserPassed": true,
+  "productionLiveBrowserPassed": true,
+  "rollbackBranch": "rollback/pre-845-20261018",
+  "testPreviousCommit": "83e12363809b66420ff09d292504855390f1168b",
+  "productionPreviousCommit": "555e1163a826687dccf9cb2e4d60af09119669b9",
+  "physicalAndroidNewlyVerified": false,
+  "realWANMultiplayerNewlyVerified": false,
+  "originalZipPlayerPreserved": true,
+  "noBrowserDataCleared": true,
+  "noGameCodeChangedForRelease": true,
+  "knownSecondaryLabelIssue": {
+    "path": "angle-c-characters.js",
+    "element": "angleCNotice",
+    "label": "840 \u00b7 Stable discard",
+    "activeRuntime": "845-share-shuffle",
+    "recordedNotPatched": true
+  },
+  "historicalMasterBrain": "AE",
+  "recoveryDocumentationCommit": "e7cfed3915c8759e7084de8222eb89fe73f5972b",
+  "liveVerification": {
+    "Test": {
+      "httpMatches": 135,
+      "browserChecksPassed": 4
+    },
+    "Griffin-House-of-Rooks": {
+      "httpMatches": 135,
+      "browserChecksPassed": 4
+    }
+  }
+}

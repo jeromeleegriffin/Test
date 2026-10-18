@@ -1,0 +1,1087 @@
+{
+  "site": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
+  "results": [
+    {
+      "path": "814_CARD_FRAME_FIX.txt",
+      "expected": "0645192620e3ab3b8b10eca658f1fd9fddce7248079f87bed63674e5d764391d",
+      "ok": true,
+      "status": 200,
+      "actual": "0645192620e3ab3b8b10eca658f1fd9fddce7248079f87bed63674e5d764391d",
+      "bytes": 125
+    },
+    {
+      "path": "815_REPAIR_NOTE.txt",
+      "expected": "1c3e1449282afddff02d249ce3685e53b0a269e8770663c5ec8e86694ea6a51c",
+      "ok": true,
+      "status": 200,
+      "actual": "1c3e1449282afddff02d249ce3685e53b0a269e8770663c5ec8e86694ea6a51c",
+      "bytes": 805
+    },
+    {
+      "path": "QA_BASELINE_811.json",
+      "expected": "dcd6055492990f16fc33f24dc56f78b4e19f7c2accc7dbe7669cc47b852a518c",
+      "ok": true,
+      "status": 200,
+      "actual": "dcd6055492990f16fc33f24dc56f78b4e19f7c2accc7dbe7669cc47b852a518c",
+      "bytes": 433579
+    },
+    {
+      "path": "QA_BASELINE_812.json",
+      "expected": "130eb7c8dc8c9d338725c612b4f363bbf1b307988de940c3dd170abeca0d0ccc",
+      "ok": true,
+      "status": 200,
+      "actual": "130eb7c8dc8c9d338725c612b4f363bbf1b307988de940c3dd170abeca0d0ccc",
+      "bytes": 7167
+    },
+    {
+      "path": "QA_RESULT.json",
+      "expected": "b73844aa2de02d3cb0b5248d9bf578f657a6bd74bafbb6ffda41beb2a9b628cc",
+      "ok": true,
+      "status": 200,
+      "actual": "b73844aa2de02d3cb0b5248d9bf578f657a6bd74bafbb6ffda41beb2a9b628cc",
+      "bytes": 2746
+    },
+    {
+      "path": "READ-FIRST-LOWER-CAMERA.txt",
+      "expected": "160e1e32c3fade85e5d16e26ad6a80ed09c95b89387f29f1b52a1b6d368da693",
+      "ok": true,
+      "status": 200,
+      "actual": "160e1e32c3fade85e5d16e26ad6a80ed09c95b89387f29f1b52a1b6d368da693",
+      "bytes": 3160
+    },
+    {
+      "path": "README-829.txt",
+      "expected": "850258fb6548a24dc54b594f86ff5e85984d1685a5fd22c36a4888ce9dd2ad44",
+      "ok": true,
+      "status": 200,
+      "actual": "850258fb6548a24dc54b594f86ff5e85984d1685a5fd22c36a4888ce9dd2ad44",
+      "bytes": 2630
+    },
+    {
+      "path": "README-830.txt",
+      "expected": "abbd20b2b003506ac6a360094fc0daf77d78851f7dbdd50c6789a27c11470cca",
+      "ok": true,
+      "status": 200,
+      "actual": "abbd20b2b003506ac6a360094fc0daf77d78851f7dbdd50c6789a27c11470cca",
+      "bytes": 3573
+    },
+    {
+      "path": "README-831.txt",
+      "expected": "b0f1e47ee40ffc78f978f58b48b0194b0ba75bc4726828a3961e781d1663f20a",
+      "ok": true,
+      "status": 200,
+      "actual": "b0f1e47ee40ffc78f978f58b48b0194b0ba75bc4726828a3961e781d1663f20a",
+      "bytes": 3471
+    },
+    {
+      "path": "README-832.txt",
+      "expected": "d2270c1c0784fc92253d22f8fda7dfd3069e24df425c05c2da70fea22952901b",
+      "ok": true,
+      "status": 200,
+      "actual": "d2270c1c0784fc92253d22f8fda7dfd3069e24df425c05c2da70fea22952901b",
+      "bytes": 4402
+    },
+    {
+      "path": "README-833.txt",
+      "expected": "c2c4430aa6ed47425a2c64a10a90905b1349a06a23b8d5af08db282759e66524",
+      "ok": true,
+      "status": 200,
+      "actual": "c2c4430aa6ed47425a2c64a10a90905b1349a06a23b8d5af08db282759e66524",
+      "bytes": 2665
+    },
+    {
+      "path": "README-834.txt",
+      "expected": "7b59f43640eb8ddf5b982535f434d0c0fc705b9276f4425fca45354ec714e2e6",
+      "ok": true,
+      "status": 200,
+      "actual": "7b59f43640eb8ddf5b982535f434d0c0fc705b9276f4425fca45354ec714e2e6",
+      "bytes": 2072
+    },
+    {
+      "path": "README-835.txt",
+      "expected": "94a3c8a82d0934a3284b7fbfc9cfb1fbc0049524c40360777630817e0ebb1e7a",
+      "ok": true,
+      "status": 200,
+      "actual": "94a3c8a82d0934a3284b7fbfc9cfb1fbc0049524c40360777630817e0ebb1e7a",
+      "bytes": 3173
+    },
+    {
+      "path": "README-836.txt",
+      "expected": "1b33d07757136affdebf854b6723a80a6086023170215c2001ebc8f1ae6ee87f",
+      "ok": true,
+      "status": 200,
+      "actual": "1b33d07757136affdebf854b6723a80a6086023170215c2001ebc8f1ae6ee87f",
+      "bytes": 4509
+    },
+    {
+      "path": "README-837.txt",
+      "expected": "0ada22df37616acf95c93b1bf05f74f4e0c2172720c1d498f8a4451e394cde18",
+      "ok": true,
+      "status": 200,
+      "actual": "0ada22df37616acf95c93b1bf05f74f4e0c2172720c1d498f8a4451e394cde18",
+      "bytes": 3474
+    },
+    {
+      "path": "README-838.txt",
+      "expected": "c59c2870ef11c98b68907fe2f8a3ad715cd1d39ee16bee82aa6fed5c5c9b0ef9",
+      "ok": true,
+      "status": 200,
+      "actual": "c59c2870ef11c98b68907fe2f8a3ad715cd1d39ee16bee82aa6fed5c5c9b0ef9",
+      "bytes": 5293
+    },
+    {
+      "path": "README-839.txt",
+      "expected": "1d71fbc3047b1657026db2549b447d13b1687fac3ceda969de0792092cf71641",
+      "ok": true,
+      "status": 200,
+      "actual": "1d71fbc3047b1657026db2549b447d13b1687fac3ceda969de0792092cf71641",
+      "bytes": 4278
+    },
+    {
+      "path": "README-840.txt",
+      "expected": "c3097fdd2adf7678a0ea760eb914899239d6eb09fc8188049d7c7a69c706d44b",
+      "ok": true,
+      "status": 200,
+      "actual": "c3097fdd2adf7678a0ea760eb914899239d6eb09fc8188049d7c7a69c706d44b",
+      "bytes": 4392
+    },
+    {
+      "path": "README-841.txt",
+      "expected": "37dc16afd2eb7d78a6abc9433e4b366c51476b2a520f344f592f05ebd37375cc",
+      "ok": true,
+      "status": 200,
+      "actual": "37dc16afd2eb7d78a6abc9433e4b366c51476b2a520f344f592f05ebd37375cc",
+      "bytes": 5160
+    },
+    {
+      "path": "README-842.txt",
+      "expected": "c07db1a59f5959f35104fe50abde714eb3032e7b6490d0367ba4a4f8566dd2ad",
+      "ok": true,
+      "status": 200,
+      "actual": "c07db1a59f5959f35104fe50abde714eb3032e7b6490d0367ba4a4f8566dd2ad",
+      "bytes": 4796
+    },
+    {
+      "path": "README-843.txt",
+      "expected": "3a9696e1b4d50659b689ca5c083e8b7b66f0874f1703b04a85304762a0f9159d",
+      "ok": true,
+      "status": 200,
+      "actual": "3a9696e1b4d50659b689ca5c083e8b7b66f0874f1703b04a85304762a0f9159d",
+      "bytes": 2508
+    },
+    {
+      "path": "README-844.txt",
+      "expected": "23a62bd022186117205713b02a2698aa06de5c5dfbc2440690f41bca9c0a78a5",
+      "ok": true,
+      "status": 200,
+      "actual": "23a62bd022186117205713b02a2698aa06de5c5dfbc2440690f41bca9c0a78a5",
+      "bytes": 4463
+    },
+    {
+      "path": "README-845.txt",
+      "expected": "879758bc9e03783ba69cae1f5cc710f23ca4a1ce9ecd7805178fac4b53217a35",
+      "ok": true,
+      "status": 200,
+      "actual": "879758bc9e03783ba69cae1f5cc710f23ca4a1ce9ecd7805178fac4b53217a35",
+      "bytes": 2108
+    },
+    {
+      "path": "REPAIR_812_SOURCE.json",
+      "expected": "8ff51afc696babf6d653d9d5d5542e18d89e6773386b98b9e0de3c66a276be68",
+      "ok": true,
+      "status": 200,
+      "actual": "8ff51afc696babf6d653d9d5d5542e18d89e6773386b98b9e0de3c66a276be68",
+      "bytes": 549
+    },
+    {
+      "path": "REPAIR_813_SOURCE.json",
+      "expected": "73ee455c9cc866521c9968cfb756a20287e2d06fde1945dc256938838812da44",
+      "ok": true,
+      "status": 200,
+      "actual": "73ee455c9cc866521c9968cfb756a20287e2d06fde1945dc256938838812da44",
+      "bytes": 403
+    },
+    {
+      "path": "REVIEW-CHECKS.json",
+      "expected": "fd50253ab03da3d625a60925c5d7398615f786172e97b383370911d84fce79ec",
+      "ok": true,
+      "status": 200,
+      "actual": "fd50253ab03da3d625a60925c5d7398615f786172e97b383370911d84fce79ec",
+      "bytes": 17902
+    },
+    {
+      "path": "REVIEW-MANIFEST.json",
+      "expected": "76df68f2b3d8a08338b9def73fdbaac05319330e8abc4b6f0ff1ac49b512d789",
+      "ok": true,
+      "status": 200,
+      "actual": "76df68f2b3d8a08338b9def73fdbaac05319330e8abc4b6f0ff1ac49b512d789",
+      "bytes": 1622
+    },
+    {
+      "path": "REVIEW_MANIFEST.json",
+      "expected": "d3fbc21ecc2ca1f101bbdfa3e11326fa6cb728b969ed99531ea785c2fe40cd45",
+      "ok": true,
+      "status": 200,
+      "actual": "d3fbc21ecc2ca1f101bbdfa3e11326fa6cb728b969ed99531ea785c2fe40cd45",
+      "bytes": 178272
+    },
+    {
+      "path": "REVIEW_README.md",
+      "expected": "f73aa91f58194740c6c0bc397eea561eeacb655e44ab25db79c849604a19154a",
+      "ok": true,
+      "status": 200,
+      "actual": "f73aa91f58194740c6c0bc397eea561eeacb655e44ab25db79c849604a19154a",
+      "bytes": 2589
+    },
+    {
+      "path": "angle-c-characters.js",
+      "expected": "92820cc0ebbdc7a66fce866f8eeef742aba5e29ac76e7e9a994c3a39806c87a9",
+      "ok": true,
+      "status": 200,
+      "actual": "92820cc0ebbdc7a66fce866f8eeef742aba5e29ac76e7e9a994c3a39806c87a9",
+      "bytes": 14800
+    },
+    {
+      "path": "angle-c-hands.js",
+      "expected": "445c50ed23034188126a7dc4fbae02babf4255729d046418856b34a0d5f16ff2",
+      "ok": true,
+      "status": 200,
+      "actual": "445c50ed23034188126a7dc4fbae02babf4255729d046418856b34a0d5f16ff2",
+      "bytes": 167
+    },
+    {
+      "path": "angle-c-runtime.css",
+      "expected": "414a67d3170c6dfbdabdbcf7a83e43f94af93d80f1758058339f27e6273b1f4a",
+      "ok": true,
+      "status": 200,
+      "actual": "414a67d3170c6dfbdabdbcf7a83e43f94af93d80f1758058339f27e6273b1f4a",
+      "bytes": 45818
+    },
+    {
+      "path": "angle-c-runtime.js",
+      "expected": "821fff89eee58c3ba9f16fe5b3669cc8784efcd76b751db9b0a6d813949c19e0",
+      "ok": true,
+      "status": 200,
+      "actual": "821fff89eee58c3ba9f16fe5b3669cc8784efcd76b751db9b0a6d813949c19e0",
+      "bytes": 6134
+    },
+    {
+      "path": "approved-bid-portrait.js",
+      "expected": "6af5c7e8cccf8826e337680c8c1c02b0e77261527cca0c6b3b0147600848b7e3",
+      "ok": true,
+      "status": 200,
+      "actual": "6af5c7e8cccf8826e337680c8c1c02b0e77261527cca0c6b3b0147600848b7e3",
+      "bytes": 2332
+    },
+    {
+      "path": "assets/angle-c/approved-lantern.svg",
+      "expected": "5ec8fb205a409be96ee0e77e81b917881fb65f4fa7cee66fe85e0331e089d841",
+      "ok": true,
+      "status": 200,
+      "actual": "5ec8fb205a409be96ee0e77e81b917881fb65f4fa7cee66fe85e0331e089d841",
+      "bytes": 2946494
+    },
+    {
+      "path": "assets/angle-c/approved-poses.png",
+      "expected": "7c3b00d788400d40940e6bc69148e18fce31b04d2e3bc34f30f6f8bb5af22b30",
+      "ok": true,
+      "status": 200,
+      "actual": "7c3b00d788400d40940e6bc69148e18fce31b04d2e3bc34f30f6f8bb5af22b30",
+      "bytes": 1913508
+    },
+    {
+      "path": "assets/angle-c/jerome-rear-source-v1.png",
+      "expected": "963b5fa61051552a44ea952f9bc9da3114ddfc1fdf05283b1974ac34490bcc4f",
+      "ok": true,
+      "status": 200,
+      "actual": "963b5fa61051552a44ea952f9bc9da3114ddfc1fdf05283b1974ac34490bcc4f",
+      "bytes": 1150948
+    },
+    {
+      "path": "assets/angle-c/lowered-static-scene.png",
+      "expected": "0ccb9a70dcf50c238062e2ecf80ab65a07f79e003a45de0db95acd49adabf044",
+      "ok": true,
+      "status": 200,
+      "actual": "0ccb9a70dcf50c238062e2ecf80ab65a07f79e003a45de0db95acd49adabf044",
+      "bytes": 2059908
+    },
+    {
+      "path": "assets/angle-c/open-felt-static-scene.png",
+      "expected": "dfa4b78b1868b990d411610dd1b8f0fb1acdc0ef7c804351b498df1490b54058",
+      "ok": true,
+      "status": 200,
+      "actual": "dfa4b78b1868b990d411610dd1b8f0fb1acdc0ef7c804351b498df1490b54058",
+      "bytes": 1996498
+    },
+    {
+      "path": "assets/angle-c/pre-hand-scene.webp",
+      "expected": "a198a00af7c15d6983abc668eb07ed3ad2f6799736acb1eec5a152b445477f48",
+      "ok": true,
+      "status": 200,
+      "actual": "a198a00af7c15d6983abc668eb07ed3ad2f6799736acb1eec5a152b445477f48",
+      "bytes": 329376
+    },
+    {
+      "path": "assets/angle-c/restored-scene-021.png",
+      "expected": "b90512fa10fdd2618e01d6a7eb27ed27a312ab2d09ad5bf61ffd9bd80c27d81b",
+      "ok": true,
+      "status": 200,
+      "actual": "b90512fa10fdd2618e01d6a7eb27ed27a312ab2d09ad5bf61ffd9bd80c27d81b",
+      "bytes": 1965839
+    },
+    {
+      "path": "assets/angle-c/room-table-plate-v1.png",
+      "expected": "2676e034930bedc2f47e292ffc1b22d8019643b3413c049ec28078520775eba5",
+      "ok": true,
+      "status": 200,
+      "actual": "2676e034930bedc2f47e292ffc1b22d8019643b3413c049ec28078520775eba5",
+      "bytes": 2066668
+    },
+    {
+      "path": "assets/angle-c/walnut-retained-concept.png",
+      "expected": "a409c065b8c04cbf76d13a28d4e009fc38f47cb6a3314629dd14760c91d958f8",
+      "ok": true,
+      "status": 200,
+      "actual": "a409c065b8c04cbf76d13a28d4e009fc38f47cb6a3314629dd14760c91d958f8",
+      "bytes": 2249895
+    },
+    {
+      "path": "assets/angle-c/wide-static-scene.png",
+      "expected": "a2bad40a3268aee7f3507788ba96e79e98ec318e5fe2f3b6a8bc6555ed3b4c13",
+      "ok": true,
+      "status": 200,
+      "actual": "a2bad40a3268aee7f3507788ba96e79e98ec318e5fe2f3b6a8bc6555ed3b4c13",
+      "bytes": 2157989
+    },
+    {
+      "path": "assets/brand835/house-plaque835.png",
+      "expected": "aee6d558e6f06bdf834dad4a3513a94e3bbee6b066994daa95f5b6e4f1d488ab",
+      "ok": true,
+      "status": 200,
+      "actual": "aee6d558e6f06bdf834dad4a3513a94e3bbee6b066994daa95f5b6e4f1d488ab",
+      "bytes": 2897089
+    },
+    {
+      "path": "assets/images/house-of-rooks-192.png",
+      "expected": "c99f834c04cb45e9cdf0fc1fadb28a2e9e8fc268acb720a71d2a1bae0c10bca8",
+      "ok": true,
+      "status": 200,
+      "actual": "c99f834c04cb45e9cdf0fc1fadb28a2e9e8fc268acb720a71d2a1bae0c10bca8",
+      "bytes": 40428
+    },
+    {
+      "path": "assets/images/house-of-rooks-apple-touch.png",
+      "expected": "5b5fd1aa45e202d06cc9660231ec7fd58c4a2f25c92e421662050b2cdfdb6fa5",
+      "ok": true,
+      "status": 200,
+      "actual": "5b5fd1aa45e202d06cc9660231ec7fd58c4a2f25c92e421662050b2cdfdb6fa5",
+      "bytes": 36260
+    },
+    {
+      "path": "assets/images/winner-crown841.svg",
+      "expected": "37529e8ed624cab02166564a39df622d8cf313c1200159a740e9be397d633788",
+      "ok": true,
+      "status": 200,
+      "actual": "37529e8ed624cab02166564a39df622d8cf313c1200159a740e9be397d633788",
+      "bytes": 627
+    },
+    {
+      "path": "assets/lower-camera/room-table-baize832.svg",
+      "expected": "eef1849dad0b78f9a8e0c319fd574ab84246fa497f849da6bb477f38d07b3230",
+      "ok": true,
+      "status": 200,
+      "actual": "eef1849dad0b78f9a8e0c319fd574ab84246fa497f849da6bb477f38d07b3230",
+      "bytes": 6780519
+    },
+    {
+      "path": "assets/lower-camera/room-table-lantern830.png",
+      "expected": "2a393bcc84505ef1f0c90976a9a00b458b998ce1b34a97c866612fcae7d28a02",
+      "ok": true,
+      "status": 200,
+      "actual": "2a393bcc84505ef1f0c90976a9a00b458b998ce1b34a97c866612fcae7d28a02",
+      "bytes": 2054707
+    },
+    {
+      "path": "assets/lower-camera/room-table-oval.png",
+      "expected": "e448ab3663664a63d484110d8a484dfd15d2d14b4354f5039104545a521e75ef",
+      "ok": true,
+      "status": 200,
+      "actual": "e448ab3663664a63d484110d8a484dfd15d2d14b4354f5039104545a521e75ef",
+      "bytes": 2117878
+    },
+    {
+      "path": "assets/lower-camera/room-table-shelf834.svg",
+      "expected": "8d71806218b4213aa5d6436685418db5a1480b488c511fad6c8aa5f6fa358ca9",
+      "ok": true,
+      "status": 200,
+      "actual": "8d71806218b4213aa5d6436685418db5a1480b488c511fad6c8aa5f6fa358ca9",
+      "bytes": 9473481
+    },
+    {
+      "path": "assets/lower-camera/room-table.png",
+      "expected": "0b591c1325cfea8feb22884a0a702e0156f4738f5988d0fa8a8cedd46dda0a3e",
+      "ok": true,
+      "status": 200,
+      "actual": "0b591c1325cfea8feb22884a0a702e0156f4738f5988d0fa8a8cedd46dda0a3e",
+      "bytes": 2134650
+    },
+    {
+      "path": "assets/nest-reveal838/bird-heads.png",
+      "expected": "bc23f8e65c39e8e6af1223ecdf32972bfa25e78005599a85e0ef454bba111239",
+      "ok": true,
+      "status": 200,
+      "actual": "bc23f8e65c39e8e6af1223ecdf32972bfa25e78005599a85e0ef454bba111239",
+      "bytes": 2521510
+    },
+    {
+      "path": "assets/raven-landscape837/black-atlas.png",
+      "expected": "433d1e3fd05777a242d9d6ceddd2f16ea344dd4498fecd0b19b5a5e6deb30702",
+      "ok": true,
+      "status": 200,
+      "actual": "433d1e3fd05777a242d9d6ceddd2f16ea344dd4498fecd0b19b5a5e6deb30702",
+      "bytes": 2462744
+    },
+    {
+      "path": "assets/raven-landscape837/red-atlas.png",
+      "expected": "d8ddd94e0e3aaf75d2b81ec948e6721ffde6d2d1bf7cb1b58ce0c747f5827dde",
+      "ok": true,
+      "status": 200,
+      "actual": "d8ddd94e0e3aaf75d2b81ec948e6721ffde6d2d1bf7cb1b58ce0c747f5827dde",
+      "bytes": 2197193
+    },
+    {
+      "path": "assets/signature-shuffle/manifest.json",
+      "expected": "7075152790cf5392c3a702789d849ea17650fcfe178caafc0e0f3b4afb1d77c9",
+      "ok": true,
+      "status": 200,
+      "actual": "7075152790cf5392c3a702789d849ea17650fcfe178caafc0e0f3b4afb1d77c9",
+      "bytes": 377
+    },
+    {
+      "path": "bid-repair737.css",
+      "expected": "15e105a1191bb327ff3ed235da2d28779fcde0ea12a8d08d985fd57b26405d16",
+      "ok": true,
+      "status": 200,
+      "actual": "15e105a1191bb327ff3ed235da2d28779fcde0ea12a8d08d985fd57b26405d16",
+      "bytes": 479
+    },
+    {
+      "path": "bid-repair737.js",
+      "expected": "bb6f03def79b32457eced2d09590346ed10b45144e1fef4ec36f5b77ce67a7d3",
+      "ok": true,
+      "status": 200,
+      "actual": "bb6f03def79b32457eced2d09590346ed10b45144e1fef4ec36f5b77ce67a7d3",
+      "bytes": 1650
+    },
+    {
+      "path": "bots.js",
+      "expected": "c0a7fd0940d30c95f02ec364d04220db1326c7d016a1b36e69483156de84702b",
+      "ok": true,
+      "status": 200,
+      "actual": "c0a7fd0940d30c95f02ec364d04220db1326c7d016a1b36e69483156de84702b",
+      "bytes": 30843
+    },
+    {
+      "path": "friends803.js",
+      "expected": "f76cfa7f08174dfd96c6c4280084fd1a506ff1e3dd99f8e0af894cfd98877916",
+      "ok": true,
+      "status": 200,
+      "actual": "f76cfa7f08174dfd96c6c4280084fd1a506ff1e3dd99f8e0af894cfd98877916",
+      "bytes": 5435
+    },
+    {
+      "path": "game060.js",
+      "expected": "5cdef2d51ce0aa61aa6fa250d6817e59f0d3c4f14b9c7a927c5bf09f3473ed71",
+      "ok": true,
+      "status": 200,
+      "actual": "5cdef2d51ce0aa61aa6fa250d6817e59f0d3c4f14b9c7a927c5bf09f3473ed71",
+      "bytes": 908366
+    },
+    {
+      "path": "hand-order838.js",
+      "expected": "6793de7184d5dccf6d3ae47e0a2dc3f2cc912195c8a58afeda1d11e4d56e2f7d",
+      "ok": true,
+      "status": 200,
+      "actual": "6793de7184d5dccf6d3ae47e0a2dc3f2cc912195c8a58afeda1d11e4d56e2f7d",
+      "bytes": 2102
+    },
+    {
+      "path": "holder-cues789.js",
+      "expected": "729e78f4a82e46a063a19daa8e73e5051200cf3dc5e66d14aef70e59cb399b66",
+      "ok": true,
+      "status": 200,
+      "actual": "729e78f4a82e46a063a19daa8e73e5051200cf3dc5e66d14aef70e59cb399b66",
+      "bytes": 7655
+    },
+    {
+      "path": "hor-version.js",
+      "expected": "ae45a605d9bcdfd290b22acb11a8ae25590efd5807c06b57dcdfbce96e8c0cda",
+      "ok": true,
+      "status": 200,
+      "actual": "ae45a605d9bcdfd290b22acb11a8ae25590efd5807c06b57dcdfbce96e8c0cda",
+      "bytes": 1110
+    },
+    {
+      "path": "identity-choice.js",
+      "expected": "cdcda55dd8d0edd832c011899d8ab53fdca9dafef115bb8d9e145b07f5cdf07f",
+      "ok": true,
+      "status": 200,
+      "actual": "cdcda55dd8d0edd832c011899d8ab53fdca9dafef115bb8d9e145b07f5cdf07f",
+      "bytes": 7085
+    },
+    {
+      "path": "index.html",
+      "expected": "8e021989d60700ec91a1ad6de8166037430d624bb90c5779c5b9ba233e39aa16",
+      "ok": true,
+      "status": 200,
+      "actual": "8e021989d60700ec91a1ad6de8166037430d624bb90c5779c5b9ba233e39aa16",
+      "bytes": 88906
+    },
+    {
+      "path": "landscape-discard812.css",
+      "expected": "021156969f7af7349affb5828d3cdad672dada55219bd865ea824909e342b2b0",
+      "ok": true,
+      "status": 200,
+      "actual": "021156969f7af7349affb5828d3cdad672dada55219bd865ea824909e342b2b0",
+      "bytes": 12688
+    },
+    {
+      "path": "landscape-nest813.css",
+      "expected": "faeb50a8091b14fbb277decfb09fa244dca074898387636860f5c8dc3790cb1b",
+      "ok": true,
+      "status": 200,
+      "actual": "faeb50a8091b14fbb277decfb09fa244dca074898387636860f5c8dc3790cb1b",
+      "bytes": 24771
+    },
+    {
+      "path": "landscape-polish.css",
+      "expected": "9b406fa7a1980e33a21edd73ad8d56592c67508693362666e0b30518c5f3e59e",
+      "ok": true,
+      "status": 200,
+      "actual": "9b406fa7a1980e33a21edd73ad8d56592c67508693362666e0b30518c5f3e59e",
+      "bytes": 7342
+    },
+    {
+      "path": "landscape-polish.js",
+      "expected": "efa9cc307c7ad1b4a131cdceb804de573c9ad39e5136559bfb50d1827d8c24e9",
+      "ok": true,
+      "status": 200,
+      "actual": "efa9cc307c7ad1b4a131cdceb804de573c9ad39e5136559bfb50d1827d8c24e9",
+      "bytes": 7301
+    },
+    {
+      "path": "manifest.json",
+      "expected": "bc7705b79a17c445eba0347c99bcac0a1b9dbde75b77983647139ae70e133234",
+      "ok": true,
+      "status": 200,
+      "actual": "bc7705b79a17c445eba0347c99bcac0a1b9dbde75b77983647139ae70e133234",
+      "bytes": 1084
+    },
+    {
+      "path": "menu-approved805.js",
+      "expected": "c93529fd2b16a7a5987f658d1c2ba4175d8b00be356b7b201c83e8c1197d266f",
+      "ok": true,
+      "status": 200,
+      "actual": "c93529fd2b16a7a5987f658d1c2ba4175d8b00be356b7b201c83e8c1197d266f",
+      "bytes": 32664
+    },
+    {
+      "path": "nest-manual838.css",
+      "expected": "4ab418e0cc4ec63cc31cb8120bd730bcfa991131d6b893e5a9135943cf4a5d3a",
+      "ok": true,
+      "status": 200,
+      "actual": "4ab418e0cc4ec63cc31cb8120bd730bcfa991131d6b893e5a9135943cf4a5d3a",
+      "bytes": 8231
+    },
+    {
+      "path": "nest-manual838.js",
+      "expected": "f50ea2d3a22b4ab5ed15f9b5c349de2846a27ff700ac364e789eb2d6c82d4f47",
+      "ok": true,
+      "status": 200,
+      "actual": "f50ea2d3a22b4ab5ed15f9b5c349de2846a27ff700ac364e789eb2d6c82d4f47",
+      "bytes": 11252
+    },
+    {
+      "path": "nest-reveal838.css",
+      "expected": "1f5f05751bf9f2c8eda06b5b96068492fcd8154f2945995323f21faf16b9f60b",
+      "ok": true,
+      "status": 200,
+      "actual": "1f5f05751bf9f2c8eda06b5b96068492fcd8154f2945995323f21faf16b9f60b",
+      "bytes": 971
+    },
+    {
+      "path": "nest-reveal838.js",
+      "expected": "515cfc70bc501775c710eddf26a599caa6b450455d57fde8e8aca2f8c59ea3a8",
+      "ok": true,
+      "status": 200,
+      "actual": "515cfc70bc501775c710eddf26a599caa6b450455d57fde8e8aca2f8c59ea3a8",
+      "bytes": 3167
+    },
+    {
+      "path": "partner833.css",
+      "expected": "e8e8a43f0e7106c4b35c23dd97f21e1897d26677e8ea3106311951316babb559",
+      "ok": true,
+      "status": 200,
+      "actual": "e8e8a43f0e7106c4b35c23dd97f21e1897d26677e8ea3106311951316babb559",
+      "bytes": 1929
+    },
+    {
+      "path": "polish.js",
+      "expected": "89658e6c6a83aad769b5a26a2fe16801fb7ccefcda7b6b3093fb00297aeaa117",
+      "ok": true,
+      "status": 200,
+      "actual": "89658e6c6a83aad769b5a26a2fe16801fb7ccefcda7b6b3093fb00297aeaa117",
+      "bytes": 63381
+    },
+    {
+      "path": "progression.js",
+      "expected": "bc56f1f20f9b6e1a3f4f2895b1345af395dfa8ab10c3bf160305534be3d226ef",
+      "ok": true,
+      "status": 200,
+      "actual": "bc56f1f20f9b6e1a3f4f2895b1345af395dfa8ab10c3bf160305534be3d226ef",
+      "bytes": 34850
+    },
+    {
+      "path": "qrcode845.js",
+      "expected": "3ee72de9f69c668f9567363a9358df955960bae9000d9ebd66414670f88e8735",
+      "ok": true,
+      "status": 200,
+      "actual": "3ee72de9f69c668f9567363a9358df955960bae9000d9ebd66414670f88e8735",
+      "bytes": 33168
+    },
+    {
+      "path": "raven-audio761.js",
+      "expected": "c65329f223cfd98e8898e0604c3f0a31bae1be280d603debb2aad7c2b23fcfac",
+      "ok": true,
+      "status": 200,
+      "actual": "c65329f223cfd98e8898e0604c3f0a31bae1be280d603debb2aad7c2b23fcfac",
+      "bytes": 3514
+    },
+    {
+      "path": "raven-fight741.js",
+      "expected": "ab44d5e328b16bd3492793d991c61990f73a1773a111f2c26d0934cd5133f36b",
+      "ok": true,
+      "status": 200,
+      "actual": "ab44d5e328b16bd3492793d991c61990f73a1773a111f2c26d0934cd5133f36b",
+      "bytes": 11522
+    },
+    {
+      "path": "raven-landscape837.js",
+      "expected": "f46f909329b1cdf9a7bc87c71c0bd669a7f5db2babbb36537ba3948c98e5d598",
+      "ok": true,
+      "status": 200,
+      "actual": "f46f909329b1cdf9a7bc87c71c0bd669a7f5db2babbb36537ba3948c98e5d598",
+      "bytes": 5244
+    },
+    {
+      "path": "review-continuity/829-CHECKPOINT.txt",
+      "expected": "2924965334db7da94837a4c594fc48e8ceb79476dfb0788dafb57299483fd8e1",
+      "ok": true,
+      "status": 200,
+      "actual": "2924965334db7da94837a4c594fc48e8ceb79476dfb0788dafb57299483fd8e1",
+      "bytes": 2880
+    },
+    {
+      "path": "review-continuity/830-ASSET-NOTES.txt",
+      "expected": "e9d813c63baa4e41934e0d6796c9efcbc6591a7c1edc02dfa983bb122d89131c",
+      "ok": true,
+      "status": 200,
+      "actual": "e9d813c63baa4e41934e0d6796c9efcbc6591a7c1edc02dfa983bb122d89131c",
+      "bytes": 683
+    },
+    {
+      "path": "review-continuity/830-CHECKPOINT.txt",
+      "expected": "abbd20b2b003506ac6a360094fc0daf77d78851f7dbdd50c6789a27c11470cca",
+      "ok": true,
+      "status": 200,
+      "actual": "abbd20b2b003506ac6a360094fc0daf77d78851f7dbdd50c6789a27c11470cca",
+      "bytes": 3573
+    },
+    {
+      "path": "review-continuity/831-CHECKPOINT.txt",
+      "expected": "b0f1e47ee40ffc78f978f58b48b0194b0ba75bc4726828a3961e781d1663f20a",
+      "ok": true,
+      "status": 200,
+      "actual": "b0f1e47ee40ffc78f978f58b48b0194b0ba75bc4726828a3961e781d1663f20a",
+      "bytes": 3471
+    },
+    {
+      "path": "review-continuity/832-ASSET-CONSTRUCTION.txt",
+      "expected": "6edd46a8436200da6dd8a85574102eca71d5ae78e87372de3a89212d0489de4e",
+      "ok": true,
+      "status": 200,
+      "actual": "6edd46a8436200da6dd8a85574102eca71d5ae78e87372de3a89212d0489de4e",
+      "bytes": 2282
+    },
+    {
+      "path": "review-continuity/832-CHECKPOINT.txt",
+      "expected": "d2270c1c0784fc92253d22f8fda7dfd3069e24df425c05c2da70fea22952901b",
+      "ok": true,
+      "status": 200,
+      "actual": "d2270c1c0784fc92253d22f8fda7dfd3069e24df425c05c2da70fea22952901b",
+      "bytes": 4402
+    },
+    {
+      "path": "review-continuity/833-CHECKPOINT.txt",
+      "expected": "c2c4430aa6ed47425a2c64a10a90905b1349a06a23b8d5af08db282759e66524",
+      "ok": true,
+      "status": 200,
+      "actual": "c2c4430aa6ed47425a2c64a10a90905b1349a06a23b8d5af08db282759e66524",
+      "bytes": 2665
+    },
+    {
+      "path": "review-continuity/834-ASSET-NOTES.txt",
+      "expected": "efb584c99fc740d8ec768de198d4c7bf369fab08f8f587cf1940d501d19f8167",
+      "ok": true,
+      "status": 200,
+      "actual": "efb584c99fc740d8ec768de198d4c7bf369fab08f8f587cf1940d501d19f8167",
+      "bytes": 1596
+    },
+    {
+      "path": "review-continuity/834-CHECKPOINT.txt",
+      "expected": "7b59f43640eb8ddf5b982535f434d0c0fc705b9276f4425fca45354ec714e2e6",
+      "ok": true,
+      "status": 200,
+      "actual": "7b59f43640eb8ddf5b982535f434d0c0fc705b9276f4425fca45354ec714e2e6",
+      "bytes": 2072
+    },
+    {
+      "path": "review-continuity/835-ASSET-NOTES.txt",
+      "expected": "815376b310352a069fb5672caf16ef16fbcc73f6dd451726b7daac0f00a27e0d",
+      "ok": true,
+      "status": 200,
+      "actual": "815376b310352a069fb5672caf16ef16fbcc73f6dd451726b7daac0f00a27e0d",
+      "bytes": 1767
+    },
+    {
+      "path": "review-continuity/835-CHECKPOINT.txt",
+      "expected": "94a3c8a82d0934a3284b7fbfc9cfb1fbc0049524c40360777630817e0ebb1e7a",
+      "ok": true,
+      "status": 200,
+      "actual": "94a3c8a82d0934a3284b7fbfc9cfb1fbc0049524c40360777630817e0ebb1e7a",
+      "bytes": 3173
+    },
+    {
+      "path": "review-continuity/836-CHECKPOINT.txt",
+      "expected": "1b33d07757136affdebf854b6723a80a6086023170215c2001ebc8f1ae6ee87f",
+      "ok": true,
+      "status": 200,
+      "actual": "1b33d07757136affdebf854b6723a80a6086023170215c2001ebc8f1ae6ee87f",
+      "bytes": 4509
+    },
+    {
+      "path": "review-continuity/837-CHECKPOINT.txt",
+      "expected": "0ada22df37616acf95c93b1bf05f74f4e0c2172720c1d498f8a4451e394cde18",
+      "ok": true,
+      "status": 200,
+      "actual": "0ada22df37616acf95c93b1bf05f74f4e0c2172720c1d498f8a4451e394cde18",
+      "bytes": 3474
+    },
+    {
+      "path": "review-continuity/838-CHECKPOINT.txt",
+      "expected": "c59c2870ef11c98b68907fe2f8a3ad715cd1d39ee16bee82aa6fed5c5c9b0ef9",
+      "ok": true,
+      "status": 200,
+      "actual": "c59c2870ef11c98b68907fe2f8a3ad715cd1d39ee16bee82aa6fed5c5c9b0ef9",
+      "bytes": 5293
+    },
+    {
+      "path": "review-continuity/839-CHECKPOINT.txt",
+      "expected": "1d71fbc3047b1657026db2549b447d13b1687fac3ceda969de0792092cf71641",
+      "ok": true,
+      "status": 200,
+      "actual": "1d71fbc3047b1657026db2549b447d13b1687fac3ceda969de0792092cf71641",
+      "bytes": 4278
+    },
+    {
+      "path": "review-continuity/840-CHECKPOINT.txt",
+      "expected": "c3097fdd2adf7678a0ea760eb914899239d6eb09fc8188049d7c7a69c706d44b",
+      "ok": true,
+      "status": 200,
+      "actual": "c3097fdd2adf7678a0ea760eb914899239d6eb09fc8188049d7c7a69c706d44b",
+      "bytes": 4392
+    },
+    {
+      "path": "review-continuity/841-CHECKPOINT.txt",
+      "expected": "37dc16afd2eb7d78a6abc9433e4b366c51476b2a520f344f592f05ebd37375cc",
+      "ok": true,
+      "status": 200,
+      "actual": "37dc16afd2eb7d78a6abc9433e4b366c51476b2a520f344f592f05ebd37375cc",
+      "bytes": 5160
+    },
+    {
+      "path": "review-continuity/842-CHECKPOINT.txt",
+      "expected": "c07db1a59f5959f35104fe50abde714eb3032e7b6490d0367ba4a4f8566dd2ad",
+      "ok": true,
+      "status": 200,
+      "actual": "c07db1a59f5959f35104fe50abde714eb3032e7b6490d0367ba4a4f8566dd2ad",
+      "bytes": 4796
+    },
+    {
+      "path": "review-continuity/843-CHECKPOINT.txt",
+      "expected": "3a9696e1b4d50659b689ca5c083e8b7b66f0874f1703b04a85304762a0f9159d",
+      "ok": true,
+      "status": 200,
+      "actual": "3a9696e1b4d50659b689ca5c083e8b7b66f0874f1703b04a85304762a0f9159d",
+      "bytes": 2508
+    },
+    {
+      "path": "review-continuity/844-CHECKPOINT.txt",
+      "expected": "23a62bd022186117205713b02a2698aa06de5c5dfbc2440690f41bca9c0a78a5",
+      "ok": true,
+      "status": 200,
+      "actual": "23a62bd022186117205713b02a2698aa06de5c5dfbc2440690f41bca9c0a78a5",
+      "bytes": 4463
+    },
+    {
+      "path": "review-continuity/845-CHECKPOINT.txt",
+      "expected": "879758bc9e03783ba69cae1f5cc710f23ca4a1ce9ecd7805178fac4b53217a35",
+      "ok": true,
+      "status": 200,
+      "actual": "879758bc9e03783ba69cae1f5cc710f23ca4a1ce9ecd7805178fac4b53217a35",
+      "bytes": 2108
+    },
+    {
+      "path": "review-continuity/CHAT_CONTINUITY_RULE.md",
+      "expected": "22fe23e76e33d934657f19fd8a54a83cabe7ffa98b73e158b02f5ab5ea0ed514",
+      "ok": true,
+      "status": 200,
+      "actual": "22fe23e76e33d934657f19fd8a54a83cabe7ffa98b73e158b02f5ab5ea0ed514",
+      "bytes": 1869
+    },
+    {
+      "path": "review-continuity/COMPLETE_BANK_READING_RULE.md",
+      "expected": "f664507c5e5daf666cf8ab49e9838340c6c41162a342b76851feadbd430453cc",
+      "ok": true,
+      "status": 200,
+      "actual": "f664507c5e5daf666cf8ab49e9838340c6c41162a342b76851feadbd430453cc",
+      "bytes": 1192
+    },
+    {
+      "path": "review-continuity/OVAL-ART-PROMPT.txt",
+      "expected": "568f908a2bfc2d69bf286b50a1acc093869ae1d4fc6dfbd6cb0973e8fb3126a3",
+      "ok": true,
+      "status": 200,
+      "actual": "568f908a2bfc2d69bf286b50a1acc093869ae1d4fc6dfbd6cb0973e8fb3126a3",
+      "bytes": 755
+    },
+    {
+      "path": "review-continuity/TASK-CHECKPOINT.txt",
+      "expected": "1b33d07757136affdebf854b6723a80a6086023170215c2001ebc8f1ae6ee87f",
+      "ok": true,
+      "status": 200,
+      "actual": "1b33d07757136affdebf854b6723a80a6086023170215c2001ebc8f1ae6ee87f",
+      "bytes": 4509
+    },
+    {
+      "path": "review835.css",
+      "expected": "c60b72e81cf1faecad0d8c2bef0456e88dadf37c33be35d3c82142a8d271a58f",
+      "ok": true,
+      "status": 200,
+      "actual": "c60b72e81cf1faecad0d8c2bef0456e88dadf37c33be35d3c82142a8d271a58f",
+      "bytes": 9031
+    },
+    {
+      "path": "review835.js",
+      "expected": "f3328ab9262c9d39767caf1c8f259ed8fff69167076ab6dc344ea2bc5ded0372",
+      "ok": true,
+      "status": 200,
+      "actual": "f3328ab9262c9d39767caf1c8f259ed8fff69167076ab6dc344ea2bc5ded0372",
+      "bytes": 2062
+    },
+    {
+      "path": "review836.css",
+      "expected": "627a4aaea9621f169686032d131d028155cc32e58a51bda7ee4ad5e20f14116f",
+      "ok": true,
+      "status": 200,
+      "actual": "627a4aaea9621f169686032d131d028155cc32e58a51bda7ee4ad5e20f14116f",
+      "bytes": 15489
+    },
+    {
+      "path": "review836.js",
+      "expected": "7ae5b8f63c674279dada7ce7c9906bf1706be8b23ff33faefe7da80943a1170e",
+      "ok": true,
+      "status": 200,
+      "actual": "7ae5b8f63c674279dada7ce7c9906bf1706be8b23ff33faefe7da80943a1170e",
+      "bytes": 702
+    },
+    {
+      "path": "review839.css",
+      "expected": "a4ad257f81e829ab091b3cb36a750539f5764fafea37eb7310d51b76e6b7696e",
+      "ok": true,
+      "status": 200,
+      "actual": "a4ad257f81e829ab091b3cb36a750539f5764fafea37eb7310d51b76e6b7696e",
+      "bytes": 9373
+    },
+    {
+      "path": "review839.js",
+      "expected": "67ead4901677ec496d47002268116bd3bb1c44c57a478ff269818157e772ddc5",
+      "ok": true,
+      "status": 200,
+      "actual": "67ead4901677ec496d47002268116bd3bb1c44c57a478ff269818157e772ddc5",
+      "bytes": 1476
+    },
+    {
+      "path": "room-approved805.js",
+      "expected": "73512bd023fc6b56edb484c78f88f69e14bf15f7dd6c331263fc6b5eb3fdce15",
+      "ok": true,
+      "status": 200,
+      "actual": "73512bd023fc6b56edb484c78f88f69e14bf15f7dd6c331263fc6b5eb3fdce15",
+      "bytes": 3427
+    },
+    {
+      "path": "room830.css",
+      "expected": "ae9fb0e6680b89f6010b83e1a79dbb15b4a32527d905b3d454906744cdb70c19",
+      "ok": true,
+      "status": 200,
+      "actual": "ae9fb0e6680b89f6010b83e1a79dbb15b4a32527d905b3d454906744cdb70c19",
+      "bytes": 13675
+    },
+    {
+      "path": "room830.js",
+      "expected": "8926a57873b7b5dc9c5d2458c25875b46bff756aeb39e81db5a6ff92db9be398",
+      "ok": true,
+      "status": 200,
+      "actual": "8926a57873b7b5dc9c5d2458c25875b46bff756aeb39e81db5a6ff92db9be398",
+      "bytes": 4053
+    },
+    {
+      "path": "room831.css",
+      "expected": "9f8900be0011b6dc61269f1deacacebd34b96df90957e227dbc879af10fa2ce0",
+      "ok": true,
+      "status": 200,
+      "actual": "9f8900be0011b6dc61269f1deacacebd34b96df90957e227dbc879af10fa2ce0",
+      "bytes": 4826
+    },
+    {
+      "path": "room831.js",
+      "expected": "f7f443c2d3e5c429c7818c08211ffcfcd328b35e5351a34a0544c69740bb9ed7",
+      "ok": true,
+      "status": 200,
+      "actual": "f7f443c2d3e5c429c7818c08211ffcfcd328b35e5351a34a0544c69740bb9ed7",
+      "bytes": 3156
+    },
+    {
+      "path": "room832.css",
+      "expected": "8c7f904d4d7b29eb2a404bb3c9e471a1217b1c84c0fd005a898f447105934f2c",
+      "ok": true,
+      "status": 200,
+      "actual": "8c7f904d4d7b29eb2a404bb3c9e471a1217b1c84c0fd005a898f447105934f2c",
+      "bytes": 4557
+    },
+    {
+      "path": "room832.js",
+      "expected": "c166109026f29fc98946ceb57b79abaa682f67f764c71123df5afd78188d478f",
+      "ok": true,
+      "status": 200,
+      "actual": "c166109026f29fc98946ceb57b79abaa682f67f764c71123df5afd78188d478f",
+      "bytes": 1410
+    },
+    {
+      "path": "rules.js",
+      "expected": "880e17e2290f307a5029681f293f1bdd6db034cf93a80d0bf2d1f2ba5da74286",
+      "ok": true,
+      "status": 200,
+      "actual": "880e17e2290f307a5029681f293f1bdd6db034cf93a80d0bf2d1f2ba5da74286",
+      "bytes": 9409
+    },
+    {
+      "path": "shuffle-asset.js",
+      "expected": "f7ef4e193940d2679d76f93992566c78cd15c1ec4750fcae94f5c5d4040cbef3",
+      "ok": true,
+      "status": 200,
+      "actual": "f7ef4e193940d2679d76f93992566c78cd15c1ec4750fcae94f5c5d4040cbef3",
+      "bytes": 2962
+    },
+    {
+      "path": "signature-shuffle.css",
+      "expected": "f0f1dd5dfd5f11c9791576aab921629501eea59652e8524dae499fe0fee9e40b",
+      "ok": true,
+      "status": 200,
+      "actual": "f0f1dd5dfd5f11c9791576aab921629501eea59652e8524dae499fe0fee9e40b",
+      "bytes": 477
+    },
+    {
+      "path": "signature-shuffle.js",
+      "expected": "378a02685107cb73f1862ff9bd1373899f8c670f0132a3b741550567fbc7d977",
+      "ok": true,
+      "status": 200,
+      "actual": "378a02685107cb73f1862ff9bd1373899f8c670f0132a3b741550567fbc7d977",
+      "bytes": 8273
+    },
+    {
+      "path": "style057.css",
+      "expected": "741acd2139dc546fabe8d30f1a9c499e9f99c7ae46c37b695cc801e3a8eee169",
+      "ok": true,
+      "status": 200,
+      "actual": "741acd2139dc546fabe8d30f1a9c499e9f99c7ae46c37b695cc801e3a8eee169",
+      "bytes": 2238297
+    },
+    {
+      "path": "sw060.js",
+      "expected": "cecddf34def0467acbe6ee050fd8fc7c2a922321e192e3ff07e36f640a0ae93c",
+      "ok": true,
+      "status": 200,
+      "actual": "cecddf34def0467acbe6ee050fd8fc7c2a922321e192e3ff07e36f640a0ae93c",
+      "bytes": 68521
+    },
+    {
+      "path": "trump714.js",
+      "expected": "8c1eb0b1bc6505eeeff8c40cb8ab9d95adff1b8592e84c0aa4e13b9e44f1cbe1",
+      "ok": true,
+      "status": 200,
+      "actual": "8c1eb0b1bc6505eeeff8c40cb8ab9d95adff1b8592e84c0aa4e13b9e44f1cbe1",
+      "bytes": 22239
+    },
+    {
+      "path": "ui-audit841.css",
+      "expected": "2ab43cac448bd991d47d982464b5f294e0e8f436b2864141ada4e32a32d6dcd4",
+      "ok": true,
+      "status": 200,
+      "actual": "2ab43cac448bd991d47d982464b5f294e0e8f436b2864141ada4e32a32d6dcd4",
+      "bytes": 3185
+    },
+    {
+      "path": "ui-audit841.js",
+      "expected": "0aff32a50de4a6e381b059d629ae29e976e0687f6a3c19afd8d5e0fb4d6a3292",
+      "ok": true,
+      "status": 200,
+      "actual": "0aff32a50de4a6e381b059d629ae29e976e0687f6a3c19afd8d5e0fb4d6a3292",
+      "bytes": 2149
+    },
+    {
+      "path": "x1/bidding.js",
+      "expected": "c2b56d03a1505de5e2f508b05d6c2872ee0bee46ac77712b80ec11fe1adffb0b",
+      "ok": true,
+      "status": 200,
+      "actual": "c2b56d03a1505de5e2f508b05d6c2872ee0bee46ac77712b80ec11fe1adffb0b",
+      "bytes": 10377
+    },
+    {
+      "path": "x1/core.js",
+      "expected": "54295f5da5c3011050c739b4528dc798cb4ba06d09d76ac9305c78d9430edd20",
+      "ok": true,
+      "status": 200,
+      "actual": "54295f5da5c3011050c739b4528dc798cb4ba06d09d76ac9305c78d9430edd20",
+      "bytes": 10690
+    },
+    {
+      "path": "x1/integration.js",
+      "expected": "6d3ba9427f42ee4b2312cfea51686597010307286ac8c6761766d2d3a609f473",
+      "ok": true,
+      "status": 200,
+      "actual": "6d3ba9427f42ee4b2312cfea51686597010307286ac8c6761766d2d3a609f473",
+      "bytes": 17192
+    },
+    {
+      "path": "x1/worker.js",
+      "expected": "725934cfdb1ce9c19c4b29cfae148878923b9555d760ccb3acef84af242806ae",
+      "ok": true,
+      "status": 200,
+      "actual": "725934cfdb1ce9c19c4b29cfae148878923b9555d760ccb3acef84af242806ae",
+      "bytes": 837
+    }
+  ],
+  "complete": true,
+  "expectedCount": 135
+}

@@ -1,0 +1,62 @@
+GRIFFIN HOUSE OF ROOKS — CONTINUE BUILD 845 LIVE
+
+Do not start over. Read current Test/main brain/current.json and brain/releases/845/MASTER_BRAIN_845_LIVE.md, the release LIVE_RECEIPT.json/runtime-sha256.json and full original H–AE authorities. Build845 is now deployed to BOTH sites; the earlier recovery handoff’s deployment hold is historical and superseded for this exact release. No blanket approval for future changes/deployments is implied.
+
+Use pinned source26cf989cedfc6e7bde269f1b22690afeaa558a45/builds/845 and original845.zip SHA2566dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f. Do not import old 805/810 or merge the old recovery branch root. Live URLs are https://jeromeleegriffin.github.io/Test/ and https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/. Refresh current heads before mutations. Rollbacks/pre-845 remain preserved.
+
+All1642 runtime Git hashes, changed/essential served files, Pages success and fresh live-browser auction/rotation checks were verified on both sites. Native local full-hand/rotation/offline tests also passed. Physical Android branding/fullscreen/audio and real WAN reconnect remain unverified. Preserve all artwork, rules/AI, careers/preferences, original ZIP player and no-cache-clearing rule. No art generation without Generate.
+
+Read full recovery repair history from e7cfed3915c8759e7084de8222eb89fe73f5972b/brain/recovery/845/Griffin_Build_845_Comprehensive_Handoff.txt and original README829–845. That history contains explicit supersessions; do not reapply earlier no-scroll photo-picker or menu-disabled-during-bid instructions over839/840.
+
+Every successor MUST reproduce both complete permanent rules below verbatim in every future handoff/START HERE/startup prompt and pass the same obligation to every following assistant.
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+
