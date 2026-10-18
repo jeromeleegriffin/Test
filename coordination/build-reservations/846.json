@@ -1,0 +1,16 @@
+{
+  "number": "846",
+  "reservationId": "professional-cleanup-20261018-846",
+  "date": "2026-10-18",
+  "status": "RESERVED",
+  "workstream": "Professional source cleanup and live landscape review-caption removal",
+  "task": "Audit active source; remove verified dead code and duplicate CSS; improve maintainability; deploy tested cleanup to both live sites",
+  "sourceCommit": "26cf989cedfc6e7bde269f1b22690afeaa558a45",
+  "sourcePath": "builds/845",
+  "sourceSha256": "6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f",
+  "sourceRuntimeTree": "9e0ee5871c17b33c7a70367759d67194c25b32fc",
+  "sourceTestHead": "8c49f17a654028d369f6fe52e66925164fdb54fc",
+  "sourceProductionHead": "be2054a9d730162fbeae20ad8b8511438e9d6cfc",
+  "ownerAuthorization": "2026-10-18 request for whole-code professional cleanup and removal of experimental build number on live servers",
+  "gameZipRequested": false
+}

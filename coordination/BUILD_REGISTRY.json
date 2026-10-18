@@ -5,8 +5,8 @@
   "updated": "2026-10-18",
   "approvedWorkingBuild": "845",
   "historicalNumbersThrough": 750,
-  "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H\u2013U.",
-  "nextNumberHint": 846,
+  "historicalPolicy": "Prior numbers are historical and unavailable; detailed older records remain in H–U.",
+  "nextNumberHint": 847,
   "nextNumberHintIsNotReservation": true,
   "records": [
     {
@@ -180,7 +180,7 @@
         "archiveCRC": "PASS",
         "fileHashManifest": "PASS"
       },
-      "testLimits": "Chromium153 mobile/touch emulation; owl production timer callbacks invoked without 15\u201330-minute endurance wait. No physical Android/audio hardware, owner-installed cache upgrade, live PeerJS multiplayer or full scored match. Subjective shuffle realism and faint audibility await owner review.",
+      "testLimits": "Chromium153 mobile/touch emulation; owl production timer callbacks invoked without 15–30-minute endurance wait. No physical Android/audio hardware, owner-installed cache upgrade, live PeerJS multiplayer or full scored match. Subjective shuffle realism and faint audibility await owner review.",
       "deploymentStatus": "NOT_DEPLOYED",
       "ownerShuffleCorrection": {
         "date": "2026-10-11",
@@ -405,7 +405,7 @@
       "ownerAudioCorrection": {
         "date": "2026-10-11",
         "ownerQuote": "Now that video shows part of the sound cutting out.",
-        "scope": "763 audio split rejected: introduced622ms artificial silence at2.111\u20132.733s. Replace with764 uninterrupted native excerpt; retain correct first onset and visuals.",
+        "scope": "763 audio split rejected: introduced622ms artificial silence at2.111–2.733s. Replace with764 uninterrupted native excerpt; retain correct first onset and visuals.",
         "replacementCandidate": "764",
         "wholeGameApproval": false
       }
@@ -431,13 +431,13 @@
       "fileId": "file_000000008d0481f69c8ab21e9666a63b",
       "checkpointArtifactPath": "HANDOFF/BUILD_764/MASTER_BRAIN_READY_UPDATE.md",
       "checkpointStatus": "Complete Brain-ready checkpoint and both permanent rules; BrainW unchanged",
-      "scope": "Remove763 introduced622ms mid-recording gap. One native stereo excerpt3.014\u20135.10 from corrected release onset1.825; subsequent original cadence continuous.762visuals/gameplay/approved Raven preview/cabin preserved.",
+      "scope": "Remove763 introduced622ms mid-recording gap. One native stereo excerpt3.014–5.10 from corrected release onset1.825; subsequent original cadence continuous.762visuals/gameplay/approved Raven preview/cabin preserved.",
       "tests": {
         "productionSpeedsCueCount2NativeRate": "PASS",
         "production46FlightsIdentitySingleCompletion": "PASS",
         "firstReleaseOfflineOnsetMs": 2.124,
         "continuousNativeInteriorSamples": 91287,
-        "originalSampleMaxQuantizationError": 3.0517578125e-05,
+        "originalSampleMaxQuantizationError": 0.000030517578125,
         "formerGapPreviewRMS": 0.0223324985,
         "formerGapActualProductionOfflineRMS": 0.0222201884,
         "encodedMP4FormerGapRMS": 0.0216214238,
@@ -478,7 +478,7 @@
       "previewLibraryFileId": "libfile_c876134f0db881919bdcfcc406350fb1",
       "checkpointArtifactPath": "HANDOFF/BUILD_765/MASTER_BRAIN_READY_UPDATE.md",
       "checkpointStatus": "Complete Brain-ready checkpoint with both permanent rules; BrainW unchanged",
-      "scope": "Separate COMPLETE native riffle3.014\u20133.80 and bridge3.80\u20135.10 at verified quiet boundary; align actual rendered frames73/127; validated bounded output-clock mapping. Preserve764visuals/normaltempo/pitch/all originalassets/gameplay.",
+      "scope": "Separate COMPLETE native riffle3.014–3.80 and bridge3.80–5.10 at verified quiet boundary; align actual rendered frames73/127; validated bounded output-clock mapping. Preserve764visuals/normaltempo/pitch/all originalassets/gameplay.",
       "tests": {
         "firstRiffleOfflineErrorMs": 2.125,
         "bridgeOfflineErrorMs": 3.599,
@@ -487,7 +487,7 @@
         "firstRiffleEncodedVideoErrorMs": 1.791,
         "bridgeEncodedVideoErrorMs": 3.265,
         "quietBoundary1x3xFourMsPeak": 0,
-        "fullSourceRangeRetainedOnce": "3.014\u20135.10",
+        "fullSourceRangeRetainedOnce": "3.014–5.10",
         "nativeRatesAndSpeedModes": "PASS",
         "production46FlightsIdentitySingleCompletion": "PASS",
         "muteCardVolumeZero": "PASS",
@@ -2370,6 +2370,22 @@
       "testReleaseCommit": "95dbe0929ee05899e5f02f358f3a83f4ffab84e3",
       "productionReleaseCommit": "be2054a9d730162fbeae20ad8b8511438e9d6cfc",
       "libraryFileId": "libfile_14b9911e71788191993b618bf2336fcb"
+    },
+    {
+      "number": "846",
+      "reservationId": "professional-cleanup-20261018-846",
+      "date": "2026-10-18",
+      "status": "RESERVED",
+      "workstream": "Professional source cleanup and live landscape review-caption removal",
+      "task": "Audit active source; remove verified dead code and duplicate CSS; improve maintainability; deploy tested cleanup to both live sites",
+      "sourceCommit": "26cf989cedfc6e7bde269f1b22690afeaa558a45",
+      "sourcePath": "builds/845",
+      "sourceSha256": "6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f",
+      "sourceRuntimeTree": "9e0ee5871c17b33c7a70367759d67194c25b32fc",
+      "sourceTestHead": "8c49f17a654028d369f6fe52e66925164fdb54fc",
+      "sourceProductionHead": "be2054a9d730162fbeae20ad8b8511438e9d6cfc",
+      "ownerAuthorization": "2026-10-18 request for whole-code professional cleanup and removal of experimental build number on live servers",
+      "gameZipRequested": false
     }
   ],
   "testSiteBuild": "845",
@@ -2489,13 +2505,13 @@
       "status": "OWNER_APPROVED_LOCKED",
       "date": "2026-10-16",
       "record": "../coordination/landscape-daniel-017-approved-20261016.md",
-      "scope": "Daniel isolated 0\u201316 review; full-table integration pending",
+      "scope": "Daniel isolated 0–16 review; full-table integration pending",
       "runtime": "017.zip",
       "sha256": "c165dc8c94e0c8e78be931dad438fbdd7dc590ec79bf27a9e92e3be8d99019e7",
       "libraryFileId": "libfile_800a96f61fe081919f8abeada283c649",
       "sourceLibraryFileId": "libfile_7d48cb5a3e288191af77808b9d11be45",
       "deployed": false,
-      "method": "Fixed 68-degree fan for 7\u201316; overlap increases inside fixed finished grip; original card aspect; preserve 0\u20136",
+      "method": "Fixed 68-degree fan for 7–16; overlap increases inside fixed finished grip; original card aspect; preserve 0–6",
       "number": null,
       "legacyLandscapeLabel": "017.zip",
       "registration": "Retrospective identity record; historical low-number label does not reserve or reopen a global number"
@@ -2573,7 +2589,7 @@
   "latestDeliveredGameStatus": "OWNER_AUTHORIZED_DEPLOYED_BOTH",
   "latestDeliveredGameSha256": "6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f",
   "latestVisualReviewBuild": "804",
-  "lastReconciliation": "798\u2013805 retrospectively registered from retained archive hashes; no earlier remote reservation is claimed",
+  "lastReconciliation": "798–805 retrospectively registered from retained archive hashes; no earlier remote reservation is claimed",
   "testSitePreviousBuild": "805-ownerfix2",
   "testSiteReleaseId": "rita-jerome-approved-20261015",
   "testSiteRuntimeCommit": "95dbe0929ee05899e5f02f358f3a83f4ffab84e3",
@@ -2642,7 +2658,7 @@
     "knownSecondaryLabelIssue": {
       "path": "angle-c-characters.js",
       "element": "angleCNotice",
-      "label": "840 \u00b7 Stable discard",
+      "label": "840 · Stable discard",
       "activeRuntime": "845-share-shuffle",
       "recordedNotPatched": true
     },
