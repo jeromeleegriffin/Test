@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "name": "Live current pointer opens AF and validates as CURRENT",
+      "ok": true
+    },
+    {
+      "name": "Live history renders AF plus preserved earlier versions",
+      "ok": true
+    },
+    {
+      "name": "Live pointer and one complete handoff contain current and historical evidence",
+      "ok": true,
+      "detail": {
+        "version": "AF",
+        "build": "846-source-cleanup",
+        "handoffLength": 138084,
+        "hasCurrent": true,
+        "hasHistorical": true,
+        "continuity": true
+      }
+    }
+  ],
+  "errors": []
+}

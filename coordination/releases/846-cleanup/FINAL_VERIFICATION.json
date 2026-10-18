@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "build": "846-source-cleanup",
+  "masterBrain": "AF",
+  "runtimeVerifiedBothSites": true,
+  "all1650SourceBlobsVerifiedPerSite": true,
+  "httpHashesMatchedPerSite": 123,
+  "gameBrowserChecksPassedPerSite": 5,
+  "brainBrowserChecksPassed": 3,
+  "localChecksAndScenarios": 205,
+  "all142TestBlobUploadsVerified": true,
+  "gameZipCreated": false,
+  "primaryBrainSha256": "7ee3c5022dce949b00fb1f97b08f8e98948f4b668370bfc1e12e1b71ed1f84af"
+}

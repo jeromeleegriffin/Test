@@ -71,5 +71,10 @@
   "localBrainNavigationChecksPassed": 3,
   "transientProductionProbe": "First live browser probe received one HTTP 503 for review836.css while concurrent HTTP checks ran. A fresh probe after the checksum pass completed all five checks with zero failed assets; initial probe is preserved.",
   "historicalSourceReceipt": "coordination/releases/846-cleanup/CANDIDATE_RECEIPT.json",
-  "historical845ArchiveSha256": "6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f"
+  "historical845ArchiveSha256": "6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f",
+  "brainDocumentCommit": "3c81e95254d37283de091f47c759a8fc0c1d4197",
+  "brainDocumentationPagesRun": 39165296068,
+  "brainDocumentationPagesConclusion": "success",
+  "liveBrainNavigationChecksPassed": 3,
+  "complete": true
 }
