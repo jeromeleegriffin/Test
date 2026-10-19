@@ -1,0 +1,39 @@
+{
+  "sourceCommit": "b8a360d3ab15eed4f69fd44617d54d3e27aae30f",
+  "runtime": "846-join-review-20261019",
+  "browser": "Cloud Chromium",
+  "checks": {
+    "startupArtworkFinished": true,
+    "retainedSyntheticCareerLevel": 4,
+    "joinCodeFormAndBack": true,
+    "realPeerHostRegistered": true,
+    "disposableTable": "KG2X",
+    "initialSeated": 1,
+    "fillSeatsSeated": 4,
+    "startButtonEnabled": true,
+    "leftTableAndReturnedToLanding": true
+  },
+  "source": {
+    "staticChecks": "65 scripts, 4555 local bindings, 1454 unique precache paths",
+    "controlledJoinScenarios": 16,
+    "changedGameTopLevelStatements": [
+      "APP_VERSION",
+      "joinRoom",
+      "setupConn",
+      "handleMessage"
+    ],
+    "allOtherGameStatementsByteIdentical": true,
+    "protectedRuntimeFilesByteIdentical": 1375
+  },
+  "limits": [
+    "No post-repair WAN guest connection certified",
+    "No physical Android verification",
+    "No new full match or installed-service-worker upgrade"
+  ],
+  "liveHeadsUnchanged": {
+    "Test": "854b1a452d074f863ceb883545e6dbfa4ce726a9",
+    "production": "01e809d5079510fad9fe61a6c73633e94b637460"
+  },
+  "noDeployment": true,
+  "noNewZip": true
+}
