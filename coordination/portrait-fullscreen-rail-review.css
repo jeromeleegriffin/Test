@@ -1,17 +1,17 @@
-/* Isolated portrait review: no change until ?railReview=1. No artwork resizing. */
-@media (orientation:portrait) {
+/* Isolated phone review, inert unless ?railReview=1 AND installed PWA display mode. */
+@media (orientation: portrait) {
   body.hor-rail-review .game-room > .hand-area {
-    /* Translate the approved HOLDER049 and all its card layers together. */
+    /* Move whole approved HOLDER049, no resizing or rearranging real cards. */
     translate: 0 var(--hor-rail-review-dy, 0px) !important;
   }
-  /* Keep the functional Bid Dock beside the hand while checking the art relationship.
-     Existing portrait bid offset is preserved, with the same dock displacement added. */
-  body.hor-rail-review #decisionConsole.approved-bid-portrait.decision-mode-bid:not(.hidden) {
-    translate: 0 calc(clamp(22px, 7.5vw, 32px) + var(--hor-rail-review-dy, 0px)) !important;
-  }
-  /* Optional lower masking, deliberately OFF pending visual/device approval.
-     Do not crop source assets or alter the existing TABLE-003 art. */
-  body.hor-rail-review.hor-rail-review-mask #hor-room-bg::after {
-    clip-path: inset(0 0 var(--hor-rail-review-crop, 0px) 0);
+}
+/* Match the existing approved bid layer's importance. A later rule in the same layer
+   avoids an unlayered !important being unexpectedly outranked by a layered one. */
+@layer approvedPortraitBidAsset {
+  @media (orientation: portrait) {
+    body.hor-rail-review.in-game #decisionConsole.approved-bid-portrait.decision-mode-bid:not(.hidden) {
+      translate: 0 calc(clamp(22px, 7.5vw, 32px) + var(--hor-rail-review-dy, 0px)) !important;
+    }
   }
 }
+/* No art mask, clock, utility panel, or source asset alterations until visual acceptance. */
