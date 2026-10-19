@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "baseZipSha256": "2bfb2dac5c06604ef23871c9c44d7a98160e9f44b8cd86feb8487e08ef571101",
+  "sourceCommit": "3c8599441806bfffab10d9a6ab054c2b15002617",
+  "evidenceHead": "c6e3f24fe5183e06fa00e021cd2d6459a13ce82f",
+  "runtime": "846-picker-review-20261019",
+  "changedRuntimeFiles": [
+    "game060.js",
+    "index.html",
+    "hor-version.js",
+    "sw060.js",
+    "menu-approved805.js",
+    "ui-audit841.css"
+  ],
+  "protectedFilesByteIdentical": 1377,
+  "rootIndex": true,
+  "precacheReferencesChecked": 1453,
+  "missingPrecachePaths": [],
+  "joinRegressionScenarios": 16,
+  "pickerViewports": 5,
+  "pickerPagesVerified": 58,
+  "liveDeployment": false,
+  "browserScreenshotsIncluded": false,
+  "limits": "Controlled join functions and source/browser picker verification; not physical Android, WAN multiplayer, full new match or installed cache-upgrade certification.",
+  "filename": "Griffin_House_All_Completed_Fixes_Review_20261019.zip",
+  "bytes": 164512152,
+  "sha256": "2c79ce5526bb3b3a67976273f3d39172c28c474611a12bdc785ddf60f1f7fb29",
+  "entries": 1521,
+  "manifestHashesVerified": 1520,
+  "crc": "PASS",
+  "libraryFileId": "libfile_77d5c280cb148191825aed1f1be3f9f8",
+  "fileId": "file_00000000a53881f5820441c6c704304d",
+  "exactZipLoaderBootPassed": true,
+  "loaderObservedSha256": "2c79ce5526bb3b3a67976273f3d39172c28c474611a12bdc785ddf60f1f7fb29",
+  "sourceUnchangedAfterPackaging": true,
+  "pendingUnchanged": [
+    "trump sorting",
+    "guest laydown/winner-check logic"
+  ]
+}
