@@ -19,8 +19,8 @@ Review-only implementation:
 - Calculates background cover from the existing 875 x 1797 TABLE-003 source and reads #hor-room-bg dimensions.
 - Moves the complete hand-area as one *paint-only* translation, retaining its flex-space and the current card size.
 - Moves the currently visible portrait bidding dock by the same review delta.
-- Source-image holderTop=1330 is a PHOTO ESTIMATE, not an approved actual-pixel measurement.
-- No clock/score UI and no clipping/masking are enabled yet. Do not promote this as a finished repair.
+- Source-image holderTop=1430 is a PHOTO ESTIMATE, not an approved actual-pixel measurement.
+- The review calculation only activates inside portrait installed display modes (fullscreen/standalone/minimal-ui); ordinary browser Chrome layout stays untouched, even if the query switch is present. The bid offset is in the existing approved portrait bid cascade layer. No clock/score UI and no clipping/masking are enabled yet. Do not promote this as a finished repair.
 
 Required validation before further development:
 1. Confirm native Chrome viewport, installed PWA fullscreen viewport, small phone and Onn tablet, both orientations.
