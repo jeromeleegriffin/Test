@@ -2,11 +2,11 @@
 (() => {
   const params = new URLSearchParams(location.search);
   if (params.get('railReview') !== '1') return;
-  const originalSource = Object.freeze({ width: 875, height: 1797, holderTop: 1330 });
-  document.body.classList.add('hor-rail-review');
+  const originalSource = Object.freeze({ width: 875, height: 1797, holderTop: 1430 });
+  const installedDisplay = () => ['fullscreen', 'standalone', 'minimal-ui'].some(mode => matchMedia('(display-mode: ' + mode + ')').matches) || navigator.standalone === true;
   let previousDy = 0;
   const measure = () => {
-    if (!matchMedia('(orientation: portrait)').matches) {
+    if (!matchMedia('(orientation: portrait)').matches || !installedDisplay()) {
       document.body.style.removeProperty('--hor-rail-review-dy');
       document.body.classList.remove('hor-rail-review');
       previousDy = 0;
@@ -21,7 +21,7 @@
     if (!bgBox.height || !hBox.height) return;
     const cover = Math.max(bgBox.width / originalSource.width, bgBox.height / originalSource.height);
     // TABLE-003 original image coordinate, *not* a viewport percentage.
-    // 1330 is a screenshot-derived REVIEW estimate, subject to actual-pixel approval.
+    // 1430 is a screenshot-derived REVIEW estimate, subject to actual-pixel approval.
     const desiredTop = bgBox.top + originalSource.holderTop * cover;
     const unshiftedTop = hBox.top - previousDy;
     const candidate = Math.min(0, Math.round(desiredTop - unshiftedTop));
