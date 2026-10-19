@@ -96,3 +96,9 @@ Reproduce the entire rule verbatim in START HERE and in the ready-to-paste repla
 Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
 
 Do not replace the rule with a summary or a reference such as "same as before."
+
+## PERMANENT UI VISUAL VERIFICATION RULE — OWNER DIRECTIVE 2026-10-19
+
+Before any UI change is delivered in a ZIP or deployed, OPEN and personally inspect the actual modified playable game at real target viewport sizes. Render and capture actual screenshots, compare to the approved working screen, and exercise relevant UI states and button interactions. Test regular Chrome portrait (including browser bars), installed/fullscreen portrait, small-phone layouts, and landscape/tablet when affected. For game/table controls, inspect the expanded scoreboard, bidding/Bid Box, cards, and menus; catch clipping, size mismatches, collisions, hidden controls, and art regressions. Fix and re-inspect until the real pixels pass. Never substitute mockups, CSS/JS review, ZIP integrity, or syntax-only checks for a browser visual test. If the browser cannot be opened, disclose the blocker and DO NOT issue the candidate as a visually verified, owner-ready UI ZIP or deploy it. Preserve approved artwork and gameplay; record exactly what was tested and what was not. This applies permanently to every future chat, specialist, handoff, Master Brain and release.
+
+Full mandatory authority (read in full): `brain/coordination/PERMANENT_UI_VISUAL_VERIFICATION_RULE_20261019.md`.
