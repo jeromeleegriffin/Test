@@ -2,8 +2,8 @@
  * Author: Jerome Griffin
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
-const BUILD = '846-picker-review-20261019';
-const CACHE = 'house-of-rooks-846-picker-review-20261019';
+const BUILD = '846-no-thunder-review-20261019';
+const CACHE = 'house-of-rooks-846-no-thunder-review-20261019';
 // Current dependency paths only; cacheLookup handles version query strings.
 const SHELL = [
   './end-hand-effects-v12.js',

@@ -83,7 +83,6 @@
           'My Profile',
           'Volume Controls',
           'Room Ambience',
-          'Thunderstorms',
           'Crickets',
           'Rain',
           'Distant wolf howl',
@@ -690,7 +689,6 @@
           move(n, body);
       for (const [key, title] of [
         ['crickets', 'Crickets'],
-        ['thunder', 'Thunderstorms'],
         ['rain', 'Rain'],
         ['wolf', 'Distant wolf howl'],
         ['bird', 'Outdoor birds'],
@@ -700,7 +698,7 @@
         action(
           body,
           title,
-          'Volume' + (key === 'thunder' || key === 'crickets' ? ' and frequency' : ''),
+          'Volume' + (key === 'crickets' ? ' and frequency' : ''),
           () => ambientSound(key, title)
         );
     }
@@ -730,30 +728,22 @@
         values = api.settings();
       rangeControl(body, title + ' volume', values[key], (value) => api.setSound(key, value));
       note(body, 'Set volume to 0% to turn this sound off. Your choice saves automatically.');
-      if (key === 'thunder' || key === 'crickets') {
+      if (key === 'crickets') {
         const label = document.createElement('label');
         label.className = 'house-sound-control';
-        label.textContent = key === 'thunder' ? 'Time between storms' : 'Cricket frequency';
+        label.textContent = 'Cricket frequency';
         const select = document.createElement('select');
         select.setAttribute('aria-label', label.textContent);
-        const options =
-          key === 'thunder'
-            ? [
-                [6, 'Every 6 minutes'],
-                [12, 'Every 12 minutes (default)'],
-                [24, 'Every 24 minutes'],
-                [60, 'Every hour'],
-              ]
-            : [
-                [0.5, 'Occasional: every 4–8 minutes'],
-                [1, 'Regular: every 2–4 minutes (default)'],
-                [2, 'Frequent: every 1–2 minutes'],
-              ];
+        const options = [
+          [0.5, 'Occasional: every 4–8 minutes'],
+          [1, 'Regular: every 2–4 minutes (default)'],
+          [2, 'Frequent: every 1–2 minutes'],
+        ];
         for (const [value, text] of options) {
           const o = new Option(text, value);
           select.append(o);
         }
-        const pref = key === 'thunder' ? 'stormMinutes' : 'cricketRate';
+        const pref = 'cricketRate';
         select.value = String(values[pref]);
         select.onchange = () => api.setSound(pref, Number(select.value));
         label.append(select);
@@ -761,9 +751,7 @@
       }
       note(
         body,
-        key === 'thunder'
-          ? 'A short rain shower with distant thunder. Rain volume is controlled separately. Timers run during visible play and restart when you return.'
-          : 'Outdoor sounds pause while the game is hidden. Wildlife waits until rain and other calls finish.'
+        'Outdoor sounds pause while the game is hidden. Wildlife waits until rain and other calls finish.'
       );
     }
     function effectControls() {
