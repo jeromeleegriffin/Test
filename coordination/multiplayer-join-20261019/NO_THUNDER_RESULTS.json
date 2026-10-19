@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "simulatedVisiblePlayMinutes": 60,
+  "timerCallbacks": 111,
+  "legacyThunderPreferencesIgnored": true,
+  "remainingPreferencesPreserved": true,
+  "obsoleteControlsRejected": true,
+  "thunderVoiceOrBufferPlayed": false,
+  "decodedRemainingSounds": [
+    "fire",
+    "wind",
+    "crickets",
+    "bird",
+    "wolf",
+    "owl",
+    "rain"
+  ],
+  "hiddenStopAndVisibleResume": true,
+  "scope": "Actual ambience module with deterministic clock, audio and DOM substitutes; not subjective listening."
+}

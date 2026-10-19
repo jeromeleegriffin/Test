@@ -1,0 +1,28 @@
+{
+  "filename": "Griffin_House_Completed_Fixes_No_Thunder_20261019.zip",
+  "bytes": 164518061,
+  "sha256": "45fcc06ef4b8a3e697f702a393b1a8991901f2e3059f6e8cc5464ffc2f5e1517",
+  "entries": 1524,
+  "manifestHashesVerified": 1523,
+  "crc": "PASS",
+  "runtime": "846-no-thunder-review-20261019",
+  "sourceCommit": "a6a3ddd645b08156c34769805214bb9f941dc261",
+  "parentZipSha256": "2c79ce5526bb3b3a67976273f3d39172c28c474611a12bdc785ddf60f1f7fb29",
+  "changedRuntimeFiles": [
+    "cabin-ambience041.js",
+    "menu-approved805.js",
+    "game060.js",
+    "index.html",
+    "hor-version.js",
+    "sw060.js"
+  ],
+  "thunderRemovalSimulationMinutes": 60,
+  "extraTwoEffectsIncluded": false,
+  "liveDeployment": false,
+  "libraryFileId": "libfile_110d23dbc73c8191823d1ca23af1198f",
+  "fileId": "file_00000000ab4c81f98f0aa634bc7a750e",
+  "exactZipLoaderBootPassed": true,
+  "exactZipRoomAmbienceMenuVerified": true,
+  "thunderstormMenuAbsent": true,
+  "remainingSoundControlsPresent": true
+}
