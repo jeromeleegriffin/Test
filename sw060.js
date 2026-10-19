@@ -2,8 +2,8 @@
  * Author: Jerome Griffin
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
-const BUILD = 'beginner-review-20261019';
-const CACHE = 'house-of-rooks-beginner-review-20261019';
+const BUILD = 'asset-cleanup-review-20261019';
+const CACHE = 'house-of-rooks-asset-cleanup-review-20261019';
 // Current dependency paths only; cacheLookup handles version query strings.
 const SHELL = [
   './',
@@ -14,13 +14,6 @@ const SHELL = [
   './approved-bid-portrait.js',
   './asset-loading772.css',
   './asset-loading772.js',
-  './assets/angle-c/approved-lantern.svg',
-  './assets/angle-c/approved-poses.png',
-  './assets/angle-c/jerome-rear-source-v1.png',
-  './assets/angle-c/lowered-static-scene.png',
-  './assets/angle-c/pre-hand-scene.webp',
-  './assets/angle-c/room-table-plate-v1.png',
-  './assets/angle-c/wide-static-scene.png',
   './assets/approved805/ceiling-wood.png',
   './assets/approved805/griffin-logo.png',
   './assets/audio/cabin041/pcm-data.js',
@@ -786,10 +779,7 @@ const SHELL = [
   './assets/images/wait-trump-landscape.jpg',
   './assets/images/wait-trump-portrait.jpg',
   './assets/images/winner-crown841.svg',
-  './assets/lower-camera/room-table-lantern830.png',
-  './assets/lower-camera/room-table-oval.png',
   './assets/lower-camera/room-table-shelf834.svg',
-  './assets/lower-camera/room-table.png',
   './assets/moon-plaque/concept-a.png',
   './assets/nest-reveal838/bird-heads.png',
   './assets/raven-fight/BLACK_WINGS_DOWN.png',

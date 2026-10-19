@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = 'beginner-review-20261019';
+const APP_VERSION = 'asset-cleanup-review-20261019';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -15628,7 +15628,9 @@ function drawQr(code) {
 // A same-origin ZIP player owns the browser's top-level share identity.
 // Brand that document too; never read or modify an unrelated cross-origin parent.
 function horSyncShareBrand845() {
-  const icon = new URL('assets/images/house-of-rooks-192.png?v=845', location.href).href;
+  const icon =
+    document.querySelector('link[rel~="icon"]')?.href ||
+    new URL('assets/images/house-of-rooks-192.png?v=845', location.href).href;
   for (const doc of [
     document,
     (() => {

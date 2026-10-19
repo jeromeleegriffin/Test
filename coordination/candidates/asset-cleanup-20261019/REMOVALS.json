@@ -1,0 +1,1043 @@
+{
+  "status": "REMOVED_ON_ISOLATED_CANDIDATE_ONLY",
+  "baseCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+  "files": [
+    {
+      "path": "assets/angle-c/approved-lantern.svg",
+      "bytes": 2946494,
+      "sha256": "5ec8fb205a409be96ee0e77e81b917881fb65f4fa7cee66fe85e0331e089d841",
+      "gitBlob": "554db50374e95a3e35b78e43b145d92e558a4663",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/angle-c/approved-poses.png",
+      "bytes": 1913508,
+      "sha256": "7c3b00d788400d40940e6bc69148e18fce31b04d2e3bc34f30f6f8bb5af22b30",
+      "gitBlob": "9ed0acbd808a3bca5c14e1d83a134547320cab2f",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/angle-c/jerome-rear-source-v1.png",
+      "bytes": 1150948,
+      "sha256": "963b5fa61051552a44ea952f9bc9da3114ddfc1fdf05283b1974ac34490bcc4f",
+      "gitBlob": "bb13a499f81ea65dc55f63706fc51ff85b431337",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/angle-c/lowered-static-scene.png",
+      "bytes": 2059908,
+      "sha256": "0ccb9a70dcf50c238062e2ecf80ab65a07f79e003a45de0db95acd49adabf044",
+      "gitBlob": "27fb8ce3550936cb501599ada1c492a8d0d09944",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/angle-c/open-felt-static-scene.png",
+      "bytes": 1996498,
+      "sha256": "dfa4b78b1868b990d411610dd1b8f0fb1acdc0ef7c804351b498df1490b54058",
+      "gitBlob": "50c74fce4cf7c74bab7262a0719c9cc7dad0a15c",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/angle-c/pre-hand-scene.webp",
+      "bytes": 329376,
+      "sha256": "a198a00af7c15d6983abc668eb07ed3ad2f6799736acb1eec5a152b445477f48",
+      "gitBlob": "7c95be62f0c638075d8859ae8375c4cda057e21f",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/angle-c/restored-scene-021.png",
+      "bytes": 1965839,
+      "sha256": "b90512fa10fdd2618e01d6a7eb27ed27a312ab2d09ad5bf61ffd9bd80c27d81b",
+      "gitBlob": "2ec745d0b250222a56473886aa12fbcc7eff37d8",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/angle-c/room-table-plate-v1.png",
+      "bytes": 2066668,
+      "sha256": "2676e034930bedc2f47e292ffc1b22d8019643b3413c049ec28078520775eba5",
+      "gitBlob": "b618d49c925021c60ea6cb41b46324b1a206516e",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/angle-c/walnut-retained-concept.png",
+      "bytes": 2249895,
+      "sha256": "a409c065b8c04cbf76d13a28d4e009fc38f47cb6a3314629dd14760c91d958f8",
+      "gitBlob": "f8ce5bb522badd1e26868ddd4f3c3ecfa7ec8682",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/angle-c/wide-static-scene.png",
+      "bytes": 2157989,
+      "sha256": "a2bad40a3268aee7f3507788ba96e79e98ec318e5fe2f3b6a8bc6555ed3b4c13",
+      "gitBlob": "1ebe7a9757b5f1815fbfdf91f595a5439ca3794c",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/audio/shuffle716/1x.wav",
+      "bytes": 70604,
+      "sha256": "24c68bf7ed03353144cbc8cb8fb4f8b5a4226a4146fc5c20b5b002292fcfb11d",
+      "gitBlob": "cfefc86fdea8fe523b3e0168457e8d950d777bb2",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/audio/shuffle716/3x.wav",
+      "bytes": 23550,
+      "sha256": "9da8c3f03ce524698f991994d18baae66c78f1bc2d0a5ed9a57b2d179796f02a",
+      "gitBlob": "7375f61fe449171e55ce6742aacfabefd32a02f5",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/audio/shuffle716/PROVENANCE.txt",
+      "bytes": 457,
+      "sha256": "d61e5559a1f1f38255968ab04d939b6fc462a777df993ff4f029c06658e8426d",
+      "gitBlob": "b269f83c15b4f9e53bb95d74b22f7eaa1c64112e",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/audio/shuffle716/max.wav",
+      "bytes": 3572,
+      "sha256": "948b29b4e55e53d44a4a115bb010c654f6f196f49b48907375cd5a6d95456d13",
+      "gitBlob": "ba3e79618e52429c9a871ccf672aa439253d6193",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/100.mp3",
+      "bytes": 7821,
+      "sha256": "04b2e1aaf0fe9d5d25039ddb7ddee1a3a3a87d71f96c991be268206e7d2c3572",
+      "gitBlob": "0f8ade2480388a38a9a54270dc21cb0e894d716e",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/105.mp3",
+      "bytes": 13869,
+      "sha256": "9f4d8f47d9ab957fafab21be8fbaeca9b3c6bed44f21cc068d2f1fa4ba0ca0f3",
+      "gitBlob": "64c0ddd459bc1b02108463c18da5ac9032b445f9",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/110.mp3",
+      "bytes": 13869,
+      "sha256": "23daa0ca3deb66657b30cf302bd9cb2eee9420303a78104a86f852da4f82d173",
+      "gitBlob": "22e5fc5dbf1830171dd9910ec76b1b1cc0758ae3",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/115.mp3",
+      "bytes": 15885,
+      "sha256": "1c4cbaafb1064722e4017ee45b1584dc528cf8377145c52c4854edc4f2c37899",
+      "gitBlob": "173c6d37aefda7c86f2ae9a37ec876fbcc7dce59",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/120.mp3",
+      "bytes": 14445,
+      "sha256": "93abb2e7fc6968459350739916e9b5b23cec37e62e5767cd7c80b1d92def2a77",
+      "gitBlob": "b7fb723028849470c7448ecc05c34460490e4212",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/125.mp3",
+      "bytes": 17037,
+      "sha256": "964ef2978ab3bd947ec835fe4f2b72331c97dfb9569e2a932951fcceec221efa",
+      "gitBlob": "6cf9cb898504ce6ea03326fba73116ba200ddaf9",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/130.mp3",
+      "bytes": 14157,
+      "sha256": "87acb6e802ed44798a4745d00b64a2399def273d63c4500a38f6fe1604c8fa8c",
+      "gitBlob": "1a1c3bace6866d4e0380a4c569273f36970229d3",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/135.mp3",
+      "bytes": 16461,
+      "sha256": "b4ed39092182f833521948c3c03722ed4b1a0774d469c12257a8533bab62fcf8",
+      "gitBlob": "129a8d8dcf0ed922a0c851fab228986fab7f6166",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/140.mp3",
+      "bytes": 14445,
+      "sha256": "01552a72a5d8ece5971dd7a57beac262f3e17eb5c09cbde5349fe2d55f4a89f5",
+      "gitBlob": "e8a96b1f01b7b5c0b4f2e27b47bee25f35c5f6bb",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/145.mp3",
+      "bytes": 17325,
+      "sha256": "9ee551fe02bb70bac9451ab37d01262af5c37202281089f15f9bafaf6ff9179e",
+      "gitBlob": "7eb7c227b573ea11ee254c7448f654c58a5dab37",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/150.mp3",
+      "bytes": 13581,
+      "sha256": "8e6727a5062a2a7a50bbf189712c4501f1d8ef07ed647050c6ba2b24c0ec6628",
+      "gitBlob": "08b6a9ad395857ba383a669a11561d72f0186f48",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/155.mp3",
+      "bytes": 17037,
+      "sha256": "3ad4d42a356f3d2cf0f94a003ee271da17959786f88b78a7fd7ed13952e1ce1d",
+      "gitBlob": "95a89191002f2739ca911db517dc487740e1974e",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/160.mp3",
+      "bytes": 14445,
+      "sha256": "884d30a2beb95db6cb59a56cc776b519a240352379f2186e504017e7b26ca96a",
+      "gitBlob": "91c9a86298dc86c4cf07f9a967c430b55aba4c2a",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/165.mp3",
+      "bytes": 17901,
+      "sha256": "a1a9f29c49d670c69f8c9b5cb0c61acc5c68c98458fccee3a7683c2a2c696c99",
+      "gitBlob": "bf799fca3297a670ee2ca549364c848304272992",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/170.mp3",
+      "bytes": 14733,
+      "sha256": "acbafc32c4554c6099767ce1a534b2d4001163f4415052bb1d51bfa32554c2ec",
+      "gitBlob": "237b7f7a399e2cef46dbab3a93af53ce7bd3699f",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/175.mp3",
+      "bytes": 18765,
+      "sha256": "50c42a8ef8d0bfd0835f0a97f7058e568595f31623663a33d8b4d855b5bc4a26",
+      "gitBlob": "c1841f7e2ef268da4476851f1bf013ae03256215",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/180.mp3",
+      "bytes": 13293,
+      "sha256": "8bfd8f0c8944b276fdaed87a3e975aad8292dfbdf16aaf91ca9a598685c22543",
+      "gitBlob": "0836a8a97934f53fe7b633afddd537f7636693d2",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/185.mp3",
+      "bytes": 16461,
+      "sha256": "d40a8de6516972d80127ae96b24e65559a73e7ea447d0009310dea54cb6fc599",
+      "gitBlob": "e51f5f3bc4f641f63aea34b4d3c9e257dde626e2",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/190.mp3",
+      "bytes": 14157,
+      "sha256": "238c3c9439cf90f9875a7aeb02c841525346ec89181a97717566f07122c26d9b",
+      "gitBlob": "528a169bbb5b17af58c981b827d97e052f95d04c",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/195.mp3",
+      "bytes": 16461,
+      "sha256": "ceba14d3fc24e78fcfd87c2a8f64dfc9a5038ee901f4a9264ab54046995e5bc9",
+      "gitBlob": "8a995fc2b09ddba59565d87bddfd7fd9c34db942",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/female/pass.mp3",
+      "bytes": 7533,
+      "sha256": "1bfe6eccf0cb3902d4b8a5f84dc58992f8357e1a3d78c5d20ad999f091c01759",
+      "gitBlob": "2be7b4986db6511bc8aadcd965674debb2bdf63a",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/100.mp3",
+      "bytes": 9261,
+      "sha256": "8c2f254a009690b9bb6b819564420113035fc41fea67d6662c0bc898c5e015dc",
+      "gitBlob": "5877d4b3d5ae5eeaf16281433c5d8062e008989f",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/105.mp3",
+      "bytes": 14157,
+      "sha256": "ec53a63f878f2f3638b09a8a6c59c0a04091fcad908e7436d0c31bb7879683a2",
+      "gitBlob": "29e54ecf3fbcdabf936f02dd723a127c435fa458",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/110.mp3",
+      "bytes": 13293,
+      "sha256": "7dfe0717a6bb751a19ec4e0e7114ba3cc30a67b07b82384ef7423a777d198cde",
+      "gitBlob": "4630b392eee6af6055157968a27f32065df96b25",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/115.mp3",
+      "bytes": 15309,
+      "sha256": "aee175dd5e141c491da89213b4d6443f8f41d2d13fda7a43a1ef8b6c2ccefc31",
+      "gitBlob": "7ed9e30a110d5e565e4bd42d47907c219bd1bbac",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/120.mp3",
+      "bytes": 16461,
+      "sha256": "7b73462fdb01797744cbe68f6038f2cedcdb7af07a6509ea2e1b0502b9727848",
+      "gitBlob": "a3239ca56aa686691a69101f048b39629e334d6b",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/125.mp3",
+      "bytes": 17037,
+      "sha256": "b72240c6a110e7ece1687ac87b45a16cf780ed0798901aa5ca11fa8dbbab5780",
+      "gitBlob": "b4964c6b7fb3de9693c9260a5841e596de7970aa",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/130.mp3",
+      "bytes": 13293,
+      "sha256": "3236eb03a2e32a2e0a6e85c85f9d8070695aba242db6bc7165811216721eba81",
+      "gitBlob": "017005ed27a169f6d2d8a9aef8dcc628f34fd36d",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/135.mp3",
+      "bytes": 17613,
+      "sha256": "4385014591e7a650a534b0494fa9fd92ad92da438adb68636fcbb9fdb4bac0b6",
+      "gitBlob": "cc3c6563a155298ce4fbffa5a547671abe8e48da",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/140.mp3",
+      "bytes": 14733,
+      "sha256": "5d438dc6b2046c1ce22e701b6bd6310cddd54820c35b0c41dad122f18942e8ee",
+      "gitBlob": "6a1232acc1e19d54bfcc5ce4823df06ad153a6dc",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/145.mp3",
+      "bytes": 17325,
+      "sha256": "04710b98679924b2f832cc33b78cff77ae3e30575842feb3d3f4724919ee8f39",
+      "gitBlob": "baf4356861c2b986f903a10e45fa383d1fc712a4",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/150.mp3",
+      "bytes": 15885,
+      "sha256": "183943982470e8e33dd5ea65e046b2faae2cd0093ed89544797d3e83ed782f80",
+      "gitBlob": "673f6992aad647a3556f4fcbd029ded0da854e87",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/155.mp3",
+      "bytes": 16173,
+      "sha256": "11e9845941560fd6fdc6cdf528df5ed47bbfa8220deb4eb0810cba87c6efeccf",
+      "gitBlob": "cb34b04745b599dd17eb7825d9660ba54fe6ac2a",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/160.mp3",
+      "bytes": 14733,
+      "sha256": "c0cb9b9904b32447b16f7dc86921fd8e210f530b0cbaddcb4951a0eeff461ef0",
+      "gitBlob": "f5c4c01f9db2990f5f373f6bfee8fc62e2e974cc",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/165.mp3",
+      "bytes": 17901,
+      "sha256": "7b9265dc5780987ba433dc5e7516892e187e15f9525f0797155c4a8f9c3a146f",
+      "gitBlob": "ffe9055b5c9306275b623922a1464c493af0b2c6",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/170.mp3",
+      "bytes": 14733,
+      "sha256": "c939fdd9dd21f81a8b793a26cbb28ae062aaf0c13838304315fd78f3f38adb06",
+      "gitBlob": "746198497d3dd96dd0537fcc338c83d07982f5b4",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/175.mp3",
+      "bytes": 17613,
+      "sha256": "4159c4e7414cef5207632c6d25fb011e31382b39253059ed99aa5644b482cc13",
+      "gitBlob": "f3d7aabd2297fce51006eb20e4ce7db74729872b",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/180.mp3",
+      "bytes": 15021,
+      "sha256": "c3deedccac2876997b8365810cdb08387e90688179e5c0aaf0333704494059ef",
+      "gitBlob": "06ffb458269a763ca1217aac38a9bd644c71528d",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/185.mp3",
+      "bytes": 16173,
+      "sha256": "79db552899138bae3084cd1a698b2e09fbbccc6c2d1e5a0d8cd5c46e3df40e07",
+      "gitBlob": "a079509333f59c53b2b928d142f68b904022ef16",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/190.mp3",
+      "bytes": 14445,
+      "sha256": "89086aec23478d78a1f5cda1efefc4c43922a638809707b29d6b8128da129493",
+      "gitBlob": "ffbdcc775f03262bfc183fe4481fb6af098cec9d",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/195.mp3",
+      "bytes": 16461,
+      "sha256": "f47f8b2ff86677648f2d0e5543c4774292d1bbace8a4b9934afd3d4fc3fff697",
+      "gitBlob": "0606f87a1afe826e37237ab7773eff66204b7cec",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice798/male/pass.mp3",
+      "bytes": 10125,
+      "sha256": "de0ada4bfb421bfa8e0ecd8ce0842ee2fd2654f6e105503d9ae9e1fa05782578",
+      "gitBlob": "7f6b4e00d20724ae22d58d4058514a9efaeefc61",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/100.mp3",
+      "bytes": 7821,
+      "sha256": "04b2e1aaf0fe9d5d25039ddb7ddee1a3a3a87d71f96c991be268206e7d2c3572",
+      "gitBlob": "0f8ade2480388a38a9a54270dc21cb0e894d716e",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/105.mp3",
+      "bytes": 13869,
+      "sha256": "9f4d8f47d9ab957fafab21be8fbaeca9b3c6bed44f21cc068d2f1fa4ba0ca0f3",
+      "gitBlob": "64c0ddd459bc1b02108463c18da5ac9032b445f9",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/110.mp3",
+      "bytes": 13869,
+      "sha256": "23daa0ca3deb66657b30cf302bd9cb2eee9420303a78104a86f852da4f82d173",
+      "gitBlob": "22e5fc5dbf1830171dd9910ec76b1b1cc0758ae3",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/115.mp3",
+      "bytes": 15885,
+      "sha256": "1c4cbaafb1064722e4017ee45b1584dc528cf8377145c52c4854edc4f2c37899",
+      "gitBlob": "173c6d37aefda7c86f2ae9a37ec876fbcc7dce59",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/120.mp3",
+      "bytes": 14445,
+      "sha256": "93abb2e7fc6968459350739916e9b5b23cec37e62e5767cd7c80b1d92def2a77",
+      "gitBlob": "b7fb723028849470c7448ecc05c34460490e4212",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/125.mp3",
+      "bytes": 17037,
+      "sha256": "964ef2978ab3bd947ec835fe4f2b72331c97dfb9569e2a932951fcceec221efa",
+      "gitBlob": "6cf9cb898504ce6ea03326fba73116ba200ddaf9",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/130.mp3",
+      "bytes": 14157,
+      "sha256": "87acb6e802ed44798a4745d00b64a2399def273d63c4500a38f6fe1604c8fa8c",
+      "gitBlob": "1a1c3bace6866d4e0380a4c569273f36970229d3",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/135.mp3",
+      "bytes": 16461,
+      "sha256": "b4ed39092182f833521948c3c03722ed4b1a0774d469c12257a8533bab62fcf8",
+      "gitBlob": "129a8d8dcf0ed922a0c851fab228986fab7f6166",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/140.mp3",
+      "bytes": 14445,
+      "sha256": "01552a72a5d8ece5971dd7a57beac262f3e17eb5c09cbde5349fe2d55f4a89f5",
+      "gitBlob": "e8a96b1f01b7b5c0b4f2e27b47bee25f35c5f6bb",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/145.mp3",
+      "bytes": 17325,
+      "sha256": "9ee551fe02bb70bac9451ab37d01262af5c37202281089f15f9bafaf6ff9179e",
+      "gitBlob": "7eb7c227b573ea11ee254c7448f654c58a5dab37",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/150.mp3",
+      "bytes": 13581,
+      "sha256": "8e6727a5062a2a7a50bbf189712c4501f1d8ef07ed647050c6ba2b24c0ec6628",
+      "gitBlob": "08b6a9ad395857ba383a669a11561d72f0186f48",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/155.mp3",
+      "bytes": 17037,
+      "sha256": "3ad4d42a356f3d2cf0f94a003ee271da17959786f88b78a7fd7ed13952e1ce1d",
+      "gitBlob": "95a89191002f2739ca911db517dc487740e1974e",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/160.mp3",
+      "bytes": 14445,
+      "sha256": "884d30a2beb95db6cb59a56cc776b519a240352379f2186e504017e7b26ca96a",
+      "gitBlob": "91c9a86298dc86c4cf07f9a967c430b55aba4c2a",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/165.mp3",
+      "bytes": 17901,
+      "sha256": "a1a9f29c49d670c69f8c9b5cb0c61acc5c68c98458fccee3a7683c2a2c696c99",
+      "gitBlob": "bf799fca3297a670ee2ca549364c848304272992",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/170.mp3",
+      "bytes": 14733,
+      "sha256": "acbafc32c4554c6099767ce1a534b2d4001163f4415052bb1d51bfa32554c2ec",
+      "gitBlob": "237b7f7a399e2cef46dbab3a93af53ce7bd3699f",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/175.mp3",
+      "bytes": 18765,
+      "sha256": "50c42a8ef8d0bfd0835f0a97f7058e568595f31623663a33d8b4d855b5bc4a26",
+      "gitBlob": "c1841f7e2ef268da4476851f1bf013ae03256215",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/180.mp3",
+      "bytes": 13293,
+      "sha256": "8bfd8f0c8944b276fdaed87a3e975aad8292dfbdf16aaf91ca9a598685c22543",
+      "gitBlob": "0836a8a97934f53fe7b633afddd537f7636693d2",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/185.mp3",
+      "bytes": 16461,
+      "sha256": "d40a8de6516972d80127ae96b24e65559a73e7ea447d0009310dea54cb6fc599",
+      "gitBlob": "e51f5f3bc4f641f63aea34b4d3c9e257dde626e2",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/190.mp3",
+      "bytes": 14157,
+      "sha256": "238c3c9439cf90f9875a7aeb02c841525346ec89181a97717566f07122c26d9b",
+      "gitBlob": "528a169bbb5b17af58c981b827d97e052f95d04c",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/195.mp3",
+      "bytes": 16461,
+      "sha256": "ceba14d3fc24e78fcfd87c2a8f64dfc9a5038ee901f4a9264ab54046995e5bc9",
+      "gitBlob": "8a995fc2b09ddba59565d87bddfd7fd9c34db942",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/moon-1.mp3",
+      "bytes": 15885,
+      "sha256": "4ed8f2cd8e8f39aae99fdb34ad552b36edf0c1b3a235d18a80673edf5c6b2031",
+      "gitBlob": "ddc973dfa265c1746d7dadb85ce0d961f2c01025",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/moon-2.mp3",
+      "bytes": 24405,
+      "sha256": "a3dce696edfd6249e52d7b9b3497c015857f87358ff833306517a613ea46241a",
+      "gitBlob": "15c4f9861f66bfaaf06b33d25c2d8b63ab0803f6",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/female/pass.mp3",
+      "bytes": 7533,
+      "sha256": "1bfe6eccf0cb3902d4b8a5f84dc58992f8357e1a3d78c5d20ad999f091c01759",
+      "gitBlob": "2be7b4986db6511bc8aadcd965674debb2bdf63a",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/100.mp3",
+      "bytes": 9261,
+      "sha256": "8c2f254a009690b9bb6b819564420113035fc41fea67d6662c0bc898c5e015dc",
+      "gitBlob": "5877d4b3d5ae5eeaf16281433c5d8062e008989f",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/105.mp3",
+      "bytes": 14157,
+      "sha256": "ec53a63f878f2f3638b09a8a6c59c0a04091fcad908e7436d0c31bb7879683a2",
+      "gitBlob": "29e54ecf3fbcdabf936f02dd723a127c435fa458",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/110.mp3",
+      "bytes": 13293,
+      "sha256": "7dfe0717a6bb751a19ec4e0e7114ba3cc30a67b07b82384ef7423a777d198cde",
+      "gitBlob": "4630b392eee6af6055157968a27f32065df96b25",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/115.mp3",
+      "bytes": 15309,
+      "sha256": "aee175dd5e141c491da89213b4d6443f8f41d2d13fda7a43a1ef8b6c2ccefc31",
+      "gitBlob": "7ed9e30a110d5e565e4bd42d47907c219bd1bbac",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/120.mp3",
+      "bytes": 16461,
+      "sha256": "7b73462fdb01797744cbe68f6038f2cedcdb7af07a6509ea2e1b0502b9727848",
+      "gitBlob": "a3239ca56aa686691a69101f048b39629e334d6b",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/125.mp3",
+      "bytes": 17037,
+      "sha256": "b72240c6a110e7ece1687ac87b45a16cf780ed0798901aa5ca11fa8dbbab5780",
+      "gitBlob": "b4964c6b7fb3de9693c9260a5841e596de7970aa",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/130.mp3",
+      "bytes": 13293,
+      "sha256": "3236eb03a2e32a2e0a6e85c85f9d8070695aba242db6bc7165811216721eba81",
+      "gitBlob": "017005ed27a169f6d2d8a9aef8dcc628f34fd36d",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/135.mp3",
+      "bytes": 17613,
+      "sha256": "4385014591e7a650a534b0494fa9fd92ad92da438adb68636fcbb9fdb4bac0b6",
+      "gitBlob": "cc3c6563a155298ce4fbffa5a547671abe8e48da",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/140.mp3",
+      "bytes": 14733,
+      "sha256": "5d438dc6b2046c1ce22e701b6bd6310cddd54820c35b0c41dad122f18942e8ee",
+      "gitBlob": "6a1232acc1e19d54bfcc5ce4823df06ad153a6dc",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/145.mp3",
+      "bytes": 17325,
+      "sha256": "04710b98679924b2f832cc33b78cff77ae3e30575842feb3d3f4724919ee8f39",
+      "gitBlob": "baf4356861c2b986f903a10e45fa383d1fc712a4",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/150.mp3",
+      "bytes": 15885,
+      "sha256": "183943982470e8e33dd5ea65e046b2faae2cd0093ed89544797d3e83ed782f80",
+      "gitBlob": "673f6992aad647a3556f4fcbd029ded0da854e87",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/155.mp3",
+      "bytes": 16173,
+      "sha256": "11e9845941560fd6fdc6cdf528df5ed47bbfa8220deb4eb0810cba87c6efeccf",
+      "gitBlob": "cb34b04745b599dd17eb7825d9660ba54fe6ac2a",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/160.mp3",
+      "bytes": 14733,
+      "sha256": "c0cb9b9904b32447b16f7dc86921fd8e210f530b0cbaddcb4951a0eeff461ef0",
+      "gitBlob": "f5c4c01f9db2990f5f373f6bfee8fc62e2e974cc",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/165.mp3",
+      "bytes": 17901,
+      "sha256": "7b9265dc5780987ba433dc5e7516892e187e15f9525f0797155c4a8f9c3a146f",
+      "gitBlob": "ffe9055b5c9306275b623922a1464c493af0b2c6",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/170.mp3",
+      "bytes": 14733,
+      "sha256": "c939fdd9dd21f81a8b793a26cbb28ae062aaf0c13838304315fd78f3f38adb06",
+      "gitBlob": "746198497d3dd96dd0537fcc338c83d07982f5b4",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/175.mp3",
+      "bytes": 17613,
+      "sha256": "4159c4e7414cef5207632c6d25fb011e31382b39253059ed99aa5644b482cc13",
+      "gitBlob": "f3d7aabd2297fce51006eb20e4ce7db74729872b",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/180.mp3",
+      "bytes": 15021,
+      "sha256": "c3deedccac2876997b8365810cdb08387e90688179e5c0aaf0333704494059ef",
+      "gitBlob": "06ffb458269a763ca1217aac38a9bd644c71528d",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/185.mp3",
+      "bytes": 16173,
+      "sha256": "79db552899138bae3084cd1a698b2e09fbbccc6c2d1e5a0d8cd5c46e3df40e07",
+      "gitBlob": "a079509333f59c53b2b928d142f68b904022ef16",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/190.mp3",
+      "bytes": 14445,
+      "sha256": "89086aec23478d78a1f5cda1efefc4c43922a638809707b29d6b8128da129493",
+      "gitBlob": "ffbdcc775f03262bfc183fe4481fb6af098cec9d",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/195.mp3",
+      "bytes": 16461,
+      "sha256": "f47f8b2ff86677648f2d0e5543c4774292d1bbace8a4b9934afd3d4fc3fff697",
+      "gitBlob": "0606f87a1afe826e37237ab7773eff66204b7cec",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/moon-1.mp3",
+      "bytes": 16845,
+      "sha256": "828f24ace423bc157f6c90dc21407a3758ce99f17bec2cae35980b1497bd7c65",
+      "gitBlob": "52b1cbf73137846ff869fb3402e1cebdddc012b2",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/moon-2.mp3",
+      "bytes": 36093,
+      "sha256": "d33e98261f1a524b8391d9601acae323fceaf08ee678f20ae22ea4a6d44d3894",
+      "gitBlob": "e8e9c8edc1e338b11559e15eb1edfe7a8cadeafd",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/human-bid-voice800/male/pass.mp3",
+      "bytes": 10125,
+      "sha256": "de0ada4bfb421bfa8e0ecd8ce0842ee2fd2654f6e105503d9ae9e1fa05782578",
+      "gitBlob": "7f6b4e00d20724ae22d58d4058514a9efaeefc61",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/images/bid-dock-cleanroom-r665.png",
+      "bytes": 1170690,
+      "sha256": "f593a652a985d60c149d64d720931b28e9c8e2bc76f4cead7e8e083c20f1c296",
+      "gitBlob": "db427e7c4f734b917b0224d1acd0615cae770779",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/images/bid-dock-cleanroom-r666.png",
+      "bytes": 1242705,
+      "sha256": "d330e314a57f1165cdc5e5531025fa2aa96d1697bfc2239cb029931dd47eb139",
+      "gitBlob": "0983b9151a23c445cb2890b33f1a5891fe4f92e7",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/images/premium-shoot-moon-r652.png",
+      "bytes": 106099,
+      "sha256": "af0130657a44ce47f7370dc998920ea689f9d547f8e78946290447091f5967af",
+      "gitBlob": "7a1204f536bb962a490b30db325448886bd1eb26",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/images/rook597-approved-bid-mockup.png",
+      "bytes": 1971007,
+      "sha256": "1609953af49adc3b5e8cf8be446a580e5d33338f7777301b2cf39e32d6517a61",
+      "gitBlob": "77f37cf398d7fc569284e74d6ce9ee63f945fd5f",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/images/shoot-the-moon-approved.jpg",
+      "bytes": 582172,
+      "sha256": "d24f36d5dcbeef60b580ae7eed012d8d7052ddc2e577620018d5c5b2a9564cac",
+      "gitBlob": "eb5449acd913ef39f4f7f425a26527cede2044fa",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/landscape-preview/gameplay-preview-811.jpg",
+      "bytes": 351687,
+      "sha256": "1ac842c211ddf4264acf7c00a067eca4a89f1e6b6b40f55b77704c979741cd3a",
+      "gitBlob": "8d2a6641274db6522d9a78ba325cc1546eb73d21",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/landscape-preview/under-construction-approved.jpg",
+      "bytes": 259306,
+      "sha256": "c26e12bef99ae681fca5d6e71fe189f2ad24788e1dc59a366cfe8481ae1d4aa3",
+      "gitBlob": "cb06050aacb363d0f5ff290575461af937b3536a",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/lower-camera/room-table-baize832.svg",
+      "bytes": 6780519,
+      "sha256": "eef1849dad0b78f9a8e0c319fd574ab84246fa497f849da6bb477f38d07b3230",
+      "gitBlob": "27cba940ac26ff6c822d6cc1d3ddbbc3b7c17a4a",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/lower-camera/room-table-lantern830.png",
+      "bytes": 2054707,
+      "sha256": "2a393bcc84505ef1f0c90976a9a00b458b998ce1b34a97c866612fcae7d28a02",
+      "gitBlob": "0b1f435c8c5ee88539bd349aa5c36dcc4699e778",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/lower-camera/room-table-oval.png",
+      "bytes": 2117878,
+      "sha256": "e448ab3663664a63d484110d8a484dfd15d2d14b4354f5039104545a521e75ef",
+      "gitBlob": "af8f4facd1fc65739e9c80d758a6e3f2cec3fd57",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    },
+    {
+      "path": "assets/lower-camera/room-table.png",
+      "bytes": 2134650,
+      "sha256": "0b591c1325cfea8feb22884a0a702e0156f4738f5988d0fa8a8cedd46dda0a3e",
+      "gitBlob": "a43d96e8f85541989f96edb4150dfe1d997618dc",
+      "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+      "runtimeReferenceHits": [],
+      "reason": "Retired scene/preview/voice-generation asset; no runtime path or basename reference; dynamic consumers reviewed"
+    }
+  ],
+  "totalFiles": 113,
+  "bytesRemoved": 39054806,
+  "precachePathsRemoved": [
+    "assets/angle-c/approved-lantern.svg",
+    "assets/angle-c/approved-poses.png",
+    "assets/angle-c/jerome-rear-source-v1.png",
+    "assets/angle-c/lowered-static-scene.png",
+    "assets/angle-c/pre-hand-scene.webp",
+    "assets/angle-c/room-table-plate-v1.png",
+    "assets/angle-c/wide-static-scene.png",
+    "assets/lower-camera/room-table-lantern830.png",
+    "assets/lower-camera/room-table-oval.png",
+    "assets/lower-camera/room-table.png"
+  ],
+  "notes": [
+    "Original bytes remain recoverable in pinned parent commit and preserved 845 package",
+    "Active 9 MiB shelf SVG retained unchanged",
+    "No active artwork recompressed or resized",
+    "No style geometry, game rules, AI, careers or storage migrations changed"
+  ]
+}

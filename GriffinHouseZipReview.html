@@ -99,7 +99,7 @@
   <section class="home" id="home">
     <div class="mark">ROOK</div>
     <h1>GRIFFIN HOUSE</h1>
-    <p class="sub">ZIP asset repair · Pick your landscape ZIP in Downloads. Your saved data and caches are preserved.</p>
+    <p class="sub">Isolated ZIP verification. Packaged assets only; saved careers and existing caches are preserved.</p>
     <div class="actions">
       <button class="main" id="scanDownloads" type="button">SCAN DOWNLOADS</button>
       <button class="alt" id="pickZip" type="button">OPEN ONE ZIP</button>
@@ -117,11 +117,11 @@
     <div class="bar">
       <button type="button" id="back">HOME</button>
       <div class="title" id="stageTitle">HOUSE OF ROOKS</div>
-      <button type="button" id="reload">FRESH</button>
+      <label>Viewport <select id="zipViewport"><option value="393,740">Phone portrait</option><option value="393,852">Tall phone portrait</option><option value="320,568">Small phone</option><option value="844,390">Phone landscape</option><option value="1024,768">Tablet landscape</option><option value="fit">Fit screen</option></select></label><button type="button" id="reload">RELOAD ZIP</button>
     </div>
     <iframe id="frame" title="Griffin House of Rooks" allow="fullscreen; clipboard-read; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
-  <div class="toast" id="toast"></div>
+  <div class="toast" id="toast"></div><output id="zipReceipt" style="position:fixed;bottom:0;left:0;right:0;background:#182019;color:#eadcb7;font:11px monospace;z-index:6;padding:3px;max-height:50px;overflow:auto">No ZIP loaded.</output><output id="zipMissing" style="position:fixed;top:46px;right:4px;max-width:360px;background:#5b1616;color:white;font:12px monospace;z-index:7" hidden></output>
 
 <script>
 (function () {
@@ -159,8 +159,22 @@
     if (frame && frame.parentNode) frame.parentNode.replaceChild(next, frame);
     else frameHost.appendChild(next);
     frame = next;
+    applyFrameSize();
     return frame;
   }
+
+  function applyFrameSize() {
+    var size=document.getElementById('zipViewport').value;
+    if(size==='fit'){frame.style.flex='1';frame.style.width='100%';frame.style.height='100%';}
+    else {var parts=size.split(',');frame.style.flex='none';frame.style.width=parts[0]+'px';frame.style.height=parts[1]+'px';frame.style.margin='0 auto';}
+  }
+  document.getElementById('zipViewport').addEventListener('change',applyFrameSize);
+  document.querySelector('.stage').style.overflow='auto';
+  window.addEventListener('message',function(event){
+    if(event.source!==frame.contentWindow || event.data?.kind!=='zip-missing-asset')return;
+    var missing=document.getElementById('zipMissing');missing.hidden=false;
+    missing.textContent='Missing packaged asset: '+event.data.path;
+  });
 
   // ZIP review never clears browser caches, registrations or saved player data.
   function wipePlayerCache() { return Promise.resolve(); }
@@ -171,7 +185,9 @@ function zipAssetBridge(assetMap) {
     if (typeof value !== 'string' || /^(data:|blob:|https?:|\/\/|#|mailto:)/i.test(value)) return value;
     try {
       var path = new URL(value, 'https://zip.local/').pathname.replace(/^\//, '');
-      return assetMap[path] || value;
+      if(assetMap[path])return assetMap[path];
+      if(/^(assets|voices|x1|vendor)\//.test(path))parent.postMessage({kind:'zip-missing-asset',path:path},'*');
+      return value;
     } catch (_) { return value; }
   }
   function css(value) {
@@ -204,6 +220,7 @@ function zipAssetBridge(assetMap) {
   }
   for(var name of ['background','backgroundImage','borderImage','borderImageSource','maskImage','webkitMaskImage'])property(window.CSSStyleDeclaration?.prototype,name,css);
   if(window.CSSStyleDeclaration){var setProperty=CSSStyleDeclaration.prototype.setProperty;CSSStyleDeclaration.prototype.setProperty=function(name,value,priority){return setProperty.call(this,name,css(value),priority);};}
+  if(window.Audio){var NativeAudio=window.Audio;window.Audio=function(src){return src===undefined?new NativeAudio():new NativeAudio(resolve(src));};window.Audio.prototype=NativeAudio.prototype;}
   if(window.Worker){var NativeWorker=window.Worker;window.Worker=function(url,options){return new NativeWorker(resolve(String(url)),options);};window.Worker.prototype=NativeWorker.prototype;}
   // Blob previews cannot install a game service worker. Leave existing registrations/caches alone.
   if(navigator.serviceWorker)try{navigator.serviceWorker.register=function(){return Promise.reject(new Error('ZIP preview uses its packaged assets; service-worker registration skipped.'));};}catch(_){}
@@ -419,7 +436,12 @@ function zipAssetBridge(assetMap) {
     });
   }
 
-  function playZipBuffer(buf, label) {
+  async function playZipBuffer(buf, label) {
+    var digest=await crypto.subtle.digest('SHA-256',buf);
+    var checksum=Array.from(new Uint8Array(digest),function(x){return x.toString(16).padStart(2,'0');}).join('');
+    document.getElementById('zipMissing').hidden=true;
+    document.getElementById('zipReceipt').textContent=label+' · '+buf.byteLength+' bytes · SHA256 '+checksum;
+
     toast("Reading " + label + "\u2026");
     return readZip(buf).then(function (files) {
       var indexes = Object.keys(files).filter(function (name) {
