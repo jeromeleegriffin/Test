@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '846-no-thunder-review-20261019';
+const APP_VERSION = '846-complete-repairs-20261019';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -10987,7 +10987,81 @@ function allRemainingCardsAreDefiniteWinners(seat) {
   return hand.length > 0 && hand.every((c) => cardIsDefiniteWinner(c, seat));
 }
 
-/** Only lay down when every leftover card is a stone-cold winner. */
+/** Prove a winning sequence against every legal response, without changing play. */
+function proveRestByLeading(seat) {
+  const hands = game.hands.map((h) => [...h]);
+  if (!game.trump || hands.some((h) => h.length > 16)) return false;
+  const masks = hands.map((h) => (1 << h.length) - 1);
+  const responders = [0, 1, 2, 3].filter((i) => i !== seat);
+  const memo = new Map();
+  let budget = 12000;
+  const cards = (i, mask) => hands[i].filter((c, j) => mask & (1 << j));
+  function win(state) {
+    if (--budget < 0) return false; // An uncompleted proof never authorizes a claim.
+    if (!state[seat]) return state.every((m) => m === 0);
+    const key = state.join(',');
+    if (memo.has(key)) return memo.get(key);
+    const available = state.map((m, i) => cards(i, m));
+    for (let j = 0; j < hands[seat].length; j++) {
+      if (!(state[seat] & (1 << j))) continue;
+      const lead = hands[seat][j];
+      const led = isTrumpCard(lead, game.trump) ? game.trump : lead.color;
+      const replies = responders.map((i) =>
+        hands[i].map((card, n) => ({ card, n })).filter(({ card, n }) =>
+          (state[i] & (1 << n)) && canPlay(card, available[i], led, game.trump)
+        )
+      );
+      if (replies.some((choices) => !choices.length || choices.some(({ card }) =>
+        compareCards(card, lead, led, game.trump) > 0
+      ))) continue;
+      const next = [...state];
+      next[seat] &= ~(1 << j);
+      function everyReply(k) {
+        if (--budget < 0) return false;
+        if (k === responders.length) return win(next);
+        const i = responders[k];
+        for (const { n } of replies[k]) {
+          next[i] = state[i] & ~(1 << n);
+          if (!everyReply(k + 1)) return false;
+        }
+        return true;
+      }
+      if (everyReply(0)) {
+        memo.set(key, true);
+        return true;
+      }
+      if (budget < 0) break;
+    }
+    memo.set(key, false);
+    return false;
+  }
+  return win(masks);
+}
+
+/** Fast certificate: draw every opposing trump, then cash only unbeatable cards. */
+function canDrawTrumpAndCashWinners(seat) {
+  const hands = game.hands;
+  const own = hands[seat];
+  if (!game.trump || hands.some((h) => h.length !== own.length)) return false;
+  const trumps = own.filter((c) => isTrumpCard(c, game.trump))
+    .sort((a, b) => compareCards(b, a, game.trump, game.trump));
+  const others = hands.filter((h, i) => i !== seat);
+  const opposingTrumps = others.map((h) => h.filter((c) => isTrumpCard(c, game.trump)));
+  const draws = Math.max(...opposingTrumps.map((h) => h.length));
+  if (trumps.length < draws) return false;
+  for (let n = 0; n < draws; n++) {
+    if (opposingTrumps.some((h) => h.length > n && h.some((c) =>
+      compareCards(c, trumps[n], game.trump, game.trump) > 0
+    ))) return false;
+  }
+  return own.filter((c) => !isTrumpCard(c, game.trump)).every((c) =>
+    others.every((h) => h.every((reply) => isTrumpCard(reply, game.trump) ||
+      reply.color !== c.color || compareCards(reply, c, c.color, game.trump) <= 0
+    ))
+  );
+}
+
+/** A claim needs either independent winners or a fully proved lead sequence. */
 function playerCanForceRest(seat) {
   if (!game || !game.hands) return false;
   const my = game.hands[seat] || [];
@@ -10997,21 +11071,36 @@ function playerCanForceRest(seat) {
     if (i !== seat) opp += (game.hands[i] || []).length;
   }
   if (!opp) return true;
-  return allRemainingCardsAreDefiniteWinners(seat);
+  const onlyTrumps = my.every((c) => isTrumpCard(c, game.trump));
+  const otherTrumps = game.hands.some((h, i) => i !== seat && h.some((c) => isTrumpCard(c, game.trump)));
+  // An opponent can follow once, become void, then trump the next winner.
+  // The old independent-card shortcut is safe only without that future ruff.
+  if ((onlyTrumps || !otherTrumps) && allRemainingCardsAreDefiniteWinners(seat)) return true;
+  if (canDrawTrumpAndCashWinners(seat)) return true;
+  const key = JSON.stringify([
+    seat, game.trump, specialsAnytime, mustTrumpWhenVoid, onesHigh, rookLowest,
+    includeRook, includeRed1, includeRed2,
+    game.hands.map((h) => h.map((c) => [c.id, c.color, c.rank])),
+  ]);
+  if (playerCanForceRest.proofCache?.key === key) return playerCanForceRest.proofCache.result;
+  const result = proveRestByLeading(seat);
+  playerCanForceRest.proofCache = { key, result };
+  return result;
 }
 
 /**
  * Returns { seat, reason: 'trumps'|'rest' } when one player may claim the rest,
- * or null. Respects claimDeclined for the current hand.
+ * or null. Continue Playing dismisses the current opportunity until a card is played.
  */
 function getRestClaimInfo() {
   if (layDownWinningCards === false) return null;
   if (!game || game.phase !== 'play' || !game.hands) return null;
   if (game.claimDeclined) return null;
+  if (game.paused) return null;
   if (game.claimAnimation || game.claimAnimating) return null;
   if (game.resolvingTrick) return null;
   // Mid-trick: wait until the trick resolves
-  if (game.trick && game.trick.length > 0 && game.trick.length < 4) return null;
+  if (game.trick && game.trick.length > 0) return null;
   const left = remainingCardsInHands();
   if (left < 2) return null;
   // Last trick (one card each) — just play it out. No lay-down.
@@ -11019,18 +11108,9 @@ function getRestClaimInfo() {
   for (let i = 0; i < 4; i++) maxLeft = Math.max(maxLeft, (game.hands[i] || []).length);
   if (maxLeft <= 1) return null;
 
-  const force = [];
-  for (let i = 0; i < 4; i++) {
-    if (playerCanForceRest(i)) force.push(i);
-  }
-  if (force.length === 1) {
-    const seat = force[0];
+  const seat = game.currentPlayer;
+  if (Number.isInteger(seat) && seat >= 0 && seat < 4 && playerCanForceRest(seat)) {
     return { seat, reason: getAllTrumpsHolder() === seat ? 'trumps' : 'rest' };
-  }
-
-  const trumpHolder = getAllTrumpsHolder();
-  if (trumpHolder != null && playerCanForceRest(trumpHolder)) {
-    return { seat: trumpHolder, reason: 'trumps' };
   }
   return null;
 }
@@ -11042,7 +11122,13 @@ function getRestClaimHolder() {
 
 function showAllTrumpsClaimUI() {
   if (isSpectator || !game || game.phase !== 'play') return;
-  const info = getRestClaimInfo();
+  if (game.paused || game.resolvingTrick || game.claimAnimating || game.claimDeclined) return;
+  if (game.trick?.length) return;
+  // Guests have no opponents' hands. Only the host can prove eligibility;
+  // guests display its public authorization, and the host rechecks on submit.
+  const info = isHost ? getRestClaimInfo() :
+    (Number.isInteger(game.trumpClaimPlayer) ?
+      { seat: game.trumpClaimPlayer, reason: game.trumpClaimReason || 'rest' } : null);
   if (!info || info.seat !== myIndex) return;
   // Only when it is the claimer's turn to play
   if (game.currentPlayer !== myIndex) return;
@@ -11086,6 +11172,7 @@ function showAllTrumpsClaimUI() {
 
 function hostDeclineClaim(player) {
   if (!isHost || !game || game.phase !== 'play') return;
+  if (player !== game.currentPlayer) return;
   const info = getRestClaimInfo();
   if (!info || info.seat !== player) return;
   game.claimDeclined = true;
@@ -11497,6 +11584,8 @@ function hostProcessPlay(data) {
   const card = hand[idx];
   if (!canPlay(card, hand, game.ledColor, game.trump)) return;
 
+  // Continue Playing dismisses this opportunity, not every later lead.
+  game.claimDeclined = false;
   hand.splice(idx, 1);
   if (!game.ledColor) {
     game.ledColor = card.color === 'rook' || isRed2(card) || isRed1(card) ? game.trump : card.color;
@@ -13301,6 +13390,7 @@ function broadcastState() {
           : matchTricks
         : [],
     trumpClaimPlayer: getRestClaimHolder(),
+    trumpClaimReason: getRestClaimInfo()?.reason || null,
     revealedHands: null,
     claimDeclined: !!game.claimDeclined,
     claimAnimation: game.claimAnimation || null,
@@ -13416,6 +13506,7 @@ function applyState(data) {
       : game.widowSpread || [],
     handPoints: data.handPoints || game.handPoints || [0, 0],
     trumpClaimPlayer: data.trumpClaimPlayer != null ? data.trumpClaimPlayer : null,
+    trumpClaimReason: data.trumpClaimReason || null,
     revealedHands: null,
     claimDeclined: !!data.claimDeclined,
     claimAnimation: data.claimAnimation || null,
