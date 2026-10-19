@@ -695,11 +695,8 @@
         ['owl', 'Owls'],
         ['wind', 'Wind'],
       ])
-        action(
-          body,
-          title,
-          'Volume' + (key === 'crickets' ? ' and frequency' : ''),
-          () => ambientSound(key, title)
+        action(body, title, 'Volume' + (key === 'crickets' ? ' and frequency' : ''), () =>
+          ambientSound(key, title)
         );
     }
     function rangeControl(body, title, value, change) {

@@ -179,9 +179,7 @@
         width: r.w + 'px',
         height: r.h + 'px',
       });
-      glow.style.opacity = String(
-        (kind === 'seal' ? 0.5 : 0.12) * visible
-      );
+      glow.style.opacity = String((kind === 'seal' ? 0.5 : 0.12) * visible);
       art.style.opacity = String(visible);
       if (kind === 'seal')
         art.style.transform = reduced
