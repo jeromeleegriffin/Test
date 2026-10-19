@@ -1075,15 +1075,6 @@
     }
 
     function paint() {
-      if (modalId === 'botPickerModal') {
-        [...body.children].forEach((e) => e.removeAttribute('data-house-legacy-hidden'));
-        const q = HORChoiceRows841.status(body);
-        buttons[0].disabled = !q.previous;
-        buttons[1].disabled = !q.next;
-        nav.querySelector('span').textContent = q.current + ' / ' + q.total;
-        nav.hidden = false;
-        return;
-      }
       [...body.children].forEach((e, i) =>
         e.toggleAttribute('data-house-legacy-hidden', !pages[page]?.includes(i))
       );
@@ -1107,11 +1098,7 @@
       });
       const items = all.filter((e) => !e.hasAttribute('data-search-hidden'));
       if (empty) empty.hidden = !!items.length;
-      if (modalId === 'botPickerModal') {
-        if (reset) body.scrollTop = 0;
-        paint();
-        return;
-      }
+      if (modalId === 'botPickerModal') body.scrollTop = 0;
       nav.hidden = false;
       pages = [];
       let group = [],
@@ -1140,22 +1127,13 @@
       frame = requestAnimationFrame(() => layout(reset));
     }
     buttons[0].onclick = () => {
-      if (modalId === 'botPickerModal') {
-        HORChoiceRows841.move(body, -1);
-        return;
-      }
       page = Math.max(0, page - 1);
       paint();
     };
     buttons[1].onclick = () => {
-      if (modalId === 'botPickerModal') {
-        HORChoiceRows841.move(body, 1);
-        return;
-      }
       page = Math.min(pages.length - 1, page + 1);
       paint();
     };
-    if (modalId === 'botPickerModal') body.addEventListener('scroll', paint, { passive: true });
     new MutationObserver(() => schedule(true)).observe(body, { childList: true });
     new MutationObserver(() => {
       if (search) search.value = '';
