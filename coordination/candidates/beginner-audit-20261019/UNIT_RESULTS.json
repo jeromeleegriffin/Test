@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "environment": "Node + JSDOM 26.1.0; DOM simulation, not a real browser",
+  "results": [
+    {
+      "name": "All five moved mixer rows and mute update readouts, save and restore on a fresh load",
+      "status": "PASS"
+    },
+    {
+      "name": "Selected-rule tutorial and adaptive nest instructions",
+      "status": "PASS",
+      "variants": 1024,
+      "nestCases": 3
+    },
+    {
+      "name": "Custom target validation stays synchronized across resets and reopens",
+      "status": "PASS"
+    },
+    {
+      "name": "Both hand roots survive repaints: accessible cards, rejected tap, held explanation and keyboard legal play",
+      "status": "PASS"
+    },
+    {
+      "name": "Nine-card discard flow: exact wording/count, excess rejection, return and original confirm path",
+      "status": "PASS"
+    },
+    {
+      "name": "Offline invitations cannot copy or share; real hosted rooms remain eligible",
+      "status": "PASS"
+    },
+    {
+      "name": "Approved assets, voices, AI, rules and career core retained byte for byte; award IDs and thresholds unchanged",
+      "status": "PASS",
+      "protectedFiles": 1475
+    }
+  ]
+}

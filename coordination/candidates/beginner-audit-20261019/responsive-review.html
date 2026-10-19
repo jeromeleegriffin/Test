@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Beginner repair candidate — viewport review</title>
+<style>
+body{margin:0;background:#11151d;color:#f4e8cc;font:14px system-ui,sans-serif}header{padding:10px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}h1{font-size:16px;margin:0}p{margin:0;color:#c7c9ce;font-size:12px}select,button{font:inherit;padding:5px}main{display:flex;justify-content:center}iframe{display:block;background:#090b10;border:1px solid #b28c41;flex:none}a{color:#f4d78a}
+</style></head>
+<body><header><h1>Beginner repair candidate</h1><label>Viewport <select id="size"><option value="393,740">Phone portrait · 393 × 740</option><option value="320,568">Small phone · 320 × 568</option><option value="844,390">Phone landscape · 844 × 390</option><option value="1024,768">Tablet landscape · 1024 × 768</option></select></label><a href="../../../index.html" target="_blank">Open game directly</a><p>Embedded CSS viewport test. Physical device, touch, browser bars, installation and audio quality need separate review. Both live sites remain unchanged.</p></header>
+<main><iframe id="game" title="Isolated game candidate" src="../../../index.html" width="393" height="740" allow="autoplay; fullscreen" allowfullscreen></iframe></main>
+<script>
+const sizes=document.getElementById('size'),frame=document.getElementById('game');
+sizes.addEventListener('change',()=>{const [w,h]=sizes.value.split(',');frame.width=w;frame.height=h;});
+</script></body></html>
