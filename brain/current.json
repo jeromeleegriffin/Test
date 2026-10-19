@@ -1269,7 +1269,7 @@
     "sourceCiRun": 39202779134,
     "sourceCiConclusion": "success",
     "deployed": false,
-    "gameZipDelivered": false,
+    "gameZipDelivered": true,
     "buildNumberReserved": false,
     "handoff": "candidates/asset-cleanup-20261019/COMPREHENSIVE_HANDOFF.txt",
     "evidence": "../coordination/candidates/asset-cleanup-20261019",
@@ -1279,5 +1279,21 @@
     "zipLibraryFileId": "libfile_7715f5406e0c8191b4c64a9bd6d4ce56",
     "deliveryStatus": "SAVED_READY_FOR_OWNER_DOWNLOAD",
     "browserEvidence": "../coordination/candidates/asset-cleanup-20261019/ZIP_BROWSER_RESULTS.json"
+  },
+  "pendingHouseEffectsConsolidation": {
+    "status": "CONSOLIDATED_SOURCE_ONE_FULL_MATCH_VERIFIED_FINAL_ZIP_NOT_CREATED",
+    "branch": "candidate/house-effects-v12-consolidation-20261019",
+    "baseCommit": "c09c7632fff9cf0df2ff3920c3d3406fddd428a8",
+    "runtimeCommit": "edfcfb1e7fe2f623fb21a6da1216858598a547a2",
+    "inputZipLibraryId": "libfile_f0a105af5a8081918d1aa0b4f966d96e",
+    "inputZipSha256": "ee0d2aa5a27ad6e15d3ccbbd37b6f7300f60e5d22d7a737799d32919367076eb",
+    "sourcePreviewFullMatches": 1,
+    "sourcePreviewScoredHands": 8,
+    "newCompleteZipCreated": false,
+    "futureExactZipMatchesRequired": 5,
+    "futureExactZipMatchesCompleted": 0,
+    "deployed": false,
+    "handoff": "candidates/house-effects-v12-20261019/COMPREHENSIVE_HANDOFF.txt",
+    "evidence": "../coordination/candidates/house-effects-v12-20261019/CONSOLIDATION_RESULTS.json"
   }
 }

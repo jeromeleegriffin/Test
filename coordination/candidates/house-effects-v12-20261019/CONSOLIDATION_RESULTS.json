@@ -1,0 +1,87 @@
+{
+  "status": "CONSOLIDATED_SOURCE_ONE_FULL_MATCH_VERIFIED_FINAL_ZIP_NOT_CREATED",
+  "runtimeCommit": "edfcfb1e7fe2f623fb21a6da1216858598a547a2",
+  "branch": "candidate/house-effects-v12-consolidation-20261019",
+  "baseCommit": "c09c7632fff9cf0df2ff3920c3d3406fddd428a8",
+  "inputZipSha256": "ee0d2aa5a27ad6e15d3ccbbd37b6f7300f60e5d22d7a737799d32919367076eb",
+  "sourceCiRun": 39206327464,
+  "sourceCiConclusion": "success",
+  "localSourceChecks": "PASS including65scripts,1455precachepaths,Prettier",
+  "lifecycleTests": "30shufflecycles+timing+duplicates+skip+cancel+hidden+deadline+actualcardIDs PASS",
+  "retainedProtectedFilesByteEqual": 1411,
+  "browser": {
+    "fullMatches": 1,
+    "scoredHands": 8,
+    "target": 1000,
+    "handScores": [
+      [
+        65,
+        135
+      ],
+      [
+        65,
+        335
+      ],
+      [
+        105,
+        495
+      ],
+      [
+        265,
+        535
+      ],
+      [
+        285,
+        715
+      ],
+      [
+        335,
+        865
+      ],
+      [
+        450,
+        950
+      ],
+      [
+        600,
+        1000
+      ]
+    ],
+    "effectOrder": [
+      "trick",
+      "seal",
+      "raven",
+      "seal",
+      "trick",
+      "raven",
+      "seal",
+      "raven"
+    ],
+    "winner": "Raven",
+    "skipEffect": "Hand8 button activated; scoreboard and completion followed",
+    "orientation": "Portrait393x740,landscape844x390,mid-Seal landscape-to-portrait; scoreboard reachable",
+    "realFinalTrickExample": [
+      "red-8",
+      "green-10",
+      "yellow-8",
+      "red-10"
+    ],
+    "effectImagesLoaded": true,
+    "finalRavenOpacity": "1 with positive130x124renderedbounds",
+    "endHandFilteredConsoleErrors": []
+  },
+  "limits": [
+    "Screenshots of transient effects returned earlier render phases; screenshots are not sufficient visual acceptance. Actual DOM confirmed loaded assets, expected IDs, opacity1 and bounds. Owner physical-device visual/audio acceptance remains pending.",
+    "Normal-game FinalTrick actualcardIDs verified; precise live-card registration for automatic claims/guest rendering is not fully certified. Missing DOM anchors use a centered stack, never fake sample cards.",
+    "Physical Android audio unlock/quality, complete audio copyright chain audit, native touch and WAN multiplayer not certified. Inherited source provenance retained; no new external audio downloaded.",
+    "Rapid landscape keyboard inputs sometimes ignored; visible-card click retries completed play. No cleanup regression established.",
+    "One source-preview full match is not five matches on a future exact combined ZIP. That package does not yet exist; acceptance counter must start0.",
+    "No additional build number or deployment authority inferred."
+  ],
+  "liveHeads": {
+    "Test/main": "854b1a452d074f863ceb883545e6dbfa4ce726a9",
+    "Griffin-House-of-Rooks/main": "01e809d5079510fad9fe61a6c73633e94b637460"
+  },
+  "noDeployment": true,
+  "verifiedAtUtc": "2026-10-19T07:15:51.317229+00:00"
+}

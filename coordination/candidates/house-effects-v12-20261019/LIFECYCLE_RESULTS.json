@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "shuffledHands": 30,
+  "uniquePerCycle": true,
+  "boundaryRepeats": 0,
+  "revealAtMs": 2150,
+  "finishAtMs": 3200,
+  "skipCancelHiddenDeadline": "PASS",
+  "actualCardIdsIncludingBirds": "PASS"
+}
