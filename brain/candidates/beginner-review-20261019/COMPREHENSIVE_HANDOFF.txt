@@ -1,3 +1,12 @@
+PORTRAIT SCREENSHOT INVESTIGATION — 2026-10-19
+
+Owner reports portrait graphics changed and card smaller (71882.jpg). At identical 393 x 740 CSS viewports, preserved 845, live-source 846 and repaired candidate all show 33 x 48 CSS-pixel cards in ten-card hands. Each card position's rendered bounds also match across all three; nest area is 98 x 136 in all three. Header/LAST, labels and existing table/holder/bid furniture reproduce in preserved source. This does not establish what differs from the owner's remembered approved view or physical phone viewport. Clarification needed: bottom hand cards versus center nest/played card. Do not dismiss owner report or claim physical Android approval. No game artwork, geometry or source changed in this investigation. Isolated comparison page was added to the candidate branch only. Both live branches remain unchanged.
+
+Evidence: coordination/candidates/beginner-audit-20261019/PORTRAIT_REVIEW.json
+Comparison: coordination/candidates/beginner-audit-20261019/portrait-compare.html
+
+================ PREVIOUS COMPLETE HANDOFF (PRESERVED) ================
+
 PREVIEW CANVAS FOLLOW-UP — 2026-10-19
 
 Owner supplied an Android screenshot showing an uncaught getImageData SecurityError on the immutable preview previously recommended. The error had been observed intermittently during the earlier review and should have been repaired before directing the owner to that link.

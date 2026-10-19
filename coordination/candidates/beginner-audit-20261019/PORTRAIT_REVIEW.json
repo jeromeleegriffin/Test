@@ -1,0 +1,27 @@
+{
+  "status": "OWNER_REPORTED_PORTRAIT_DIFFERENCE_PENDING_CLARIFICATION",
+  "ownerReport": "Portrait graphics changed and card smaller; Android screenshot 71882.jpg",
+  "testedCssViewport": [
+    393,
+    740
+  ],
+  "comparisonPage": "coordination/candidates/beginner-audit-20261019/portrait-compare.html",
+  "sources": {
+    "preserved845": "26cf989cedfc6e7bde269f1b22690afeaa558a45/builds/845",
+    "baseline846": "854b1a452d074f863ceb883545e6dbfa4ce726a9",
+    "candidate": "dbead58159e1def3336a3fb87a3b2c61a834ed6a"
+  },
+  "observations": [
+    "All three ten-card hands compute to 33px wide by 48px high per card; per-position rendered bounds match across all three",
+    "Nest area is 98px wide by 136px high in all three",
+    "Same portrait labels, header/LAST, table, holder and bid artwork reproduced",
+    "No card/table sizing styles or image assets changed by beginner repair; only CSS change scoped to dialogs/offline invitations",
+    "Preserved 845 and 846 previews show known canvas SecurityError on this CDN; candidate does not"
+  ],
+  "limitations": [
+    "Actual owner Android viewport not available",
+    "Owner has not yet identified whether the bottom hand or center nest/played card is smaller",
+    "No approved-layout acceptance inferred; no graphic/game code changed during this investigation"
+  ],
+  "deployed": false
+}
