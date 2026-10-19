@@ -1,0 +1,1435 @@
+{
+  "zip": "Griffin_House_Consolidated_20261019.zip",
+  "sha256": "33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778",
+  "matches": [
+    {
+      "number": 1,
+      "target": 500,
+      "rules": "standard Red Two on, top nest on",
+      "hands": [
+        {
+          "number": 1,
+          "griffin": 65,
+          "raven": 135,
+          "bid": 120,
+          "trump": "green",
+          "made": true,
+          "effect": "seal"
+        },
+        {
+          "number": 2,
+          "griffin": 125,
+          "raven": 275,
+          "bid": 120,
+          "trump": "black",
+          "made": true,
+          "effect": "trick"
+        },
+        {
+          "number": 3,
+          "griffin": 300,
+          "raven": 300,
+          "bid": 100,
+          "trump": "black",
+          "made": true,
+          "effect": "raven"
+        },
+        {
+          "number": 4,
+          "griffin": 470,
+          "raven": 330,
+          "bid": 115,
+          "trump": "black",
+          "made": true,
+          "viewport": "844x390",
+          "effectCapture": "effect finished before DOM read"
+        },
+        {
+          "number": 5,
+          "griffin": 540,
+          "raven": 460,
+          "bid": 120,
+          "trump": "red",
+          "made": true,
+          "effect": "raven"
+        }
+      ],
+      "completed": true,
+      "result": "Griffin wins 540–460",
+      "completionSnapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\" [selected]\n  - option \"Tall phone portrait\"\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 3\": ★3\n  - status\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 1\": ★1\n  - generic: June\n  - button \"Career level 2\": ★2\n  - generic: Grit\n  - button \"Career level 1\": ★1\n  - text: ▶\n  - banner:\n    - generic: Match complete\n    - heading \"Griffin Wins!\" [level=1]\n    - paragraph: Final A 540 – B 460 · Two biggest tricks from the winning side\n  - generic: Final\n  - generic: Griffin 540 · Raven 460\n  - generic: Hands\n  - generic: 5 made · 0 set\n  - generic: Biggest capture\n  - generic: 30 points · Cleanup ZIP One\n  - generic: First chair\n  - generic: Cleanup ZIP One\n  - article:\n    - generic: Second biggest · 25 pts\n    - text: Taken by\n    - emphasis: Cleanup ZIP One\n    - generic: Hand 5 · Trump Red · Led Green\n    - img \"Winning card\"\n    - img \"green 1\"\n    - generic: Cleanup ZIP One\n    - img \"green 13\"\n    - generic: Ivy\n    - img \"green 10\"\n    - generic: June\n    - img \"green 7\"\n    - generic: Grit\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "number": 2,
+      "target": 100,
+      "rules": "standard; human high contract/discard/trump test",
+      "hands": [
+        {
+          "number": 1,
+          "griffin": -195,
+          "raven": 70,
+          "bid": 195,
+          "trump": "red",
+          "made": false,
+          "discardCount": 6
+        }
+      ],
+      "completed": true,
+      "result": "Raven wins −195–70 under negative-target loss rule",
+      "completionSnapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\" [selected]\n  - option \"Tall phone portrait\"\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 3\": ★3\n  - status\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 2\": ★2\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - text: ▶\n  - banner:\n    - generic: Match complete\n    - heading \"Griffin Wins!\" [level=1]: Raven Wins!\n    - paragraph: Final A -195 – B 70 · Two biggest tricks from the winning side\n  - generic: Final\n  - generic: Griffin -195 · Raven 70\n  - generic: Griffin reached −100.\n  - generic: Hands\n  - generic: 5 made · 1 set\n  - generic: Biggest capture\n  - generic: 35 points · Ivy\n  - generic: First chair\n  - generic: Cleanup ZIP One\n  - article:\n    - generic: Biggest trick · 35 pts\n    - text: Taken by\n    - emphasis: Ivy\n    - generic: Hand 1 · Trump Red · Led Red\n    - img \"red 14\"\n    - generic \"trump\": ★\n    - generic: Cleanup ZIP One\n    - img \"Winning card\"\n    - img \"red 1\"\n    - generic \"trump\": ★\n    - generic: Ivy\n    - img \"green 8\"\n    - generic: June\n    - img \"green 10\"\n    - generic: Grit\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "number": 3,
+      "target": 100,
+      "rules": "Low Bird on; must trump when void on; small phone",
+      "hands": [
+        {
+          "number": 1,
+          "griffin": -105,
+          "raven": 140,
+          "bid": 105,
+          "trump": "red",
+          "made": false
+        }
+      ],
+      "completed": true,
+      "result": "Raven wins −105–140",
+      "completionSnapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\"\n  - option \"Small phone\" [selected]\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 3\": ★3\n  - status\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 2\": ★2\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - text: ▶\n  - banner:\n    - generic: Match complete\n    - heading \"Griffin Wins!\" [level=1]: Raven Wins!\n    - paragraph: Final A -105 – B 140 · Two biggest tricks from the winning side\n  - generic: Final\n  - generic: Griffin -105 · Raven 140\n  - generic: Hands\n  - generic: 5 made · 2 set\n  - generic: Biggest capture\n  - generic: 30 points · Grit\n  - generic: First chair\n  - generic: Cleanup ZIP One\n  - article:\n    - generic: Biggest trick · 30 pts\n    - text: Taken by\n    - emphasis: Grit\n    - generic: Hand 1 · Trump Red · Led Yellow\n    - img \"yellow 5\"\n    - generic: June\n    - img \"Winning card\"\n    - img \"Red 2\"\n    - generic: Grit\n    - img \"green 5\"\n    - generic: Cleanup ZIP One\n    - img \"yellow 13\"\n    - generic: Ivy\n  - button \"Copy night’s scores\"\n  - button \"Waiting Room\"\n  - button \"Rematch\"\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "number": 4,
+      "target": 250,
+      "rules": "Red Two off; top nest off; Bird high; must trump when void; nest to bidder",
+      "hands": [
+        {
+          "number": 1,
+          "griffin": -175,
+          "raven": 25,
+          "bid": 175,
+          "trump": "black",
+          "made": false,
+          "discardCount": 9,
+          "nestPoints": 15
+        },
+        {
+          "number": 2,
+          "griffin": -60,
+          "raven": 90,
+          "bid": 100,
+          "trump": "yellow",
+          "made": true,
+          "effect": "seal"
+        },
+        {
+          "number": 3,
+          "griffin": 75,
+          "raven": 135,
+          "bid": 105,
+          "trump": "black",
+          "made": true,
+          "effect": "trick",
+          "careerLevel": 4
+        },
+        {
+          "number": 4,
+          "griffin": 145,
+          "raven": 245,
+          "bid": 100,
+          "trump": "black",
+          "made": true,
+          "effect": "raven"
+        },
+        {
+          "number": 5,
+          "griffin": 325,
+          "raven": 245,
+          "bid": 100,
+          "trump": "green",
+          "made": true,
+          "effect": "seal"
+        }
+      ],
+      "completed": true,
+      "result": "Griffin wins 325–245",
+      "completionSnapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 4\": ★4\n  - status\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 3\": ★3\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - text: ▶\n  - banner:\n    - generic: Match complete\n    - heading \"Griffin Wins!\" [level=1]\n    - paragraph: Final A 325 – B 245 · Two biggest tricks from the winning side\n  - generic: Final\n  - generic: Griffin 325 · Raven 245\n  - generic: Hands\n  - generic: 9 made · 3 set\n  - generic: Biggest capture\n  - generic: 30 points · Grit\n  - generic: First chair\n  - generic: Cleanup ZIP One\n  - article:\n    - generic: Biggest trick · 30 pts\n    - text: Taken by\n    - emphasis: Grit\n    - generic: Hand 4 · Trump Black · Led Black\n    - img \"Winning card\"\n    - img \"black 10\"\n    - generic: Grit\n    - img \"red 14\"\n    - generic: Cleanup ZIP One\n    - img \"yellow 10\"\n    - generic: Ivy\n    - img \"green 13\"\n    - generic \"trump\": ★\n    - generic: June\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "number": 5,
+      "target": 100,
+      "rules": "Standard restored; human Shoot the Moon test",
+      "hands": [
+        {
+          "number": 1,
+          "griffin": -200,
+          "raven": 45,
+          "bid": 200,
+          "trump": "green",
+          "made": false,
+          "moon": true,
+          "discardCount": 6
+        }
+      ],
+      "completed": true,
+      "result": "Raven wins −200–45 after failed Moon",
+      "completionSnapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 4\": ★4\n  - status\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 3\": ★3\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - text: ▶\n  - banner:\n    - generic: Match complete\n    - heading \"Griffin Wins!\" [level=1]: Raven Wins!\n    - paragraph: Final A -200 – B 45 · Two biggest tricks from the winning side\n  - generic: Final\n  - generic: Griffin -200 · Raven 45\n  - generic: Griffin reached −100.\n  - generic: Hands\n  - generic: 9 made · 4 set\n  - generic: Biggest capture\n  - generic: 45 points · Grit\n  - generic: First chair\n  - generic: Cleanup ZIP One\n  - article:\n    - generic: Biggest trick · 45 pts\n    - text: Taken by\n    - emphasis: Grit\n    - generic: Hand 1 · Trump Green · Led Red\n    - img \"red 5\"\n    - generic: June\n    - img \"Winning card\"\n    - img \"red 1\"\n    - generic: Grit\n    - img \"yellow 10\"\n    - generic: Cleanup ZIP One\n    - img \"black 1\"\n    - generic: Ivy\n  - button \"Copy night’s scores\"\n  - button \"Waiting Room\"\n  - button \"Rematch\"\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    }
+  ],
+  "actions": [
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-11",
+      "label": "Green 11. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-7",
+      "label": "Green 7. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "black-1",
+      "label": "Black 1. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "yellow-1",
+      "label": "Yellow 1. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "black-13",
+      "label": "Black 13. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "black-10",
+      "label": "Black 10. Play card",
+      "viewport": null
+    },
+    {
+      "type": "wait",
+      "message": "Error: Error: Playwright selector deadline exceeded\nlocator.waitFor(visible) timed out for selector #frame >> internal:control=enter-frame >> #myHand .card-face.playable[aria-disab",
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - generic \"Match score and game speed\":\n    - generic \"Raven 135 of 120 · Bid made\"\n    - generic \"Match score\":\n      - generic: \"Griffin: 65\"\n      - generic: \"Raven: 135\"\n    - generic \"Game speed\":\n      - button \"1×\"\n      - button \"3×\"\n      - button \"MAX\" [pressed]\n    - button \"LAST\"\n  - group \"Your hand\"\n  - status\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 3\": ★3\n  - button \"Menu\":\n  - button \"Leave table\":\n  - text: ▶\n  - generic: Ivy\n  - button \"Career level 1\": ★1\n  - generic: June\n  - button \"Career level 1\": ★1\n  - generic: Grit\n  - button \"Career level 1\": ★1\n  - generic: 🏆\n  - generic: Achievement Unlocked\n  - generic: Heavy Hitter — Bronze\n  - generic: You\n  - button \"Skip effect\"\n  - status: The Griffin Seal\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "type": "hand-state",
+      "match": 1,
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - generic \"Match score and game speed\":\n    - generic \"Raven 135 of 120 · Bid made\"\n    - generic \"Match score\":\n      - generic: \"Griffin: 65\"\n      - generic: \"Raven: 135\"\n    - generic \"Game speed\":\n      - button \"1×\"\n      - button \"3×\"\n      - button \"MAX\" [pressed]\n    - button \"LAST\"\n  - group \"Your hand\"\n  - status\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 3\": ★3\n  - button \"Menu\":\n  - button \"Leave table\":\n  - text: ▶\n  - generic: Ivy\n  - button \"Career level 1\": ★1\n  - generic: June\n  - button \"Career level 1\": ★1\n  - generic: Grit\n  - button \"Career level 1\": ★1\n  - generic: 🏆\n  - generic: Achievement Unlocked\n  - generic: Heavy Hitter — Bronze\n  - generic: You\n  - button \"Skip effect\"\n  - status: The Griffin Seal\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "black-7",
+      "label": "Black 7. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "yellow-1",
+      "label": "Yellow 1. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "yellow-13",
+      "label": "Yellow 13. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "yellow-9",
+      "label": "Yellow 9. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-13",
+      "label": "Green 13. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "black-13",
+      "label": "Black 13. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "black-12",
+      "label": "Black 12. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-14",
+      "label": "Green 14. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "black-11",
+      "label": "Black 11. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-11",
+      "label": "Green 11. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "yellow-12",
+      "label": "Yellow 12. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "red-1",
+      "label": "Red 1. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-10",
+      "label": "Green 10. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "yellow-1",
+      "label": "Yellow 1. Play card",
+      "root": "#ltHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "yellow-14",
+      "label": "Yellow 14. Play card",
+      "root": "#ltHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "red-14",
+      "label": "Red 14. Play card",
+      "root": "#ltHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "yellow-13",
+      "label": "Yellow 13. Play card",
+      "root": "#ltHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "yellow-12",
+      "label": "Yellow 12. Play card",
+      "root": "#ltHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "yellow-9",
+      "label": "Yellow 9. Play card",
+      "root": "#ltHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-14",
+      "label": "Green 14. Play card",
+      "root": "#ltHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-13",
+      "label": "Green 13. Play card",
+      "root": "#ltHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "rook",
+      "label": "Blackbird. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-1",
+      "label": "Green 1. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-11",
+      "label": "Green 11. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "red-13",
+      "label": "Red 13. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-9",
+      "label": "Green 9. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 1,
+      "id": "green-8",
+      "label": "Green 8. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "discard-disabled-empty",
+      "passed": true
+    },
+    {
+      "type": "extra-discard-rejected",
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\" [selected]\n  - option \"Tall phone portrait\"\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - generic \"Match score and game speed\":\n    - generic \"Raven 135 of 120 · Bid made\": Griffin 0 of 195 · Need 195 more\n    - generic \"Match score\":\n      - generic: \"Griffin: 0\"\n      - generic: \"Raven: 0\"\n    - generic \"Game speed\":\n      - button \"1×\"\n      - button \"3×\"\n      - button \"MAX\" [pressed]\n    - button \"LAST\"\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 3\": ★3\n  - status: Your turn\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 1\": ★1\n  - generic: June\n  - button \"Career level 2\": ★2\n  - generic: Grit\n  - button \"Career level 1\": ★1\n  - text: ▶\n  - region \"SELECT 6 TO DISCARD\":\n    - heading \"SELECT 6 TO DISCARD\" [level=2]\n    - paragraph: Choose 6 cards for the Nest.\n    - paragraph: 6 / 6 selected\n    - heading \"BIRD CARDS\" [level=3]\n    - button \"Blackbird\":\n    - button \"Red Two\":\n    - heading \"GREEN\" [level=3]\n    - button \"12 Green\" [pressed]:\n      - generic: ✓\n    - button \"11 Green\" [pressed]:\n      - generic: ✓\n    - button \"9 Green\" [pressed]:\n      - generic: ✓\n    - heading \"RED\" [level=3]\n    - button \"14 Red\":\n    - button \"12 Red\":\n    - button \"11 Red\":\n    - button \"10 Red\":\n    - button \"5 Red\":\n    - heading \"YELLOW\" [level=3]\n    - button \"1 Yellow\":\n    - button \"11 Yellow\" [pressed]:\n      - generic: ✓\n    - button \"6 Yellow\" [pressed]:\n      - generic: ✓\n    - heading \"BLACK\" [level=3]\n    - button \"14 Black\" [active]:\n    - button \"12 Black\" [pressed]:\n      - generic: ✓\n    - button \"5 Black\":\n    - button \"Confirm Discard\"\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "type": "accepted-card",
+      "match": 2,
+      "id": "rook",
+      "label": "Blackbird. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 2,
+      "id": "red-2",
+      "label": "Red Two. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 2,
+      "id": "red-14",
+      "label": "Red 14. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 2,
+      "id": "black-14",
+      "label": "Black 14. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 2,
+      "id": "red-12",
+      "label": "Red 12. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 2,
+      "id": "red-11",
+      "label": "Red 11. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 2,
+      "id": "red-10",
+      "label": "Red 10. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 2,
+      "id": "red-5",
+      "label": "Red 5. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 2,
+      "id": "black-5",
+      "label": "Black 5. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 2,
+      "id": "yellow-1",
+      "label": "Yellow 1. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "incorrect-card",
+      "id": "black-13",
+      "label": "Black 13. Must follow Red",
+      "stillHeld": 1,
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\"\n  - option \"Small phone\" [selected]\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - generic \"Match score and game speed\":\n    - generic \"Raven 135 of 120 · Bid made\": Griffin 0 of 105 · Need 105 more\n    - generic \"Match score\":\n      - generic: \"Griffin: 0\"\n      - generic: \"Raven: 0\"\n    - generic \"Game speed\":\n      - button \"1×\"\n      - button \"3×\"\n      - button \"MAX\" [pressed]\n    - button \"LAST\"\n  - text: ✓ ✓\n  - img \"red 14\"\n  - generic \"trump\": ★\n  - img \"red 1\"\n  - generic \"trump\": ★\n  - group \"Your hand\":\n    - button \"Blackbird. Bidding is still going — cards cannot be played yet\":\n      - img \"Black Raven\"\n    - button \"Black 13. Bidding is still going — cards cannot be played yet\" [disabled] [active]:\n      - img \"black 13\"\n    - button \"Black 11. Bidding is still going — cards cannot be played yet\" [disabled]:\n      - img \"black 11\"\n    - button \"Black 9. Bidding is still going — cards cannot be played yet\" [disabled]:\n      - img \"black 9\"\n    - button \"Black 5. Bidding is still going — cards cannot be played yet\" [disabled]:\n      - img \"black 5\"\n    - button \"Green 1. Bidding is still going — cards cannot be played yet\" [disabled]:\n      - img \"green 1\"\n    - button \"Green 14. Bidding is still going — cards cannot be played yet\" [disabled]:\n      - img \"green 14\"\n    - button \"Green 7. Bidding is still going — cards cannot be played yet\" [disabled]:\n      - img \"green 7\"\n    - button \"Green 5. Bidding is still going — cards cannot be played yet\" [disabled]:\n      - img \"green 5\"\n    - button \"Red 11. Bidding is still going — cards cannot be played yet\":\n      - img \"red 11\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 3\": ★3\n  - generic: POT • 25\n  - status: Your turn\n  - button \"Menu\":\n  - button \"Leave table\":\n  - status: Must follow Red\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 2\": ★2\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - generic: LEAD\n  - text: ▶\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "type": "accepted-card",
+      "match": 3,
+      "id": "rook",
+      "label": "Blackbird. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 3,
+      "id": "red-11",
+      "label": "Red 11. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 3,
+      "id": "black-13",
+      "label": "Black 13. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 3,
+      "id": "black-11",
+      "label": "Black 11. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 3,
+      "id": "black-9",
+      "label": "Black 9. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 3,
+      "id": "green-1",
+      "label": "Green 1. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 3,
+      "id": "black-5",
+      "label": "Black 5. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 3,
+      "id": "green-14",
+      "label": "Green 14. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 3,
+      "id": "green-7",
+      "label": "Green 7. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 3,
+      "id": "green-5",
+      "label": "Green 5. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "custom-target-zero-disabled",
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - button \"Cleanup ZIP One, view stat card\":\n    - strong:\n      - text: Cleanup ZIP One\n      - button \"Career level 3\": ★3\n  - button \"Ivy, remove bot\":\n    - strong:\n      - text: Ivy\n      - button \"Career level 2\": ★2\n    - generic: Bot · tap to remove\n  - button \"June, remove bot\":\n    - strong:\n      - text: June\n      - button \"Career level 2\": ★2\n    - generic: Bot · tap to remove\n  - button \"Grit, remove bot\":\n    - strong:\n      - text: Grit\n      - button \"Career level 2\": ★2\n    - generic: Bot · tap to remove\n  - heading \"Your table is ready\" [level=2]\n  - status: 4 of 4 seated\n  - generic \"Friends table controls\":\n    - button \"Game options for this table\": TABLE OFFLINE\n    - button \"Start Game\"\n    - button \"Leave Table\"\n  - dialog \"Game Setup\":\n    - banner:\n      - button \"Back to previous menu\": ‹ Back\n      - heading \"Game Setup\" [level=2]\n      - button \"Close\": ×\n    - generic: \"Play to:\"\n    - combobox\n    - textbox [active]:\n      - /placeholder: e.g. 750\n    - button [disabled]: Enter\n    - status: \"Enter a whole number from 1–2,000. Current target: 100.\"\n    - checkbox \"Include Red Two (special trump)\" [checked]\n    - text: Include Red Two (special trump)\n    - checkbox \"Reveal top nest card\" [checked]\n    - text: Reveal top nest card\n    - paragraph: Red Two and Show Top Nest Card are on by default. Changes apply to the next game.\n    - button \"More table rules Other existing game variations\":\n      - generic: More table rules\n      - generic: Other existing game variations\n    - button \"View selected rules How this table will play\":\n      - generic: View selected rules\n      - generic: How this table will play\n  - text: ▶\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "rook",
+      "label": "Blackbird. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-1",
+      "label": "Black 1. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-13",
+      "label": "Black 13. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "red-10",
+      "label": "Red 10. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-12",
+      "label": "Black 12. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-9",
+      "label": "Black 9. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-7",
+      "label": "Black 7. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-6",
+      "label": "Black 6. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-5",
+      "label": "Black 5. Play card",
+      "viewport": null
+    },
+    {
+      "type": "hand-state",
+      "match": 4,
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - generic \"Match score and game speed\":\n    - generic \"Raven 135 of 120 · Bid made\": Griffin 100 of 175 · Need 75 more\n    - generic \"Match score\":\n      - generic: \"Griffin: 0\"\n      - generic: \"Raven: 0\"\n    - generic \"Game speed\":\n      - button \"1×\"\n      - button \"3×\"\n      - button \"MAX\" [pressed]\n    - button \"LAST\"\n  - status: Thinking…\n  - img \"black 5\"\n  - generic: \"5\"\n  - generic: black\n  - generic \"trump\": ★\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 3\": ★3\n  - generic: POT • 5\n  - status: Trick won\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 2\": ★2\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - text: ▶\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "rook",
+      "label": "Blackbird. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-14",
+      "label": "Black 14. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-11",
+      "label": "Black 11. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "green-1",
+      "label": "Green 1. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "red-12",
+      "label": "Red 12. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-10",
+      "label": "Black 10. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "red-5",
+      "label": "Red 5. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "yellow-10",
+      "label": "Yellow 10. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "yellow-7",
+      "label": "Yellow 7. Play card",
+      "viewport": null
+    },
+    {
+      "type": "hand-state",
+      "match": 4,
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - generic \"Match score and game speed\":\n    - generic \"Raven 135 of 120 · Bid made\": Griffin 95 of 100 · Need 5 more\n    - generic \"Match score\":\n      - generic: \"Griffin: -175\"\n      - generic: \"Raven: 25\"\n    - generic \"Game speed\":\n      - button \"1×\"\n      - button \"3×\"\n      - button \"MAX\" [pressed]\n    - button \"LAST\"\n  - status: Thinking…\n  - img \"yellow 7\"\n  - generic: \"7\"\n  - generic: yellow\n  - generic \"trump\": ★\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 3\": ★3\n  - generic: POT • 0\n  - status\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 2\": ★2\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - text: ▶\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-8",
+      "label": "Black 8. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-5",
+      "label": "Black 5. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "red-1",
+      "label": "Red 1. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "green-13",
+      "label": "Green 13. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "red-13",
+      "label": "Red 13. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "red-12",
+      "label": "Red 12. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "green-6",
+      "label": "Green 6. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "yellow-1",
+      "label": "Yellow 1. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "yellow-11",
+      "label": "Yellow 11. Play card",
+      "viewport": null
+    },
+    {
+      "type": "hand-state",
+      "match": 4,
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - generic \"Match score and game speed\":\n    - generic \"Raven 135 of 120 · Bid made\": Griffin 105 of 105 · Bid made\n    - generic \"Match score\":\n      - generic: \"Griffin: -60\"\n      - generic: \"Raven: 90\"\n    - generic \"Game speed\":\n      - button \"1×\"\n      - button \"3×\"\n      - button \"MAX\" [pressed]\n    - button \"LAST\"\n  - status: Thinking…\n  - img \"yellow 13\"\n  - generic: \"13\"\n  - generic: yellow\n  - img \"yellow 14\"\n  - generic: \"14\"\n  - generic: yellow\n  - img \"yellow 11\"\n  - generic: \"11\"\n  - generic: yellow\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 3\": ★3\n  - generic: POT • 10\n  - status\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 2\": ★2\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - generic: LEAD\n  - text: ▶\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "rook",
+      "label": "Blackbird. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-1",
+      "label": "Black 1. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-6",
+      "label": "Black 6. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-5",
+      "label": "Black 5. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "green-1",
+      "label": "Green 1. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "green-14",
+      "label": "Green 14. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "red-14",
+      "label": "Red 14. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "red-9",
+      "label": "Red 9. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "yellow-13",
+      "label": "Yellow 13. Play card",
+      "root": "#myHand"
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "green-12",
+      "label": "Green 12. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "green-7",
+      "label": "Green 7. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 4,
+      "id": "black-9",
+      "label": "Black 9. Play card",
+      "viewport": null
+    },
+    {
+      "type": "wait",
+      "message": "Error: Error: Playwright selector deadline exceeded\nlocator.waitFor(visible) timed out for selector #frame >> internal:control=enter-frame >> #myHand .card-face.playable[aria-disab",
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - generic \"Match score and game speed\":\n    - generic \"Raven 135 of 120 · Bid made\": Griffin 180 of 100 · Bid made\n    - generic \"Match score\":\n      - generic: \"Griffin: 325\"\n      - generic: \"Raven: 245\"\n    - generic \"Game speed\":\n      - button \"1×\"\n      - button \"3×\"\n      - button \"MAX\" [pressed]\n    - button \"LAST\"\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 4\": ★4\n  - status\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 3\": ★3\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - text: ▶\n  - button \"Skip effect\"\n  - status: The Griffin Seal\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "type": "hand-state",
+      "match": 4,
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - generic \"Match score and game speed\":\n    - generic \"Raven 135 of 120 · Bid made\": Griffin 180 of 100 · Bid made\n    - generic \"Match score\":\n      - generic: \"Griffin: 325\"\n      - generic: \"Raven: 245\"\n    - generic \"Game speed\":\n      - button \"1×\"\n      - button \"3×\"\n      - button \"MAX\" [pressed]\n    - button \"LAST\"\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 4\": ★4\n  - status\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 3\": ★3\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - text: ▶\n  - button \"Skip effect\"\n  - status: The Griffin Seal\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    },
+    {
+      "type": "skip-effect",
+      "match": 4
+    },
+    {
+      "type": "accepted-card",
+      "match": 5,
+      "id": "green-1",
+      "label": "Green 1. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 5,
+      "id": "green-13",
+      "label": "Green 13. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 5,
+      "id": "yellow-1",
+      "label": "Yellow 1. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 5,
+      "id": "green-11",
+      "label": "Green 11. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 5,
+      "id": "green-10",
+      "label": "Green 10. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 5,
+      "id": "green-6",
+      "label": "Green 6. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 5,
+      "id": "green-5",
+      "label": "Green 5. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 5,
+      "id": "yellow-12",
+      "label": "Yellow 12. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 5,
+      "id": "yellow-11",
+      "label": "Yellow 11. Play card",
+      "viewport": null
+    },
+    {
+      "type": "accepted-card",
+      "match": 5,
+      "id": "yellow-10",
+      "label": "Yellow 10. Play card",
+      "viewport": null
+    },
+    {
+      "type": "hand-state",
+      "match": 5,
+      "snapshot": "- button \"HOME\"\n- generic: GRIFFIN_HOUSE_CONSOLIDATED_20261019.ZIP\n- text: Viewport\n- combobox \"Viewport\":\n  - option \"Phone portrait\"\n  - option \"Tall phone portrait\" [selected]\n  - option \"Small phone\"\n  - option \"Phone landscape\"\n  - option \"Tablet landscape\"\n  - option \"Fit screen\"\n- button \"RELOAD ZIP\"\n- iframe [active] [id=\"frame\"]:\n  - generic \"Match score and game speed\":\n    - generic \"Raven 135 of 120 · Bid made\": Griffin 155 of 200 · Need 45 more\n    - generic \"Match score\":\n      - generic: \"Griffin: 0\"\n      - generic: \"Raven: 0\"\n    - generic \"Game speed\":\n      - button \"1×\"\n      - button \"3×\"\n      - button \"MAX\" [pressed]\n    - button \"LAST\"\n  - status: Thinking…\n  - img \"red 5\"\n  - generic: \"5\"\n  - generic: red\n  - img \"red 1\"\n  - generic: \"1\"\n  - generic: red\n  - img \"yellow 10\"\n  - generic: \"10\"\n  - generic: yellow\n  - group \"Your hand\"\n  - button \"Cleanup ZIP One ★3 — View Career\":\n    - generic: Cleanup ZIP One\n    - generic \"Career level 4\": ★4\n  - generic: POT • 30\n  - status\n  - button \"Menu\":\n  - button \"Leave table\":\n  - generic: Ivy\n  - button \"Career level 2\": ★2\n  - generic: June\n  - button \"Career level 3\": ★3\n  - generic: Grit\n  - button \"Career level 2\": ★2\n  - generic: LEAD\n  - text: ▶\n- status: Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778"
+    }
+  ],
+  "effects": [
+    {
+      "cards": [
+        {
+          "id": "green-10",
+          "rect": {
+            "bottom": 457.0258483886719,
+            "height": 50.67669677734375,
+            "left": 150.0946807861328,
+            "right": 188.8740692138672,
+            "top": 406.3491516113281,
+            "width": 38.779388427734375,
+            "x": 150.0946807861328,
+            "y": 406.3491516113281
+          },
+          "style": "opacity: 1; left: 61.74px; top: 127.517px; transform: translate(-50%, -50%) translate(0px, 0px) rotate(-9deg);"
+        },
+        {
+          "id": "black-13",
+          "rect": {
+            "bottom": 451.6165466308594,
+            "height": 47.85809326171875,
+            "left": 170.32723999023438,
+            "right": 204.6415100097656,
+            "top": 403.7584533691406,
+            "width": 34.31427001953125,
+            "x": 170.32723999023438,
+            "y": 403.7584533691406
+          },
+          "style": "opacity: 1; left: 79.74px; top: 123.517px; transform: translate(-50%, -50%) translate(0px, 0px) rotate(-3deg);"
+        },
+        {
+          "id": "green-13",
+          "rect": {
+            "bottom": 447.6165466308594,
+            "height": 47.85809326171875,
+            "left": 188.3272399902344,
+            "right": 222.6415100097656,
+            "top": 399.7584533691406,
+            "width": 34.31427001953125,
+            "x": 188.3272399902344,
+            "y": 399.7584533691406
+          },
+          "style": "opacity: 1; left: 97.74px; top: 119.517px; transform: translate(-50%, -50%) translate(0px, 0px) rotate(3deg);"
+        },
+        {
+          "id": "green-5",
+          "rect": {
+            "bottom": 445.0258483886719,
+            "height": 50.67669677734375,
+            "left": 204.0946807861328,
+            "right": 242.8740692138672,
+            "top": 394.3491516113281,
+            "width": 38.779388427734375,
+            "x": 204.0946807861328,
+            "y": 394.3491516113281
+          },
+          "style": "opacity: 1; left: 115.74px; top: 115.517px; transform: translate(-50%, -50%) translate(0px, 0px) rotate(9deg);"
+        }
+      ],
+      "effect": "trick",
+      "images": [
+        {
+          "complete": true,
+          "rect": {
+            "bottom": 454.7376098632813,
+            "height": 46.1002197265625,
+            "left": 152.3829345703125,
+            "right": 186.5858154296875,
+            "top": 408.6373901367187,
+            "width": 34.202880859375,
+            "x": 152.3829345703125,
+            "y": 408.6373901367187
+          },
+          "src": "blob:https://raw.githack.com/a288ea7b-3032-42e9-b6fc-a1df6ac8421a",
+          "style": "display: block;",
+          "width": 580
+        },
+        {
+          "complete": true,
+          "rect": {
+            "bottom": 449.5146179199219,
+            "height": 43.65423583984375,
+            "left": 172.42916870117188,
+            "right": 202.53958129882812,
+            "top": 405.8603820800781,
+            "width": 30.11041259765625,
+            "x": 172.42916870117188,
+            "y": 405.8603820800781
+          },
+          "src": "blob:https://raw.githack.com/26cd8238-5cf3-4658-9fb1-38f13e936eb0",
+          "style": "display: block;",
+          "width": 580
+        },
+        {
+          "complete": true,
+          "rect": {
+            "bottom": 445.5146179199219,
+            "height": 43.65423583984375,
+            "left": 190.42916870117188,
+            "right": 220.53958129882812,
+            "top": 401.8603820800781,
+            "width": 30.11041259765625,
+            "x": 190.42916870117188,
+            "y": 401.8603820800781
+          },
+          "src": "blob:https://raw.githack.com/3528a013-c7f8-4467-bb3d-c102d11d5fa3",
+          "style": "display: block;",
+          "width": 580
+        },
+        {
+          "complete": true,
+          "rect": {
+            "bottom": 442.7376098632813,
+            "height": 46.1002197265625,
+            "left": 206.3829345703125,
+            "right": 240.58583068847656,
+            "top": 396.6373901367187,
+            "width": 34.20289611816406,
+            "x": 206.3829345703125,
+            "y": 396.6373901367187
+          },
+          "src": "blob:https://raw.githack.com/3225e1ed-e344-4b68-819e-fc37b90be5c0",
+          "style": "display: block;",
+          "width": 580
+        }
+      ],
+      "realCards": "4",
+      "rect": {
+        "bottom": 852,
+        "height": 852,
+        "left": 0,
+        "right": 393,
+        "top": 0,
+        "width": 393,
+        "x": 0,
+        "y": 0
+      },
+      "text": "Skip effect\nThe Final Trick",
+      "match": 1
+    },
+    {
+      "cards": [],
+      "effect": "raven",
+      "images": [
+        {
+          "complete": true,
+          "rect": {
+            "bottom": 489.23583984375,
+            "height": 158.4144287109375,
+            "left": 136.0101318359375,
+            "right": 276.48345947265625,
+            "top": 330.8214111328125,
+            "width": 140.47332763671875,
+            "x": 136.0101318359375,
+            "y": 330.8214111328125
+          },
+          "src": "blob:https://raw.githack.com/c25410e1-58ab-4a0c-9ca0-a861cd7b90c0",
+          "style": "opacity: 1; transform: translateX(6.48223%) translateY(-6.34397%) scale(0.931251);",
+          "width": 1856
+        }
+      ],
+      "realCards": "0",
+      "rect": {
+        "bottom": 852,
+        "height": 852,
+        "left": 0,
+        "right": 393,
+        "top": 0,
+        "width": 393,
+        "x": 0,
+        "y": 0
+      },
+      "text": "Skip effect\nThe Raven’s Flight",
+      "match": 1
+    },
+    {
+      "cards": [],
+      "effect": "raven",
+      "images": [
+        {
+          "complete": true,
+          "rect": {
+            "bottom": 416.30230712890625,
+            "height": 128.51986694335938,
+            "left": 130.45492553710938,
+            "right": 265.7433776855469,
+            "top": 287.7824401855469,
+            "width": 135.2884521484375,
+            "x": 130.45492553710938,
+            "y": 287.7824401855469
+          },
+          "src": "blob:https://raw.githack.com/c25410e1-58ab-4a0c-9ca0-a861cd7b90c0",
+          "style": "opacity: 1; transform: translateX(1.08085%) translateY(-7.95757%) scale(0.896878);",
+          "width": 1856
+        }
+      ],
+      "realCards": "0",
+      "rect": {
+        "bottom": 740,
+        "height": 740,
+        "left": 0,
+        "right": 393,
+        "top": 0,
+        "width": 393,
+        "x": 0,
+        "y": 0
+      },
+      "text": "Skip effect\nThe Raven’s Flight",
+      "match": 1
+    },
+    {
+      "effect": "trick",
+      "images": [
+        {
+          "loaded": true,
+          "rect": {
+            "bottom": 3.78125,
+            "height": 1.78125,
+            "left": 2,
+            "right": 2,
+            "top": 2,
+            "width": 0,
+            "x": 2,
+            "y": 2
+          },
+          "width": 580
+        },
+        {
+          "loaded": true,
+          "rect": {
+            "bottom": 3.78125,
+            "height": 1.78125,
+            "left": 2,
+            "right": 2,
+            "top": 2,
+            "width": 0,
+            "x": 2,
+            "y": 2
+          },
+          "width": 580
+        },
+        {
+          "loaded": true,
+          "rect": {
+            "bottom": 3.78125,
+            "height": 1.78125,
+            "left": 2,
+            "right": 2,
+            "top": 2,
+            "width": 0,
+            "x": 2,
+            "y": 2
+          },
+          "width": 580
+        },
+        {
+          "loaded": true,
+          "rect": {
+            "bottom": 3.78125,
+            "height": 1.78125,
+            "left": 2,
+            "right": 2,
+            "top": 2,
+            "width": 0,
+            "x": 2,
+            "y": 2
+          },
+          "width": 580
+        }
+      ],
+      "realCards": "4",
+      "text": "Skip effect\nThe Final Trick",
+      "match": 4
+    },
+    {
+      "effect": "seal",
+      "images": [
+        {
+          "loaded": true,
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "width": 1159
+        }
+      ],
+      "realCards": "0",
+      "text": "Skip effect\nThe Griffin Seal",
+      "match": 4
+    },
+    {
+      "effect": "trick",
+      "images": [
+        {
+          "loaded": true,
+          "rect": {
+            "bottom": 405.4424133300781,
+            "height": 46.1002197265625,
+            "left": 167.16229248046875,
+            "right": 201.3651885986328,
+            "top": 359.3421936035156,
+            "width": 34.20289611816406,
+            "x": 167.16229248046875,
+            "y": 359.3421936035156
+          },
+          "style": "display: block;",
+          "width": 580
+        },
+        {
+          "loaded": true,
+          "rect": {
+            "bottom": 425.7667846679687,
+            "height": 43.654205322265625,
+            "left": 210.19093322753903,
+            "right": 240.3013458251953,
+            "top": 382.1125793457031,
+            "width": 30.11041259765625,
+            "x": 210.19093322753903,
+            "y": 382.1125793457031
+          },
+          "style": "display: block;",
+          "width": 580
+        },
+        {
+          "loaded": true,
+          "rect": {
+            "bottom": 434.326171875,
+            "height": 43.65423583984375,
+            "left": 183.5567169189453,
+            "right": 213.6671142578125,
+            "top": 390.67193603515625,
+            "width": 30.110397338867188,
+            "x": 183.5567169189453,
+            "y": 390.67193603515625
+          },
+          "style": "display: block;",
+          "width": 580
+        },
+        {
+          "loaded": true,
+          "rect": {
+            "bottom": 432.9228210449219,
+            "height": 46.1002197265625,
+            "left": 133.28097534179688,
+            "right": 167.48388671875,
+            "top": 386.8226013183594,
+            "width": 34.202911376953125,
+            "x": 133.28097534179688,
+            "y": 386.8226013183594
+          },
+          "style": "display: block;",
+          "width": 580
+        }
+      ],
+      "realCards": "4",
+      "text": "Skip effect\nThe Final Trick",
+      "match": 4
+    },
+    {
+      "cards": [],
+      "effect": "raven",
+      "images": [
+        {
+          "complete": true,
+          "rect": {
+            "bottom": 493.068115234375,
+            "height": 160.74441528320312,
+            "left": 138.22378540039062,
+            "right": 280.7632141113281,
+            "top": 332.3236999511719,
+            "width": 142.5394287109375,
+            "x": 138.22378540039062,
+            "y": 332.3236999511719
+          },
+          "src": "blob:https://raw.githack.com/dce9c852-26fe-44df-9cca-a98f21e3c64a",
+          "style": "opacity: 1; transform: translateX(8.6346%) translateY(-4.77598%) scale(0.944947);",
+          "width": 1856
+        }
+      ],
+      "realCards": "0",
+      "rect": {
+        "bottom": 852,
+        "height": 852,
+        "left": 0,
+        "right": 393,
+        "top": 0,
+        "width": 393,
+        "x": 0,
+        "y": 0
+      },
+      "text": "Skip effect\nThe Raven’s Flight",
+      "match": 4
+    },
+    {
+      "effect": "seal",
+      "images": [
+        {
+          "loaded": true,
+          "rect": {
+            "bottom": 505.00640869140625,
+            "height": 156.80377197265625,
+            "left": 156.84133911132812,
+            "right": 236.11178588867188,
+            "top": 348.20263671875,
+            "width": 79.27044677734375,
+            "x": 156.84133911132812,
+            "y": 348.20263671875
+          },
+          "style": "opacity: 1; transform: translateY(1.35202%) scale(0.992625);",
+          "width": 1159
+        }
+      ],
+      "realCards": "0",
+      "text": "Skip effect\nThe Griffin Seal",
+      "match": 4
+    }
+  ],
+  "startedAt": "2026-10-19T07:32:33.206Z",
+  "findings": [
+    {
+      "id": "MATCH-HIGHLIGHTS-COUNTER",
+      "severity": "nonblocking display accuracy",
+      "observed": "Third match had one scored hand but Match complete showed Hands 5 made · 2 set; counts match cumulative five made from match one and two set hands from matches two/three.",
+      "recommendation": "Reset per-match highlight counters/history on Waiting Room > Start Game, preserving lifetime career totals. Verify a second consecutive one-hand game reports only its own hands.",
+      "notFixedInFrozenZip": true
+    },
+    {
+      "id": "HIGHLIGHTS-SIDE",
+      "severity": "follow-up observation; cause unverified",
+      "observed": "Match five ended with Griffin −200 and Raven 45. The recap subtitle promised two winning-side tricks, while one DOM snapshot showed a Second biggest article taken by June, the human partner. A later screenshot correctly showed Grit taking the biggest trick. Treat the second-trick side selection as a follow-up, not a fully isolated cause.",
+      "notFixedInFrozenZip": true
+    }
+  ],
+  "completedAt": "2026-10-19T07:47:03.986Z",
+  "completedMatches": 5,
+  "scoredHands": 13,
+  "consoleNotes": {
+    "captured": [
+      {
+        "level": "error",
+        "message": "[Main intelligence fallback] Frozen champions require the standard 46-card rules",
+        "timestamp": "2026-10-19T07:42:47.188Z",
+        "url": "blob:https://raw.githack.com/e823bf30-59f7-45bf-a970-ad91ce224a17"
+      },
+      {
+        "level": "error",
+        "message": "[Main intelligence fallback] Frozen champions require the standard 46-card rules",
+        "timestamp": "2026-10-19T07:43:26.492Z",
+        "url": "blob:https://raw.githack.com/e823bf30-59f7-45bf-a970-ad91ce224a17"
+      },
+      {
+        "level": "error",
+        "message": "[Main intelligence fallback] Frozen champions require the standard 46-card rules",
+        "timestamp": "2026-10-19T07:43:59.138Z",
+        "url": "blob:https://raw.githack.com/e823bf30-59f7-45bf-a970-ad91ce224a17"
+      }
+    ],
+    "extensionMetadataErrorsExcluded": true,
+    "limitation": "Captured console window only; not a claim of exhaustive zero console events. Nonstandard 45-card rules invoke the existing frozen-champion fallback."
+  },
+  "zipReceipt": "Griffin_House_Consolidated_20261019.zip · 164633158 bytes · SHA256 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778",
+  "missingAssetsVisible": false,
+  "status": "FIVE_COMPLETE_MATCHES_GAMEPLAY_VERIFIED_WITH_RECAP_DISPLAY_FINDINGS",
+  "sourceRuntimeCommit": "9b48c64f2180e844e4c41a4bf13767c0c8e41c9c",
+  "scope": "Cloud browser, real UI input and naturally completed hands; same exact uploaded ZIP throughout. Source-preview and earlier cleanup matches are excluded.",
+  "limitations": [
+    "Physical Android touch, speaker quality, native fullscreen/share and installed-device service-worker upgrade not certified.",
+    "WAN multiplayer, guest reconnect and all claim-origin anchor cases not certified.",
+    "A successful Moon was not achieved; only the genuine failed-Moon ending was verified.",
+    "The owner portrait-size concern remains open; approved art and original geometry were preserved.",
+    "A screenshot can lag rapid DOM transitions; visual acceptance is limited to the captured visible effect and completion frames, not every animation frame.",
+    "No production or live Test deployment; owner release approval remains pending."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "filename": "Griffin_House_Consolidated_20261019.zip",
+  "bytes": 164633158,
+  "sha256": "33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778",
+  "entries": 1502,
+  "uncompressedBytes": 182458198,
+  "runtimeCommit": "9b48c64f2180e844e4c41a4bf13767c0c8e41c9c",
+  "manifestSha256": "ca612eff7abd81aa3f2d3e26618876e8d89b87402ec550ed219aaab1321bbc95",
+  "zipCrcAndEveryEntryHashVerified": true,
+  "requiredMatches": 5,
+  "completedMatches": 5,
+  "status": "SAVED_READY_FOR_OWNER_REVIEW_WITH_RECAP_DISPLAY_FINDINGS",
+  "liveDeployed": false,
+  "scoredHands": 13,
+  "completedAt": "2026-10-19T07:47:03.986Z",
+  "zipLibraryFileId": "libfile_e3258e5faedc8191a463a84c5b049406",
+  "zipLibraryVersion": 0,
+  "zipFileId": "file_000000002e0481f5b42a3b704ed92d10",
+  "sourceCiRun": 39215747331,
+  "sourceCiConclusion": "success",
+  "browserResults": "FINAL_ZIP_BROWSER_RESULTS.json",
+  "matches": [
+    {
+      "number": 1,
+      "target": 500,
+      "hands": 5,
+      "result": "Griffin wins 540–460"
+    },
+    {
+      "number": 2,
+      "target": 100,
+      "hands": 1,
+      "result": "Raven wins −195–70 under negative-target loss rule"
+    },
+    {
+      "number": 3,
+      "target": 100,
+      "hands": 1,
+      "result": "Raven wins −105–140"
+    },
+    {
+      "number": 4,
+      "target": 250,
+      "hands": 5,
+      "result": "Griffin wins 325–245"
+    },
+    {
+      "number": 5,
+      "target": 100,
+      "hands": 1,
+      "result": "Raven wins −200–45 after failed Moon"
+    }
+  ],
+  "openFindings": [
+    {
+      "id": "MATCH-HIGHLIGHTS-COUNTER",
+      "severity": "nonblocking display accuracy",
+      "observed": "Third match had one scored hand but Match complete showed Hands 5 made · 2 set; counts match cumulative five made from match one and two set hands from matches two/three.",
+      "recommendation": "Reset per-match highlight counters/history on Waiting Room > Start Game, preserving lifetime career totals. Verify a second consecutive one-hand game reports only its own hands.",
+      "notFixedInFrozenZip": true
+    },
+    {
+      "id": "HIGHLIGHTS-SIDE",
+      "severity": "follow-up observation; cause unverified",
+      "observed": "Match five ended with Griffin −200 and Raven 45. The recap subtitle promised two winning-side tricks, while one DOM snapshot showed a Second biggest article taken by June, the human partner. A later screenshot correctly showed Grit taking the biggest trick. Treat the second-trick side selection as a follow-up, not a fully isolated cause.",
+      "notFixedInFrozenZip": true
+    }
+  ],
+  "deployed": false,
+  "ownerApproved": false,
+  "archiveUnchangedAfterTests": true
+}

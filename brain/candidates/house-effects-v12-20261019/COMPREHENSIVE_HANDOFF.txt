@@ -1,3 +1,55 @@
+FINAL CONSOLIDATED ZIP DELIVERY CHECKPOINT — OCTOBER 19, 2026
+
+Status: saved for owner review; five complete exact-ZIP matches finished; not deployed.
+This is the newest consolidated review package from this session, not owner device acceptance.
+
+File: Griffin_House_Consolidated_20261019.zip
+Bytes: 164,633,158 (about 157 MiB); 1,502 entries.
+SHA256: 33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778
+Library: libfile_e3258e5faedc8191a463a84c5b049406, version 0.
+Runtime: 9b48c64f2180e844e4c41a4bf13767c0c8e41c9c.
+Branch: candidate/house-effects-v12-consolidation-20261019 in JeromeLeeGriffin/Test.
+Identity: consolidated-review-20261019. No build number or new Brain letter assigned.
+
+Five matches on the same unchanged archive, 13 scored hands:
+1. Standard 500: Griffin 540 / Raven 460, five hands; portrait and landscape.
+2. Standard 100, human bid 195: Griffin -195 / Raven 70; six discards, red trump.
+3. Target 100, low Bird and must-trump enabled, 320x568: Griffin -105 / Raven 140.
+4. Custom 250, Red Two and top-nest reveal off, nest to bidder: Griffin 325 / Raven 245, five hands; manual nine-card discard and black trump.
+5. Standard restored, human Moon 200: Griffin -200 / Raven 45; six discards and green trump. Failed Moon verified; successful Moon not achieved.
+102 accepted human card inputs were individually verified as leaving the hand. Unchanged AI and natural claim paths completed the other play. No forced scores, injected winners, or fabricated game completion.
+
+Verified: archive CRC and every entry hash; local source/style checks; GitHub source CI 39215747331 success; lifecycle fixture; all three approved effects visibly captured; actual Final Trick cards; Skip; custom zero-target rejection; extra discard rejected; positive/negative winners; career level 3 to 4 and achievements. No missing-asset notice was visible. Nonstandard-deck frozen-champion fallback messages are expected; extension metadata errors are browser tooling, not silently counted as game errors.
+
+OPEN REVIEW ITEMS — DO NOT CALL THIS DEFECT-FREE
+The Match complete made/set counter carries across Waiting Room > Start Game. Match 3 had one set hand but displayed 5 made / 2 set; match 5 displayed cumulative 9 made / 4 set across all 13 hands. Scores and winners were correct. Reset matchStats on a new match while preserving lifetime career totals; verify two consecutive one-hand games. A second recap snapshot showed a trick taken by the losing-side partner despite a winning-side subtitle; isolate the selection/fallback separately. No runtime patch for these findings was made after this ZIP was frozen.
+Physical Android touch/audio, native fullscreen/share, installed service-worker migration, WAN/guest reconnect and every claim-origin registration remain unverified. Owner portrait-size report remains open. Approved artwork, avatars, Bid Dock/Moon and original card/table geometry are preserved; no guessed resizing.
+
+Master Brain AF was read from the actual Test/main pointer. AF and currentRuntimeRelease still describe live 846 cleanup. The candidate brain/current.json now explicitly identifies latestReviewPackage and this final evidence. Both permanent rules and the complete historical handoff chain follow below. Package documents are a packaging-time source snapshot; the final receipt is in this source branch, avoiding alteration of the exact tested ZIP.
+
+No deployment or live-branch mutation. Live heads at prior verification: Test 854b1a452d074f863ceb883545e6dbfa4ce726a9; production 01e809d5079510fad9fe61a6c73633e94b637460. Recheck before final publication. Preserve the original 845 archive and the earlier cleanup ZIP as historical checkpoints.
+
+OWNER REVIEW / LATER DEPLOYMENT
+Download this one ZIP. For isolated review, open included GriffinHouseZipReview.html in a normal browser and select this ZIP, or serve the extracted root over HTTP. Root index.html and complete local runtime are included. Read READ_FIRST.txt and HANDOFF/COMPREHENSIVE_HANDOFF.txt. Do not clear browser storage or copy the old cache-clearing Loader. After owner review, fix or explicitly accept the recap findings, verify physical devices and requested multiplayer cases, then obtain explicit deployment approval. Capture fresh live refs, verify the selected runtime/manifest, use rollback checkpoints and expected-head guards, and verify both hosted sites/service-worker behavior. This delivery is not authorization to deploy.
+
+NEXT ASSISTANT STARTUP
+Continue the existing consolidated review; do not rebuild an old version. Read actual Master Brain H through AF and every required authority/history file, then this complete handoff, brain/current.json and the final package/browser receipts. Verify candidate ref and both live refs first. Preserve both delivered ZIPs, approved pixels, saves, rules, bots and career evaluation. Do not repeat completed uploads. Address the recorded recap display findings only in a new isolated candidate and perform meaningful regression checks. Do not alter or relabel the tested archive. Reproduce both full permanent rules below in every successor handoff, startup prompt and Brain update, and require the next successor to repeat them.
+
+--- FROZEN PACKAGING CHECKPOINT AND COMPLETE PRIOR HANDOFF CHAIN ---
+
+FINAL CONSOLIDATED PACKAGE SOURCE CHECKPOINT — 2026-10-19
+Owner requested one latest consolidated game ZIP and a current Master Brain check.
+Current main pointerAF and both liveheads verified unchanged; no newer game branch
+supersedes this consolidation. Runtime9b48c64f2180e844e4c41a4bf13767c0c8e41c9c
+adds final overlay/card-wrapper corrections and coherent consolidated-review identity.
+Package targetGriffin_House_Consolidated_20261019.zip; exact-byte5match acceptance
+is required before delivery. Earlier source-preview8hands and earlier cleanup5games
+remain separate evidence. All approved pixels and gameplay/career cores preserved.
+This is the frozen source snapshot for packaging. Subsequent final acceptance results
+are incoordination/candidates/house-effects-v12-20261019/FINAL_PACKAGE_CHECKPOINT.json.
+The previous stage checkpoint below is preserved as history; where it says no next
+package has been created, this packaging checkpoint supersedes that statement.
+
 GRIFFIN HOUSE OF ROOKS — HOUSE EFFECTS v12 CONSOLIDATION CHECKPOINT
 2026-10-19. Current primary Master Brain AF remains unchanged.
 
