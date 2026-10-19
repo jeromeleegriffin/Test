@@ -1,0 +1,26 @@
+{
+  "environment": "JSDOM simulation; browser verification recorded separately",
+  "results": [
+    {
+      "mode": "success",
+      "status": "PASS",
+      "canvasReady": true,
+      "materialsReady": true,
+      "uncaughtErrors": 0
+    },
+    {
+      "mode": "denied",
+      "status": "PASS",
+      "canvasReady": false,
+      "materialsReady": false,
+      "uncaughtErrors": 0
+    },
+    {
+      "mode": "tainted",
+      "status": "PASS",
+      "canvasReady": false,
+      "materialsReady": false,
+      "uncaughtErrors": 0
+    }
+  ]
+}

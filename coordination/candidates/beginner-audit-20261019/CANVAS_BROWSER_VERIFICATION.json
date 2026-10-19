@@ -1,0 +1,25 @@
+{
+  "runtimeCommit": "dbead58159e1def3336a3fb87a3b2c61a834ed6a",
+  "verifiedUrl": "https://raw.githack.com/JeromeLeeGriffin/Test/dbead58159e1def3336a3fb87a3b2c61a834ed6a/index.html",
+  "browser": "Cloud Chrome, normal desktop landscape viewport; owner Android test pending",
+  "observed": [
+    "Opened directly through artwork loading to lobby without page error",
+    "Play Offline, bid 195 through original bid controls",
+    "Auction won and six manual discards confirmed with ten cards kept",
+    "Approved physical trump case visible, selected red",
+    "Activated brass confirmation with pointer: red became trump",
+    "Red imprint visible on felt, legal Red 1 played and bots continued",
+    "No SecurityError entries in browser error log",
+    "Leave table confirmed through original dialog"
+  ],
+  "limits": [
+    "No new complete match required for image-request change",
+    "Native SVG g confirmation could not be activated by this browser locator press/click; pointer activation worked",
+    "Physical Android acceptance remains pending",
+    "No image assets or live branch modified"
+  ],
+  "screenshots": [
+    "screenshots/griffin-canvas-preview-fixed.jpg",
+    "screenshots/griffin-canvas-play-fixed.jpg"
+  ]
+}

@@ -1,3 +1,22 @@
+PREVIEW CANVAS FOLLOW-UP — 2026-10-19
+
+Owner supplied an Android screenshot showing an uncaught getImageData SecurityError on the immutable preview previously recommended. The error had been observed intermittently during the earlier review and should have been repaired before directing the owner to that link.
+
+Runtime correction: dbead58159e1def3336a3fb87a3b2c61a834ed6a
+Parent: 5b0dd00dab1e056f8d84a255eaff02929d9d31c4
+Branch: candidate/beginner-audit-repairs-20261019 (draft PR #1)
+Only trump714.js changes in the runtime correction. The approved stamp and table raster requests now set crossOrigin=anonymous before src, allowing canvas sampling when the preview CDN redirects an image and permits CORS. The table mask extraction is promise-scoped so a denied load or SecurityError is recorded rather than escaping as an uncaught page error. The existing stamp failure fallback remains available; no artwork bytes, geometry, animation timings, gameplay, scores, saves or AI change.
+
+Static source/format checks and all seven prior behavior suites passed again, including 1475 protected-file byte comparisons. Added verify-canvas.cjs exercises the actual module with successful images, failed CORS/image loads, and denied canvas reads. All three pass; only the successful case reports materials/mask ready, and none produces an uncaught error. CANVAS_RESULTS.json is DOM simulation evidence, not physical-device certification.
+
+Browser verification passed for direct opening, offline bidding, six manual discards, approved physical trump case, red confirmation, visible red felt imprint, and legal Red 1 card play with subsequent bot play. No SecurityError was recorded. Browser evidence: coordination/candidates/beginner-audit-20261019/CANVAS_BROWSER_VERIFICATION.json and two follow-up screenshots. SVG g locator activation failed in this automation tool; pointer activation worked. Physical Android acceptance remains pending.
+
+Corrected direct review URL: https://raw.githack.com/JeromeLeeGriffin/Test/dbead58159e1def3336a3fb87a3b2c61a834ed6a/index.html The older handoff below describes the initial runtime; where it identifies the preview canvas issue as unresolved, this follow-up supersedes that status after browser verification. Do not use the older 356d448 preview for new owner testing.
+
+Both live main branches remain protected and unchanged. No deployment or numbered build or game ZIP authorized or created.
+
+================ PREVIOUS COMPLETE HANDOFF (PRESERVED) ================
+
 GRIFFIN HOUSE OF ROOKS — BEGINNER EXPERIENCE REPAIR CANDIDATE
 Prepared October 19, 2026 UTC / October 18, 2026 America/New_York
 Owner: Jerome Griffin

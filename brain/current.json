@@ -504,8 +504,8 @@
   "testSiteVerificationNote": "All1502 runtime Git blobs and all15 changed served SHA256 hashes match approved artifact on BOTH sites. Cloud browser reached both lobbies. Installed-device SW/offline upgrade remains unverified.",
   "historicalApprovedVisualDesign": {
     "date": "2026-10-14",
-    "room": "B — Fireplace Priority",
-    "menu": "A — slim right overlay",
+    "room": "B \u2014 Fireplace Priority",
+    "menu": "A \u2014 slim right overlay",
     "sound": "Reviewed Sound & Atmosphere using actual mixer controls",
     "ownerDesignApproved": true,
     "owner805PhoneAccepted": false,
@@ -867,7 +867,7 @@
     "knownSecondaryLabelIssue": {
       "path": "angle-c-characters.js",
       "element": "angleCNotice",
-      "label": "840 · Stable discard",
+      "label": "840 \u00b7 Stable discard",
       "activeRuntime": "845-share-shuffle",
       "recordedNotPatched": true
     },
@@ -975,13 +975,13 @@
     "status": "OWNER_APPROVED_LOCKED",
     "date": "2026-10-16",
     "record": "../coordination/landscape-daniel-017-approved-20261016.md",
-    "scope": "Daniel isolated 0–16 review; full-table integration pending",
+    "scope": "Daniel isolated 0\u201316 review; full-table integration pending",
     "runtime": "017.zip",
     "sha256": "c165dc8c94e0c8e78be931dad438fbdd7dc590ec79bf27a9e92e3be8d99019e7",
     "libraryFileId": "libfile_800a96f61fe081919f8abeada283c649",
     "sourceLibraryFileId": "libfile_7d48cb5a3e288191af77808b9d11be45",
     "deployed": false,
-    "method": "Fixed 68-degree fan for 7–16; overlap increases inside fixed finished grip; original card aspect; preserve 0–6"
+    "method": "Fixed 68-degree fan for 7\u201316; overlap increases inside fixed finished grip; original card aspect; preserve 0\u20136"
   },
   "landscapeFullTableCandidate": {
     "status": "OWNER_APPROVED_LOCKED",
@@ -1215,6 +1215,15 @@
     "handoff": "candidates/beginner-review-20261019/COMPREHENSIVE_HANDOFF.txt",
     "auditLibraryFileId": "libfile_c1bf66e6eb2c8191999cb2b1a6309e60",
     "evidence": "../coordination/candidates/beginner-audit-20261019",
-    "note": "Candidate-branch documentation only. AF and both live 846 sites remain current. Owner review and explicit deployment approval are pending. No numbered game or ZIP was created."
+    "note": "Candidate-branch documentation only. AF and both live 846 sites remain current. Owner review and explicit deployment approval are pending. No numbered game or ZIP was created.",
+    "previewCanvasFollowup": {
+      "runtimeCommit": "dbead58159e1def3336a3fb87a3b2c61a834ed6a",
+      "status": "CANDIDATE_BROWSER_VERIFIED_OWNER_ANDROID_REVIEW_PENDING",
+      "ownerScreenshot": "Uncaught SecurityError from canvas getImageData on preview CDN",
+      "runtimeFile": "trump714.js",
+      "deployed": false,
+      "directReviewUrl": "https://raw.githack.com/JeromeLeeGriffin/Test/dbead58159e1def3336a3fb87a3b2c61a834ed6a/index.html",
+      "evidence": "../coordination/candidates/beginner-audit-20261019/CANVAS_BROWSER_VERIFICATION.json"
+    }
   }
 }
