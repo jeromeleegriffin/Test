@@ -1,0 +1,84 @@
+{
+  "inputZipSha256": "ee0d2aa5a27ad6e15d3ccbbd37b6f7300f60e5d22d7a737799d32919367076eb",
+  "baseCommit": "c09c7632fff9cf0df2ff3920c3d3406fddd428a8",
+  "files": [
+    {
+      "path": "assets/end-hand-v12/griffin/griffin-seal-master.png",
+      "sha256": "765bfb9f09272e59503c3c5a9a984941865f697a138c58e6accb93e266bb42db",
+      "bytes": 2585084
+    },
+    {
+      "path": "assets/end-hand-v12/audio/INHERITED_CC0_SOURCES.txt",
+      "sha256": "228ef135fb571a24c9a6510a52ed9380e6a19667abd8dd96e52656f5f941d72c",
+      "bytes": 1549
+    },
+    {
+      "path": "assets/end-hand-v12/audio/INHERITED_FIGHT_AUDIO_PROVENANCE.txt",
+      "sha256": "328a12578ba77a3ca6ff630aece382d2a568b89d15f97b07d78ddaa02cc54af1",
+      "bytes": 762
+    },
+    {
+      "path": "assets/end-hand-v12/audio/NEW_MIX_PROVENANCE.txt",
+      "sha256": "670c6009499d7c24585f93d8727088f2e3ca778a8b7f82796917d64a1e0ff8b7",
+      "bytes": 1360
+    },
+    {
+      "path": "assets/end-hand-v12/audio/CORVID_CALL_PROVENANCE.txt",
+      "sha256": "180a0f2ac945dd8f60e650a00a2261e1ce5f83741155a83e0449239c88672dfa",
+      "bytes": 602
+    },
+    {
+      "path": "assets/end-hand-v12/audio/seal.wav",
+      "sha256": "96c463ff7f68244d51c5dcd2ada14da8605a866828ec1ef7c75565e24a454f8d",
+      "bytes": 614444
+    },
+    {
+      "path": "assets/end-hand-v12/audio/V10_ORIGINAL_AUDIO_PROVENANCE.txt",
+      "sha256": "d7ee91b831c84ef7e855a1ad1efc3049811ca5f57601005143f8d88243ec20fe",
+      "bytes": 566
+    },
+    {
+      "path": "assets/end-hand-v12/audio/V11_CARD_SOUND_PROVENANCE.txt",
+      "sha256": "5165c9126b6a2edd5ac860a6945ebac8536bff659405d25c0a9d44c5159b8496",
+      "bytes": 382
+    },
+    {
+      "path": "assets/end-hand-v12/audio/raven.wav",
+      "sha256": "45c5c9c90c2e565c921ce4935eaf4e404945254d4bf15755d8e8cdaa15b2f97b",
+      "bytes": 614444
+    },
+    {
+      "path": "assets/end-hand-v12/audio/trick.wav",
+      "sha256": "6f08d31b9920cc4fb5467e03fce8422817d4367eebaf8393afd4b6a6b7728f81",
+      "bytes": 614444
+    },
+    {
+      "path": "assets/end-hand-v12/raven/raven-mid.png",
+      "sha256": "0d1badb8b72b6a49496869f5707be4c99d923b162b08939a535c957a2718d40c",
+      "bytes": 1456979
+    },
+    {
+      "path": "assets/end-hand-v12/raven/raven-down.png",
+      "sha256": "037d30c52ac5f4a998e93afdd0318dfe329d9b7698ad7591f68e9f59705023b9",
+      "bytes": 1426554
+    },
+    {
+      "path": "assets/end-hand-v12/raven/raven-up.png",
+      "sha256": "70bbdc550fd584b134efc3234c935a68bb60165972e5d47943024527b62017e1",
+      "bytes": 1296670
+    },
+    {
+      "path": "assets/end-hand-v12/raven/pose-registration.json",
+      "sha256": "f3566fe66d41da0556e911edbe1aa23f80dd4517d438700849c39eac42ec0294",
+      "bytes": 680
+    }
+  ],
+  "baselineSampleCards": "All four byte-identical to retained current cards; not duplicated",
+  "excludedPreviewFiles": [
+    "index.html",
+    "review.js",
+    "core.js",
+    "review.css",
+    "assets/effects/gold-*"
+  ]
+}

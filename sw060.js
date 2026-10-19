@@ -2,10 +2,27 @@
  * Author: Jerome Griffin
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
-const BUILD = 'asset-cleanup-review-20261019';
-const CACHE = 'house-of-rooks-asset-cleanup-review-20261019';
+const BUILD = 'house-effects-v12-review-20261019';
+const CACHE = 'house-of-rooks-house-effects-v12-review-20261019';
 // Current dependency paths only; cacheLookup handles version query strings.
 const SHELL = [
+  './end-hand-effects-v12.js',
+  './end-hand-effects-v12.css',
+  './assets/end-hand-v12/audio/CORVID_CALL_PROVENANCE.txt',
+  './assets/end-hand-v12/audio/INHERITED_CC0_SOURCES.txt',
+  './assets/end-hand-v12/audio/INHERITED_FIGHT_AUDIO_PROVENANCE.txt',
+  './assets/end-hand-v12/audio/NEW_MIX_PROVENANCE.txt',
+  './assets/end-hand-v12/audio/V10_ORIGINAL_AUDIO_PROVENANCE.txt',
+  './assets/end-hand-v12/audio/V11_CARD_SOUND_PROVENANCE.txt',
+  './assets/end-hand-v12/audio/raven.wav',
+  './assets/end-hand-v12/audio/seal.wav',
+  './assets/end-hand-v12/audio/trick.wav',
+  './assets/end-hand-v12/griffin/griffin-seal-master.png',
+  './assets/end-hand-v12/raven/pose-registration.json',
+  './assets/end-hand-v12/raven/raven-down.png',
+  './assets/end-hand-v12/raven/raven-mid.png',
+  './assets/end-hand-v12/raven/raven-up.png',
+
   './',
   './angle-c-characters.js',
   './angle-c-runtime.css',

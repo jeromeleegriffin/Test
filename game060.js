@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = 'asset-cleanup-review-20261019';
+const APP_VERSION = 'house-effects-v12-review-20261019';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -2238,7 +2238,7 @@ function playSetSound() {
 const resultSoundReceipts843 = new Set();
 const resultGameIds844 = new WeakMap();
 function playResultFinish843(summary, match = false) {
-  if (!summary || (!match && game?.phase !== 'score')) return;
+  if (!summary || (!match && (game?.phase !== 'score' || window.HOREndHandEffectsV12))) return;
   const ev = summary.careerEvent;
   if (game && !resultGameIds844.has(game)) resultGameIds844.set(game, crypto.randomUUID());
   const key =
@@ -5369,37 +5369,15 @@ function handleMessage(data, conn) {
         if (data.summary) {
           if (game && data.summary.careerEvent?.matchId)
             game.careerMatchId = data.summary.careerEvent.matchId;
-          try {
-            window.HORJeromeVoiceLines?.result(data.summary);
-          } catch (e) {}
           if (data.summary.careerEvent) horRecordCareerHand(data.summary.careerEvent);
-          // Host already held the nest overlay; clients may still be watching it
+          // Clients may still be watching the bounded nest capture.
           const stillNest = document.getElementById('ghNestAnim');
           if (stillNest) {
             setTimeout(() => {
-              try {
-                stillNest.classList.add('out');
-              } catch (e) {}
-              setTimeout(() => {
-                try {
-                  stillNest.remove();
-                } catch (e) {}
-              }, 400);
-              showScoreModal(data.summary);
+              stillNest.remove();
+              presentCompletedHandV12(data.summary);
             }, 200);
-          } else {
-            showScoreModal(data.summary);
-          }
-          const goal = (game && game.targetScore) || targetScore || 500;
-          const finalScores = data.summary.scores || (game && game.scores) || [0, 0];
-          const matchResult = getMatchResult(finalScores, goal);
-          if (matchResult) {
-            const winner = matchResult;
-            try {
-              mergeLifetimeStats(winner);
-            } catch (e) {}
-            showWinCelebration(winner, [...finalScores]);
-          }
+          } else presentCompletedHandV12(data.summary);
         }
         break;
       case 'hostGone':
@@ -11559,6 +11537,7 @@ function hostProcessPlay(data) {
     game.lastTrickWinner = winner.player;
     broadcastState();
 
+    window.HOREndHandEffectsV12?.captureTrick(game.trick);
     // Give players a short, deliberate pause to see the winning trick before
     // the celebration overlay/fanfare starts.
     const resolvingGame = game,
@@ -12075,9 +12054,6 @@ function hostEndHand() {
   };
   horRecordCareerHand(summary.careerEvent);
   const finishToScore = () => {
-    try {
-      window.HORJeromeVoiceLines?.result(summary);
-    } catch (e) {}
     broadcast({
       type: 'handResult',
       summary,
@@ -12087,16 +12063,7 @@ function hostEndHand() {
       playerStats: playerStats.map((s) => ({ ...s })),
     });
     broadcastState();
-    showScoreModal(summary);
-    const goal = game.targetScore || targetScore || 300;
-    const matchResult = getMatchResult(game.scores, goal);
-    if (matchResult) {
-      const winner = matchResult;
-      try {
-        mergeLifetimeStats(winner);
-      } catch (e) {}
-      showWinCelebration(winner, [...game.scores]);
-    }
+    presentCompletedHandV12(summary);
   };
 
   // Nest overlay holds 3s, then fade into the score page
@@ -12104,6 +12071,54 @@ function hostEndHand() {
     setTimeout(finishToScore, nestHoldMs);
   } else {
     finishToScore();
+  }
+}
+
+// Presentation owns no points, hands or career state. Reopening scores bypasses it.
+function presentCompletedHandV12(summary) {
+  const owner = game;
+  const current = () => game === owner && game?.phase === 'score';
+  const reveal = () => {
+    if (current()) showScoreModal(summary);
+  };
+  const complete = () => {
+    if (!current()) return;
+    try {
+      window.HORJeromeVoiceLines?.result(summary);
+    } catch (e) {}
+    const finalScores = summary.scores || game.scores;
+    const winner = getMatchResult(finalScores, game.targetScore || targetScore || 500);
+    if (winner) {
+      try {
+        mergeLifetimeStats(winner);
+      } catch (e) {}
+      showWinCelebration(winner, [...finalScores]);
+    }
+  };
+  const event = summary.careerEvent;
+  const key = [
+    event?.matchId || game?.careerMatchId,
+    event?.hand || handHistory.length,
+    ...(summary.scores || []),
+  ].join(':');
+  const latest = summary.lastTricks?.find((trick) => trick.plays?.length === 4);
+  if (window.HOREndHandEffectsV12) {
+    try {
+      window.HOREndHandEffectsV12.play({
+        key,
+        cards: latest?.plays || [],
+        onReveal: reveal,
+        onComplete: complete,
+        reduced: reduceMotion || matchMedia('(prefers-reduced-motion: reduce)').matches,
+      });
+    } catch (error) {
+      console.error('End-hand presentation:', error);
+      reveal();
+      complete();
+    }
+  } else {
+    reveal();
+    complete();
   }
 }
 

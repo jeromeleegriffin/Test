@@ -1,6 +1,6 @@
 // Griffin House of Rooks runtime identity for diagnostics and offline verification.
-window.HOR_LIVE_VERSION = 'asset-cleanup-review-20261019';
-window.HOR_BUILD = 'asset-cleanup-review-20261019';
+window.HOR_LIVE_VERSION = 'house-effects-v12-review-20261019';
+window.HOR_BUILD = 'house-effects-v12-review-20261019';
 window.GHR_BUILD = 'Asset cleanup review 20261019';
 window.HORRuntimeTruth = async function () {
   const controller = navigator.serviceWorker && navigator.serviceWorker.controller;
@@ -23,11 +23,11 @@ window.HORRuntimeTruth = async function () {
     worker,
     controller: controller && controller.scriptURL,
     coherent:
-      window.HOR_PAGE_BUILD === 'asset-cleanup-review-20261019' &&
-      window.HOR_SCRIPT_BUILD === 'asset-cleanup-review-20261019' &&
-      window.HOR_BUILD === 'asset-cleanup-review-20261019' &&
+      window.HOR_PAGE_BUILD === 'house-effects-v12-review-20261019' &&
+      window.HOR_SCRIPT_BUILD === 'house-effects-v12-review-20261019' &&
+      window.HOR_BUILD === 'house-effects-v12-review-20261019' &&
       !!worker &&
-      worker.build === 'asset-cleanup-review-20261019' &&
-      worker.cache === 'house-of-rooks-asset-cleanup-review-20261019',
+      worker.build === 'house-effects-v12-review-20261019' &&
+      worker.cache === 'house-of-rooks-house-effects-v12-review-20261019',
   };
 };

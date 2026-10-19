@@ -580,11 +580,13 @@ HORCareerCore.install(window.HORProgression);
       setTimeout(() => enqueue(ev), 500);
       return;
     }
+    if (window.HOREndHandEffectsV12?.deferCelebration(() => enqueue(ev))) return;
     if (window.HORRavenFight741?.deferCelebration(() => enqueue(ev))) return;
     state.queue.push(ev);
     pump();
   }
   function pump() {
+    if (window.HOREndHandEffectsV12?.deferCelebration(pump)) return;
     if (window.HORRavenFight741?.deferCelebration(pump)) return;
     const prefs = presentationPrefs();
     while (
