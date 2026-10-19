@@ -43,11 +43,11 @@
   "kittyPortablePackageLibraryId": "libfile_aab3a1735ed081918c6780b8af61600c",
   "brainVerificationStatus": "AE_OWNER_APPROVED_RELEASE",
   "approvedWorkingBuildSha256": "6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f",
-  "latestLocalCandidateBuild": "consolidated-review-20261019",
+  "latestLocalCandidateBuild": "consolidated-recap-review-20261019",
   "discardIntegrationStatus": "OWNER_APPROVED_PRESERVED_IN751",
   "specialistCheckpointUpdatePolicy": "Every requested task must include a complete Brain status update; publish within task authorization, otherwise supply ready handoff",
-  "latestLocalCandidateSha256": "33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778",
-  "latestLocalCandidateStatus": "SAVED_READY_FOR_OWNER_REVIEW_WITH_RECAP_DISPLAY_FINDINGS",
+  "latestLocalCandidateSha256": "9775934c3e6b2965996fc09f5e5d6f80a8ff3628ff3e2b3c74fdb53cd3c4e91e",
+  "latestLocalCandidateStatus": "SAVED_READY_FOR_OWNER_REVIEW_RECAP_FIXES_VERIFIED",
   "buildRegistry": "../coordination/BUILD_REGISTRY.json",
   "buildNumberingPolicy": "../coordination/BUILD_NUMBERING.md",
   "signatureShuffleStatus": "765_FULL_PHASE_SYNC_PRESERVED_IN_APPROVED771",
@@ -61,9 +61,9 @@
   "mainDevelopmentCheckpoint": "../coordination/releases/rita-jerome-approved-20261015/LIVE_RECEIPT.json",
   "smallBiddingStatus": "PRESERVED771_WITH_CHARACTER_STATUS_ANCHOR_REPAIRS",
   "railClearanceStatus": "PRESERVED771_EXISTING_SAFE_SUPPRESSION_LIMIT_UNCHANGED",
-  "latestGameBuild": "consolidated-review-20261019",
-  "latestGameLibraryFileId": "libfile_e3258e5faedc8191a463a84c5b049406",
-  "latestGameFilename": "Griffin_House_Consolidated_20261019.zip",
+  "latestGameBuild": "consolidated-recap-review-20261019",
+  "latestGameLibraryFileId": "libfile_aa0ae6ae63e08191b5299cd51aa8cad9",
+  "latestGameFilename": "Griffin_House_Consolidated_Corrected_20261019.zip",
   "cleanFallbackCandidate": "766",
   "cleanFallbackStatus": "766_OWNER_APPROVED_HISTORICAL_FALLBACK",
   "testServerPlannedBuild": "810-rita-jerome-voice-review-20261015",
@@ -98,7 +98,7 @@
   "fullCastTrumpVoiceReportLibraryFileId": "libfile_46754e34a72881918afa98818b6658bb",
   "fullCastTrumpVoiceMappingLibraryFileId": "libfile_fdaef47d5894819194db9142e2356c3d",
   "fullCastTrumpVoiceEvidenceLibraryFileId": "libfile_af2a571c224481919763d31b65dff7f4",
-  "latestDeliveredGameStatus": "SAVED_READY_FOR_OWNER_REVIEW_WITH_RECAP_DISPLAY_FINDINGS",
+  "latestDeliveredGameStatus": "SAVED_READY_FOR_OWNER_REVIEW_RECAP_FIXES_VERIFIED",
   "artifactFilename": "",
   "artifactStatus": "NO_NEW_ARCHIVE_CREATED",
   "candidateEpaEnabled": true,
@@ -1203,8 +1203,8 @@
     "sha256": "fa1e236f03987c675721a65f2a06432fc9f54f8ae23a2e340a5bf8f1b2a84480",
     "sha256Scope": "primaryDocumentation"
   },
-  "latestSourceBuild": "consolidated-review-20261019",
-  "latestSourceCommit": "9b48c64f2180e844e4c41a4bf13767c0c8e41c9c",
+  "latestSourceBuild": "consolidated-recap-review-20261019",
+  "latestSourceCommit": "e46eddf2a11a887b2f1eaf891b3b6028c8ab2c38",
   "comprehensiveHandoff": "candidates/house-effects-v12-20261019/COMPREHENSIVE_HANDOFF.txt",
   "pendingBeginnerExperienceRepair": {
     "status": "STAGED_PENDING_OWNER_REVIEW_NOT_DEPLOYED",
@@ -1281,10 +1281,10 @@
     "browserEvidence": "../coordination/candidates/asset-cleanup-20261019/ZIP_BROWSER_RESULTS.json"
   },
   "pendingHouseEffectsConsolidation": {
-    "status": "SAVED_READY_FOR_OWNER_REVIEW_WITH_RECAP_DISPLAY_FINDINGS",
+    "status": "SAVED_READY_FOR_OWNER_REVIEW_RECAP_FIXES_VERIFIED",
     "branch": "candidate/house-effects-v12-consolidation-20261019",
     "baseCommit": "c09c7632fff9cf0df2ff3920c3d3406fddd428a8",
-    "runtimeCommit": "9b48c64f2180e844e4c41a4bf13767c0c8e41c9c",
+    "runtimeCommit": "e46eddf2a11a887b2f1eaf891b3b6028c8ab2c38",
     "inputZipLibraryId": "libfile_f0a105af5a8081918d1aa0b4f966d96e",
     "inputZipSha256": "ee0d2aa5a27ad6e15d3ccbbd37b6f7300f60e5d22d7a737799d32919367076eb",
     "sourcePreviewFullMatches": 1,
@@ -1295,23 +1295,28 @@
     "deployed": false,
     "handoff": "candidates/house-effects-v12-20261019/COMPREHENSIVE_HANDOFF.txt",
     "evidence": "../coordination/candidates/house-effects-v12-20261019/CONSOLIDATION_RESULTS.json",
-    "zipFilename": "Griffin_House_Consolidated_20261019.zip",
-    "runtime": "consolidated-review-20261019",
+    "zipFilename": "Griffin_House_Consolidated_Corrected_20261019.zip",
+    "runtime": "consolidated-recap-review-20261019",
     "completedMatches": 5,
-    "scoredHands": 13,
-    "zipSha256": "33542ff1273376db7953ec7aebe944cc1c8ecab44f9082e714b591ce4245a778",
-    "zipBytes": 164633158,
-    "zipLibraryFileId": "libfile_e3258e5faedc8191a463a84c5b049406",
+    "scoredHands": 5,
+    "zipSha256": "9775934c3e6b2965996fc09f5e5d6f80a8ff3628ff3e2b3c74fdb53cd3c4e91e",
+    "zipBytes": 164647747,
+    "zipLibraryFileId": "libfile_aa0ae6ae63e08191b5299cd51aa8cad9",
     "zipLibraryVersion": 0,
-    "sourceCiRun": 39215747331,
+    "sourceCiRun": 39221281133,
     "sourceCiConclusion": "success",
-    "finalPackageCheckpoint": "../coordination/candidates/house-effects-v12-20261019/FINAL_PACKAGE_CHECKPOINT.json",
-    "browserEvidence": "../coordination/candidates/house-effects-v12-20261019/FINAL_ZIP_BROWSER_RESULTS.json",
+    "finalPackageCheckpoint": "../coordination/candidates/recap-correction-20261019/FINAL_PACKAGE_CHECKPOINT.json",
+    "browserEvidence": "../coordination/candidates/recap-correction-20261019/FINAL_ZIP_BROWSER_RESULTS.json",
     "ownerApproved": false,
-    "openFindings": [
-      "Match-complete made/set count accumulates across consecutive games.",
-      "Recap second-highlight winning-side selection needs isolation."
-    ]
+    "openFindings": [],
+    "recapCorrection": {
+      "status": "FIXED_ACTUAL_SOURCE_AND_FIVE_EXACT_ZIP_MATCHES_VERIFIED",
+      "resetTotals": true,
+      "canonicalWinnerIds": true,
+      "winnerOnlyHighlights": true,
+      "noLoserFallback": true,
+      "tieWording": true
+    }
   },
   "previousDeliveredGameFieldsBeforeConsolidation": {
     "latestGameBuild": "845-share-shuffle",
@@ -1323,6 +1328,22 @@
     "comprehensiveHandoff": "releases/846/COMPREHENSIVE_HANDOFF.txt"
   },
   "latestReviewPackage": {
+    "runtime": "consolidated-recap-review-20261019",
+    "runtimeCommit": "e46eddf2a11a887b2f1eaf891b3b6028c8ab2c38",
+    "branch": "candidate/house-effects-v12-consolidation-20261019",
+    "filename": "Griffin_House_Consolidated_Corrected_20261019.zip",
+    "sha256": "9775934c3e6b2965996fc09f5e5d6f80a8ff3628ff3e2b3c74fdb53cd3c4e91e",
+    "bytes": 164647747,
+    "libraryFileId": "libfile_aa0ae6ae63e08191b5299cd51aa8cad9",
+    "version": 0,
+    "completedMatches": 5,
+    "scoredHands": 5,
+    "status": "SAVED_READY_FOR_OWNER_REVIEW_RECAP_FIXES_VERIFIED",
+    "deployed": false,
+    "ownerApproved": false,
+    "receipt": "../coordination/candidates/recap-correction-20261019/FINAL_PACKAGE_CHECKPOINT.json"
+  },
+  "previousConsolidatedReviewPackage": {
     "runtime": "consolidated-review-20261019",
     "runtimeCommit": "9b48c64f2180e844e4c41a4bf13767c0c8e41c9c",
     "branch": "candidate/house-effects-v12-consolidation-20261019",
@@ -1337,5 +1358,17 @@
     "deployed": false,
     "ownerApproved": false,
     "receipt": "../coordination/candidates/house-effects-v12-20261019/FINAL_PACKAGE_CHECKPOINT.json"
+  },
+  "recapCorrectionCheckpoint": {
+    "status": "SAVED_READY_FOR_OWNER_REVIEW_RECAP_FIXES_VERIFIED",
+    "record": "../coordination/candidates/recap-correction-20261019/FINAL_PACKAGE_CHECKPOINT.json",
+    "source": "../coordination/candidates/recap-correction-20261019/SOURCE_RESULTS.json",
+    "regressionTest": "../tools/check-recap.cjs",
+    "previousIssuesResolved": [
+      "MATCH-HIGHLIGHTS-COUNTER",
+      "HIGHLIGHTS-SIDE"
+    ],
+    "ownerApproved": false,
+    "deployed": false
   }
 }

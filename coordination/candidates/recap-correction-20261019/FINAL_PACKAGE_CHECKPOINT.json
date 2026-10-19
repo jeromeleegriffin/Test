@@ -1,0 +1,58 @@
+{
+  "filename": "Griffin_House_Consolidated_Corrected_20261019.zip",
+  "bytes": 164647747,
+  "sha256": "9775934c3e6b2965996fc09f5e5d6f80a8ff3628ff3e2b3c74fdb53cd3c4e91e",
+  "entries": 1504,
+  "uncompressedBytes": 182540536,
+  "runtimeCommit": "e46eddf2a11a887b2f1eaf891b3b6028c8ab2c38",
+  "manifestSha256": "11991e228dfbb76dce02fe6cfb8d076d9afa6a44d0ee507fd5a795c41d87ec6a",
+  "zipCrcAndEveryEntryHashVerified": true,
+  "requiredMatches": 5,
+  "completedMatches": 5,
+  "status": "SAVED_READY_FOR_OWNER_REVIEW_RECAP_FIXES_VERIFIED",
+  "liveDeployed": false,
+  "scoredHands": 5,
+  "browserResults": "FINAL_ZIP_BROWSER_RESULTS.json",
+  "completedAt": "2026-10-19T09:11:51.140Z",
+  "sourceCiRun": 39221281133,
+  "sourceCiConclusion": "success",
+  "recapCorrectionsVerified": true,
+  "archiveUnchangedAfterTesting": true,
+  "ownerDeviceApproved": false,
+  "deployed": false,
+  "matches": [
+    {
+      "number": 1,
+      "entry": "Take Your Seat",
+      "result": "Raven wins 30–170",
+      "hands": 1
+    },
+    {
+      "number": 2,
+      "entry": "Waiting Room > Start Game",
+      "result": "Raven wins 60–140",
+      "hands": 1
+    },
+    {
+      "number": 3,
+      "entry": "Rematch",
+      "result": "Raven wins 20–180",
+      "hands": 1
+    },
+    {
+      "number": 4,
+      "entry": "Waiting Room > Start Game",
+      "result": "Raven wins −195–75",
+      "hands": 1
+    },
+    {
+      "number": 5,
+      "entry": "Waiting Room > Start Game",
+      "result": "Tie 100–100",
+      "hands": 1
+    }
+  ],
+  "zipLibraryFileId": "libfile_aa0ae6ae63e08191b5299cd51aa8cad9",
+  "zipFileId": "file_00000000b71c81f5b42cb2de34906cab",
+  "zipLibraryVersion": 0
+}

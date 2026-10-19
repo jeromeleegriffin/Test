@@ -1,3 +1,93 @@
+CORRECTED ZIP — FINAL DELIVERY AND BROWSER ACCEPTANCE
+
+File: Griffin_House_Consolidated_Corrected_20261019.zip
+164,647,747 bytes; 1,504 entries.
+SHA256: 9775934c3e6b2965996fc09f5e5d6f80a8ff3628ff3e2b3c74fdb53cd3c4e91e
+Library: libfile_aa0ae6ae63e08191b5299cd51aa8cad9, version 0.
+Runtime: e46eddf2a11a887b2f1eaf891b3b6028c8ab2c38
+This corrected package supersedes the earlier consolidated ZIP for further review.
+The previous archives remain preserved; neither live main branch was changed.
+
+Both reported recap defects are corrected and verified. Starting a new match
+resets hand/made/set/bid totals and celebration state. Winner IDs remain canonical;
+display titles still use Griffin/Raven or custom names. Winning-side highlights
+are filtered correctly, cannot fall back to a losing trick, and tie wording is accurate.
+
+FIVE COMPLETE GAMES ON THIS EXACT UNCHANGED ZIP
+1. Take Your Seat: Griffin 30 / Raven 170, bid 125 red, one made hand.
+2. Waiting Room > Start Game: Griffin 60 / Raven 140, bid 115 red, one made hand.
+3. Rematch: Griffin 20 / Raven 180, bid 115 yellow, one made hand.
+4. Waiting Room > Start Game, human bid 195, six discards and green trump:
+   Griffin -195 / Raven 75, one set hand.
+5. Waiting Room > Start Game, landscape 844x390: natural tie 100 / 100,
+   bid 100 red, one made hand. Rotate to portrait preserves the completed recap.
+
+Every made-only match displayed exactly 1 made / 0 set; match four displayed
+0 made / 1 set. No cumulative counts remained. Observed winning Raven recaps
+showed Sofia/Owen; the natural tie correctly showed tricks of the match. The
+source regression fixture additionally verified Team A, custom team names,
+negative-target winner logic, and no winning-team trick fallback. 41 real human
+card inputs were individually confirmed leaving the hand; normal unchanged
+claims/AI completed the other play. No artificial score/winner injection.
+
+Full source/style checks passed and GitHub CI 39221281133 succeeded. Archive CRC
+and every file checksum passed; the browser receipt matched the SHA256 above.
+No missing-asset notice appeared. All 1,423 retained asset/CSS files matched their
+prior consolidated bytes. Artwork, card sizes, effects, rules, bots and lifetime
+career core were not modified. Physical-device and WAN acceptance limits below
+remain explicit; no claim of exhaustive defect freedom or deployment is made.
+
+Master Brain AF remains the actual live primary. Candidate brain/current.json
+now names this corrected ZIP as latestReviewPackage. See the correction directory's
+FINAL_PACKAGE_CHECKPOINT.json and FINAL_ZIP_BROWSER_RESULTS.json for final results.
+The archive documentation is the frozen packaging checkpoint; final receipts live
+in the candidate source branch so tested archive bytes remain unchanged.
+
+NEXT ASSISTANT: Continue this exact corrected source and complete handoff. Read
+actual Master Brain H through AF and relevant authorities, verify candidate/live
+refs, and preserve the approved visual/gameplay and all prior ZIPs. Do not repeat
+completed uploads. Do not deploy without explicit owner approval. Reproduce both
+full permanent rules below in every successor handoff, startup prompt and Brain
+update, and require your successor to do so again.
+
+--- PACKAGING CHECKPOINT AND COMPLETE PRIOR HISTORY ---
+
+RECAP CORRECTION — OCTOBER 19, 2026
+
+This checkpoint supersedes the open recap findings in the older consolidated ZIP.
+Continue from the latest consolidated source; do not rebuild an old version.
+Runtime: e46eddf2a11a887b2f1eaf891b3b6028c8ab2c38
+Branch: candidate/house-effects-v12-consolidation-20261019
+Identity: consolidated-recap-review-20261019
+
+CORRECTED
+1. Starting a new match resets every per-match hand/bid/made/set total alongside hand history and player statistics. It also clears the prior celebration payload. Lifetime careers are preserved.
+2. Canonical Team A/Team B winner identities now reach recap state and network messages. Griffin/Raven or custom names are applied only to visible titles. Highlight selection therefore filters the correct winning team.
+3. A winning team with no recorded tricks gets an empty reel, rather than a losing-side fallback mislabeled as a winner. Ties describe tricks of the match.
+
+VERIFIED BEFORE PACKAGING
+Full source and formatting checks passed: 65 scripts, 4568 local bindings, 1455 precache paths. Actual source-function regression checks cover consecutive new-match resets, winning-only highlights when the losing side has larger captures, no loser fallback, negative-score winner identity, and custom visible team names. 1423 retained assets/CSS files are byte-identical. Only game060.js, polish.js and three runtime identity/cache files changed. The full game rules, AI, career core, approved artwork and all geometry CSS remain unchanged.
+
+The following archive is a complete playable game, not a patch:
+Griffin_House_Consolidated_Corrected_20261019.zip
+Root index.html, approved assets/effects and complete handoff are included.
+This archive's handoff is frozen before final exact-ZIP acceptance. Final SHA256,
+five-match browser results and delivery identity are recorded on the source branch
+at coordination/candidates/recap-correction-20261019/FINAL_PACKAGE_CHECKPOINT.json.
+The older consolidated ZIP's five matches/13 hands are historical and do not substitute
+for testing this new archive. Do not alter tested ZIP bytes to append later receipts.
+
+REMAINING ACCEPTANCE LIMITS
+Physical Android appearance/audio/touch/fullscreen/share, installed service-worker upgrades, real WAN multiplayer/guest reconnect and every claim-origin animation anchor are not certified. The owner portrait-size concern is still open; no guessed resizing has been applied. A successful Moon was not achieved in the prior tests; a failed Moon was. These limits are not a claim of new failure or approval.
+
+LIVE PROTECTION
+No deployment authorized. Test/main remains 854b1a452d074f863ceb883545e6dbfa4ce726a9 and production/main remains 01e809d5079510fad9fe61a6c73633e94b637460 at correction start. Master Brain AF remains the live primary; candidate documentation identifies this newer review separately. Preserve the original 845, cleanup ZIP and first consolidated archive as historical checkpoints.
+
+NEXT ASSISTANT
+Read the actual complete required Master Brain history and authorities, this full handoff, brain/current.json and the final correction receipt. Verify candidate and live refs before any mutation. Never repeat completed uploads or overwrite newer work. Preserve all approved pixels, rules, AI and saved careers. Explicit owner approval is required before either live server is deployed. Pass both complete permanent rules below forward verbatim in every handoff, startup prompt and Brain update, and require your successor to do the same.
+
+--- COMPLETE PRIOR HANDOFF AND PERMANENT RULES ---
+
 FINAL CONSOLIDATED ZIP DELIVERY CHECKPOINT — OCTOBER 19, 2026
 
 Status: saved for owner review; five complete exact-ZIP matches finished; not deployed.
