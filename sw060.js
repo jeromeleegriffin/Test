@@ -2,8 +2,8 @@
  * Author: Jerome Griffin
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
-const BUILD = '846-source-cleanup';
-const CACHE = 'house-of-rooks-846-source-cleanup';
+const BUILD = 'beginner-review-20261019';
+const CACHE = 'house-of-rooks-beginner-review-20261019';
 // Current dependency paths only; cacheLookup handles version query strings.
 const SHELL = [
   './',

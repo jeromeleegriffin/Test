@@ -1,0 +1,1527 @@
+PORTRAIT SCREENSHOT INVESTIGATION — 2026-10-19
+
+Owner reports portrait graphics changed and card smaller (71882.jpg). At identical 393 x 740 CSS viewports, preserved 845, live-source 846 and repaired candidate all show 33 x 48 CSS-pixel cards in ten-card hands. Each card position's rendered bounds also match across all three; nest area is 98 x 136 in all three. Header/LAST, labels and existing table/holder/bid furniture reproduce in preserved source. This does not establish what differs from the owner's remembered approved view or physical phone viewport. Clarification needed: bottom hand cards versus center nest/played card. Do not dismiss owner report or claim physical Android approval. No game artwork, geometry or source changed in this investigation. Isolated comparison page was added to the candidate branch only. Both live branches remain unchanged.
+
+Evidence: coordination/candidates/beginner-audit-20261019/PORTRAIT_REVIEW.json
+Comparison: coordination/candidates/beginner-audit-20261019/portrait-compare.html
+
+================ PREVIOUS COMPLETE HANDOFF (PRESERVED) ================
+
+PREVIEW CANVAS FOLLOW-UP — 2026-10-19
+
+Owner supplied an Android screenshot showing an uncaught getImageData SecurityError on the immutable preview previously recommended. The error had been observed intermittently during the earlier review and should have been repaired before directing the owner to that link.
+
+Runtime correction: dbead58159e1def3336a3fb87a3b2c61a834ed6a
+Parent: 5b0dd00dab1e056f8d84a255eaff02929d9d31c4
+Branch: candidate/beginner-audit-repairs-20261019 (draft PR #1)
+Only trump714.js changes in the runtime correction. The approved stamp and table raster requests now set crossOrigin=anonymous before src, allowing canvas sampling when the preview CDN redirects an image and permits CORS. The table mask extraction is promise-scoped so a denied load or SecurityError is recorded rather than escaping as an uncaught page error. The existing stamp failure fallback remains available; no artwork bytes, geometry, animation timings, gameplay, scores, saves or AI change.
+
+Static source/format checks and all seven prior behavior suites passed again, including 1475 protected-file byte comparisons. Added verify-canvas.cjs exercises the actual module with successful images, failed CORS/image loads, and denied canvas reads. All three pass; only the successful case reports materials/mask ready, and none produces an uncaught error. CANVAS_RESULTS.json is DOM simulation evidence, not physical-device certification.
+
+Browser verification passed for direct opening, offline bidding, six manual discards, approved physical trump case, red confirmation, visible red felt imprint, and legal Red 1 card play with subsequent bot play. No SecurityError was recorded. Browser evidence: coordination/candidates/beginner-audit-20261019/CANVAS_BROWSER_VERIFICATION.json and two follow-up screenshots. SVG g locator activation failed in this automation tool; pointer activation worked. Physical Android acceptance remains pending.
+
+Corrected direct review URL: https://raw.githack.com/JeromeLeeGriffin/Test/dbead58159e1def3336a3fb87a3b2c61a834ed6a/index.html The older handoff below describes the initial runtime; where it identifies the preview canvas issue as unresolved, this follow-up supersedes that status after browser verification. Do not use the older 356d448 preview for new owner testing.
+
+Both live main branches remain protected and unchanged. No deployment or numbered build or game ZIP authorized or created.
+
+================ PREVIOUS COMPLETE HANDOFF (PRESERVED) ================
+
+GRIFFIN HOUSE OF ROOKS — BEGINNER EXPERIENCE REPAIR CANDIDATE
+Prepared October 19, 2026 UTC / October 18, 2026 America/New_York
+Owner: Jerome Griffin
+STATUS: STAGED FOR OWNER REVIEW. NOT APPROVED, MERGED, PACKAGED OR DEPLOYED.
+
+CURRENT VERIFIED RECOVERY POINT
+Continue this work. Do not restart or substitute Build 845 for the newer code.
+The original beginner audit used the exact preserved 845 release. The repair candidate
+continues current Build 846 source so none of its completed professional cleanup is lost.
+
+Repository: JeromeLeeGriffin/Test
+Source Test/main: 854b1a452d074f863ceb883545e6dbfa4ce726a9
+Candidate branch: candidate/beginner-audit-repairs-20261019
+Tested runtime commit: 356d4481b5c21164f51404f3cea9e82853edcac1
+Tree including runtime and initial test harness: 77c559f2a4858de2e214460c3140a8553a93f667
+Candidate runtime marker: beginner-review-20261019
+Master Brain: AF. No new Brain letter or numbered build was reserved.
+Both live main branches were protected; no merge, runtime publication or deployment occurred.
+Test live main: 854b1a452d074f863ceb883545e6dbfa4ce726a9
+Production live main: 01e809d5079510fad9fe61a6c73633e94b637460
+
+Owner authorization: After the audit, the next proposed work was a separate repair
+candidate, preserving the latest source and both live sites. Jerome said “Okay, continue.”
+This authorizes the candidate work and its review records. It does not authorize deployment,
+new artwork, a game ZIP, replacing saved careers, or promoting the candidate to approval.
+
+One consolidated successor file is supplied here. The complete earlier 846 handoff follows
+as a clearly historical appendix, including its inherited 845 recovery handoff. Read the
+new current section first; older deployment approvals apply to their exact releases only.
+
+AUDIT SOURCE AND PRESERVED ARTIFACTS
+Original 845.zip: 193,187,658 bytes; 1,642 source files.
+SHA256: 6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f
+Library: libfile_14b9911e71788191993b618bf2336fcb
+Exact Git source: Test 26cf989cedfc6e7bde269f1b22690afeaa558a45, builds/845
+Runtime tree: 9e0ee5871c17b33c7a70367759d67194c25b32fc
+The prior audit independently matched every archive blob to that tree. No original ZIP
+or source was modified. Current repairs did not repeat those uploads or rebuild that ZIP.
+
+Audit: Griffin_House_Build_845_Beginner_Experience_Audit.pdf, 16 pages.
+Library: libfile_c1bf66e6eb2c8191999cb2b1a6309e60
+SHA256: 9be906ac1669ff2c14bb81725d4b2d4d94d21347aa9596a0636874ddbbd8748b
+Four independent completed matches, twelve scored hands, are preserved in that audit.
+Those are the original audit runs, not newly repeated in this repair task.
+
+REPAIR CHECKLIST — CANDIDATE IMPLEMENTATION, NOT OWNER ACCEPTANCE
+F01 / P1 — Bid Dock covered Your bid and Leave confirmations.
+  Converted only the tour and confirmation roots to native modal dialogs. Existing art,
+  placement, panel skin, card/bid geometry and handlers remain. Native top-layer behavior
+  makes the table inert, traps focus and restores it on close. Escape cancels confirmation.
+  Browser verified Your bid, Leave during bid 105, pointer Cancel preserving that hand/bid,
+  and Escape cancellation. Screenshot evidence includes the fully visible leave dialog.
+
+F02 / P1 — Public volume rows lost their parent fieldset's delegated input handlers.
+  Bound original control listeners directly to controls; readouts now locate the moved
+  rows, independently of the retired fieldset. Existing mixer API, gain envelopes, defaults,
+  sound files and saved key remain. All five channels and mute save/restore in DOM tests;
+  real browser Master 0% and mute survived an ordinary reload. Defaults were restored.
+
+F03 / P1 — Fixed tutorial text contradicted low Bird and other selected rules.
+  Advice now reflects included special cards, low/high Bird, ordinary 1 rank, must-trump,
+  specials-anytime, bid-only scoring and nest recipient. No rule-engine changes.
+  1,024 rule combinations passed text assertions. Real low-Bird, must-trump and bidder-nest
+  help was observed during the completed variant match.
+
+F04 / P2 — “Keep trump length and counters” was unexplained jargon.
+  Replaced with concrete counts and tap/return/lock/choose instructions. Optional strategy:
+  “try to keep several cards in the color you plan to make trump, along with strong cards
+  and cards worth points.” Introduced nest/kitty synonym in the auction explanation;
+  approved KITTY RECEIVED artwork and headings remain. Counts derive from selected rules
+  and the current discard flow. Browser manual tour and live nest instruction verified.
+
+F05 / P2 — Nine-card variants said “ten kept cards.”
+  Footer now uses actual hand length minus required discards. Six- and nine-card discard
+  behavior/count guards were exercised in DOM tests. A real six-discard flow passed in the
+  browser. A new full nine-card browser hand was not repeated in this repair task.
+
+F06 / P2 — Waiting-table Game options opened My Profile.
+  Existing host-options entry now opens Game Setup with its active-game/guest read-only
+  guards. Profile retains its separate menu route. Verified both completed solo waiting
+  room and actual temporary hosted room; no profile screen was substituted.
+
+F07 / P2 — Offline waiting room offered TABLE OFFLINE QR/link invitations.
+  Offline copy/share/QR are hidden/disabled, with function-level guards. Actual hosted
+  invitations stay available. Verified after completed solo match and in hosted LM99.
+  No invitations were sent; that temporary room was filled with bots and then closed.
+
+F08 / P2 — Long hold failed to explain a dim landscape card.
+  Delegated input to stable hand roots instead of copying per-card listener markers.
+  Both pointer tap and hold explain illegal cards; no rejected tap reaches play handler.
+  Browser: green 14 while red was led stayed in hand and reported “Must follow Red” on
+  tap and 1.1-second hold. DOM tests covered replacements containing copied markers.
+
+F09 / P2 — Visible landscape hand was aria-hidden and cards lacked keyboard semantics.
+  Theater exposure follows orientation; both hand roots are named groups. Cards carry
+  button roles, card names, legal/unavailable state and reason. Enter/Space activate the
+  original legal-card click path. Runtime guards remain authority. Real keyboard play
+  completed across both orientations. Full assistive-technology certification is pending.
+
+F10 / P2 — Award thresholds omitted the counted action/unit.
+  Added display-only descriptions for all 25 families, including High Roller (make a bid
+  of at least 180), Heavy Hitter (win a trick worth at least 30 points), Partner Power and
+  historical Bag Collector. Personal-best feats now show Best / Target instead of an
+  additive “more needed.” Browser reviewed all seven landscape guide pages. Names, stat
+  IDs, thresholds, levels, award evaluation and earned history were retained.
+
+F11 / P2 — New players had to discover collapsed scoring details.
+  The first scored hand for a new name opens existing Hand Details automatically, with
+  its original calculation. Established-player default presentation remains.
+  Browser standard hand: Griffin bid 120, took 175, +175; Raven 25; total 200/200; target500.
+  Details and navigation were bounded at 393x740, 320x568 and rotated 844x390.
+  A one-hand completed match proceeds to the existing completion page as before.
+
+F12 / P2 — Programmatic target sync left stale custom validation/Enter state.
+  UI synchronization now repaints input validation after setting the real value.
+  DOM lifecycle test covered invalid draft, sync, commit250, reset500 and reopening.
+  Browser saved250 after a completed100-point match, hosted/filled/left/reloaded, then
+  showed Custom250 / Ready to save250 / Current target250 with enabled Enter.
+  This is strong relevant lifecycle evidence; the original sequence included PLAYING a
+  full custom250 match before hosting, which was not repeated exactly here. Host/rule
+  reset policy and preference schema were not changed.
+
+F13 / P3 — Tour had no usable Back, unlabeled topic dots and stale queued-turn wording.
+  Manual House Tour now browses all eleven topics with Back / Next / Done and named
+  progress. As-you-play tips re-evaluate the current phase instead of queuing stale turns.
+  Lead wording is conditional on whose turn it is. All eleven topics and Back/Next passed
+  browser checks. Both possible bidder/non-bidder routes remain represented.
+
+F14 / P3 — Biggest capture displayed a dash unless the two special birds met.
+  Recap now derives the highest recorded trick's points/winner. Completed match showed
+  “35 points · Rafael,” matching the real highlight. No scoring or award logic changed.
+
+F15 / P3 — Landscape bot career actions were labeled remove/replace.
+  Labels now reflect career viewing in landscape and original seat operations in portrait.
+  Temporary host: Nix “view player” opened its career; separate Change controls remained.
+
+F16 / P3 — Repeated Play/Stop buttons lacked sound-family names.
+  Added sound-specific accessible names while retaining visible Play/Stop and exact audio.
+  All three preview pages were inspected; examples Play Card lift / Stop Card lift.
+
+CHANGED SOURCE AND PRESERVATION
+Eleven source files changed from the verified 1,650-file 846 manifest:
+  audio-mixer.js; friends803.js; game060.js; hor-version.js; index.html;
+  menu-approved805.js; nest-manual838.js; polish.js; progression.js;
+  review835.css; sw060.js.
+1,639 source files are unchanged. No source path was deleted. No dependency was added to
+the application. Root source checks and existing formatter pass. Runtime/test identity is
+unique and unnumbered; do not rename it 847 without atomic main registry reservation.
+
+All 1,475 protected asset/voice/AI/rule/QR/career-core paths checked against the 846 manifest
+are byte-identical. Approved Bid Dock PNG, cards, room, characters, poses, voices, masks,
+shuffle, Raven fight and other assets are untouched. Rules.js, bots.js, x1/ and career-core.js
+are unchanged. No AI strategy, scoring, legal-play, deal, trump ordering, identity policy,
+career migration or storage key was rewritten. No browser storage or cache was cleared.
+Worker changes are its candidate build/cache identity only; prior846 asset cache reuse is
+retained. The 1,449 precache inventory remains unchanged. No forced reload was added.
+
+EVIDENCE
+coordination/candidates/beginner-audit-20261019/
+  CHECKPOINT.json — authoritative candidate state and test boundaries.
+  SOURCE_DIFF.json — all eleven old/new source hashes.
+  UNIT_RESULTS.json and verify.cjs — seven behavior suites, including 1,024 rule states.
+  BROWSER_OBSERVATIONS.json — 77 recorded UI observations, NOT 77 independent tests.
+  responsive-review.html — embedded CSS viewport selector; loads the exact game root.
+  screenshots/ — six original browser captures.
+GitHub source CI 39189291733 passed for the exact runtime commit. No deployment workflow
+was run for this candidate. The original audit PDF remains separate preserved evidence.
+
+Browser regression A: one actual completed 100-point match, one hand, low Bird + must trump
++ bidder receives nest. Human195/green, final Griffin−195/Raven135. Manual discards, trump,
+illegal tap/hold, normal card play, score tutorial, completion recap and offline waiting
+room were exercised. Actual approved physical trump selector could not be certified in
+this first run because the proxy caused the existing canvas fallback.
+Browser regression B: standard 46-card/default-rules 500-point game, first hand completed;
+human passed, partner bid120/red, Griffin175/Raven25, correct first beginner explanation.
+Some remaining cards were laid down by the existing claim path. Next hand was opened only
+to leave using the normal confirmation; the second match was not completed.
+These are new candidate checks, distinct from the earlier four-match/twelve-hand845audit.
+
+VIEWPORT AND PLATFORM LIMITS
+Embedded CSS viewports tested:320x568,393x740,844x390,1024x768. Menus, tour, live hand,
+rotation, score details and waiting controls received selected checks; this is not an
+exhaustive all-menus-at-every-size matrix. Embedding lets CSS/innerWidth/media queries
+respond normally; it does not emulate a physical phone, touch/DPR, browser bars, screen
+reader, native fullscreen, Android installation/share sheet, motor timing or speaker quality.
+Physical Android/tablet owner acceptance remains pending. Offline upgrade and real WAN
+multiplayer/reconnect were not newly tested. The existing 846 evidence remains attributed
+only to846. No completed Moon win/human match win is newly claimed here.
+
+The immutable preview proxy produced the inherited getImageData cross-origin SecurityError
+on initial loads, also seen in the original845audit. It selected the existing trump fallback
+in regressionA. A later normal reload had no canvas banner/error during regressionB.
+This is not proven to occur on either live site, nor declared solved by these repairs.
+The actual physical trump case/ceremony must be checked on the intended origin before release.
+Do not clear data/caches to fix this. No original ZIP loader was used in this repair task.
+
+IMPORTANT WRAPPER INCIDENT CARRIED FORWARD FROM THE ORIGINAL AUDIT
+The stock original ZIP loader's normal ZIP-open flow invoked code that unregisters service
+workers/deletes origin caches before this behavior was recognized. It did not clear career
+localStorage or modify repository/server files. That original845audit incident was disclosed
+in its PDF. It is historical, not repeated here. Never reuse that stock loader for testing
+without isolating/removing that behavior and validating blob URL handling. Source845also
+has a new URL(relative,blob-location) exception in its share-brand initializer. No new ZIP
+or wrapper repair is included in this candidate.
+
+OWNER REVIEW / DEPLOYMENT INSTRUCTIONS — DO NOT EXECUTE WITHOUT NEW APPROVAL
+1. Review the candidate copy and diffs. Confirm the revised instructions, expanded first
+   score details and menu semantics against the owner's desired beginner experience.
+2. Perform actual Android portrait/landscape checks, default and nine-card discard, trump
+   case/art, sound levels/save, installed old-cache upgrade, long session and required
+   network paths. Record outcomes honestly. Do not clear real player/browser/SW data.
+3. If further repairs are requested, continue this branch or an explicitly reconciled newer
+   source. Do not re-upload unchanged assets or overwrite main with builds/845.
+4. Explicit owner approval is required before modifying/deploying either live main. Existing
+   standing Test-update language is superseded for this task by the current no-live-change
+   restriction. No approval to deploy is implied by “continue” or passing CI.
+5. After approval, refresh BOTH heads, Brain, registry and current specialist work. If any
+   moved, inspect new commits and carry only the reviewed delta into that newer source.
+6. Use atomic expected-head updates, preserve rollback refs and promote the exact reviewed
+   source. If a numbered release/ZIP is requested, reserve an unused number on main using
+   the existing registry CAS policy before assigning it. No847reservation exists here.
+7. Validate Git blobs, served bytes, source CI, Pages completion, UI, actual device and
+   saved-data/offline behavior for each authorized target. Record an accurate release
+   receipt/Brain update. Do not force-reset, silently package, or clear caches to pass tests.
+
+ROLLBACK / CONTINUITY
+No rollback is necessary on live servers: they did not receive this work. Discarding the
+candidate means leaving main unchanged, not deleting preserved work or resetting history.
+For future authorized restores, use new reviewed commits and retain later Brain records.
+Source846and its pre846rollbackrefs remain in the full historical appendix below.
+
+This continuation refreshed current.json, AF START HERE/master, current coordination and
+registry, and read the actual principal H–AF documents, including unchanged inherited
+AA/AB text verified byte-contained in its successors. The foundational H operating rules
+and relevant current source/approval records were inspected. Existing full-history reads
+in this continuing session remain available; this task does not certify a fresh visual
+inspection of every historical binary reference. A/B unavailable packages remain unavailable.
+No AGENTS.md was found in the source tree. Current owner decisions outrank old holds.
+
+Both permanent rules below must be reproduced verbatim by every successor, in its own
+handoff/startup and future Brain update, and explicitly passed onward again.
+
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+HISTORICAL APPENDIX — COMPLETE EARLIER 846 HANDOFF, UNCHANGED
+========================================================================
+# Griffin House of Rooks — Master Brain AF
+
+Owner: Jerome Griffin. Published checkpoint: October 18, 2026, America/New_York. Successor to AE and its Build 845 release supplement. Historical H–AE documents remain immutable and required reading. This current-state record supersedes older deployment holds only for the owner-requested cleanup.
+
+## Current verified state
+
+**846-source-cleanup is deployed to both sites.** The owner requested professional cleanup of the whole codebase, removal of obsolete/redundant/dead code and removal of the experimental landscape build number from the live servers. The work continued the exact recovered Build 845; it did not reconstruct from an older build. No game ZIP or artwork was generated.
+
+- Test runtime/source commit: 71dee12ecdeb41d8edc91a9b02adc4e5716b5d9b.
+- Production runtime commit: 01e809d5079510fad9fe61a6c73633e94b637460.
+- Immutable tested source: Test candidate/846-source-cleanup-20261018, commit 71dee12ecdeb41d8edc91a9b02adc4e5716b5d9b; repository tree 2f1cf3cc256fa1af15759460940fa29c43fa7bfa.
+- Exact source inventory: coordination/releases/846-cleanup/SOURCE_MANIFEST.json, 1650 files. Both release trees were verified against every source blob; the 32 removed root paths are absent. Of those paths, 29 notes were moved unchanged into docs/history/build-845-inherited; three retired code files were removed.
+- Both Pages jobs succeeded: Test 39164252696; production 39164869599.
+- Each site passed all 123 selected HTTP source hashes and five live-browser checks, including removal of angleCNotice, usable real deal/auction and portrait rotation. Source CI passed before Test publication and on production. See the final release receipt for run IDs and exact evidence.
+
+Test: https://jeromeleegriffin.github.io/Test/
+Production: https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/
+
+The user-visible experimental caption is removed. Page, script, worker and support markers still identify 846 for diagnostics. A build number is not a new design approval: 845 remains the previous whole-game accepted rollback; 846 is the authorized cleanup release, with physical Android acceptance unverified.
+
+## Cleanup and preservation
+
+Removed the review notice node/updater/CSS, retired shuffle732 JS/CSS, empty landscape hand adapter/caller, disabled coach advice/highlights, unreachable banner branches, unused helpers and bindings, empty lobby IIFE and obsolete chooser/audio bookkeeping. Removed 19 exact duplicate CSS rules and two exact duplicate declarations under the same conditional ancestry. Preserved dynamic selectors, cascade order, fallback declarations and compatibility storage/network fields.
+
+Maintained JS/CSS/HTML now use consistent formatting; 61 JS files passed normalized syntax-tree equivalence checks during formatting. Frozen rules, intelligence and QR/vendor code are byte-identical. All 1464 original artwork/voice paths remain byte-identical. Fourteen exact PCM recordings moved into two synchronously loaded data files so application code is readable, preserving immediate decoding/scheduling. A 1.6 MB duplicate image string now references the exact existing approved PNG, with preload/readiness/offline support. The service worker has 1449 unique paths instead of 1469 duplicate aliases. No browser storage, careers, preferences, identities or old caches were cleared.
+
+Added README.md, DEVELOPING.md, pinned developer dependencies, formatting configuration, source checks and CI. Historical numbered filenames remain stable compatibility/provenance paths; active production layout adapters named review are documented as live code. This was a broad safe cleanup, not a rewrite of the classic-script architecture or proof that every dynamic path is unused.
+
+## Verification and limits
+
+Local evidence records 205 checks/scenarios: two full native matches (four hands each, landscape −215/580 and portrait 270/530), a separate real scored hand with 13 rotation checks, 48 menu routes, settings, 66-identity chooser/search, scoring, audio, network privacy/reconnect, stale action guards and trusted host transfer. Five visible-layout comparisons matched with Web Animations frozen. Fresh worker-controlled offline reload/QR passed. An actual 845-to-846 worker update retained synthetic career and six saved settings/identity keys, reopened offline and retained the old cache. Full details and all raw final receipts are in coordination/releases/846-cleanup.
+
+The initial menu harness assumed a fixed startup delay under ten concurrent browsers; two clicks timed out, then passed after waiting for the real loader. The avatar harness was corrected for the actual 66 identities and the existing close-on-rotation behavior. These were harness corrections, not unrecorded game fixes. Original menu failures and focused retry are preserved.
+
+Production staging remained isolated. One guarded import stopped because sparse checkout omitted two preserved directories; the second passed file checks but could not push a new CI workflow with GITHUB_TOKEN. The final import staged application files, and the connected GitHub integration installed the identical CI workflow separately. Neither failed attempt touched production main. Independent production CI then found four older source copies outside the recovered runtime: bots_3.js, polish_4.js, rules_8.js and rook532-luxbid.css. None was referenced by the active application or original ZIP loader. Their exact blobs were preserved under docs/history/production-legacy-source, clearing obsolete code from the root. The final candidate was checked against all 1650 shared source hashes plus those four unchanged archives before promotion.
+
+Physical Android/fullscreen/share-sheet behavior, subjective audio and real WAN multiplayer/mobile roaming remain unverified. Prior unresolved 845 items remain inherited: arbitrary network stalls are not solved by a fixed bird-fight collection budget; the original 805/808 Android freeze cause remains unproven. Banked poses, alternate materials, original pixel authorities and unstarted roadmap work are not silently approved or completed by cleanup.
+
+## Rollback, source and continuity
+
+rollback/pre-846-20261018: Test e6ae19538a91ec5d12ffa10e2dc3e85abd6ba719; production be2054a9d730162fbeae20ad8b8511438e9d6cfc. Existing pre-845 and pre-landscape rollbacks remain unchanged. A future rollback should be a reviewed restore commit, preserving history and player data, not a force reset.
+
+The exact original 845.zip remains 193187658 bytes, SHA256 6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f, Library libfile_14b9911e71788191993b618bf2336fcb. Its exact source is Test 26cf989cedfc6e7bde269f1b22690afeaa558a45 at builds/845. Never overwrite it or infer the current source from the largest archive number. 846 was atomically reserved at e6ae19538a91ec5d12ffa10e2dc3e85abd6ba719; no 846.zip exists.
+
+The current pointer uses status CURRENT, matching the read-only Brain reader's validator. The previous 845 supplement used an incompatible status value. The history reader also keeps version paths relative while validating history, fixing its prior absolute/relative mismatch. Current/history JSON requests also use the worker's existing fresh-request contract so an online read does not reuse a cached old pointer. AF's browser/current/history verification checks the navigation corrections. No old Brain document was edited.
+
+The continuing session read the principal foundational H and subsequent I–AE documents plus the 845 supplement and current coordination records. This is not a new visual audit of every historical binary attachment. Relevant protected assets were checked by exact bytes. Earlier A/B frozen packages remain recorded as unavailable. Every continuation must refresh current.json, registry and applicable specialist records and read the actual mandatory history. Summaries never replace originals. Publishing does not notify or wake other chats.
+
+One comprehensive successor file is brain/releases/846/COMPREHENSIVE_HANDOFF.txt. It begins with the current state and preserves the complete earlier 845 handoff as a clearly historical appendix, including repairs, approved assets, checkpoints, restrictions and outstanding work. Startup: versions/AF/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt. Do not restart or repeat completed uploads. All 142 new Test blobs were verified; production imported the pinned exact source. Both sites are deployed.
+
+Every successor must reproduce the following two complete rules verbatim in its own handoff/startup and future Brain update and explicitly pass the obligation forward again.
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+
+# Build 846 source cleanup
+
+Continues the exact recovered and deployed Build 845. The owner requested a professional cleanup of the full codebase and removal of the experimental build caption from live landscape mode. This checkpoint is locally verified and is not itself a deployment.
+
+## Changes
+
+- Removed the landscape review notice node, updater and CSS, rather than hiding the old 840 caption. Diagnostic runtime identity remains available to support tools.
+- Removed the unused shuffle732 JS/CSS and empty landscape hand adapter, including its caller and precache entry. Preserved the approved signature shuffle and its recordings.
+- Removed retired coach advice, unreachable turn-banner branches, an empty lobby IIFE, two unused local helpers and 36 unused bindings. Removed stale chooser page/collection bookkeeping, unused audio handles and obsolete fire/audio reads. Legacy storage and network setting fields remain for compatibility.
+- Removed 19 exact duplicate CSS rules and two exact duplicate declarations, preserving cascade order, conditional ancestry and different fallback values.
+- Formatted 61 maintained root JS files plus CSS and HTML. JavaScript formatting passed normalized AST comparisons, allowing equivalent logical association and removal of empty statements. Frozen strategy/rules and vendor files are byte-identical.
+- Moved 14 exact PCM recordings from application logic to two synchronously loaded data assets. Original sample bytes and scheduling are unchanged. Replaced a 1.6 MB duplicate base64 PNG with the exact existing approved bid-dock PNG, now explicitly preloaded, decoded and precached.
+- Consolidated the worker inventory from 1469 entries to 1449 unique current paths, removing 22 historical duplicate aliases and the retired adapter while adding three required dependencies. Reuse is restricted to unchanged previous-release artwork; no user cache or saved data is deleted.
+- Preserved 29 inherited review notes unchanged under docs/history/build-845-inherited. Added a current README, developer guide, pinned development tools, formatting rules, source checks and CI.
+
+## Evidence
+
+See CANDIDATE_RECEIPT.json for all counts and test limits; SOURCE_MANIFEST.json is the exact current source inventory. Every one of the 1464 original asset/voice paths is byte-identical. All protected strategy/rules/vendor files match the baseline.
+
+Two full native matches completed, one per orientation, with four hands each. The separate native hand/rotation suite passed 13 checks. Settings, all 48 menu routes, avatars/search, audio, scoring, network privacy/reconnect, stale action guards and trusted host transfer passed. Five frozen visible-layout comparisons match. Fresh offline reload/QR and an actual 845-to-846 worker upgrade with synthetic saved careers and preferences passed; the old cache remains. No page errors or missing assets were recorded in final scenarios.
+
+The first two menu routes timed out under ten simultaneous test browsers because the harness assumed a fixed startup delay. Both passed after waiting for the actual loader. The avatar harness was corrected to use the actual 66 identities and the existing close-on-rotation behavior. Original menu evidence and the focused retry are retained.
+
+Physical Android acceptance, subjective listening and real WAN multiplayer are not certified by these tests. No game ZIP was created. This cleanup does not change strategy, game rules, scoring, roster policy, approved art or physical-table geometry. It does not claim that every dynamically referenced code path is now provably unreachable or that a monolithic classic-script architecture has been rewritten.
+
+## Release procedure
+
+Read current main heads and the 846 reservation. Preserve rollback refs from those exact heads. Verify both candidate trees against the complete source manifest and inspect deleted paths. Publish Test with an expected-head lease; require source CI and Pages success, source HTTP hashes and live browser checks. Only then publish the same checked runtime to production with its own expected-head lease and verification. Update the Master Brain, registry, release receipt and handoff with the actual commits and outcomes. Do not force-reset history or clear player data.
+
+
+===== COMPLETE HISTORICAL 845 HANDOFF — RETAINED VERBATIM =====
+The following is an original historical receipt. Its earlier holds/latest-runtime statements are superseded only by the current AF state above. Its detailed repairs, approvals, sources, evidence and unresolved items remain preserved.
+
+# Master Brain AE — Build 845 live release supplement
+
+October 18, 2026. Owner: Jerome Griffin. This supersedes the Build 845 recovery deployment hold for this exact approved release only. All frozen H–AE documents remain unchanged and required reading.
+
+## Current release
+
+The owner replied “Okay, so you just go ahead and follow the instructions you gave me there” immediately after the assistant identified publishing Build 845 to both live sites as the next step. The assistant stated the dual-site release action, prepared and verified isolated candidates, then published Test first followed by House of Rooks. This authorizes the exact recovered Build 845; it does not authorize unrelated development or automatic future releases.
+
+Build: **845-share-shuffle**. Original immutable 845.zip: 193187658 bytes, SHA-256 6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f. Library libfile_14b9911e71788191993b618bf2336fcb. Exact source is Test commit 26cf989cedfc6e7bde269f1b22690afeaa558a45, builds/845; runtime tree 9e0ee5871c17b33c7a70367759d67194c25b32fc. Every one of the 1642 source files matches on both release commits. No game code/art was rebuilt for deployment.
+
+Live sites:
+- https://jeromeleegriffin.github.io/Test/
+- https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/
+
+Runtime release commits: Test 95dbe0929ee05899e5f02f358f3a83f4ffab84e3; production be2054a9d730162fbeae20ad8b8511438e9d6cfc.
+
+Pages runs: Test 39159018984; production 39159354088; both success. All 135 selected HTTP files per site match source SHA-256, including every changed/new archive path and essential unchanged code/icons. Fresh live browser contexts on both sites loaded coherent 845, completed essential artwork loading, dealt to a usable auction and retained it through portrait rotation.
+
+## Verification and preservation
+
+Before live publication, a new local native hand completed 195 bid, Kitty Received, six discards, trump, actual legal play and scoring; 13 rotation/gameplay checks passed with no script errors or missing assets. Fresh worker-controlled offline reload and local offline QR passed. Both candidate trees were read back against every archive blob before promotion, preserving original ZIP player and hosting/history files. Sixteen obsolete 842 developer/test/alias paths were removed; GriffinHousePlayer.html deliberately retained as the owner’s original loader. No user browser cache, service worker, career, preferences or saved data were cleared.
+
+Production source import ran only on release/845-20261018 (workflow run 39158843779 success), verified size/SHA-256/Git blob hash of all1642 files, then committed that candidate. The staging workflow is branch-scoped and does not run on main. Existing historical 810 manual workflow was not invoked or changed. Production main was promoted only after Test Pages and essential served hashes passed.
+
+845 includes offline scannable QR, fitting quiet-zone/close control, same-origin ZIP-wrapper Griffin identity, and approved signature-shuffle-only presentation in both orientations. Inherited 844 peer/private-resync authorization, credential reconnect with exact seat/team/hand, trusted handoff, match-specific audio receipts and stale action context guards are preserved. All earlier 829–843 repairs and approved asset bytes remain. Full repairs, supersessions, original records, inventory and checkpoints are in the recovery handoff at Test work/recovery-845-20261018, commit e7cfed3915c8759e7084de8222eb89fe73f5972b, brain/recovery/845/Griffin_Build_845_Comprehensive_Handoff.txt. The recovery branch root intentionally stays old live game; builds/845 is its exact source. Do not blindly merge that branch to release.
+
+## Rollback and limits
+
+rollback/pre-845-20261018 remains unchanged in both repositories: Test83e12363809b66420ff09d292504855390f1168b; production555e1163a826687dccf9cb2e4d60af09119669b9. Historical pre-landscape/810/531 authorities are preserved, not substituted for the current source. Future rollback requires a reviewed restore commit; do not reset branch history or erase player progress.
+
+A newly observed presentation issue remains: angle-c-characters.js hardcodes angleCNotice to “840 · Stable discard”, although page/script/worker/HOR_BUILD/GHR_BUILD identify845. This is an inherited secondary corner label, not a stale runtime. It was recorded rather than changing the immutable approved845 source during release. Physical Android share-sheet branding/installed-app identity/fullscreen, compositor rotation behavior, subjective audio, legacy career migration and real WAN multi-device reconnect remain unverified. Controlled relay/native browser tests do not certify PeerJS/TURN/mobile roaming. The fixed bird-fight network collection budget does not compensate for arbitrary stalls. The exact original 805/808 Android freeze cause remains unproven. No new full-match audit or physical-phone acceptance is claimed by this deployment.
+
+This release supplement is authoritative for current runtime status; older fields/records describe their own historical checkpoints. Read current.json and this release receipt on every continuation. New game development still requires complete H-through-current history reading; the recovery/release did not certify a new exhaustive reread. No automatic notification of other chats is claimed.
+
+Retrieve actual ZIP bytes and provide a clickable sandbox file link when delivering files to Jerome. Do not substitute a web download URL or preview-only reference. If multiple files are requested as one delivery, give one combined archive while preserving the original game ZIP bytes inside.
+
+Every successor must reproduce both full rules below verbatim in future handoffs and startup prompts, and explicitly pass the same obligation to every following assistant.
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+
+
+
+ORIGINAL RECOVERY HANDOFF — HISTORICAL RECORD
+The earlier no-deployment hold below was superseded for exact845 by the authorized live release documented above. Source, repair history and old receipts remain preserved; no blanket future approval is implied.
+
+GRIFFIN HOUSE OF ROOKS — BUILD 845 EMERGENCY CONTINUITY RECOVERY
+October 18, 2026 • Owner: Jerome Griffin • Documentation supplement to Master Brain AE
+
+1. RECOVERED CURRENT TRUTH
+
+DO NOT START OVER. Continue the exact immutable 845.zip. This recovery made no game-code or artwork changes and created no replacement playable build.
+
+Archive: 845.zip, 193,187,658 bytes, 1,642 files.
+SHA-256: 6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f
+Persistent archive identity: libfile_14b9911e71788191993b618bf2336fcb; file_000000007ef481f5856c715ff6320867.
+Runtime: 845-share-shuffle. Display label: 845 Share and shuffle.
+Worker cache: house-of-rooks-845-share-shuffle.
+
+Verified recovery source commit: 26cf989cedfc6e7bde269f1b22690afeaa558a45
+Repository: JeromeLeeGriffin/Test
+Recovery branch: work/recovery-845-20261018
+Exact source path: builds/845
+Exact runtime Git tree: 9e0ee5871c17b33c7a70367759d67194c25b32fc
+Source URL: https://github.com/JeromeLeeGriffin/Test/tree/26cf989cedfc6e7bde269f1b22690afeaa558a45/builds/845
+Recovery branch URL: https://github.com/JeromeLeeGriffin/Test/tree/work/recovery-845-20261018
+
+All 1,642 runtime files were compared by Git blob hash with the recovered ZIP and match exactly. The original session's project directory also matches all 1,642 archive members byte-for-byte. Original and recovered ZIP checksums match the original package845.json receipt. ZIP CRC validation passed. Every current REVIEW-MANIFEST changed/added hash matched. No source rebuilding from 805, 810, 816 or any earlier candidate occurred.
+
+The recovery branch keeps the root game at its existing live state and stores 845 in builds/845. It is not a replacement for either live main and is not an automatic-deployment branch. Documentation updates are isolated here. Master Brain AE remains the published foundation; this recovery is a supplement, not a fabricated new published Brain letter or newly approved game release.
+
+2. LIVE BRANCHES AND ROLLBACKS
+
+Test/main: 83e12363809b66420ff09d292504855390f1168b
+Test rollback/pre-845-20261018: same commit.
+Griffin-House-of-Rooks/main: 555e1163a826687dccf9cb2e4d60af09119669b9
+Griffin-House-of-Rooks rollback/pre-845-20261018: same commit.
+Both current live heads and rollback refs were independently read from GitHub. They match the original session's pre-upload snapshots. Neither main was changed by recovery. No production branch, production file, hosting setting, deployment, service worker, browser cache or player record was changed.
+
+The live heads' last runtime change installed the approved landscape construction screenshot and dismissible preview; they are not Build 845. Main's brain/current.json still says AE and carries older 810 release fields and later supplements. Do not infer the current runtime from those stale fields alone. The isolated branch adds an explicit 845 recovery supplement and records observed main heads without rewriting immutable AE history.
+
+Historic work/overhead-landscape-20261014 is at 9b7ec7b1dfdffeb08040eb782024339aa74d472b and has an AC-era current.json. It is older experimental work, not the latest 845 source. Preserve it; do not promote it over 845.
+
+Earlier rollback/pre-landscape-20261014 at b551144768084fc81c12de03682eae4e78f8e600 remains history. The historical protection of production 531 does not mean current production is still 531: subsequent owner-approved 810 releases are in published records. The current verified pre-845 production rollback above is the applicable deployment restore point. No rollback is authorized now.
+
+3. WHAT ACTUALLY HAPPENED TO GITHUB UPLOADS
+
+The reported 28 files were real staged Git objects, not a finished named staging branch. Tree 7945c7bc046aca7575b242d8b4255d201a3df807 is remotely readable and contains exactly the reported 28 changed/new 845 paths. Each hash matches the archive. The last path in that 28-file checkpoint is review-continuity/829-CHECKPOINT.txt, blob e512c8aa6ac45f4ae87469d45fb766d163ee7b1c.
+
+The preserved original uploads.jsonl contains 71 successful upload receipts, indexes 52 through 122 inclusive. The first 28 are indexes 52–79; 43 later receipts continue through x1/integration.js at index 122, SHA 3be3d6e87df42584dc6656941f94b44aea97a444. Thus the user's 28-file report was a valid earlier checkpoint, not the final extent of uploaded data. The file's local clock labels are not used as authoritative Eastern-time event timestamps.
+
+Relative to current Test/main, the archive has 1,516 identical paths, 22 changed paths and 104 new paths. All 126 changed/new blobs were already available on GitHub. The recovery constructed and read back complete tree 99bccd011fcfa694d63b5581ce7047682e926c7c, matching all 1,642 archive paths while retaining existing main-only history. It then assembled the exact archive-only runtime tree and anchored that tree under builds/845 on a new recovery branch. No runtime blob was uploaded again.
+
+A first attempt to create a single 1,642-entry tree timed out. The recovery did not treat that timeout as success or loop on the same large operation. It verified a smaller overlay and used two compact tree operations: a 25-entry assets tree and a 151-entry runtime root. Both returned their independently computed expected hashes; a recursive read verified the complete exact tree. The durable commit/branch now remove dependence on unreferenced staging objects.
+
+There is no missing Test runtime upload. Remaining production publication is intentionally deferred. The original production snapshot and rollback are verified, but this recovery did not create a production 845 commit or upload candidate files to production. That is a future explicitly approved deployment operation. Do not claim both repositories already contain a deployed or committed 845 runtime.
+
+The exact 28-file list and complete 71-receipt ledger are preserved below and in coordination/recovery845/ evidence. Per-file Git SHA, SHA-256, size and comparison status are recorded in FILE_INVENTORY_845.json.
+
+4. FINAL BUILD 845 REPAIRS — PRESERVE THEM
+
+• QR panel fits short landscape and portrait, including 844×245; close control remains visible and QR has a four-module white quiet zone. A short tappable link replaces the oversized raw URL.
+• qrcode845.js provides real local QR encoding, including offline use. Preserve davidshimjs/qrcodejs MIT attribution. External image service and decorative non-scannable fallback are no longer the active QR implementation.
+• Approved Griffin page icon and title are applied to the game and same-origin outer ZIP player. Cross-origin parent pages are untouched. Native Android share-sheet cached branding and installed-app identity remain physical-phone checks. No hosted outer-wrapper/root favicon repair was deployed.
+• Old 732 wash renderer, legacy selector switches, retired shuffle DOM and obsolete deal fallback were removed from the active path. Both orientations use approved signature-shuffle assets. Rotation does not cancel that playback. Artwork and audio bytes are unchanged from 844.
+• Preserve all inherited 844 private-resync, reconnect, action-context, build-label and repeated-match audio repairs.
+
+The recovered 845 package records 12 QR/share/shuffle checks, one same-origin wrapper test, 12 rotation regressions through auction/Kitty/discards/trump/stamp barrier, fresh-worker offline reload and offline QR. Its current JSON reports no page errors or failed checks. These are preserved prior-session test results, not a newly executed browser audit in this recovery. No three-match audit was repeated for this focused 845 patch. No invitations/messages were sent.
+
+Compared directly with verified 844.zip, nine existing files differ: REVIEW-CHECKS.json, REVIEW-MANIFEST.json, game060.js, hor-version.js, index.html, signature-shuffle.css, signature-shuffle.js, style057.css and sw060.js. Added: README-845.txt, qrcode845.js, review-continuity/845-CHECKPOINT.txt. No files were removed in 845. Current REVIEW-MANIFEST lists eight changed payloads because it excludes its own self-referential hash; that is expected.
+
+5. INHERITED REPAIRS AND SUPERSESSIONS
+
+The full original per-build records are appended, so the following is a navigation guide rather than a replacement for them.
+
+829: real partner portraits, native seat stats/remove/reseat, top-card nest behavior, table-plane effects, top played-card/name spacing, laid-down cards and short recap. Its added 1.46-second nest pause was superseded by 830.
+830: full-room oval entrance/waiting scene, bottom play/friends/join dock, player editor, ranked native bot picker, shelf lantern move; restored shared portrait-style 46-flight dealing with the sixth nest card face up in flight and no added mid-deal table-flip pause. Reveal OFF remains ordinary face-down flow.
+831: explicit browser fullscreen controls, waiting/entrance fit, row-based public menu pagination, embedded-player fullscreen handling. Rotation-only fullscreen behavior was later superseded by 839; redundant gameplay fullscreen button removed in 840, but menu/fullscreen actions retained.
+832: finished fine-baize scene asset using unchanged original room/rail pixels and clipped material; uniform cover scale; compact live status rather than detached Thinking bars; short-height bid/Moon clearance; valid bid retained across landscape resize.
+833: trump stamp minimum 950ms at 3×/MAX, 1,950ms at 1×, first-play barrier shared by human/bots; chooser presentation fields; top information panel; clear partner selected feedback and persistence.
+834: fixed ordinary/Moon bid anchor with unchanged base dimensions; speeds lower right; physical shelf/lantern asset while preserving felt/rail/fireplace pixels.
+835: History actually opens/returns; exact bot choices protected against occupied-portrait substitution and late conflicts; reachable House Tour; score disclosure details; readable physical Griffin plaque.
+836: complete levels/award guide grouping, fitted settings/profile menus, explicit avatar-matched voice choice, score/recap readability, custom whole-number win score 1–2000 with explicit confirmation, searchable existing partner/avatar/bot choices.
+837: owner-approved six-pose landscape bird-fight artwork/choreography integrated; Black left facing right, Red right facing left at 80%; Black wins and returns to its real played card; portrait original retained; cancellation/fallback/mixer preserved.
+838: manual hand arrangement, shared locked per-hand sequence across orientations, private session order; Blackbird then enabled Red Two then largest color groups with 1,14,13…; generated premium-card head lift on true top-nest bird reveal plus existing crowd reaction once. Early narrow split layout superseded by 839/840.
+839: Kitty Received/Continue parity, two rows of eight then ten-card final row; native finger scrolling for photo choosers with Prev/Next; bid draft survives orientation/menu; Menu/Leave accessible during bid; rotation no longer drives fullscreen; measurable landscape holder turn/win cue strip.
+840: stable 16-slot discard editing: first five removals leave fixed gaps, untouched cards keep size/position, return to original slot; six discards compact kept ten; reset/shared orientation state retained. Installed manifest requests fullscreen with standalone fallback, same app identity/scope; actual Android installation remains unverified.
+841: row-based chooser paging; short waiting-room name/Change arrangement; host-orientation-independent network bird capture budget (5.46s special capture), inline empty-Join feedback, corrected Tour, compact profile/recap, real gold crown SVG, discard focus retention. Reduced archive size by excluding historical evidence screenshots and maximum ZIP compression, with no lossy runtime art conversion. Cache reuse limited to exact unchanged prior-image bytes; no cache deletion.
+842: removed retired Jerome/SOL developer/editor/test menu paths and actual perfect-hand/lucky/forced-nest/undo overrides, old source aliases and unused experiments. Normal careers/awards/backups/restore, public Jerome, ordinary rules/audio/network guards and frozen X1/Sol7 remain. 17 obsolete files removed; 2,509,145 net source bytes removed vs 841. Existing old preference keys ignored without erasing progress.
+843: HUD/speeds hidden through victory/recap in both orientations; ordinary hand recorded clink and match recorded applause, duplicate opening suppression, normal mute/effects controls; no added synthetic fanfare. Owner's exact odd phone sound was not positively identified.
+844: peer identity binds private resync/actions; bidder-only discard-state delivery; private session reconnect credentials preserve physical seat/team/index/hand; names alone cannot reclaim another hand; obsolete transport close cannot disconnect replacement; trusted host handoff carries credentials; shared match identity fixes repeated-final-score applause; accurate build label; stale queued action context discarded after resync. Public state excludes private hands/tokens.
+845: QR/share identity/signature-shuffle repairs above.
+
+Important explicit supersessions: photo choosers may finger-scroll (839) while ordinary settings retain fitted pagination; Menu/Leave access during bidding is intentionally restored (839); fixed slots (840) supersede earlier collapsing/growing discard layout; ordinary and Moon bid anchor are shared (834); old 732 wash must not return (845); old developer/testing menus must not return (842). Do not reapply older blanket instructions where these later owner-directed repairs supersede them.
+
+PRE-829 SOURCE AND REJECTION HISTORY
+
+The inherited lower-camera record pins the underlying 816.zip at SHA-256 4c79e110f29c77b536dc50304697c53fcef0f4e5c1b8ab23f7b1bf2d1b058af7 and explicitly excludes rejected 824–828 candidates. That is recorded lineage, not a freshly recomputed 816 archive hash; its archive was not present in this recovery workspace. Source precedence comes from the intact 845 archive, not a reconstruction of 816.
+
+Preserved REPAIR_812_SOURCE.json pins the original 811 archive hash 9c75578920f328cc05d2c3f498f5c3bee94e8952eee5586cb0f9e8c18c065e78 and names the late-811/discard overlay files. REVIEW_README.md and REPAIR_813_SOURCE.json document 813's larger real-card midnight-felt Nest and separate received-card/tray presentation after the owner rejected 812's flat selector as inadequate. 814 fixed card-frame overflow/padding. 815 separated physical stamper size from the felt imprint (264 scene units), derived Lead from the first trick card's numeric owner/currentPlayer, and added a lightweight state signature to keep seat labels synchronized. These are historical changes preserved in the source; later 838–840 discard flow supersedes the older 813 selection design. Do not restore an old page simply because REVIEW_README.md or QA_RESULT.json still identifies 813. Those carried files are evidence, not the current 845 status.
+
+The original complete 811/812/813 QA baselines and source JSON remain under builds/845. Earlier landscape camera/holder studies and approved 017/018 are preserved in AE/main history; they are not substitutes for the later lower-camera runtime. Remaining gaps in the full 816–828 approval/source chain must be resolved from original records before changing that area, not filled with invented history.
+
+6. ARTWORK / ASSET AUTHORITIES
+
+Runtime source includes all approved/preserved artwork, not just code. Do not rebuild these assets from prose. FILE_INVENTORY_845.json gives exact bytes/hashes for every asset and other file.
+
+Current landscape environment: assets/lower-camera/room-table-shelf834.svg, a finished self-contained 1844×853 scene. It retains 832 fine baize, with only registered bookshelf edit area changed for a properly seated lantern. Fine baize source: room-table-baize832.svg; source room-table-lantern830.png; original oval and room-table.png remain rollback/reference assets. Runtime authoring notes contain exact original prompts and rejection lessons.
+Current house branding: assets/brand835/house-plaque835.png, 2048×768 RGBA, dark emerald/walnut/brass with exact Griffin wording.
+Landscape fight: assets/raven-landscape837/black-atlas.png and red-atlas.png. Preserve six poses, sides/facing, relative scale, source art, original audio and choreography. Portrait fight is separate.
+Nest bird lift: assets/nest-reveal838/bird-heads.png. It augments the actual card only when that bird is legitimately top-nest/reveal ON. No new call/flutter/fight audio for that reveal.
+Results: assets/images/winner-crown841.svg; actual original card artwork retained.
+Shuffle: approved assets/signature-shuffle art/manifest/audio through signature-shuffle.js and shuffle-asset.js; no returning legacy wash.
+Cards, holder, premium birds, 52-bot roster, full-cast voices, Jerome/Rita identities, original loader and portrait authority remain in exact archive/source. Earlier Angle C scene variants are preserved as history, not promoted merely because their files still exist.
+
+No artwork generation, avatar resizing, material conversion, loader rebuilding, rules/strategy change or asset deletion was performed by recovery. Direct comparison with 844 confirms every assets/ byte unchanged and rules.js, bots.js, x1/core.js, x1/bidding.js, x1/worker.js, x1/integration.js unchanged.
+
+7. TEST EVIDENCE AND OPEN PROBLEMS
+
+Newly verified in recovery: matching archive hash/size/CRC; original workspace/source equality; current 845 manifest hashes; 28-file staged-tree membership; later upload ledger; every 845 Git blob match in exact remote tree; durable recovery branch/commit; live/rollback heads; unchanged 844 assets/frozen modules. No new full-match or physical-phone audit was run, because source was recovered unchanged.
+
+Inherited 844 evidence includes 12 two-browser protocol/lifecycle/privacy checks, native full hand after reconnect with two humans/two bots through actual handlers, 19 authorization/context cases, 6 trusted-handoff cases, 12 rotation checks, 36 scoring/deck checks, 48 menu/viewport checks, settings/tool persistence, three full 500-point matches (3/5/5 hands), and fresh/offline plus 843→844 worker upgrade without lost preferences/careers. Controlled relay tests did not certify public PeerJS signaling, TURN, Cloudflare WAN or actual mobile reconnection. Preserve that distinction.
+
+STILL OPEN / NOT CERTIFIED:
+• Physical Android share-sheet icon/title cache and installed-app identity. Same-origin outer ZIP branding success does not prove native share-sheet identity. A cross-origin wrapper cannot be changed by the child page.
+• Permanent invitation destination. A localhost/unpacked-ZIP room URL is not reachable by another device. Deploy exact game to stable HTTPS only after explicit approval, then confirm generated invites/QR use that hosted origin.
+• Physical Android/tablet installed fullscreen launch, browser notices, compositor rotation blackout, audio quality/volume, touch/performance and every device viewport.
+• Real WAN multi-device privacy/reconnect/host transfer with current 844/845 guard protocol. Preserve same seat/hand; different browsers without credentials intentionally cannot reclaim by name.
+• Bird fight guest completion on real devices/network stalls. 841 fixes host-orientation scheduling with a fixed budget; it does not provide remote acknowledgements or compensate for arbitrary stalls. Earlier 837 limitation is partially addressed, not universally certified.
+• Legacy career/XP migration, including Rita's existing progress: do not clear data, uninstall or promise migration without current evidence.
+• Historical 805/808 Android freeze's exact original cause remains unproven. Current browser runs are evidence of later behavior, not retroactive proof.
+• Daily challenge and audit items 11–13 remain banked/unimplemented per 841; do not claim completion by omission.
+• Full H-through-AE chronological rereading is NOT newly certified by this recovery. Current pointer, AE master/start, coordination startup/numbering/control, H master and selected later authority files were retrieved; complete 829–845 package records were read. The prior continuous session's claimed history reading is preserved as inherited evidence. Before new game development, finish the permanent full-history reading procedure, including inaccessible original authorities, and record the actual reading scope. Recovery performed preservation/documentation, not new game development.
+
+8. DEPLOYMENT INSTRUCTIONS — HOLD UNTIL EXPLICIT OWNER APPROVAL
+
+No deployment is authorized by this recovery prompt. This section is a future procedure only.
+
+1. Re-read current Test and production main refs, rollback refs, brain/current.json and recovery branch. If anything advanced, inspect changes and preserve them. Never force-push or overwrite newer work.
+2. Use pinned source 26cf989.../builds/845 and verify exact runtime tree 9e0ee587... plus FILE_INVENTORY_845.json. Do not copy the recovery branch root as the game: its root intentionally remains old live runtime. Do not rebuild from 805/810/816 or blindly merge the recovery branch into main to release.
+3. Confirm owner approval for the exact Build 845 and target sites. This recovery supersedes older deployment requests with a current explicit hold. Production 531-era restrictions are historical protection, not a reason to substitute a 531 source.
+4. Preserve current pre-deployment heads under fresh rollback refs if they changed; existing pre-845 rollback refs remain immutable. Prepare separate non-live candidate commits for Test and Griffin-House-of-Rooks, using each repository's own parent and retaining its hosting/docs configuration.
+5. Import the exact runtime allowlist from builds/845 to site root. Preserve repository-only history, documentation, original ZIP player(s), CNAME/.nojekyll and hosting configuration unless a reviewed release diff specifically changes them. Review legacy main-only runtime files against 842 removal ledger: do not blindly delete all non-ZIP paths, and do not re-enable retired developer routes.
+6. Verify all expected runtime Git blobs against the allowlist before moving a live branch. Use expected_sha and force=false; reject stale leases and inspect new heads before retrying. Do not use an unreviewed whole-root branch merge.
+7. After approved publication, verify Pages/deployment success and served hashes for entry/scripts/worker/new art, then active build truth (page/script/marker/worker/cache), startup art, native bid→Kitty→six discards→trump→play→score, both orientations and offline installed upgrade without clearing saves/cache.
+8. Test hosted Invite/QR from another device, native Android identity/fullscreen and real multi-device reconnect. Report limits. If an approved rollback is needed, create a reviewed restore commit from recorded pre-deployment source without deleting history or resetting player data.
+9. Record new candidate/live commit IDs, final served checks, owner acceptance, exact archive checksum and remaining problems in a new durable release receipt. Then publish the staged Brain supplement through a separately approved documentation-only update, preserving frozen AE and history. Publishing docs does not automatically notify other chats.
+
+9. CONTINUATION AND DELIVERY RULES
+
+Keep operations short and verified. At each meaningful checkpoint persist receipt JSON and exact source. Never claim an upload, branch creation or deployment from a timeout alone. If a bulk operation stalls, inspect remotely before retrying; reuse successful objects. The prior session hit conversation limits; warn before another long chat becomes unsafe, and prepare successor files before switching.
+
+The actual downloadable ZIP link is required. Retrieve actual ZIP bytes and provide a clickable sandbox file link. Do not substitute a web download URL or preview-only reference. 845.zip is the original archive, not a newly numbered build. This documentation task does not consume a new game number or overwrite an existing archive.
+
+Successor must reproduce BOTH permanent rules below verbatim in every future handoff, START HERE and startup prompt, and explicitly pass the same obligation to each following assistant. Do not ask Jerome to carry information that is already preserved in the repository. No messages were sent to others.
+
+10. VERIFIED PRESERVED ARCHIVE CHECKPOINTS
+
+830.zip | 176115129 bytes | SHA-256 a6181ca12cbfd41e58aac42031566d802a6857d1d6673e465df3da0b302d0777
+831.zip | 176122647 bytes | SHA-256 19c5fb3e1afd6e71a8bdce741e4782a9d0ca7ca7ce4dc388ce39135719ff97b4
+832.zip | 181206056 bytes | SHA-256 57e4905e2098e31adb006f6fadca833ced51e53359c4d52e025b183bb04a1f0d
+833.zip | 181320606 bytes | SHA-256 423dc9a9e69b04735064867f838254ade685fff10d66d86f734fa4ef2c06990d
+834.zip | 188273111 bytes | SHA-256 62ac7751cdb759dc5178bdd89cbb744e5b4ab2db4336696da3e203debb14cf90
+835.zip | 191166441 bytes | SHA-256 e8f02eb1434278fe36899322596a4c6ed01600fbd5593ee3167d0b6385b0a6b5
+836.zip | 191184161 bytes | SHA-256 9ca8d5cf4e14478b16d95a54cfc9fa6c4927c430a4bd78da7c299b0753c7b7dc
+837.zip | 195823365 bytes | SHA-256 83c8f585721b40b75eb39fdf499174e53ec2735b32453fff3040435b94079706
+838.zip | 198346841 bytes | SHA-256 3e7ec5517c42226c2815f730077a5418d5e98ebf7725ad55a0525ee2b9ef16cf
+839.zip | 198358378 bytes | SHA-256 511d7f549a48a45ba62c271f795af6a39d3d390a7e48dd925f41b3f8c447f555
+840.zip | 198363138 bytes | SHA-256 fe7a21b8dc716300283d4b546230ffddca45e1c834f8cfc1da1cb806e45283d8
+841.zip | 194610897 bytes | SHA-256 cddeaf2f61678ba9fdd024107d8a02dc7ff16f1847825e4696d0912e416a9125
+842.zip | 193185762 bytes | SHA-256 fed701d13b88b21dfb27133968162ff9832ff3b05ea38e41b9898edd48a8ee63
+843.zip | 193172133 bytes | SHA-256 a7a05eb3d2d3a5ed80d75bd4b4206042d2010fc93713fba36d0ea292a10cabf0
+844.zip | 193199920 bytes | SHA-256 7c0b7003f8dbbc41ed39017daee3e1c73e4f3669ff27b867287ea3d0f61ddfca
+845.zip | 193187658 bytes | SHA-256 6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f
+
+These hashes were recomputed from retained originals during recovery. They establish archive identity, not fresh gameplay testing or blanket owner approval. 844 is immediate rollback for 845; earlier archives remain history. Do not rename or overwrite them.
+
+11. VERIFIED 28-FILE STAGING CHECKPOINT
+
+52 | assets/raven-landscape837/red-atlas.png | 0ee202ca0a3c0c290feb888917cd305157735baf
+53 | bid-repair737.css | 93f8dc25c30d2234573ce712029d8a07d2341684
+54 | bid-repair737.js | 225cf6af0fac975666ec22895e0f294f11d03ae7
+55 | friends803.js | 7564337692ecfebb6302327c46a156643d3cdc6e
+56 | game060.js | 7a9849bf198a1f5809ec616c1ccf53ee068250f1
+57 | hand-order838.js | 1d686ea2a110e94dfc7194a00035e51e8f968c65
+58 | holder-cues789.js | 6fd6d4ba1364e625ca68da34dce4ee2b59ca6b1f
+59 | hor-version.js | b5d3865c152762dfa750daf3efe0cfd8d1499ce3
+60 | identity-choice.js | bab48f2805f328306d4718b1452e253cb2f9fef3
+61 | index.html | 364b6d058b4375febb4aee0e99ec112b2bbdf6f1
+62 | landscape-discard812.css | 39a89b1ef8effe71d89a82150bb808d0f33d8408
+63 | landscape-nest813.css | eb216e9a8e2db5557984a3115482aaf212d74c8f
+64 | landscape-polish.css | 824da7854f8c0db74c533053d99247a4d27ecbcc
+65 | landscape-polish.js | d1d9b9bb0e5f286fc313459c6b5b24cbcf046114
+66 | manifest.json | d59f4af2e38de0db4e9ef58cb22aed9df719403f
+67 | menu-approved805.js | 075e2975a2fb3aeb95f04f90b4b06e2305cf6e79
+68 | nest-manual838.css | 8f000b45ae52575796ecf72ece222358d2fd3d11
+69 | nest-manual838.js | 1e72f3fd9f050233b575d3175e36201145797590
+70 | nest-reveal838.css | 1c60d5679aa02a2949bc585e6c0725c45895a9af
+71 | nest-reveal838.js | f233f7f3e32be9dc2d974dbce03df53be238be43
+72 | partner833.css | b5c7138ac5a9f31a6dd70539918eed82ea5be1ef
+73 | polish.js | 8ea88bc3d7bc564451aa0a8691cc38e36d47cf47
+74 | progression.js | 4231b45a02aa135a00b4d236dd5944aa71006fb3
+75 | qrcode845.js | 5507c154ffc1b9d061c55d88268a26eeba49a36e
+76 | raven-audio761.js | ed8df802be4500a9a680fa352653a612cbae476c
+77 | raven-fight741.js | ee1895f2c14d53bc66185e07bc4fb6a739da9355
+78 | raven-landscape837.js | 9c4fc05f2d865cdacbd43e4ff4f5b489aed61e68
+79 | review-continuity/829-CHECKPOINT.txt | e512c8aa6ac45f4ae87469d45fb766d163ee7b1c
+
+12. PERMANENT SUCCESSOR RULES — VERBATIM
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+
+
+
+13. ORIGINAL BUILD RECORDS — HISTORICAL, PRESERVED VERBATIM
+
+Read in order. Older statements such as not deployed or pending describe that record’s own checkpoint; later supersessions and current recovery hold govern now. TASK-CHECKPOINT.txt still describes 836 and REVIEW_MANIFEST.json / QA_BASELINE files are older evidence. README-845.txt, REVIEW-CHECKS.json and hyphenated REVIEW-MANIFEST.json identify current 845. Do not mistake the stale generic task checkpoint for the latest build.
+
+
+========== READ-FIRST-LOWER-CAMERA.txt ==========
+
+GRIFFIN HOUSE OF ROOKS — LANDSCAPE FRIENDS REVIEW
+2026-10-17 · lower-camera-friends-review-20261017
+
+CONTINUING THE SAME GAME
+Previous delivered Griffin_Landscape_Layout_Review.zip:SHA2567b0ce395adec3f65f86660c8ed957ef61230c43b9a06c7f09e368560e0fd73f7. Oval artwork, gameplay camera, larger cards, holder clearance, lower-left score and lower-right controls retained. No new artwork generated.
+
+THIS PASS
+• Bid Box keeps the same normal width and height when200/Shoot the Moon appears. Removed the Moon-only size adjustment. Measured before/after equality at844x390 and844x290. Existing brass-connected Moon plaque retained. Very short views still place the full assembly slightly right to clear the far player's face.
+• Top nameplate moved closer to the far player, remaining beside the face.
+• Friends waiting screen uses the landscape oval scene and actual seat-relative identities. Seated faces are visible; oversized empty holder removed from landscape waiting only. Existing seat/stat/remove/choose controls retained. Empty-seat buttons, local plaque, readiness, table code and host controls stay visible.
+• Bot picker has a bounded area for complete bot cards, compact heading, navigation and Cancel. Original ranked order, persona information and selection handlers retained. At844x390 and844x290 it showed6 entries/page,9 pages;844x245 browser-bar view showed3 entries/page,18 pages;1280x800 showed16 entries/page,4 pages. Next/Previous and real selection tested.
+
+PLAY
+Open this ZIP with your existing game ZIP player. Alternatively extract all files together, serve the folder locally (python3 -m http.server 8000), then open http://localhost:8000. Entry:index.html. Included GriffinHousePlayer.html retains original bytes.
+
+CHECKS AND LIMITS
+Normal human195 bid and short human200 Shoot the Moon each completed genuine six-card discard, trump choice/confirmation and card input through scoring. No forced game/score state. Click-attempt counts can include original450ms-lock rejections; they are not trick counts. Offline worker-controlled reload/solo entry rendered without missing art. Source/script checks and ZIP CRC/hash checks passed.
+Friends UI uses an ISOLATED LOCAL HOST FIXTURE that bypasses signaling, then genuine seat/picker/fill/remove/cancel/start clicks. It verifies layout, actual seat/identity mapping and start dispatch, not network connectivity. No cross-device multiplayer certification. Physical Android and the owner's installed ZIP player still need owner review. Existing portrait presentation and rules are retained. No deployment or player-data clearing occurred.
+
+PRESERVATION
+Underlying816.zip SHA2564c79e110f29c77b536dc50304697c53fcef0f4e5c1b8ab23f7b1bf2d1b058af7. Engine game060.js differs only in its runtime marker. Rules, AI, saves, voices, card art and original portrait files retain source bytes. Presentation changes are in the three landscape files plus runtime/cache markers. Previous reviews remain rollback candidates.
+Earlier carried-over README/QA/manifests are historical. REVIEW-CHECKS.json and REVIEW-MANIFEST.json describe this package. Keep player data intact when reviewing/rolling back.
+
+
+========== README-829.txt ==========
+
+829 — LANDSCAPE POLISH REVIEW
+
+Continue from Griffin_Landscape_Friends_Review.zip. Open index.html in your existing ZIP player, or serve this complete directory locally. This is an isolated playable review, not a deployment.
+
+Changes:
+- Partner picker now displays each selected bot's actual portrait, name and playing style, with paginated choices and the existing favorite storage.
+- Waiting room: player names and level badges open stats; Remove bot is a separate, explicit button. Tap the now-open seat to choose its replacement.
+- The nest deals face down to the center, pauses, then turns its top card over. Existing bird reveal audio fires once during the turn, respecting sound settings. Portrait deal behavior is preserved.
+- Raven fight uses measurable felt geometry instead of the zero-size display:contents trick container. Both normal and short landscape captures were checked.
+- Top played card is closer to the trick. Top nameplate is closer to its player; long statuses sit in a bounded separate label.
+- Laid-down winning cards use the same flattened table plane as played cards. The notice sits below the portraits.
+- Match recap has inset margins and a compact short-height layout; cards no longer collide with the heading at 844x245.
+- Shoot the Moon bid box dimensions remain unchanged.
+- This review versions its script/style requests and precaches those exact URLs for offline reload. Existing user caches and saved games are not cleared.
+
+Verification:
+844x390, 844x290, 844x245, and 1280x800 layouts; real partner save, bot stat/close/remove/reseat actions; nest count 0 through 6 and animated flip; fight start/finish; lay-down and match fixtures; complete actual 195-bid hand through discard, trump and scoring; both bird reveal sound source starts; portrait rotation without overflow; offline reload with approved signature shuffle. No missing artwork or script errors in final runs. Ordinary and Moon bid box at 844x390 both measured 248.921875 x 102.96875.
+
+Limits:
+Network multiplayer was not verified. Waiting-room signaling was isolated for local tests; actual existing seat handlers were used. Fight/lay-down/match edge cases used deterministic presentation fixtures. Sound checks verify Web Audio source starts, not subjective handset volume.
+
+Historical documents in this package remain historical. REVIEW-CHECKS.json, REVIEW-MANIFEST.json and this README describe 829. The approved Brain authority inherited from this session is AE; no remote Brain or live server was modified. The underlying source is the existing 816-derived review, never an 805 rollback or rejected 824–828 candidate.
+
+
+========== README-830.txt ==========
+
+830 — FULL-ROOM LANDSCAPE REVIEW
+
+Continue from 829.zip (SHA256 d30d97fa6d12f35857be2ec02716e4eaa7bb315453fb16a9835c5ca81ccd6ccc). This is an isolated playable ZIP. Serve the directory or use the existing ZIP player with index.html. No live servers or repositories were changed.
+
+Approved room design implemented:
+- Full-width library and oval table on entrance and waiting screens.
+- One bottom action dock: Play Offline / Play With Friends / Join by Code.
+- Compact player identity chip; original name, avatar and voice controls behind Edit player.
+- Partner name and Change Partner remain near the opposite seat.
+- Waiting-room names open player stats; separate Change buttons open the ranked bot picker. Cancel keeps the existing bot. Choosing a replacement changes that seat. Remove bot remains available inside the picker.
+- Native Invite, QR availability, code copying, Fill seats, Start Game and Leave Table handlers remain. QR retains its existing HTTPS/public-host policy, so local HTTP tests normally hide it.
+- Smaller near-side game avatars (398 instead of 470 scene units; top stays304), keeping nearer players slightly larger than the top player. Top nameplate repositioned clear of the lantern.
+- Lantern moved from behind the left character onto the shelf between left and top seats. Flicker sample moved with it; room asset is a new file.
+
+Dealing correction:
+Portrait source was read directly. Portrait's sixth nest card is face up IN FLIGHT, then the deal continues immediately. It does not pause mid-deal for a separate table flip. 830 uses that shared renderer/loop with landscape coordinates and table-plane sizing. The independent landscape flight and 829's added 1.46-second pause were removed. Nest moved inside the landscape scene's visible stacking layer (it previously sat behind the scene). Nest card backs use the approved card-back art. Reveal OFF deals the same46 cards without a face-up reveal or bird reaction. Reveal ON shows only the top nest card and invokes the existing bird reaction once. No game-rule or AI changes.
+
+Validation:
+- Entrance, identity edit, partner save, join form and waiting-room actions at844x390,844x245,1280x800.
+- Cancel/change/remove/reseat/stat/close actions tested through live controls with an isolated waiting-room signaling fixture.
+- Native waiting-room Start enters an actual deal.
+- Both reveal settings:46 card flights; no gap above140ms in final 1x runs; reveal ON exactly1 face-up flight and one existing bird sound source; OFF zero face-up flights and zero bird reactions. Moving cards and landed nest visually inspected.
+- Actual195-bid full hand through discard, trump and score. Moon/ordinary bid box dimensions identical. Black and red bird sound sources each start once. Portrait rotation has no document overflow.
+- Offline reload restores830 and approved signature shuffle.
+- No script errors or missing artwork in final runs.
+
+Limits:
+Network multiplayer was not verified. Waiting room tests isolate signaling; bot/seat operations remain the actual application handlers. Audio checks verify Web Audio starts, not handset speaker volume. Historical documents inherited from previous builds remain historical; this README and REVIEW-CHECKS.json describe830.
+
+Continuation authority:
+Current-session verified remote Brain was AE, inherited source816-derived review. This is not an805 rollback or rejected824–828 candidate. No remote Brain changes. Preserve CHAT_CONTINUITY_RULE.md and COMPLETE_BANK_READING_RULE.md verbatim. Read current brain/current.json before future repository work.
+
+
+========== README-831.txt ==========
+
+831 — LANDSCAPE ROOM FIT
+
+Continue from 830.zip (SHA256 a6181ca12cbfd41e58aac42031566d802a6857d1d6673e465df3da0b302d0777). Isolated playable ZIP; serve index.html or load through the existing ZIP player. No live sites, repositories, existing saves or caches were changed.
+
+Owner-directed changes:
+- Visible Full screen / Exit full screen button on landscape entrance and waiting room, plus an entry on the shared menu. Requests actual browser fullscreen from the tap. Failure is shown honestly on the button. Works before starting a game; manual exit stays respected.
+- Entrance partner name and Change Partner share one row. Welcome and Edit player form a stack with guaranteed clearance above the play dock at tested short landscape heights.
+- Empty seat selectors raised to the future player positions; partner centered slightly higher. One boundary per selector; no nested double borders.
+- Waiting-room seating count separated from the local player's plaque. Sharing controls, primary next step and Leave Table remain in the bottom dock. Fill seats is the primary action until the table fills, then Start Game replaces it for the host. Existing native actions retained.
+- Shared main menu uses two columns in landscape and paginates by visual rows. Short landscape shows four choices per page (three pages), taller landscape shows all public choices on one page. No scrolling added. Existing profile, career, sound, rules, setup and safe leave routes retained.
+- Fullscreen icon uses a vector corner outline to avoid missing-font glyphs.
+
+Validation:
+- Visual and measured entrance / empty / filled waiting room checks at844x245,844x273,844x390,1280x720. Portrait390x844 checked.
+- Measured control gaps and seat bounds pass at all four landscape sizes.
+- All public main-menu actions reachable through pagination. Native fullscreen entry/exit from entrance, menu and waiting-room controls passed.
+- Fullscreen also tested inside an allowfullscreen iframe (matching ZIP-player embedding): outer fullscreen element becomes IFRAME and exits normally.
+- Name edit, partner photograph selection/save, Join by Code, bot replacement cancellation, name-to-stats, Fill seats, and native Start Game tested. Start enters the actual dealing phase.
+- Portrait rotation restores partner control to its original parent without document overflow.
+- Fresh service-worker installation and offline reload return coherent831 page/script/worker versions and the new controls/styles.
+- No page script errors in final checks.
+
+Limits:
+Network multiplayer was not tested. Waiting-room signaling was isolated in a local fixture; actual application seat and start handlers were used. This pass does not claim a full-game replay on the handset. Fullscreen depends on browser/embedding permission; unsupported requests report unavailable instead of pretending to enter fullscreen.
+
+830 dealing, reveal option, sound triggers, lantern asset and game geometry are preserved. No new imagery, bid-box changes, AI or scoring changes. The only game060.js behavior change is honoring explicit fullscreen choice. All earlier README/checkpoints remain historical; this README and REVIEW-CHECKS.json describe831.
+
+Continuation:
+Current-session verified remote Brain wasAE. This831 candidate derives from830, not an805 rollback. No remote Brain edits. Preserve both permanent continuity rules verbatim in review-continuity. Read the current remote brain/current.json before any future repository work.
+
+
+========== README-832.txt ==========
+
+832 — TABLE MATERIAL AND LANDSCAPE CLEARANCE REVIEW
+
+Continue from831.zip, SHA25619c5fb3e1afd6e71a8bdce741e4782a9d0ca7ca7ce4dc388ce39135719ff97b4. Isolated playable ZIP: index.html through the existing ZIP player or a static server. No publication, live repository changes, player-save deletion or browser-cache clearing.
+
+Owner-directed corrections:
+- Repaired the felt as a finished, self-contained scene asset. Original room, rail, lantern and oval pixels retained outside a registered inner-felt boundary. New photographic cloth material replaces the cloudy/embossed-looking surface. Asset: assets/lower-camera/room-table-baize832.svg. Source construction and exact material prompt are in review-continuity/832-ASSET-CONSTRUCTION.txt. No runtime blur or CSS simulated felt.
+- Entrance and waiting now use uniform cover scaling of the1844x853 camera, rather than independently stretching image width and height. Their character poses, source sizes and near/far seating match the existing gameplay scene. Existing gameplay character sizes are unchanged.
+- Top player's name is centered at the far seat/back rail. At short play heights, a compact name/level row clears the trick and trump mark. Long auction status is measured above the central bid console.
+- Detached wide Thinking/Passed/bid bars removed at their source. Live status stays inside the compact player's plaque; original authoritative state and name-to-stats handler retained.
+- Short-height bidding moves the unchanged-size console to the right of the top player's plaque. Moon uses a clear side position; its existing attachment and original controls/sizes remain. Speed controls moved into the open area between left and top people to clear the Moon attachment and lantern.
+- Full screen and the entrance menu now live in the bottom action dock, clear of faces. Waiting-room Full screen sits in its action dock. Native handlers and fullscreen behavior retained; portrait control homes restored.
+- Found and repaired landscape resize resetting the selected bid. Viewport redraw retains only a valid existing multiple-of-five choice within the current auction minimum/ceiling. New-turn bidding and submission validation remain unchanged.
+
+Current Master Brain checked:
+Remote brain/current.json remainsAE. Re-read AE and the H seated-player construction authority. Original source pixels, rail occlusion, perspective-aware scale and isolated landscape work were followed. Published810 and this local832 are distinct. No remote Brain mutations. Earlier H-through-AE history was read earlier in this continuous workstream; no new claim of re-reading every historical file in this pass.
+
+Validation:
+- Entrance, menu, empty and filled waiting-room checks at844x245,844x273,844x390,1280x720; portrait390x844. Final dock utilities visually inspected.
+- Native Full screen/Exit from entrance, menu, waiting, plus an allowfullscreen embedded-player test.
+- Name/avatar/partner controls, partner-photo selection, Join by Code, bot-change cancel, stats, Fill seats and Start Game checks.
+- Ordinary and Moon bidding at all four landscape sizes, including valid200 retention across resizing. Bid-box dimensions unchanged from831. Eight layouts plus a long top-status fixture have no plaque/hand/bid/Moon overlaps.
+- Native195-bid hand through six discards, black trump, card play and score. Final run scores[-195,170]; no page errors. Short-view incomplete trick and top-name/trump clearance visually checked.
+- Asset rendering1844x853,502843 changed pixels; zero changes outside the registered felt bounding area. Original room/rail supplied directly by the unmodified source raster, material layer clipped by a traced source-blue contour.
+- Coherent832 page/script/service worker and fresh offline reload, including new asset/styles. No script errors in final checks.
+
+Limits:
+Actual handset appearance and native fullscreen await owner review. Network multiplayer and a full multi-hand match were not tested. Local waiting checks isolate signaling while retaining actual seat/start handlers. No new audio or AI behavior claimed. Earlier831/830 special-effect/dealing checks are retained, not asserted as newly repeated here.
+
+Preserve both permanent continuity rules verbatim in review-continuity. This README and REVIEW-CHECKS.json describe832; prior files are historical. Current work remains an isolated candidate until owner approval.
+
+
+========== README-833.txt ==========
+
+833 — Stamp and player-panel review
+
+Isolated playable ZIP based on832.zip (SHA25657e4905e2098e31adb006f6fadca833ced51e53359c4d52e025b183bb04a1f0d). No deployment, remote source changes, player-data clearing or rule/AI changes. Current remote Brain pointer previously verifiedAE;832 source artwork and both permanent continuity rules retained verbatim.
+
+Current fixes:
+- Shared physical Trump stamp now has a950ms minimum animation at3x/MAX (1950ms at1x). The previous MAX duration was98ms, explicitly skipped by the renderer. First-trick presentation now waits for the stamp to complete; human input and bot actions share the same brief presentation gate. The host sends its presentation duration/state to clients. Reduced-motion still uses the immediate imprint.
+- Top player's landscape name and level use a compact top-right panel, with status beneath. Positioned right of the top avatar and above the visible fireplace flames; no longer over played cards. Longer Thinking/Bid status checked at four viewport sizes.
+- Partner photo choices now show a selected checkmark, gold outline, selected-name feedback and Use [name] confirmation. Portrait native selector gets the same confirmation text. Choice survives reopening/reloading. Entrance Change Partner touch area enlarged.
+
+Validation:
+- Native MAX auction/discard/trump confirmation exercised; stamp contact and completion recorded.
+- Shared animation exercised for all four chooser seats,1x/3x/MAX,portrait390x844 and landscape844x390:24 cases. Actual moving transforms, press/contact and completion checked; no first-trick interruption. These repeated directional cases use isolated presentation fixtures with native hostProcessTrump; they are not24 complete network games.
+- Top panel long-status layout checked at844x245,844x273,844x390 and1280x720; screenshots inspected.
+- Partner selection and persistence checked with touch-enabled phone contexts at844x245,844x273,844x390 and390x844.
+- Native195-bid hand through discards, trump, card play and score; ordinary/Moon sizing and200 selection across resizing checked.
+- Fresh service-worker/offline reload verifies coherent833-stamp-review markers. ZIP CRC and every packaged source byte verified.
+
+Limits:
+Physical handset appearance and perceived motion await owner review. Network multiplayer was not exercised; shared public presentation fields were inspected, not certified through remote peers. No new audio listening certification. Felt/room/lantern artwork remains832; the lantern shelf integration remains a separate visual follow-up. Other earlier effects/dealing checks are retained history, not newly asserted as completed in this pass.
+
+
+========== README-834.txt ==========
+
+834 — Fixed bid position, lower-right speeds and shelf lantern
+
+Isolated candidate based on833.zip SHA256423dc9a9e69b04735064867f838254ade685fff10d66d86f734fa4ef2c06990d. No deployment or remote changes. Previously verified Master BrainAE and original artwork authorities retained; both permanent continuity rules preserved verbatim.
+
+- Removed the Moon-dependent horizontal bid offset. Normal bidding and Shoot the Moon now use the same anchor and identical base-panel dimensions. Full-height landscape uses the center; short browser views use the left gap between players so the mounted Moon header clears faces and the top information panel. The existing Moon header still mounts above the box.
+- Landscape1x/3x/MAX controls moved to the lower-right margin above Menu/Leave. Buttons retain original handlers and selected state. Portrait placement unchanged.
+- Created finished room-table-shelf834.svg: uses the current832 scene, overlays only the newly generated bookshelf area, retains current fine baize. Lantern now sits between the left and top players on a visible bookshelf plank, with a broad base/contact shadow. Wick animation sample moved to the new lantern location. The same artwork is used in gameplay, welcome and friends-room previews. Preview branding sits below the lantern so its base and shelf remain visible.
+
+Validation: Normal/Moon/normal bid position and dimensions checked at844x245,844x273,844x390 and1280x720; speed controls clear the holder and lower navigation. Original speed buttons exercised. Portrait controls remain at top. Native auction handlers used to select200 and return below200. Fresh offline reload coherent834. Artwork pixel comparison:61719 changed pixels, zero outside the registered bookshelf edit rectangle; all felt, rail and fireplace pixels match832.
+
+Scope/limits: No new full-match or network multiplayer certification.833 stamp and partner-feedback repairs preserved. Physical handset appearance awaits owner review. Earlier README files remain history, not a claim that833's shifting bid position was acceptable.
+
+
+========== README-835.txt ==========
+
+835 — Navigation repairs and readable house plaque
+
+Based on the delivered 834.zip, SHA256 62ac7751cdb759dc5178bdd89cbb744e5b4ab2db4336696da3e203debb14cf90. Isolated playable review candidate. No deployment, remote repository changes, player-data clearing or cache clearing. Previously verified Master Brain AE remains the inherited authority.
+
+Approved scope: audit items 1–4 plus Griffin emblem/wordmark readability. Audit items 5–10 remain deferred.
+
+1. Landscape History opens the native history renderer instead of dismissing the scoreboard with nothing shown. Back to Scoreboard and Escape preserve the same results and Next Hand action. History layout is bounded in landscape.
+2. Explicit bot selection never silently seats a substitute. Occupied portraits are disabled with the seated owner's name; a late collision rejects the choice. Cancel preserves the prior bot. Favorite Partner uses consistent unavailable feedback and blocks confirmation of a stale conflicting favorite; valid choices retain the existing native storage path. Automatic random/fill-seat fallback remains unchanged.
+3. House Tour uses a bounded viewport card. Got it and Skip tour remain reachable in short landscape and portrait, including rotation.
+4. Short-landscape scoreboard has explicit rows and bounded disclosure summaries. Nest and Hand details open individually with Back, keeping the action row available. The existing scoring narrator now updates the single approved explanation in either orientation instead of adding a duplicate paragraph that displaced the grid.
+5. Finished Griffin plaque replaces the low-contrast floating wordmark. Landscape welcome and waiting layouts group it with the central live content on the felt, away from faces, names and the lantern; portrait welcome uses the same readable asset. See 835-ASSET-NOTES.txt for construction and prompt.
+
+Validation: native auction, six-card discard, trump confirmation, complete hand, scoring and Next Hand. Scoreboard and both disclosure controls plus History/return tested at 844x245, 844x273, 844x390, 1280x720 and portrait 390x844. Tour dismissal and rotation, occupied portrait choices, exact valid choice, replacement cancel and late-collision guard exercised. Fresh offline reload reports coherent 835 page/script/marker/worker and loads the plaque. Browser screenshots visually reviewed. Current REVIEW-CHECKS.json distinguishes native gameplay checks from controlled history/seat fixtures.
+
+Limits: this repair pass did not repeat two entire matches, real network multiplayer, physical handset audio or every deferred audit route. The earlier 834 audit's two full matches remain historical, not a claim about 835. Owner handset appearance still needs review. Existing 833 trump-presentation timing and 834 bid anchoring, speed controls and shelf lantern are retained.
+
+Preserve review-continuity/CHAT_CONTINUITY_RULE.md and COMPLETE_BANK_READING_RULE.md verbatim. Every future handoff and startup prompt must reproduce both complete rules and pass that obligation onward. Historical README/checkpoint files remain historical; README-835.txt and the current review manifests describe this candidate.
+
+
+========== README-836.txt ==========
+
+836 — Menu organization, results clarity and searchable choices
+
+Source: delivered 835.zip, SHA256 e8f02eb1434278fe36899322596a4c6ed01600fbd5593ee3167d0b6385b0a6b5. Isolated review candidate; no deployment, GitHub mutation, user-data clearing or cache clearing. Current Master Brain pointer rechecked: AE, current.json blob ba5169d86f8086c562ff2b3c5fdca8ce2737804c. Continue the current 835 workstream; the older published runtime recorded in the Brain is not a rollback instruction.
+
+Owner authorized the rest of the 834 UI audit: items 5–10. The 835 fixes (items1–4 and house plaque) are preserved.
+
+5. Levels & awards guide now has three coherent sections: 50 career levels, 25 tiered award families and 20 rare feats. Each entry keeps its title and requirement together; all five medal thresholds stay in the same family card. Values come from the existing official progression arrays. No progression requirements or awards changed.
+6. Menus use measured visual rows and landscape columns. Labels, controls and short explanations stay grouped; long rule explanations use full width. My Profile fits on one page in tested portrait/short landscape, with the original live name/avatar/voice controls. Moving profile controls retains stable references for avatar and voice refresh. The default avatar-matched voice now has an explicit visible option instead of a blank selected field. Volume, ambience, effects and table-rule pages are consolidated; Back, Close, paging and native handlers/storage remain. House Rules keeps readable full-width text in landscape. No scrolling menu introduced.
+7. Hand score changes have brighter opaque text. Portrait hand results use a compact vertical arrangement, with expanded details and Next Hand retained. Landscape835 disclosure rows and History return are preserved.
+8. Match recap fields wrap instead of ellipsizing. The panel fits inside the viewport; short landscape puts the trick description beside the four highlight cards. Player labels wrap; the background gameplay header stays hidden while the finale is visible. A negative-target-only finish can explain which team reached the negative limit.
+9. Custom scores require an explicitly confirmed whole number from1–2000. Invalid/blank/out-of-range values disable Enter and show an inline instruction plus the current committed target. A valid draft does not become the next game's target before confirmation. Saved target is shown after Enter. Presets retain their existing behavior.
+10. Avatar, favorite-partner and bot choosers have search and clear no-match states. Partner photos and selection feedback work in portrait as well as landscape. Search filters existing ranked choices without changing identity, ranking, conflict protection or careers. More avatar cards fit across landscape. Bot search resets when reopening the picker.
+
+Validation: native auction, six discards, trump confirmation, legal card play, complete hand, scoreboard disclosures, History return and Next Hand across five viewport sizes. All guide records and medal thresholds traversed in portrait and short landscape. Every settings page traversed in portrait and the shortest tested landscape; checkboxes, ranges, selects and radio controls exercised in disposable browser profiles. All13 effect families and their available variations exercised through Play/Stop. Custom invalid values, explicit commit, draft preservation, search/no-match/exact selection and occupied portrait protection checked. Match recap uses controlled end-state fixtures at five sizes; these are not claimed as new complete matches. Fresh controlled offline reload checks coherent836 page/script/marker/worker. Screenshots visually reviewed; archive CRC and file hashes verified.
+
+Limits: physical Android keyboard, handset audio and real network multiplayer not certified. This pass did not repeat two full matches or recertify every special animation. The earlier834 two-match audit remains historical. Table, room, felt, rail, lantern, avatars, holder, card faces, bid artwork, dealing, AI and trump-presentation timing are unchanged. All preexisting asset bytes are identical to835; no generated art this pass.
+
+Current README, REVIEW-CHECKS.json and REVIEW-MANIFEST.json describe836. Older README/checkpoint files remain historical. Preserve CHAT_CONTINUITY_RULE.md and COMPLETE_BANK_READING_RULE.md verbatim. Every future handoff and startup prompt must reproduce both complete rules and explicitly pass the same obligation to its successor.
+
+
+========== README-837.txt ==========
+
+837 — Landscape bird fight
+
+Playable review candidate based directly on delivered 836.zip (SHA256 9ca8d5cf4e14478b16d95a54cfc9fa6c4927c430a4bd78da7c299b0753c7b7dc). Open index.html through the existing ZIP player or an HTTP server. No deployment, repository mutation, data clearing or cache clearing.
+
+Owner approved the intermediate-size landscape concept and the actual-screen animated video. This build integrates those exact final generated six-pose atlases: black on the left facing right, red on the right facing left at 80% size. Black attacks and wins; red recoils and banks away; black returns to its actual played card. Wings can rise above the far rail. The live camera, cards, room, table, felt, rail, lantern, player portraits, hand holder and brand plaque are unchanged. No replacement table or bird art is constructed in CSS.
+
+The new renderer is landscape-only. It maps the approved reference choreography to the actual table and hand position, with smaller artwork when browser chrome leaves a very short landscape view. The original portrait artwork, timeline, layout and pace behavior remain. A missing new atlas falls back to the original presentation rather than blocking play.
+
+Landscape flight lasts 5.1 seconds at 1x, 2.8 seconds at 3x and 2.1 seconds at MAX. MAX no longer means reduced motion for this landscape effect. A separate 700ms stationary alternative respects reduced motion. Existing recorded approach, call and flutter cues follow the choreography at normal pitch through the existing character mixer; mute/card/bird settings still apply. Sound is not emitted late after stalled loading. Collection has a bounded allowance on a landscape host so the trick survives the full flight, followed by the ordinary collection and next turn. No scoring, card legality or AI changes. Rotation, leaving play, hidden tabs, disabling the effect and errors clean up the canvas/audio. Existing portrait capture timing is unchanged.
+
+Validation is recorded in REVIEW-CHECKS.json: five viewport sizes; real rendering triggers at all three paces; controlled final legal plays through the authoritative host resolution, retaining the four cards during flight and continuing after collection; reduced motion, mute, rotation, state-change cancellation; original portrait timing and missing-art fallback; fresh coherent offline build with the new atlases. A separate ordinary hand exercises auction, six discards, trump confirmation, legal play and the score screen. Tests use a disposable browser profile. Existing asset bytes and permanent continuity rules are compared against 836, and the ZIP is CRC/hash verified.
+
+Limits: controlled special-capture fixtures are not claimed as complete matches. No repeat of two full matches, physical Android audio/performance certification or real network multiplayer certification on this build. In particular a portrait host retains its original short collection timing; a landscape guest connected to that host is not certified for this longer effect. Owner handset review remains necessary.
+
+Authority inherited from the continuous verified workstream: Master Brain AE, JeromeLeeGriffin/Test main brain/current.json, blob ba5169d86f8086c562ff2b3c5fdca8ce2737804c. No older build rollback. Earlier README/checkpoint files are historical. CHAT_CONTINUITY_RULE.md and COMPLETE_BANK_READING_RULE.md remain verbatim. Every future handoff/startup prompt must reproduce both full rules and pass that obligation onward.
+
+
+========== README-838.txt ==========
+
+838 — Arrange your hand and bird nest reveal
+
+OWNER-AUTHORIZED PLAYABLE REVIEW ZIP. Continues delivered 837.zip exactly (SHA256 83c8f585721b40b75eb39fdf499174e53ec2735b32453fff3040435b94079706). No game deployment or repository publication. Open index.html through the original ZIP player or an HTTP server. All earlier fixes and physical table/room/card/holder/portrait assets are retained.
+
+LANDSCAPE NEST PAGE
+The owner-approved continuous kept-hand row is above a separate Nest discard tray. Start with all16 when nominal44px-wide drag slots fit. Narrower landscape automatically starts with the original ten above and the six drawn cards in a lower working space beside the Nest. These drawn cards are KEPT until moved into the Nest. All rows fit the viewport without horizontal scrolling; the interface reduces nonessential headings in very short landscape.
+
+Touch, mouse or pen: drag down into the Nest to discard, up to return, and sideways to insert between kept cards. A vertical line shows the insertion point. Tap remains a selection/return fallback. Alt+Left/Right can reorder a focused kept card. A seventh discard is refused without losing the card. An outside drop or cancelled gesture preserves the prior position. Reset restores default order and clears selections. Native Confirm validates exactly six real IDs and uses the existing host/client submit, acknowledgement and rejection paths. No card ownership, scoring, rules or AI change.
+
+DEFAULT AND LOCKED HAND ORDER
+Blackbird first, then enabled Red Two; other colors by descending count in the full hand. Rank order within each color is1,14,13,12,...; ties between equally sized colors are stable Black, Green, Red, Yellow. The order is established before manual movement and does not jump around after a selection or trump choice. Lock hand & confirm saves the exact kept-card sequence privately for this hand. Portrait and landscape render that same sequence, filtering played cards without sorting again. The private session record can restore the current order after UI recreation and resets for a new deal. This is not a learned preference for future deals. Obsolete sort options are removed from the player menu; the old sort button is hidden. Bot sorting remains unchanged.
+
+PORTRAIT
+The approved portrait Kitty Received / Continue and discard selection pages remain. Rotating from the new landscape selection page opens portrait selection directly, retains selected cards and returns to the same manual draft. Portrait confirmation also locks the current draft/default order. The resulting hand stays in that order through trump selection and play in either orientation.
+
+BIRD TOP-NEST REVEAL
+The banked owner-approved effect is integrated in both orientations: a slight dimensional head lift from a real transparent two-cell artwork atlas and one restrained edge glow (gold for Blackbird, crimson for Red Two), followed by settling. The existing nest card and its table plane remain the positioning owner. This applies only to a bird genuinely revealed as the top nest card when Reveal top nest card is ON. It is separate from the larger landscape trick-capture fight already delivered in837.
+
+Audio uses the existing recorded crowd 'ooh' through its original mixer/settings and duplicate guard. NO new bird call, flutter, fight cue or replacement crowd audio. Each native reveal produces exactly one crowd reaction in tested cases. The reveal presentation is a bounded950ms, or650ms without flight for reduced motion, and clears on cancellation/navigation/hidden tabs. The shared dealing path waits for the brief bird highlight before resuming; ordinary cards and reveal-OFF keep the ordinary flow. Existing card/table assets are byte-identical to837; the only new image is the generated transparent head atlas derived from the existing premium cards.
+
+VALIDATION
+See REVIEW-CHECKS.json for exact tested cases, native full-hand continuation, geometry, touch drag, rotation, chosen-order equality, reveal/crowd checks, private-order unit checks and offline build/cache checks. Game checks use isolated browser profiles. No user game data or service worker was cleared. No claim of physical Android audio/performance, real network multiplayer, two new complete matches, every rare rule combination or universal device acceptance. Existing837 landscape-fight portrait-host/landscape-guest timing limitation remains unverified; this pass does not certify it.
+
+SOURCE AND CONTINUITY
+Prototype recovered from the owner's private Sites source, version2 / commit e70cff5698abc844fd40c2b1560f396ad15448cd; the prototype itself was not edited or redeployed for this game ZIP task. Current Master Brain AE pointer rechecked: JeromeLeeGriffin/Test main brain/current.json, blob ba5169d86f8086c562ff2b3c5fdca8ce2737804c. Earlier complete-history reading from the continuous workstream is retained. The Brain's older published game build is not a rollback instruction for the approved837 candidate.
+
+Older READMEs/checkpoints remain historical. Preserve CHAT_CONTINUITY_RULE.md and COMPLETE_BANK_READING_RULE.md verbatim. Every future handoff/startup prompt must reproduce both complete rules and explicitly pass that obligation onward. A new review checkpoint is included; no Master Brain/GitHub mutation was authorized.
+
+
+========== README-839.txt ==========
+
+839 — Selection, scrolling and rotation review
+
+Open index.html using the existing ZIP player or an HTTP server. Continues exact delivered 838.zip; no deployment. All original room, table, holder, cards, voices and bird-fight assets retained byte for byte.
+
+LANDSCAPE NEST FLOW
+Kitty Received first, with the six received cards and Continue, as in portrait. Rotation preserves that step. Continue merges all16 into one ordered hand; no separate drawn-card area or duplicate Kitty preview. The hand starts in two rows of eight, reading left to right then top to bottom. A side Nest tray reserves height for larger card faces. After six are discarded, all ten kept cards appear together in one full-width row above the Nest tray. Tap or drag down to discard, drag up to return, sideways to insert. Reset and native six-card confirmation remain. The exact chosen order follows the hand into portrait and play. No proposed sorting presets were added.
+
+The established default remains Blackbird, enabled Red Two, then largest color groups; within each group1,14,13,... . Manual arrangement still overrides it for the current hand. No rules, ownership, scoring, AI or network submit paths changed.
+
+SCROLLING
+Partner, bot and avatar photo lists now allow native finger scrolling. Previous and Next remain and scroll the same continuous list. Search, selected feedback, portrait conflicts and native choice handlers remain. Other settings/history menus keep their existing layouts. A scrolling gesture does not select a candidate.
+
+BIDDING AND ROTATION
+The local unsubmitted bid is retained by hand/auction identity through both orientations and UI recreation, including menu pause/resume. It remains subject to the current legal minimum and ceiling. A changed auction/new hand creates a different draft context. Menu and Leave are no longer deliberately suppressed while a bid is due. The existing menu's solo pause/resume and safe leave confirmation remain. A direct fullscreen button joins Menu/Leave at lower right; pace controls sit above them.
+
+Fullscreen no longer enters/exits automatically solely because the phone rotates. It follows the actual fullscreen state or explicit user choice. Scene images are retained decoded across rotation. Local rotation checks show no fullscreen calls/reopened loading cover; the exact Android/browser compositor black pause cannot be certified without owner phone testing.
+
+HOLDER CUES
+Landscape's retired display:contents holder wrapper had no drawable box, so its cue controller could not present the turn/win effects. A decorative copy of the exact physical holder front strip now receives the existing shared cue lifecycle, same portrait pulse timing, collection-arrival win timing and reduced-motion behavior. Cards and curved end caps remain normal. No replacement artwork or new audio.
+
+VALIDATION
+See REVIEW-CHECKS.json. Native touch/geometry/rotation/menu/discard/trump/full-hand checks; partner/bot/avatar finger scrolling and navigation in both orientations; controlled win collection-arrival cue; offline active-worker reload with coherent839 markers and prior bird assets. Five landscape viewports include short browser-chrome spaces. Larger full-screen height still gives larger card artwork. Physical Android performance/audio, real network multiplayer and two new full matches are not certified. The prior837 portrait-host/landscape-guest fight duration limitation is unchanged and remains unverified.
+
+AUTHORITY / HANDOFF
+Current GitHub brain/current.json rechecked: AE unchanged, main blob ba5169d86f8086c562ff2b3c5fdca8ce2737804c. Earlier complete foundational/history reading in this continuous workstream retained. The Brain's older published game is not a rollback instruction for the approved838 candidate. Newest owner approvals supersede older no-scroll selection-list and disabled-menu-during-bid decisions for the scope above.
+
+Preserve review-continuity/CHAT_CONTINUITY_RULE.md and COMPLETE_BANK_READING_RULE.md verbatim. Every future handoff AND ready-to-paste startup prompt MUST reproduce BOTH full rules verbatim and explicitly require the next assistant to pass those same obligations to every successor. No Master Brain/repository mutation or site deployment was authorized/performed for this review ZIP.
+
+
+========== README-840.txt ==========
+
+840 — Stable discard slots and installed-app launch test
+
+Continues exact delivered839.zip (SHA256 511d7f549a48a45ba62c271f795af6a39d3d390a7e48dd925f41b3f8c447f555). No deployment. Open index.html in the existing ZIP player or through an HTTP server. All physical artwork, audio, bird reveal/fight effects, game rules, AI and network paths retained.
+
+STABLE DISCARD SELECTION
+After Kitty Received / Continue, all16 cards begin in the owner's existing sorted order in two fixed rows of eight slots. Discards one through five leave empty outlined slots. Every untouched card retains exactly its previous position and size; the remaining cards do not close gaps or grow. Tapping a discarded card returns it to its original slot. Deliberate sideways dragging still arranges cards. After the sixth discard, all ten retained cards come together in one row for final arranging and Lock hand & confirm. Returning a discard at that point restores the sixteen-slot view and original spaces; the final six selected cards remain shared with portrait during rotation. Reset restores the default order and clears selection. Native six-card confirmation, rejection/ack, exact chosen order and current-hand persistence remain unchanged.
+
+CONTROLS
+Removed the extra gameplay Full Screen button. Bottom right has Menu and Leave, with pace controls above. Full Screen / Exit full screen remains inside Menu in the browser, accessible during bidding. The welcome/waiting-page fullscreen controls were not removed by this scoped request. All839 rotation/draft fixes and scrollable partner/bot/avatar lists with Previous/Next remain.
+
+INSTALLED-APP TEST
+The existing installable manifest now requests fullscreen launch, with standalone fallback, preserving the same app id, scope, start URL, orientation and icon assets. This launches through the installed window rather than calling browser requestFullscreen on startup. The existing Menu > Install on This Phone and browser install instructions remain. In an installed fullscreen window redundant fullscreen controls are hidden; browser fullscreen still retains its Exit full screen menu action.
+
+To test actual installation, this version must be served from the game's stable HTTPS address and installed/opened from its home-screen icon. A ZIP preview alone does not certify installation of the game itself. No hosted site was changed by this ZIP request. Browser fullscreen warnings cannot be suppressed by game code; Android installation/launch and the absence of that exact notice remain owner-device tests. Existing installed copies may need their platform to refresh the manifest. Do not clear game data or uninstall solely for this test without preserving progress.
+
+CHECKS
+See REVIEW-CHECKS.json:55 native checks include bid rotation, menu accessibility, Kitty Received in both orientations, two rows across five landscape sizes, actual touch discard/second-row insertion, exact positions/sizes through the first five discards at844x390,844x273,844x245,640x360, return to original slot, ten-card compaction, portrait selection retention, native submit/trump and one full hand to score. Install checks cover Chromium manifest parsing, fullscreen/standalone fallback and preserved identity, existing install-menu prompt flow without browser fullscreen, redundant installed controls and retained browser exit action. Offline active-worker reload checks verify840 coherence, manifest settings and prior bird assets.
+
+Limits: no certification of physical Android installed launch/fullscreen notice/performance/audio, real network multiplayer, every rare rules combination or two new full matches. Prior837 portrait-host/landscape-guest fight duration limitation remains unverified. Stable slots are landscape selection presentation; portrait keeps its approved selection layout.
+
+AUTHORITY / CONTINUITY
+GitHub brain/current.json rechecked: AE unchanged; retained complete foundational/history reading from this continuous workstream. Older published runtime is not a rollback instruction for approved839. No Master Brain/repository mutation or deployment performed. Both permanent rules remain verbatim in review-continuity/CHAT_CONTINUITY_RULE.md and COMPLETE_BANK_READING_RULE.md. Every future handoff AND startup prompt must reproduce BOTH full rules verbatim and explicitly require each successor to pass those obligations to every following assistant.
+
+
+========== README-841.txt ==========
+
+841 — UI audit repairs and download-size study
+
+BASELINE
+Continues the exact delivered 840.zip (SHA-256 fe7a21b8dc716300283d4b546230ffddca45e1c834f8cfc1da1cb806e45283d8). Isolated playable review; no deployment, account changes, saved-data reset, or production changes.
+
+APPROVED ITEMS 1–9
+1. Landscape waiting-room middle player name and Change control share their own row. Brand plaque and ready/status copy have a separate area below, including short screens.
+2. Partner/avatar/bot Previous and Next navigate complete rows; free finger scrolling remains. Page counts use actual rows and navigation stops at the final candidates. Short landscape bot chooser reserves a full card row with search/header above and navigation/Cancel below.
+3. Network trick collection reserves the full landscape bird-fight presentation budget, regardless of the host's orientation, local pace, reduced-motion preference or effects toggle. A portrait or MAX host no longer uses its shorter local presentation budget for guests. Offline timing is unchanged. This is a conservative fixed budget (5.46 seconds for the special capture); it does not implement remote acknowledgements or compensate for arbitrary network stalls. Real-device multiplayer confirmation remains pending.
+4. Empty Join code feedback appears in the original Join form and marks/focuses the field. Typing clears validation; no native browser alert.
+5. House Tour describes the gold play button and player editing without referring to an obsolete orientation-specific button name.
+6. Portrait match recap has a compact centered panel and consecutive results/highlight/actions. Landscape arrangement remains.
+7. Player editor uses its content height with a viewport limit; other menu routes retain their pagination.
+8. Recap crown is a finished gold SVG asset, not a font emoji. Actual card artwork is retained.
+9. Discard editor preserves focus on the same card when it moves between Keep and Nest, or on its editor control after redraw. Touch/drag and sixteen fixed slots remain.
+
+ITEM 10 — DOWNLOAD SIZE
+840.zip was 198,363,138 bytes (198.4 MB decimal). Its largest compressed groups are character artwork 40.3 MB, general images 37.0 MB, lower-camera assets 18.2 MB, numbered cards 17.5 MB, Angle C assets 17.5 MB and full-cast voices 10.6 MB. Exact duplicate copies account for about 4.8 MB across paths; they are NOT automatically safe to delete because references and offline caches may use both paths.
+The initial service-worker SHELL array alone lists 1,023 files totaling about 94.8 MB of source bytes, with additional shell entries appended afterward. This is an inventory, not a measured first-visit network transfer or startup time.
+Safe changes made now: historical non-runtime evidence screenshots are excluded from this player ZIP, remaining available in 840 rollback. All runtime artwork/audio stays byte-for-byte unchanged. ZIP compression uses level 9. The 841 updater looks for exact-URL unchanged image bytes in the immediate 840 cache instead of 808. A verified cache-reuse fixture copied a real numbered card with zero requests for that asset and kept the old cache. No caches are deleted. This benefits updates on the SAME site/device when 840 is already cached; it cannot shrink a new user's first installation or the ZIP's required artwork.
+For discussion: separate a full offline archive from hosted delivery with essential art first and optional cast/voice downloads later; or identify genuinely obsolete dependencies through a complete reference audit. Both affect offline availability and need deliberate scope. No lossy art conversion, missing characters, optional-pack system, hosting migration or aggressive asset pruning was implemented.
+Daily challenge and audit items 11–13 remain banked and unimplemented.
+
+VALIDATION
+Syntax checks; 48 menu route/viewport checks; settings traversal; all chooser pages in portrait/landscape including 245px height; inline Join feedback; compact profile and recap; crown loading; host-orientation/pace/effect-independent collection budget; discard keyboard focus; 55 native regressions including stable slots, Kitty Received, rotation/draft persistence, menu access, touch drag and a complete hand to scoring; in-game controls/history; 23 bird-fight checks; 15 bird-reveal checks; fresh active-worker offline reload; exact prior-art reuse. No runtime page errors or missing local dependencies in those checks. This repair pass did not repeat the earlier three-match audit.
+Limits: physical Android/tablet rendering/audio/installation and a live two-device multiplayer session are not certified.
+
+AUTHORITY AND CONTINUITY
+GitHub brain/current.json rechecked: AE unchanged. Required complete foundational/history reading retained from this continuous workstream. Published older runtime is not a rollback instruction for 840. No repository mutation/deployment. Both permanent rules remain verbatim in review-continuity/CHAT_CONTINUITY_RULE.md and COMPLETE_BANK_READING_RULE.md. Every future handoff AND startup prompt must reproduce BOTH full rules verbatim and explicitly require each successor to pass them to every later assistant.
+
+
+========== README-842.txt ==========
+
+842 — Player menu only / retired test-code cleanup
+
+BASELINE
+Continues exact delivered 841.zip, SHA-256 cddeaf2f61678ba9fdd024107d8a02dc7ff16f1847825e4696d0912e416a9125. Current runtime marker: 842-player-menu. No deployment or repository changes. 841.zip remains the rollback.
+
+OWNER REQUEST
+Remove the hidden Jerome/SOL testing menus and all their options. Owner then explicitly expanded this to remove the actual perfect-hand dealer, lucky spinner and other unused code, not merely hide the menus.
+
+REMOVED
+- Owner Tools entry and the local dev/name/saved-setting unlock paths. The current main menu is the only menu interface, including on localhost with dev=1.
+- SOL visual layout editors, element moving/resizing/picking/import/export controls, diagnostic/emergency panels, recorders and automatic test bars.
+- Perfect-hand dealing and test redeal/undo code, including the old per-play undo snapshot copies and their wrappers.
+- Lucky spinner, extra lucky special-card pulls, settings plumbing, saved preference hooks and wheel styling.
+- Forced Bird/Red Two top-nest test override. Ordinary Show Top Nest Card remains available.
+- Career dry-run/activation/preview/expert-test screens and the isolated phone-test module. Normal live careers, awards, backups and restore remain.
+- Experimental menu switches, fake lag/double-tap test hooks and unused experimental side panels. Supported networking safeguards, relay configuration, thinking cues and Wait for me behavior are retained.
+- Old source/stylesheet/service-worker aliases, unused test pages, unused worker experiments and other unreferenced helpers. Exact removed-file ledger is in REVIEW-MANIFEST.json.
+
+CLEANUP SIZE
+17 obsolete source/entry files removed. Net source reduction versus 841: 2,509,145 bytes, about 2.51 MB before ZIP compression. Most game size remains approved art/audio.
+The offline shell was normalized from 1571 versioned/duplicate requests to 1448 current dependency paths. The new build cache is separate; cacheLookup handles query versions. Same-path image reuse reads only the immediate 841 cache, and only images proven byte-identical. No existing cache or saved career is cleared.
+
+PRESERVED
+All artwork, card faces, character assets and audio are byte-for-byte unchanged. Frozen X1/Sol7 strategy/worker files, rules and bot algorithms are unchanged. The normal default remains X1 with existing compatibility/fallback behavior; the retired manual intelligence selector and its old stored override are gone. The public Jerome avatar remains a normal character.
+Current player menu routes remain Full Screen, Join by Code, Match Score, My Profile, My Career & Awards, Play With Friends, Sounds & Atmosphere, Game Setup, How to Play, Install on This Phone and Leave Table, with their ordinary availability rules.
+Public rule controls and audio settings remain. Internal hidden backing controls are retained only where the current menu's handlers need them; the old visual menu/extra options are not shipped. Old developer/layout/testing keys are ignored rather than deleting progress or changing browser storage.
+
+VERIFICATION
+- Boot with no runtime errors; syntax and local dependency checks.
+- 48 route/viewport checks and all settings pages in portrait/landscape.
+- All partner/avatar/bot navigation pages, including 245px-high landscape.
+- Old developer flag, dev=1, saved experimental/lucky settings and saved editor transforms cannot restore tools or activate overrides. Canonical career identity/counters survive reload.
+- 55 native regressions: bid persistence/rotation, menu access, Kitty Received, fixed sixteen slots, touch drag, exact retained order, six-card confirmation, trump and a complete hand to scoring. Card/discard geometry exactly matches 841 at five viewport sizes.
+- In-game menu/seat stats/scoring/history checks.
+- One complete standard 500-point match with portrait/landscape rotation: Griffin 450 — Raven 550, 5 hands. No runtime page errors, missing local assets or stalls.
+- Fresh active-worker offline reload passes; runtime markers are coherent. Exact artwork reuse fixture requests the seeded image zero times and retains the old cache.
+Physical Android listening/installation and a real network multiplayer session are not certified by these local tests.
+
+AUTHORITY / CONTINUITY
+Current Master Brain AE was verified in this continuous workstream and complete foundational/history reading is retained. Published older runtime does not replace approved 841 as this task's source. Both permanent rules remain verbatim in review-continuity/CHAT_CONTINUITY_RULE.md and COMPLETE_BANK_READING_RULE.md. Every future handoff AND startup prompt must reproduce BOTH full rules verbatim and explicitly require each successor to pass those obligations to every following assistant.
+
+
+========== README-843.txt ==========
+
+843 — Results heading and room finish audio
+
+Continues delivered 842.zip. No deployment. 842 remains the rollback.
+
+FIXED
+The general in-game HUD rule outranked the existing hide-on-results rule. The match score/contract bar and speed controls now stay hidden during both the victory announcement and the match recap, in portrait and landscape. The recap retains its own scores and actions. Normal gameplay HUD rules resume when results close.
+
+ENDING SOUND TRIAL
+A fixed, quiet recorded glass clink closes an ordinary hand. A three-second recorded small-audience applause closes a match. These are existing licensed game assets, unchanged; no synthetic fanfare was added. Highlight replays no longer repeat the card-gather cue. Receipts prevent repeated score openings/rotation from replaying either finish. The final hand skips the ordinary-hand cue. Global mute, game-effects volume and existing card/effects toggle apply. A match finish also reserves the applause cooldown so following award toasts do not repeat it. Existing bird reveal crowd and fight sounds are unchanged.
+The exact odd sound reported on the physical phone has not been positively identified; existing result functions were silent in 842. This is a cleaner replacement finish for owner listening review, not a claim of physical-device audio certification.
+
+VALIDATION
+Results header fixture reproducing the reported 65–535 recap: portrait 390x844/432x936 and landscape 844x390/844x245, no live HUD overlap. HUD display rule restores after results close. Viewed final portrait recap with all four cards/actions visible.
+Audio routing fixture: one cue per new hand, no cue on the final-hand scoreboard, one match applause, no repeat on reopening/duplicate payload, no historical score cue during active play.
+55 native regressions passed, including a complete played hand to scoring, card/discard drag geometry, Kitty Received, ordering, rotation/bid persistence and menu reachability. Zero page errors or missing assets. Fresh active-worker offline reload has coherent 843 runtime and approved effects ready.
+No new full multi-match audit or live network multiplayer session was run for this scoped repair.
+
+AUTHORITY
+Current Master Brain AE and full-history reading remain retained from this continuous workstream. Both permanent continuity/reading rules remain verbatim in their review-continuity files. Every future handoff and startup prompt must reproduce BOTH full rules verbatim and require their successors to do the same.
+
+
+========== README-844.txt ==========
+
+844 — Audit repairs / private resync and reconnect guards
+
+BASELINE
+Continues exact delivered 843.zip (SHA-256 a7a05eb3d2d3a5ed80d75bd4b4206042d2010fc93713fba36d0ea292a10cabf0). Runtime marker 844-network-guard; displayed label 844 Network guard. No deployment. 843.zip remains the rollback.
+
+ALL FIVE APPROVED AUDIT ITEMS
+1. Incoming player operations bind to the actual connected peer. Private discard resync also independently restricts its recipient to the bidder. Forged join IDs, another player's leave, another player's claimed action seat, private-hand requests and unapproved host-handoff announcements are rejected. Ordinary public state contains neither private hands nor reconnect credentials.
+2. Host-issued random reconnect credentials are kept in session storage by room and out of public rosters. Reclaims preserve the original physical seat, team, index and hand. Matching a name, or asking for the first available temporary bot, no longer grants access to an old hand. A valid credential can restore the seat when the transport ID changes. A late close from an older transport cannot disconnect the replacement. Approved host transfer carries the reconnect credentials into the new room so the stricter reclaim rule preserves that workflow.
+3. Match identity travels in public/resync state, hand results and highlights; ending-sound receipts use it. An object-lifetime fallback covers missing-ID contexts. Identical final scores in a later match now play their own finish, while duplicate openings remain suppressed. Sound assets and mixer behavior are unchanged.
+4. GHR_BUILD now matches the 844 release instead of displaying 840.
+5. Queued gameplay actions retain an authoritative match/hand/turn context. Reconnect holds the queue until state resync; stale contexts are dropped. The host independently checks action context and ownership before dispatch. Current queued actions still send once.
+
+BEHAVIOR NOTE
+A changed transport can reclaim the old hand using the private credential from that browser session. A different device/browser without that credential cannot claim someone else's old hand merely by entering the same name. No real player data or browser progress was erased to implement this.
+
+VALIDATION
+- 12 two-browser protocol/lifecycle/privacy checks: join, own private hand, public-state isolation, disconnect grace, exact same-ID restore, temporary bot, changed-ID credential reclaim, retained physical seat, private token exclusion, spoofed-seat rejection and unauthorized private resync rejection.
+- One native full hand after disconnect/reclaim, two isolated human browser contexts plus two bots. Guest won the bid, used Kitty Received/discards/trump and both humans played through scoring; host and guest agreed on scores. The bridge exercised actual application message handlers; public signaling/TURN was not exercised.
+- 19 targeted authorization/context/queue regressions plus 6 trusted-handoff snapshot/credential regressions.
+- Audio decode/mute/routing/repeated-match cues and current build label passed.
+- 12 rotation checks, 36 scoring/deck cases, 48 menu route/viewport checks, 16 settings cases and 7 retired-tool/persistence checks passed.
+- Three complete standard 500-point matches, across landscape, portrait and rotating play: [{'number': 1, 'scores': [-90, 515], 'hands': 3}, {'number': 2, 'scores': [460, 540], 'hands': 5}, {'number': 3, 'scores': [265, 505], 'hands': 5}]. Zero runtime page errors, missing assets, match stalls or card-tap warnings. These are browser automation results, not physical Android audio/performance certification.
+- Fresh worker offline reload and real same-origin 843-to-844 worker upgrade passed. Test career identity/counters, favorite partner, speed and mixer settings survived; previous cache retained. Unchanged artwork is reused from the immediate 843 cache only. No cache clearing or storage reset.
+- No new art, CSS or gameplay/bot-strategy changes. All approved asset bytes and frozen rule/AI modules are unchanged versus 843.
+
+AUTHORITY / CONTINUITY
+Current Master Brain AE and complete foundational/history reading remain retained in this continuous workstream. Both permanent continuity/reading rules remain verbatim in their review-continuity files. Every future handoff and startup prompt must reproduce BOTH entire rules verbatim and explicitly require every successor to pass them forward. No published documentation or production repository was changed.
+
+
+========== README-845.txt ==========
+
+845 — QR, share identity and shuffle repair
+
+Continues exact delivered 844.zip. No deployment; 844 remains rollback.
+
+- QR layout fits short landscape and portrait, with a visible close button and four-module white quiet zone. Short, tappable table link replaces the oversized raw URL.
+- Real local QR encoding replaces the external image service and non-scannable decorative fallback. QR generation works offline. davidshimjs/qrcodejs MIT attribution retained in qrcode845.js.
+- The game uses its approved Griffin icon and also updates the same-origin outer ZIP player's page title/favicon. Cross-origin parents are untouched. Native Android share-sheet icon cache / installed-app identity still requires a physical-phone check; this was not certified by desktop automation. No hosted wrapper or root favicon was deployed.
+- The retired 732 wash renderer is no longer loaded. Legacy selection switches, old shuffle DOM and obsolete deal fallback have been removed from the live path. Both orientations use approved signature-shuffle assets; rotating does not cancel the asset playback. No art or sound asset bytes were changed.
+
+Validation: 12 QR/share/shuffle checks, one same-origin outer-player branding check, 12 rotation regressions through auction, Kitty Received, discards, trump selection and stamp/play barrier. Fresh worker offline reload and offline QR generation passed. No runtime page errors or missing application assets. No three-match audit was repeated for this focused repair. No actual invitations/messages sent.
+
+Limits: shared URLs opened from a locally unpacked ZIP remain preview URLs; another device needs the matching hosted game. This build does not deploy a permanent share destination. Android share-sheet appearance needs phone confirmation.
+
+Authority: Master Brain AE and inherited full-history verification remain applicable. Production 531 protected. Security/reconnect guards from 844 retained; rule/AI modules and approved asset bytes unchanged. Permanent continuity rules remain verbatim in review-continuity/CHAT_CONTINUITY_RULE.md and COMPLETE_BANK_READING_RULE.md.
+
+
+========== review-continuity/830-ASSET-NOTES.txt ==========
+
+Built-in image generation edited assets/lower-camera/room-table-oval.png non-destructively to assets/lower-camera/room-table-lantern830.png. Final image1844x853. Prompt: move only the brass lantern onto the bookshelf ledge between left and top players; preserve camera, full oval table, brass rail, felt, fireplace, all framing; no people, cards or interface text. Targeted follow-up: lantern center37% of image width, approximatelyx680/1844, basey155; same size; remove its previous location and restore books. Original asset retained. Entrance/waiting art fits shallow viewport; character images retain natural aspect ratio. Gameplay retains the original1844x853 scene projection.
+
+
+========== review-continuity/832-ASSET-CONSTRUCTION.txt ==========
+
+832 FINISHED TABLE ASSET
+
+Final project asset: assets/lower-camera/room-table-baize832.svg
+Asset is a self-contained SVG image1844x853, loaded as an image exactly like the previousPNG. It embeds the unchanged830 room raster and a new photographic blue-cloth raster. The material is clipped to an inner boundary traced from actual blue pixels of the original table, not an invented ellipse. Restrained asset-local illumination is included in the SVG. This is a finished physical scene asset; no DOM/CSS layer simulates the felt and no blur/sharpen filter is used to conceal defects.
+
+Source room: assets/lower-camera/room-table-lantern830.png,1844x853. Preserved unchanged in the final asset, including relocated bookshelf lantern, rail, brass and room. Runtime rail/body occlusion remains the original registered structure.
+
+Material: built-in image generation; final clean-cloth source exec-4f0b045f-f376-4c9e-b914-a25f8f6b059d.png. Entire material raster embedded inside the final SVG, so no external source file or service is needed.
+
+Exact final material-generation prompt:
+A photographic material sample filling the entire image: pristine royal cobalt blue billiard baize cloth, extremely fine matte wool fiber nap, perfectly flat and taut. Nearly solid blue at this viewing distance. No patterns or lines whatsoever. No swirls, no marbling, no embroidery, no embossed relief, no wrinkles, no clouds. Fine subtle photographic fiber grain only. Soft even illumination, uniform neutral rich royal blue. A high quality flat fabric material texture photograph, wide landscape crop, no table, no border, no objects, no text. 1844 by 853.
+
+Rejected scene-edit attempts:
+exec-3e22bca2-2172-4742-9acd-12feb59f42c5.png, exec-cf80978e-6065-49fe-a34f-f0f884c2bb2a.png and exec-bcc829da-966d-468e-98f4-298fcdac68c2.png retained too much of the old loopy pattern. They are not referenced by the game or included as selected assets. No claim that these scene regenerations preserve exact original pixels.
+
+Construction follows the Master Brain physical-environment distinction: use existing pixels for the room/rail, image material for the cloth, native asset registration for the contour, ordinary CSS/DOM only for functional controls and placement. No AI-generated gameplay cards/text/UI.
+
+
+========== review-continuity/834-ASSET-NOTES.txt ==========
+
+Finished asset: assets/lower-camera/room-table-shelf834.svg (1844x853)
+Source: assets/lower-camera/room-table-baize832.svg, unchanged.
+Method: built-in imagegen precise-object-edit on original room-table-lantern830.png. The generated result is embedded in the finished SVG and clipped to bookshelf x405..745,y0..185. This is a self-contained authored image asset, not a runtime CSS shelf/lantern. Original832 pixels outside that area are retained exactly. New wick sample location x475,y48,width60,height110.
+
+Final generation prompt:
+Use case: precise-object-edit. Edit target: attached existing game room asset. Make only one local correction in upper-left-middle bookcase, between x430 and x735 in this1844x853 scene: the brass oil lantern currently at x675 looks suspended in front of ivy. Remove it from that position, restoring the books/wood behind it. Place the SAME warm brass lantern a little farther LEFT at x520, replacing several books in a recessed bookshelf bay. Its broad flat brass base must REST DIRECTLY on the visible horizontal wooden shelf at y150, with a clearly visible shelf top extending to either side, dark contact shadow directly under the base and soft amber reflected light on the wood. Lantern height about110 scene pixels; no dangling chain, no wall bracket, no floating. Keep it between the future left and center players. Preserve exact camera, crop, entire oval table, table rim, felt, fireplace and room outside that small bookshelf area. No people, no typography, no controls. Full finished photorealistic scene asset, same wide aspect and framing as input.
+
+
+========== review-continuity/835-ASSET-NOTES.txt ==========
+
+835 — Griffin plaque asset
+
+Finished asset: assets/brand835/house-plaque835.png
+2048 x 768 RGBA PNG. Transparent outside the physical plaque. Generated from the existing approved805 Griffin wordmark reference; dark emerald inset, restrained brass bevel and walnut edge, brighter Griffin emblem and exact GRIFFIN / HOUSE OF ROOKS lettering. Used for welcome branding in both orientations and landscape waiting-table branding. Physical appearance comes from this image asset; layout CSS only places the image and live controls.
+
+Generation prompt:
+Use case: precise-object-edit. Asset type: finished Griffin House of Rooks wordmark plaque for a premium card game. Reference image is the approved identity: preserve the same heraldic gold griffin facing left, same GRIFFIN lettering and HOUSE OF ROOKS wording. Redesign the treatment as one highly readable horizontal physical house plaque, front-on camera, wide ratio about 3:1, closely cropped with minimal transparent margins. Deep almost-black emerald inset, subtle dark walnut outer edge, restrained thin polished brass double bevel. Increase contrast and thickness of gold wordmark so it reads at small mobile size, bright warm ivory-gold lettering; griffin left, GRIFFIN large right, HOUSE OF ROOKS below. Exact wording only 'GRIFFIN' and 'HOUSE OF ROOKS'. Spacious balanced typography. No extra text, no UI buttons, no new symbols, no ornate scrollwork, no room scenery, no table, no large shadow outside the plaque. Authentic photographic materials, clean finished asset, completely transparent outside its physical silhouette.
+
+The 834 bookshelf/lantern, room/table artwork, felt, fireplace and rail asset remain byte-for-byte unchanged. No new table skin, avatars, holder, bid-box materials or card assets.
+
+
+========== HISTORICAL REVIEW_README.md ==========
+
+# Griffin House of Rooks — 813 Landscape Nest Redesign
+
+**Unapproved isolated review candidate. Neither GitHub live site was changed.**
+
+The owner correctly rejected Build 812's discard page as an inadequate visual redesign: it still looked like a flat two-row card selector. This 813 review responds with a real visual rework over the previously working state, not a replacement game engine.
+
+## What actually changed
+
+- The 16 actual, original Rook card faces are larger and presented within a full-width midnight-blue felt area and brass/walnut edge.
+- A separate Nest tray at the top has six empty card slots. Tapping a hand card moves its **mirror image** to one of those slots; the hand retains the real card until the original confirmed discard action. Gold selection borders and numbers show exact choices.
+- A separate compact received-Kitty panel shows six incoming cards. The title explains clearly: the six chosen leave; the other ten stay.
+- The action button tells how many remain to choose until six are selected. The original discard validation and card IDs remain authoritative.
+- Five real viewport layouts tested, including 844×290 and 844×390 Android-like landscape; no card was clipped and no page scroll was needed.
+
+## Protection and reproducibility
+
+Based on complete `812.zip`, SHA-256 `c36dccf14338d76f07f262304ad9a126f69ce626fe763dc7473004e48fcc404f`, which includes all recovered late-811 owner fixes. `game060.js` portrait layout template was compared and found byte-for-byte unchanged. Landscape-only CSS loaded after 812 as `landscape-nest813.css`. Neither production nor Test GitHub repository was updated. Older 811, 812, approved 017 and 018 work remain untouched. No browser cache cleared.
+
+## Tests and limitations
+
+- Isolated Chromium real game: won 200 bid, displayed 16 full card faces, selected six, mirrored six Nest slots, rejected seventh, deselected and reselected, confirmed, advanced to green trump selection. No JS errors or missing assets in this test.
+- Responsive visual inspections at 1536×709, 1280×800, 960×420, 844×390, 844×290, all no scrolling or card clipping.
+- Portrait safety: PASS, bid → kitty Continue → discard six → confirm trump → play.
+- Complete landscape hand: PASS through real scoreboard.
+- Native Samsung / Onn, multiplayer, active offline service worker, audio, entire match NOT tested.
+
+## Owner review
+
+View `evidence/813_1536x709_selected.png` and `evidence/813_844x390_selected.png`, or load this ZIP into the existing original ZIP review loader. Do not deploy or promote without owner approval.
+
+
+========== HISTORICAL REPAIR_812_SOURCE.json ==========
+
+{
+  "revision": "812-landscape-discard-review-20261017",
+  "base_archive_sha256": "9c75578920f328cc05d2c3f498f5c3bee94e8952eee5586cb0f9e8c18c065e78",
+  "overlay": "landscape-discard812.css",
+  "changedFiles": [
+    "index.html",
+    "game060.js",
+    "angle-c-runtime.js",
+    "angle-c-runtime.css",
+    "angle-c-characters.js",
+    "trump714.js",
+    "hor-version.js",
+    "sw060.js",
+    "QA_RESULT.json",
+    "REVIEW_README.md",
+    "landscape-discard812.css"
+  ],
+  "releaseStatus": "ISOLATED_REVIEW_CANDIDATE_NOT_DEPLOYED_NOT_OWNER_APPROVED"
+}
+
+
+========== HISTORICAL REPAIR_813_SOURCE.json ==========
+
+{
+  "runtime": "813-landscape-nest-review-20261017",
+  "base812Sha256": "c36dccf14338d76f07f262304ad9a126f69ce626fe763dc7473004e48fcc404f",
+  "added": [
+    "landscape-nest813.css"
+  ],
+  "modified": [
+    "game060.js",
+    "index.html",
+    "sw060.js",
+    "hor-version.js",
+    "angle-c-characters.js",
+    "REVIEW_README.md",
+    "QA_RESULT.json"
+  ],
+  "ownerApproved": false,
+  "deployed": false
+}
+
+
+========== HISTORICAL 814_CARD_FRAME_FIX.txt ==========
+
+Landscape Nest card frame overflow/padding correction. Source 813 preserved. Not deployed; visual device acceptance pending.
+
+
+========== HISTORICAL 815_REPAIR_NOTE.txt ==========
+
+BUILD 815 | ISOLATED LANDSCAPE REVIEW | NOT DEPLOYED
+Base: exact Build 814 archive, all other runtime files untouched.
+- Physical stamper contact size is no longer derived from the felt imprint width. Landscape flight/contact keeps the physical stamper about its natural size.
+- Felt trump imprint remains 264 scene units. No paint/ink geometry modified.
+- Lead status now uses numeric owner of the trick's first played card; before the first card it uses currentPlayer.
+- Added per-frame lightweight game-state signature tracking to keep all four seat labels synchronized even when no DOM mutations occur.
+- No portrait CSS or portrait-only code modified.
+Validation: node syntax checks pass. Full Android animation and complete-hand runtime checks pending owner review. Neither live repository touched.
+
+
+========== HISTORICAL QA_RESULT.json ==========
+
+{
+  "runtime": "813-landscape-nest-review-20261017",
+  "status": "ISOLATED_CANDIDATE_PENDING_OWNER_REVIEW_NOT_DEPLOYED",
+  "base": {
+    "archive": "812.zip",
+    "sha256": "c36dccf14338d76f07f262304ad9a126f69ce626fe763dc7473004e48fcc404f",
+    "source": "complete playable local candidate including 811 feedback checkpoint",
+    "original811Untouched": true
+  },
+  "visualChanges": [
+    "Full-width finished-looking walnut/brass and midnight-blue nest overlay with large real numbered/bird card faces",
+    "Separate area shows actual six kitty cards received and a physical six-slot Nest discard tray",
+    "Choosing a card mirrors its approved real face into the Nest slot with number and gold highlighted selection; deselection removes it",
+    "Readable distinction between six discarded and ten kept, and button prompt shows the remaining needed count",
+    "Landscape layout fits 1536x709, 1280x800, 960x420, 844x390, and 844x290, no clipping/scrolling",
+    "No change to portrait template, engine, card identities or approved artwork assets; 812 retained as fallback"
+  ],
+  "tests": {
+    "javascriptParse": "PASS node --check game060.js",
+    "realGameLandscapePicker": "PASS 200 human bid,16 real cards rendered,six selected,six mirrored, seventh blocked,deselect/reselect, original confirm to trump",
+    "landscapeViewports": [
+      [
+        1536,
+        709
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        844,
+        290
+      ],
+      [
+        1280,
+        800
+      ],
+      [
+        960,
+        420
+      ],
+      [
+        1536,
+        709
+      ],
+      [
+        844,
+        290
+      ],
+      [
+        1280,
+        800
+      ]
+    ],
+    "visualGeometry": {
+      "all16Cards": true,
+      "all6NestSlots": true,
+      "noClippedCards": true,
+      "noBodyScrolling": true,
+      "errors": [],
+      "missingAssets": []
+    },
+    "portraitSmoke": "PASS, original portrait kitty Continue, choose six, green trump, actual play",
+    "fullLandscapeHand": "PASS, real 200 bid, six discard, trump, legal play to scoreboard",
+    "portraitTemplateIdenticalTo812": true,
+    "physicalAndroid": "NOT TESTED",
+    "multiplayer": "NOT TESTED",
+    "serviceWorkerOfflineReload": "NOT TESTED",
+    "nativeAudio": "NOT TESTED"
+  },
+  "protections": {
+    "testRepositoryUntouched": true,
+    "productionRepositoryUntouched": true,
+    "liveLandscapeRemainsDisabled": true,
+    "noCacheReset": true,
+    "older811And812Unmodified": true,
+    "approved017018Unmodified": true
+  },
+  "next": [
+    "Owner visual review and phone tap testing",
+    "Android Samsung and Onn physical acceptance",
+    "Continue last-trick and score animation UI work",
+    "Approval needed before any hosted deployment"
+  ]
+}

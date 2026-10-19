@@ -1,0 +1,86 @@
+{
+  "sourceCommit": "854b1a452d074f863ceb883545e6dbfa4ce726a9",
+  "candidateRuntimeCommit": "356d4481b5c21164f51404f3cea9e82853edcac1",
+  "baselineFiles": 1650,
+  "changedFiles": [
+    {
+      "path": "audio-mixer.js",
+      "baseSha256": "dae22496ddfc69ea2ba3f8aa989ae976e4ec8c9837b08bc0362386a6ba5e7e12",
+      "candidateSha256": "b1b0fb7706f693f996e211af3dcd9d78478ce853f71bbeb1a2eb2eebe3528a0d",
+      "candidateGitBlob": "d542703023c054401007c3c6499ac3592d1557ac",
+      "bytes": 5427
+    },
+    {
+      "path": "friends803.js",
+      "baseSha256": "0f2f80d3dbf20d80604c45104eb0ecd89ab683ee0d9a88066f7bd695cfe228dc",
+      "candidateSha256": "b8b139a5b299ae55bb58a7a33b8f1088ec88bb43f8dbbab08c1d6ea00abf98a6",
+      "candidateGitBlob": "8cb037af511f58ea6489a52f95f2d31bb5be5d6e",
+      "bytes": 7858
+    },
+    {
+      "path": "game060.js",
+      "baseSha256": "e9c8605dfb334e79fd76ad370cbf0e49cd4e8b49e89f87641805bc394549a7a0",
+      "candidateSha256": "d80b98da164e5de720f21adecfef63b2a7cb4b700c13ea2cbf16d283f163ea53",
+      "candidateGitBlob": "d1bf3fa5484759131bf967f831effc7030c10688",
+      "bytes": 645854
+    },
+    {
+      "path": "hor-version.js",
+      "baseSha256": "52a39816f5f69c33a784f36573f2813f8feaaf569848002f29354df5d4b319be",
+      "candidateSha256": "cdd1bbf2338e58b799c45041e9acb7c175ee799e6b81b1409a887521af60c405",
+      "candidateGitBlob": "177db87389e6421f5dccb562ce0eb533a980af1d",
+      "bytes": 1304
+    },
+    {
+      "path": "index.html",
+      "baseSha256": "9068414a8811c12ea1120a0ff9967416fb4cfef24212588d9662eb46ca56ba8c",
+      "candidateSha256": "d33326c86bf6cdf36897fea60b07b535ceb8903783beb3e5c58cb3f84ed467e6",
+      "candidateGitBlob": "11d1593d52e4b96733233f8dbd2157ab615c0222",
+      "bytes": 107661
+    },
+    {
+      "path": "menu-approved805.js",
+      "baseSha256": "b3bfea2be8238a86c3818f8a3d754f6f0dedcc283dcecc60298b3a54414266cb",
+      "candidateSha256": "42eca0f0ec4f653e2f4aba57d4393f04393cf3dd6c07a4ddb63a6215f9731b9d",
+      "candidateGitBlob": "f8486ab56612b406f62c24873ccafe028b3abdfe",
+      "bytes": 43711
+    },
+    {
+      "path": "nest-manual838.js",
+      "baseSha256": "ceb1054adb657190a8a9cb3a16f9cd761e8dccb7d0efbdbcfe456cdeb2a4cc1e",
+      "candidateSha256": "a65967b1324388c5ed604baad5be1f1258ea776ea13b7da4cbd2b3d6c8763600",
+      "candidateGitBlob": "6ab5f38b1bc9618555f80b589ec60f99fd45f523",
+      "bytes": 14958
+    },
+    {
+      "path": "polish.js",
+      "baseSha256": "ae9d662d9776423b916bac539c2439b03cb1e4910c569e3559381a329d2941bf",
+      "candidateSha256": "8d1d6d87e7441f50043758bf5108b57ae52d35a89921771853a8f167f0681ad6",
+      "candidateGitBlob": "ccde375145f029fc1f89022cdc889d9e8ca77649",
+      "bytes": 70535
+    },
+    {
+      "path": "progression.js",
+      "baseSha256": "acf060ee61efc456d10b8fe90b9ebb1a1b0513a677eea5392119da28b5aeb38a",
+      "candidateSha256": "4289102524e363688dce39a1437515d0295e67bac0fa2d10157f5c7aff853ae2",
+      "candidateGitBlob": "44f12b5caee173389a262131572011115bde59c5",
+      "bytes": 46055
+    },
+    {
+      "path": "review835.css",
+      "baseSha256": "2f46425846224628b17d598c33cdabdd43616e0ccecdd86e0de80f8c779d68ba",
+      "candidateSha256": "740e86297540401fd4c49b104dd7702db73303be7112229ed5bdcda937fd015f",
+      "candidateGitBlob": "7437e4cb4d9e001f146907a96cd209e6339a0a91",
+      "bytes": 11396
+    },
+    {
+      "path": "sw060.js",
+      "baseSha256": "eebcbb0d765b45e12309aba4d99dd2aa0ced7fe75234f01f5f9e2c52ac6b27ed",
+      "candidateSha256": "cd6dfaa5ac9bdd9068fe4efc284707465f5d0617175dddb4c77dc46a1fd379dc",
+      "candidateGitBlob": "3af035315081e01511f042a17961f2fc57084463",
+      "bytes": 69324
+    }
+  ],
+  "unchangedFiles": 1639,
+  "deletedFiles": []
+}

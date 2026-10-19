@@ -447,6 +447,9 @@
       if (kind === 'Tiered awards')
         for (const item of P.FAMILIES)
           add(item.name, (c) => {
+            const description = document.createElement('p');
+            description.textContent = item.description;
+            c.append(description);
             const dl = document.createElement('dl');
             P.MEDALS.forEach((medal, i) => {
               const pair = document.createElement('div'),
@@ -965,8 +968,9 @@
         true
       );
     }
-    // Retired Settings entry routes to the remaining player preferences in My Profile.
-    openHostOptionsModal = () => profile();
+    // The waiting-table control opens the existing game setup, including guest
+    // and in-game read-only guards. Player preferences have their own route.
+    openHostOptionsModal = () => tableSetup();
     $('hor-player-name').addEventListener(
       'keydown',
       (e) => {

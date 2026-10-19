@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '846-source-cleanup';
+const APP_VERSION = 'beginner-review-20261019';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -1283,6 +1283,8 @@ function syncTargetScoreUI() {
     setCustomScoreVisible(true);
     if (custom) custom.value = cur;
   }
+  // Programmatic resets/reopens must refresh validation as well as the value.
+  if (custom) custom.dispatchEvent(new Event('input', { bubbles: true }));
 }
 
 function wireTargetScoreUI() {
@@ -3439,6 +3441,7 @@ function isPrivateOrLocalHost(host) {
 
 function canShareJoinQr() {
   try {
+    if (isSoloPractice || roomCode === 'OFFLINE') return false;
     if ((location.protocol || '') !== 'https:') return false;
     return !isPrivateOrLocalHost(location.hostname);
   } catch (e) {
@@ -3454,6 +3457,12 @@ function applyWaitingShareMode() {
   const speak = $('speakCodeLine');
   const copyBtn = $('copyCodeBtn');
   const shareBtn = $('shareBtn');
+  const offline = isSoloPractice || roomCode === 'OFFLINE';
+  for (const button of [qrBtn, copyBtn, shareBtn]) {
+    if (!button) continue;
+    button.disabled = offline;
+    button.toggleAttribute('data-offline-invitation', offline);
+  }
   document.body.classList.toggle('wifi-join-only', !qrOk);
   if (qrBtn) {
     qrBtn.classList.toggle('hidden', !qrOk);
@@ -15566,6 +15575,10 @@ function sortMyHand() {
 }
 
 function drawQr(code) {
+  if (isSoloPractice || roomCode === 'OFFLINE' || code === 'OFFLINE') {
+    setQrOpen(false);
+    return;
+  }
   const link = joinLink(code),
     line = $('joinLinkLine'),
     graphic = $('qrGraphic845');
@@ -15640,6 +15653,7 @@ function horSyncShareBrand845() {
 horSyncShareBrand845();
 
 function copyRoomCode() {
+  if (isSoloPractice || roomCode === 'OFFLINE') return;
   const code = roomCode || ($('displayCode') && $('displayCode').textContent);
   if (!code) return;
   const hosted = canShareJoinQr();
@@ -15681,6 +15695,7 @@ function shareRoomText(code, url) {
 }
 
 function shareRoom() {
+  if (isSoloPractice || roomCode === 'OFFLINE') return;
   horSyncShareBrand845();
   const code = roomCode || '';
   const url = canShareJoinQr() ? joinLink(code) : '';
@@ -16497,6 +16512,7 @@ bindClick('btnResumePause', () => {
 bindClick('copyCodeBtn', copyRoomCode);
 bindClick('shareBtn', shareRoom);
 function setQrOpen(open) {
+  if (isSoloPractice || roomCode === 'OFFLINE') open = false;
   const box = $('qrBox');
   const btn = $('showQrBtn');
   if (!box) return;
@@ -16736,6 +16752,7 @@ function updateLandscapeTheater() {
   const endEl = $('ltEndGame');
   const endSummary = landscapeLastSummary;
   const isLandscape = window.matchMedia && window.matchMedia('(orientation: landscape)').matches;
+  $('landscapeTheater')?.setAttribute('aria-hidden', String(!isLandscape));
   if (endEl) {
     const goal = (game && game.targetScore) || targetScore || 500;
     const isScore = !!(game && game.phase === 'score');
@@ -18842,9 +18859,11 @@ try {
       const play = document.createElement('button');
       play.type = 'button';
       play.textContent = 'Play';
+      play.setAttribute('aria-label', 'Play ' + title);
       const stop = document.createElement('button');
       stop.type = 'button';
       stop.textContent = 'Stop';
+      stop.setAttribute('aria-label', 'Stop ' + title);
       play.onclick = async () => {
         if (sel.value === 'rotate') {
           stopPreviewAudio();

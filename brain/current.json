@@ -504,8 +504,8 @@
   "testSiteVerificationNote": "All1502 runtime Git blobs and all15 changed served SHA256 hashes match approved artifact on BOTH sites. Cloud browser reached both lobbies. Installed-device SW/offline upgrade remains unverified.",
   "historicalApprovedVisualDesign": {
     "date": "2026-10-14",
-    "room": "B \u2014 Fireplace Priority",
-    "menu": "A \u2014 slim right overlay",
+    "room": "B — Fireplace Priority",
+    "menu": "A — slim right overlay",
     "sound": "Reviewed Sound & Atmosphere using actual mixer controls",
     "ownerDesignApproved": true,
     "owner805PhoneAccepted": false,
@@ -867,7 +867,7 @@
     "knownSecondaryLabelIssue": {
       "path": "angle-c-characters.js",
       "element": "angleCNotice",
-      "label": "840 \u00b7 Stable discard",
+      "label": "840 · Stable discard",
       "activeRuntime": "845-share-shuffle",
       "recordedNotPatched": true
     },
@@ -975,13 +975,13 @@
     "status": "OWNER_APPROVED_LOCKED",
     "date": "2026-10-16",
     "record": "../coordination/landscape-daniel-017-approved-20261016.md",
-    "scope": "Daniel isolated 0\u201316 review; full-table integration pending",
+    "scope": "Daniel isolated 0–16 review; full-table integration pending",
     "runtime": "017.zip",
     "sha256": "c165dc8c94e0c8e78be931dad438fbdd7dc590ec79bf27a9e92e3be8d99019e7",
     "libraryFileId": "libfile_800a96f61fe081919f8abeada283c649",
     "sourceLibraryFileId": "libfile_7d48cb5a3e288191af77808b9d11be45",
     "deployed": false,
-    "method": "Fixed 68-degree fan for 7\u201316; overlap increases inside fixed finished grip; original card aspect; preserve 0\u20136"
+    "method": "Fixed 68-degree fan for 7–16; overlap increases inside fixed finished grip; original card aspect; preserve 0–6"
   },
   "landscapeFullTableCandidate": {
     "status": "OWNER_APPROVED_LOCKED",
@@ -1205,5 +1205,52 @@
   },
   "latestSourceBuild": "846-source-cleanup",
   "latestSourceCommit": "71dee12ecdeb41d8edc91a9b02adc4e5716b5d9b",
-  "comprehensiveHandoff": "releases/846/COMPREHENSIVE_HANDOFF.txt"
+  "comprehensiveHandoff": "releases/846/COMPREHENSIVE_HANDOFF.txt",
+  "pendingBeginnerExperienceRepair": {
+    "status": "STAGED_PENDING_OWNER_REVIEW_NOT_DEPLOYED",
+    "candidateId": "beginner-review-20261019",
+    "branch": "candidate/beginner-audit-repairs-20261019",
+    "runtimeCommit": "356d4481b5c21164f51404f3cea9e82853edcac1",
+    "sourceTestHead": "854b1a452d074f863ceb883545e6dbfa4ce726a9",
+    "handoff": "candidates/beginner-review-20261019/COMPREHENSIVE_HANDOFF.txt",
+    "auditLibraryFileId": "libfile_c1bf66e6eb2c8191999cb2b1a6309e60",
+    "evidence": "../coordination/candidates/beginner-audit-20261019",
+    "note": "Candidate-branch documentation only. AF and both live 846 sites remain current. Owner review and explicit deployment approval are pending. No numbered game or ZIP was created.",
+    "previewCanvasFollowup": {
+      "runtimeCommit": "dbead58159e1def3336a3fb87a3b2c61a834ed6a",
+      "status": "CANDIDATE_BROWSER_VERIFIED_OWNER_ANDROID_REVIEW_PENDING",
+      "ownerScreenshot": "Uncaught SecurityError from canvas getImageData on preview CDN",
+      "runtimeFile": "trump714.js",
+      "deployed": false,
+      "directReviewUrl": "https://raw.githack.com/JeromeLeeGriffin/Test/dbead58159e1def3336a3fb87a3b2c61a834ed6a/index.html",
+      "evidence": "../coordination/candidates/beginner-audit-20261019/CANVAS_BROWSER_VERIFICATION.json"
+    },
+    "portraitReview": {
+      "status": "OWNER_REPORTED_PORTRAIT_DIFFERENCE_PENDING_CLARIFICATION",
+      "ownerReport": "Portrait graphics changed and card smaller; Android screenshot 71882.jpg",
+      "testedCssViewport": [
+        393,
+        740
+      ],
+      "comparisonPage": "coordination/candidates/beginner-audit-20261019/portrait-compare.html",
+      "sources": {
+        "preserved845": "26cf989cedfc6e7bde269f1b22690afeaa558a45/builds/845",
+        "baseline846": "854b1a452d074f863ceb883545e6dbfa4ce726a9",
+        "candidate": "dbead58159e1def3336a3fb87a3b2c61a834ed6a"
+      },
+      "observations": [
+        "All three ten-card hands compute to 33px wide by 48px high per card; per-position rendered bounds match across all three",
+        "Nest area is 98px wide by 136px high in all three",
+        "Same portrait labels, header/LAST, table, holder and bid artwork reproduced",
+        "No card/table sizing styles or image assets changed by beginner repair; only CSS change scoped to dialogs/offline invitations",
+        "Preserved 845 and 846 previews show known canvas SecurityError on this CDN; candidate does not"
+      ],
+      "limitations": [
+        "Actual owner Android viewport not available",
+        "Owner has not yet identified whether the bottom hand or center nest/played card is smaller",
+        "No approved-layout acceptance inferred; no graphic/game code changed during this investigation"
+      ],
+      "deployed": false
+    }
+  }
 }
