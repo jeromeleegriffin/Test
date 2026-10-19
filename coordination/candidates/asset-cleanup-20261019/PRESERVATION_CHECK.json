@@ -6,10 +6,11 @@
   "allRootCssFilesByteEqual": 46,
   "rootJsSyntaxChecked": 64,
   "precachePaths": 1439,
-  "browserMatchesCompleted": 0,
-  "deliveryBlockedUntilFiveCompleteMatches": true,
+  "browserMatchesCompleted": 5,
+  "deliveryBlockedUntilFiveCompleteMatches": false,
   "runtimeCommit": "23e4c5d165a397f860bd2a16c91fac93e5740b39",
   "sourceCiRun": 39202779134,
   "sourceCiConclusion": "success",
-  "zipLoaderInlineSyntax": "PASS"
+  "zipLoaderInlineSyntax": "PASS",
+  "browserEvidence": "ZIP_BROWSER_RESULTS.json"
 }

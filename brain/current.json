@@ -504,8 +504,8 @@
   "testSiteVerificationNote": "All1502 runtime Git blobs and all15 changed served SHA256 hashes match approved artifact on BOTH sites. Cloud browser reached both lobbies. Installed-device SW/offline upgrade remains unverified.",
   "historicalApprovedVisualDesign": {
     "date": "2026-10-14",
-    "room": "B — Fireplace Priority",
-    "menu": "A — slim right overlay",
+    "room": "B \u2014 Fireplace Priority",
+    "menu": "A \u2014 slim right overlay",
     "sound": "Reviewed Sound & Atmosphere using actual mixer controls",
     "ownerDesignApproved": true,
     "owner805PhoneAccepted": false,
@@ -867,7 +867,7 @@
     "knownSecondaryLabelIssue": {
       "path": "angle-c-characters.js",
       "element": "angleCNotice",
-      "label": "840 · Stable discard",
+      "label": "840 \u00b7 Stable discard",
       "activeRuntime": "845-share-shuffle",
       "recordedNotPatched": true
     },
@@ -975,13 +975,13 @@
     "status": "OWNER_APPROVED_LOCKED",
     "date": "2026-10-16",
     "record": "../coordination/landscape-daniel-017-approved-20261016.md",
-    "scope": "Daniel isolated 0–16 review; full-table integration pending",
+    "scope": "Daniel isolated 0\u201316 review; full-table integration pending",
     "runtime": "017.zip",
     "sha256": "c165dc8c94e0c8e78be931dad438fbdd7dc590ec79bf27a9e92e3be8d99019e7",
     "libraryFileId": "libfile_800a96f61fe081919f8abeada283c649",
     "sourceLibraryFileId": "libfile_7d48cb5a3e288191af77808b9d11be45",
     "deployed": false,
-    "method": "Fixed 68-degree fan for 7–16; overlap increases inside fixed finished grip; original card aspect; preserve 0–6"
+    "method": "Fixed 68-degree fan for 7\u201316; overlap increases inside fixed finished grip; original card aspect; preserve 0\u20136"
   },
   "landscapeFullTableCandidate": {
     "status": "OWNER_APPROVED_LOCKED",
@@ -1254,7 +1254,7 @@
     }
   },
   "pendingAssetCleanup": {
-    "status": "STAGED_ZIP_HELD_BROWSER_APPROVAL_BLOCKED_FIVE_MATCHES_PENDING",
+    "status": "FIVE_EXACT_ZIP_MATCHES_PASSED_SAVED_FOR_OWNER_REVIEW_NOT_DEPLOYED",
     "branch": "candidate/asset-cleanup-20261019",
     "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
     "runtimeCommit": "23e4c5d165a397f860bd2a16c91fac93e5740b39",
@@ -1265,7 +1265,7 @@
     "zipSha256": "382f8c753f93572c74b44d322182dd3a2c7055f90b5ef7515346fda01e61e27c",
     "zipBytes": 156852259,
     "requiredCompleteMatches": 5,
-    "completedMatches": 0,
+    "completedMatches": 5,
     "sourceCiRun": 39202779134,
     "sourceCiConclusion": "success",
     "deployed": false,
@@ -1274,6 +1274,10 @@
     "handoff": "candidates/asset-cleanup-20261019/COMPREHENSIVE_HANDOFF.txt",
     "evidence": "../coordination/candidates/asset-cleanup-20261019",
     "ownerPortraitConcern": "Unresolved; no resizing or CSS changes permitted/applied in this cleanup",
-    "parallelHouseEffectsWork": "Separate workstream; do not import or overwrite from unrelated review ZIPs"
+    "parallelHouseEffectsWork": "Separate workstream; do not import or overwrite from unrelated review ZIPs",
+    "scoredHands": 11,
+    "zipLibraryFileId": "libfile_7715f5406e0c8191b4c64a9bd6d4ce56",
+    "deliveryStatus": "SAVED_READY_FOR_OWNER_DOWNLOAD",
+    "browserEvidence": "../coordination/candidates/asset-cleanup-20261019/ZIP_BROWSER_RESULTS.json"
   }
 }

@@ -1,0 +1,154 @@
+{
+  "status": "FIVE_EXACT_ZIP_MATCHES_COMPLETED_NO_GAMEPLAY_BLOCKER_OBSERVED",
+  "verifiedAtUtc": "2026-10-19T05:35:34.656859+00:00",
+  "runtimeCommit": "23e4c5d165a397f860bd2a16c91fac93e5740b39",
+  "zipFilename": "Griffin_House_Cleaned_Review_20261019.zip",
+  "zipBytes": 156852259,
+  "zipSha256": "382f8c753f93572c74b44d322182dd3a2c7055f90b5ef7515346fda01e61e27c",
+  "checksumVisibleInBrowser": true,
+  "fullMatchesCompleted": 5,
+  "scoredHands": 11,
+  "matchResults": [
+    {
+      "match": 1,
+      "target": 500,
+      "hands": 4,
+      "rules": "Standard; normal Bird; Red Two and top-nest ON; nest last trick",
+      "human": "Pass",
+      "trumps": [
+        "Black",
+        "Green",
+        "Red",
+        "Green"
+      ],
+      "scores": [
+        [
+          45,
+          155
+        ],
+        [
+          90,
+          310
+        ],
+        [
+          170,
+          430
+        ],
+        [
+          180,
+          620
+        ]
+      ],
+      "winner": "Raven",
+      "notes": "One all-pass auction redealt without changing scores. Portrait393x740 to landscape844x390; legal real card inputs and natural claims."
+    },
+    {
+      "match": 2,
+      "target": 100,
+      "hands": 1,
+      "rules": "Standard",
+      "human": "Bid195, six manual discards, Yellow trump",
+      "scores": [
+        [
+          -195,
+          50
+        ]
+      ],
+      "winner": "Raven",
+      "notes": "Griffin failed contract; negative target rule applied, with explicit reached -100 notice. Five discards disabled confirm; seventh selection rejected; deselect/reselect passed."
+    },
+    {
+      "match": 3,
+      "target": 100,
+      "hands": 1,
+      "rules": "Low Bird ON; must trump ON; other standard options",
+      "human": "Pass",
+      "trumps": [
+        "Yellow"
+      ],
+      "scores": [
+        [
+          80,
+          120
+        ]
+      ],
+      "winner": "Raven",
+      "notes": "Illegal Yellow1 with Black8 held rejected: Must follow Black. Blackbird lost in a trick won by ordinary Yellow6, consistent with low Bird."
+    },
+    {
+      "match": 4,
+      "target": 250,
+      "hands": 4,
+      "rules": "Red Two OFF; top-nest OFF; normal Bird; must trump ON; nest to bidding team",
+      "human": "First hand Bid175, nine manual discards, Black trump; later passes",
+      "trumps": [
+        "Black",
+        "Black",
+        "Green",
+        "Yellow"
+      ],
+      "scores": [
+        [
+          -175,
+          55
+        ],
+        [
+          -130,
+          190
+        ],
+        [
+          -40,
+          90
+        ],
+        [
+          -40,
+          270
+        ]
+      ],
+      "winner": "Raven",
+      "notes": "45 cards, nine-card hands plus nine-card nest. Hand1 captures125/55 sum180, nest20 to human bidder. History/back/next navigable. Final hand natural bot claim after three accepted human plays."
+    },
+    {
+      "match": 5,
+      "target": 100,
+      "hands": 1,
+      "rules": "Standard restored; normal Bird; must trump OFF; nest last trick",
+      "human": "Shoot the Moon200, six manual discards, Yellow trump",
+      "scores": [
+        [
+          -200,
+          35
+        ]
+      ],
+      "winner": "Raven",
+      "notes": "320x568 small phone. Moon explanation states capture200 or lose200. Failed Moon deducted200. No Fear achievement toast. Completion controls below fold scroll; tall393x852 checked afterward."
+    }
+  ],
+  "extraChecks": [
+    "Created synthetic player Cleanup ZIP One with approved Amara avatar and Silent voice. Existing device career preserved.",
+    "All11manualHouseTour topics with Back/Next/Done; original jargon replaced by several cards in the planned trump color plus strong/point cards.",
+    "Master volume keyboard100->1 persisted after back/reopen; mute voices persisted; both restored to original settings.",
+    "Custom target0 disabled Enter with validation;250 saved and was actual match target.",
+    "Tiered achievement guide showed25families with plain-language requirements and all5medal thresholds.",
+    "No missing packaged resource banner; no blob/getImageData errors returned by filtered dev logs. General log included old browser extension metadata errors, not game failures."
+  ],
+  "limitations": [
+    "Cloud Chrome CSS iframe sizes, not physical Android/touch/DPR/browser chrome testing.",
+    "Exact ZIP Blob preview intentionally does not register service worker; hosted/offline upgrade and multiplayer/invites/install/share remain unverified.",
+    "No subjective listening/audio quality or screen-reader certification. Card-lift Play/Stop exercised; DOM asset mapping and complete package inventory verified.",
+    "All five matches were genuine losses for human team; no human-win/successful-Moon acceptance claimed.",
+    "Very rapid keyboard card input sometimes ignored; fresh UI plus retry accepted. No cleanup regression established; gameplay handlers unchanged.",
+    "Some menus paginate after initial layout; locators aimed at controls moved to later page timed out until current DOM was reread.",
+    "House Effects dialog snapshot omits accessible names even though visible button DOM aria-labels are present. DOM-selector Play/Stop works. Review accessibility/native modal interaction in separate House Effects task.",
+    "Owner portrait graphics/card-size concern remains unresolved; all46CSS unchanged from parent; no guessed resizing.",
+    "Completion Hands counts appear cumulative across session: 4/0,4/1,5/1,7/3,7/4 made/set. Clarify session scope in future copy; no evaluation logic changed."
+  ],
+  "liveHeads": {
+    "Test/main": "854b1a452d074f863ceb883545e6dbfa4ce726a9",
+    "Griffin-House-of-Rooks/main": "01e809d5079510fad9fe61a6c73633e94b637460"
+  },
+  "liveModified": false,
+  "deployed": false,
+  "libraryFileId": "libfile_7715f5406e0c8191b4c64a9bd6d4ce56",
+  "libraryFileVersion": 0
+}

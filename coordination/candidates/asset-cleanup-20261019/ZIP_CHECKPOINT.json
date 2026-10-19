@@ -8,11 +8,17 @@
   "gameManifestSha256": "c26057d294602eb44cd90824d890538555079cea814ceee2d66b5862f00b75bd",
   "zipCrcAndEveryFileHashVerified": true,
   "matchesRequired": 5,
-  "matchesCompleted": 0,
-  "deliveryStatus": "HELD_PENDING_EXACT_ZIP_GAMEPLAY_TEST",
+  "matchesCompleted": 5,
+  "deliveryStatus": "SAVED_READY_FOR_OWNER_DOWNLOAD_NOT_DEPLOYED",
   "liveDeployed": false,
   "runtimeCommit": "23e4c5d165a397f860bd2a16c91fac93e5740b39",
   "sourceCiRun": 39202779134,
   "sourceCiConclusion": "success",
-  "browserBlocker": "Automatic browser security review timed out without an approval decision. Initial tab action and one existing-tab retry failed; no bypass attempted."
+  "browserBlocker": null,
+  "scoredHands": 11,
+  "browserEvidence": "ZIP_BROWSER_RESULTS.json",
+  "verifiedAfterTestingSha256": "382f8c753f93572c74b44d322182dd3a2c7055f90b5ef7515346fda01e61e27c",
+  "libraryFileId": "libfile_7715f5406e0c8191b4c64a9bd6d4ce56",
+  "libraryFileVersion": 0,
+  "verifiedAtUtc": "2026-10-19T05:35:34.656859+00:00"
 }
