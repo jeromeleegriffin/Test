@@ -1,0 +1,55 @@
+{
+  "status": "STAGED_PENDING_OWNER_REVIEW_NOT_DEPLOYED",
+  "candidateId": "beginner-review-20261019",
+  "branch": "candidate/beginner-audit-repairs-20261019",
+  "sourceTestHead": "854b1a452d074f863ceb883545e6dbfa4ce726a9",
+  "runtimeCommit": "356d4481b5c21164f51404f3cea9e82853edcac1",
+  "runtimeTree": "77c559f2a4858de2e214460c3140a8553a93f667",
+  "sourceRuntime": "846-source-cleanup",
+  "auditRuntime": "845-share-shuffle",
+  "approvedRollbackZipSha256": "6dfd28b2d8dadbb0390b051bcaffa4c7138698045f992c8388af1a2eb45b9d2f",
+  "auditLibraryFileId": "libfile_c1bf66e6eb2c8191999cb2b1a6309e60",
+  "liveTestHead": "854b1a452d074f863ceb883545e6dbfa4ce726a9",
+  "liveProductionHead": "01e809d5079510fad9fe61a6c73633e94b637460",
+  "liveBranchesModified": false,
+  "deployed": false,
+  "gameZipCreated": false,
+  "buildNumberReserved": false,
+  "sourceCiRun": 39189291733,
+  "sourceCiConclusion": "success",
+  "verification": {
+    "staticSource": "PASS",
+    "unitBehavior": "PASS",
+    "tutorialRuleCombinations": 1024,
+    "protectedFilesByteEqual": 1475,
+    "runtimeFilesChanged": 11,
+    "sourceFilesUnchanged": 1639,
+    "sourceFilesDeleted": 0,
+    "browserObservations": 77,
+    "completeRegressionMatches": 1,
+    "additionalCompletedStandardHands": 1,
+    "cssViewports": [
+      [
+        320,
+        568
+      ],
+      [
+        393,
+        740
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        1024,
+        768
+      ]
+    ]
+  },
+  "physicalDeviceAcceptance": false,
+  "liveNetworkMultiplayerTested": false,
+  "offlineUpgradeRetested": false,
+  "handoff": "brain/candidates/beginner-review-20261019/COMPREHENSIVE_HANDOFF.txt",
+  "evidence": "coordination/candidates/beginner-audit-20261019"
+}
