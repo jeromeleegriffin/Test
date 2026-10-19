@@ -1,7 +1,7 @@
 // Griffin House of Rooks runtime identity for diagnostics and offline verification.
-window.HOR_LIVE_VERSION = 'consolidated-review-20261019';
-window.HOR_BUILD = 'consolidated-review-20261019';
-window.GHR_BUILD = 'Consolidated House Effects v12 review 20261019';
+window.HOR_LIVE_VERSION = 'consolidated-recap-review-20261019';
+window.HOR_BUILD = 'consolidated-recap-review-20261019';
+window.GHR_BUILD = 'Consolidated recap corrected review 20261019';
 window.HORRuntimeTruth = async function () {
   const controller = navigator.serviceWorker && navigator.serviceWorker.controller;
   const worker = controller
@@ -23,11 +23,11 @@ window.HORRuntimeTruth = async function () {
     worker,
     controller: controller && controller.scriptURL,
     coherent:
-      window.HOR_PAGE_BUILD === 'consolidated-review-20261019' &&
-      window.HOR_SCRIPT_BUILD === 'consolidated-review-20261019' &&
-      window.HOR_BUILD === 'consolidated-review-20261019' &&
+      window.HOR_PAGE_BUILD === 'consolidated-recap-review-20261019' &&
+      window.HOR_SCRIPT_BUILD === 'consolidated-recap-review-20261019' &&
+      window.HOR_BUILD === 'consolidated-recap-review-20261019' &&
       !!worker &&
-      worker.build === 'consolidated-review-20261019' &&
-      worker.cache === 'house-of-rooks-consolidated-review-20261019',
+      worker.build === 'consolidated-recap-review-20261019' &&
+      worker.cache === 'house-of-rooks-consolidated-recap-review-20261019',
   };
 };

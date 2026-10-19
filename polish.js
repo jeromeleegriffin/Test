@@ -1657,7 +1657,10 @@
     let label = winner;
     if (winner === 'Team A') label = teamLabel(0);
     if (winner === 'Team B') label = teamLabel(1);
-    _showWin.call(this, label, scores);
+    // Keep canonical team IDs in recap state and network messages; localize only the title.
+    _showWin.call(this, winner, scores);
+    const title = $('winTitle');
+    if (title) title.textContent = winner === 'Tie' ? "It's a Tie!" : `${label} Wins!`;
     const sub = $('winSub');
     if (sub && scores)
       sub.textContent =
@@ -1668,6 +1671,9 @@
   window.startMatchCelebration = function () {
     _startCele.apply(this, arguments);
     const data = pendingCele || {};
+    const title = $('celeTitle');
+    const team = winningTeamIndex(data.winner);
+    if (title && team !== null) title.textContent = `${teamLabel(team)} Wins!`;
     nightRecap(data.winner, data.scores || [0, 0]);
   };
 

@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = 'consolidated-review-20261019';
+const APP_VERSION = 'consolidated-recap-review-20261019';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -185,16 +185,19 @@ let turnSoundChoice = Math.max(
 );
 let playLockUntil = 0;
 let knownVoids = [{}, {}, {}, {}]; // extreme bot: playerIdx -> {color: true}
-let matchStats = {
-  hands: 0,
-  highBid: 0,
-  setsA: 0,
-  setsB: 0,
-  madeA: 0,
-  madeB: 0,
-  bidSum: 0,
-  bidCount: 0,
-};
+function freshMatchStats() {
+  return {
+    hands: 0,
+    highBid: 0,
+    setsA: 0,
+    setsB: 0,
+    madeA: 0,
+    madeB: 0,
+    bidSum: 0,
+    bidCount: 0,
+  };
+}
+let matchStats = freshMatchStats();
 // Per-seat stats for the current match — tracked for every seat, human or bot,
 // so the stats page can show a real breakdown instead of just team totals.
 function freshPlayerStat() {
@@ -7746,7 +7749,9 @@ function hostStartGame() {
     if (ldw) layDownWinningCards = ldw.checked !== false;
   } catch (e) {}
   handHistory = [];
+  matchStats = freshMatchStats();
   resetPlayerStats();
+  pendingCele = null;
   recentTricks = [];
   matchTricks = [];
   lastCompletedTrick = null;
@@ -12893,8 +12898,7 @@ function pickHighlightTricks(winnerLabel) {
   const team = winningTeamIndex(winnerLabel);
   let pool = (matchTricks || []).slice();
   if (team === 0 || team === 1) {
-    const fromWinners = pool.filter((t) => t.team === team);
-    if (fromWinners.length) pool = fromWinners;
+    pool = pool.filter((t) => t.team === team);
   }
   pool.sort((a, b) => {
     const pd = (b.points || 0) - (a.points || 0);
@@ -12955,7 +12959,7 @@ function startMatchCelebration() {
   if (sub) {
     const scoreTxt = `Final A ${scores[0]} – B ${scores[1]}`;
     sub.textContent = highlights.length
-      ? `${scoreTxt} · ${highlights.length === 1 ? 'Biggest trick' : 'Two biggest tricks'} from the winning side`
+      ? `${scoreTxt} · ${highlights.length === 1 ? 'Biggest trick' : 'Two biggest tricks'} ${winner === 'Tie' ? 'of the match' : 'from the winning side'}`
       : scoreTxt;
   }
   page.classList.remove('hidden');

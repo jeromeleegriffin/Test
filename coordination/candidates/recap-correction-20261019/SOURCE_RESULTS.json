@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "baseCommit": "b4ee4fa8a11b6bc58be145b062b80ec87f58afa4",
+  "changedRuntimeFiles": [
+    "game060.js",
+    "polish.js",
+    "sw060.js",
+    "index.html",
+    "hor-version.js"
+  ],
+  "retainedAssetAndCssFilesByteIdentical": 1423,
+  "regressionFixture": "tools/check-recap.cjs",
+  "sourceCheck": "65 scripts, 4568 bindings, 1455 precache paths and all format checks pass",
+  "noRulesAiCareerCoreChanges": true,
+  "liveDeployed": false
+}
