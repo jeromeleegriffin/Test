@@ -1,0 +1,30 @@
+{
+  "filename": "House_Effects_845_Production_Checkpoint.zip",
+  "bytes": 205312863,
+  "sha256": "08dd77a6c27411f75cf2752661a89c940ca56c22b28a3dc06d2aa911b268fd03",
+  "library_file_id": "libfile_93edbc7d3b1c8191ac1e03c4629a6023",
+  "entries": 1743,
+  "baseline845_unchanged_files": 1642,
+  "crc": "PASS",
+  "included_hashes": "PASS",
+  "logic_checks": 9,
+  "logic_environment": "Node synthetic DOM/canvas/media; not actual browser",
+  "rgba_assets": 7,
+  "audio_sequences": 3,
+  "browser_verified": false,
+  "actual_screenshots_included": false,
+  "owner_approved": false,
+  "integration_ready": false,
+  "deployed": false,
+  "current_brain": "AF unchanged",
+  "documentation_commit": "a7fdee9a44ef56660844d8003592dd7c53c31fa0",
+  "outstanding": [
+    "Raven body/head continuity",
+    "Common Raven call provenance if required",
+    "Subjective sound approval",
+    "Actual browser portrait and landscape collision/playback/rotation tests",
+    "Actual screenshots",
+    "Original ZIP Loader compatibility",
+    "Full uninterrupted historical reading"
+  ]
+}
