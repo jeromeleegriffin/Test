@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = 'consolidated-recap-review-20261019';
+const APP_VERSION = '846-join-review-20261019';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -3956,6 +3956,12 @@ function joinRoom() {
   window._horNoServiceStop = false;
   isSoloPractice = false;
   myName = ($('hor-player-name').value || '').trim() || 'Player';
+  // An explicit lobby join starts a new handshake. A saved flag from an
+  // earlier table must not hide the seating UI; live reconnects keep it.
+  if (!horClientIsPlaying()) {
+    horMarkActiveTable(false);
+    window._horStayInGame = false;
+  }
   roomCode = code;
   isHost = false;
   joinInProgress = true;
@@ -4017,6 +4023,7 @@ function joinRoom() {
     } catch (_) {}
     if (peer === joinPeer) peer = null;
     joinInProgress = false;
+    horLobbyCancel043 = null;
     setJoinStatus(message);
   };
   horLobbyCancel043 = () => {
@@ -4078,6 +4085,16 @@ function joinRoom() {
       });
       horJoinConn = conn;
       hostConnection = conn;
+      conn.__horJoinAccepted844 = () => {
+        if (!currentConnection()) return;
+        joined = finished = true;
+        clearTimers();
+        joinInProgress = false;
+        horLobbyCancel043 = null;
+      };
+      conn.__horJoinRejected844 = (message) => {
+        if (currentConnection()) finishFailure(message);
+      };
       setupConn(conn);
     } catch (e) {
       queueRetry();
@@ -4104,17 +4121,24 @@ function joinRoom() {
         pendingWelcomeSeat <= 3
       )
         joinMsg.preferredSeat = pendingWelcomeSeat;
-      if (!horNetSendRaw(conn, joinMsg)) {
+      // Use the normal envelope, including this room's saved resume credential.
+      if (!horNetSend(conn, joinMsg)) {
         finishFailure(
           'Connection opened but the join message could not be sent. Please try again.'
         );
         return;
       }
-      joined = finished = true;
-      clearTimers();
-      joinInProgress = false;
-      horLobbyCancel043 = null;
-      setJoinStatus('Connected. Waiting for the host…');
+      // A data channel is not host admission. Keep ownership and a bounded
+      // wait until handleMessage successfully applies the matching welcome.
+      if (!currentConnection()) return;
+      setJoinStatus('Connected. Confirming your place at the table…');
+      clearTimeout(joinTimer);
+      joinTimer = setTimeout(() => {
+        if (currentConnection())
+          finishFailure(
+            'The host did not confirm your join. Keep the host screen open and try again.'
+          );
+      }, 10000);
     });
     conn.on('error', () => {
       if (currentConnection()) queueRetry();
@@ -4360,6 +4384,9 @@ function setupConn(conn) {
     return horNetSend(conn, msg);
   };
   conn.on('data', (data) => {
+    // Late packets from an abandoned attempt must not navigate or overwrite
+    // the replacement connection's table.
+    if (!isHost && hostConnection !== conn) return;
     horDebugLog((isHost ? 'HOST' : 'CLIENT') + ': data received, type=' + (data && data.type));
     horLastHostSeenAt = Date.now();
     if (conn && conn.peer) horPeerLastSeen[conn.peer] = Date.now();
@@ -4371,6 +4398,7 @@ function setupConn(conn) {
     }
   });
   conn.on('error', (err) => {
+    if (!isHost && hostConnection !== conn) return;
     console.error('Data connection error:', err);
     horDebugLog(
       (isHost ? 'HOST' : 'CLIENT') +
@@ -4387,6 +4415,7 @@ function setupConn(conn) {
     }
   });
   conn.on('close', () => {
+    if (!isHost && hostConnection !== conn) return;
     horDebugLog(
       (isHost ? 'HOST' : 'CLIENT') + ': connection closed, remote peer=' + (conn && conn.peer)
     );
@@ -4689,7 +4718,11 @@ function handleMessage(data, conn) {
             },
           });
           try {
-            conn.send({ type: 'players', players: publicPlayersSnapshot(), beerSeats });
+            conn.send({
+              type: 'players',
+              players: publicPlayersSnapshot(),
+              beerSeats,
+            });
           } catch (e) {}
           break;
         }
@@ -4759,14 +4792,20 @@ function handleMessage(data, conn) {
               if (horExpOn('spectatorLateJoin')) {
                 data.spectator = true;
               } else {
-                conn.send({ type: 'error', message: 'Room full — join as spectator instead' });
+                conn.send({
+                  type: 'error',
+                  message: 'Room full — join as spectator instead',
+                });
                 return;
               }
             }
           } else if (horExpOn('spectatorLateJoin')) {
             data.spectator = true;
           } else {
-            conn.send({ type: 'error', message: 'Room full — join as spectator instead' });
+            conn.send({
+              type: 'error',
+              message: 'Room full — join as spectator instead',
+            });
             return;
           }
         }
@@ -4818,7 +4857,11 @@ function handleMessage(data, conn) {
           // Stay standing until they pick an open chair or a bot. Do not
           // auto-assign a seat — already seated humans must keep showing
           // in the chairs they claimed.
-          broadcast({ type: 'players', players: publicPlayersSnapshot(), beerSeats });
+          broadcast({
+            type: 'players',
+            players: publicPlayersSnapshot(),
+            beerSeats,
+          });
           updateWaitingUI();
         }
         conn.send({
@@ -4837,7 +4880,11 @@ function handleMessage(data, conn) {
           },
         });
         try {
-          conn.send({ type: 'players', players: publicPlayersSnapshot(), beerSeats });
+          conn.send({
+            type: 'players',
+            players: publicPlayersSnapshot(),
+            beerSeats,
+          });
         } catch (e) {}
         break;
 
@@ -4846,7 +4893,11 @@ function handleMessage(data, conn) {
         if (p && !p.isBot) {
           p.careerPublic = data.profile && data.profile.enabled ? data.profile : null;
           broadcast({ type: 'careerProfile', id: p.id, profile: p.careerPublic }, p.id);
-          broadcast({ type: 'players', players: publicPlayersSnapshot(), beerSeats });
+          broadcast({
+            type: 'players',
+            players: publicPlayersSnapshot(),
+            beerSeats,
+          });
         }
         break;
       }
@@ -4916,12 +4967,20 @@ function handleMessage(data, conn) {
         break;
       case 'peekTable':
         try {
-          conn.send({ type: 'players', players: publicPlayersSnapshot(), beerSeats });
+          conn.send({
+            type: 'players',
+            players: publicPlayersSnapshot(),
+            beerSeats,
+          });
         } catch (e) {}
         break;
       case 'newHostReady':
         window._horHandoffTarget844 = null;
-        broadcast({ type: 'switchHost', roomCode: data.roomCode, hostName: data.hostName });
+        broadcast({
+          type: 'switchHost',
+          roomCode: data.roomCode,
+          hostName: data.hostName,
+        });
         setTimeout(() => {
           try {
             horFollowNewHost(data.roomCode);
@@ -4960,6 +5019,7 @@ function handleMessage(data, conn) {
         }
         break;
       case 'welcome':
+        if (data.yourId !== myPeerId) return;
         horDebugLog(
           'CLIENT: welcome received, yourId=' +
             data.yourId +
@@ -4969,6 +5029,10 @@ function handleMessage(data, conn) {
             data.hostVersion
         );
         if (data.hostVersion && data.hostVersion !== APP_VERSION) {
+          if (conn && conn.__horJoinRejected844)
+            conn.__horJoinRejected844(
+              'The two devices are running different game versions. Reopen both sites and try again.'
+            );
           const s = $('lobbyStatus');
           const weAreStale = horVersionNum(APP_VERSION) < horVersionNum(data.hostVersion);
           if (weAreStale) {
@@ -5051,9 +5115,14 @@ function handleMessage(data, conn) {
         try {
           horFlushOutbox();
         } catch (e) {}
+        if (conn && conn.__horJoinAccepted844) conn.__horJoinAccepted844();
         break;
 
       case 'versionMismatch': {
+        if (conn && conn.__horJoinRejected844)
+          conn.__horJoinRejected844(
+            'The two devices are running different game versions. Reopen both sites and try again.'
+          );
         const s = $('lobbyStatus');
         // Only refresh ourselves if we're actually the stale side. If the
         // host already told us it's the one that's outdated (hostIsStale),
@@ -5078,6 +5147,10 @@ function handleMessage(data, conn) {
       }
 
       case 'error':
+        if (conn && conn.__horJoinRejected844)
+          conn.__horJoinRejected844(
+            data.message || 'The host could not accept your join. Please try again.'
+          );
         alert(data.message);
         break;
       case 'gameStart':
@@ -5372,6 +5445,7 @@ function handleMessage(data, conn) {
         if (data.summary) {
           if (game && data.summary.careerEvent?.matchId)
             game.careerMatchId = data.summary.careerEvent.matchId;
+          window.HOREndHandEffectsV12?.prepare();
           if (data.summary.careerEvent) horRecordCareerHand(data.summary.careerEvent);
           // Clients may still be watching the bounded nest capture.
           const stillNest = document.getElementById('ghNestAnim');
@@ -11542,7 +11616,6 @@ function hostProcessPlay(data) {
     game.lastTrickWinner = winner.player;
     broadcastState();
 
-    window.HOREndHandEffectsV12?.captureTrick(game.trick);
     // Give players a short, deliberate pause to see the winning trick before
     // the celebration overlay/fanfare starts.
     const resolvingGame = game,
@@ -11670,7 +11743,9 @@ function nestCardMarkup(card) {
 
 /** Show nest capture overlay for ~3s, then fade. Returns hold time in ms (0 if skipped). */
 function showNestCaptureAnimation(winnerName, nestCards, pts) {
-  if (nestLastTrickAnim === false) return 0;
+  // The House effect replaces the legacy nest overlay and its blocking hold.
+  // Actual nest cards and points remain available on the scoreboard.
+  if (nestLastTrickAnim === false || window.HOREndHandEffectsV12) return 0;
   const cards = Array.isArray(nestCards) ? nestCards.filter(Boolean) : [];
   const HOLD_MS = solScaledDelay(3200, 0);
   const FADE_MS = solScaledDelay(500, 0);
@@ -11726,14 +11801,8 @@ function showNestCaptureAnimation(winnerName, nestCards, pts) {
         },
         solScaledDelay(650 + i * 65, 100)
       );
-      setTimeout(
-        () => {
-          try {
-            if (typeof playCardSound === 'function') playCardSound();
-          } catch (_) {}
-        },
-        solScaledDelay(i * 65, 0)
-      );
+      // Silent end-of-hand nest reveal: stacking six ordinary card cues made a burst.
+
     });
     setTimeout(() => {
       try {
@@ -12057,6 +12126,7 @@ function hostEndHand() {
           : null,
     summary: { pointsA, pointsB, bid: game.bid, made, trump: game.trump, scores: [...game.scores] },
   };
+  window.HOREndHandEffectsV12?.prepare();
   horRecordCareerHand(summary.careerEvent);
   const finishToScore = () => {
     broadcast({
@@ -12106,12 +12176,10 @@ function presentCompletedHandV12(summary) {
     event?.hand || handHistory.length,
     ...(summary.scores || []),
   ].join(':');
-  const latest = summary.lastTricks?.find((trick) => trick.plays?.length === 4);
   if (window.HOREndHandEffectsV12) {
     try {
       window.HOREndHandEffectsV12.play({
         key,
-        cards: latest?.plays || [],
         onReveal: reveal,
         onComplete: complete,
         reduced: reduceMotion || matchMedia('(prefers-reduced-motion: reduce)').matches,

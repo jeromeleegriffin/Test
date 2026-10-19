@@ -2,8 +2,8 @@
  * Author: Jerome Griffin
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
-const BUILD = 'consolidated-recap-review-20261019';
-const CACHE = 'house-of-rooks-consolidated-recap-review-20261019';
+const BUILD = '846-join-review-20261019';
+const CACHE = 'house-of-rooks-846-join-review-20261019';
 // Current dependency paths only; cacheLookup handles version query strings.
 const SHELL = [
   './end-hand-effects-v12.js',
@@ -16,7 +16,6 @@ const SHELL = [
   './assets/end-hand-v12/audio/V11_CARD_SOUND_PROVENANCE.txt',
   './assets/end-hand-v12/audio/raven.wav',
   './assets/end-hand-v12/audio/seal.wav',
-  './assets/end-hand-v12/audio/trick.wav',
   './assets/end-hand-v12/griffin/griffin-seal-master.png',
   './assets/end-hand-v12/raven/pose-registration.json',
   './assets/end-hand-v12/raven/raven-down.png',

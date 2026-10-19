@@ -1,0 +1,23 @@
+{
+  "source": "join-review-game/game060.js",
+  "passed": 16,
+  "tests": [
+    "fresh join, stale=false, invite screen=false",
+    "fresh join, stale=false, invite screen=true",
+    "fresh join, stale=true, invite screen=false",
+    "fresh join, stale=true, invite screen=true",
+    "silent host times out, releases attempt, ignores late welcome and permits retry",
+    "double tap does not destroy handshake",
+    "cancellation ignores queued and late packets",
+    "wrong recipient welcome does not count as admission",
+    "preferred partner seat appears identically at both ends",
+    "spectator admission does not claim a seat",
+    "in-game welcome preserves screen, cards and active flags",
+    "new peer uses saved credential to reclaim exact seat and hand",
+    "host rejection releases join immediately",
+    "transport never opens: bounded retries release the join",
+    "version rejection cancels acknowledgement wait",
+    "abandoned transport cannot apply data or trigger reconnect"
+  ],
+  "scope": "Actual application functions in two VM clients; deterministic transport, time and presentation substitutes. Not real WAN or physical Android."
+}

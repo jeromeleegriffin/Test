@@ -1,16 +1,15 @@
-/* Owner-supplied v12 presentation, adapted to the current game's real trick data. */
+/* Owner-approved Griffin Seal and Raven Flight presentations. Final Trick removed at owner request. */
 (function () {
   'use strict';
   const ROOT = 'assets/end-hand-v12/';
   const titles = {
     seal: 'The Griffin Seal',
     raven: 'The Raven’s Flight',
-    trick: 'The Final Trick',
   };
   let bag = [];
   let previous = null;
   let active = null;
-  let captured = [];
+  let pending = 0;
   const deferred = new Set();
   const seen = new Set();
   const clamp = (v) => Math.max(0, Math.min(1, v));
@@ -20,8 +19,8 @@
   };
   function next() {
     if (!bag.length) {
-      bag = ['seal', 'raven', 'trick'];
-      for (let i = 2; i > 0; i--) {
+      bag = ['seal', 'raven'];
+      for (let i = bag.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [bag[i], bag[j]] = [bag[j], bag[i]];
       }
@@ -29,24 +28,6 @@
     }
     previous = bag.shift();
     return previous;
-  }
-  function captureTrick(plays) {
-    captured = (plays || []).map((play) => {
-      const candidates = [
-        ...document.querySelectorAll(
-          '#trickArea .card-face, #ltTrick .card-face, .angle-c-played .card-face'
-        ),
-      ];
-      const face = candidates.find(
-        (el) => el.dataset.id === play.card?.id && el.getBoundingClientRect().width > 0
-      );
-      const rect = face?.getBoundingClientRect();
-      return {
-        id: play.card?.id,
-        x: rect ? (rect.left + rect.width / 2) / innerWidth : null,
-        y: rect ? (rect.top + rect.height / 2) / innerHeight : null,
-      };
-    });
   }
   function safeRect() {
     if (window.HORAngleC?.active()) {
@@ -91,9 +72,27 @@
       }
     });
   }
+  function clearPending() {
+    clearTimeout(pending);
+    pending = 0;
+  }
+  function prepare() {
+    if (active) return;
+    clearPending();
+    // Career awards are recorded before the nest hold ends. Reserve their
+    // presentation now so they cannot sound before the House effect starts.
+    pending = setTimeout(() => {
+      pending = 0;
+      release();
+    }, 6500);
+  }
   function stop(complete = false) {
+    clearPending();
     const job = active;
-    if (!job) return;
+    if (!job) {
+      release();
+      return;
+    }
     active = null;
     cancelAnimationFrame(job.raf);
     clearTimeout(job.deadline);
@@ -114,8 +113,12 @@
       release();
     }
   }
-  function play({ key, cards, onReveal, onComplete, reduced = false }) {
-    if (seen.has(key)) return false;
+  function play({ key, onReveal, onComplete, reduced = false }) {
+    clearPending();
+    if (seen.has(key)) {
+      if (!active) release();
+      return false;
+    }
     if (active) stop(true);
     seen.add(key);
     if (seen.size > 128) seen.delete(seen.values().next().value);
@@ -124,29 +127,15 @@
     root.id = 'endHandEffectsV12';
     root.dataset.effect = kind;
     root.innerHTML =
-      '<div class="end-hand-v12-stage"><div class="end-hand-v12-glow"></div><div class="end-hand-v12-cards"></div></div><button type="button" class="end-hand-v12-skip">Skip effect</button><span class="end-hand-v12-status" role="status"></span>';
+      '<div class="end-hand-v12-stage"><div class="end-hand-v12-glow"></div></div><button type="button" class="end-hand-v12-skip">Skip effect</button><span class="end-hand-v12-status" role="status"></span>';
     const stage = root.querySelector('.end-hand-v12-stage');
     const glow = root.querySelector('.end-hand-v12-glow');
-    const pile = root.querySelector('.end-hand-v12-cards');
     const art = image(
       kind === 'raven' ? 'raven/raven-mid.png' : 'griffin/griffin-seal-master.png',
       'end-hand-v12-art ' + kind
     );
-    if (kind !== 'trick') stage.appendChild(art);
+    stage.appendChild(art);
     root.querySelector('[role="status"]').textContent = titles[kind];
-    const faces =
-      kind === 'trick' && cards?.length === 4
-        ? cards.map((entry) => {
-            const face = document.createElement('div');
-            face.className = 'end-hand-v12-card card-face';
-            face.dataset.cardId = entry.card.id;
-            face.innerHTML = typeof cardInnerHTML === 'function' ? cardInnerHTML(entry.card) : '';
-            pile.appendChild(face);
-            return face;
-          })
-        : [];
-    // A claim without four recorded cards gets no invented sample trick.
-    root.dataset.realCards = String(faces.length);
     document.body.appendChild(root);
     document.body.classList.add('end-hand-v12-running');
     const job = {
@@ -191,7 +180,7 @@
         height: r.h + 'px',
       });
       glow.style.opacity = String(
-        (kind === 'seal' ? 0.5 : kind === 'trick' ? 0.25 : 0.12) * visible
+        (kind === 'seal' ? 0.5 : 0.12) * visible
       );
       art.style.opacity = String(visible);
       if (kind === 'seal')
@@ -206,18 +195,6 @@
           ? 'none'
           : `translateX(${(ease - 0.5) * 22}%) translateY(${-Math.sin(t * Math.PI) * 8}%) scale(${0.82 + 0.14 * ease})`;
       }
-      const gather = reduced ? 1 : smooth((ms - 180) / 1110);
-      faces.forEach((face, i) => {
-        const old = captured.find((p) => p.id === cards[i].card.id);
-        const targetX = r.x + r.w / 2 + (i - 1.5) * 18;
-        const targetY = r.y + r.h / 2 + (i - 1.5) * -4;
-        const dx = old?.x != null ? old.x * innerWidth - targetX : 0;
-        const dy = old?.y != null ? old.y * innerHeight - targetY : 0;
-        face.style.opacity = String(visible);
-        face.style.left = r.w / 2 + (i - 1.5) * 18 + 'px';
-        face.style.top = r.h / 2 + (i - 1.5) * -4 + 'px';
-        face.style.transform = `translate(-50%,-50%) translate(${dx * (1 - gather)}px,${dy * (1 - gather)}px) rotate(${(i - 1.5) * 6}deg)`;
-      });
       if (ms >= 2150 && !job.revealed) {
         job.revealed = true;
         onReveal();
@@ -236,11 +213,11 @@
     return true;
   }
   window.HOREndHandEffectsV12 = {
-    captureTrick,
+    prepare,
     play,
     cancel: () => stop(),
     deferCelebration(fn) {
-      if (!active) return false;
+      if (!active && !pending) return false;
       deferred.add(fn);
       return true;
     },

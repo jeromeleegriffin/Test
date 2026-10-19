@@ -39,29 +39,6 @@
   border-radius: 50%;
   background: radial-gradient(ellipse, #e9b95588 0%, #d3a45122 38%, transparent 72%);
 }
-#endHandEffectsV12 .end-hand-v12-card {
-  position: absolute;
-  width: 18% !important;
-  height: auto !important;
-  margin: 0 !important;
-  aspect-ratio: 580 / 840;
-  filter: drop-shadow(1px 4px 4px #0008);
-}
-#endHandEffectsV12 .end-hand-v12-cards {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-#endHandEffectsV12 .end-hand-v12-card img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-#endHandEffectsV12 .end-hand-v12-card .c-stack {
-  width: 100%;
-  height: 100%;
-}
 #endHandEffectsV12 .end-hand-v12-skip {
   position: absolute;
   right: max(12px, env(safe-area-inset-right));
