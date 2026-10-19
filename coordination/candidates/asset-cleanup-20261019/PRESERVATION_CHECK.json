@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "removedFiles": 113,
+  "removedBytes": 39054806,
+  "protectedRemainingFilesByteEqual": 1366,
+  "allRootCssFilesByteEqual": 46,
+  "rootJsSyntaxChecked": 64,
+  "precachePaths": 1439,
+  "browserMatchesCompleted": 0,
+  "deliveryBlockedUntilFiveCompleteMatches": true,
+  "runtimeCommit": "23e4c5d165a397f860bd2a16c91fac93e5740b39",
+  "sourceCiRun": 39202779134,
+  "sourceCiConclusion": "success",
+  "zipLoaderInlineSyntax": "PASS"
+}

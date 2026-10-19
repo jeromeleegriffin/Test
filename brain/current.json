@@ -1252,5 +1252,28 @@
       ],
       "deployed": false
     }
+  },
+  "pendingAssetCleanup": {
+    "status": "STAGED_ZIP_HELD_BROWSER_APPROVAL_BLOCKED_FIVE_MATCHES_PENDING",
+    "branch": "candidate/asset-cleanup-20261019",
+    "sourceCommit": "9a2b28eaa3817b8c18d36ee3c3a96b532f57bc7a",
+    "runtimeCommit": "23e4c5d165a397f860bd2a16c91fac93e5740b39",
+    "runtime": "asset-cleanup-review-20261019",
+    "filesRemoved": 113,
+    "uncompressedBytesRemoved": 39054806,
+    "zipFilename": "Griffin_House_Cleaned_Review_20261019.zip",
+    "zipSha256": "382f8c753f93572c74b44d322182dd3a2c7055f90b5ef7515346fda01e61e27c",
+    "zipBytes": 156852259,
+    "requiredCompleteMatches": 5,
+    "completedMatches": 0,
+    "sourceCiRun": 39202779134,
+    "sourceCiConclusion": "success",
+    "deployed": false,
+    "gameZipDelivered": false,
+    "buildNumberReserved": false,
+    "handoff": "candidates/asset-cleanup-20261019/COMPREHENSIVE_HANDOFF.txt",
+    "evidence": "../coordination/candidates/asset-cleanup-20261019",
+    "ownerPortraitConcern": "Unresolved; no resizing or CSS changes permitted/applied in this cleanup",
+    "parallelHouseEffectsWork": "Separate workstream; do not import or overwrite from unrelated review ZIPs"
   }
 }
