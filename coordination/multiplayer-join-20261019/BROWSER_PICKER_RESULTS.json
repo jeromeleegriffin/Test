@@ -1,0 +1,803 @@
+{
+  "testedCommit": "3c8599441806bfffab10d9a6ab054c2b15002617",
+  "initialSweep": [
+    {
+      "size": "393 × 740",
+      "pages": [
+        {
+          "errors": [],
+          "names": [
+            "Barrel",
+            "Ash",
+            "June",
+            "Claire",
+            "Hearth",
+            "Anchor"
+          ],
+          "page": "Page 1 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Rita",
+            "Crow",
+            "Blaze",
+            "Nix",
+            "Titan",
+            "Pike"
+          ],
+          "page": "Page 2 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Drift",
+            "Wager",
+            "Hollow",
+            "Ember",
+            "Vex",
+            "Frost"
+          ],
+          "page": "Page 3 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Fang",
+            "Halo",
+            "Quill",
+            "Bramble",
+            "Moss",
+            "Cinder"
+          ],
+          "page": "Page 4 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Gable",
+            "Thistle",
+            "Marrow",
+            "Pebble",
+            "Rookery",
+            "Sable"
+          ],
+          "page": "Page 5 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Finch",
+            "Dagger",
+            "Willow",
+            "Grit",
+            "Copper",
+            "Moth"
+          ],
+          "page": "Page 6 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Brandy",
+            "Flint",
+            "Ivy",
+            "Shade",
+            "Spark",
+            "Nettle"
+          ],
+          "page": "Page 7 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Cobalt",
+            "Harrier",
+            "Tess",
+            "Marcus",
+            "Owen",
+            "Daniel"
+          ],
+          "page": "Page 8 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Sofia",
+            "Rafael",
+            "Samir",
+            "Jerome"
+          ],
+          "page": "Page 9 of 9",
+          "total": 52
+        }
+      ]
+    },
+    {
+      "size": "320 × 568",
+      "pages": [
+        {
+          "errors": [],
+          "names": [
+            "Barrel",
+            "Ash",
+            "June",
+            "Claire"
+          ],
+          "page": "Page 1 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Hearth",
+            "Anchor",
+            "Rita",
+            "Crow"
+          ],
+          "page": "Page 2 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Blaze",
+            "Nix",
+            "Titan",
+            "Pike"
+          ],
+          "page": "Page 3 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Drift",
+            "Wager",
+            "Hollow",
+            "Ember"
+          ],
+          "page": "Page 4 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Vex",
+            "Frost",
+            "Fang",
+            "Halo"
+          ],
+          "page": "Page 5 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Quill",
+            "Bramble",
+            "Moss",
+            "Cinder"
+          ],
+          "page": "Page 6 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Gable",
+            "Thistle",
+            "Marrow",
+            "Pebble"
+          ],
+          "page": "Page 7 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Rookery",
+            "Sable",
+            "Finch",
+            "Dagger"
+          ],
+          "page": "Page 8 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Willow",
+            "Grit",
+            "Copper",
+            "Moth"
+          ],
+          "page": "Page 9 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Brandy",
+            "Flint",
+            "Ivy",
+            "Shade"
+          ],
+          "page": "Page 10 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Spark",
+            "Nettle",
+            "Cobalt",
+            "Harrier"
+          ],
+          "page": "Page 11 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Tess",
+            "Marcus",
+            "Owen",
+            "Daniel"
+          ],
+          "page": "Page 12 of 13",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Sofia",
+            "Rafael",
+            "Samir",
+            "Jerome"
+          ],
+          "page": "Page 13 of 13",
+          "total": 52
+        }
+      ]
+    },
+    {
+      "size": "430 × 740",
+      "pages": [
+        {
+          "errors": [],
+          "names": [
+            "Barrel",
+            "Ash",
+            "June",
+            "Claire",
+            "Hearth",
+            "Anchor"
+          ],
+          "page": "Page 1 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Rita",
+            "Crow",
+            "Blaze",
+            "Nix",
+            "Titan",
+            "Pike"
+          ],
+          "page": "Page 2 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Drift",
+            "Wager",
+            "Hollow",
+            "Ember",
+            "Vex",
+            "Frost"
+          ],
+          "page": "Page 3 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Fang",
+            "Halo",
+            "Quill",
+            "Bramble",
+            "Moss",
+            "Cinder"
+          ],
+          "page": "Page 4 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Gable",
+            "Thistle",
+            "Marrow",
+            "Pebble",
+            "Rookery",
+            "Sable"
+          ],
+          "page": "Page 5 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Finch",
+            "Dagger",
+            "Willow",
+            "Grit",
+            "Copper",
+            "Moth"
+          ],
+          "page": "Page 6 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Brandy",
+            "Flint",
+            "Ivy",
+            "Shade",
+            "Spark",
+            "Nettle"
+          ],
+          "page": "Page 7 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Cobalt",
+            "Harrier",
+            "Tess",
+            "Marcus",
+            "Owen",
+            "Daniel"
+          ],
+          "page": "Page 8 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Sofia",
+            "Rafael",
+            "Samir",
+            "Jerome"
+          ],
+          "page": "Page 9 of 9",
+          "total": 52
+        }
+      ]
+    },
+    {
+      "size": "740 × 320",
+      "pages": [
+        {
+          "errors": [],
+          "names": [
+            "Barrel",
+            "Ash",
+            "June"
+          ],
+          "page": "Page 1 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Claire",
+            "Hearth",
+            "Anchor"
+          ],
+          "page": "Page 2 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Rita",
+            "Crow",
+            "Blaze"
+          ],
+          "page": "Page 3 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Nix",
+            "Titan",
+            "Pike"
+          ],
+          "page": "Page 4 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Drift",
+            "Wager",
+            "Hollow"
+          ],
+          "page": "Page 5 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Ember",
+            "Vex",
+            "Frost"
+          ],
+          "page": "Page 6 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Fang",
+            "Halo",
+            "Quill"
+          ],
+          "page": "Page 7 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Bramble",
+            "Moss",
+            "Cinder"
+          ],
+          "page": "Page 8 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Gable",
+            "Thistle",
+            "Marrow"
+          ],
+          "page": "Page 9 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Pebble",
+            "Rookery",
+            "Sable"
+          ],
+          "page": "Page 10 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Finch",
+            "Dagger",
+            "Willow"
+          ],
+          "page": "Page 11 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Grit",
+            "Copper",
+            "Moth"
+          ],
+          "page": "Page 12 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Brandy",
+            "Flint",
+            "Ivy"
+          ],
+          "page": "Page 13 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Shade",
+            "Spark",
+            "Nettle"
+          ],
+          "page": "Page 14 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Cobalt",
+            "Harrier",
+            "Tess"
+          ],
+          "page": "Page 15 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Marcus",
+            "Owen",
+            "Daniel"
+          ],
+          "page": "Page 16 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Sofia",
+            "Rafael",
+            "Samir"
+          ],
+          "page": "Page 17 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Jerome"
+          ],
+          "page": "Page 18 of 18",
+          "total": 52
+        }
+      ]
+    },
+    {
+      "size": "768 × 900",
+      "pages": [
+        {
+          "errors": [],
+          "names": [
+            "Barrel",
+            "Ash",
+            "June"
+          ],
+          "page": "Page 1 of 18",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Rita",
+            "Crow",
+            "Blaze",
+            "Nix",
+            "Titan",
+            "Pike"
+          ],
+          "page": "Page 2 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Drift",
+            "Wager",
+            "Hollow",
+            "Ember",
+            "Vex",
+            "Frost"
+          ],
+          "page": "Page 3 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Fang",
+            "Halo",
+            "Quill",
+            "Bramble",
+            "Moss",
+            "Cinder"
+          ],
+          "page": "Page 4 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Gable",
+            "Thistle",
+            "Marrow",
+            "Pebble",
+            "Rookery",
+            "Sable"
+          ],
+          "page": "Page 5 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Finch",
+            "Dagger",
+            "Willow",
+            "Grit",
+            "Copper",
+            "Moth"
+          ],
+          "page": "Page 6 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Brandy",
+            "Flint",
+            "Ivy",
+            "Shade",
+            "Spark",
+            "Nettle"
+          ],
+          "page": "Page 7 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Cobalt",
+            "Harrier",
+            "Tess",
+            "Marcus",
+            "Owen",
+            "Daniel"
+          ],
+          "page": "Page 8 of 9",
+          "total": 52
+        },
+        {
+          "errors": [],
+          "names": [
+            "Sofia",
+            "Rafael",
+            "Samir",
+            "Jerome"
+          ],
+          "page": "Page 9 of 9",
+          "total": 52
+        }
+      ]
+    }
+  ],
+  "tabletSettledRetry": [
+    {
+      "names": [
+        "Barrel",
+        "Ash",
+        "June",
+        "Claire",
+        "Hearth",
+        "Anchor"
+      ],
+      "overflow": false,
+      "page": "Page 1 of 9"
+    },
+    {
+      "names": [
+        "Rita",
+        "Crow",
+        "Blaze",
+        "Nix",
+        "Titan",
+        "Pike"
+      ],
+      "overflow": false,
+      "page": "Page 2 of 9"
+    },
+    {
+      "names": [
+        "Drift",
+        "Wager",
+        "Hollow",
+        "Ember",
+        "Vex",
+        "Frost"
+      ],
+      "overflow": false,
+      "page": "Page 3 of 9"
+    },
+    {
+      "names": [
+        "Fang",
+        "Halo",
+        "Quill",
+        "Bramble",
+        "Moss",
+        "Cinder"
+      ],
+      "overflow": false,
+      "page": "Page 4 of 9"
+    },
+    {
+      "names": [
+        "Gable",
+        "Thistle",
+        "Marrow",
+        "Pebble",
+        "Rookery",
+        "Sable"
+      ],
+      "overflow": false,
+      "page": "Page 5 of 9"
+    },
+    {
+      "names": [
+        "Finch",
+        "Dagger",
+        "Willow",
+        "Grit",
+        "Copper",
+        "Moth"
+      ],
+      "overflow": false,
+      "page": "Page 6 of 9"
+    },
+    {
+      "names": [
+        "Brandy",
+        "Flint",
+        "Ivy",
+        "Shade",
+        "Spark",
+        "Nettle"
+      ],
+      "overflow": false,
+      "page": "Page 7 of 9"
+    },
+    {
+      "names": [
+        "Cobalt",
+        "Harrier",
+        "Tess",
+        "Marcus",
+        "Owen",
+        "Daniel"
+      ],
+      "overflow": false,
+      "page": "Page 8 of 9"
+    },
+    {
+      "names": [
+        "Sofia",
+        "Rafael",
+        "Samir",
+        "Jerome"
+      ],
+      "overflow": false,
+      "page": "Page 9 of 9"
+    }
+  ],
+  "emptySearchObserved": true,
+  "namedSearchAndMossSelectionObserved": true
+}
