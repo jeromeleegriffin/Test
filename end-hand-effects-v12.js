@@ -138,7 +138,7 @@
       kind === 'trick' && cards?.length === 4
         ? cards.map((entry) => {
             const face = document.createElement('div');
-            face.className = 'end-hand-v12-card';
+            face.className = 'end-hand-v12-card card-face';
             face.dataset.cardId = entry.card.id;
             face.innerHTML = typeof cardInnerHTML === 'function' ? cardInnerHTML(entry.card) : '';
             pile.appendChild(face);

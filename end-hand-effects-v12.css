@@ -2,19 +2,21 @@
 #endHandEffectsV12 {
   position: fixed;
   inset: 0;
-  z-index: 2147482100;
+  z-index: 2147483644;
   pointer-events: none;
   overflow: hidden;
 }
 #endHandEffectsV12 .end-hand-v12-stage {
   position: absolute;
   isolation: isolate;
+  z-index: 1;
 }
 #endHandEffectsV12 .end-hand-v12-art {
   position: absolute;
   object-fit: contain;
   max-width: none;
   pointer-events: none;
+  z-index: 2;
 }
 #endHandEffectsV12 .seal {
   width: 45%;
@@ -39,9 +41,16 @@
 }
 #endHandEffectsV12 .end-hand-v12-card {
   position: absolute;
-  width: 18%;
+  width: 18% !important;
+  height: auto !important;
+  margin: 0 !important;
   aspect-ratio: 580 / 840;
   filter: drop-shadow(1px 4px 4px #0008);
+}
+#endHandEffectsV12 .end-hand-v12-cards {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 }
 #endHandEffectsV12 .end-hand-v12-card img {
   display: block;
