@@ -1,0 +1,118 @@
+{
+  "scope": "Local deployed RoomService with structured-clone storage adapter; not Cloudflare or rendered browser",
+  "matches": 10,
+  "actions": 2094,
+  "rejoins": 364,
+  "reports": [
+    {
+      "humans": 2,
+      "bots": 2,
+      "run": 0,
+      "hands": 5,
+      "steps": 120,
+      "scores": [
+        25,
+        620
+      ]
+    },
+    {
+      "humans": 2,
+      "bots": 2,
+      "run": 1,
+      "hands": 4,
+      "steps": 94,
+      "scores": [
+        140,
+        510
+      ]
+    },
+    {
+      "humans": 2,
+      "bots": 2,
+      "run": 2,
+      "hands": 5,
+      "steps": 121,
+      "scores": [
+        680,
+        320
+      ]
+    },
+    {
+      "humans": 2,
+      "bots": 2,
+      "run": 3,
+      "hands": 4,
+      "steps": 96,
+      "scores": [
+        105,
+        510
+      ]
+    },
+    {
+      "humans": 2,
+      "bots": 2,
+      "run": 4,
+      "hands": 5,
+      "steps": 118,
+      "scores": [
+        175,
+        605
+      ]
+    },
+    {
+      "humans": 4,
+      "bots": 0,
+      "run": 0,
+      "hands": 5,
+      "steps": 235,
+      "scores": [
+        480,
+        520
+      ]
+    },
+    {
+      "humans": 4,
+      "bots": 0,
+      "run": 1,
+      "hands": 8,
+      "steps": 377,
+      "scores": [
+        420,
+        510
+      ]
+    },
+    {
+      "humans": 4,
+      "bots": 0,
+      "run": 2,
+      "hands": 6,
+      "steps": 285,
+      "scores": [
+        175,
+        510
+      ]
+    },
+    {
+      "humans": 4,
+      "bots": 0,
+      "run": 3,
+      "hands": 8,
+      "steps": 376,
+      "scores": [
+        250,
+        580
+      ]
+    },
+    {
+      "humans": 4,
+      "bots": 0,
+      "run": 4,
+      "hands": 6,
+      "steps": 282,
+      "scores": [
+        575,
+        200
+      ]
+    }
+  ]
+}
