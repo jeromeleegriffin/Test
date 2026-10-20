@@ -3,7 +3,7 @@ import {applyBid,createMatch,finishHand,RoomService,safeOptions,makeDeck} from '
 const checks=[];const test=(name,f)=>{f();checks.push({name,pass:true})};
 test('Negative score Moon is allowed',()=>{const input={phase:'bidding',currentPlayer:0,scores:[-195,150]};const r=applyBid(input,0,200,{scores:input.scores});assert(r.accepted);assert(r.state.shotTheMoon);});
 test('Non-five and stale turn bids rejected',()=>{assert(!applyBid({phase:'bidding',currentPlayer:0},0,101).accepted);assert(!applyBid({phase:'bidding',currentPlayer:0},1,100).accepted)});
-test('Target bounds and boolean options validated',()=>{assert.deepEqual(safeOptions({targetScore:2000,includeRed2:false,revealTopNest:false}),{targetScore:2000,includeRed2:false,revealTopNest:false});assert.throws(()=>safeOptions({targetScore:2001}));assert.throws(()=>safeOptions({includeRed2:'false'}));});
+test('Target bounds and boolean options validated',()=>{assert.deepEqual(safeOptions({targetScore:2000,includeRed2:false,revealTopNest:false}),{targetScore:2000,includeRed2:false,revealTopNest:false});assert.equal(safeOptions({targetScore:1}).targetScore,1);assert.throws(()=>safeOptions({targetScore:0}));assert.throws(()=>safeOptions({targetScore:2001}));assert.throws(()=>safeOptions({includeRed2:'false'}));});
 test('Moon takes every counter, permits zero-counter lost trick and wins from negative',()=>{
  const seats=Array.from({length:4},(_,i)=>({playerId:'p'+i,name:'P'+i}));const state=createMatch(seats);const deck=makeDeck();const zero=deck.find(c=>c.id==='green-6');
  const r=finishHand({...state,phase:'play',bidder:0,bid:200,shotTheMoon:true,scores:[-100,0],trump:'green',nestCards:[],tricksTaken:[deck.filter(c=>c!==zero),[zero]]},0);

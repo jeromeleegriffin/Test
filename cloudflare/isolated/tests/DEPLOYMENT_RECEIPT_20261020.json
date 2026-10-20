@@ -1,0 +1,45 @@
+{
+  "sourceMatches": true,
+  "deployment": {
+    "id": "6c8da6df-5b51-4915-a991-f46a851f7523",
+    "source": "api",
+    "strategy": "percentage",
+    "author_email": "jeromeleegriffin@gmail.com",
+    "annotations": {
+      "workers/message": "Preserve native custom-target range 1–2000; n...",
+      "workers/triggered_by": "upload"
+    },
+    "versions": [
+      {
+        "version_id": "e765eb3e-2fe7-4444-be27-701d6e731cbf",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-20T02:43:55.88812Z"
+  },
+  "settings": {
+    "placement": {},
+    "compatibility_date": "2026-10-14",
+    "compatibility_flags": [],
+    "usage_model": "standard",
+    "tags": [],
+    "tail_consumers": [],
+    "logpush": false,
+    "annotations": {
+      "workers/message": "Preserve native custom-target range 1–2000; no frontend or reducer changes",
+      "workers/triggered_by": "upload"
+    },
+    "bindings": [
+      {
+        "class_name": "RoomDO",
+        "name": "ROOMS",
+        "namespace_id": "5b0de759387647e2b07361c360fa89ff",
+        "type": "durable_object_namespace"
+      },
+      {
+        "name": "TEST_GATE_KEY",
+        "type": "secret_text"
+      }
+    ]
+  }
+}

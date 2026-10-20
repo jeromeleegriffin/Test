@@ -1,0 +1,36 @@
+{
+  "base": "https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev",
+  "scope": "Actual isolated Cloudflare RoomDO, HTTP and real Node WebSocket clients over the environment verified TLS proxy",
+  "reports": [
+    {
+      "humans": 2,
+      "bots": 2,
+      "run": 0,
+      "hands": 1,
+      "actions": 22,
+      "rejoins": 2,
+      "socketReconnects": 2,
+      "scores": [
+        145,
+        55
+      ],
+      "final": "Team A",
+      "webSocketMessages": 36
+    },
+    {
+      "humans": 4,
+      "bots": 0,
+      "run": 0,
+      "hands": 1,
+      "actions": 46,
+      "rejoins": 6,
+      "socketReconnects": 4,
+      "scores": [
+        100,
+        100
+      ],
+      "final": "Tie",
+      "webSocketMessages": 204
+    }
+  ]
+}
