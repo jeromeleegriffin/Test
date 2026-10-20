@@ -1,0 +1,14 @@
+OWNER CORRECTION — SOLID CONSOLE CONNECTION / CENTERED TIME / FLASH CHECKS, R3
+Continue from R2. Do not restart, regenerate approved artwork or deploy.
+Owner 84628.jpg showed carpet/see-through material between live holder and console; owner requested removal of clock symbol and more time padding, then explicitly required real asset repairs rather than CSS tricks and verification of turn/win flashes. Previous visual-success claims do not establish acceptance of these defects.
+
+CAUSE / ASSET REPAIR
+The console crop's first 20 native rows included another photographed holder foot and carpet from the original reference, and a separate viewport gap exposed the live room carpet. Removed the baked holder/carpet pixels directly in the console PNG using its original walnut texture. Added a fully opaque 941x26 finished walnut PNG made from that same source and registered it between actual live holder and console. No CSS gradients, wood drawings, generated replacement art or masking/opaque overlay over the clock.
+Clock symbol removed directly in the console PNG using neighboring original enamel inside the existing left recess. Outer frame and everything outside the two documented raster regions are pixel-identical to R2. Live time now uses the full left recess with centered text and more padding. Existing scoreboard row, cardholder, Bid Box, table, cards and avatar geometry are preserved.
+
+FLASH VERIFICATION
+Original holder-cues789 JS/CSS and holder assets remain byte-identical. Actual Moon hand played through native bid, six discards, trump, legal card taps, speed/Menu/Back/Last/fullscreen, scoring/next hand and offline reload/deal. Test only switched off the existing optional automatic laydown setting to require real trick play; shipped default/rules unchanged. Native turn and win lifecycle events and RAF opacity samples prove both asset flashes animate in actual play; turn screenshots also have measured front-face pixel brightness differences. Win events followed actual collection completion, with no synthetic winner/cue injection. Portrait flash is the existing complete straight center strip, with end caps/backrest at normal brightness.
+
+CURRENT FOUR PASSES
+console-r3/RESULTS.json: source region/pixel preservation; sixteen layouts with join coverage and time/score ink checks; one complete real 393px Moon hand plus actual cue evidence and offline reload/deal; five fresh orientation windows / 100 samples plus native fullscreen and animation traces. Prior R1/R2 six-hand/matrix/long-trace reports remain historical baseline evidence, not rerun claims for R3.
+Final exact ZIP is checked separately in the unchanged original Loader; checksum/receipt is kept in the isolated source coordination checkpoint. No remote push or deployment. Physical Android acceptance pending. Separate Cloudflare work remains separate.

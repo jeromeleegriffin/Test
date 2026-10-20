@@ -1,0 +1,52 @@
+{
+  "path": "/workspace/scratch/b2fab6afe9f4/artifacts/Griffin_House_Solid_Console_Centered_Time_Verified_Flashes_20261020_R3.zip",
+  "sha256": "ab1c4f56a12e6c70c9dc62f711a9b0a0f0c7933361c0cc62cac020c3bef47673",
+  "bytes": 383510120,
+  "files": 2006,
+  "crc": "PASS",
+  "allMemberHashes": "PASS",
+  "sourceCommit": "a7554968880f722d651c1cb4bc4a7838ffd15974",
+  "deployed": false,
+  "exactFinalLoader": {
+    "zip": "Griffin_House_Solid_Console_Centered_Time_Verified_Flashes_20261020_R3.zip",
+    "sha256": "ab1c4f56a12e6c70c9dc62f711a9b0a0f0c7933361c0cc62cac020c3bef47673",
+    "originalLoaderSha256": "ab52623d7b01dfe8317cf9655a6b05be52957860bcc94c98040aa06b3bd21d3c",
+    "errors": [],
+    "quick": true,
+    "actions": [
+      "Exact final ZIP: real Loader decompression, live artwork and real shuffle/deal to auction"
+    ],
+    "identity": "846-premium-owner-repair-20261020-r3",
+    "assetSizes": {
+      "plaque": 622,
+      "console": 941
+    },
+    "connectorAsset": {
+      "complete": true,
+      "width": 941,
+      "height": 26
+    },
+    "alignedRowBeforeFullscreen": {
+      "plaque": {
+        "y": 4,
+        "h": 29
+      },
+      "buttons": {
+        "y": 4,
+        "h": 29
+      }
+    },
+    "alignedRowFullscreen": {
+      "plaque": {
+        "y": 4,
+        "h": 29
+      },
+      "buttons": {
+        "y": 4,
+        "h": 29
+      }
+    },
+    "passed": true
+  },
+  "status": "FOUR_CHANGED_PATH_PASSES_NATIVE_TURN_AND_WIN_FLASHES_AND_EXACT_FINAL_LOADER_PASSED_NOT_DEPLOYED"
+}

@@ -1,0 +1,76 @@
+{
+  "build": "846-premium-owner-repair-20261020-r4",
+  "deployed": false,
+  "ownerAcceptance": "PHYSICAL_ANDROID_PENDING",
+  "ownerRequest": "Winning flash must happen right after the trick, not during following play. Prior R3 flash-existence checks did not establish acceptable timing.",
+  "passes": {
+    "1_asset_preservation": {
+      "passed": true,
+      "evidence": "PRESERVATION.json",
+      "allRasterAndSoundAssetsByteIdenticalToR3": true,
+      "flashCSSAndArtworkUnchanged": true,
+      "consoleClockAndScoreboardRepairsRetained": true
+    },
+    "2_registration": {
+      "passed": true,
+      "evidence": "registration/RESULTS.json",
+      "layouts": 16,
+      "scope": "Existing connector coverage, centered time, full edges, score row, extreme values and simulated safe area retained."
+    },
+    "3_real_play_and_timing": {
+      "passed": true,
+      "hands": [
+        {
+          "requestedPlayPace": "99",
+          "returnedToMaxAfterOneXWin": false,
+          "passed": true,
+          "timings": [
+            {
+              "key": "2||solo-qamxxcd:false|bot-1792483024697-0wxv:true|bot-1792483024708-ajpu:true|bot-1792483024711-yugo:true|12|black-8,black-5,black-6,black-13",
+              "delayMs": 0.3999999985098839,
+              "resolving": true,
+              "trickLength": 4,
+              "winner": 0,
+              "local": 0
+            }
+          ],
+          "offlineReloadAndDeal": true
+        },
+        {
+          "requestedPlayPace": "1",
+          "returnedToMaxAfterOneXWin": true,
+          "passed": true,
+          "timings": [
+            {
+              "resolutionToFlashMs": 65.5,
+              "key": "3||solo-nohgnl8:false|bot-1792483114629-23mf:true|bot-1792483114635-mgrv:true|bot-1792483114637-yhri:true|4|black-1,black-14,black-6,black-7",
+              "delayMs": 1.5999999977648258,
+              "resolving": true,
+              "trickLength": 4,
+              "winner": 0,
+              "local": 0
+            }
+          ],
+          "offlineReloadAndDeal": true
+        }
+      ],
+      "scope": "Two complete native UI Moon hands; MAX and a normal-speed winning-trick sample, then MAX remainder. Native winner detection, one pulse per won trick while resolving with all four cards still present. Turn cue still animates. No mocked winner or synthetic trigger. Speeds/Menu/Back/Last/fullscreen/scoring/next hand/offline deal checked.",
+      "evidence": [
+        "hand-99/",
+        "hand-1/"
+      ]
+    },
+    "4_temporal": {
+      "passed": true,
+      "evidence": "rotation/RESULTS.json",
+      "rotationWindows": 5,
+      "samples": 100,
+      "scope": "Rotation/menu returns plus native timing and opacity RAF traces during play. Collection callbacks are now no-ops and cannot queue/replay late flashes."
+    }
+  },
+  "limits": [
+    "Not deployed; physical Android acceptance pending.",
+    "Current changed-path checks are distinct from earlier R1/R2/R3 evidence.",
+    "No multiplayer, rule, table, avatar, Bid Box, raster material or flash design changes."
+  ]
+}

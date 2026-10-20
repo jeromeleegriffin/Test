@@ -37,6 +37,13 @@
   );
   clockConsole.hidden = true;
   document.body.appendChild(clockConsole);
+  const connector = make('img', 'houseHolderConsoleConnector1020', 'house-holder-console-connector');
+  connector.src = root + 'holder-console-walnut-connector.png';
+  connector.alt = '';
+  connector.setAttribute('aria-hidden', 'true');
+  connector.hidden = true;
+  connector.style.cssText = 'position:fixed;z-index:147;pointer-events:none;';
+  document.body.appendChild(connector);
   const topStage = make('div', 'houseTopSpeedStage1020', 'house-pace-stage');
   document.body.appendChild(topStage);
   const bottomStage = make('div', 'houseBottomSpeedFrame1020', 'house-pace-stage');
@@ -88,12 +95,19 @@
         )
     );
   const set = (node, prop, val) => node?.style.setProperty(prop, val, 'important');
-  const viewport = () => ({
-    x: vv?.offsetLeft || 0,
-    y: vv?.offsetTop || 0,
-    w: vv?.width || innerWidth,
-    h: vv?.height || innerHeight,
-  });
+  const viewport = () => {
+    const style = getComputedStyle(ui);
+    const top = parseFloat(style.paddingTop) || 0,
+      right = parseFloat(style.paddingRight) || 0,
+      bottom = parseFloat(style.paddingBottom) || 0,
+      left = parseFloat(style.paddingLeft) || 0;
+    return {
+      x: (vv?.offsetLeft || 0) + left,
+      y: (vv?.offsetTop || 0) + top,
+      w: (vv?.width || innerWidth) - left - right,
+      h: (vv?.height || innerHeight) - top - bottom,
+    };
+  };
   const status = () => {
     try {
       const g = typeof game === 'object' && game ? game : null;
@@ -179,13 +193,25 @@
       );
     }
   };
+  let premiumOwnsControls = false;
   function restoreOriginalControls() {
-    if (speed.parentElement !== speedHome) speedHome?.appendChild(speed);
-    if (last.parentElement !== lastHome) lastHome?.appendChild(last);
-    if (bar.parentElement !== barHome) barHome?.appendChild(bar);
+    // A game may launch directly in landscape before portrait ever owned it.
+    // Restore native labels/hidden state even on that first inactive pass.
+    fs.hidden = true;
     if (menu && menu.innerHTML !== originalMenu) menu.innerHTML = originalMenu;
     if (back && back.innerHTML !== originalBack) back.innerHTML = originalBack;
-    fs.hidden = true;
+    // Release once at the ownership boundary. Repeated inactive layout calls
+    // must not fight the existing landscape coordinator's viewport parent.
+    if (!premiumOwnsControls) return;
+    premiumOwnsControls = false;
+    if (speed.parentElement !== speedHome) speedHome?.appendChild(speed);
+    if (last.parentElement !== lastHome) lastHome?.appendChild(last);
+    for (const prop of ['left', 'right', 'top', 'bottom', 'transform', 'translate'])
+      bar.style.removeProperty(prop);
+    if (document.body.classList.contains('in-game')) {
+      // Native/maintained landscape code chooses its own parent and placement.
+      window.positionRailControls035?.(bar);
+    } else if (bar.parentElement !== barHome) barHome?.appendChild(bar);
   }
   function moveSpeed(host) {
     if (speed.parentNode !== host) host.appendChild(speed);
@@ -197,6 +223,7 @@
       matchMedia('(orientation:portrait)').matches &&
       !gid('game')?.classList.contains('hidden');
     ui.hidden = !active;
+    connector.hidden = true;
     if (!active) {
       clockConsole.hidden = true;
       topStage.style.display = 'none';
@@ -205,6 +232,7 @@
       restoreOriginalControls();
       return;
     }
+    premiumOwnsControls = true;
     fs.hidden = false;
     if (menu && menu.textContent) menu.textContent = '';
     if (back && back.textContent) back.textContent = '';
@@ -220,22 +248,24 @@
     const ico = Math.max(27, Math.min(34, Math.floor(w * 0.075))),
       gap = Math.max(3, Math.floor(w * 0.012));
     const iw = ico * 3 + gap * 2,
-      stepH = Math.max(25, Math.floor(w * 0.079)),
       paceW = Math.max(136, Math.min(176, w * 0.44));
-    const headerW = Math.round(allowPanel ? w - iw - 20 : w - paceW - 20);
+    const stepH = Math.round(paceW * 109 / 415);
+    // Owner correction: the plaque and utility buttons share one exact height/row.
+    // Register the visible 619x93 silhouette; its transparent canvas margins do not count as artwork.
+    const headerH = ico, headerW = headerH * 619 / 93;
     const xScore = Math.round(x + 7),
       yScore = Math.round(y + 4);
     plaque.style.left = xScore + 'px';
     plaque.style.top = yScore + 'px';
     plaque.style.width = headerW + 'px';
-    plaque.style.height = Math.round((headerW * 87) / 600) + 'px';
+    plaque.style.height = headerH.toFixed(2) + 'px';
     set(bar, '--house-tool-size', ico + 'px');
     set(bar, '--house-tool-gap', gap + 'px');
     set(bar, 'left', Math.round(full ? x + w - iw - 8 : x + w - iw - 8) + 'px');
     set(bar, 'right', 'auto');
-    set(bar, 'top', Math.round(allowPanel ? y + 4 : y + 5 + (headerW * 87) / 600 + 5) + 'px');
+    set(bar, 'top', yScore + 'px');
     set(bar, 'bottom', 'auto');
-    set(ui, 'height', Math.round(allowPanel ? 50 : 92) + 'px');
+    set(ui, 'height', Math.round(allowPanel ? headerH + 8 : headerH + stepH + 13) + 'px');
     clockConsole.hidden = !allowPanel;
     if (allowPanel) {
       const top = Math.max(hr.bottom + 3, y + h - panelH - 2);
@@ -243,21 +273,31 @@
       set(clockConsole, 'top', Math.round(top) + 'px');
       set(clockConsole, 'width', panelW + 'px');
       set(clockConsole, 'height', panelH + 'px');
+      // Opaque finished walnut asset joins the existing holder to the console.
+      // No CSS material or transparent photographic background between them.
+      const joinTop = Math.floor(hr.bottom) - 1;
+      connector.hidden = false;
+      set(connector, 'left', Math.round(x + (w - panelW) / 2) + 'px');
+      set(connector, 'top', joinTop + 'px');
+      set(connector, 'width', panelW + 'px');
+      set(connector, 'height', Math.ceil(top + panelH * 20 / 192 - joinTop + 1) + 'px');
       // The 3 balanced photographic recesses are fixed in the physical asset.
       bottomStage.style.display = 'flex';
       topStage.style.display = 'none';
       bottomStage.style.position = 'absolute';
-      bottomStage.style.left = '28.3%';
-      bottomStage.style.width = '42.7%';
-      bottomStage.style.top = '27%';
-      bottomStage.style.height = '43%';
+      bottomStage.style.left = (265 / 941 * 100) + '%';
+      bottomStage.style.width = (415 / 941 * 100) + '%';
+      bottomStage.style.top = (56 / 192 * 100) + '%';
+      bottomStage.style.height = (109 / 192 * 100) + '%';
+      // Console already contains the same complete physical frame.
+      bottomStage.classList.add('house-console-pace');
       moveSpeed(bottomStage);
     } else {
       clockConsole.hidden = true;
       bottomStage.style.display = 'none';
       topStage.style.display = 'flex';
       set(topStage, 'left', Math.round(x + w - paceW - 7) + 'px');
-      set(topStage, 'top', Math.round(y + 4) + 'px');
+      set(topStage, 'top', Math.round(yScore + headerH + 5) + 'px');
       set(topStage, 'width', Math.round(paceW) + 'px');
       set(topStage, 'height', Math.round(stepH) + 'px');
       moveSpeed(topStage);
@@ -268,7 +308,11 @@
     refresh();
     [scoreOutA, scoreOutB, clock].forEach(fitText);
     const noticeTop = Math.ceil(
-      Math.max(plaque.getBoundingClientRect().bottom, bar.getBoundingClientRect().bottom) + 8
+      Math.max(
+        plaque.getBoundingClientRect().bottom,
+        bar.getBoundingClientRect().bottom,
+        allowPanel ? 0 : topStage.getBoundingClientRect().bottom
+      ) + 8
     );
     document.body.style.setProperty('--house-premium-notice-top', noticeTop + 'px');
   }

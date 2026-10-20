@@ -1,0 +1,63 @@
+{
+  "build": "846-premium-owner-repair-20261020-r1",
+  "ownerStatus": "REPAIRED_BROWSER_REVIEW_PENDING_PHYSICAL_ANDROID_ACCEPTANCE",
+  "deployed": false,
+  "passes": {
+    "1_artwork_edges": {
+      "passed": true,
+      "evidence": "PASS1_PIXEL_PRESERVATION.json",
+      "visualReview": "FINAL_EDGES_AND_BUTTONS.png",
+      "completeOriginalReference": "authority/APPROVED_ORIGINAL.png",
+      "originalReferenceUnchanged": true
+    },
+    "2_registration": {
+      "passed": true,
+      "layouts": 16,
+      "evidence": "registration/RESULTS.json",
+      "longScores": [
+        "\u22122000",
+        "2000"
+      ],
+      "clock": "12:59 PM",
+      "inkWidthAndHeightMeasured": true,
+      "safeArea": "Resolved 24/20px inset simulation; native CDP emulation unsupported"
+    },
+    "3_real_game": {
+      "passed": true,
+      "fullHands": 6,
+      "sizes": [
+        360,
+        393,
+        430
+      ],
+      "modes": [
+        "browser",
+        "installed/fullscreen simulation"
+      ],
+      "deckCounterTotals": [
+        200,
+        210
+      ],
+      "moonConfirmed": true,
+      "objectiveSamples": 252,
+      "evidence": "SIX_HAND_MATRIX.json",
+      "loaderFullHand": true,
+      "loaderEvidence": "loader/RESULTS.json"
+    },
+    "4_temporal": {
+      "passed": true,
+      "settledWindows": 12,
+      "animationFrameSamples": 1006,
+      "evidence": "orientation-stress/393-installed-simulation-RAF_STABILITY.json",
+      "freshLandscapeWindows": 5,
+      "freshEvidence": "fresh-landscape/RESULTS.json"
+    }
+  },
+  "limits": [
+    "Physical Android/PWA acceptance remains pending; browser simulation is separate.",
+    "No deployment, live WAN/Cloudflare multiplayer certification, old-installed-cache migration or complete match audit.",
+    "Full hands and cold lobby offline reload/deal verified; every suspended/in-flight restore path is not certified.",
+    "Long extreme scores fit by shrinking live text inside the approved narrow number fields.",
+    "Original landscape LAST remains intentionally hidden; the recorded flashing controls were Menu/Leave."
+  ]
+}

@@ -1,0 +1,9 @@
+OWNER CORRECTION — SCOREBOARD ROW, R2
+Continue from R1, do not restart. No deployment.
+Owner rejected the scoreboard size in his 84623.jpg phone screenshot, then clarified: same size and exactly the same line as Full Screen, hamburger and Back. R1 visual-success statements do not establish acceptance of the scoreboard size.
+
+Repair: removed available-width sizing. The plaque now shares the utility button height and y coordinate. Its complete visible 619x93 silhouette is registered from the unchanged 622x100 approved PNG (transparent margins excluded); live score positions follow the same source coordinates. No raster pixels regenerated or altered. Browser fallback speed controls occupy the row below to preserve the aligned top row. Native landscape ownership/geometry retained.
+At 360/393/430 CSS px widths, all four top elements are respectively 27/29/32 px high at y=4 before safe-area offsets. Artwork proportions are preserved; the wide plaque remains wide enough for both teams.
+
+Current changed-path four-pass evidence: scoreboard-r2/RESULTS.json. The older six-hand and temporal reports remain historical R1 baseline evidence, not new R2 passes. Current registration: 16 layouts, exact top/height checks, extreme score/clock ink, simulated safe area. Current full 393px hand + native fullscreen + offline reload/deal; five rotation windows / 100 sampled frames with Menu overlays. Approved room/table/cards/avatars/Bid Box and engine rules unchanged. Physical Android acceptance pending.
+Previous complete R1 ZIP remains immutable. Do not deploy without explicit owner authorization.

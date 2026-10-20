@@ -1,0 +1,12 @@
+OWNER CORRECTION — IMMEDIATE TRICK-WIN FLASH, R4
+Continue from R3. No deployment. Owner reported winning flash delayed until following play/hand; this rejection supersedes R3 flash-success claims about acceptable timing. R3 tested existence/opacity, not immediate trigger placement.
+
+CAUSE / FIX
+holder-cues789 delayed the win cue until collection-end, collection-cleared or Raven-complete. That intentionally waited beyond authoritative winner resolution and could display over following play. Removed that queued/deferred trigger path. The unchanged artwork pulse now launches in the same holder refresh frame that sees phase=play, resolvingTrick=true, four played cards and lastTrickWinner equal to the human seat. The existing per-trick seenWins guard permits exactly one cue. Native collection still calls the compatibility captureWaiter hook, now a no-op; it cannot queue/replay another win. No capture, turn, Raven animation, scoring or speed timers changed. Existing reduced-motion treatment and human-turn flash remain.
+
+PRESERVATION
+Every raster and sound asset, all furniture geometry and holder cue CSS byte-identical to R3. Solid walnut connection, removed clock symbol/centered time, aligned scoreboard and prior crop fixes retained. Only holder-cues789.js plus four coherent build/cache identity files changed. game060.js differs only by marker. No game rules or user data/cache reset.
+
+VERIFICATION
+Current flash-r4/RESULTS.json records four affected passes. Native UI Moon hands verify MAX and normal-speed winning-trick timing (normal-speed sample then MAX for the rest), one pulse per won trick, resolving state with all four cards still present at launch, turn pulse, complete scoring/next hand, controls, fullscreen and offline reload/deal. Normal-speed test separately timestamps the original sync entry carrying the authoritative winner; no game state/winner/cue is synthesized. Current registration repeats sixteen layouts and long ink values; five fresh rotation/menu windows and play RAF traces verify stability. Historical R1/R2/R3 reports are baseline history, not owner acceptance. Final exact ZIP checked in unchanged original Loader; receipt kept in isolated source coordination.
+No remote push/deployment. Physical Android acceptance remains pending. Keep separate Cloudflare work separate.

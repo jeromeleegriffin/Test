@@ -1,0 +1,170 @@
+{
+  "uiRuntimeCommit": "0a97e40a17e5d2a3eff834a0ccdc4e2f26e5d708",
+  "uiReceiptCommit": "fb39e226163a77dde2f20a5d56742018c16e420d",
+  "uiSourceBranch": "work/premium-ui-owner-repair-20261020",
+  "sharedNativeBaseline": "b3f3928548bc79df5169165b953e458cc68ddc09",
+  "onlineBranch": "work/cloudflare-846-native-adapter-20261019",
+  "onlineLastInspectedCommit": "9b2258f632041fb7263586d1fe37dce26792844d",
+  "onlineCurrentCodeCommit": "6a6e88d163831d6fbcc6d9785c0d6a461eba0526",
+  "noDeployment": true,
+  "runtimeFilesChangedFromSharedBaseline": {
+    "asset-loading772.js": {
+      "bytes": 13211,
+      "sha256": "69aec912bfb717493b644e68608f054e7cf02d3e8324b5b0e4f627c021eac92f"
+    },
+    "assets/house-premium-console/ASSET_PROVENANCE.json": {
+      "bytes": 5894,
+      "sha256": "1a1128ba816d3dbaf330cfa06c9ecccc6fb80e37b78c510419b3d2058cd3225f"
+    },
+    "assets/house-premium-console/clock-enamel-inset.png": {
+      "bytes": 2913,
+      "sha256": "93323d83919f41bb4c13200c5764ff5d33551a86e527bdadaa906236a75858dc"
+    },
+    "assets/house-premium-console/goal-enamel-inset.png": {
+      "bytes": 3564,
+      "sha256": "5de28e3807b041e23138005de48d6dcea741bd58c7458d1aa86f22d1b90b526f"
+    },
+    "assets/house-premium-console/holder-console-walnut-connector.png": {
+      "bytes": 26916,
+      "sha256": "ac94f84bdd64113be2e0b54e93b698dd43f8b9cbc84e7ab5a5c8759061b38f7e"
+    },
+    "assets/house-premium-console/score-number-inset.png": {
+      "bytes": 153,
+      "sha256": "f32427fb6225deb27117568a112ccc3ed541ec9bc9d0e86df124f517392d2e20"
+    },
+    "assets/house-premium-console/speed-frame-photo.png": {
+      "bytes": 27861,
+      "sha256": "973b22ecf6d544c715759b12a4beb0305017be93bd2f78d28e16a751a6d2c738"
+    },
+    "assets/house-premium-console/speed-selected-photo.png": {
+      "bytes": 7938,
+      "sha256": "bfca78a6fe5f545c3d9e768c3e8576661203ac0715f31dbb2bffb6da4479c39e"
+    },
+    "assets/house-premium-console/speed-unselected-photo.png": {
+      "bytes": 5111,
+      "sha256": "f0b61afc5878c38634237e929ebc0577000fce9e69234eb0f1dc275a0bbf98b8"
+    },
+    "assets/house-premium-console/top-match-plaque.png": {
+      "bytes": 91469,
+      "sha256": "d51e6fd5cc381b6a748d16e2fff7f570917f780ef9cafbeccb876683571a3c03"
+    },
+    "assets/house-premium-console/utility-back.png": {
+      "bytes": 11537,
+      "sha256": "424d330379d7d6ca2c2965dac9e7f1161b055c29ff1476ccaf4ea5f5b169f18a"
+    },
+    "assets/house-premium-console/utility-fullscreen.png": {
+      "bytes": 11020,
+      "sha256": "ef0d48e0ce24d359b0f5691132b01ebf964f3280ea29bf5eb11fe3c780cbb067"
+    },
+    "assets/house-premium-console/utility-menu.png": {
+      "bytes": 10894,
+      "sha256": "cbbcc9fead53b495a7159d5567dff7290577b0f4d52d7bfbdce484f3641e68fc"
+    },
+    "assets/house-premium-console/walnut-console-live-fields.png": {
+      "bytes": 175419,
+      "sha256": "644a257378a2b001c8335d1a74c56d5b6423a3ef23427cb699f81f264454a78b"
+    },
+    "fullscreen-portrait-review.css": {
+      "bytes": 515,
+      "sha256": "083478541fc477ecb5d0d64659028f1654a13d91a336763b1cfa29447eddab8e"
+    },
+    "fullscreen-portrait-review.js": {
+      "bytes": 2857,
+      "sha256": "3e04a248b0d11d7c8433cf755bc0934c63aded899be39db2124a55c35f7deee5"
+    },
+    "game060.js": {
+      "bytes": 653561,
+      "sha256": "959098476e55641a219bbce7f59c6cfdebc9f6f11953578376914a681534bc45"
+    },
+    "holder-cues789.js": {
+      "bytes": 9275,
+      "sha256": "1faa9d592fae867c73bc738e71d87d29d783e4fc6c4f4940b9b12e4ce5145c1d"
+    },
+    "hor-version.js": {
+      "bytes": 1392,
+      "sha256": "563118bcb5fb633e115101aa3cfe1f8d3e204e27c468f5e4c8d6fd2b3966d907"
+    },
+    "house-premium-ui.css": {
+      "bytes": 10237,
+      "sha256": "625547f3ef55cba6b3a35271d4c693bbee4a9180c3161ef7bc3e7741de816f39"
+    },
+    "house-premium-ui.js": {
+      "bytes": 16777,
+      "sha256": "ccdb26420a91b504ce0cb5149a9e36249132c0fd8e89cb28113be6c6c6b5bfaf"
+    },
+    "index.html": {
+      "bytes": 109477,
+      "sha256": "2db1d0e135c69c6c80e055aa1d6f811f75700c717f80e8d3912eaa0bb6781d82"
+    },
+    "progression.js": {
+      "bytes": 46252,
+      "sha256": "dbbbde1cf8b83ee89e0e8e6eff5e114e3842182401879039288ab62cb64790bc"
+    },
+    "sw060.js": {
+      "bytes": 70583,
+      "sha256": "3e3bb5c3ef5976d4e12b6135fe2c058c298a1452292541cf3a04436901b16fbe"
+    }
+  },
+  "r4Archive": {
+    "path": "/workspace/scratch/b2fab6afe9f4/artifacts/Griffin_House_Immediate_Trick_Win_Flash_Complete_Game_20261020_R4.zip",
+    "sha256": "d9883684ccb5b7b6b30a5b83a10f5edcb05503e52eeb5865991f8a646232c996",
+    "bytes": 415622447,
+    "files": 2096,
+    "crc": "PASS",
+    "allMemberHashes": "PASS",
+    "sourceCommit": "0a97e40a17e5d2a3eff834a0ccdc4e2f26e5d708",
+    "deployed": false,
+    "exactFinalLoader": {
+      "zip": "Griffin_House_Immediate_Trick_Win_Flash_Complete_Game_20261020_R4.zip",
+      "sha256": "d9883684ccb5b7b6b30a5b83a10f5edcb05503e52eeb5865991f8a646232c996",
+      "originalLoaderSha256": "ab52623d7b01dfe8317cf9655a6b05be52957860bcc94c98040aa06b3bd21d3c",
+      "errors": [],
+      "quick": true,
+      "actions": [
+        "Exact final ZIP: real Loader decompression, live artwork and real shuffle/deal to auction"
+      ],
+      "identity": "846-premium-owner-repair-20261020-r4",
+      "assetSizes": {
+        "plaque": 622,
+        "console": 941
+      },
+      "connectorAsset": {
+        "complete": true,
+        "width": 941,
+        "height": 26
+      },
+      "alignedRowBeforeFullscreen": {
+        "plaque": {
+          "y": 4,
+          "h": 29
+        },
+        "buttons": {
+          "y": 4,
+          "h": 29
+        }
+      },
+      "alignedRowFullscreen": {
+        "plaque": {
+          "y": 4,
+          "h": 29
+        },
+        "buttons": {
+          "y": 4,
+          "h": 29
+        }
+      },
+      "passed": true
+    },
+    "status": "IMMEDIATE_WIN_TIMING_TWO_REAL_HANDS_FOUR_CHANGED_PATH_PASSES_AND_EXACT_FINAL_LOADER_PASSED_NOT_DEPLOYED"
+  },
+  "r4LibraryFileId": "libfile_307eb24be414819187e0b0f3441e6fda",
+  "runtimeOnlyCompressedBytes": 164670000,
+  "currentZipVerificationCompressedBytes": 250610000,
+  "publicationAuthorization": {
+    "owner": "Jerome Griffin",
+    "at": "2026-10-20T04:28:16-04:00",
+    "scope": "Publish exact UI source and coordination note to isolated GitHub branch, no deployment",
+    "quote": "Yes, we gotta get all this combined."
+  },
+  "publicationStatus": "AUTHORIZED_PUBLICATION_PENDING"
+}

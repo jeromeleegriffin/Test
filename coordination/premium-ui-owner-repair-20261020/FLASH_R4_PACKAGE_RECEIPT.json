@@ -1,0 +1,52 @@
+{
+  "path": "/workspace/scratch/b2fab6afe9f4/artifacts/Griffin_House_Immediate_Trick_Win_Flash_Complete_Game_20261020_R4.zip",
+  "sha256": "d9883684ccb5b7b6b30a5b83a10f5edcb05503e52eeb5865991f8a646232c996",
+  "bytes": 415622447,
+  "files": 2096,
+  "crc": "PASS",
+  "allMemberHashes": "PASS",
+  "sourceCommit": "0a97e40a17e5d2a3eff834a0ccdc4e2f26e5d708",
+  "deployed": false,
+  "exactFinalLoader": {
+    "zip": "Griffin_House_Immediate_Trick_Win_Flash_Complete_Game_20261020_R4.zip",
+    "sha256": "d9883684ccb5b7b6b30a5b83a10f5edcb05503e52eeb5865991f8a646232c996",
+    "originalLoaderSha256": "ab52623d7b01dfe8317cf9655a6b05be52957860bcc94c98040aa06b3bd21d3c",
+    "errors": [],
+    "quick": true,
+    "actions": [
+      "Exact final ZIP: real Loader decompression, live artwork and real shuffle/deal to auction"
+    ],
+    "identity": "846-premium-owner-repair-20261020-r4",
+    "assetSizes": {
+      "plaque": 622,
+      "console": 941
+    },
+    "connectorAsset": {
+      "complete": true,
+      "width": 941,
+      "height": 26
+    },
+    "alignedRowBeforeFullscreen": {
+      "plaque": {
+        "y": 4,
+        "h": 29
+      },
+      "buttons": {
+        "y": 4,
+        "h": 29
+      }
+    },
+    "alignedRowFullscreen": {
+      "plaque": {
+        "y": 4,
+        "h": 29
+      },
+      "buttons": {
+        "y": 4,
+        "h": 29
+      }
+    },
+    "passed": true
+  },
+  "status": "IMMEDIATE_WIN_TIMING_TWO_REAL_HANDS_FOUR_CHANGED_PATH_PASSES_AND_EXACT_FINAL_LOADER_PASSED_NOT_DEPLOYED"
+}

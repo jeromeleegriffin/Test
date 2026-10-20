@@ -6,6 +6,9 @@
 #housePremiumHud1020 .hidden {
   display: none !important;
 }
+#horRailFullscreenReview[hidden] {
+  display: none !important;
+}
 @media (orientation: portrait) {
   body.in-game #matchHeader706 {
     visibility: hidden !important;
@@ -22,6 +25,8 @@
     height: 86px;
     overflow: visible;
     box-sizing: border-box;
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+      env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
   }
   body.in-game #housePremiumHud1020 .house-premium-match {
     position: absolute;
@@ -30,20 +35,22 @@
     height: auto;
     pointer-events: none;
     display: block;
-    aspect-ratio: 600/87;
+    aspect-ratio: 619/93;
   }
   body.in-game #housePremiumHud1020 .house-premium-match img {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    /* Original PNG canvas is 622x100; visible alpha bounds are (2,4)-(621,97). */
+    left: calc(-2 / 619 * 100%);
+    top: calc(-4 / 93 * 100%);
+    width: calc(622 / 619 * 100%);
+    height: calc(100 / 93 * 100%);
     display: block;
   }
   body.in-game #housePremiumHud1020 .house-premium-match .house-score-number {
     position: absolute;
-    top: 33%;
-    width: 12%;
-    height: 49%;
+    top: calc(19 / 93 * 100%);
+    width: calc(65.932 / 619 * 100%);
+    height: calc(58 / 93 * 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,15 +60,14 @@
       serif;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
-    background: url('assets/house-premium-console/score-number-inset.png') center/100% 100%
-      no-repeat;
+    background: none;
     text-shadow: 0 1px 2px #000;
   }
   body.in-game #housePremiumHud1020 .house-score-a {
-    left: 37.9%;
+    left: calc(231.872 / 619 * 100%);
   }
   body.in-game #housePremiumHud1020 .house-score-b {
-    left: 86.9%;
+    left: calc(527.322 / 619 * 100%);
   }
   body.in-game .in-game-leave.house-utility-group {
     position: fixed !important;
@@ -145,18 +151,21 @@
     pointer-events: none;
     background: url('assets/house-premium-console/speed-frame-photo.png') center/100% 100% no-repeat;
   }
+  body.in-game .house-pace-stage.house-console-pace {
+    background: none;
+  }
   body.in-game #scoreSpeed701.house-premium-speed {
     display: flex !important;
     position: absolute !important;
-    left: 0 !important;
+    left: 3.1325% !important;
     right: auto !important;
-    top: 0 !important;
+    top: 14.6789% !important;
     bottom: auto !important;
     flex: 0 0 75% !important;
-    width: 75% !important;
-    height: 100% !important;
+    width: 69.3976% !important;
+    height: 66.055% !important;
     min-width: 0 !important;
-    max-width: 75% !important;
+    max-width: 69.3976% !important;
     align-items: stretch !important;
     gap: 0 !important;
     margin: 0 !important;
@@ -207,13 +216,13 @@
   }
   body.in-game #portraitLastTrickButton.house-premium-last {
     position: absolute !important;
-    left: 75% !important;
+    left: 72.5301% !important;
     right: auto !important;
-    top: 0 !important;
+    top: 14.6789% !important;
     bottom: auto !important;
     flex: 0 0 25% !important;
-    width: 25% !important;
-    height: 100% !important;
+    width: 23.1325% !important;
+    height: 66.055% !important;
     min-width: 0 !important;
     max-width: none !important;
   }
@@ -269,20 +278,19 @@
     text-shadow: 0 1px 2px #000;
   }
   body.in-game #housePremiumConsole1020 .house-clock-zone {
-    left: 11.7%;
-    width: 11.9%;
-    top: 33%;
-    height: 33%;
-    background: url('assets/house-premium-console/clock-enamel-inset.png') center/100% 100%
-      no-repeat;
+    left: calc(35 / 941 * 100%);
+    width: calc(192 / 941 * 100%);
+    top: 35%;
+    height: 42%;
+    background: none;
     white-space: nowrap;
   }
   body.in-game #housePremiumConsole1020 .house-goal-zone {
-    left: 75.2%;
-    width: 19%;
-    top: 22%;
-    height: 47%;
-    background: url('assets/house-premium-console/goal-enamel-inset.png') center/100% 100% no-repeat;
+    left: 77%;
+    width: 19.2%;
+    top: 34.5%;
+    height: 43%;
+    background: none;
     flex-direction: column;
     gap: 1px;
   }

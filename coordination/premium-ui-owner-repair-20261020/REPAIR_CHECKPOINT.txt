@@ -1,0 +1,107 @@
+GRIFFIN HOUSE OF ROOKS — OWNER-REJECTION REPAIR CHECKPOINT
+Build: 846-premium-owner-repair-20261020-r1
+Continue, do not restart. No deployment. Browser review candidate; physical Android acceptance pending.
+
+SOURCE AND AUTHORITY
+Recovered complete RC3 SHA256 7871a34fe45f622798d1f024e0fd2c650f9ca9c8dba2063323fa26f89fb1dc0c.
+Tested RC3 runtime b94fca0a97378d7215b62fb1c263ae1966a1f48e; documentation branch head 4102da9caeb29c729b9cbb46264fe66b6bcdd50a.
+Maintained gameplay 92872799e09a92a9093346345219f6e743e1295f. Test/main verified a10cf91d27a9e1b9fa9cf82129c307a4462b11ad.
+Separate Cloudflare branch advanced independently from 233cac40cc21b3d1b3b7e848f7a5fd0cb837f3ac to ba04a625e8a6ee7990b52276d85a7d30160a257e during this work; neither merged nor changed. Test/main and premium review branch remained unchanged on final remote recheck.
+Rollback: original immutable REJECTED_RC3_COMPLETE.zip and rollback/premium-ui-pre-integration-20261020 at a10cf91d27a9e1b9fa9cf82129c307a4462b11ad.
+Original approved composition remains authority; original reference SHA256 ba614af1e8d5b7d233e61e30e8a5e0fc6d4e19452a2e19ef4eaab96fbaeb397b.
+Earlier positive visual claims were superseded by Jerome's rejection. They never establish acceptance of this repair.
+
+DEFECT LEDGER — REPRODUCED / CAUSE / REPAIR / EVIDENCE
+1. Cut utility rims: source PNGs themselves were truncated (69x76 / 76x76 / 83x78). Recovered complete 86x86 crops from the exact approved image. Opaque source pixels unchanged. PASS1_PIXEL_PRESERVATION.json; final rendered edges.
+2. Broken score plaque: undersized source crop and opaque score-number overlay crossed lower edge. Recovered full 622x100 silhouette, cloned adjacent original texture over sample numerals in the base, removed runtime opaque backing. Original emblems/materials retained.
+3. Broken speed surround/unequal visible selection: truncated 414x91 frame plus full-height button art over the surrounding rim. Recovered full 415x109 surround and equal 96x72 face crops; controls occupy the measured interior. All 1x/3x/MAX/LAST selected states inspected.
+4. Pasted clock/objective: original live-fields PNG already contained misregistered patches and exposed sample words; separate runtime insets worsened it. Recovered the continuous original console; cloned neighboring enamel/metal texture only over sample text; retained original clock and all frame pixels. Live text has no separate rectangular material backing. Source preservation verifies ZERO changed pixels outside live recesses.
+5. Landscape flashing: actual RC3 trace recorded 118 appendChild operations, including repeated restoreOriginalControls moves of navigation back into #game while native landscape moved it to body. Repair releases parent ownership once at the portrait boundary and delegates placement to maintained native code. No polling, RAF layout loop or broad observer added. Existing optional rail hook remains. Direct landscape launch also restores native labels/hidden fullscreen state before portrait ownership exists.
+6. LAST naming clarified: the owner recording shows Menu and Leave flashing. The original portrait LAST button is deliberately hidden in landscape. No landscape redesign or new LAST behavior was enabled.
+7. Stale bidding diagnosis: NOT reproduced as an owner play-state defect. The exposed card can be the nest preview. Actual phase/counters and engine-derived objectives were recorded together; no speculative engine change made.
+8. Pedestal/table spacing: table, holder, Bid Box, avatar and fullscreen rail-alignment geometry files remain byte-identical. No furniture distortion or unrelated layout change.
+
+PRESERVATION
+1507 inherited runtime members retained; 1492 byte-identical. Fifteen changed members: eight repaired PNGs, their provenance, two premium UI integration files and four coherent identity/cache entrypoints. game060.js differs ONLY in its build marker; original rail hook retained. Rules, X1/Sol7, EPA boundaries, sorting, bidding/Moon, nest/discard/trump, multiplayer, audio/House Effects, profiles/XP/achievements, startup-intent fix, table/room/cards/characters and original Loader preserved. Original archives/references never overwritten. No user data, browser storage or service workers cleared.
+
+FOUR DISTINCT VERIFICATION PASSES
+1. Native raster source inspection, original-vs-repaired pixel checks and enlarged real-game edge/selected-state inspection.
+2. Sixteen actual-game browser/installed layouts at 320x568,360x640,360x740,393x693,393x852,430x932,534x800,768x1024. No overlap/out-of-viewport edges; equal button geometry and visible faces; actual ink bounds for -2000/2000 and 12:59 PM, local clock comparison and simulated resolved safe insets. Native Android cutout behavior remains unverified.
+3. Six final exact-source complete UI hands at 360/393/430 browser/installed simulation. Actual bid/Moon confirmation, kitty, six discards, trump, legal card taps, all speeds, Last, menu/Back, fullscreen, scoring, Next Hand and worker-controlled offline cold-lobby reload/deal. Both bidder teams and 200/210-counter rules independently compared from actual captures. An additional complete human UI hand passed in the unchanged original ZIP Loader. All final runs had zero page errors.
+4. Twelve settled rotation/overlay windows with 1006 RAF samples, three native fullscreen round trips and subsequent real play/scoring. Five additional fresh-landscape/portrait windows verify direct-launch labels and native hidden LAST/fullscreen behavior. Original and repaired ownership traces and consecutive owner video frames retained.
+
+TEST FAILURES PRESERVED, NOT COUNTED AS PASSES
+Historical RC3 baseline reproduced. Initial runner used a wrong Pass selector; corrected to bidPassBtn. Canvas shorthand font was empty; corrected to explicit computed font components before ink assertions. A cold-start name-field probe ran while the real artwork loader was still at 55%; the final harness waits for initialRevealComplete and uses the actual available name control. Parallel runs timed out during scoring/offline follow-up; raw failures retained and exact final source rerun sequentially. Offline test deliberately leaves via the original confirmation; Leave performs a real navigation, so the final harness waits for that navigation and actual loader readiness before continuing. It does not assume every in-flight reload immediately returns to a visible lobby. Original Loader tests initially met real Tour and Kitty modal interception; harness now dismisses Tour and samples current phases before pace interaction. An additional random hand legitimately ended immediately by native winning-card laydown, so there was no completed trick for LAST history. The final 430px repetitions switched off the existing optional laydown setting in the test context to require actual trick play; shipped defaults and product rules were not changed. No product rule/timer workaround was added for harness failures.
+
+LIMITS AND NEXT STEP
+This is browser-tested repair evidence, NOT physical Android approval. No live deployment, complete match audit, WAN multiplayer/Cloudflare certification, exhaustive background/restore or old installed-cache migration claim. Keep separate Cloudflare work separate. Do not promote or deploy without fresh explicit owner approval. Future repairs start from this exact package/manifest; never regenerate the approved artwork or resurrect rejected crops. Run changed-path verification, preserve the failure ledger, and pass the complete permanent rules below forward verbatim.
+
+READING RECEIPT
+Read START_HERE_REPAIR_PROMPT.txt and FOUR_PASS_REPAIR_BRIEF.txt completely, original approved image, owner stills and consecutive recording frames, complete foundational H and chronological I–AF principal documents, operating/numbering and relevant coordination records. Current remote pointer remained AF. This is not a claim of rereading every unrelated binary attachment. Original historical A/B authority availability remains unchanged.
+
+
+PERMANENT SUCCESSOR RULES — PASS FORWARD VERBATIM
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+# PERMANENT UI VISUAL VERIFICATION RULE — Owner directive 2026-10-19
+
+**Scope:** Griffin House of Rooks, every future UI/UX/layout/visual change, every specialist, successor chat, work session, branch, review ZIP, and deployment. This rule is mandatory, not an optional suggestion.
+
+1. **The working screen wins.** Open and render the *actual modified game*, using its real artwork, cards, CSS, JavaScript, and UI at representative target device viewport dimensions. Never replace this with code inspection, syntax checks, generated mockups, or guessed geometry.
+2. **Personally inspect before delivery.** Take real rendered screenshots and inspect them for clipped, mismatched, oversized, misaligned, overlapping, hidden or unattractive controls and unintended changes to approved graphics. Inspect until satisfied with the real pixels. Capture at least portrait regular-browser and installed/fullscreen equivalents, with top/bottom browser toolbars where applicable, and small-screen sizes. Include landscape/tablet when the change can affect them.
+3. **Exercise the affected states.** For table controls, check bidding (including the Bid Box), active trick/card play, large score/race banner, menu, card hand, nest/discard, score/end-of-hand, selected speed states, and state transitions as applicable. Check that controls respond correctly and touch targets remain usable. Compare screenshots with owner-approved references and actual-pixels geometry.
+4. **Fix and retest.** Do not ship while the inspected UI still has obvious defects. Retake screenshots after each repair. Verify no unrelated approved feature, asset, gameplay behavior, or screen has regressed.
+5. **No unverified deliveries.** Before sending a ZIP/download or deploying UI changes, report which actual browser/viewport/device states were opened and visually checked, with screenshots/evidence and remaining limits. ZIP-integrity or JavaScript syntax success alone is NOT visual QA and cannot be described as a finished UI review.
+6. **Browser blocked? Stop, don't bluff.** If an actual visual test cannot be completed, do not call the UI finished, do not package it as owner-ready or recommend deployment; explain the blocker and work toward obtaining a valid preview/testing route. Clearly distinguish local emulator/browser visual verification from physical Android acceptance.
+7. **Owner approval follows verified visuals.** Do not silently overwrite approved artwork, change protected bid dock geometry, or deploy without authorization. Preserve rollback checkpoints.
+8. **Permanent handoff obligation.** Record this rule in the current Master Brain and every successor handoff/startup prompt, carrying it forward verbatim or with full meaning intact. Every future agent must read and obey it before any UI task.
+
+Reason: multiple October 19 portrait/fullscreen control ZIPs were delivered after only script/ZIP checks and revealed obvious scoreboard collisions, oversized and unequal controls, hidden utility icons, and missing lower-console elements during owner phone testing. The owner explicitly requires the assistant to catch these problems *before* asking the owner to download anything.
+
+**Authority:** Owner directive of 2026-10-19. Does not indicate that current candidate UI or live sites are verified.

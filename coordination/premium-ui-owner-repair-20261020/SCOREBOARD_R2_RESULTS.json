@@ -1,0 +1,39 @@
+{
+  "build": "846-premium-owner-repair-20261020-r2",
+  "deployed": false,
+  "ownerAcceptance": "PENDING_PHYSICAL_ANDROID_REVIEW",
+  "request": "Scoreboard same visible height and top/bottom line as Full Screen, Menu and Back. Prior R1 size claims superseded by owner rejection.",
+  "passes": {
+    "1_artwork": {
+      "passed": true,
+      "evidence": "PRESERVATION.json",
+      "allRasterAssetsByteIdenticalToR1": true,
+      "method": "Approved PNG alpha bounds (2,4)-(621,97) registered at native aspect ratio; transparent margins excluded from measured plaque box; no visible pixels cropped."
+    },
+    "2_registration": {
+      "passed": true,
+      "layouts": 16,
+      "evidence": "registration/RESULTS.json",
+      "sameHeightAndTopToleranceCSSpx": 0.05,
+      "longScoresAndClockInkChecked": true,
+      "safeArea": "24/20px CSS simulation; physical device remains pending"
+    },
+    "3_gameplay": {
+      "passed": true,
+      "evidence": "full-hand/",
+      "scope": "One fresh full 393px installed-simulation UI hand, actual fullscreen handler, speeds/Last/Menu/Back, scoring/next hand and offline reload/deal. Previous R1 six-hand matrix retained as historical baseline; not claimed rerun for R2."
+    },
+    "4_temporal": {
+      "passed": true,
+      "evidence": "rotation/RESULTS.json",
+      "freshRotationWindows": 5,
+      "samples": 100,
+      "scope": "Fresh landscape/portrait return with Menu overlays plus full-hand native fullscreen entry/exit. R1 long temporal trace retained as historical baseline."
+    }
+  },
+  "limits": [
+    "Not deployed. Physical Android acceptance pending.",
+    "Only affected paths rerun; R1 evidence is labeled historical.",
+    "Approved game table, avatars, cards, Bid Box and gameplay unchanged."
+  ]
+}

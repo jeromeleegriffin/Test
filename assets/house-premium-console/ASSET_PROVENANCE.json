@@ -1,87 +1,254 @@
 {
-  "approved_reference": "cinematic_griffin_and_raven_cardroom.png",
-  "approved_reference_sha256": "ba614af1e8d5b7d233e61e30e8a5e0fc6d4e19452a2e19ef4eaab96fbaeb397b",
-  "asset_pipeline": "Pixel crops from owner-approved screenshot; finished photographed physical surrounds and button art. Only dynamic text faces reconstructed with image texture.",
+  "reference_sha256": "ba614af1e8d5b7d233e61e30e8a5e0fc6d4e19452a2e19ef4eaab96fbaeb397b",
+  "method": "Exact original crops, transparent exterior masks and neighboring source texture clones over baked sample text only. No generated/replacement physical art. Original RC3 remains immutable.",
   "assets": [
     {
-      "asset": "clock-enamel-inset.png",
-      "sha256": "93323d83919f41bb4c13200c5764ff5d33551a86e527bdadaa906236a75858dc",
-      "bytes": 2913
+      "file": "utility-fullscreen.png",
+      "reference_crop": [
+        645,
+        34,
+        731,
+        120
+      ],
+      "size": [
+        86,
+        86
+      ],
+      "sha256": "ef0d48e0ce24d359b0f5691132b01ebf964f3280ea29bf5eb11fe3c780cbb067",
+      "sample_text_pixels_repaired": 0
     },
     {
-      "asset": "goal-enamel-inset.png",
-      "sha256": "5de28e3807b041e23138005de48d6dcea741bd58c7458d1aa86f22d1b90b526f",
-      "bytes": 3564
+      "file": "utility-menu.png",
+      "reference_crop": [
+        739,
+        34,
+        825,
+        120
+      ],
+      "size": [
+        86,
+        86
+      ],
+      "sha256": "cbbcc9fead53b495a7159d5567dff7290577b0f4d52d7bfbdce484f3641e68fc",
+      "sample_text_pixels_repaired": 0
     },
     {
-      "asset": "score-blank-photo-reference.png",
-      "sha256": "68183a358ab4b06b71a8de58e24e0cf107bfa318a5b9d990578f86a920c92b56",
-      "bytes": 3655
+      "file": "utility-back.png",
+      "reference_crop": [
+        833,
+        34,
+        919,
+        120
+      ],
+      "size": [
+        86,
+        86
+      ],
+      "sha256": "424d330379d7d6ca2c2965dac9e7f1161b055c29ff1476ccaf4ea5f5b169f18a",
+      "sample_text_pixels_repaired": 0
     },
     {
-      "asset": "score-number-inset.png",
-      "sha256": "f32427fb6225deb27117568a112ccc3ed541ec9bc9d0e86df124f517392d2e20",
-      "bytes": 153
+      "file": "top-match-plaque.png",
+      "reference_crop": [
+        20,
+        26,
+        642,
+        126
+      ],
+      "size": [
+        622,
+        100
+      ],
+      "sha256": "d51e6fd5cc381b6a748d16e2fff7f570917f780ef9cafbeccb876683571a3c03",
+      "sample_text_pixels_repaired": 0
     },
     {
-      "asset": "speed-back-inlay.png",
-      "sha256": "c3659bf74cd07a112671f19e43f20f45b69a425340ca2cb0d2a140a67d729e56",
-      "bytes": 14169
+      "file": "speed-selected-photo.png",
+      "reference_crop": [
+        278,
+        1552,
+        374,
+        1624
+      ],
+      "size": [
+        96,
+        72
+      ],
+      "sha256": "bfca78a6fe5f545c3d9e768c3e8576661203ac0715f31dbb2bffb6da4479c39e",
+      "sample_text_pixels_repaired": 0
     },
     {
-      "asset": "speed-dark-inset.png",
-      "sha256": "ab06920139f8a782948f2aa0fab55de2ce072a9c7cd8f21f57e3e2711120ad5c",
-      "bytes": 2909
+      "file": "speed-unselected-photo.png",
+      "reference_crop": [
+        374,
+        1552,
+        470,
+        1624
+      ],
+      "size": [
+        96,
+        72
+      ],
+      "sha256": "f0b61afc5878c38634237e929ebc0577000fce9e69234eb0f1dc275a0bbf98b8",
+      "sample_text_pixels_repaired": 0
     },
     {
-      "asset": "speed-frame-photo.png",
-      "sha256": "ed141ceaa93b984f6cba4d75a72e8965a7d4077adb08957063b1d7d74a2ddafd",
-      "bytes": 53963
+      "file": "walnut-console-live-fields.png",
+      "reference_crop": [
+        0,
+        1480,
+        941,
+        1672
+      ],
+      "size": [
+        941,
+        192
+      ],
+      "sha256": "7c1b0634c95fc31885ecc5c0c91ce0ab7a01f9587c7cbfb69f2ca6ae44be8e96",
+      "sample_text_pixels_repaired": 0
     },
     {
-      "asset": "speed-gold-inset.png",
-      "sha256": "b4c0423362b66f1e44d7d57db5bb843f69d434ed9458f49ecf71685788657f33",
-      "bytes": 2927
-    },
-    {
-      "asset": "speed-selected-photo.png",
-      "sha256": "b0c2b23c18353a9f03fe1137f124bba17adfab32b6bc01f262c42c8bda8f8b3f",
-      "bytes": 7916
-    },
-    {
-      "asset": "speed-unselected-photo.png",
-      "sha256": "ec82bbc8cf8bb89756cff4b46fecb2b8fa767c0f4213c3c46d6640eaf149a934",
-      "bytes": 6739
-    },
-    {
-      "asset": "top-match-plaque.png",
-      "sha256": "9356088486ea42c9f9d00c3eb68a40c022130368bfaba3dd4d5b70758d589004",
-      "bytes": 81914
-    },
-    {
-      "asset": "utility-back.png",
-      "sha256": "59303e3825fa2f9b8d962b627b9817d9be922f00e6a7eb509b2390e8feb2e08e",
-      "bytes": 9936
-    },
-    {
-      "asset": "utility-fullscreen.png",
-      "sha256": "f687bf0a2c8d075718e5d68664fed58664335bf7274faed6587587876166085a",
-      "bytes": 8207
-    },
-    {
-      "asset": "utility-menu.png",
-      "sha256": "0768233ddbdb42aaa6ac39f0c21148f34589a2450cf1bf1861a3ff01be549822",
-      "bytes": 8365
-    },
-    {
-      "asset": "walnut-console-live-fields.png",
-      "sha256": "90bcee7d0796b63db8fe64cbee08ab76556f5c87d6e0dd447935beaeafe0871a",
-      "bytes": 244485
-    },
-    {
-      "asset": "walnut-console-master.png",
-      "sha256": "912500ecbecac39bbbf681ccbc1baf0b17c0eb1757e6881bdb067e3ccda7e329",
-      "bytes": 259806
+      "file": "speed-frame-photo.png",
+      "reference_crop": [
+        265,
+        1536,
+        680,
+        1645
+      ],
+      "size": [
+        415,
+        109
+      ],
+      "sha256": "973b22ecf6d544c715759b12a4beb0305017be93bd2f78d28e16a751a6d2c738",
+      "sample_text_pixels_repaired": 0
     }
-  ]
+  ],
+  "all_packaged_pngs": [
+    {
+      "path": "clock-enamel-inset.png",
+      "size": [
+        115,
+        44
+      ],
+      "sha256": "93323d83919f41bb4c13200c5764ff5d33551a86e527bdadaa906236a75858dc"
+    },
+    {
+      "path": "goal-enamel-inset.png",
+      "size": [
+        120,
+        52
+      ],
+      "sha256": "5de28e3807b041e23138005de48d6dcea741bd58c7458d1aa86f22d1b90b526f"
+    },
+    {
+      "path": "holder-console-walnut-connector.png",
+      "size": [
+        941,
+        26
+      ],
+      "sha256": "ac94f84bdd64113be2e0b54e93b698dd43f8b9cbc84e7ab5a5c8759061b38f7e"
+    },
+    {
+      "path": "score-number-inset.png",
+      "size": [
+        60,
+        56
+      ],
+      "sha256": "f32427fb6225deb27117568a112ccc3ed541ec9bc9d0e86df124f517392d2e20"
+    },
+    {
+      "path": "speed-frame-photo.png",
+      "size": [
+        415,
+        109
+      ],
+      "sha256": "973b22ecf6d544c715759b12a4beb0305017be93bd2f78d28e16a751a6d2c738"
+    },
+    {
+      "path": "speed-selected-photo.png",
+      "size": [
+        96,
+        72
+      ],
+      "sha256": "bfca78a6fe5f545c3d9e768c3e8576661203ac0715f31dbb2bffb6da4479c39e"
+    },
+    {
+      "path": "speed-unselected-photo.png",
+      "size": [
+        96,
+        72
+      ],
+      "sha256": "f0b61afc5878c38634237e929ebc0577000fce9e69234eb0f1dc275a0bbf98b8"
+    },
+    {
+      "path": "top-match-plaque.png",
+      "size": [
+        622,
+        100
+      ],
+      "sha256": "d51e6fd5cc381b6a748d16e2fff7f570917f780ef9cafbeccb876683571a3c03"
+    },
+    {
+      "path": "utility-back.png",
+      "size": [
+        86,
+        86
+      ],
+      "sha256": "424d330379d7d6ca2c2965dac9e7f1161b055c29ff1476ccaf4ea5f5b169f18a"
+    },
+    {
+      "path": "utility-fullscreen.png",
+      "size": [
+        86,
+        86
+      ],
+      "sha256": "ef0d48e0ce24d359b0f5691132b01ebf964f3280ea29bf5eb11fe3c780cbb067"
+    },
+    {
+      "path": "utility-menu.png",
+      "size": [
+        86,
+        86
+      ],
+      "sha256": "cbbcc9fead53b495a7159d5567dff7290577b0f4d52d7bfbdce484f3641e68fc"
+    },
+    {
+      "path": "walnut-console-live-fields.png",
+      "size": [
+        941,
+        192
+      ],
+      "sha256": "644a257378a2b001c8335d1a74c56d5b6423a3ef23427cb699f81f264454a78b"
+    }
+  ],
+  "ownerConsoleCorrectionR3": {
+    "baseline": "R2 complete ZIP",
+    "method": "Deterministic original-source walnut crop and neighboring enamel clone. No generated artwork, CSS material surfaces, gradients or overlay patches.",
+    "mainAssetChangedRegions": [
+      [
+        0,
+        0,
+        941,
+        20
+      ],
+      [
+        34,
+        71,
+        227,
+        145
+      ]
+    ],
+    "outsideApprovedRegionsChangedPixels": 0,
+    "changedPixels": 32017,
+    "connectorSize": [
+      941,
+      26
+    ],
+    "connectorOpaque": true,
+    "clockSymbolRemovedInRaster": true,
+    "assets": {
+      "walnut-console-live-fields.png": "644a257378a2b001c8335d1a74c56d5b6423a3ef23427cb699f81f264454a78b",
+      "holder-console-walnut-connector.png": "ac94f84bdd64113be2e0b54e93b698dd43f8b9cbc84e7ab5a5c8759061b38f7e"
+    }
+  }
 }

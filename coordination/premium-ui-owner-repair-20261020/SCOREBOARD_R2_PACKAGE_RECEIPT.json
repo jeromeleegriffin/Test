@@ -1,0 +1,47 @@
+{
+  "path": "/workspace/scratch/b2fab6afe9f4/artifacts/Griffin_House_Aligned_Scoreboard_Complete_Game_20261020_R2.zip",
+  "sha256": "76b4a6cb82d9252b21691be52bc964d60f2952267c6edd4eaa54c390adbfbdb9",
+  "bytes": 360149198,
+  "files": 1937,
+  "crc": "PASS",
+  "allMemberHashes": "PASS",
+  "sourceCommit": "525bf314b2e56c4a15f9cb4a4dfd6304d9c7c84c",
+  "deployed": false,
+  "exactFinalLoader": {
+    "zip": "Griffin_House_Aligned_Scoreboard_Complete_Game_20261020_R2.zip",
+    "sha256": "76b4a6cb82d9252b21691be52bc964d60f2952267c6edd4eaa54c390adbfbdb9",
+    "originalLoaderSha256": "ab52623d7b01dfe8317cf9655a6b05be52957860bcc94c98040aa06b3bd21d3c",
+    "errors": [],
+    "quick": true,
+    "actions": [
+      "Exact final ZIP: real Loader decompression, live artwork and real shuffle/deal to auction"
+    ],
+    "identity": "846-premium-owner-repair-20261020-r2",
+    "assetSizes": {
+      "plaque": 622,
+      "console": 941
+    },
+    "alignedRowBeforeFullscreen": {
+      "plaque": {
+        "y": 4,
+        "h": 29
+      },
+      "buttons": {
+        "y": 4,
+        "h": 29
+      }
+    },
+    "alignedRowFullscreen": {
+      "plaque": {
+        "y": 4,
+        "h": 29
+      },
+      "buttons": {
+        "y": 4,
+        "h": 29
+      }
+    },
+    "passed": true
+  },
+  "status": "FOUR_CHANGED_PATH_PASSES_AND_EXACT_FINAL_ZIP_LOADER_PASSED_NOT_DEPLOYED"
+}

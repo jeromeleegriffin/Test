@@ -1,0 +1,16 @@
+{
+  "zip": "Griffin_House_Premium_UI_Repaired_Four_Pass_20261020.zip",
+  "sha256": "929f2beb8ded675e8ac31bd7d9ec4dbff1be191c9b465ddf6887810717a73900",
+  "originalLoaderSha256": "ab52623d7b01dfe8317cf9655a6b05be52957860bcc94c98040aa06b3bd21d3c",
+  "errors": [],
+  "quick": true,
+  "actions": [
+    "Exact final ZIP: real Loader decompression, live artwork and real shuffle/deal to auction"
+  ],
+  "identity": "846-premium-owner-repair-20261020-r1",
+  "assetSizes": {
+    "plaque": 622,
+    "console": 941
+  },
+  "passed": true
+}

@@ -1,0 +1,66 @@
+{
+  "build": "846-premium-owner-repair-20261020-r3",
+  "deployed": false,
+  "ownerAcceptance": "PENDING_PHYSICAL_ANDROID_REVIEW",
+  "ownerRequest": "Opaque asset connection between holder and console; remove clock symbol from raster and center time; verify your-turn and trick-win flashes in actual play. No CSS material substitutes.",
+  "passes": {
+    "1_raster_artwork": {
+      "passed": true,
+      "evidence": "ASSET_PROVENANCE.json",
+      "clockIconRemovedInPNG": true,
+      "bakedCarpetAndDuplicateHolderRemovedInPNG": true,
+      "opaqueWalnutConnectorAsset": true,
+      "outsideRequestedAssetRegionsChangedPixels": 0,
+      "approvedFramesAndOtherArtworkPreserved": true
+    },
+    "2_registration": {
+      "passed": true,
+      "evidence": "registration/RESULTS.json",
+      "layouts": 16,
+      "scope": "Connector spans actual holder-to-console gap; clock centered in full left recess; long values/12:59 PM ink checks; scoreboard row retained; safe area simulated."
+    },
+    "3_actual_gameplay": {
+      "passed": true,
+      "evidence": "full-hand/",
+      "completeHands": 1,
+      "widthCSSpx": 393,
+      "moon": true,
+      "nativeSpeedMenuBackLastFullscreen": true,
+      "offlineReloadAndDeal": true,
+      "engineRulesUnchanged": true,
+      "nativeHolderCueCodeUnchanged": true,
+      "cueSamples": {
+        "turn": {
+          "frames": 355,
+          "opacityMin": 2.12393e-09,
+          "opacityMax": 0.85,
+          "nativeAnimation": [
+            "holder793-turn"
+          ]
+        },
+        "win": {
+          "frames": 130,
+          "opacityMin": 0,
+          "opacityMax": 1,
+          "nativeAnimation": [
+            "holder793-win"
+          ]
+        }
+      },
+      "turnPixelEvidence": "full-hand/TURN_FLASH_PIXEL_COMPARISON.json",
+      "winLifecycle": "Native win-wait -> collection-start -> arrival -> win events retained with RAF opacity trace and real-play screenshot; no mocked winner or synthetic cue."
+    },
+    "4_temporal": {
+      "passed": true,
+      "evidence": "rotation/RESULTS.json",
+      "rotationWindows": 5,
+      "samples": 100,
+      "scope": "Fresh landscape/portrait return and Menu overlays plus real hand/fullscreen transitions and native cue animation-frame samples."
+    }
+  },
+  "limits": [
+    "Physical Android acceptance remains pending; no deployment.",
+    "Current changed-path passes are separate from historical R1/R2 matrices.",
+    "No Cloudflare multiplayer changes or WAN certification."
+  ]
+}
