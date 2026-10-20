@@ -1,0 +1,69 @@
+{
+  "brainVersion": "AG",
+  "parentVersion": "AF",
+  "updated": "2026-10-20",
+  "runtime": "846-premium-owner-repair-20261020-r7-cumulative",
+  "documentationOnly": true,
+  "files": [
+    {
+      "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+      "bytes": 22926,
+      "sha256": "f811090dba9bad5febcb1c7884c5369a3eb2b000d7c2504d43154002d5ec4ade"
+    },
+    {
+      "path": "files/00_START_HERE/START_HERE.md",
+      "bytes": 21381,
+      "sha256": "1b79e3a7690d9245f115de853938845222291a9e7a61f18424c1382b342642be"
+    },
+    {
+      "path": "files/01_MASTER_BANK/CHAT_CONTINUITY_RULE.md",
+      "bytes": 1867,
+      "sha256": "2834a963ae9301d4655263ed35bcdae7d313f80f78ca3dbf88c83bbb72f7cffe"
+    },
+    {
+      "path": "files/01_MASTER_BANK/COMPLETE_BANK_READING_RULE.md",
+      "bytes": 1190,
+      "sha256": "fc5ef6343b09dbbadaf26fb5f483358a293d1c34418f41a5b65a278bc9de9974"
+    },
+    {
+      "path": "files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
+      "bytes": 21381,
+      "sha256": "1b79e3a7690d9245f115de853938845222291a9e7a61f18424c1382b342642be"
+    },
+    {
+      "path": "files/01_MASTER_BANK/PERMANENT_UI_VISUAL_VERIFICATION_RULE.md",
+      "bytes": 3295,
+      "sha256": "0c97a60f21f8098860df71ed56407f53fe68d4b5431b45054c2c54e455827801"
+    },
+    {
+      "path": "files/03_ACTUAL_SCREENS/README.txt",
+      "bytes": 488,
+      "sha256": "a0cfa329dd66796b557afa2247fe9d64781896f0d4d253af2743471000ec699a"
+    },
+    {
+      "path": "files/03_ACTUAL_SCREENS/sync-cloud-4-complete.png",
+      "bytes": 76738,
+      "sha256": "a96498a9b0f35f74886651b98869a4fe8fdd2302987a4f411d404a3e543e5e5f"
+    },
+    {
+      "path": "files/03_ACTUAL_SCREENS/sync-cloud-4-play.png",
+      "bytes": 408459,
+      "sha256": "877850c0ff03b56c8576d62b0fae23db08548d434b9a9dbea2109ff4500fa0a1"
+    },
+    {
+      "path": "files/03_ACTUAL_SCREENS/sync-hosted-TEST-score.png",
+      "bytes": 98121,
+      "sha256": "a600bd1edac9e4df6909222327b77548d25629ecc2eb4e7107e62a199444bb3e"
+    },
+    {
+      "path": "files/03_ACTUAL_SCREENS/sync-small-bidding.png",
+      "bytes": 309726,
+      "sha256": "6dc3bc4870cdbb8568a13ca3f71a785f8c50f563e219de2d69a928af76b5fb93"
+    },
+    {
+      "path": "index.html",
+      "bytes": 22464,
+      "sha256": "2ff2cccd4659370ee9629c693e89ad989beefdd5e0155d658c5bc84725238cbb"
+    }
+  ]
+}

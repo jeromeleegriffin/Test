@@ -145,3 +145,8 @@ Jerome explicitly approved 810 as latest and authorized both Test and actual Roo
 
 ## 2026-10-15 — Approved Moon and matching Bid Box live in BOTH repositories
 Owner explicitly approved the final phone candidate and dual deployment. Runtime810-moon-bidtext-review is now current; exact approved ZIP bytes unchanged. Test runtime3d41595f0a6ee4850c54aaf6e1d7bfd51891ca06; actual Rook runtime72fa8d188b4d34b01dc31aeddf3c7231cde1af7b. Both Pages deployments succeeded. All1502 runtime Git blobs and all15 changed served SHA256 files match on both sites; both cloud browsers reached the lobby. Rollback/pre-moon-20261015-1833 preserved in both. Read releases/moon-approved-20261015/CHECKPOINT.md and LIVE_RECEIPT.json. AE frozen history remains; this is a release supplement, no new Brain letter/build number. Landscape stays paused and isolated. Installed-device SW/offline upgrade, full Moon game/audio/multiplayer are not newly certified. No browser/player data cleared. Separate chats must read current.json; no automatic notification.
+
+
+## 2026-10-20 — Master Brain AG / all-three release policy
+
+Owner-authorized cumulative R7 is deployed and verified on Test, production and Cloudflare. Read brain/current.json and the new complete AG handoff; older deployment holds are historical. Future authorized updates go to all three until owner changes this policy. No paid upgrade without explicit approval; no storage resets. Exact receipt: coordination/releases/all-three-r7-cumulative-20261020/LIVE_RECEIPT.json. Do not restart or claim online X1 or physical Android certification.

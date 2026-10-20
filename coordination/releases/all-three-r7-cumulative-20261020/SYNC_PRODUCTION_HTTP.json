@@ -1,0 +1,98 @@
+[
+  {
+    "path": "index.html",
+    "matches": true,
+    "bytes": 111375,
+    "sha256": "0cc3b62adb74a5a3bedff8a6b05650181300b134831a12ea43d450e85e3b6f4a"
+  },
+  {
+    "path": "hor-version.js",
+    "matches": true,
+    "bytes": 1489,
+    "sha256": "e536ea05dc64074e9a238471c2eaf10b6e1e5df7195ec32a58bc94535f7c2ddf"
+  },
+  {
+    "path": "game060.js",
+    "matches": true,
+    "bytes": 652644,
+    "sha256": "19aafa8603e459cb9d789f4da0c6024ea0729d3f0a08dfd3b79bc2cd2ce0df39"
+  },
+  {
+    "path": "sw060.js",
+    "matches": true,
+    "bytes": 70632,
+    "sha256": "886c1ebcc302f88ecfc547d4e2e46ec133be35b7d782463e9845ef51076260ba"
+  },
+  {
+    "path": "cloudflare-entry.js",
+    "matches": true,
+    "bytes": 1091,
+    "sha256": "17488dfd38511a90b6d8594e8b84e40f24de625b503ae76c8308379e15681ba1"
+  },
+  {
+    "path": "house-premium-ui.js",
+    "matches": true,
+    "bytes": 16899,
+    "sha256": "88afc1dfd5b76be2e1a5458f734e30d6737191ef27d95ccfbe8342c10cca8c1b"
+  },
+  {
+    "path": "house-premium-ui.css",
+    "matches": true,
+    "bytes": 10237,
+    "sha256": "625547f3ef55cba6b3a35271d4c693bbee4a9180c3161ef7bc3e7741de816f39"
+  },
+  {
+    "path": "fullscreen-portrait-review.js",
+    "matches": true,
+    "bytes": 2911,
+    "sha256": "9d2792e679a9e0efe5321e655d272e501e6dd097c7b874d9a84a4ea544bcb15c"
+  },
+  {
+    "path": "fullscreen-portrait-review.css",
+    "matches": true,
+    "bytes": 515,
+    "sha256": "083478541fc477ecb5d0d64659028f1654a13d91a336763b1cfa29447eddab8e"
+  },
+  {
+    "path": "menu-approved805.js",
+    "matches": true,
+    "bytes": 42785,
+    "sha256": "364ae0f46013abd28be99b04d5a4d76a3d538f51db2658dc8cdc95d97a0fe7c6"
+  },
+  {
+    "path": "room831.js",
+    "matches": true,
+    "bytes": 5366,
+    "sha256": "4270d388528de5e0afa7ff549222ac78757692911ef016b15218918709a0064c"
+  },
+  {
+    "path": "holder-cues789.js",
+    "matches": true,
+    "bytes": 9381,
+    "sha256": "f5f2f758ef830633bc8e4e22cff1d9ac4b995122645f39edfe63501e495298c9"
+  },
+  {
+    "path": "asset-loading772.js",
+    "matches": true,
+    "bytes": 13211,
+    "sha256": "69aec912bfb717493b644e68608f054e7cf02d3e8324b5b0e4f627c021eac92f"
+  },
+  {
+    "path": "progression.js",
+    "matches": true,
+    "bytes": 46252,
+    "sha256": "dbbbde1cf8b83ee89e0e8e6eff5e114e3842182401879039288ab62cb64790bc"
+  },
+  {
+    "path": "assets/house-premium-console/top-match-plaque.png",
+    "matches": true,
+    "bytes": 91469,
+    "sha256": "d51e6fd5cc381b6a748d16e2fff7f570917f780ef9cafbeccb876683571a3c03"
+  },
+  {
+    "path": "assets/house-premium-console/walnut-console-live-fields.png",
+    "matches": true,
+    "bytes": 175419,
+    "sha256": "644a257378a2b001c8335d1a74c56d5b6423a3ef23427cb699f81f264454a78b"
+  }
+]

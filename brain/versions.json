@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "brainVersion": "AG",
+      "browse": "versions/AG/index.html",
+      "updated": "2026-10-20",
+      "sha256": "1b79e3a7690d9245f115de853938845222291a9e7a61f18424c1382b342642be",
+      "manifest": "versions/AG/inventory.json",
+      "documentationOnly": true,
+      "archiveStatus": "All three cumulative R7 sites deployed and verified; owner bug-checking baseline; physical Android/cellular unverified"
+    },
+    {
       "brainVersion": "AF",
       "browse": "versions/AF/index.html",
       "updated": "2026-10-18",

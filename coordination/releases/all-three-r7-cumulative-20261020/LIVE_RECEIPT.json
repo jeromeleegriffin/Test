@@ -1,0 +1,64 @@
+{
+  "status": "ALL_THREE_DEPLOYED_VERIFIED_OWNER_BUG_CHECK_BASELINE",
+  "date": "2026-10-20",
+  "runtime": "846-premium-owner-repair-20261020-r7-cumulative",
+  "branch": "work/all-three-sync-20261020",
+  "nativeSourceCommit": "2ef90e8264c4f0e887b8df118a563f61e6d47098",
+  "test": {
+    "url": "https://jeromeleegriffin.github.io/Test/",
+    "runtimeCommit": "2ef90e8264c4f0e887b8df118a563f61e6d47098",
+    "pagesRun": 39492944270,
+    "sourceCheckRun": 39492946214,
+    "conclusion": "success",
+    "rollbackCommit": "5f0ea0d9a4803fa39caa0a2f5e154c07d0fda911"
+  },
+  "production": {
+    "url": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
+    "runtimeCommit": "972a381196259a58016122c3e365e2208a874755",
+    "pagesRun": 39493451844,
+    "sourceCheckRun": 39493453459,
+    "conclusion": "success",
+    "rollbackCommit": "c8e78769e1f723e0a01196e28b2f00841928a1f6"
+  },
+  "cloudflare": {
+    "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
+    "worker": "griffin-house-of-rooks-online",
+    "version": "48f6f945-e54c-4200-bfbd-52bb3e9928b6",
+    "deployment": "a8e5ec49-818e-436e-9291-5267b0cc105a",
+    "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "rollbackVersion": "b579fde0-d6e1-4a42-b40f-aa85cd3ec7d3",
+    "roomStorageReset": false,
+    "secretRetained": true,
+    "paidUpgradePerformed": false
+  },
+  "runtimeFileMatchesPerGitSite": 1509,
+  "httpSelectedMatches": {
+    "test": 16,
+    "production": 16,
+    "cloudflare": 15
+  },
+  "newHostedCloudMatch": {
+    "results": [
+      {
+        "humans": 4,
+        "target": 100,
+        "hands": 1,
+        "actions": 46,
+        "reconnects": 3,
+        "final": "Team A",
+        "scores": [
+          80,
+          -195
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "newHostedOfflineHands": 2,
+  "newLocalOfflineHands": 1,
+  "physicalAndroidVerified": false,
+  "independentCellularVerified": false,
+  "onlineX1Integrated": false,
+  "sameRuntimeDifferentHostingWrappers": true,
+  "rollbackBranchBothRepos": "rollback/pre-all-three-r7-20261020"
+}
