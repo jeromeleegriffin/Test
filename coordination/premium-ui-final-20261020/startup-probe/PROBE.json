@@ -1,0 +1,110 @@
+{
+  "states": [
+    {
+      "phase": null,
+      "body": "theme-classic cardback-griffin gfx-feltTexture gfx-woodRail gfx-roomBackdrop gfx-richFaces gfx-winnerBurst gfx-trumpBanner gfx-seatPlaques gfx-paintedAvatars gfx-tavernScore gfx-handBanner gfx-matchTrophy gfx-brassUI gfx-waitingProps gfx-hapticsHeavy exp-netSequencing exp-netReconnect exp-netBackoff exp-netHeartbeat exp-netDelta exp-netAuthoritative exp-netTimerSync exp-netDuplicateGuard exp-netTurnGuard exp-netConnectionUI exp-netTurnHandoff exp-netOwnTurnRecovery exp-netDiagnostics exp-netGraceRecovery exp-netSameIdResync exp-netNameReclaim exp-netActionQueue exp-netIceWatch exp-netResyncOnReclaim exp-netHoldTimerOnDisconnect exp-netSilentDropDetect exp-avatarPersonality exp-lobbyReconnect exp-renderOptimization exp-customTurnServers exp-thinkingPulse exp-spectatorLateJoin exp-partnerChatAfterNest exp-waitForMe exp-hostHonorHands hor-honor-hands room-theme-midnight cs077-ready angle-c-runtime hor-bid-theme-classic room805-ready room805-visible trump746-faint input-focused",
+      "host": false,
+      "solo": false,
+      "players": 0,
+      "tour": false,
+      "blocking": false,
+      "pin": false,
+      "afterTour": null,
+      "tutorial": "<dialog aria-label=\"House tour\" aria-labelledby=\"tutorialTitle\" aria-live=\"polite\" class=\"tutorial-overlay hidden\" id=\"tutorialOverlay\" role=\"dialog\">\n      <div class=\"tutorial-card\">\n        <div class=\"tutorial-kicker\" id=\"tutorialKicker\">House tour</div>\n        <h2 class=\"tutorial-title\" id=\"tutorialTitle\">Welcome to the table</h2>\n        <div id=\"tutorialText\">Bid or pass. That\u2019s the whole auction.</div>\n        <div aria-hidden=\"true\" class=\"tutorial-progress\" id=\"tutorialProgress\"></div",
+      "loader": {
+        "busy": false,
+        "pending": 0,
+        "loaded": 104,
+        "total": 104,
+        "failed": [],
+        "initialRevealComplete": true
+      },
+      "gameText": "",
+      "button": "<button class=\"btn primary lobby-main lobby-play-now\" id=\"soloPracticeBtn\" type=\"button\">Take Your Seat \u203a</button>",
+      "name": "Premium QA",
+      "label": "before-entry"
+    },
+    {
+      "phase": null,
+      "body": "theme-classic cardback-griffin gfx-feltTexture gfx-woodRail gfx-roomBackdrop gfx-richFaces gfx-winnerBurst gfx-trumpBanner gfx-seatPlaques gfx-paintedAvatars gfx-tavernScore gfx-handBanner gfx-matchTrophy gfx-brassUI gfx-waitingProps gfx-hapticsHeavy exp-netSequencing exp-netReconnect exp-netBackoff exp-netHeartbeat exp-netDelta exp-netAuthoritative exp-netTimerSync exp-netDuplicateGuard exp-netTurnGuard exp-netConnectionUI exp-netTurnHandoff exp-netOwnTurnRecovery exp-netDiagnostics exp-netGraceRecovery exp-netSameIdResync exp-netNameReclaim exp-netActionQueue exp-netIceWatch exp-netResyncOnReclaim exp-netHoldTimerOnDisconnect exp-netSilentDropDetect exp-avatarPersonality exp-lobbyReconnect exp-renderOptimization exp-customTurnServers exp-thinkingPulse exp-spectatorLateJoin exp-partnerChatAfterNest exp-waitForMe exp-hostHonorHands hor-honor-hands room-theme-midnight cs077-ready angle-c-runtime hor-bid-theme-classic room805-ready room805-visible trump746-faint input-focused",
+      "host": false,
+      "solo": false,
+      "players": 0,
+      "tour": false,
+      "blocking": false,
+      "pin": false,
+      "afterTour": null,
+      "tutorial": "<dialog aria-label=\"House tour\" aria-labelledby=\"tutorialTitle\" aria-live=\"polite\" class=\"tutorial-overlay hidden\" id=\"tutorialOverlay\" role=\"dialog\">\n      <div class=\"tutorial-card\">\n        <div class=\"tutorial-kicker\" id=\"tutorialKicker\">House tour</div>\n        <h2 class=\"tutorial-title\" id=\"tutorialTitle\">Welcome to the table</h2>\n        <div id=\"tutorialText\">Bid or pass. That\u2019s the whole auction.</div>\n        <div aria-hidden=\"true\" class=\"tutorial-progress\" id=\"tutorialProgress\"></div",
+      "loader": {
+        "busy": true,
+        "pending": 4,
+        "loaded": 104,
+        "total": 108,
+        "failed": [],
+        "initialRevealComplete": true
+      },
+      "gameText": "",
+      "button": "<button class=\"btn primary lobby-main lobby-play-now\" id=\"soloPracticeBtn\" type=\"button\">Take Your Seat \u203a</button>",
+      "name": "Premium QA",
+      "label": "first-tap"
+    },
+    {
+      "phase": null,
+      "body": "theme-classic cardback-griffin gfx-feltTexture gfx-woodRail gfx-roomBackdrop gfx-richFaces gfx-winnerBurst gfx-trumpBanner gfx-seatPlaques gfx-paintedAvatars gfx-tavernScore gfx-handBanner gfx-matchTrophy gfx-brassUI gfx-waitingProps gfx-hapticsHeavy exp-netSequencing exp-netReconnect exp-netBackoff exp-netHeartbeat exp-netDelta exp-netAuthoritative exp-netTimerSync exp-netDuplicateGuard exp-netTurnGuard exp-netConnectionUI exp-netTurnHandoff exp-netOwnTurnRecovery exp-netDiagnostics exp-netGraceRecovery exp-netSameIdResync exp-netNameReclaim exp-netActionQueue exp-netIceWatch exp-netResyncOnReclaim exp-netHoldTimerOnDisconnect exp-netSilentDropDetect exp-avatarPersonality exp-lobbyReconnect exp-renderOptimization exp-customTurnServers exp-thinkingPulse exp-spectatorLateJoin exp-partnerChatAfterNest exp-waitForMe exp-hostHonorHands hor-honor-hands room-theme-midnight cs077-ready angle-c-runtime hor-bid-theme-classic room805-ready room805-visible trump746-faint",
+      "host": false,
+      "solo": false,
+      "players": 0,
+      "tour": false,
+      "blocking": false,
+      "pin": false,
+      "afterTour": null,
+      "tutorial": "<dialog aria-label=\"House tour\" aria-labelledby=\"tutorialTitle\" aria-live=\"polite\" class=\"tutorial-overlay hidden\" id=\"tutorialOverlay\" role=\"dialog\">\n      <div class=\"tutorial-card\">\n        <div class=\"tutorial-kicker\" id=\"tutorialKicker\">House tour</div>\n        <h2 class=\"tutorial-title\" id=\"tutorialTitle\">Welcome to the table</h2>\n        <div id=\"tutorialText\">Bid or pass. That\u2019s the whole auction.</div>\n        <div aria-hidden=\"true\" class=\"tutorial-progress\" id=\"tutorialProgress\"></div",
+      "loader": {
+        "busy": false,
+        "pending": 0,
+        "loaded": 108,
+        "total": 108,
+        "failed": [],
+        "initialRevealComplete": true
+      },
+      "gameText": "",
+      "button": "<button class=\"btn primary lobby-main lobby-play-now\" id=\"soloPracticeBtn\" type=\"button\">Take Your Seat \u203a</button>",
+      "name": "Premium QA",
+      "label": "after-eight-seconds"
+    },
+    {
+      "phase": "dealing",
+      "body": "theme-classic cardback-griffin gfx-feltTexture gfx-woodRail gfx-roomBackdrop gfx-richFaces gfx-winnerBurst gfx-trumpBanner gfx-seatPlaques gfx-paintedAvatars gfx-tavernScore gfx-handBanner gfx-matchTrophy gfx-brassUI gfx-waitingProps gfx-hapticsHeavy exp-netSequencing exp-netReconnect exp-netBackoff exp-netHeartbeat exp-netDelta exp-netAuthoritative exp-netTimerSync exp-netDuplicateGuard exp-netTurnGuard exp-netConnectionUI exp-netTurnHandoff exp-netOwnTurnRecovery exp-netDiagnostics exp-netGraceRecovery exp-netSameIdResync exp-netNameReclaim exp-netActionQueue exp-netIceWatch exp-netResyncOnReclaim exp-netHoldTimerOnDisconnect exp-netSilentDropDetect exp-avatarPersonality exp-lobbyReconnect exp-renderOptimization exp-customTurnServers exp-thinkingPulse exp-spectatorLateJoin exp-partnerChatAfterNest exp-waitForMe exp-hostHonorHands hor-honor-hands room-theme-midnight cs077-ready angle-c-runtime hor-bid-theme-classic room805-ready room805-visible trump746-faint offline-play in-game hor-first-hand cabin-fire-active041 dealing035",
+      "host": true,
+      "solo": true,
+      "players": 4,
+      "tour": false,
+      "blocking": false,
+      "pin": false,
+      "afterTour": 0,
+      "tutorial": "<dialog aria-label=\"House tour\" aria-labelledby=\"tutorialTitle\" aria-live=\"polite\" class=\"tutorial-overlay tour-bounded835 hidden\" id=\"tutorialOverlay\" role=\"dialog\" aria-hidden=\"true\">\n      <div class=\"tutorial-card\">\n        <div class=\"tutorial-kicker\" id=\"tutorialKicker\">As you play</div>\n        <h2 class=\"tutorial-title\" id=\"tutorialTitle\">Partners sit across</h2>\n        <div id=\"tutorialText\"><p>You and the chair facing you are one team. The two beside you are the other. First team to t",
+      "loader": {
+        "busy": false,
+        "pending": 0,
+        "loaded": 111,
+        "total": 111,
+        "failed": [],
+        "initialRevealComplete": true
+      },
+      "gameText": "Offline practice \u2014 you vs 3 bots. Bots only use public info.",
+      "button": "<button class=\"btn primary lobby-main lobby-play-now\" id=\"soloPracticeBtn\" type=\"button\">Take Your Seat \u203a</button>",
+      "name": "Premium QA",
+      "label": "after-second-tap"
+    }
+  ],
+  "events": [
+    {
+      "type": "log",
+      "text": "ENTRY_TRACE {\"busy\":true,\"pending\":3,\"loaded\":104,\"total\":107}"
+    },
+    {
+      "type": "log",
+      "text": "ENTRY_TRACE {\"busy\":false,\"pending\":0,\"loaded\":108,\"total\":108}"
+    }
+  ]
+}
