@@ -5,7 +5,7 @@
     "phases": [
       {
         "phase": "dealing",
-        "current": 0,
+        "current": 1,
         "mine": 0,
         "bidder": -1,
         "goal": "Biddingin progress",
@@ -44,9 +44,9 @@
       },
       {
         "phase": "bidding",
-        "current": 0,
+        "current": 2,
         "mine": 0,
-        "bidder": -1,
+        "bidder": 1,
         "goal": "Biddingin progress",
         "utility": [
           {
@@ -86,7 +86,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 145to make bid",
+        "goal": "Need 200to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -125,7 +125,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 145to make bid",
+        "goal": "Need 200to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -164,7 +164,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 145to make bid",
+        "goal": "Need 200to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -239,10 +239,7 @@
       }
     ],
     "actions": [
-      "native bid",
-      "native bid",
-      "native bid",
-      "native bid",
+      "Moon selected without submitting; bidding Menu and Back tested",
       "native bid",
       "six-card discard confirmed",
       "trump confirmed",
@@ -261,25 +258,29 @@
     "intelligence": {
       "status": {
         "requested": "x1",
-        "active": "x1",
-        "reason": "",
+        "active": "legacy",
+        "reason": "Instant-win moon is outside the frozen championship contract rules",
         "ready": true,
         "initializationError": "",
         "lastDecision": {
           "phase": "play",
-          "engine": "x1",
-          "hand": 39,
-          "seat": 1,
-          "epa": false,
-          "partnerRoute": false
+          "engine": "legacy",
+          "hand": 41,
+          "seat": 1
         },
         "epa": false,
         "partnerSeat": null,
-        "hand": 40,
+        "hand": 42,
         "pending": false
       },
-      "decisions": 24,
-      "fallbacks": []
+      "decisions": 0,
+      "fallbacks": [
+        {
+          "hand": 11,
+          "engine": "legacy",
+          "reason": "Instant-win moon is outside the frozen championship contract rules"
+        }
+      ]
     },
     "toolsTested": true,
     "lastTested": true,
@@ -295,6 +296,6 @@
       "coherent": true
     },
     "offlineReloadAndDeal": true,
-    "seconds": 30.7
+    "seconds": 32.75
   }
 ]

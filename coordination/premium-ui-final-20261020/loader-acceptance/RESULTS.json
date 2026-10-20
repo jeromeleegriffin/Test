@@ -1,0 +1,6 @@
+{
+  "errors": [],
+  "runtimeFiles": 1507,
+  "failure": "Locator.wait_for: Frame was detached\nCall log:\n  - waiting for locator(\"#soloPracticeBtn\") to be visible\n",
+  "passed": false
+}
