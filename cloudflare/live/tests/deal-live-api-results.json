@@ -1,0 +1,8 @@
+{
+  "initialDealing": true,
+  "noEarlyBotBids": true,
+  "earlyHumanBidRejected": true,
+  "staleReadyRejected": true,
+  "deadlineOpenedViaRealWebSocketWithoutFurtherRequests": true,
+  "elapsedMs": 25156
+}

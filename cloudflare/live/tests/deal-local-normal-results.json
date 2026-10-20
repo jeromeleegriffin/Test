@@ -1,0 +1,47 @@
+{
+  "live": false,
+  "initialServerPhase": "dealing",
+  "noEarlyBotBids": true,
+  "noEarlyBidControls": true,
+  "fastClientWaitedForSlow": true,
+  "stages": [
+    [
+      {
+        "stage": "presentation",
+        "msAfterStart": 1614
+      },
+      {
+        "stage": "shuffle",
+        "msAfterStart": 1630
+      },
+      {
+        "stage": "flight",
+        "msAfterStart": 1906
+      },
+      {
+        "stage": "finished",
+        "msAfterStart": 3517
+      }
+    ],
+    [
+      {
+        "stage": "presentation",
+        "msAfterStart": 1619
+      },
+      {
+        "stage": "shuffle",
+        "msAfterStart": 1638
+      },
+      {
+        "stage": "flight",
+        "msAfterStart": 6685
+      },
+      {
+        "stage": "finished",
+        "msAfterStart": 12889
+      }
+    ]
+  ],
+  "biddingMsAfterStart": 13183,
+  "errors": []
+}

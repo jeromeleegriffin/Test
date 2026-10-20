@@ -1,0 +1,13 @@
+{
+  "codeCommit": "80e1604dee30456ede21569b3f774b09fe62bfca",
+  "worker": "griffin-house-of-rooks-online",
+  "version": "aa209069-9cb8-4051-820c-c55ca5717eb8",
+  "deployment": "0ead9dcf-e18f-4062-abf7-0b81315d3b7f",
+  "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+  "sourceReadbackMatches": true,
+  "namespaceSecretAndRateBindingsRetained": true,
+  "openingMinMs": 3500,
+  "clientSettleMs": 1500,
+  "deadlineMs": 25000,
+  "newHostedMatchesCompleted": 2
+}

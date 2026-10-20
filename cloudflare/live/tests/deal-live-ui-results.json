@@ -1,0 +1,57 @@
+{
+  "live": true,
+  "initialServerPhase": "dealing",
+  "noEarlyBotBids": true,
+  "noEarlyBidControls": true,
+  "fastClientWaitedForSlow": true,
+  "deadlineFallback": false,
+  "reloadedDuringDeal": true,
+  "stages": [
+    [
+      {
+        "stage": "presentation",
+        "msAfterStart": 1942
+      },
+      {
+        "stage": "shuffle",
+        "msAfterStart": 1978
+      },
+      {
+        "stage": "flight",
+        "msAfterStart": 2249
+      },
+      {
+        "stage": "finished",
+        "msAfterStart": 4205
+      },
+      {
+        "stage": "auction",
+        "msAfterStart": 13605
+      }
+    ],
+    [
+      {
+        "stage": "presentation",
+        "msAfterStart": 8039
+      },
+      {
+        "stage": "shuffle",
+        "msAfterStart": 8066
+      },
+      {
+        "stage": "flight",
+        "msAfterStart": 9765
+      },
+      {
+        "stage": "finished",
+        "msAfterStart": 12971
+      },
+      {
+        "stage": "auction",
+        "msAfterStart": 13310
+      }
+    ]
+  ],
+  "biddingMsAfterStart": 13585,
+  "errors": []
+}

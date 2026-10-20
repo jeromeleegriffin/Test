@@ -9,6 +9,7 @@ for(let step=0;step<2000;step++){
  for(const p of pages)if(await p.getByRole('button',{name:'Skip tour',exact:true}).isVisible())await p.getByRole('button',{name:'Skip tour',exact:true}).click();
  if(v.final){await host.screenshot({path:`cloud-native-${humans}-complete.png`});results.push({humans,target:Number(process.env.UI_TARGET||500),hands,actions,reconnects,final:v.final,scores:v.scores});fs.writeFileSync('public-release/completed-matches.json',JSON.stringify({results,errors},null,2));break;}
  if(v.hand!==lastHand){hands++;lastHand=v.hand;}
+ if(['dealing','shuffling'].includes(v.phase)){await host.waitForTimeout(200);continue;}
  let p=v.phase==='score'?host:pages[v.turn];if(!p)throw Error('Unexpected server bot pending '+JSON.stringify(v));
  await p.waitForFunction(({revision})=>game.cloudRevision>=revision,{revision:v.revision});
  if(process.env.UI_VISUAL && v.phase==='play' && !captures.has('menu')){captures.add('menu');await p.locator('#btnToggleTopOpts').click();await p.locator('#houseMenu805').waitFor({state:'visible'});await p.screenshot({path:'cloud-native-menu.png'});await p.locator('#houseMenu805').getByRole('button',{name:'Close',exact:true}).click();}

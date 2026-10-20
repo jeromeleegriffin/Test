@@ -1,3 +1,47 @@
+# Current live update — opening pause, shuffle and deal restored
+
+Live game: https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/
+
+Owner reported that Start immediately showed an auction already advanced by bots and requested a brief pause followed by shuffle and deal, not a literal minute. Root cause: RoomService.startGame immediately drove bots in the auction; the Cloudflare adapter bypassed the native runDealPresentation path.
+
+## Exact current source and deployment
+- Branch: work/cloudflare-846-native-adapter-20261019
+- Code commit: 80e1604dee30456ede21569b3f774b09fe62bfca
+- Worker: griffin-house-of-rooks-online
+- Version: aa209069-9cb8-4051-820c-c55ca5717eb8
+- Deployment: 0ead9dcf-e18f-4062-abf7-0b81315d3b7f
+- Existing live RoomDO namespace retained: bb1bf1c32b68451cbe5db6fee3066fa0
+- Exact deployed module matched the reviewed source. Session secret and both rate bindings retained. No migrations or room resets.
+- Changed implementation: cloudflare/live/adapter-live.js, build-live.py, worker-live.mjs; focused tests in deal-unit.mjs and live/tests.
+
+## New behavior
+Start and each next hand show approximately 1.5 seconds of table settling, then the existing approved native shuffle and all-seat card-by-card dealing animation. There is no new artwork or landscape change. The server persists a dealing/opening lock and rejects human bids while it is active; bots cannot bid during it. Each human's browser acknowledges its completed presentation. The auction opens after all human acknowledgments and a minimum 3.5-second opening. At ordinary 1x pace, the complete native sequence takes roughly 13 seconds including shuffle and dealing; faster selected paces shorten the animation while retaining the minimum opening. These are not a minute of waiting.
+
+If a phone disconnects or never acknowledges, a persisted 25-second server deadline releases the lock. Cloudflare's Durable Object alarm drives that recovery and broadcasts the resulting state without any host phone request. A reconnect during the opening retains the original seat/hand and presents the deal; a reconnect after bidding has begun does not replay the opening. A late/reconnected browser keeps its own bid controls hidden while its local deal is still running. Table closure cancels the opening and is never undone by an alarm.
+
+## Executed checks
+- Targeted local service/actor checks passed: initial bots and human bids locked; minimum opening; all-human readiness; unauthorized/stale acknowledgments rejected; disconnected-client deadline; persisted actor alarm; next-hand opening alarm; closing during the opening stays closed.
+- Repository builder reproduced the exact reviewed Worker bytes.
+- Local actual native browser UI at 393x844/360x740 passed default 1x and a MAX-host/3x-guest reload case. Actual settling, approved shuffle, cards in mid-deal and later bidding screenshots personally inspected. The default-paced local timeline finished about 12.9 seconds after Start and bidding followed around 13.2 seconds.
+- Exact LIVE URL timing test passed: initial server phase dealing, no bot bids at Start, bid controls hidden during opening, guest reload retained seat/hand, fast host waited for slower guest, no deadline fallback, zero page JavaScript errors. Browser-side stage times: host presentation 1.942s, shuffle 1.978s, flight 2.249s, finish 4.205s, auction 13.605s; guest after reload presentation 8.039s, shuffle 8.066s, flight 9.765s, finish 12.971s, auction 13.310s. These are observed test timings, not guaranteed network latency.
+- Exact LIVE API + real WebSocket test passed: no initial bot bids; early human bid returned DEAL_IN_PROGRESS; stale ready rejected. With no human acknowledgment or further room requests, an actor-alarm WebSocket update opened bidding after 25.156s. This is cloud alarm recovery, not proof of forced eviction/crash recovery.
+- Exact LIVE native two-human/two-bot match passed: target 500, 3 hands, 74 actions, 9 reload/reconnect checks, Team B, scores [-585,355], zero recorded page JavaScript errors. Repeated Next Hand openings were exercised.
+- Exact LIVE native four-human match passed: target 100, 1 hand, 46 actions, 3 reload/reconnect checks, Team B, scores [-195,85], zero recorded page JavaScript errors.
+- Hosted total across preserved releases is now 17 completed matches / 51 hands / 1,932 accepted or harness-counted actions. Abandoned closure/alarm tests and partial runs are not counted as completed matches.
+
+Earlier failed harness attempts are preserved as diagnostics: old gameplay script did not recognize native shuffling; a session GET timed out; reload observers attached too late; transient-frame waits expected cards already dealt before a slow screenshot returned. These were test transport/observation problems and not counted as passes. The final recorder installs before scripts and timestamps in-browser transitions; no product UI fix was layered for a screenshot-delay assumption. The normal game/server fixes are the opening lock and restored approved presentation described above.
+
+## Preservation / rollback / limits
+Existing live rooms already in progress had no opening record and are not restarted by this deployment. Already-open browser tabs should reload normally to receive the updated inline adapter; no service workers or player careers were cleared. Invite, QR and host Close Table remain implemented. Both private Workers, original secrets/namespaces, public GitHub Pages runtimes, production repository runtime and all approved assets remain unchanged.
+
+The exact prior source is 18a5e303ca7de25a9fe31b465e4407c3c02c3f82, prior version fe5f75c1-c401-43c5-97e9-8694591c9d95 / deployment aa828f27-3ab0-4383-a756-b46bb2877df5. It preserves closed-room tombstone protection but restores the known instant-auction behavior. A rollback to that protocol requires browser reloads; new clients otherwise keep trying the ready endpoint absent from the old server. Preserve SAME live namespace, secret and rate bindings, with no migration or data reset. Prefer the now-verified current 80e1604 source as the rollback checkpoint for future changes. Local exact prior module: public-release/rollback-fe5f75c1.mjs.
+
+Physical Android, phone-camera scanning/OS share UI, independent networks/roaming, subjective sound and production-scale monitoring/load remain unverified as previously authorized/deferred. Server bots are still the simple recovered bots, NOT X1. No concurrent premium UI assets were merged. All permanent project rules in the full historical record below remain binding and must pass forward in full.
+
+---
+
+# Historical live release and prior feature verification (preserved)
+
 # Current live update — Invite, QR and Close Table verified
 
 Live game: https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/
