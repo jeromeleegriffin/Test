@@ -1,0 +1,14 @@
+GRIFFIN HOUSE OF ROOKS — COMPLETE CUMULATIVE GAME — 2026-10-20
+
+THIS IS THE ONE CURRENT COMPLETE ZIP.
+Open index.html in the existing ZIP Loader for offline play. All game art, cards, voices, animations and offline X1 files are included.
+Play With Friends opens the current Cloudflare game in a new tab, so this ZIP never asks a phone to host the room. Join by Code accepts the eight-character Cloudflare room code and opens that invitation. Online play requires internet. The Cloudflare server is not a program that runs inside a ZIP.
+Current online game: https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/
+
+Included: latest premium UI, real fullscreen with separate Fit screen, cumulative gameplay repairs, all runtime assets, latest deployed Cloudflare adapters/Worker source, source rollback checkpoint, and complete handoff/report with screenshots. No duplicate full game or old large QA recordings. No private gate secret is exported; it remains on Cloudflare.
+The packaging identity is 846-premium-owner-repair-20261020-r7-cumulative. Its native game is exact R7 apart from release identity, service-worker inventory and the online-entry link. Deployed online version b579fde0-d6e1-4a42-b40f-aa85cd3ec7d3 uses its separately tested native R7 pin18cf361. The included Cloudflare builders retain that verified pin; do not substitute ZIP HTML into the Worker without updating guards/pins and retesting.
+
+Only the Cloudflare online beta was updated. Public GitHub Pages game builds and the original private Workers were not replaced. Master Brain AF history is retained with a shared continuity supplement.
+Native fullscreen may still trigger the persistent physical Android Chrome notice. Use Fit screen in the top menu if it blocks controls. Physical Android/cellular remains unverified. Server bots are the simple test policy, not X1; offline X1 is preserved.
+
+PACKAGE-SPECIFIC EXECUTED CHECKS: actual rendered lobby, Cloudflare Friends navigation, eight-character invitation, full native offline hand (9 human plays before completion), next hand, confirmed menu Leave; zero page errors. ZIP CRC and every manifest hash pass. These are desktop Chromium/mobile-viewport checks, not physical Android certification.
