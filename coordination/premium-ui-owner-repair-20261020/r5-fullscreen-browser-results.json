@@ -1,0 +1,30 @@
+[
+  {
+    "width": 393,
+    "native": {
+      "requests": 2,
+      "exits": 2,
+      "events": [
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    "errors": []
+  },
+  {
+    "width": 768,
+    "native": {
+      "requests": 2,
+      "exits": 2,
+      "events": [
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    "errors": []
+  }
+]

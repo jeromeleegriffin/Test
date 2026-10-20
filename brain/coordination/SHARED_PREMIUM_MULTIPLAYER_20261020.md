@@ -1,3 +1,7 @@
+# Current R5 update — read first
+
+R4 source is published and verified at e2200cfeec46978a40eadb9691ccaee27b27c4cb. R5 fullscreen/lean-package continuation has been read and is the current native integration baseline. Read `coordination/premium-ui-owner-repair-20261020/R5_NATIVE_INTEGRATION.md` before the historical R4 coordination text below. No deployment or combined acceptance claim.
+
 # Shared premium UI + multiplayer integration checkpoint — 2026-10-20
 
 Owner steering, around 04:19 America/New_York: another chat is working on multiplayer and has also received the fullscreen/ZIP-size concern. Combine efforts. Pause competing standalone game updates. This is a source-sharing/coordination checkpoint, NOT a merged release or deployment authorization.

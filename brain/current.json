@@ -1242,5 +1242,15 @@
     "physicalAndroidAccepted": false,
     "deployed": false,
     "recordedAt": "2026-10-20T05:09:54.239452+00:00"
+  },
+  "sharedPremiumMultiplayerIntegration": {
+    "status": "ISOLATED_SOURCE_PUBLICATION_AND_LOCAL_COMBINATION_IN_PROGRESS_NOT_DEPLOYED",
+    "record": "coordination/SHARED_PREMIUM_MULTIPLAYER_20261020.md",
+    "nativeBaseline": "R5 ZIP e2238fd2034a656d89a94febff085ed7889f364889010555a341e79a202f71a4",
+    "uiSourceBranch": "work/premium-ui-owner-repair-20261020",
+    "r4PublishedSource": "e2200cfeec46978a40eadb9691ccaee27b27c4cb",
+    "onlineBranch": "work/cloudflare-846-native-adapter-20261019",
+    "onlineHeadLastInspected": "9b2258f632041fb7263586d1fe37dce26792844d",
+    "deployed": false
   }
 }

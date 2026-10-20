@@ -5,6 +5,7 @@
     wide = () => matchMedia('(orientation:landscape)').matches;
   const buttons = [];
   let messageTimer;
+  let changing = false;
   function fullscreen() {
     return !!(document.fullscreenElement || document.webkitFullscreenElement);
   }
@@ -19,8 +20,9 @@
     }
   }
   async function toggle() {
+    if (changing) return;
+    changing = true;
     const was = fullscreen();
-    window.HORManualFullscreen831 = !was;
     try {
       if (was) {
         const exit = document.exitFullscreen || document.webkitExitFullscreen;
@@ -32,12 +34,17 @@
         if (!request) throw Error();
         await request.call(el);
       }
+      window.HORManualFullscreen831 = fullscreen();
+      clearTimeout(messageTimer);
+      if (!was) { try { screen.orientation?.unlock?.(); } catch (_) {} }
       paint();
     } catch (_) {
-      window.HORManualFullscreen831 = was;
+      window.HORManualFullscreen831 = fullscreen();
       for (const b of buttons) b.textContent = 'Full screen unavailable';
       clearTimeout(messageTimer);
       messageTimer = setTimeout(paint, 3500);
+    } finally {
+      changing = false;
     }
   }
   window.HORFullscreen831 = { toggle };
