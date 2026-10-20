@@ -193,6 +193,8 @@
       shotTheMoon: !!snap.shotTheMoon,
       trumpVoiceEvent790: snap.trump ? "cloud-trump:" + credentials.roomCode + ":" + snap.handNumber + ":" + snap.bidder + ":" + snap.trump : null,
       trumpVoiceRestore790: !presented,
+      trumpPresentation833: !!snap.trumpOpening,
+      trumpPresentationMs833: 1950,
       minBid: 100,
       passCount: snap.passCount || 0,
       bidder: snap.bidder,
@@ -205,6 +207,8 @@
       handsCount: snap.handCounts || [0, 0, 0, 0],
       targetScore: snap.targetScore || 500,
       lastTrickWinner: snap.lastTrickWinner,
+      trumpPresentation833: !!snap.trumpOpening,
+      trumpPresentationMs833: 1950,
       resolvingTrick: false,
       paused: false,
       bidStatus: snap.bidStatus || [null, null, null, null],
@@ -243,6 +247,8 @@
       handNumber: snap.handNumber,
       targetScore: view.targetScore,
       lastTrickWinner: view.lastTrickWinner,
+      trumpPresentation833: !!snap.trumpOpening,
+      trumpPresentationMs833: 1950,
       resolvingTrick: false,
       paused: false,
       bidStatus: view.bidStatus,
@@ -297,7 +303,7 @@
     if (presented?.hand === snap.handNumber) {
       for (let seat = 0; seat < 4; seat++) {
         const value = snap.bidStatus?.[seat];
-        if (value == null || value === presented.bids?.[seat] || tablePlayers[seat]?.isBot) continue;
+        if (value == null || value === presented.bids?.[seat]) continue;
         const moon = !!snap.shotTheMoon && seat === snap.bidder;
         const action = value === "pass" ? "pass" : moon ? "shootMoon" : "bid";
         window.HORBidVoice801?.receive({event:{id:"cloud-bid:" + credentials.roomCode + ":" + snap.handNumber + ":" + snap.revision + ":" + seat,player:seat,action,amount:Number(value)||0,clip:moon?"moon-"+(snap.handNumber%2+1):undefined}});
@@ -472,7 +478,7 @@
 
   async function sendAction(route, data) {
     if (!credentials || !latest) return;
-    if(latest.phase==="dealing" || (cloudDealOwner && cloudDealOwner.credentials===credentials && !cloudDealOwner.done))return;
+    if(latest.trumpOpening || latest.phase==="dealing" || (cloudDealOwner && cloudDealOwner.credentials===credentials && !cloudDealOwner.done))return;
     if (busy) {
       // A pushed next turn may arrive before the previous HTTP refresh finishes.
       // Keep one intention only for that exact authoritative room/hand/revision.

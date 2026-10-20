@@ -74,4 +74,17 @@ s=s.replace('      const action = chooseTestBotAction(state, seat);', '      if(
 s=s.replace('const delay = pendingOpening?Math.max(1,pendingOpening.expiresAt-Date.now()):status === "complete"', 'const pendingBot=savedRoom?.status==="playing"&&savedRoom.gameState?.phase==="bidding"?savedRoom.botTurn:null;const delay = pendingOpening?Math.max(1,pendingOpening.expiresAt-Date.now()):pendingBot?Math.max(1,pendingBot.due-Date.now()):status === "complete"')
 s=s.replace('room?.status==="playing"&&room.opening', 'room?.status==="playing"&&(room.opening||room.botTurn)')
 s=s.replace('await this.ctx.storage.setAlarm(Math.max(Date.now() + 6e4, room.lastActivityAt + IDLE_ROOM_MS));', 'const due=room.status==="playing"?(room.opening?.expiresAt||room.botTurn?.due):null;await this.ctx.storage.setAlarm(due?Math.max(Date.now()+1,due):Math.max(Date.now()+6e4,room.lastActivityAt+IDLE_ROOM_MS));')
+# Trump ceremony is a persisted server hold; bot decisions never batch past it.
+s='function beginCloudTrump(room){room.trumpOpening={handNumber:room.gameState.handNumber,expiresAt:Date.now()+2800};}\n'+s
+s=s.replace('    if(room.opening)throw Error("DEAL_IN_PROGRESS");', '    if(room.opening)throw Error("DEAL_IN_PROGRESS");\n    if(room.trumpOpening&&Date.now()<room.trumpOpening.expiresAt)throw Error("TRUMP_IN_PROGRESS");')
+s=s.replace('    room.gameState = result.state;', '    if(room.gameState.phase==="trump"&&result.state.phase==="play")beginCloudTrump(room);\n    room.gameState = result.state;')
+s=s.replace('      const state = room.gameState;', '      if(room.trumpOpening){if(Date.now()<room.trumpOpening.expiresAt)return;delete room.trumpOpening;room.revision++;await this.storage.put(roomId,room); }\n      const state = room.gameState;')
+s=s.replace('if(state.phase==="bidding"){const key=', 'if(["bidding","discard","trump","play"].includes(state.phase)){const key=')
+s=s.replace('due:Date.now()+1600', 'due:Date.now()+(state.phase==="bidding"?1600:1200)')
+s=s.replace('      opening:room.opening?', '      trumpOpening:room.trumpOpening?{handNumber:room.trumpOpening.handNumber,remainingMs:Math.max(0,room.trumpOpening.expiresAt-Date.now())}:null,\n      opening:room.opening?')
+s=s.replace('savedRoom.gameState?.phase==="bidding"?', 'savedRoom.gameState?')
+s=s.replace('const delay = pendingOpening?', 'const pendingTrump=savedRoom?.status==="playing"?savedRoom.trumpOpening:null;const delay = pendingTrump?Math.max(1,pendingTrump.expiresAt-Date.now()):pendingOpening?')
+s=s.replace('(room.opening||room.botTurn)', '(room.opening||room.trumpOpening||room.botTurn)')
+s=s.replace('(room.opening?.expiresAt||room.botTurn?.due)', '(room.opening?.expiresAt||room.trumpOpening?.expiresAt||room.botTurn?.due)')
+s=s.replace('"ROOM_EXISTS", "DEAL_IN_PROGRESS", "STALE_DEAL",', '"ROOM_EXISTS", "DEAL_IN_PROGRESS", "STALE_DEAL", "TRUMP_IN_PROGRESS",')
 (root/'cloudflare/live/worker-live.mjs').write_text(s)
