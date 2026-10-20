@@ -647,6 +647,17 @@
     return sendAction("play", { cardId });
   };
   window.hostStartNextHand = function () { return sendAction("next-hand", {}); };
+  // Page the approved chooser with a horizontal finger gesture, preserving taps.
+  const botGrid=document.getElementById("botPickerGrid");let botSwipe=null,botSwipeUntil=0;
+  botGrid?.addEventListener("touchstart",event=>{const t=event.touches;if(t.length===1)botSwipe={x:t[0].clientX,y:t[0].clientY};else botSwipe=null;},{passive:true});
+  botGrid?.addEventListener("touchend",event=>{const start=botSwipe;botSwipe=null;const t=event.changedTouches[0];if(!start||!t)return;const dx=t.clientX-start.x,dy=t.clientY-start.y;if(Math.abs(dx)<50||Math.abs(dx)<Math.abs(dy)*1.5)return;const nav=document.querySelector("#botPickerModal .house-legacy-nav"),buttons=nav?.querySelectorAll("button"),button=buttons?.[dx<0?1:0];event.preventDefault();botSwipeUntil=Date.now()+500;if(button&&!button.disabled)button.click();},{passive:false});
+  botGrid?.addEventListener("touchcancel",()=>{botSwipe=null;},{passive:true});
+  botGrid?.addEventListener("click",event=>{if(Date.now()<botSwipeUntil){event.preventDefault();event.stopImmediatePropagation();}},true);
+  const nativeShowBidUI=window.showBidUI;
+  window.showBidUI=function(...args){
+    if(credentials&&(latest?.phase!=="bidding"||game?.phase!=="bidding"||cloudDealOwner?.credentials===credentials&&!cloudDealOwner.done||!document.getElementById("shuffleOverlay")?.classList.contains("hidden")&&document.getElementById("shuffleOverlay")))return;
+    return nativeShowBidUI.apply(this,args);
+  };
   const nativeBotPicker=window.openBotPicker;
   async function cloudBotSeat(seat, name) {
     if(busy||!credentials)return;

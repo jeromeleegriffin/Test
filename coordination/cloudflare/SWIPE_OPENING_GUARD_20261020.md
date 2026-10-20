@@ -1,0 +1,11 @@
+# Bot chooser swipe and bid opening guard
+
+Owner reported bid box appearing before shuffle finished and requested swiping through bots. Continue from bot chooser commit 2d81d6bdbb86be9eb15dbcc9872a344f2badeb9d; no restart.
+
+Native showBidUI had no phase or cloud-presentation readiness guard. Added cloud-only wrapper requiring latest authoritative snapshot and native phase both bidding, completed local presentation, and hidden shuffle overlay. Offline native function remains unchanged. This blocks delayed/native UI calls during opening; exact origin of owner's premature call was not reproduced and must not be asserted as conclusively diagnosed. Earlier server readiness lock remains intact.
+
+Approved bot picker grid supports horizontal touch gestures (>=50px and dominant horizontal movement), paging through existing Previous/Next controls. Vertical gestures and normal taps remain; multi-touch/cancel ignored; suppress generated card click after swipe, including boundaries, to prevent accidental bot selection. Existing buttons retained; no layout/artwork changes.
+
+Executed local and hosted Chromium mobile viewport: synthesized browser TouchEvents swipe left/right, assert actual page indicator advances/returns, then choose/replace/remove bot. Native showBidUI deliberately invoked during initial opening and visible shuffle; bidConfirm remained hidden. Native bidding resumes after complete deal. Screenshots captured. Unit bot permissions/selection and opening readiness regression pass. Hosted exact source readback verified. Browser input simulation, not physical Android fingers/network proof; no full matches rerun for these UI-only changes.
+
+Live Worker griffin-house-of-rooks-online version 6b4f8e21-3d2f-4339-a4dd-34fe5d6086cc; deployment 18d8a8e8-17ea-45c9-83f2-73337a2f9ebf. Namespace bb1bf1c32b68451cbe5db6fee3066fa0 unchanged; secret_text retained; no migration. Rollback exact prior commit 2d81d6bdbb86be9eb15dbcc9872a344f2badeb9d / Worker bc1aa9c1-0d15-45cf-8858-5445fc7b2111, preserving existing bindings/data/secrets. Protected original/private Workers, Pages runtimes, production repository and Master Brain history unchanged. Full permanent preservation/continuity rules remain in LIVE_RELEASE_20261020.md. Simple server bots, not X1. No career/settings resets, generated artwork, paid services or landscape changes.

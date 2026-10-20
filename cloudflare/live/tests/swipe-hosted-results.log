@@ -1,0 +1,138 @@
+SEATS Single Seat ★1
++ Choose bot
+Open for a friend
+Partner
++ Choose partner
+Open for a friend
++ Choose bot
+Open for a friend
+Waiting for friends
+1 of 4 seated
+TABLE YSCMFVF6
+Invite
+QR
+Fill seats
+Start Game
+Close table
+BUTTONS [
+  {
+    text: 'Single Seat ★1',
+    onclick: null,
+    html: '<button class="wait-seat occupied is-me friends-person" id="waitSeat0" type="button" data-position="me" aria-label="Single Seat, view stat card"><strong>Single Seat <span class="hor-career-badge" role="button" tabindex="0" data-career-peer="cloud-sea'
+  },
+  {
+    text: '+ Choose bot\nOpen for a friend',
+    onclick: null,
+    html: '<button class="wait-seat friends-empty" id="waitSeat1" type="button" data-position="left" aria-label="Open seat. Choose a bot"><span class="friends-seat-choice804">+ Choose bot</span><small>Open for a friend</small></button>'
+  },
+  {
+    text: 'Partner\n+ Choose partner\nOpen for a friend',
+    onclick: null,
+    html: '<button class="wait-seat friends-empty" id="waitSeat2" type="button" data-position="top" aria-label="Partner seat. Choose a bot"><span class="friends-seat-role804">Partner</span><span class="friends-seat-choice804">+ Choose partner</span><small>Open '
+  },
+  {
+    text: '+ Choose bot\nOpen for a friend',
+    onclick: null,
+    html: '<button class="wait-seat friends-empty" id="waitSeat3" type="button" data-position="right" aria-label="Open seat. Choose a bot"><span class="friends-seat-choice804">+ Choose bot</span><small>Open for a friend</small></button>'
+  },
+  {
+    text: '',
+    onclick: null,
+    html: '<button class="btn" id="copyCodeBtn" type="button" aria-label="Copy table invitation" title="Copy table invitation" tabindex="0"></button>'
+  },
+  {
+    text: 'Invite',
+    onclick: null,
+    html: '<button class="btn" id="shareBtn" type="button">Invite</button>'
+  },
+  {
+    text: 'QR',
+    onclick: null,
+    html: '<button class="btn" id="showQrBtn" type="button" aria-hidden="false">QR</button>'
+  },
+  {
+    text: 'Fill seats',
+    onclick: null,
+    html: '<button class="btn" id="fillSeatsBtn" type="button">Fill seats</button>'
+  },
+  {
+    text: 'Start Game',
+    onclick: null,
+    html: '<button class="btn table-waiting" id="startBtn" type="button" disabled="" aria-live="polite">Start Game</button>'
+  },
+  {
+    text: 'Close table',
+    onclick: null,
+    html: '<button class="btn" id="leaveBtn" type="button">Close table</button>'
+  },
+  {
+    text: 'Game options',
+    onclick: null,
+    html: '<button class="hidden" id="openHostOptionsBtn" type="button" aria-hidden="true" tabindex="-1">Game options</button>'
+  },
+  {
+    text: '×',
+    onclick: null,
+    html: '<button aria-label="Close" class="qr-close-btn" id="closeQrBtn" type="button">×</button>'
+  },
+  {
+    text: 'New practice game',
+    onclick: null,
+    html: '<button class="hidden" id="restartPracticeBtn" type="button">New practice game</button>'
+  },
+  {
+    text: 'Full screen',
+    onclick: null,
+    html: '<button type="button" class="room-fullscreen831" aria-label="Full screen" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8V3h5m8 0h5v5m0 8v5h-5M8 21H3v-5"></path></svg><span>Full screen</span></button>'
+  }
+]
+PASS horizontal swipe forward/back
+BOTRESPONSE 200 {"phase":"waiting","roomId":"5dc9f8fd9d7c4113c72d02d77511195d4647a89ac8ce7d9d437578504bcd2c44","status":"waiting","revision":1,"handNumber":0,"players":[{"seat":0,"name":"Single Seat","team":0,"occupied":true,"isBot":false,"avatar":"hw23","voice":"avatar"},{"seat":1,"name":"Anchor","team":1,"occupied":true,"isBot":true,"avatar":"anchor"},{"seat":2,"name":"Open seat","team":0,"occupied":false,"isBot":false},{"seat":3,"name":"Open seat","team":1,"occupied":false,"isBot":false}],"occupiedSeats":[0,1],"dealer":null,"currentPlayer":0,"hand":[],"handCounts":[0,0,0,0],"bid":null,"highestBid":null,"bidder":null,"passCount":0,"trump":null,"trick":[],"ledColor":null,"scores":[0,0],"targetScore":500,"discardCount":null,"nestCount":0,"lastSummary":null,"matchResult":null,"canClaimRemaining":false}
+REOPEN {
+  players: [
+    {
+      id: 'cloud-seat-0',
+      name: 'Single Seat',
+      seat: 0,
+      team: 0,
+      isHost: true,
+      isBot: false,
+      bank: 0,
+      avatar: 'hw23',
+      voice: 'avatar',
+      humanHands: 0,
+      humanStyle: 'housePlayer',
+      humanHabit: 'House Player',
+      humanHow: 'Griffin House player.',
+      humanTitle: 'House Player',
+      careerPublic: [Object]
+    },
+    {
+      id: 'cloud-seat-1',
+      name: 'Anchor',
+      seat: 1,
+      team: 1,
+      isHost: false,
+      isBot: true,
+      bank: 0,
+      avatar: 'anchor',
+      voice: 'avatar',
+      careerPublic: [Object]
+    }
+  ],
+  html: 'eady book. No wild swings.</span></button><button type="button" class="bot-pick" data-bot="Samir" data-house-legacy-hidden=""><img src="assets/images/avatar-samir.svg" alt=""><b>Samir</b><i>Balanced</i><span>Not yet partnered · Steady book. No wild swings.</span></button><button type="button" class="bot-pick" data-bot="Jerome" data-house-legacy-hidden=""><img src="assets/characters077/jerome_founder-portrait.webp" alt=""><b>Jerome</b><i>Balanced</i><span>Not yet partnered · Steady book. No wild swings.</span></button></div><nav class="house-legacy-nav" aria-label="Menu pages"><button type="button" disabled="">Previous</button><span role="status" aria-live="polite">Page 1 of 10</span><button type="button">Next</button></nav>\n' +
+    '        <button class="btn" id="botPickerClose" type="button">Cancel</button>\n' +
+    '      <button type="button" id="botPickerRemove830">Remove bot</button></div>\n' +
+    '    </div>',
+  click: '(e) => {\n' +
+    '        if (p && p.id === myPeerId) {\n' +
+    '          e.preventDefault();\n' +
+    '          e.stopPropagation();\n' +
+    '          horShowCareerForPlayer(p);\n' +
+    '        } else onWaitSeatClick(seat);\n' +
+    '      }'
+}
+BOTRESPONSE 200 {"phase":"waiting","roomId":"5dc9f8fd9d7c4113c72d02d77511195d4647a89ac8ce7d9d437578504bcd2c44","status":"waiting","revision":2,"handNumber":0,"players":[{"seat":0,"name":"Single Seat","team":0,"occupied":true,"isBot":false,"avatar":"hw23","voice":"avatar"},{"seat":1,"name":"Rita","team":1,"occupied":true,"isBot":true,"avatar":"rita"},{"seat":2,"name":"Open seat","team":0,"occupied":false,"isBot":false},{"seat":3,"name":"Open seat","team":1,"occupied":false,"isBot":false}],"occupiedSeats":[0,1],"dealer":null,"currentPlayer":0,"hand":[],"handCounts":[0,0,0,0],"bid":null,"highestBid":null,"bidder":null,"passCount":0,"trump":null,"trick":[],"ledColor":null,"scores":[0,0],"targetScore":500,"discardCount":null,"nestCount":0,"lastSummary":null,"matchResult":null,"canClaimRemaining":false}
+BOTRESPONSE 200 {"phase":"waiting","roomId":"5dc9f8fd9d7c4113c72d02d77511195d4647a89ac8ce7d9d437578504bcd2c44","status":"waiting","revision":3,"handNumber":0,"players":[{"seat":0,"name":"Single Seat","team":0,"occupied":true,"isBot":false,"avatar":"hw23","voice":"avatar"},{"seat":1,"name":"Open seat","team":1,"occupied":false,"isBot":false},{"seat":2,"name":"Open seat","team":0,"occupied":false,"isBot":false},{"seat":3,"name":"Open seat","team":1,"occupied":false,"isBot":false}],"occupiedSeats":[0],"dealer":null,"currentPlayer":0,"hand":[],"handCounts":[0,0,0,0],"bid":null,"highestBid":null,"bidder":null,"passCount":0,"trump":null,"trick":[],"ledColor":null,"scores":[0,0],"targetScore":500,"discardCount":null,"nestCount":0,"lastSummary":null,"matchResult":null,"canClaimRemaining":false}
+PASS delayed native bid calls blocked during opening; bidding resumes after deal
+PASS native chooser, selected bot, replacement, removal, start remains disabled
