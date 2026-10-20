@@ -657,7 +657,7 @@
     if (busy) return;
     busy = true;
     try {
-      const snap = await api(roomPath("fill-bots"), { method: "POST", body: {} });
+      const snap = await api(roomPath("fill-bots"), { method: "POST", body: { seat: Number(seat) } });
       latest = snap;
       lastRevision = snap.revision;
       enterWaiting(snap);

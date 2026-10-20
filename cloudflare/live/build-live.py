@@ -48,6 +48,10 @@ s=s.replace('var fail = /* @__PURE__ */ __name((error) => {', 'var fail = /* @__
 s=s.replace('      if (request.method === "POST" && url.pathname === "/fill-bots") {', '      if (request.method === "POST" && url.pathname === "/close") return json(await this.service.closeTable(this.roomKey,token));\n      if (request.method === "POST" && url.pathname === "/fill-bots") {')
 s=s.replace('join|snapshot|ws-ticket|ws|fill-bots|', 'join|snapshot|ws-ticket|ws|close|fill-bots|')
 s=s.replace('      } catch {\n        try {\n          socket.close(1008, "Seat session expired");', '      } catch (error) {\n        if(error?.message==="ROOM_CLOSED") { try{socket.send(JSON.stringify({type:"room-closed"}));socket.close(1000,"Table closed");}catch(_){}continue; }\n        try {\n          socket.close(1008, "Seat session expired");')
+# A single native seat tap adds only that bot; bulk fill retains the existing API.
+s=s.replace('async fillOpenSeatsWithBots(roomId, token) {', 'async fillOpenSeatsWithBots(roomId, token, requestedSeat) {')
+s=s.replace('    for (const seat of open) {', '    if(requestedSeat!==undefined){if(!Number.isInteger(requestedSeat)||requestedSeat<1||requestedSeat>3)throw Error("INVALID_SEAT");if(room.seats[requestedSeat]!==null)throw Error("SEAT_OCCUPIED");}\n    for (const seat of requestedSeat===undefined?open:[requestedSeat]) {')
+s=s.replace('return json(await this.service.fillOpenSeatsWithBots(this.roomKey, token));', 'const body=await request.json();return json(await this.service.fillOpenSeatsWithBots(this.roomKey, token,body.seat));')
 # Persist opening acknowledgments so bots/humans cannot bid ahead of the native presentation.
 s='function beginCloudOpening(room) {room.opening={handNumber:room.gameState.handNumber,notBefore:Date.now()+3500,expiresAt:Date.now()+25000,readySeats:[]};}\n'+s
 s=s.replace('room.status = "playing";\n    room.revision += 1;', 'room.status = "playing";\n    beginCloudOpening(room);\n    room.revision += 1;')
