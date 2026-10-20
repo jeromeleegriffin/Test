@@ -1,0 +1,28 @@
+[
+  {
+    "width": 393,
+    "height": 740,
+    "nativeFullscreenRequests": 0,
+    "bidAndDiscardConfirmed": true,
+    "discardButton": {
+      "x": 86.5,
+      "y": 690,
+      "width": 220,
+      "height": 42
+    },
+    "errors": []
+  },
+  {
+    "width": 600,
+    "height": 900,
+    "nativeFullscreenRequests": 0,
+    "bidAndDiscardConfirmed": true,
+    "discardButton": {
+      "x": 190,
+      "y": 850,
+      "width": 220,
+      "height": 42
+    },
+    "errors": []
+  }
+]

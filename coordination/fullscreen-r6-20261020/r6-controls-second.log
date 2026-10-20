@@ -1,0 +1,5 @@
+page.waitForFunction: Timeout 35000ms exceeded.
+    at /workspace/scratch/43e36921068b/fullscreen-recording/r6-controls.cjs:3:734 {
+  log: [],
+  name: 'TimeoutError'
+}

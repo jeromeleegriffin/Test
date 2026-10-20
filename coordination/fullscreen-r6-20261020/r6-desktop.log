@@ -1,0 +1,57 @@
+PASS actual Chromium fullscreen entry, exit, external dismissal, rotation and ordinary taps 393
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#horRailFullscreenReview')[22m
+[2m    - locator resolved to <button type="button" title="Full screen" aria-label="Full screen" id="horRailFullscreenReview"></button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div id="horCareerBackdrop"></div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div id="horCareerBackdrop"></div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    46 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <div id="horCareerBackdrop"></div> intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+    at /workspace/scratch/43e36921068b/fullscreen-recording/r6-desktop.cjs:2:2268 {
+  log: [
+    "  - waiting for locator('#horRailFullscreenReview')",
+    '    - locator resolved to <button type="button" title="Full screen" aria-label="Full screen" id="horRailFullscreenReview"></button>',
+    '  - attempting click action',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - <div id="horCareerBackdrop"></div> intercepts pointer events',
+    '    - retrying click action',
+    '    - waiting 20ms',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - <div id="horCareerBackdrop"></div> intercepts pointer events',
+    '    - retrying click action',
+    '      - waiting 100ms',
+    '    46 × waiting for element to be visible, enabled and stable',
+    '       - element is visible, enabled and stable',
+    '       - scrolling into view if needed',
+    '       - done scrolling',
+    '       - <div id="horCareerBackdrop"></div> intercepts pointer events',
+    '     - retrying click action',
+    '       - waiting 500ms'
+  ],
+  name: 'TimeoutError'
+}
