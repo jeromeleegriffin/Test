@@ -5,7 +5,7 @@
     "phases": [
       {
         "phase": "dealing",
-        "current": 2,
+        "current": 3,
         "mine": 0,
         "bidder": -1,
         "goal": "Biddingin progress",
@@ -44,9 +44,9 @@
       },
       {
         "phase": "bidding",
-        "current": 2,
+        "current": 0,
         "mine": 0,
-        "bidder": -1,
+        "bidder": 3,
         "goal": "Biddingin progress",
         "utility": [
           {
@@ -86,7 +86,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 150to make bid",
+        "goal": "Need 140to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -125,7 +125,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 150to make bid",
+        "goal": "Need 140to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -164,7 +164,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 150to make bid",
+        "goal": "Need 140to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -254,8 +254,6 @@
       "legal card tap",
       "legal card tap",
       "legal card tap",
-      "legal card tap",
-      "legal card tap",
       "legal card tap"
     ],
     "passed": true,
@@ -269,37 +267,38 @@
         "lastDecision": {
           "phase": "play",
           "engine": "x1",
-          "hand": 47,
-          "seat": 2,
-          "epa": true,
+          "hand": 38,
+          "seat": 3,
+          "epa": false,
           "partnerRoute": false
         },
         "epa": false,
         "partnerSeat": null,
-        "hand": 48,
+        "hand": 40,
         "pending": false
       },
-      "decisions": 30,
+      "decisions": 24,
       "fallbacks": []
     },
     "toolsTested": true,
     "lastTested": true,
     "awardClearance": {
       "top": 84,
+      "count": 1,
       "headerBottom": 76
     },
     "runtimeTruth": {
-      "page": "846-premium-portrait-20261020-rc2",
-      "script": "846-premium-portrait-20261020-rc2",
-      "marker": "846-premium-portrait-20261020-rc2",
+      "page": "846-premium-portrait-20261020-rc3",
+      "script": "846-premium-portrait-20261020-rc3",
+      "marker": "846-premium-portrait-20261020-rc3",
       "worker": {
-        "build": "846-premium-portrait-20261020-rc2",
-        "cache": "house-of-rooks-846-premium-portrait-20261020-rc2"
+        "build": "846-premium-portrait-20261020-rc3",
+        "cache": "house-of-rooks-846-premium-portrait-20261020-rc3"
       },
-      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc2",
+      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc3",
       "coherent": true
     },
     "offlineReloadAndDeal": true,
-    "seconds": 36.61
+    "seconds": 35.01
   }
 ]

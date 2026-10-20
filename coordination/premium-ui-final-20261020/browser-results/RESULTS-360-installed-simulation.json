@@ -5,7 +5,7 @@
     "phases": [
       {
         "phase": "dealing",
-        "current": 2,
+        "current": 1,
         "mine": 0,
         "bidder": -1,
         "goal": "Biddingin progress",
@@ -46,7 +46,7 @@
         "phase": "bidding",
         "current": 2,
         "mine": 0,
-        "bidder": -1,
+        "bidder": 1,
         "goal": "Biddingin progress",
         "utility": [
           {
@@ -86,7 +86,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 130to make bid",
+        "goal": "Need 155to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -125,7 +125,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 130to make bid",
+        "goal": "Need 155to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -164,7 +164,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 130to make bid",
+        "goal": "Need 155to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -200,7 +200,7 @@
       },
       {
         "phase": "score",
-        "current": 1,
+        "current": 2,
         "mine": 0,
         "bidder": 0,
         "goal": "Handcomplete",
@@ -243,11 +243,15 @@
       "native bid",
       "native bid",
       "native bid",
+      "native bid",
       "six-card discard confirmed",
       "trump confirmed",
       "all speeds, menu return, Back cancel, native fullscreen enter/exit",
       "legal card tap",
       "Last Trick open and close",
+      "legal card tap",
+      "legal card tap",
+      "legal card tap",
       "legal card tap",
       "legal card tap",
       "legal card tap",
@@ -266,37 +270,38 @@
         "lastDecision": {
           "phase": "play",
           "engine": "x1",
-          "hand": 36,
-          "seat": 2,
-          "epa": true,
+          "hand": 47,
+          "seat": 1,
+          "epa": false,
           "partnerRoute": false
         },
         "epa": false,
         "partnerSeat": null,
-        "hand": 37,
+        "hand": 48,
         "pending": false
       },
-      "decisions": 21,
+      "decisions": 30,
       "fallbacks": []
     },
     "toolsTested": true,
     "lastTested": true,
     "awardClearance": {
       "top": 48,
+      "count": 1,
       "headerBottom": 40
     },
     "runtimeTruth": {
-      "page": "846-premium-portrait-20261020-rc2",
-      "script": "846-premium-portrait-20261020-rc2",
-      "marker": "846-premium-portrait-20261020-rc2",
+      "page": "846-premium-portrait-20261020-rc3",
+      "script": "846-premium-portrait-20261020-rc3",
+      "marker": "846-premium-portrait-20261020-rc3",
       "worker": {
-        "build": "846-premium-portrait-20261020-rc2",
-        "cache": "house-of-rooks-846-premium-portrait-20261020-rc2"
+        "build": "846-premium-portrait-20261020-rc3",
+        "cache": "house-of-rooks-846-premium-portrait-20261020-rc3"
       },
-      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc2",
+      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc3",
       "coherent": true
     },
     "offlineReloadAndDeal": true,
-    "seconds": 30.78
+    "seconds": 35.88
   }
 ]

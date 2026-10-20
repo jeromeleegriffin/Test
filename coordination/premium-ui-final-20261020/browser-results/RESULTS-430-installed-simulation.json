@@ -44,9 +44,9 @@
       },
       {
         "phase": "bidding",
-        "current": 2,
+        "current": 3,
         "mine": 0,
-        "bidder": -1,
+        "bidder": 2,
         "goal": "Biddingin progress",
         "utility": [
           {
@@ -86,7 +86,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 105to make bid",
+        "goal": "Need 120to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -125,7 +125,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 105to make bid",
+        "goal": "Need 120to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -164,7 +164,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 105to make bid",
+        "goal": "Need 120to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -200,7 +200,7 @@
       },
       {
         "phase": "score",
-        "current": 3,
+        "current": 2,
         "mine": 0,
         "bidder": 0,
         "goal": "Handcomplete",
@@ -239,6 +239,7 @@
       }
     ],
     "actions": [
+      "native bid",
       "native bid",
       "six-card discard confirmed",
       "trump confirmed",
@@ -283,20 +284,21 @@
     "lastTested": true,
     "awardClearance": {
       "top": 56,
+      "count": 1,
       "headerBottom": 48
     },
     "runtimeTruth": {
-      "page": "846-premium-portrait-20261020-rc2",
-      "script": "846-premium-portrait-20261020-rc2",
-      "marker": "846-premium-portrait-20261020-rc2",
+      "page": "846-premium-portrait-20261020-rc3",
+      "script": "846-premium-portrait-20261020-rc3",
+      "marker": "846-premium-portrait-20261020-rc3",
       "worker": {
-        "build": "846-premium-portrait-20261020-rc2",
-        "cache": "house-of-rooks-846-premium-portrait-20261020-rc2"
+        "build": "846-premium-portrait-20261020-rc3",
+        "cache": "house-of-rooks-846-premium-portrait-20261020-rc3"
       },
-      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc2",
+      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc3",
       "coherent": true
     },
     "offlineReloadAndDeal": true,
-    "seconds": 31.71
+    "seconds": 35.19
   }
 ]

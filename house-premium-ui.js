@@ -140,15 +140,21 @@
     const width = range.getBoundingClientRect().width;
     if (width > available) {
       const size = parseFloat(getComputedStyle(node).fontSize);
-      node.style.fontSize = (size * available / width).toFixed(2) + 'px';
+      node.style.fontSize = ((size * available) / width).toFixed(2) + 'px';
     }
     range.detach();
   }
   const refresh = () => {
     const a = scoreA?.textContent.trim() || '0',
       b = scoreB?.textContent.trim() || '0';
-    if (scoreOutA.textContent !== a) { scoreOutA.textContent = a; fitText(scoreOutA); }
-    if (scoreOutB.textContent !== b) { scoreOutB.textContent = b; fitText(scoreOutB); }
+    if (scoreOutA.textContent !== a) {
+      scoreOutA.textContent = a;
+      fitText(scoreOutA);
+    }
+    if (scoreOutB.textContent !== b) {
+      scoreOutB.textContent = b;
+      fitText(scoreOutB);
+    }
     const now = new Date();
     const display = now.toLocaleTimeString(undefined, {
       hour: 'numeric',
@@ -261,7 +267,9 @@
     document.body.dataset.housePremiumLayout = allowPanel ? 'installed-console' : 'browser-top';
     refresh();
     [scoreOutA, scoreOutB, clock].forEach(fitText);
-    const noticeTop = Math.ceil(Math.max(plaque.getBoundingClientRect().bottom, bar.getBoundingClientRect().bottom) + 8);
+    const noticeTop = Math.ceil(
+      Math.max(plaque.getBoundingClientRect().bottom, bar.getBoundingClientRect().bottom) + 8
+    );
     document.body.style.setProperty('--house-premium-notice-top', noticeTop + 'px');
   }
   let queued = false;
@@ -322,5 +330,13 @@
   if (document.readyState === 'loading')
     addEventListener('DOMContentLoaded', schedule, { once: true });
   schedule();
-  window.HORPremiumUI1020 = { refresh, layout, fitText, noticeLimit: () => document.body.classList.contains('in-game') && matchMedia('(orientation:portrait)').matches ? 1 : undefined };
+  window.HORPremiumUI1020 = {
+    refresh,
+    layout,
+    fitText,
+    noticeLimit: () =>
+      document.body.classList.contains('in-game') && matchMedia('(orientation:portrait)').matches
+        ? 1
+        : undefined,
+  };
 })();
