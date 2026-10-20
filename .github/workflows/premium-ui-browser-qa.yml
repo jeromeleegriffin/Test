@@ -29,10 +29,10 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          p=Path('game060.js');p.write_text(p.read_text().replace('846-complete-repairs-20261019','846-premium-portrait-20261020-rc2').replace('846-premium-portrait-20261020-rc1','846-premium-portrait-20261020-rc2'))
+          p=Path('game060.js');p.write_text(p.read_text().replace('846-complete-repairs-20261019','846-premium-portrait-20261020-rc3').replace('846-premium-portrait-20261020-rc1','846-premium-portrait-20261020-rc3').replace('846-premium-portrait-20261020-rc2','846-premium-portrait-20261020-rc3'))
           PY
           npm ci --ignore-scripts --no-audit --no-fund
-          npx prettier --write game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css asset-loading772.js
+          npx prettier --write game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css asset-loading772.js progression.js
           npm run check
       - run: pip install playwright==1.56.0
       - run: playwright install --with-deps chromium
@@ -64,10 +64,10 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          p=Path('game060.js');p.write_text(p.read_text().replace('846-complete-repairs-20261019','846-premium-portrait-20261020-rc2').replace('846-premium-portrait-20261020-rc1','846-premium-portrait-20261020-rc2'))
+          p=Path('game060.js');p.write_text(p.read_text().replace('846-complete-repairs-20261019','846-premium-portrait-20261020-rc3').replace('846-premium-portrait-20261020-rc1','846-premium-portrait-20261020-rc3').replace('846-premium-portrait-20261020-rc2','846-premium-portrait-20261020-rc3'))
           PY
           npm ci --ignore-scripts --no-audit --no-fund
-          npx prettier --write game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css asset-loading772.js
+          npx prettier --write game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css asset-loading772.js progression.js
           npm run check
       - run: pip install playwright==1.56.0
       - run: playwright install --with-deps chromium
@@ -91,10 +91,10 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          p=Path('game060.js');p.write_text(p.read_text().replace('846-complete-repairs-20261019','846-premium-portrait-20261020-rc2').replace('846-premium-portrait-20261020-rc1','846-premium-portrait-20261020-rc2'))
+          p=Path('game060.js');p.write_text(p.read_text().replace('846-complete-repairs-20261019','846-premium-portrait-20261020-rc3').replace('846-premium-portrait-20261020-rc1','846-premium-portrait-20261020-rc3').replace('846-premium-portrait-20261020-rc2','846-premium-portrait-20261020-rc3'))
           PY
           npm ci --ignore-scripts --no-audit --no-fund
-          npx prettier --write game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css asset-loading772.js
+          npx prettier --write game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css asset-loading772.js progression.js
       - uses: actions/download-artifact@v4
         with:
           pattern: premium-ui-*
@@ -104,6 +104,6 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css asset-loading772.js coordination/premium-ui-final-20261020/browser-results
+          git add game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css asset-loading772.js progression.js coordination/premium-ui-final-20261020/browser-results
           git diff --cached --quiet || git commit -m 'Preserve formatted premium RC1 source and browser matrix evidence'
           git push origin HEAD:work/premium-ui-final-integration-20261020

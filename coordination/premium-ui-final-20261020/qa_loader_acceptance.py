@@ -20,7 +20,7 @@ with sync_playwright() as pw:
   page.frame_locator('#frame').locator('#soloPracticeBtn').wait_for(state='visible',timeout=120000)
   frame=page.locator('#frame').element_handle().content_frame()
   report['loadedIdentity']=frame.evaluate('window.HOR_BUILD')
-  assert report['loadedIdentity']=='846-premium-portrait-20261020-rc2'
+  assert report['loadedIdentity']=='846-premium-portrait-20261020-rc3'
   page.screenshot(path=str(out/'loader-entry.png'))
   if frame.evaluate('document.querySelector("#tutorialOverlay")?.open'):
    frame.evaluate('document.querySelector("#tutorialSkip")?.click()')

@@ -1,7 +1,7 @@
 // Griffin House of Rooks runtime identity for diagnostics and offline verification.
-window.HOR_LIVE_VERSION = '846-premium-portrait-20261020-rc2';
-window.HOR_BUILD = '846-premium-portrait-20261020-rc2';
-window.GHR_BUILD = 'Premium portrait review RC2 20261020';
+window.HOR_LIVE_VERSION = '846-premium-portrait-20261020-rc3';
+window.HOR_BUILD = '846-premium-portrait-20261020-rc3';
+window.GHR_BUILD = 'Premium portrait review RC3 20261020';
 window.HORRuntimeTruth = async function () {
   const controller = navigator.serviceWorker && navigator.serviceWorker.controller;
   const worker = controller
@@ -23,11 +23,11 @@ window.HORRuntimeTruth = async function () {
     worker,
     controller: controller && controller.scriptURL,
     coherent:
-      window.HOR_PAGE_BUILD === '846-premium-portrait-20261020-rc2' &&
-      window.HOR_SCRIPT_BUILD === '846-premium-portrait-20261020-rc2' &&
-      window.HOR_BUILD === '846-premium-portrait-20261020-rc2' &&
+      window.HOR_PAGE_BUILD === '846-premium-portrait-20261020-rc3' &&
+      window.HOR_SCRIPT_BUILD === '846-premium-portrait-20261020-rc3' &&
+      window.HOR_BUILD === '846-premium-portrait-20261020-rc3' &&
       !!worker &&
-      worker.build === '846-premium-portrait-20261020-rc2' &&
-      worker.cache === 'house-of-rooks-846-premium-portrait-20261020-rc2',
+      worker.build === '846-premium-portrait-20261020-rc3' &&
+      worker.cache === 'house-of-rooks-846-premium-portrait-20261020-rc3',
   };
 };
