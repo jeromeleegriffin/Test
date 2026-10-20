@@ -155,6 +155,7 @@
 
   function gameSnapshot(snap) {
     if(cloudDealOwner && cloudDealOwner.credentials===credentials && cloudDealOwner.hand===snap.handNumber && !cloudDealOwner.done) return;
+    const restoringCloudView=!presented;
     const beginDeal=snap.phase==="dealing" && (!cloudDealOwner || cloudDealOwner.credentials!==credentials || cloudDealOwner.hand!==snap.handNumber);
 
     if (!["score", "complete"].includes(snap.phase)) {
@@ -209,7 +210,7 @@
       lastTrickWinner: snap.lastTrickWinner,
       trumpPresentation833: !!snap.trumpOpening,
       trumpPresentationMs833: 1950,
-      resolvingTrick: false,
+      resolvingTrick: !!snap.resolvingTrick,
       paused: false,
       bidStatus: snap.bidStatus || [null, null, null, null],
       discardCount: snap.discardCount || 0,
@@ -220,11 +221,12 @@
       nestFlipStage: 0,
       widowSpread: snap.widowSpread || [],
       handPoints: snap.handPoints || [0, 0],
+      recentTricks: snap.recentTricks || [],
       trumpClaimPlayer: snap.canClaimRemaining ? credentials.seat : null,
       claimDeclined: !!snap.claimDeclined,
       claimAnimation: null,
       claimAnimating: false,
-      resolvingTrickPoints: 0,
+      resolvingTrickPoints: Number(snap.resolvingTrickPoints)||0,
     };
     const current = game || {};
     Object.assign(current, {
@@ -249,7 +251,7 @@
       lastTrickWinner: view.lastTrickWinner,
       trumpPresentation833: !!snap.trumpOpening,
       trumpPresentationMs833: 1950,
-      resolvingTrick: false,
+      resolvingTrick: !!snap.resolvingTrick,
       paused: false,
       bidStatus: view.bidStatus,
       discardCount: view.discardCount,
@@ -262,7 +264,7 @@
       claimDeclined: view.claimDeclined,
       claimAnimation: null,
       claimAnimating: false,
-      resolvingTrickPoints: 0,
+      resolvingTrickPoints: Number(snap.resolvingTrickPoints)||0,
       hands,
       myHand: hand,
       nest: Array.from({ length: Number(snap.nestCount) || 0 }, () => null),
@@ -314,7 +316,7 @@
     presented = {hand:snap.handNumber,bids:[...(snap.bidStatus||[])],trump:snap.trump,moon:!!snap.shotTheMoon};
 
     if (snap.lastSummary) {
-      const signature = String(snap.handNumber) + ":" + String(snap.revision);
+      const signature = credentials.roomCode+":"+snap.handNumber+":"+JSON.stringify(snap.scores);
       if (signature !== lastScoreSignature) {
         lastScoreSignature = signature;
         const nestCards = snap.nestCards || [];
@@ -322,12 +324,9 @@
         const nestWinnerName = snap.lastSummary.nestTeam != null && typeof teamLabel === "function"
           ? teamLabel(snap.lastSummary.nestTeam)
           : "Winning team";
-        try { showScoreModal({ ...snap.lastSummary, nestCards, nestPts, nestWinnerName }); } catch (_) {}
-        wireCloudScoreButton(!!snap.matchResult);
-        if (snap.matchResult && !window._horCloudWinnerShown) {
-          window._horCloudWinnerShown = true;
-          try { showWinCelebration(snap.matchResult === "Team A" ? teamLabel(0) : snap.matchResult === "Team B" ? teamLabel(1) : snap.matchResult, snap.scores); } catch (_) {}
-        }
+        const summary={...snap.lastSummary,nestCards,nestPts,nestWinnerName,careerEvent:{matchId:"cloud:"+credentials.roomCode,hand:snap.handNumber}};
+        try { if(restoringCloudView||typeof presentCompletedHandV12!=="function")showScoreModal(summary);else presentCompletedHandV12(summary); } catch(_){showScoreModal(summary);}
+
       }
     }
     if (snap.phase === "redeal" && credentials.seat === 0 && redealRevision !== snap.revision) {
@@ -478,7 +477,7 @@
 
   async function sendAction(route, data) {
     if (!credentials || !latest) return;
-    if(latest.trumpOpening || latest.phase==="dealing" || (cloudDealOwner && cloudDealOwner.credentials===credentials && !cloudDealOwner.done))return;
+    if(latest.resolvingTrick || latest.trumpOpening || latest.phase==="dealing" || (cloudDealOwner && cloudDealOwner.credentials===credentials && !cloudDealOwner.done))return;
     if (busy) {
       // A pushed next turn may arrive before the previous HTTP refresh finishes.
       // Keep one intention only for that exact authoritative room/hand/revision.
@@ -664,6 +663,8 @@
     if(credentials&&(latest?.phase!=="bidding"||game?.phase!=="bidding"||cloudDealOwner?.credentials===credentials&&!cloudDealOwner.done||!document.getElementById("shuffleOverlay")?.classList.contains("hidden")&&document.getElementById("shuffleOverlay")))return;
     return nativeShowBidUI.apply(this,args);
   };
+  const nativeCloudScore=window.showScoreModal;
+  window.showScoreModal=function(...args){const result=nativeCloudScore.apply(this,args);if(credentials)wireCloudScoreButton(!!latest?.matchResult);return result;};
   const nativeBotPicker=window.openBotPicker;
   async function cloudBotSeat(seat, name) {
     if(busy||!credentials)return;
