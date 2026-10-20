@@ -1,0 +1,14 @@
+[
+  {
+    "width": 393,
+    "requests": 3,
+    "exits": 3,
+    "errors": []
+  },
+  {
+    "width": 600,
+    "requests": 3,
+    "exits": 3,
+    "errors": []
+  }
+]
