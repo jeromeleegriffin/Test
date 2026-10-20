@@ -1,0 +1,8 @@
+{
+  "guestCloseDenied": true,
+  "activeGameClosed": true,
+  "closeIdempotent": true,
+  "oldSeatTokensCannotReopen": true,
+  "oldCodeJoinDenied": true,
+  "freshTableCreated": true
+}

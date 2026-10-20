@@ -1,3 +1,39 @@
+# Current live update — Invite, QR and Close Table verified
+
+Live game: https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/
+
+Owner requested functional Invite, QR and host Close Table on October 20, 2026 around 01:10 Eastern. All three are now deployed and verified. Reload an already-open game normally to receive the updated adapter. No service workers or player careers were cleared.
+
+## Current source / deployment
+- Source commit: 18a5e303ca7de25a9fe31b465e4407c3c02c3f82
+- Branch: work/cloudflare-846-native-adapter-20261019
+- Worker version: fe5f75c1-c401-43c5-97e9-8694591c9d95
+- Deployment: aa828f27-3ab0-4383-a756-b46bb2877df5
+- SAME SQLite namespace: bb1bf1c32b68451cbe5db6fee3066fa0
+- Deployed source readback matched reviewed code; secret and rate bindings retained. No migration or room reset.
+- Changed implementation: cloudflare/live/adapter-live.js, build-live.py, worker-live.mjs, close-unit.mjs.
+
+## Behavior
+Invite uses the game's existing native sharing control to share the live site's room-specific URL and eight-character table code. QR uses the game's existing QR artwork/control and encodes that same room-specific URL. Opening either link pre-fills the Cloudflare Join by Code form. It does not auto-seat or silently replace another human. Existing reserved seats continue to reconnect first. No reconnect/seat token appears in the share URL.
+
+The host's waiting-room Leave control is now Close table. It confirms the action and closes the room on the server for everyone. In-game host leave paths also route to confirmed closure. Guests retain Leave table with their seat reserved. A closed room broadcasts a closure event, clears only that room's saved Cloudflare credential, notifies connected players and returns them to the lobby. Closed codes/tokens cannot join, restart or reopen that room. Repeated close by the authenticated host is idempotent. The server retains a closed tombstone until normal idle cleanup instead of deleting/recreating namespaces. The host can create a new table with a fresh code immediately.
+
+## Actual executed checks
+- Unit service: guest and wrong-token close denied; host close/idempotency; closed snapshot/join/start denied; tombstone retained; new table allowed.
+- Local native browser UI using a declared isolated HTTPS preview over the local service: native Invite payload captured, QR generated and decoded with jsQR, invitation prefilled, guest joined, host closed, both browsers alerted/returned, room credentials cleared, new table created. Zero page JavaScript errors. The localhost-only attempt correctly hid QR; the first guest-name test paused because the harness had not clicked Change player. These interrupted attempts were not passes or product repairs.
+- EXACT live URL: same complete Invite/QR/join/close/new-table UI flow passed with independent mobile-sized browser identities. QR PNG pixels decoded to the same exact URL as Invite; that URL was actually opened and joined by the second browser. Both browsers received the closure message. Zero page JavaScript errors. QR, invite form and fresh-table screenshots personally inspected at 393x844 and 360x740. Automated test QR screenshots show test tables that were subsequently closed, not reusable owner invitations.
+- Live API: guest close denied; close after game start passed; repeated host close passed; both previous seat tokens received 410 ROOM_CLOSED; new join on closed code rejected; fresh table create passed.
+- Exact current-version native gameplay regression: two humans plus two server bots, target 100, one hand, 24 actions, three reload/reconnect checks, Team A, scores [150,-195], zero recorded page JavaScript errors. This brings hosted completions across preserved versions to 15 matches / 47 hands / 1,812 accepted or harness-counted actions. Closure test games are not counted as completed matches.
+
+Physical phone-camera scanning and Android OS share-sheet interaction remain unverified; the actual QR image was decoded and the shared payload/link were exercised in browsers. This does not reverse the owner's decision to defer physical testing. X1 is still not integrated. All earlier unverified operational limits below remain.
+
+## Exact rollback
+Prior live code: 01cc60176ea21d5dc5b65488ce254fa4307f1f12; version 13374624-c1f0-423b-89e1-0c554dc4e590, deployment 21997efa-e187-4abd-bc15-25de467f5fc7. Preserve that exact historical module, but do not blindly redeploy it after tables have been closed: it lacks the new closed-tombstone read guard. To undo sharing UI alone, retain the current closed-state guard, closure protocol and event handling. For future changes, the safe fully verified rollback checkpoint is current commit 18a5e303ca7de25a9fe31b465e4407c3c02c3f82 / version fe5f75c1-c401-43c5-97e9-8694591c9d95, with SAME namespace, secret and rate bindings and no migration. An emergency pause can disable only the live workers.dev route while preserving stored rooms. Never resurrect closed rooms or reset storage. Local preserved exact code: public-release/rollback-13374624.mjs. Original private Workers and both public GitHub Pages runtimes remain untouched.
+
+The following initial launch record is preserved as history; its source/deployment identifiers and invitation limitation are superseded by this current update. Full permanent project rules remain reproduced below and must pass forward.
+
+---
+
 # Griffin House of Rooks — Live Cloudflare beta release
 
 Owner authorization: October 20, 2026, 00:51 Eastern. Jerome instructed: "I want to continue where we're at, even if we haven't ran physical Android network testing. We can do it after we get it live." This explicitly supersedes the earlier physical-device gate on launch. Those tests remain unverified; they were not relabeled as passed.

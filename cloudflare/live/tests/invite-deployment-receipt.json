@@ -1,0 +1,12 @@
+{
+  "sourceCommit": "18a5e303ca7de25a9fe31b465e4407c3c02c3f82",
+  "worker": "griffin-house-of-rooks-online",
+  "version": "fe5f75c1-c401-43c5-97e9-8694591c9d95",
+  "deployment": "aa828f27-3ab0-4383-a756-b46bb2877df5",
+  "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+  "sourceReadbackMatches": true,
+  "namespaceRetained": true,
+  "secretRetained": true,
+  "rateLimitsRetained": true,
+  "rollbackCommit": "01cc60176ea21d5dc5b65488ce254fa4307f1f12"
+}
