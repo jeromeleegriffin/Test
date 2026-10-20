@@ -1,0 +1,87 @@
+{
+  "approved_reference": "cinematic_griffin_and_raven_cardroom.png",
+  "approved_reference_sha256": "ba614af1e8d5b7d233e61e30e8a5e0fc6d4e19452a2e19ef4eaab96fbaeb397b",
+  "asset_pipeline": "Pixel crops from owner-approved screenshot; finished photographed physical surrounds and button art. Only dynamic text faces reconstructed with image texture.",
+  "assets": [
+    {
+      "asset": "clock-enamel-inset.png",
+      "sha256": "93323d83919f41bb4c13200c5764ff5d33551a86e527bdadaa906236a75858dc",
+      "bytes": 2913
+    },
+    {
+      "asset": "goal-enamel-inset.png",
+      "sha256": "5de28e3807b041e23138005de48d6dcea741bd58c7458d1aa86f22d1b90b526f",
+      "bytes": 3564
+    },
+    {
+      "asset": "score-blank-photo-reference.png",
+      "sha256": "68183a358ab4b06b71a8de58e24e0cf107bfa318a5b9d990578f86a920c92b56",
+      "bytes": 3655
+    },
+    {
+      "asset": "score-number-inset.png",
+      "sha256": "f32427fb6225deb27117568a112ccc3ed541ec9bc9d0e86df124f517392d2e20",
+      "bytes": 153
+    },
+    {
+      "asset": "speed-back-inlay.png",
+      "sha256": "c3659bf74cd07a112671f19e43f20f45b69a425340ca2cb0d2a140a67d729e56",
+      "bytes": 14169
+    },
+    {
+      "asset": "speed-dark-inset.png",
+      "sha256": "ab06920139f8a782948f2aa0fab55de2ce072a9c7cd8f21f57e3e2711120ad5c",
+      "bytes": 2909
+    },
+    {
+      "asset": "speed-frame-photo.png",
+      "sha256": "ed141ceaa93b984f6cba4d75a72e8965a7d4077adb08957063b1d7d74a2ddafd",
+      "bytes": 53963
+    },
+    {
+      "asset": "speed-gold-inset.png",
+      "sha256": "b4c0423362b66f1e44d7d57db5bb843f69d434ed9458f49ecf71685788657f33",
+      "bytes": 2927
+    },
+    {
+      "asset": "speed-selected-photo.png",
+      "sha256": "b0c2b23c18353a9f03fe1137f124bba17adfab32b6bc01f262c42c8bda8f8b3f",
+      "bytes": 7916
+    },
+    {
+      "asset": "speed-unselected-photo.png",
+      "sha256": "ec82bbc8cf8bb89756cff4b46fecb2b8fa767c0f4213c3c46d6640eaf149a934",
+      "bytes": 6739
+    },
+    {
+      "asset": "top-match-plaque.png",
+      "sha256": "9356088486ea42c9f9d00c3eb68a40c022130368bfaba3dd4d5b70758d589004",
+      "bytes": 81914
+    },
+    {
+      "asset": "utility-back.png",
+      "sha256": "59303e3825fa2f9b8d962b627b9817d9be922f00e6a7eb509b2390e8feb2e08e",
+      "bytes": 9936
+    },
+    {
+      "asset": "utility-fullscreen.png",
+      "sha256": "f687bf0a2c8d075718e5d68664fed58664335bf7274faed6587587876166085a",
+      "bytes": 8207
+    },
+    {
+      "asset": "utility-menu.png",
+      "sha256": "0768233ddbdb42aaa6ac39f0c21148f34589a2450cf1bf1861a3ff01be549822",
+      "bytes": 8365
+    },
+    {
+      "asset": "walnut-console-live-fields.png",
+      "sha256": "90bcee7d0796b63db8fe64cbee08ab76556f5c87d6e0dd447935beaeafe0871a",
+      "bytes": 244485
+    },
+    {
+      "asset": "walnut-console-master.png",
+      "sha256": "912500ecbecac39bbbf681ccbc1baf0b17c0eb1757e6881bdb067e3ccda7e329",
+      "bytes": 259806
+    }
+  ]
+}

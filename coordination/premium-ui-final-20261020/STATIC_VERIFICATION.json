@@ -1,0 +1,78 @@
+{
+  "rootScriptSyntax": {
+    "passed": true,
+    "count": 67,
+    "errors": []
+  },
+  "entryDependencies": {
+    "count": 124,
+    "missing": []
+  },
+  "offlineDependencies": {
+    "count": 1470,
+    "duplicates": 0,
+    "missing": []
+  },
+  "newCssDependencies": {
+    "house-premium-ui.css": {
+      "references": [
+        "assets/house-premium-console/score-number-inset.png",
+        "assets/house-premium-console/utility-fullscreen.png",
+        "assets/house-premium-console/utility-menu.png",
+        "assets/house-premium-console/utility-back.png",
+        "assets/house-premium-console/speed-frame-photo.png",
+        "assets/house-premium-console/speed-unselected-photo.png",
+        "assets/house-premium-console/speed-unselected-photo.png",
+        "assets/house-premium-console/speed-selected-photo.png",
+        "assets/house-premium-console/clock-enamel-inset.png",
+        "assets/house-premium-console/goal-enamel-inset.png"
+      ],
+      "missing": []
+    },
+    "fullscreen-portrait-review.css": {
+      "references": [],
+      "missing": []
+    }
+  },
+  "archiveRecovery": {
+    "GRIFFIN_HOUSE_UI_TEST_DIAGNOSTIC_SUPPLEMENT_20261020.zip": {
+      "sha256": "9a612eeac7bf6339eb394a29d8679c283c32404ab3938d34e581e50a5328adb0",
+      "crcError": null,
+      "members": 21
+    },
+    "GRIFFIN_HOUSE_PREMIUM_UI_CONTINUATION_20261020.zip": {
+      "sha256": "f00d075042f831fdc97602bc87bbe568e3606874a1b4384c39a4bd58321110c6",
+      "crcError": null,
+      "members": 71
+    },
+    "GRIFFIN_HOUSE_PREMIUM_ASSET_UI_RECOVERY_20261020.zip": {
+      "sha256": "78e05af563bbdddaec1f3061d009774ff7222cb2d2f5892a1a761aa2d7e9e5be",
+      "crcError": null,
+      "members": 40
+    },
+    "GRIFFIN_HOUSE_PREMIUM_UI_VERIFIED_RAIL_FIX_20261020.zip": {
+      "sha256": "7360ae4cd47153bbedf30dfb36a7ec85f4d653e30fe7d5dac33c372f73d25b29",
+      "crcError": null,
+      "members": 39
+    }
+  },
+  "protectedByteChecks": {
+    "bots.js": true,
+    "rules.js": true,
+    "x1/core.js": true,
+    "x1/worker.js": true,
+    "x1/integration.js": true,
+    "hand-order838.js": true,
+    "trump714.js": true,
+    "voice-queue.js": true,
+    "career-core.js": true,
+    "friends803.js": true
+  },
+  "browserQA": {
+    "status": "BLOCKED",
+    "chromiumInstall": "403 Domain not in allowlist from cdn.playwright.dev",
+    "cloudLocalNavigation": "ERR_BLOCKED_BY_CLIENT for http://127.0.0.1:8080",
+    "physicalAndroid": "NOT_TESTED",
+    "finalGameZip": "NOT_CREATED"
+  }
+}

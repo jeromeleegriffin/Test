@@ -1,0 +1,50 @@
+[
+  {
+    "label": "360-browser",
+    "errors": [],
+    "phases": [],
+    "actions": [],
+    "passed": false,
+    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
+  },
+  {
+    "label": "360-installed-simulation",
+    "errors": [],
+    "phases": [],
+    "actions": [],
+    "passed": false,
+    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
+  },
+  {
+    "label": "393-browser",
+    "errors": [],
+    "phases": [],
+    "actions": [],
+    "passed": false,
+    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
+  },
+  {
+    "label": "393-installed-simulation",
+    "errors": [],
+    "phases": [],
+    "actions": [],
+    "passed": false,
+    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
+  },
+  {
+    "label": "430-browser",
+    "errors": [],
+    "phases": [],
+    "actions": [],
+    "passed": false,
+    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
+  },
+  {
+    "label": "430-installed-simulation",
+    "errors": [],
+    "phases": [],
+    "actions": [],
+    "passed": false,
+    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
+  }
+]

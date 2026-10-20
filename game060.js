@@ -18204,6 +18204,8 @@ function playDealCardSound(delayMs = 0) {
   );
 }
 function positionRailControls035(controls) {
+  // Premium portrait UI may own these existing buttons. No-op when not installed.
+  if (window.HORRailControlsReview?.position?.(controls) === true) return;
   // Tablet room scaling creates a containing block for fixed descendants.
   // Keep the existing buttons/handlers in viewport space on larger viewports.
   if (!controls._railHome035) controls._railHome035 = controls.parentNode;

@@ -108,3 +108,7 @@ Latest recovered work, owner-approved look, exact photographed physical asset PN
 
 ## 2026-10-20 CONTINUATION AFTER PREMIUM ASSET UI RECOVERY — DO NOT RESTART
 Verified two complete offline hands (normal browser and simulated installed fullscreen) including scoring, fixes for stage restoration and native rail control reset, responsive widths, optical centering evidence, and remaining release blockers preserved at `brain/coordination/CONTINUATION_PREMIUM_UI_20261020.md`. **Before any further game UI work, read that note and retrieve Library recovery `libfile_cccae8712ddc8191a6e576afa882eb9b` (`GRIFFIN_HOUSE_PREMIUM_UI_CONTINUATION_20261020.zip`, SHA-256 `f00d075042f831fdc97602bc87bbe568e3606874a1b4384c39a4bd58321110c6`).** This is NOT a playable full-game release. Only merge premium UI into latest Test runtime, never overwrite newest repair code, never release before final actual-screen QA and owner approval.
+
+
+## 2026-10-20 newest-source premium integration checkpoint (LOCAL ONLY)
+Recovered approved assets and integrated on repaired Test runtime without replacing newer game logic. Browser QA is blocked by unavailable Chromium/network and cloud-local navigation restrictions. No final playable ZIP or deployment. Remote branch push was rejected by automatic approval review; no remote publication is claimed. Read coordination/premium-ui-final-20261020/HANDOFF.md, exact manifest, static results and verbatim successor rules. Continue this source; do not restart or treat older screenshots as final-build proof.
