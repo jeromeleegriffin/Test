@@ -1,0 +1,157 @@
+GRIFFIN HOUSE OF ROOKS — CLOUDFLARE MULTIPLAYER CHECKPOINT
+October 20, 2026 UTC / October 19, 2026 Eastern
+STATUS: BLOCKED BEFORE NATIVE UI ACCEPTANCE. NOT A WORKING PRIVATE RELEASE.
+
+OUTCOME
+Recovered the existing project and preserved the actual deployed Worker source. Added reproducible local server regression tests and executed two runs of ten full matches each. No adapter/runtime repair was delivered or deployed. The success condition remains unmet.
+
+VERIFIED SOURCE AND HISTORY
+Repository: https://github.com/jeromeleegriffin/Test
+Main observed: b3f3928548bc79df5169165b953e458cc68ddc09.
+Master Brain pointer: AF. Principal H Master Bank and I through AF documents read, including H operating rules, the 845 release supplement, current operating rules and permanent UI verification authority. AC embedded AB was checked byte-for-byte against the already-read AB. This is not certification that every historical binary, screenshot or attachment was newly audited.
+Recovered Library dossier: Griffin_Cloudflare_Multiplayer_Recovery_2026-10-19.txt.
+Recovered integration audit: Griffin_Cloudflare_846_Integration_Audit_2026-10-19.txt.
+Recovered October 14 audit: Cloudflare-Audit-Checkpoint-1.html; its historical test evidence is not counted as new tests.
+
+EXACT ISOLATED BRANCH AND COMMITS
+Branch: work/cloudflare-846-native-adapter-20261019.
+Inherited adapter commit: 02ba0151bf37f59164583c00731ea33ddbcd3073.
+Published test/source-preservation commit: 7ccd193823a8061637bbaab681e141784164ba9e.
+The inherited adapter file remains unchanged. Public Test/main and the production repository were not modified.
+A local-only commit ebb3c0e was created before shell push failed for missing GitHub username credentials. The connected GitHub API then published the identical five-file tree with the commit above. Do not mistake the local commit hash for the remote checkpoint.
+
+CHANGED FILES
+cloudflare/isolated/tests/deployed-worker.snapshot.mjs
+cloudflare/isolated/tests/load-deployed-service.mjs
+cloudflare/isolated/tests/protocol-tests.mjs
+cloudflare/isolated/tests/protocol-results-initial.json
+cloudflare/isolated/tests/protocol-results.json
+coordination/cloudflare/IMPLEMENTATION_CHECKPOINT_20261020.txt (this report).
+No index, artwork, cards, portrait geometry, landscape, gameplay, audio, career, cache, settings, or existing adapter changes.
+
+CLOUDFLARE PRESERVATION
+Existing Worker: griffin-room-local-poc.
+Existing deployment: b55a14ac-10bd-46e1-a6aa-129d27f56e02.
+Existing version, confirmed through API: 7e57f6f5-9524-4456-96d2-379f406b2d01, 100 percent.
+RoomDO namespace: 4a45f65563174df6847cd5576973088a, unchanged.
+TEST_GATE_KEY binding exists; its value was never requested, disclosed, rotated or replaced.
+No Cloudflare writes, new rooms, migrations, namespace operations, new paid services, or deployments occurred.
+Private existing URL: https://griffin-room-local-poc.jeromeleegriffin.workers.dev/
+This URL is the preserved OLD private test, not a new verified 846 release.
+Full Worker source was retrieved in chunks because the connector truncates a full response. Saved source snapshot SHA256: 9114607980fff840d6c56ae5424257a1e7279d4074ab319e3fbd52b3a55e964e. Snapshot preserves source content with text-file terminal newline; it is not a deploy receipt.
+
+EXECUTED TEST RESULTS
+Two recorded runs, each containing five two-human/two-server-bot matches and five four-human matches.
+TOTAL: 20 full local simulated 500-point matches; 115 hands; 4,148 accepted human-client actions; 724 credential-based seat restorations.
+Every action was also submitted with a stale revision and rejected, then repeated with the same action ID and handled as a duplicate.
+Missing seat tokens, guest attempts to start, and same-identity seat claims without the resume token were rejected.
+Private hands were pairwise disjoint at hand starts; restored own hands and current turn matched their originals.
+Matches continued through final score and match result. Both raw result files preserve individual hand counts, scores and action totals.
+
+TEST SCOPE — DO NOT OVERCLAIM
+These tests call the real recovered RoomService and reducer directly in Node 24. The platform DurableObject base class is substituted and storage is an in-memory structured-clone adapter. Restarts reconstruct RoomService over that same adapter. This is NOT a forced cloud Durable Object eviction, SQLite certification, WebSocket test, independent-network test, or rendered native game test.
+No newly executed Cloudflare full matches; no physical Android testing; no actual mobile UI acceptance screenshots.
+The earlier 15 static adapter checks were inherited, not rerun or counted as proof of gameplay.
+The preserved server uses simple test bots. X1 is NOT integrated or verified server-side.
+
+GENUINE TESTING BLOCKER
+The container has Playwright but no Chromium executable. Launch fails with missing chromium_headless_shell-1234 executable.
+Attempt 1: npx playwright install chromium fetched version 1248 and failed after repeated invalid ZIP downloads.
+Attempt 2: runtime-owned Playwright CLI requested version 1234 and likewise failed with invalid ZIP downloads.
+Direct download inspection returned a 195-byte HTML 'Site Unavailable / Unable to access this site' response instead of the browser archive.
+A cloud-browser fallback was attempted against the isolated local game at http://127.0.0.1:8080/cloud-game/game. The browser returned net::ERR_BLOCKED_BY_CLIENT.
+No safeguard was disabled and no security/network restriction was bypassed.
+The permanent owner UI rule prohibits deploying or issuing an owner-ready candidate before actual playable-screen inspection. Therefore no unverified candidate was deployed as a workaround.
+Required resource: an execution environment with a functioning Chromium/Playwright browser that can reach the isolated native game, or an equivalent approved browser preview route. Owner phone play is not required to resolve this blocker, and asking the owner to test would not substitute for this missing automation.
+
+REMAINING IMPLEMENTATION / ACCEPTANCE WORK
+1. Open the actual 846 native UI with the inherited adapter and verify every create/join/fill/start path; no screenshots or native control acceptance were obtained here.
+2. Pin game assets/source for private release instead of assuming a moving public root remains compatible.
+3. Reconcile current rule options. Confirmed recovered /start dispatch calls startGame without passing requested options, and the inherited adapter hides host options. Current target, Red Two, nest reveal and Moon variants need end-to-end reconciliation and tests.
+4. Confirm player avatar/voice metadata and seat rendering; the server public player view currently emits seat/name/team/isBot, not avatar/voice metadata.
+5. Exercise Kitty Received, six-card discard selection, trump, bids including Moon confirmation, actual card taps, scoring, menus and final match UI at phone viewport sizes.
+6. Run repeated real Cloudflare matches over independent HTTP/WebSocket sessions, reconnects at each phase, invalid/duplicate/stale commands and privacy checks.
+7. Verify browser background/resume, reconnect races, session expiry, forced server restart, room cleanup and failure/retry handling.
+8. Investigate X1 migration separately; preserve test bots and never label them X1.
+9. Complete real Android/separate-network validation when possible; simulated testing must stay clearly labeled.
+
+ROLLBACK
+No deployed change exists to roll back. Leave existing Worker version, namespace, gate secret, rooms and both public games untouched.
+For isolated source rollback, use inherited adapter commit 02ba0151bf37f59164583c00731ea33ddbcd3073. The new files are evidence/tests only; revert their commit with a new history-preserving commit if needed. Never reset main or erase saved player data.
+
+HOW TO REPRODUCE THE LOCAL SERVER TESTS
+Use Node 24 and run from the isolated branch:
+node cloudflare/isolated/tests/protocol-tests.mjs
+The script writes protocol-results.json beside itself. Preserve the two committed result receipts before rerunning if their exact bytes are needed. Random deals mean subsequent counts/scores vary.
+
+RECOMMENDATION
+NOT READY for public release. Local engine regression is encouraging but does not verify the actual 846 Cloudflare experience. Resume at the browser resource blocker, then complete implementation and real private-cloud acceptance. Do not restart the project or ask the owner to perform repetitive testing.
+
+SUCCESSOR STARTUP
+Continue the existing isolated branch and checkpoint above. Refresh main, adapter branch and Cloudflare deployment before writes. Recover this report and read the actual H-through-current history and applicable authorities. Preserve the old Worker and namespace, gate secret, public sites, approved pixels, offline gameplay and all player data. Restore a working automation browser, then test the actual native 846 adapter before making fixes or deploying an isolated private candidate. Report only tests actually executed. Pass all permanent reading, continuity and visual-verification rules to every successor again.
+
+PERMANENT COMPLETE MASTER BRAIN READING RULE
+
+This rule applies to every future Zoey without exception.
+
+Before beginning any Griffin House work:
+
+1. Read the complete foundational Master Bank H, from beginning to end.
+2. Read every subsequent published Master Brain version in chronological order, including I, J, K, L, M, and all future versions.
+3. Read all relevant authority documents, approved design specifications, original reference materials, project ledgers, and unfinished-work records.
+4. Identify which earlier decisions remain approved and which were explicitly superseded.
+5. Never substitute a summary, version inventory, or latest delta for reading the actual documents.
+6. Verify the current GitHub pointer and distinguish published documentation from playable game builds.
+7. Confirm which documents were actually read and identify anything inaccessible or unverified.
+8. Do not begin development until the complete project history and current assignment are understood.
+
+PERMANENT SUCCESSOR REQUIREMENT: Every Zoey must include this entire reading rule in the next chat's handoff and startup instructions, and explicitly require her successor to pass it forward again.
+
+
+PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+
+This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+
+1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+
+2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+
+3. Provide one complete, ready-to-paste startup prompt for the next chat.
+
+4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
+
+5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
+
+6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
+
+7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
+
+8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
+
+IMPLEMENTATION REQUIREMENT:
+
+Store this rule verbatim in Master Brain M.
+
+Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
+
+Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
+
+Do not replace the rule with a summary or a reference such as "same as before."
+
+
+# PERMANENT UI VISUAL VERIFICATION RULE — Owner directive 2026-10-19
+
+**Scope:** Griffin House of Rooks, every future UI/UX/layout/visual change, every specialist, successor chat, work session, branch, review ZIP, and deployment. This rule is mandatory, not an optional suggestion.
+
+1. **The working screen wins.** Open and render the *actual modified game*, using its real artwork, cards, CSS, JavaScript, and UI at representative target device viewport dimensions. Never replace this with code inspection, syntax checks, generated mockups, or guessed geometry.
+2. **Personally inspect before delivery.** Take real rendered screenshots and inspect them for clipped, mismatched, oversized, misaligned, overlapping, hidden or unattractive controls and unintended changes to approved graphics. Inspect until satisfied with the real pixels. Capture at least portrait regular-browser and installed/fullscreen equivalents, with top/bottom browser toolbars where applicable, and small-screen sizes. Include landscape/tablet when the change can affect them.
+3. **Exercise the affected states.** For table controls, check bidding (including the Bid Box), active trick/card play, large score/race banner, menu, card hand, nest/discard, score/end-of-hand, selected speed states, and state transitions as applicable. Check that controls respond correctly and touch targets remain usable. Compare screenshots with owner-approved references and actual-pixels geometry.
+4. **Fix and retest.** Do not ship while the inspected UI still has obvious defects. Retake screenshots after each repair. Verify no unrelated approved feature, asset, gameplay behavior, or screen has regressed.
+5. **No unverified deliveries.** Before sending a ZIP/download or deploying UI changes, report which actual browser/viewport/device states were opened and visually checked, with screenshots/evidence and remaining limits. ZIP-integrity or JavaScript syntax success alone is NOT visual QA and cannot be described as a finished UI review.
+6. **Browser blocked? Stop, don't bluff.** If an actual visual test cannot be completed, do not call the UI finished, do not package it as owner-ready or recommend deployment; explain the blocker and work toward obtaining a valid preview/testing route. Clearly distinguish local emulator/browser visual verification from physical Android acceptance.
+7. **Owner approval follows verified visuals.** Do not silently overwrite approved artwork, change protected bid dock geometry, or deploy without authorization. Preserve rollback checkpoints.
+8. **Permanent handoff obligation.** Record this rule in the current Master Brain and every successor handoff/startup prompt, carrying it forward verbatim or with full meaning intact. Every future agent must read and obey it before any UI task.
+
+Reason: multiple October 19 portrait/fullscreen control ZIPs were delivered after only script/ZIP checks and revealed obvious scoreboard collisions, oversized and unequal controls, hidden utility icons, and missing lower-console elements during owner phone testing. The owner explicitly requires the assistant to catch these problems *before* asking the owner to download anything.
+
+**Authority:** Owner directive of 2026-10-19. Does not indicate that current candidate UI or live sites are verified.
