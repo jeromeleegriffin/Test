@@ -69,9 +69,7 @@ jobs:
         with:
           pattern: premium-ui-*
           merge-multiple: true
-          path: |
-            coordination/premium-ui-final-20261020/browser-results/${{ matrix.width }}-${{ matrix.installed == 'true' && 'installed-simulation' || 'browser' }}-*.png
-            coordination/premium-ui-final-20261020/browser-results/RESULTS-${{ matrix.width }}-${{ matrix.installed == 'true' && 'installed-simulation' || 'browser' }}.json
+          path: coordination/premium-ui-final-20261020/browser-results/
       - name: Preserve candidate and actual QA evidence on isolated branch
         run: |
           git config user.name github-actions[bot]

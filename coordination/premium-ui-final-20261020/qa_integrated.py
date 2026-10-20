@@ -52,9 +52,20 @@ with sync_playwright() as pw:
                     tour = page.locator('#tutorialSkip')
                     if tour.is_visible():
                         tour.click()
+                        page.wait_for_timeout(150)
+                        continue
+                    if page.evaluate('tourCardOpen()'):
+                        page.wait_for_timeout(150)
+                        continue
                     if not pace_set and page.locator('#scoreSpeed701 [data-score-pace="99"]').is_visible():
-                        page.locator('#scoreSpeed701 [data-score-pace="99"]').click()
-                        pace_set = True
+                        try:
+                            page.locator('#scoreSpeed701 [data-score-pace="99"]').click(timeout=1200)
+                            pace_set = True
+                        except Exception:
+                            if page.locator('#tutorialSkip').is_visible():
+                                page.locator('#tutorialSkip').click()
+                                continue
+                            raise
                     state = page.evaluate("""() => ({phase:game?.phase, current:game?.currentPlayer,
                         mine:myIndex,bidder:game?.bidder,goal:document.querySelector('#houseGoal1020')?.textContent,
                         utility:[...document.querySelectorAll('.in-game-leave > button')].map(b=>({id:b.id,y:b.getBoundingClientRect().y})),
@@ -109,6 +120,10 @@ with sync_playwright() as pw:
                         page.locator('#houseMenu805 .visual-close805').click()
                         page.locator('#houseMenu805').wait_for(state='hidden')
                         page.locator('#leaveReplaceBtn').click()
+                        page.locator('#confirmCancel').wait_for(state='visible')
+                        page.screenshot(path=str(OUT / f'{label}-leave-confirm.png'))
+                        page.locator('#confirmCancel').click()
+                        page.locator('#confirmSheet').wait_for(state='hidden')
                         assert page.evaluate('document.body.classList.contains("in-game")')
                         page.locator('#horRailFullscreenReview').click()
                         page.wait_for_function('!!document.fullscreenElement')
