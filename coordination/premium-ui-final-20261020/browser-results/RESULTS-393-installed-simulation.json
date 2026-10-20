@@ -5,7 +5,7 @@
     "phases": [
       {
         "phase": "dealing",
-        "current": 1,
+        "current": 2,
         "mine": 0,
         "bidder": -1,
         "goal": "Biddingin progress",
@@ -44,9 +44,9 @@
       },
       {
         "phase": "bidding",
-        "current": 2,
+        "current": 0,
         "mine": 0,
-        "bidder": 1,
+        "bidder": 2,
         "goal": "Biddingin progress",
         "utility": [
           {
@@ -252,6 +252,8 @@
       "legal card tap",
       "legal card tap",
       "legal card tap",
+      "legal card tap",
+      "legal card tap",
       "legal card tap"
     ],
     "passed": true,
@@ -265,12 +267,12 @@
         "lastDecision": {
           "phase": "play",
           "engine": "legacy",
-          "hand": 41,
+          "hand": 49,
           "seat": 1
         },
         "epa": false,
         "partnerSeat": null,
-        "hand": 42,
+        "hand": 50,
         "pending": false
       },
       "decisions": 0,
@@ -284,18 +286,22 @@
     },
     "toolsTested": true,
     "lastTested": true,
+    "awardClearance": {
+      "top": 52,
+      "headerBottom": 44
+    },
     "runtimeTruth": {
-      "page": "846-premium-portrait-20261020-rc1",
-      "script": "846-premium-portrait-20261020-rc1",
-      "marker": "846-premium-portrait-20261020-rc1",
+      "page": "846-premium-portrait-20261020-rc2",
+      "script": "846-premium-portrait-20261020-rc2",
+      "marker": "846-premium-portrait-20261020-rc2",
       "worker": {
-        "build": "846-premium-portrait-20261020-rc1",
-        "cache": "house-of-rooks-846-premium-portrait-20261020-rc1"
+        "build": "846-premium-portrait-20261020-rc2",
+        "cache": "house-of-rooks-846-premium-portrait-20261020-rc2"
       },
-      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc1",
+      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc2",
       "coherent": true
     },
     "offlineReloadAndDeal": true,
-    "seconds": 32.75
+    "seconds": 35.31
   }
 ]

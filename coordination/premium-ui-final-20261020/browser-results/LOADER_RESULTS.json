@@ -1,0 +1,128 @@
+{
+  "errors": [],
+  "runtimeFiles": 1507,
+  "loadedIdentity": "846-premium-portrait-20261020-rc2",
+  "realOfflineDealToBidding": true,
+  "assetSizes": {
+    "plaque": 600,
+    "console": 941
+  },
+  "textStress": [
+    {
+      "text": "-2000",
+      "textWidth": 29.3125,
+      "boxWidth": 33.359375,
+      "visible": true
+    },
+    {
+      "text": "2000",
+      "textWidth": 25.125,
+      "boxWidth": 33.359375,
+      "visible": true
+    },
+    {
+      "text": "12:59 PM",
+      "textWidth": 42.546875,
+      "boxWidth": 46.515625,
+      "visible": true
+    }
+  ],
+  "layouts": [
+    {
+      "rects": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 182,
+          "h": 26
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 195,
+          "y": 4,
+          "w": 158,
+          "h": 28
+        },
+        {
+          "id": "utilities",
+          "x": 263,
+          "y": 36,
+          "w": 89,
+          "h": 27
+        }
+      ],
+      "overlap": false,
+      "mode": "browser-top",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "rects": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 251,
+          "h": 36
+        },
+        {
+          "id": "utilities",
+          "x": 263,
+          "y": 4,
+          "w": 89,
+          "h": 27
+        }
+      ],
+      "overlap": false,
+      "mode": "installed-console",
+      "width": 360,
+      "height": 740
+    },
+    {
+      "rects": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 278,
+          "h": 40
+        },
+        {
+          "id": "utilities",
+          "x": 290,
+          "y": 4,
+          "w": 95,
+          "h": 29
+        }
+      ],
+      "overlap": false,
+      "mode": "installed-console",
+      "width": 393,
+      "height": 852
+    },
+    {
+      "rects": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 304,
+          "h": 44
+        },
+        {
+          "id": "utilities",
+          "x": 316,
+          "y": 4,
+          "w": 106,
+          "h": 32
+        }
+      ],
+      "overlap": false,
+      "mode": "installed-console",
+      "width": 430,
+      "height": 932
+    }
+  ],
+  "passed": true
+}

@@ -1,50 +1,7 @@
-[
-  {
-    "label": "360-browser",
-    "errors": [],
-    "phases": [],
-    "actions": [],
-    "passed": false,
-    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
-  },
-  {
-    "label": "360-installed-simulation",
-    "errors": [],
-    "phases": [],
-    "actions": [],
-    "passed": false,
-    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
-  },
-  {
-    "label": "393-browser",
-    "errors": [],
-    "phases": [],
-    "actions": [],
-    "passed": false,
-    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
-  },
-  {
-    "label": "393-installed-simulation",
-    "errors": [],
-    "phases": [],
-    "actions": [],
-    "passed": false,
-    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
-  },
-  {
-    "label": "430-browser",
-    "errors": [],
-    "phases": [],
-    "actions": [],
-    "passed": false,
-    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
-  },
-  {
-    "label": "430-installed-simulation",
-    "errors": [],
-    "phases": [],
-    "actions": [],
-    "passed": false,
-    "failure": "Locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#hor-player-name\")\n    - locator resolved to <input type=\"text\" maxlength=\"12\" id=\"hor-player-name\" autocomplete=\"nickname\" placeholder=\"Your name\"/>\n    - fill(\"Premium QA\")\n  - attempting fill action\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n"
-  }
-]
+{
+  "errors": [],
+  "runtimeFiles": 1507,
+  "loadedIdentity": "846-premium-portrait-20261020-rc1",
+  "failure": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#soloPracticeBtn\")\n    - locator resolved to <button type=\"button\" id=\"soloPracticeBtn\" class=\"btn primary lobby-main lobby-play-now\">Take Your Seat \u203a</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <dialog open=\"\" role=\"dialog\" aria-live=\"polite\" aria-hidden=\"false\" id=\"tutorialOverlay\" aria-label=\"House tour\" aria-labelledby=\"tutorialTitle\" class=\"tutorial-overlay tour-bounded835\">\u2026</dialog> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <dialog open=\"\" role=\"dialog\" aria-live=\"polite\" aria-hidden=\"false\" id=\"tutorialOverlay\" aria-label=\"House tour\" aria-labelledby=\"tutorialTitle\" class=\"tutorial-overlay tour-bounded835\">\u2026</dialog> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    56 \u00d7 waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <dialog open=\"\" role=\"dialog\" aria-live=\"polite\" aria-hidden=\"false\" id=\"tutorialOverlay\" aria-label=\"House tour\" aria-labelledby=\"tutorialTitle\" class=\"tutorial-overlay tour-bounded835\">\u2026</dialog> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+  "passed": false
+}

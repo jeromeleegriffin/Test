@@ -5,7 +5,7 @@
     "phases": [
       {
         "phase": "dealing",
-        "current": 3,
+        "current": 2,
         "mine": 0,
         "bidder": -1,
         "goal": "Biddingin progress",
@@ -44,7 +44,7 @@
       },
       {
         "phase": "bidding",
-        "current": 3,
+        "current": 2,
         "mine": 0,
         "bidder": -1,
         "goal": "Biddingin progress",
@@ -86,7 +86,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 115to make bid",
+        "goal": "Need 150to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -125,7 +125,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 115to make bid",
+        "goal": "Need 150to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -164,7 +164,7 @@
         "current": 0,
         "mine": 0,
         "bidder": 0,
-        "goal": "Need 115to make bid",
+        "goal": "Need 150to make bid",
         "utility": [
           {
             "id": "horRailFullscreenReview",
@@ -200,7 +200,7 @@
       },
       {
         "phase": "score",
-        "current": 1,
+        "current": 3,
         "mine": 0,
         "bidder": 0,
         "goal": "Handcomplete",
@@ -241,6 +241,8 @@
     "actions": [
       "native bid",
       "native bid",
+      "native bid",
+      "native bid",
       "six-card discard confirmed",
       "trump confirmed",
       "all speeds, menu return, Back cancel, native fullscreen enter/exit",
@@ -267,9 +269,9 @@
         "lastDecision": {
           "phase": "play",
           "engine": "x1",
-          "hand": 46,
-          "seat": 3,
-          "epa": false,
+          "hand": 47,
+          "seat": 2,
+          "epa": true,
           "partnerRoute": false
         },
         "epa": false,
@@ -282,18 +284,22 @@
     },
     "toolsTested": true,
     "lastTested": true,
+    "awardClearance": {
+      "top": 84,
+      "headerBottom": 76
+    },
     "runtimeTruth": {
-      "page": "846-premium-portrait-20261020-rc1",
-      "script": "846-premium-portrait-20261020-rc1",
-      "marker": "846-premium-portrait-20261020-rc1",
+      "page": "846-premium-portrait-20261020-rc2",
+      "script": "846-premium-portrait-20261020-rc2",
+      "marker": "846-premium-portrait-20261020-rc2",
       "worker": {
-        "build": "846-premium-portrait-20261020-rc1",
-        "cache": "house-of-rooks-846-premium-portrait-20261020-rc1"
+        "build": "846-premium-portrait-20261020-rc2",
+        "cache": "house-of-rooks-846-premium-portrait-20261020-rc2"
       },
-      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc1",
+      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc2",
       "coherent": true
     },
     "offlineReloadAndDeal": true,
-    "seconds": 33.1
+    "seconds": 36.61
   }
 ]
