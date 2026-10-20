@@ -1,0 +1,66 @@
+{
+  "status": "FOUR_SCOPED_PASSES_COMPLETE_LOCAL_CANDIDATE",
+  "ownerAcceptance": "NOT_PHYSICAL_ANDROID_ACCEPTED",
+  "deployed": false,
+  "passes": {
+    "1_artwork": {
+      "passed": true,
+      "method": "1508 exact R5 runtime hashes, approved original/owner rejection/final render inspection; preserved asset provenance",
+      "evidence": "preservation.json"
+    },
+    "2_registration": {
+      "passed": true,
+      "layouts": 16,
+      "evidence": "REGISTRATION_RESULTS.json",
+      "safeArea": "resolved inset simulation"
+    },
+    "3_gameplay": {
+      "passed": true,
+      "browserMatches": 2,
+      "browserHands": 2,
+      "humanContexts": [
+        2,
+        4
+      ],
+      "reconnects": 6,
+      "serviceMatches": 10,
+      "serviceRejoins": 410,
+      "controlledBirdScenes": 3,
+      "fullExactZipLoaderHand": true,
+      "evidence": [
+        "TWO_HUMAN_MATCH.json",
+        "FOUR_HUMAN_MATCH.json",
+        "SERVICE_MATCHES.json",
+        "BIRD_EFFECTS_RESULTS.json",
+        "LOADER_FULL_HAND.json"
+      ],
+      "scope": "Local Worker with structured-clone storage, HTTPS routed browser and real local WebSocket bridge. Target 100 fixture. Native exact-R5 Loader hand. Not hosted Cloudflare."
+    },
+    "4_temporal": {
+      "passed": true,
+      "rotationWindows": 5,
+      "samplesPerWindow": 20,
+      "actualHumanWinCues": 4,
+      "localLaunchDelayMs": [
+        0,
+        0.3
+      ],
+      "allWinsDuringFourCardResolution": true,
+      "evidence": [
+        "ROTATION_RESULTS.json",
+        "flash-check.json"
+      ],
+      "physicalAndroidBanner": "UNVERIFIED"
+    }
+  },
+  "package": {
+    "file": "/workspace/scratch/b2fab6afe9f4/artifacts/Griffin_House_Combined_R5_UI_Multiplayer_Candidate_20261020.zip",
+    "bytes": 165198795,
+    "sha256": "be539242322642d1eaaaea062b4c43361f9906429653102d66de5bea14a7d257",
+    "entries": 1664,
+    "nativeRuntimeFiles": 1508,
+    "cloudSourceFiles": 154,
+    "deployment": false
+  },
+  "unchangedHistoricalCoverage": "Original six full native UI hands, optional rule totals and Moon from R4; R5 fullscreen phone/tablet and native hand results preserved on exact native source. Those are not newly rerun combined online variant tests."
+}

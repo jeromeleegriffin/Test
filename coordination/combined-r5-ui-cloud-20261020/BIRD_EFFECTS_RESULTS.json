@@ -1,0 +1,485 @@
+{
+  "controlledLocalScenes": true,
+  "results": [
+    {
+      "rookPlayedFourth": true,
+      "last": true,
+      "pace": 1,
+      "samples": [
+        {
+          "phase": "waiting",
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486023441
+        },
+        {
+          "phase": "play",
+          "trick": [],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486023732
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5"
+          ],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486024215
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2"
+          ],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486025462
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6"
+          ],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486026646
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6",
+            "rook"
+          ],
+          "resolving": true,
+          "active": true,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486027828
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6",
+            "rook"
+          ],
+          "resolving": true,
+          "active": true,
+          "canvas": true,
+          "starts": 1,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486028325
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6",
+            "rook"
+          ],
+          "resolving": true,
+          "active": false,
+          "canvas": false,
+          "starts": 1,
+          "finishes": 1,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486030580
+        },
+        {
+          "phase": "score",
+          "trick": [],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 1,
+          "finishes": 1,
+          "cancels": 0,
+          "score": true,
+          "at": 1792486034044
+        }
+      ],
+      "fight": {
+        "enabled": true,
+        "loaded": true,
+        "active": false,
+        "pending": false,
+        "stats": {
+          "starts": 1,
+          "finishes": 1,
+          "cancels": 0,
+          "last": {
+            "id": "capture-1-1:3:0/green-5|1/red-2|2/green-6|3/rook",
+            "reason": "deadline",
+            "elapsed": 2756.2000000029802,
+            "duration": 2254,
+            "settle": 496,
+            "preview": false
+          }
+        }
+      },
+      "draws": 240,
+      "phase": "score",
+      "errors": []
+    },
+    {
+      "rookPlayedFourth": true,
+      "last": true,
+      "pace": 3,
+      "samples": [
+        {
+          "phase": "waiting",
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486042440
+        },
+        {
+          "phase": "play",
+          "trick": [],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486042641
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5"
+          ],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486043553
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2"
+          ],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486043944
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6"
+          ],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486044299
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6",
+            "rook"
+          ],
+          "resolving": true,
+          "active": true,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486044739
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6",
+            "rook"
+          ],
+          "resolving": true,
+          "active": true,
+          "canvas": true,
+          "starts": 1,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486044910
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6",
+            "rook"
+          ],
+          "resolving": true,
+          "active": false,
+          "canvas": false,
+          "starts": 1,
+          "finishes": 1,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486045656
+        },
+        {
+          "phase": "score",
+          "trick": [],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 1,
+          "finishes": 1,
+          "cancels": 0,
+          "score": true,
+          "at": 1792486048097
+        }
+      ],
+      "fight": {
+        "enabled": true,
+        "loaded": true,
+        "active": false,
+        "pending": false,
+        "stats": {
+          "starts": 1,
+          "finishes": 1,
+          "cancels": 0,
+          "last": {
+            "id": "capture-1-1:3:0/green-5|1/red-2|2/green-6|3/rook",
+            "reason": "complete",
+            "elapsed": 929.2999999970198,
+            "duration": 741,
+            "settle": 176,
+            "preview": false
+          }
+        }
+      },
+      "draws": 66,
+      "phase": "score",
+      "errors": []
+    },
+    {
+      "rookPlayedFourth": true,
+      "last": true,
+      "pace": 99,
+      "samples": [
+        {
+          "phase": "waiting",
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486060847
+        },
+        {
+          "phase": "play",
+          "trick": [],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486061297
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5"
+          ],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486061847
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2"
+          ],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486061966
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6"
+          ],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486062065
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6",
+            "rook"
+          ],
+          "resolving": true,
+          "active": true,
+          "canvas": false,
+          "starts": 0,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486062136
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6",
+            "rook"
+          ],
+          "resolving": true,
+          "active": true,
+          "canvas": true,
+          "starts": 1,
+          "finishes": 0,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486062318
+        },
+        {
+          "phase": "play",
+          "trick": [
+            "green-5",
+            "red-2",
+            "green-6",
+            "rook"
+          ],
+          "resolving": true,
+          "active": false,
+          "canvas": false,
+          "starts": 1,
+          "finishes": 1,
+          "cancels": 0,
+          "score": false,
+          "at": 1792486062392
+        },
+        {
+          "phase": "score",
+          "trick": [],
+          "resolving": false,
+          "active": false,
+          "canvas": false,
+          "starts": 1,
+          "finishes": 1,
+          "cancels": 0,
+          "score": true,
+          "at": 1792486064829
+        }
+      ],
+      "fight": {
+        "enabled": true,
+        "loaded": true,
+        "active": false,
+        "pending": false,
+        "stats": {
+          "starts": 1,
+          "finishes": 1,
+          "cancels": 0,
+          "last": {
+            "id": "capture-1-1:3:0/green-5|1/red-2|2/green-6|3/rook",
+            "reason": "complete",
+            "elapsed": 278.3999999985099,
+            "duration": 87,
+            "settle": 51,
+            "preview": false
+          }
+        }
+      },
+      "draws": 6,
+      "phase": "score",
+      "errors": []
+    }
+  ]
+}

@@ -26,7 +26,7 @@ s=s[:start]+'''    const isEntry = ["/", "/index.html", "/cloud-game/index.html"
         session=await issuePrivateSession(env.TEST_GATE_KEY);
       }
       try {
-        const upstream=await fetch("https://raw.githubusercontent.com/jeromeleegriffin/Test/b3f3928548bc79df5169165b953e458cc68ddc09/index.html",{redirect:"follow",cf:{cacheEverything:true,cacheTtlByStatus:{"200-299":86400,"300-599":-1}}});
+        const upstream=await fetch("https://raw.githubusercontent.com/jeromeleegriffin/Test/eae0889b06b3ea39f4ed406fdf5a7b2a25831827/index.html",{redirect:"follow",cf:{cacheEverything:true,cacheTtlByStatus:{"200-299":86400,"300-599":-1}}});
         if (!upstream.ok) return new Response("The game is temporarily unavailable. Please reload shortly.",{status:502,headers:{"cache-control":"no-store"}});
         const response=secureIntegratedGameHtml(injectCloudGameAdapter(await upstream.text()));
         if (session) response.headers.set("Set-Cookie",`${PRIVATE_SESSION_COOKIE}=${session.token}; Path=/; Max-Age=${Math.floor(PRIVATE_SESSION_MS/1000)}; HttpOnly; Secure; SameSite=Strict`);

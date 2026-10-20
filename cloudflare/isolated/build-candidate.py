@@ -32,7 +32,7 @@ s='const CLOUD_AVATARS = new Set('+json.dumps(ids)+');\nfunction safeAvatar(valu
 start=s.index('var CLOUD_GAME_ADAPTER = ');end=s.index('\n// worker.mjs\nvar IDLE_ROOM_MS',start)
 s=s[:start]+'var CLOUD_GAME_ADAPTER = '+json.dumps((root/'cloudflare/isolated/846-cloud-game-adapter-candidate.js').read_text())+';\n'+s[end:]
 # Pin the private candidate to the inspected complete game; never follow moving Pages root.
-s=s.replace('https://jeromeleegriffin.github.io/Test/', 'https://raw.githubusercontent.com/jeromeleegriffin/Test/b3f3928548bc79df5169165b953e458cc68ddc09/')
+s=s.replace('https://jeromeleegriffin.github.io/Test/', 'https://raw.githubusercontent.com/jeromeleegriffin/Test/eae0889b06b3ea39f4ed406fdf5a7b2a25831827/')
 s=s.replace('headers.set("cache-control", "public, max-age=300");', 'const mime = {js:"text/javascript",css:"text/css",html:"text/html",json:"application/json",svg:"image/svg+xml",webp:"image/webp",png:"image/png",jpg:"image/jpeg",jpeg:"image/jpeg",mp3:"audio/mpeg",ogg:"audio/ogg",wav:"audio/wav",woff2:"font/woff2",wasm:"application/wasm"}[rawAssetPath.split(".").pop().toLowerCase()]; if (mime) headers.set("content-type", mime); headers.set("cache-control", "public, max-age=300");')
 s=s.replace('    "INVALID_BID",\n', '    "INVALID_BID", "INVALID_OPTIONS", "INVALID_TARGET_SCORE",\n')
 # Cache only immutable public GitHub source bytes, never room/session responses.

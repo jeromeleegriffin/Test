@@ -1,0 +1,67 @@
+[
+  {
+    "file": "asset-loading772.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "cloudflare/isolated/846-cloud-game-adapter-candidate.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "cloudflare/isolated/worker-candidate.mjs",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "cloudflare/live/adapter-live.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "cloudflare/live/worker-live.mjs",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "fullscreen-portrait-review.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "game060.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "holder-cues789.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "hor-version.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "house-premium-ui.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "progression.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "room831.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "sw060.js",
+    "exit": 0,
+    "output": ""
+  }
+]

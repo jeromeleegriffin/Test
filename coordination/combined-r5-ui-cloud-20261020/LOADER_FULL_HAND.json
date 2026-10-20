@@ -1,0 +1,28 @@
+{
+  "zip": "Griffin_House_Combined_R5_UI_Multiplayer_Candidate_20261020.zip",
+  "sha256": "be539242322642d1eaaaea062b4c43361f9906429653102d66de5bea14a7d257",
+  "originalLoaderSha256": "ab52623d7b01dfe8317cf9655a6b05be52957860bcc94c98040aa06b3bd21d3c",
+  "errors": [],
+  "quick": false,
+  "actions": [
+    "Six discards via original UI",
+    "Complete real human UI hand and original speed/Menu/Back/Last handlers in unchanged Loader"
+  ],
+  "identity": "846-premium-owner-repair-20261020-r5",
+  "assetSizes": {
+    "plaque": 622,
+    "console": 941
+  },
+  "discardCount": 6,
+  "score": {
+    "points": [
+      15,
+      185
+    ],
+    "scores": [
+      -130,
+      185
+    ]
+  },
+  "passed": true
+}

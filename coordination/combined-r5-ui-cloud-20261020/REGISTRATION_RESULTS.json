@@ -1,0 +1,2255 @@
+{
+  "errors": [],
+  "layouts": [
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 496,
+          "w": 307.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 179.703125,
+          "h": 27
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 172,
+          "y": 36,
+          "w": 141,
+          "h": 37
+        },
+        {
+          "id": "utility",
+          "x": 225,
+          "y": 4,
+          "w": 87,
+          "h": 27
+        }
+      ],
+      "buttons": [
+        {
+          "x": 176.40625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "x": 209.015625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "x": 241.625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "x": 274.265625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 176.40625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 209.015625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 241.625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 274.265625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 320,
+      "height": 568,
+      "installed": false
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 568,
+          "w": 347.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 179.703125,
+          "h": 27
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 195,
+          "y": 36,
+          "w": 158,
+          "h": 42
+        },
+        {
+          "id": "utility",
+          "x": 263,
+          "y": 4,
+          "w": 89,
+          "h": 27
+        }
+      ],
+      "buttons": [
+        {
+          "x": 199.9375,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "x": 236.46875,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "x": 273,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "x": 309.59375,
+          "y": 42.15625,
+          "w": 36.546875,
+          "h": 27.734375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 199.9375,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 236.46875,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 273,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 309.59375,
+          "y": 42.15625,
+          "w": 36.546875,
+          "h": 27.734375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 360,
+      "height": 640,
+      "installed": false
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 668,
+          "w": 347.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 179.703125,
+          "h": 27
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 195,
+          "y": 36,
+          "w": 158,
+          "h": 42
+        },
+        {
+          "id": "utility",
+          "x": 263,
+          "y": 4,
+          "w": 89,
+          "h": 27
+        }
+      ],
+      "buttons": [
+        {
+          "x": 199.9375,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "x": 236.46875,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "x": 273,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "x": 309.59375,
+          "y": 42.15625,
+          "w": 36.546875,
+          "h": 27.734375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 199.9375,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 236.46875,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 273,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 309.59375,
+          "y": 42.15625,
+          "w": 36.546875,
+          "h": 27.734375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 360,
+      "height": 740,
+      "installed": false
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 621,
+          "w": 380.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 193.015625,
+          "h": 29
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 213,
+          "y": 38,
+          "w": 173,
+          "h": 45
+        },
+        {
+          "id": "utility",
+          "x": 290,
+          "y": 4,
+          "w": 95,
+          "h": 29
+        }
+      ],
+      "buttons": [
+        {
+          "x": 218.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "x": 258.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "x": 298.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "x": 338.46875,
+          "y": 44.59375,
+          "w": 40.015625,
+          "h": 29.71875
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 218.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 258.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 298.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 338.46875,
+          "y": 44.59375,
+          "w": 40.015625,
+          "h": 29.71875
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 393,
+      "height": 693,
+      "installed": false
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 780,
+          "w": 380.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 193.015625,
+          "h": 29
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 213,
+          "y": 38,
+          "w": 173,
+          "h": 45
+        },
+        {
+          "id": "utility",
+          "x": 290,
+          "y": 4,
+          "w": 95,
+          "h": 29
+        }
+      ],
+      "buttons": [
+        {
+          "x": 218.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "x": 258.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "x": 298.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "x": 338.46875,
+          "y": 44.59375,
+          "w": 40.015625,
+          "h": 29.71875
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 218.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 258.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 298.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 338.46875,
+          "y": 44.59375,
+          "w": 40.015625,
+          "h": 29.71875
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 393,
+      "height": 852,
+      "installed": false
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 860,
+          "w": 417.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 212.984375,
+          "h": 32
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 247,
+          "y": 41,
+          "w": 176,
+          "h": 46
+        },
+        {
+          "id": "utility",
+          "x": 316,
+          "y": 4,
+          "w": 106,
+          "h": 32
+        }
+      ],
+      "buttons": [
+        {
+          "x": 252.5,
+          "y": 47.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 293.203125,
+          "y": 47.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 333.90625,
+          "y": 47.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 374.640625,
+          "y": 47.75,
+          "w": 40.703125,
+          "h": 30.375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 252.5,
+          "y": 47.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 293.203125,
+          "y": 47.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 333.90625,
+          "y": 47.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 374.640625,
+          "y": 47.75,
+          "w": 40.703125,
+          "h": 30.375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 430,
+      "height": 932,
+      "installed": false
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 13.390625,
+          "y": 728,
+          "w": 507.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 226.296875,
+          "h": 34
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 351,
+          "y": 43,
+          "w": 176,
+          "h": 46
+        },
+        {
+          "id": "utility",
+          "x": 412,
+          "y": 4,
+          "w": 114,
+          "h": 34
+        }
+      ],
+      "buttons": [
+        {
+          "x": 356.5,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 397.203125,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 437.90625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 478.640625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 356.5,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 397.203125,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 437.90625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 478.640625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 534,
+      "height": 800,
+      "installed": false
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 130.390625,
+          "y": 952,
+          "w": 507.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 226.296875,
+          "h": 34
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 585,
+          "y": 43,
+          "w": 176,
+          "h": 46
+        },
+        {
+          "id": "utility",
+          "x": 640,
+          "y": 4,
+          "w": 120,
+          "h": 34
+        }
+      ],
+      "buttons": [
+        {
+          "x": 590.5,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 631.203125,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 671.90625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 712.640625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 590.5,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 631.203125,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 671.90625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 712.640625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 768,
+      "height": 1024,
+      "installed": false
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 496,
+          "w": 307.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 179.703125,
+          "h": 27
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 172,
+          "y": 36,
+          "w": 141,
+          "h": 37
+        },
+        {
+          "id": "utility",
+          "x": 225,
+          "y": 4,
+          "w": 87,
+          "h": 27
+        }
+      ],
+      "buttons": [
+        {
+          "x": 176.40625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "x": 209.015625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "x": 241.625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "x": 274.265625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 176.40625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 209.015625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 241.625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 274.265625,
+          "y": 41.421875,
+          "w": 32.609375,
+          "h": 24.4375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 320,
+      "height": 568,
+      "installed": true
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 568,
+          "w": 347.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 179.703125,
+          "h": 27
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 195,
+          "y": 36,
+          "w": 158,
+          "h": 42
+        },
+        {
+          "id": "utility",
+          "x": 263,
+          "y": 4,
+          "w": 89,
+          "h": 27
+        }
+      ],
+      "buttons": [
+        {
+          "x": 199.9375,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "x": 236.46875,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "x": 273,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "x": 309.59375,
+          "y": 42.15625,
+          "w": 36.546875,
+          "h": 27.734375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 199.9375,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 236.46875,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 273,
+          "y": 42.15625,
+          "w": 36.53125,
+          "h": 27.734375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 309.59375,
+          "y": 42.15625,
+          "w": 36.546875,
+          "h": 27.734375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 360,
+      "height": 640,
+      "installed": true
+    },
+    {
+      "connector": {
+        "hidden": false,
+        "box": {
+          "x": 1,
+          "y": 660,
+          "w": 358,
+          "h": 14
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 589,
+          "w": 347.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 1,
+          "y": 665,
+          "w": 358,
+          "h": 73
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "installed-console",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 179.703125,
+          "h": 27
+        },
+        {
+          "id": "houseBottomSpeedFrame1020",
+          "x": 101.8125,
+          "y": 686.28125,
+          "w": 157.875,
+          "h": 41.4375
+        },
+        {
+          "id": "housePremiumConsole1020",
+          "x": 1,
+          "y": 665,
+          "w": 358,
+          "h": 73
+        },
+        {
+          "id": "utility",
+          "x": 263,
+          "y": 4,
+          "w": 89,
+          "h": 27
+        }
+      ],
+      "buttons": [
+        {
+          "x": 106.75,
+          "y": 692.359375,
+          "w": 36.5,
+          "h": 27.359375
+        },
+        {
+          "x": 143.25,
+          "y": 692.359375,
+          "w": 36.5,
+          "h": 27.359375
+        },
+        {
+          "x": 179.75,
+          "y": 692.359375,
+          "w": 36.5,
+          "h": 27.359375
+        },
+        {
+          "x": 216.3125,
+          "y": 692.359375,
+          "w": 36.515625,
+          "h": 27.359375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 106.75,
+          "y": 692.359375,
+          "w": 36.5,
+          "h": 27.359375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 143.25,
+          "y": 692.359375,
+          "w": 36.5,
+          "h": 27.359375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 179.75,
+          "y": 692.359375,
+          "w": 36.5,
+          "h": 27.359375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 216.3125,
+          "y": 692.359375,
+          "w": 36.515625,
+          "h": 27.359375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 360,
+      "height": 740,
+      "installed": true
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 621,
+          "w": 380.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 193.015625,
+          "h": 29
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 213,
+          "y": 38,
+          "w": 173,
+          "h": 45
+        },
+        {
+          "id": "utility",
+          "x": 290,
+          "y": 4,
+          "w": 95,
+          "h": 29
+        }
+      ],
+      "buttons": [
+        {
+          "x": 218.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "x": 258.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "x": 298.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "x": 338.46875,
+          "y": 44.59375,
+          "w": 40.015625,
+          "h": 29.71875
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 218.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 258.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 298.40625,
+          "y": 44.59375,
+          "w": 40,
+          "h": 29.71875
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 338.46875,
+          "y": 44.59375,
+          "w": 40.015625,
+          "h": 29.71875
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 393,
+      "height": 693,
+      "installed": true
+    },
+    {
+      "connector": {
+        "hidden": false,
+        "box": {
+          "x": 1,
+          "y": 749,
+          "w": 391,
+          "h": 31
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 678,
+          "w": 380.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 1,
+          "y": 770,
+          "w": 391,
+          "h": 80
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "installed-console",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 193.015625,
+          "h": 29
+        },
+        {
+          "id": "houseBottomSpeedFrame1020",
+          "x": 111.109375,
+          "y": 793.328125,
+          "w": 172.4375,
+          "h": 45.40625
+        },
+        {
+          "id": "housePremiumConsole1020",
+          "x": 1,
+          "y": 770,
+          "w": 391,
+          "h": 80
+        },
+        {
+          "id": "utility",
+          "x": 290,
+          "y": 4,
+          "w": 95,
+          "h": 29
+        }
+      ],
+      "buttons": [
+        {
+          "x": 116.5,
+          "y": 799.984375,
+          "w": 39.875,
+          "h": 29.984375
+        },
+        {
+          "x": 156.375,
+          "y": 799.984375,
+          "w": 39.875,
+          "h": 29.984375
+        },
+        {
+          "x": 196.25,
+          "y": 799.984375,
+          "w": 39.875,
+          "h": 29.984375
+        },
+        {
+          "x": 236.171875,
+          "y": 799.984375,
+          "w": 39.875,
+          "h": 29.984375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 116.5,
+          "y": 799.984375,
+          "w": 39.875,
+          "h": 29.984375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 156.375,
+          "y": 799.984375,
+          "w": 39.875,
+          "h": 29.984375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 196.25,
+          "y": 799.984375,
+          "w": 39.875,
+          "h": 29.984375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 236.171875,
+          "y": 799.984375,
+          "w": 39.875,
+          "h": 29.984375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 393,
+      "height": 852,
+      "installed": true
+    },
+    {
+      "connector": {
+        "hidden": false,
+        "box": {
+          "x": 1,
+          "y": 813,
+          "w": 428,
+          "h": 41
+        },
+        "holder": {
+          "x": 6.390625,
+          "y": 742,
+          "w": 417.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 1,
+          "y": 843,
+          "w": 428,
+          "h": 87
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "installed-console",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 212.984375,
+          "h": 32
+        },
+        {
+          "id": "houseBottomSpeedFrame1020",
+          "x": 121.53125,
+          "y": 868.375,
+          "w": 188.75,
+          "h": 49.390625
+        },
+        {
+          "id": "housePremiumConsole1020",
+          "x": 1,
+          "y": 843,
+          "w": 428,
+          "h": 87
+        },
+        {
+          "id": "utility",
+          "x": 316,
+          "y": 4,
+          "w": 106,
+          "h": 32
+        }
+      ],
+      "buttons": [
+        {
+          "x": 127.4375,
+          "y": 875.625,
+          "w": 43.65625,
+          "h": 32.609375
+        },
+        {
+          "x": 171.09375,
+          "y": 875.625,
+          "w": 43.65625,
+          "h": 32.609375
+        },
+        {
+          "x": 214.75,
+          "y": 875.625,
+          "w": 43.65625,
+          "h": 32.609375
+        },
+        {
+          "x": 258.421875,
+          "y": 875.625,
+          "w": 43.65625,
+          "h": 32.609375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 127.4375,
+          "y": 875.625,
+          "w": 43.65625,
+          "h": 32.609375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 171.09375,
+          "y": 875.625,
+          "w": 43.65625,
+          "h": 32.609375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 214.75,
+          "y": 875.625,
+          "w": 43.65625,
+          "h": 32.609375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 258.421875,
+          "y": 875.625,
+          "w": 43.65625,
+          "h": 32.609375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 430,
+      "height": 932,
+      "installed": true
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 13.390625,
+          "y": 728,
+          "w": 507.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 226.296875,
+          "h": 34
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 351,
+          "y": 43,
+          "w": 176,
+          "h": 46
+        },
+        {
+          "id": "utility",
+          "x": 412,
+          "y": 4,
+          "w": 114,
+          "h": 34
+        }
+      ],
+      "buttons": [
+        {
+          "x": 356.5,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 397.203125,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 437.90625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 478.640625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 356.5,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 397.203125,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 437.90625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 478.640625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 534,
+      "height": 800,
+      "installed": true
+    },
+    {
+      "connector": {
+        "hidden": true,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "holder": {
+          "x": 130.390625,
+          "y": 952,
+          "w": 507.21875,
+          "h": 72
+        },
+        "console": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "asset": "http://127.0.0.1:8770/combined-source/assets/house-premium-console/holder-console-walnut-connector.png"
+      },
+      "mode": "browser-top",
+      "boxes": [
+        {
+          "id": "housePremiumMatch1020",
+          "x": 7,
+          "y": 4,
+          "w": 226.296875,
+          "h": 34
+        },
+        {
+          "id": "houseTopSpeedStage1020",
+          "x": 585,
+          "y": 43,
+          "w": 176,
+          "h": 46
+        },
+        {
+          "id": "utility",
+          "x": 640,
+          "y": 4,
+          "w": 120,
+          "h": 34
+        }
+      ],
+      "buttons": [
+        {
+          "x": 590.5,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 631.203125,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 671.90625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "x": 712.640625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        }
+      ],
+      "faces": [
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-selected-photo.png\")",
+          "x": 590.5,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 631.203125,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 671.90625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        },
+        {
+          "id": "portraitLastTrickButton",
+          "background": "url(\"http://127.0.0.1:8770/combined-source/assets/house-premium-console/speed-unselected-photo.png\")",
+          "x": 712.640625,
+          "y": 49.75,
+          "w": 40.703125,
+          "h": 30.375
+        }
+      ],
+      "overlap": false,
+      "backgrounds": [
+        {
+          "id": "houseMatchScoreA1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseMatchScoreB1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseClock1020",
+          "bg": "none"
+        },
+        {
+          "id": "houseGoal1020",
+          "bg": "none"
+        }
+      ],
+      "width": 768,
+      "height": 1024,
+      "installed": true
+    }
+  ],
+  "safeArea": {
+    "method": "Resolved inset CSS simulation; native CDP unavailable",
+    "top": 28,
+    "bottom": 0
+  },
+  "realClock": {
+    "actual": "1:44 AM",
+    "expected": "1:44 AM"
+  },
+  "inkStress": [
+    {
+      "id": "houseMatchScoreA1020",
+      "text": "\u22122000",
+      "box": {
+        "x": 79.296875,
+        "y": 9.921875,
+        "w": 20.546875,
+        "h": 18.078125
+      },
+      "ink": [
+        {
+          "text": "\u22122000",
+          "range": {
+            "x": 81.296875,
+            "y": 15.671875,
+            "w": 16.53125,
+            "h": 5
+          },
+          "actualInkWidth": 16.346649169921875,
+          "actualInkHeight": 5,
+          "centerOffsetX": -0.1001129150390625,
+          "font": "bold 4.57px Georgia, serif",
+          "fontAscent": 4,
+          "fontDescent": 1,
+          "inkAscent": 4,
+          "inkDescent": 1
+        }
+      ],
+      "inkCenterOffsetY": -0.7890625
+    },
+    {
+      "id": "houseMatchScoreB1020",
+      "text": "2000",
+      "box": {
+        "x": 171.421875,
+        "y": 9.921875,
+        "w": 20.546875,
+        "h": 18.078125
+      },
+      "ink": [
+        {
+          "text": "2000",
+          "range": {
+            "x": 173.421875,
+            "y": 14.984375,
+            "w": 16.53125,
+            "h": 7
+          },
+          "actualInkWidth": 16.393951416015625,
+          "actualInkHeight": 6,
+          "centerOffsetX": -0.0764617919921875,
+          "font": "bold 5.95px Georgia, serif",
+          "fontAscent": 6,
+          "fontDescent": 1,
+          "inkAscent": 5,
+          "inkDescent": 1
+        }
+      ],
+      "inkCenterOffsetY": 0.0234375
+    },
+    {
+      "id": "houseClock1020",
+      "text": "12:59 PM",
+      "box": {
+        "x": 15.53125,
+        "y": 798,
+        "w": 79.765625,
+        "h": 33.59375
+      },
+      "ink": [
+        {
+          "text": "12:59 PM",
+          "range": {
+            "x": 25.421875,
+            "y": 807.640625,
+            "w": 59.96875,
+            "h": 14
+          },
+          "actualInkWidth": 58.574188232421875,
+          "actualInkHeight": 8,
+          "centerOffsetX": 0.2949066162109375,
+          "font": "600 11.2005px Georgia, serif",
+          "fontAscent": 11,
+          "fontDescent": 3,
+          "inkAscent": 8,
+          "inkDescent": 0
+        }
+      ],
+      "inkCenterOffsetY": -0.15625
+    },
+    {
+      "id": "houseGoal1020",
+      "text": "Biddingin progress",
+      "box": {
+        "x": 302.0625,
+        "y": 797.59375,
+        "w": 75.0625,
+        "h": 34.390625
+      },
+      "ink": [
+        {
+          "text": "Bidding",
+          "range": {
+            "x": 314.8125,
+            "y": 800.96875,
+            "w": 49.5625,
+            "h": 14
+          },
+          "actualInkWidth": 49.734619140625,
+          "actualInkHeight": 11,
+          "centerOffsetX": 0.0860595703125,
+          "font": "600 11.2005px Georgia, serif",
+          "fontAscent": 11,
+          "fontDescent": 3,
+          "inkAscent": 9,
+          "inkDescent": 2
+        },
+        {
+          "text": "in progress",
+          "range": {
+            "x": 304.140625,
+            "y": 814.28125,
+            "w": 70.890625,
+            "h": 14
+          },
+          "actualInkWidth": 70.59033203125,
+          "actualInkHeight": 11,
+          "centerOffsetX": -0.157958984375,
+          "font": "600 11.2005px Georgia, serif",
+          "fontAscent": 11,
+          "fontDescent": 3,
+          "inkAscent": 9,
+          "inkDescent": 2
+        }
+      ],
+      "inkCenterOffsetY": 0.3359375
+    }
+  ],
+  "passed": true
+}

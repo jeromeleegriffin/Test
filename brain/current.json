@@ -1205,5 +1205,14 @@
   },
   "latestSourceBuild": "846-source-cleanup",
   "latestSourceCommit": "71dee12ecdeb41d8edc91a9b02adc4e5716b5d9b",
-  "comprehensiveHandoff": "releases/846/COMPREHENSIVE_HANDOFF.txt"
+  "comprehensiveHandoff": "releases/846/COMPREHENSIVE_HANDOFF.txt",
+  "combinedUiMultiplayer20261020": {
+    "status": "COMBINED_LOCAL_BROWSER_VERIFIED_NOT_DEPLOYED",
+    "branch": "work/combined-r5-premium-cloudflare-20261020",
+    "nativeSource": "eae0889b06b3ea39f4ed406fdf5a7b2a25831827",
+    "cloudBase": "9b2258f632041fb7263586d1fe37dce26792844d",
+    "coordination": "../coordination/combined-r5-ui-cloud-20261020/COMBINED_CHECKPOINT.md",
+    "physicalAndroidAcceptance": "UNVERIFIED",
+    "mainAndHostedBetaChanged": false
+  }
 }
