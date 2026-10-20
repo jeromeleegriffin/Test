@@ -37,11 +37,7 @@
   );
   clockConsole.hidden = true;
   document.body.appendChild(clockConsole);
-  const connector = make(
-    'img',
-    'houseHolderConsoleConnector1020',
-    'house-holder-console-connector'
-  );
+  const connector = make('img', 'houseHolderConsoleConnector1020', 'house-holder-console-connector');
   connector.src = root + 'holder-console-walnut-connector.png';
   connector.alt = '';
   connector.setAttribute('aria-hidden', 'true');
@@ -91,6 +87,7 @@
   const vv = window.visualViewport;
   const installed = () =>
     Boolean(
+      window.HORFullscreen831?.fitModeActive?.() ||
       document.fullscreenElement ||
         document.webkitFullscreenElement ||
         navigator.standalone === true ||
@@ -253,11 +250,10 @@
       gap = Math.max(3, Math.floor(w * 0.012));
     const iw = ico * 3 + gap * 2,
       paceW = Math.max(136, Math.min(176, w * 0.44));
-    const stepH = Math.round((paceW * 109) / 415);
+    const stepH = Math.round(paceW * 109 / 415);
     // Owner correction: the plaque and utility buttons share one exact height/row.
     // Register the visible 619x93 silhouette; its transparent canvas margins do not count as artwork.
-    const headerH = ico,
-      headerW = (headerH * 619) / 93;
+    const headerH = ico, headerW = headerH * 619 / 93;
     const xScore = Math.round(x + 7),
       yScore = Math.round(y + 4);
     plaque.style.left = xScore + 'px';
@@ -285,15 +281,15 @@
       set(connector, 'left', Math.round(x + (w - panelW) / 2) + 'px');
       set(connector, 'top', joinTop + 'px');
       set(connector, 'width', panelW + 'px');
-      set(connector, 'height', Math.ceil(top + (panelH * 20) / 192 - joinTop + 1) + 'px');
+      set(connector, 'height', Math.ceil(top + panelH * 20 / 192 - joinTop + 1) + 'px');
       // The 3 balanced photographic recesses are fixed in the physical asset.
       bottomStage.style.display = 'flex';
       topStage.style.display = 'none';
       bottomStage.style.position = 'absolute';
-      bottomStage.style.left = (265 / 941) * 100 + '%';
-      bottomStage.style.width = (415 / 941) * 100 + '%';
-      bottomStage.style.top = (56 / 192) * 100 + '%';
-      bottomStage.style.height = (109 / 192) * 100 + '%';
+      bottomStage.style.left = (265 / 941 * 100) + '%';
+      bottomStage.style.width = (415 / 941 * 100) + '%';
+      bottomStage.style.top = (56 / 192 * 100) + '%';
+      bottomStage.style.height = (109 / 192 * 100) + '%';
       // Console already contains the same complete physical frame.
       bottomStage.classList.add('house-console-pace');
       moveSpeed(bottomStage);
@@ -307,7 +303,7 @@
       set(topStage, 'height', Math.round(stepH) + 'px');
       moveSpeed(topStage);
     }
-    fs.title = full ? 'Exit full screen' : 'Full screen';
+    fs.title = window.HORFullscreen831?.label?.() || (full ? 'Exit full screen' : 'Full screen');
     fs.setAttribute('aria-label', fs.title);
     document.body.dataset.housePremiumLayout = allowPanel ? 'installed-console' : 'browser-top';
     refresh();

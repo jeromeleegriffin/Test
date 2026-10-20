@@ -1,7 +1,7 @@
 // Griffin House of Rooks runtime identity for diagnostics and offline verification.
-window.HOR_LIVE_VERSION = '846-premium-owner-repair-20261020-r5';
-window.HOR_BUILD = '846-premium-owner-repair-20261020-r5';
-window.GHR_BUILD = 'Premium UI fullscreen / clean package 20261020 R5';
+window.HOR_LIVE_VERSION = '846-premium-owner-repair-20261020-r7';
+window.HOR_BUILD = '846-premium-owner-repair-20261020-r7';
+window.GHR_BUILD = 'Premium UI real fullscreen and separate fit 20261020 R7';
 window.HORRuntimeTruth = async function () {
   const controller = navigator.serviceWorker && navigator.serviceWorker.controller;
   const worker = controller
@@ -23,11 +23,11 @@ window.HORRuntimeTruth = async function () {
     worker,
     controller: controller && controller.scriptURL,
     coherent:
-      window.HOR_PAGE_BUILD === '846-premium-owner-repair-20261020-r5' &&
-      window.HOR_SCRIPT_BUILD === '846-premium-owner-repair-20261020-r5' &&
-      window.HOR_BUILD === '846-premium-owner-repair-20261020-r5' &&
+      window.HOR_PAGE_BUILD === '846-premium-owner-repair-20261020-r7' &&
+      window.HOR_SCRIPT_BUILD === '846-premium-owner-repair-20261020-r7' &&
+      window.HOR_BUILD === '846-premium-owner-repair-20261020-r7' &&
       !!worker &&
-      worker.build === '846-premium-owner-repair-20261020-r5' &&
-      worker.cache === 'house-of-rooks-846-premium-owner-repair-20261020-r5',
+      worker.build === '846-premium-owner-repair-20261020-r7' &&
+      worker.cache === 'house-of-rooks-846-premium-owner-repair-20261020-r7',
   };
 };

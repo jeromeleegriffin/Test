@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '846-premium-owner-repair-20261020-r5';
+const APP_VERSION = '846-premium-owner-repair-20261020-r7';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -15946,15 +15946,9 @@ function wantLandscapeFullscreen() {
 
 // Legacy viewport/game hooks only repaint controls. Native fullscreen entry/exit
 // belongs to the explicit button controller; never re-enter from resize or a tap.
-function enterLandscapeFullscreen() {
-  syncBrowserFitBtn();
-}
-function exitLandscapeFullscreen() {
-  syncBrowserFitBtn();
-}
-function syncLandscapeFullscreen() {
-  syncBrowserFitBtn();
-}
+function enterLandscapeFullscreen() { syncBrowserFitBtn(); }
+function exitLandscapeFullscreen() { syncBrowserFitBtn(); }
+function syncLandscapeFullscreen() { syncBrowserFitBtn(); }
 
 function syncBrowserFitBtn() {
   const bar = document.getElementById('btnFullscreen');

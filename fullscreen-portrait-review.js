@@ -5,6 +5,7 @@
   const ref = { width: 875, height: 1797, holderY: 1430 };
   const installed = () =>
     Boolean(
+      window.HORFullscreen831?.fitModeActive?.() ||
       document.fullscreenElement ||
         document.webkitFullscreenElement ||
         navigator.standalone === true ||
