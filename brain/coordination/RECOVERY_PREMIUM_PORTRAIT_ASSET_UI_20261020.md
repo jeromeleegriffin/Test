@@ -17,3 +17,6 @@ Local `house_asset_wip`: `house-premium-ui.js/css`, `fullscreen-portrait-review.
 **Still unverified:** full bidding→nest→play→score sequence, actual installed Android/PWA fullscreen behavior and service-worker update, complete control tapping, responsive landscape/tablet, integration onto NEWEST repaired Test source. Earlier local URL navigation was browser-blocked; test uses Playwright `set_content`, local-route assets, and TEST-ONLY storage/crypto shims. Simulated PWA ≠ physical phone certification.
 
 **RELEASE HOLD:** No owner-ready game ZIP or deployment until those steps and real pixel inspection pass. Keep both live servers unchanged. Read the complete source archive `READ_FIRST_RECOVERY_NOT_GAME.txt` before continuing.
+
+## QA FOLLOW-UP — 2026-10-20 (latest)
+See `brain/coordination/QA_PREMIUM_UI_FAILING_RUN_RECOVERY_20261020.md` and its newer Library diagnostic supplement (ID `libfile_19c851801e348191939f55e351ca135d`). This preserves evidence that full offline hands did reach scoring, while documenting unresolved utility-control repositioning and the unsuccessful test-hook attempts. An unverified hook was rolled back; no release or deployment authorized.
