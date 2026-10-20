@@ -647,26 +647,34 @@
     return sendAction("play", { cardId });
   };
   window.hostStartNextHand = function () { return sendAction("next-hand", {}); };
-  window.onWaitSeatClick = async function (seat) {
-    if (!credentials) { status("Join the room before adding test bots."); return; }
-    if (credentials.seat !== 0) { status("Only the host can add test bots."); return; }
-    const target = (latest?.players || []).find(player => Number(player?.seat) === Number(seat));
-    if (target?.occupied) { status("That seat is already occupied."); return; }
-    const humanCount = (latest?.players || []).filter(player => player?.occupied && !player.isBot).length;
-    
-    if (busy) return;
-    busy = true;
-    try {
-      const snap = await api(roomPath("fill-bots"), { method: "POST", body: { seat: Number(seat) } });
-      latest = snap;
-      lastRevision = snap.revision;
-      enterWaiting(snap);
-    } catch (error) {
-      status("Could not add test bots: " + error.message);
-    } finally {
-      busy = false;
-    }
+  const nativeBotPicker=window.openBotPicker;
+  async function cloudBotSeat(seat, name) {
+    if(busy||!credentials)return;
+    busy=true;
+    try {const snap=await api(roomPath("bot-seat"),{method:"POST",body:{seat, name, expectedRevision:latest.revision}});receiveSnapshot(snap,credentials);closeBotPicker();}
+    catch(error){status("Could not change bot: "+error.message);await refresh(true);}
+    finally{busy=false;}
+  }
+  window.openBotPicker=function(seat,replaceBot=false){
+    if(!credentials)return nativeBotPicker(seat,replaceBot);
+    if(credentials.seat!==0||latest?.phase!=="waiting")return;
+    nativeBotPicker(seat,replaceBot);
+    document.querySelectorAll("#botPickerGrid .bot-pick").forEach(button=>{button.onclick=()=>cloudBotSeat(seat,button.getAttribute("data-bot"));});
+    const remove=document.getElementById("botPickerRemove830");if(remove)remove.onclick=()=>cloudBotSeat(seat,null);
   };
+  window.onWaitSeatClick=function(seat){
+    if(!credentials||credentials.seat!==0||latest?.phase!=="waiting")return;
+    const target=latest.players?.find(p=>p.seat===Number(seat));
+    if(target?.occupied&&!target.isBot)return;
+    window.openBotPicker(Number(seat),!!target?.isBot);
+  };
+  window.addEventListener("click",event=>{
+    if(!credentials||credentials.seat!==0||latest?.phase!=="waiting"||matchMedia("(orientation: landscape)").matches)return;
+    const button=event.target.closest?.('[id^="waitSeat"]');if(!button||!/^waitSeat[1-3]$/.test(button.id))return;
+    const seat=Number(button.id.slice(-1)),target=latest.players?.find(p=>p.seat===seat);
+    if(target?.occupied&&!target.isBot)return;
+    event.preventDefault();event.stopImmediatePropagation();window.onWaitSeatClick(seat);
+  },true);
   window.hostProcessAllTrumpsClaim = function () { return sendAction("claim-remaining", {}); };
   window.hostDeclineClaim = function () { return sendAction("decline-claim", {}); };
 
