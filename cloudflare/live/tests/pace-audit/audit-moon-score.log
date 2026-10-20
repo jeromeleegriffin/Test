@@ -1,0 +1,2 @@
+PASS rendered moonSuccess {"pointsA":200,"pointsB":0,"bid":200,"bidderTeam":0,"made":true,"trump":"green","scores":[500,0],"scoreDeltaA":500,"scoreDeltaB":0,"shotTheMoon":true,"shotMoonResult":"made","sandbagOverAdded":0,"sandbagDeduction":0,"nestTeam":0,"matchResult":"Team A"}
+PASS rendered moonFailure {"pointsA":190,"pointsB":10,"bid":200,"bidderTeam":0,"made":false,"trump":"green","scores":[-500,10],"scoreDeltaA":-200,"scoreDeltaB":10,"shotTheMoon":true,"shotMoonResult":"failed","sandbagOverAdded":0,"sandbagDeduction":0,"nestTeam":0,"matchResult":"Team B"}

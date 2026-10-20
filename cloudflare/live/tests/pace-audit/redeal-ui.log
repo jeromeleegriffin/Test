@@ -1,0 +1,5 @@
+page.waitForFunction: Timeout 18000ms exceeded.
+    at /workspace/scratch/43e36921068b/redeal-ui.cjs:2:1224 {
+  log: [],
+  name: 'TimeoutError'
+}

@@ -1,0 +1,16 @@
+{
+  "bids": 1,
+  "before": 0,
+  "after": {
+    "howls": [
+      {
+        "id": "cloud-moon:SK68YEQD:1",
+        "status": "played"
+      }
+    ],
+    "moon": true,
+    "bid": 200
+  },
+  "restored": 0,
+  "errors": []
+}

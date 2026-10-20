@@ -1,0 +1,11 @@
+verified transport fetch failed https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/black-13.png request.allHeaders: Target page, context or browser has been closed
+page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/", waiting until "load"[22m
+
+    at /workspace/scratch/43e36921068b/audit-full-match.cjs:3:949 {
+  log: [
+    '  - navigating to "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/", waiting until "load"'
+  ],
+  name: 'TimeoutError'
+}

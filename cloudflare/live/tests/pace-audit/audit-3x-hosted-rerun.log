@@ -1,0 +1,28 @@
+ASSET_RETRY /cloud-game/assets/landscape-discard812.css 1 fetch failed
+ASSET_RETRY /cloud-game/assets/landscape-polish.css 1 fetch failed
+ASSET_RETRY /cloud-game/assets/room831.css 1 fetch failed
+ASSET_RETRY /cloud-game/assets/review835.css 1 fetch failed
+ASSET_RETRY /cloud-game/assets/nest-manual838.css 1 fetch failed
+ASSET_RETRY /cloud-game/assets/nest-reveal838.css 1 fetch failed
+ASSET_RETRY /cloud-game/assets/review839.css 1 fetch failed
+ASSET_RETRY /cloud-game/assets/ui-audit841.css 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/cardback-raven.jpg 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/splash-battle.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/room831.css 2 fetch failed
+ASSET_RETRY /cloud-game/assets/ui-audit841.css 2 fetch failed
+ASSET_RETRY /cloud-game/assets/review839.css 2 fetch failed
+ASSET_RETRY /cloud-game/assets/review835.css 2 fetch failed
+ASSET_RETRY /cloud-game/assets/nest-manual838.css 2 fetch failed
+ASSET_RETRY /cloud-game/assets/nest-reveal838.css 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/splash-battle.png 2 fetch failed
+verified transport fetch failed https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/cloud-game/assets/room831.css fetch failed
+verified transport fetch failed https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/cloud-game/assets/ui-audit841.css fetch failed
+verified transport fetch failed https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/cloud-game/assets/nest-manual838.css fetch failed
+verified transport fetch failed https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/cloud-game/assets/review839.css fetch failed
+verified transport fetch failed https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/cloud-game/assets/review835.css fetch failed
+verified transport fetch failed https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/splash-battle.png fetch failed
+verified transport fetch failed https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/cloud-game/assets/nest-reveal838.css fetch failed
+NET join 201
+NET join 201
+NET join 201
+NET start 200

@@ -1,0 +1,17 @@
+{
+  "results": [
+    {
+      "humans": 2,
+      "target": 500,
+      "hands": 5,
+      "actions": 124,
+      "reconnects": 9,
+      "final": "Team B",
+      "scores": [
+        -625,
+        350
+      ]
+    }
+  ],
+  "errors": []
+}

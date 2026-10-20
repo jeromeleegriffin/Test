@@ -1,0 +1,68 @@
+NET join 201
+NET fill-bots 200
+NET start 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+WATCH 0 {"phase":"bidding","turn":1,"hand":1,"final":null,"revision":4,"scores":[0,0],"claim":false,"resolving":false,"stamp":false,"trickLength":0,"counts":[10,10,10,10]}
+NET pace 200
+2 PHASE bidding
+2 ACTION 1 bidding 1 4
+NET bid 200
+2 ACTION 2 bidding 0 7
+NET bid 200
+2 PHASE discard
+2 ACTION 3 discard 1 8
+NET discard 200
+2 PHASE trump
+2 ACTION 4 trump 1 9
+NET trump 200
+2 PHASE play
+2 ACTION 5 play 1 11
+NET play 200
+2 ACTION 6 play 0 14
+NET play 200
+WATCH 50 {"phase":"play","turn":1,"hand":1,"final":null,"revision":15,"scores":[0,0],"claim":false,"resolving":true,"stamp":false,"trickLength":4,"counts":[9,9,9,9]}
+2 ACTION 7 play 1 16
+NET play 200
+2 ACTION 8 play 0 19
+NET play 200
+2 ACTION 9 play 0 21
+NET play 200
+2 ACTION 10 play 1 22
+NET play 200
+WATCH 100 {"phase":"play","turn":3,"hand":1,"final":null,"revision":26,"scores":[0,0],"claim":false,"resolving":false,"stamp":false,"trickLength":0,"counts":[7,7,7,7]}
+2 ACTION 11 play 0 27
+NET play 200
+2 ACTION 12 play 1 28
+NET play 200
+2 ACTION 13 play 0 31
+NET play 200
+2 ACTION 14 play 1 32
+NET play 200
+verified transport fetch failed https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/rooms/UBSZCGE5/snapshot fetch failed
+WATCH 150 {"phase":"play","turn":3,"hand":1,"final":null,"revision":36,"scores":[0,0],"claim":false,"resolving":false,"stamp":false,"trickLength":0,"counts":[5,5,5,5]}
+2 ACTION 15 play 0 37
+NET play 200
+2 ACTION 16 play 1 38
+NET play 200
+2 ACTION 17 play 0 41
+NET play 200
+2 ACTION 18 play 1 42
+NET play 200
+WATCH 200 {"phase":"play","turn":2,"hand":1,"final":null,"revision":46,"scores":[0,0],"claim":false,"resolving":false,"stamp":false,"trickLength":0,"counts":[3,3,3,3]}
+2 ACTION 19 play 0 48
+NET play 200
+2 ACTION 20 play 1 49
+NET play 200
+2 ACTION 21 play 0 53
+NET play 200
+2 ACTION 22 play 1 54
+NET play 200
+WATCH 250 {"phase":"play","turn":3,"hand":1,"final":null,"revision":56,"scores":[0,0],"claim":false,"resolving":false,"stamp":false,"trickLength":0,"counts":[1,1,1,1]}
+2 ACTION 23 play 0 57
+NET play 200
+2 ACTION 24 play 1 58
+NET play 200
+{"results":[{"humans":2,"target":100,"hands":1,"actions":24,"reconnects":3,"final":"Team A","scores":[70,-195]}],"errors":[]}

@@ -1,0 +1,22 @@
+VISIBLE 0 [
+  'Change player',
+  'Take Your Seat ›',
+  'Play With Friends',
+  'Join by Code',
+  '☰',
+  'Change Partner'
+]
+VISIBLE 1 [
+  'Change player',
+  'Take Your Seat ›',
+  'Play With Friends',
+  'Join by Code',
+  '☰',
+  'Change Partner'
+]
+page.waitForFunction: Timeout 30000ms exceeded.
+    at /workspace/scratch/43e36921068b/invite-close-ui.cjs:5:74
+    at /workspace/scratch/43e36921068b/invite-close-ui.cjs:5:65 {
+  log: [],
+  name: 'TimeoutError'
+}

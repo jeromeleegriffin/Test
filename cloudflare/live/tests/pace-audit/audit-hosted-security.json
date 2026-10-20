@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Missing session",
+    "pass": true
+  },
+  {
+    "name": "Forged session",
+    "pass": true
+  },
+  {
+    "name": "Missing token",
+    "pass": true
+  },
+  {
+    "name": "Wrong token",
+    "pass": true
+  },
+  {
+    "name": "No unauthenticated socket ticket",
+    "pass": true
+  },
+  {
+    "name": "Wrong player cannot bid",
+    "pass": true
+  },
+  {
+    "name": "Action ID cannot be reused with a changed command",
+    "pass": true
+  },
+  {
+    "name": "Four independent tokens receive only distinct own hands",
+    "pass": true
+  },
+  {
+    "name": "Socket ticket is single use",
+    "pass": true
+  },
+  {
+    "name": "Cross-origin write blocked",
+    "pass": true
+  },
+  {
+    "name": "Legacy test route hidden",
+    "pass": true
+  }
+]

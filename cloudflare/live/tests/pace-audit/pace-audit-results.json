@@ -1,0 +1,371 @@
+{
+  "deployment": {
+    "worker": "griffin-house-of-rooks-online",
+    "version": "0ddb4c03-6920-455a-aea5-4b16cd0ba766",
+    "deployment": "9ddb0b7b-20e5-4ce6-b8c0-bee8b914644e",
+    "codeCommit": "6a6e88d163831d6fbcc6d9785c0d6a461eba0526",
+    "sourceReadbackMatches": true,
+    "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "rollbackVersion": "0d499a95-f2fc-4a7f-8308-cec8215bda44",
+    "rollbackSource": "cloudflare/rollback/worker-live-before-pace-20261020.mjs",
+    "secretPreserved": true,
+    "migrations": false
+  },
+  "hosted": {
+    "audit-1x-hosted": {
+      "results": [
+        {
+          "humans": 2,
+          "target": 100,
+          "hands": 1,
+          "actions": 24,
+          "reconnects": 3,
+          "final": "Team A",
+          "scores": [
+            70,
+            -195
+          ]
+        }
+      ],
+      "errors": []
+    },
+    "audit-3x-hosted": {
+      "results": [
+        {
+          "humans": 4,
+          "target": 100,
+          "hands": 1,
+          "actions": 47,
+          "reconnects": 3,
+          "final": "Team A",
+          "scores": [
+            190,
+            -195
+          ]
+        }
+      ],
+      "errors": []
+    },
+    "audit-max-hosted": {
+      "results": [
+        {
+          "humans": 2,
+          "target": 500,
+          "hands": 5,
+          "actions": 124,
+          "reconnects": 9,
+          "final": "Team B",
+          "scores": [
+            -625,
+            350
+          ]
+        }
+      ],
+      "errors": []
+    }
+  },
+  "local": {
+    "audit-1x-local": {
+      "results": [
+        {
+          "humans": 2,
+          "target": 100,
+          "hands": 1,
+          "actions": 24,
+          "reconnects": 3,
+          "final": "Team B",
+          "scores": [
+            -195,
+            200
+          ]
+        }
+      ],
+      "errors": []
+    },
+    "audit-3x-local": {
+      "results": [
+        {
+          "humans": 4,
+          "target": 100,
+          "hands": 1,
+          "actions": 46,
+          "reconnects": 3,
+          "final": "Team B",
+          "scores": [
+            -195,
+            105
+          ]
+        }
+      ],
+      "errors": []
+    },
+    "audit-max-local": {
+      "results": [
+        {
+          "humans": 2,
+          "target": 500,
+          "hands": 3,
+          "actions": 74,
+          "reconnects": 9,
+          "final": "Team B",
+          "scores": [
+            -585,
+            200
+          ]
+        }
+      ],
+      "errors": []
+    }
+  },
+  "service": {
+    "scope": "Local deployed RoomService with structured-clone storage adapter; not Cloudflare or rendered browser",
+    "matches": 10,
+    "actions": 2054,
+    "rejoins": 351,
+    "reports": [
+      {
+        "humans": 2,
+        "bots": 2,
+        "run": 0,
+        "hands": 5,
+        "steps": 226,
+        "scores": [
+          525,
+          475
+        ]
+      },
+      {
+        "humans": 2,
+        "bots": 2,
+        "run": 1,
+        "hands": 7,
+        "steps": 320,
+        "scores": [
+          555,
+          435
+        ]
+      },
+      {
+        "humans": 2,
+        "bots": 2,
+        "run": 2,
+        "hands": 6,
+        "steps": 279,
+        "scores": [
+          595,
+          200
+        ]
+      },
+      {
+        "humans": 2,
+        "bots": 2,
+        "run": 3,
+        "hands": 6,
+        "steps": 273,
+        "scores": [
+          640,
+          395
+        ]
+      },
+      {
+        "humans": 2,
+        "bots": 2,
+        "run": 4,
+        "hands": 5,
+        "steps": 229,
+        "scores": [
+          190,
+          555
+        ]
+      },
+      {
+        "humans": 4,
+        "bots": 0,
+        "run": 0,
+        "hands": 6,
+        "steps": 283,
+        "scores": [
+          555,
+          0
+        ]
+      },
+      {
+        "humans": 4,
+        "bots": 0,
+        "run": 1,
+        "hands": 6,
+        "steps": 283,
+        "scores": [
+          525,
+          185
+        ]
+      },
+      {
+        "humans": 4,
+        "bots": 0,
+        "run": 2,
+        "hands": 4,
+        "steps": 190,
+        "scores": [
+          555,
+          -90
+        ]
+      },
+      {
+        "humans": 4,
+        "bots": 0,
+        "run": 3,
+        "hands": 6,
+        "steps": 282,
+        "scores": [
+          45,
+          595
+        ]
+      },
+      {
+        "humans": 4,
+        "bots": 0,
+        "run": 4,
+        "hands": 7,
+        "steps": 331,
+        "scores": [
+          320,
+          600
+        ]
+      }
+    ]
+  },
+  "unit": [
+    {
+      "test": "bot-picker-unit.mjs",
+      "exit": 0,
+      "output": "PASS bot choice/replace/remove, host auth, human protection, stale request rejection, duplicate portrait prevention, waiting only\n"
+    },
+    {
+      "test": "claim-unit.mjs",
+      "exit": 0,
+      "output": "PASS claim at all speeds: hold, duplicate, early next denied, privacy, reconnect views, reveal after animation\n"
+    },
+    {
+      "test": "close-unit.mjs",
+      "exit": 0,
+      "output": "PASS: host-only/idempotent close, closed room blocks join/rejoin/start, tombstone retained, new table allowed\n"
+    },
+    {
+      "test": "collection-unit.mjs",
+      "exit": 0,
+      "output": "PASS complete fourth-card snapshot, normal/bird collection deadlines, score held until collection ends, duplicate safe, early next-hand denied, all reconnect views agree, recent trick retained\n"
+    },
+    {
+      "test": "deal-unit.mjs",
+      "exit": 0,
+      "output": "PASS: bots and humans locked during opening, minimum pause, all-human readiness, stale/unauthorized readiness rejection, disconnected-client deadline fallback, persisted DO alarm wakeup and next-hand opening alarm, closing during the opening remains closed\n"
+    },
+    {
+      "test": "invalid-actions-unit.mjs",
+      "exit": 0,
+      "output": "PASS auth/seat theft/private hands, wrong turn, invalid bid/discard/trump/card, duplicate/reused action, presentation lock; rejected actions preserve hand\n"
+    },
+    {
+      "test": "pace-unit.mjs",
+      "exit": 0,
+      "output": "PASS authoritative pace sync, guest denied, invalid pace rejected, measured bot delays, no early action, pending bot turn rescheduled [{\"pace\":1,\"botDelayMs\":1200},{\"pace\":3,\"botDelayMs\":400},{\"pace\":99,\"botDelayMs\":120}]\n"
+    },
+    {
+      "test": "rare-rules-unit.mjs",
+      "exit": 0,
+      "output": "PASS Moon all counters despite lost zero-point trick, missed counter penalty, negative scores, all-pass redeal and forced dealer [{\"negative\":false,\"success\":false,\"scores\":[-200,5]},{\"negative\":false,\"success\":true,\"scores\":[0,500]},{\"negative\":true,\"success\":false,\"scores\":[-500,-295]},{\"negative\":true,\"success\":true,\"scores\":[-300,500]}]\n"
+    },
+    {
+      "test": "redeal-unit.mjs",
+      "exit": 0,
+      "output": "PASS actual all-pass redeal retains hand number, fresh opening identity, stale acknowledgements rejected, all players finish new opening\n"
+    },
+    {
+      "test": "sequence-unit.mjs",
+      "exit": 0,
+      "output": "PASS opening has no early bots; polling cannot accelerate clock; each DO alarm advances one bid and schedules next; human turn stops bot alarm\n"
+    },
+    {
+      "test": "single-seat-unit.mjs",
+      "exit": 0,
+      "output": "PASS: single seat, human reservation preserved, duplicate rejected, guest denied, invalid rejected, bulk fill retained\n"
+    },
+    {
+      "test": "trump-unit.mjs",
+      "exit": 0,
+      "output": "PASS bot trump is observable, shared stamp lock blocks human/bot play, polling cannot bypass, cards advance individually per alarm\n"
+    }
+  ],
+  "security": [
+    {
+      "name": "Missing session",
+      "pass": true
+    },
+    {
+      "name": "Forged session",
+      "pass": true
+    },
+    {
+      "name": "Missing token",
+      "pass": true
+    },
+    {
+      "name": "Wrong token",
+      "pass": true
+    },
+    {
+      "name": "No unauthenticated socket ticket",
+      "pass": true
+    },
+    {
+      "name": "Wrong player cannot bid",
+      "pass": true
+    },
+    {
+      "name": "Action ID cannot be reused with a changed command",
+      "pass": true
+    },
+    {
+      "name": "Four independent tokens receive only distinct own hands",
+      "pass": true
+    },
+    {
+      "name": "Socket ticket is single use",
+      "pass": true
+    },
+    {
+      "name": "Cross-origin write blocked",
+      "pass": true
+    },
+    {
+      "name": "Legacy test route hidden",
+      "pass": true
+    }
+  ],
+  "invite": {
+    "live": true,
+    "share": true,
+    "qrDecoded": true,
+    "invitePrefill": true,
+    "guestJoined": true,
+    "closeNotifiedBoth": true,
+    "oldCredentialsCleared": true,
+    "newTableCreated": true,
+    "errors": [],
+    "dialogs": [
+      {
+        "seat": 0,
+        "type": "confirm"
+      },
+      {
+        "seat": 0,
+        "type": "alert"
+      },
+      {
+        "seat": 1,
+        "type": "alert"
+      }
+    ]
+  }
+}

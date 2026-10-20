@@ -1,0 +1,25 @@
+{
+  "live": true,
+  "share": true,
+  "qrDecoded": true,
+  "invitePrefill": true,
+  "guestJoined": true,
+  "closeNotifiedBoth": true,
+  "oldCredentialsCleared": true,
+  "newTableCreated": true,
+  "errors": [],
+  "dialogs": [
+    {
+      "seat": 0,
+      "type": "confirm"
+    },
+    {
+      "seat": 0,
+      "type": "alert"
+    },
+    {
+      "seat": 1,
+      "type": "alert"
+    }
+  ]
+}

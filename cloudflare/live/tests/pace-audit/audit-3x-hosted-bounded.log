@@ -1,0 +1,79 @@
+NET join 201
+NET join 201
+NET join 201
+NET start 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET ready 200
+NET pace 200
+WATCH 0 {"phase":"bidding","turn":1,"hand":1,"final":null,"revision":6,"scores":[0,0],"claim":false,"resolving":false,"stamp":false,"trickLength":0,"counts":[10,10,10,10]}
+4 PHASE bidding
+4 ACTION 1 bidding 1 6
+NET bid 200
+4 ACTION 2 bidding 2 7
+NET bid 200
+4 ACTION 3 bidding 3 8
+NET bid 200
+4 ACTION 4 bidding 0 9
+NET bid 200
+4 PHASE discard
+4 ACTION 5 discard 1 10
+NET discard 200
+4 PHASE trump
+4 ACTION 6 trump 1 11
+NET trump 200
+4 PHASE play
+4 ACTION 7 play 1 13
+NET play 200
+4 ACTION 8 play 2 14
+NET play 200
+4 ACTION 9 play 3 15
+NET play 200
+4 ACTION 10 play 0 16
+NET play 200
+4 ACTION 11 play 0 18
+NET play 200
+4 ACTION 12 play 1 19
+NET play 200
+4 ACTION 13 play 2 20
+NET play 200
+4 ACTION 14 play 3 21
+NET play 200
+4 ACTION 15 play 0 23
+NET play 200
+4 ACTION 16 play 1 24
+NET play 200
+4 ACTION 17 play 2 25
+NET play 200
+4 ACTION 18 play 3 26
+NET play 200
+4 ACTION 19 play 3 28
+NET play 200
+4 ACTION 20 play 0 29
+NET play 200
+4 ACTION 21 play 1 30
+NET play 200
+4 ACTION 22 play 2 31
+NET play 200
+NET play 200
+4 ACTION 23 play 2 33
+4 ACTION 24 play 3 34
+NET play 200
+4 ACTION 25 play 0 35
+NET play 200
+4 ACTION 26 play 1 36

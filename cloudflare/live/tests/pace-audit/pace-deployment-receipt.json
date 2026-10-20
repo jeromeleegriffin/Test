@@ -1,0 +1,12 @@
+{
+  "worker": "griffin-house-of-rooks-online",
+  "version": "0ddb4c03-6920-455a-aea5-4b16cd0ba766",
+  "deployment": "9ddb0b7b-20e5-4ce6-b8c0-bee8b914644e",
+  "codeCommit": "6a6e88d163831d6fbcc6d9785c0d6a461eba0526",
+  "sourceReadbackMatches": true,
+  "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+  "rollbackVersion": "0d499a95-f2fc-4a7f-8308-cec8215bda44",
+  "rollbackSource": "cloudflare/rollback/worker-live-before-pace-20261020.mjs",
+  "secretPreserved": true,
+  "migrations": false
+}
