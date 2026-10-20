@@ -17,8 +17,8 @@ with sync_playwright() as pw:
  try:
   page.goto('http://127.0.0.1:8766/GriffinHouseZipReview.html',wait_until='domcontentloaded')
   page.locator('#zipFile').set_input_files(str(archive))
+  page.frame_locator('#frame').locator('#soloPracticeBtn').wait_for(state='visible',timeout=120000)
   frame=page.locator('#frame').element_handle().content_frame()
-  frame.locator('#soloPracticeBtn').wait_for(state='visible',timeout=120000)
   report['loadedIdentity']=frame.evaluate('window.HOR_BUILD')
   assert report['loadedIdentity']=='846-premium-portrait-20261020-rc1'
   page.screenshot(path=str(out/'loader-entry.png'))

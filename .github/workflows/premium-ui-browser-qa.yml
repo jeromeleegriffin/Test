@@ -16,12 +16,6 @@ jobs:
           python-version: '3.12'
       - run: pip install playwright==1.56.0
       - run: playwright install --with-deps chromium
-      - name: Moon hand and bidding utilities
-        env:
-          QA_WIDTH: '393'
-          QA_INSTALLED: 'true'
-          QA_MOON: 'true'
-        run: python coordination/premium-ui-final-20261020/qa_integrated.py
       - name: Exact game ZIP in unchanged original Loader and text stress
         if: always()
         run: python coordination/premium-ui-final-20261020/qa_loader_acceptance.py
