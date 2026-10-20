@@ -4,7 +4,6 @@ on:
     branches: [work/premium-ui-final-integration-20261020]
     paths:
       - 'coordination/premium-ui-final-20261020/qa_integrated.py'
-      - 'coordination/premium-ui-final-20261020/source-payload/**'
       - '.github/workflows/premium-ui-browser-qa.yml'
   workflow_dispatch:
 permissions:
@@ -12,37 +11,67 @@ permissions:
 jobs:
   browser:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        width: [360, 393, 430]
+        installed: ['false', 'true']
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Recover exact isolated source
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Prepare exact candidate
         run: |
-          cat coordination/premium-ui-final-20261020/source-payload/source-*.part > /tmp/premium-ui.patch
           python - <<'PY'
-          import hashlib
           from pathlib import Path
-          expected=Path('coordination/premium-ui-final-20261020/source-payload/patch.sha256').read_text().strip()
-          assert hashlib.sha256(Path('/tmp/premium-ui.patch').read_bytes()).hexdigest()==expected
+          p=Path('game060.js');p.write_text(p.read_text().replace('846-complete-repairs-20261019','846-premium-portrait-20261020-rc1'))
           PY
-          if ! test -f house-premium-ui.js; then
-            git apply --exclude=.github/workflows/premium-ui-browser-qa.yml --exclude=coordination/premium-ui-final-20261020/qa_integrated.py /tmp/premium-ui.patch
-          fi
+          npm ci --ignore-scripts --no-audit --no-fund
+          npx prettier --write game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css
+          npm run check
       - run: pip install playwright==1.56.0
       - run: playwright install --with-deps chromium
-      - run: python coordination/premium-ui-final-20261020/qa_integrated.py
+      - name: Actual hand and visual-state tests
+        env:
+          QA_WIDTH: '${{ matrix.width }}'
+          QA_INSTALLED: '${{ matrix.installed }}'
+        run: python coordination/premium-ui-final-20261020/qa_integrated.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: premium-ui-real-hand-screenshots
+          name: premium-ui-${{ matrix.width }}-${{ matrix.installed }}
           path: coordination/premium-ui-final-20261020/browser-results/
-      - name: Preserve exact source and QA evidence on isolated branch
-        if: always()
+  preserve:
+    if: always()
+    needs: browser
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Prepare same formatted candidate
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('game060.js');p.write_text(p.read_text().replace('846-complete-repairs-20261019','846-premium-portrait-20261020-rc1'))
+          PY
+          npm ci --ignore-scripts --no-audit --no-fund
+          npx prettier --write game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: premium-ui-*
+          merge-multiple: true
+          path: coordination/premium-ui-final-20261020/browser-results/
+      - name: Preserve candidate and actual QA evidence on isolated branch
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add game060.js index.html sw060.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css assets/house-premium-console brain/versions/AF/files/01_MASTER_BANK/MASTER_BRAIN_AF.md coordination/premium-ui-final-20261020
-          git diff --cached --quiet || git commit -m 'Preserve exact premium integration and actual browser QA evidence'
+          git add game060.js index.html sw060.js hor-version.js house-premium-ui.js house-premium-ui.css fullscreen-portrait-review.js fullscreen-portrait-review.css coordination/premium-ui-final-20261020/browser-results
+          git diff --cached --quiet || git commit -m 'Preserve formatted premium RC1 source and browser matrix evidence'
           git push origin HEAD:work/premium-ui-final-integration-20261020

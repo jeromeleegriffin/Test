@@ -2,8 +2,8 @@
  * Author: Jerome Griffin
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
-const BUILD = '846-complete-repairs-20261019';
-const CACHE = 'house-of-rooks-846-complete-repairs-20261019';
+const BUILD = '846-premium-portrait-20261020-rc1';
+const CACHE = 'house-of-rooks-846-premium-portrait-20261020-rc1';
 // Current dependency paths only; cacheLookup handles version query strings.
 const SHELL = [
   './assets/house-premium-console/ASSET_PROVENANCE.json',

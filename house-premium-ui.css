@@ -96,7 +96,8 @@
     background:url('assets/house-premium-console/speed-unselected-photo.png') center/100% 100% no-repeat;
   }
   body.in-game #scoreSpeed701.house-premium-speed > button.active,
-  body.in-game #scoreSpeed701.house-premium-speed > button[aria-pressed='true']{
+  body.in-game #scoreSpeed701.house-premium-speed > button[aria-pressed='true'],
+  body.in-game #portraitLastTrickButton.house-premium-last[aria-expanded='true']{
     color:#20160a!important;text-shadow:none!important;
     background:url('assets/house-premium-console/speed-selected-photo.png') center/100% 100% no-repeat!important;
   }

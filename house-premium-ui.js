@@ -68,7 +68,9 @@
       const ownPts=pointsFor(mine);
       const total=typeof totalCountersInDeck==='function'?totalCountersInDeck():NaN;
       if(!Number.isFinite(ownPts)||!Number.isFinite(total))return ['Set them','Bid '+bid];
-      const toSet=Math.max(0,Math.floor(total-bid-ownPts)+1);
+      // Current rules award counters in multiples of five. Show the next
+      // achievable counter total, rather than an impossible value such as 21.
+      const toSet=Math.max(0,(Math.floor((total-bid-ownPts)/5)+1)*5);
       return toSet?['Need '+toSet,'to set them']:['Opponents','set'];
     }catch(e){return ['Hand','in progress']}
   };
