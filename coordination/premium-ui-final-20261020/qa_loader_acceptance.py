@@ -20,9 +20,11 @@ with sync_playwright() as pw:
   page.frame_locator('#frame').locator('#soloPracticeBtn').wait_for(state='visible',timeout=120000)
   frame=page.locator('#frame').element_handle().content_frame()
   report['loadedIdentity']=frame.evaluate('window.HOR_BUILD')
-  assert report['loadedIdentity']=='846-premium-portrait-20261020-rc1'
+  assert report['loadedIdentity']=='846-premium-portrait-20261020-rc2'
   page.screenshot(path=str(out/'loader-entry.png'))
-  frame.locator('#soloPracticeBtn').click()
+  if frame.evaluate('document.querySelector("#tutorialOverlay")?.open'):
+   frame.evaluate('document.querySelector("#tutorialSkip")?.click()')
+  frame.evaluate('document.querySelector("#soloPracticeBtn").click()')
   for _ in range(160):
    if frame.locator('#tutorialSkip').is_visible():frame.locator('#tutorialSkip').click()
    phase=frame.evaluate('game?.phase')
@@ -43,17 +45,27 @@ with sync_playwright() as pw:
   report['textStress']=frame.evaluate('''() => {
    const a=document.querySelector('#scoreA'),b=document.querySelector('#scoreB'),clock=document.querySelector('#houseClock1020');
    window.__qaRestoreText={a:a.textContent,b:b.textContent,clock:clock.textContent};
-   a.textContent='-2000';b.textContent='2000';window.HORPremiumUI1020.refresh();clock.textContent='12:59 PM';
+   a.textContent='-2000';b.textContent='2000';window.HORPremiumUI1020.refresh();clock.textContent='12:59 PM';window.HORPremiumUI1020.fitText(clock);
    const read=id=>{const el=document.getElementById(id),range=document.createRange();range.selectNodeContents(el);
     const r=range.getBoundingClientRect(),box=el.getBoundingClientRect();return {text:el.textContent,textWidth:r.width,boxWidth:box.width,visible:box.width>0};};
    return [read('houseMatchScoreA1020'),read('houseMatchScoreB1020'),read('houseClock1020')];}''')
   page.screenshot(path=str(out/'loader-text-stress-fixture.png'))
   frame.evaluate('''() => {document.querySelector('#scoreA').textContent=window.__qaRestoreText.a;
     document.querySelector('#scoreB').textContent=window.__qaRestoreText.b;window.HORPremiumUI1020.refresh();}''')
+  report['layouts']=[]
+  for w,h in [(360,640),(360,740),(393,852),(430,932)]:
+   page.set_viewport_size({'width':w,'height':h});page.wait_for_timeout(300)
+   layout=frame.evaluate('''() => {window.HORPremiumUI1020.layout();const ids=['housePremiumMatch1020','houseTopSpeedStage1020'];
+    const rects=ids.map(id=>document.getElementById(id)).concat(document.querySelector('.house-utility-group')).map(e=>{const r=e.getBoundingClientRect();return {id:e.id||'utilities',x:r.x,y:r.y,w:r.width,h:r.height};}).filter(r=>r.w&&r.h);
+    let overlap=false;for(let i=0;i<rects.length;i++)for(let j=i+1;j<rects.length;j++){const a=rects[i],b=rects[j];if(a.x<b.x+b.w&&b.x<a.x+a.w&&a.y<b.y+b.h&&b.y<a.y+a.h)overlap=true;}
+    return {rects,overlap,mode:document.body.dataset.housePremiumLayout};}''')
+   layout['width']=w;layout['height']=h;report['layouts'].append(layout)
+   assert not layout['overlap'],json.dumps(layout)
+   page.screenshot(path=str(out/f'loader-layout-{w}-{h}.png'))
   report['passed']=not report['errors'] and all(x['visible'] and x['textWidth']<=x['boxWidth']+0.5 for x in report['textStress'])
  except Exception as e:
   report['failure']=str(e);report['passed']=False;page.screenshot(path=str(out/'loader-failure.png'))
  finally:
-  (out/'RESULTS.json').write_text(json.dumps(report,indent=2));print('LOADER',json.dumps(report),flush=True);b.close()
+  (out/'LOADER_RESULTS.json').write_text(json.dumps(report,indent=2));print('LOADER',json.dumps(report),flush=True);b.close()
 server.shutdown()
 if not report['passed']:raise SystemExit(1)

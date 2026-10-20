@@ -131,11 +131,24 @@
       return ['Hand', 'in progress'];
     }
   };
+  function fitText(node) {
+    node.style.removeProperty('font-size');
+    const available = node.getBoundingClientRect().width - 4;
+    if (available <= 0 || !node.textContent) return;
+    const range = document.createRange();
+    range.selectNodeContents(node);
+    const width = range.getBoundingClientRect().width;
+    if (width > available) {
+      const size = parseFloat(getComputedStyle(node).fontSize);
+      node.style.fontSize = (size * available / width).toFixed(2) + 'px';
+    }
+    range.detach();
+  }
   const refresh = () => {
     const a = scoreA?.textContent.trim() || '0',
       b = scoreB?.textContent.trim() || '0';
-    if (scoreOutA.textContent !== a) scoreOutA.textContent = a;
-    if (scoreOutB.textContent !== b) scoreOutB.textContent = b;
+    if (scoreOutA.textContent !== a) { scoreOutA.textContent = a; fitText(scoreOutA); }
+    if (scoreOutB.textContent !== b) { scoreOutB.textContent = b; fitText(scoreOutB); }
     const now = new Date();
     const display = now.toLocaleTimeString(undefined, {
       hour: 'numeric',
@@ -145,6 +158,7 @@
     if (clock.textContent !== display) {
       clock.textContent = display;
       clock.dateTime = now.toISOString();
+      fitText(clock);
     }
     const lines = status(),
       key = lines.join('|');
@@ -192,12 +206,17 @@
     if (bar.parentNode !== document.body) document.body.appendChild(bar);
     const { x, y, w, h } = viewport(),
       full = installed();
+    const hr = document.querySelector('.game-room > .hand-area')?.getBoundingClientRect();
+    const free = hr ? y + h - hr.bottom : 0;
+    const panelW = Math.floor(w - 2),
+      panelH = Math.round((panelW * 192) / 941);
+    const allowPanel = Boolean(full && hr && free >= panelH + 5 && w >= 320);
     const ico = Math.max(27, Math.min(34, Math.floor(w * 0.075))),
       gap = Math.max(3, Math.floor(w * 0.012));
     const iw = ico * 3 + gap * 2,
       stepH = Math.max(25, Math.floor(w * 0.079)),
       paceW = Math.max(136, Math.min(176, w * 0.44));
-    const headerW = Math.round(full ? w - iw - 20 : w - paceW - 20);
+    const headerW = Math.round(allowPanel ? w - iw - 20 : w - paceW - 20);
     const xScore = Math.round(x + 7),
       yScore = Math.round(y + 4);
     plaque.style.left = xScore + 'px';
@@ -208,14 +227,9 @@
     set(bar, '--house-tool-gap', gap + 'px');
     set(bar, 'left', Math.round(full ? x + w - iw - 8 : x + w - iw - 8) + 'px');
     set(bar, 'right', 'auto');
-    set(bar, 'top', Math.round(full ? y + 4 : y + 5 + (headerW * 87) / 600 + 5) + 'px');
+    set(bar, 'top', Math.round(allowPanel ? y + 4 : y + 5 + (headerW * 87) / 600 + 5) + 'px');
     set(bar, 'bottom', 'auto');
-    set(ui, 'height', Math.round(full ? 50 : 92) + 'px');
-    const hr = document.querySelector('.game-room > .hand-area')?.getBoundingClientRect();
-    const free = hr ? y + h - hr.bottom : 0;
-    const panelW = Math.floor(w - 2),
-      panelH = Math.round((panelW * 192) / 941);
-    const allowPanel = Boolean(full && hr && free >= panelH + 5 && w >= 320);
+    set(ui, 'height', Math.round(allowPanel ? 50 : 92) + 'px');
     clockConsole.hidden = !allowPanel;
     if (allowPanel) {
       const top = Math.max(hr.bottom + 3, y + h - panelH - 2);
@@ -246,6 +260,9 @@
     fs.setAttribute('aria-label', fs.title);
     document.body.dataset.housePremiumLayout = allowPanel ? 'installed-console' : 'browser-top';
     refresh();
+    [scoreOutA, scoreOutB, clock].forEach(fitText);
+    const noticeTop = Math.ceil(Math.max(plaque.getBoundingClientRect().bottom, bar.getBoundingClientRect().bottom) + 8);
+    document.body.style.setProperty('--house-premium-notice-top', noticeTop + 'px');
   }
   let queued = false;
   const schedule = () => {
@@ -305,5 +322,5 @@
   if (document.readyState === 'loading')
     addEventListener('DOMContentLoaded', schedule, { once: true });
   schedule();
-  window.HORPremiumUI1020 = { refresh, layout };
+  window.HORPremiumUI1020 = { refresh, layout, fitText };
 })();

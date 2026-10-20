@@ -189,6 +189,10 @@ with sync_playwright() as pw:
                         page.locator('#scoreModalNext').click()
                         page.wait_for_timeout(600)
                         page.screenshot(path=str(OUT / f'{label}-after-score.png'))
+                        record['awardClearance']=page.evaluate('''() => {const h=document.getElementById('horProgressToastHost');
+                          if(!h?.children.length)return null;return {top:h.getBoundingClientRect().top,
+                          headerBottom:Math.max(document.getElementById('housePremiumMatch1020').getBoundingClientRect().bottom,document.querySelector('.house-utility-group').getBoundingClientRect().bottom)};}''')
+                        if record['awardClearance']:assert record['awardClearance']['top']>=record['awardClearance']['headerBottom']+7
                         page.wait_for_function('!!navigator.serviceWorker.controller', timeout=60000)
                         truth=page.evaluate('window.HORRuntimeTruth()')
                         assert truth['coherent'], json.dumps(truth)
