@@ -37,6 +37,7 @@
   let presented = null;
   let lastScoreSignature = "";
   let redealRevision = -1;
+  let cloudDealOwner=null, cloudDealTimer=null;
 
   const status = (message) => {
     const lobby = document.getElementById("lobby");
@@ -153,6 +154,9 @@
   }
 
   function gameSnapshot(snap) {
+    if(cloudDealOwner && cloudDealOwner.credentials===credentials && cloudDealOwner.hand===snap.handNumber && !cloudDealOwner.done) return;
+    const beginDeal=snap.phase==="dealing" && (!cloudDealOwner || cloudDealOwner.credentials!==credentials || cloudDealOwner.hand!==snap.handNumber);
+
     if (!["score", "complete"].includes(snap.phase)) {
       document.getElementById("scoreModal")?.classList.add("hidden");
       document.body.classList.remove("remaining-open");
@@ -170,7 +174,7 @@
     }
     const tablePlayers = mapPlayers(snap);
     const hand = Array.isArray(snap.hand) ? snap.hand.map((card) => ({ ...card })) : [];
-    const viewPhase = snap.phase === "complete" ? "score" : snap.phase;
+    const viewPhase = snap.phase === "complete" ? "score" : snap.phase === "dealing" ? "shuffling" : snap.phase;
     const hands = [[], [], [], []];
     hands[credentials.seat] = hand.map((card) => ({ ...card }));
     players = tablePlayers;
@@ -263,6 +267,7 @@
       lastSummary: snap.lastSummary || null,
       matchResult: snap.matchResult || null,
     });
+    if(beginDeal) current.myHand=[];
     game = current;
     if (snap.phase === "discard" && snap.bidder === credentials.seat &&
         window._cloudKittyHand !== snap.handNumber) {
@@ -275,6 +280,18 @@
       window._discardKittyShown = false;
     }
     try { applyState(view); if (snap.phase !== "discard") renderHand(false); } catch (error) { status("Could not draw the current table: " + error.message); }
+
+    if(beginDeal) {
+      const owner={credentials,hand:snap.handNumber,done:false};cloudDealOwner=owner;
+      status("Preparing the table…");
+      cloudDealTimer=setTimeout(()=>{
+        if(credentials!==owner.credentials || cloudDealOwner!==owner)return;
+        runDealPresentation(hand,()=>{
+          if(credentials!==owner.credentials || cloudDealOwner!==owner)return;
+          owner.done=true;acknowledgeDeal(owner);
+        });
+      },1500);
+    }
 
     // Presentation observes confirmed public changes; reconnect snapshots are quiet.
     if (presented?.hand === snap.handNumber) {
@@ -310,6 +327,19 @@
     if (snap.phase === "redeal" && credentials.seat === 0 && redealRevision !== snap.revision) {
       redealRevision = snap.revision;
       setTimeout(() => sendAction("redeal", {}), 0);
+    }
+  }
+
+  async function acknowledgeDeal(owner) {
+    if(credentials!==owner.credentials || cloudDealOwner!==owner)return;
+    try {
+      const snap=await api(roomPath("ready"),{method:"POST",body:{handNumber:owner.hand}});
+      if(credentials!==owner.credentials || cloudDealOwner!==owner)return;
+      if(!latest || snap.revision>=latest.revision) {latest=snap;lastRevision=snap.revision;}
+      gameSnapshot(latest);
+      if(latest.phase==="dealing")cloudDealTimer=setTimeout(()=>acknowledgeDeal(owner),Math.max(250,Math.min(1000,latest.opening?.minimumRemainingMs||500)));
+    } catch(error) {
+      if(credentials===owner.credentials && cloudDealOwner===owner && latest?.handNumber===owner.hand) cloudDealTimer=setTimeout(()=>acknowledgeDeal(owner),1000);
     }
   }
 
@@ -442,6 +472,7 @@
 
   async function sendAction(route, data) {
     if (!credentials || !latest) return;
+    if(latest.phase==="dealing" || (cloudDealOwner && cloudDealOwner.credentials===credentials && !cloudDealOwner.done))return;
     if (busy) {
       // A pushed next turn may arrive before the previous HTTP refresh finishes.
       // Keep one intention only for that exact authoritative room/hand/revision.
@@ -515,6 +546,7 @@
     // Disconnect is reversible: keep the server seat and its reconnect credential.
     sessionStorage.setItem("ghr-cloud-disconnected", "1");
     credentials = null;
+    clearTimeout(cloudDealTimer);cloudDealOwner=null;
     clearInterval(timer);
     clearTimeout(socketReconnectTimer);
     socketReconnectTimer = null;
@@ -526,6 +558,7 @@
   function finishClosedTable() {
     if (!credentials) return;
     credentials=null; latest=null; queuedAction=null;
+    clearTimeout(cloudDealTimer);cloudDealOwner=null;
     localStorage.removeItem(credentialKey);
     sessionStorage.removeItem("ghr-cloud-disconnected");
     clearInterval(timer);clearTimeout(socketReconnectTimer);socketReconnectTimer=null;
