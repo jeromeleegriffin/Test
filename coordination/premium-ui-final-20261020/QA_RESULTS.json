@@ -1,0 +1,1958 @@
+{
+  "sourceCommit": "b94fca0a97378d7215b62fb1c263ae1966a1f48e",
+  "finalRun": 39372810343,
+  "status": "BROWSER_PASS_ANDROID_NOT_PHYSICALLY_CERTIFIED",
+  "hands": [
+    {
+      "label": "360-browser",
+      "errors": [],
+      "phases": [
+        {
+          "phase": "dealing",
+          "current": 2,
+          "mine": 0,
+          "bidder": -1,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 36
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 36
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 36
+            }
+          ],
+          "speed": [
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.5,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "phase": "bidding",
+          "current": 2,
+          "mine": 0,
+          "bidder": -1,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 36
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 36
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 36
+            }
+          ],
+          "speed": [
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.5,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "phase": "discard",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 120to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 36
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 36
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 36
+            }
+          ],
+          "speed": [
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.5,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "phase": "trump",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 120to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 36
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 36
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 36
+            }
+          ],
+          "speed": [
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.5,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "phase": "play",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 120to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 36
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 36
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 36
+            }
+          ],
+          "speed": [
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.5,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "phase": "score",
+          "current": 2,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Handcomplete",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 36
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 36
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 36
+            }
+          ],
+          "speed": [
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.484375,
+              "h": 28
+            },
+            {
+              "w": 39.5,
+              "h": 28
+            }
+          ]
+        }
+      ],
+      "actions": [
+        "native bid",
+        "native bid",
+        "six-card discard confirmed",
+        "trump confirmed",
+        "all speeds, menu return, Back cancel, native fullscreen enter/exit",
+        "legal card tap",
+        "Last Trick open and close",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap"
+      ],
+      "passed": true,
+      "intelligence": {
+        "status": {
+          "requested": "x1",
+          "active": "x1",
+          "reason": "",
+          "ready": true,
+          "initializationError": "",
+          "lastDecision": {
+            "phase": "play",
+            "engine": "x1",
+            "hand": 46,
+            "seat": 3,
+            "epa": false,
+            "partnerRoute": false
+          },
+          "epa": false,
+          "partnerSeat": null,
+          "hand": 48,
+          "pending": false
+        },
+        "decisions": 30,
+        "fallbacks": []
+      },
+      "toolsTested": true,
+      "lastTested": true,
+      "awardClearance": {
+        "top": 71,
+        "count": 1,
+        "headerBottom": 63
+      },
+      "runtimeTruth": {
+        "page": "846-premium-portrait-20261020-rc3",
+        "script": "846-premium-portrait-20261020-rc3",
+        "marker": "846-premium-portrait-20261020-rc3",
+        "worker": {
+          "build": "846-premium-portrait-20261020-rc3",
+          "cache": "house-of-rooks-846-premium-portrait-20261020-rc3"
+        },
+        "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc3",
+        "coherent": true
+      },
+      "offlineReloadAndDeal": true,
+      "seconds": 35.58
+    },
+    {
+      "label": "360-installed-simulation",
+      "errors": [],
+      "phases": [
+        {
+          "phase": "dealing",
+          "current": 1,
+          "mine": 0,
+          "bidder": -1,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            }
+          ]
+        },
+        {
+          "phase": "bidding",
+          "current": 2,
+          "mine": 0,
+          "bidder": 1,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            }
+          ]
+        },
+        {
+          "phase": "discard",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 155to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            }
+          ]
+        },
+        {
+          "phase": "trump",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 155to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            }
+          ]
+        },
+        {
+          "phase": "play",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 155to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            }
+          ]
+        },
+        {
+          "phase": "score",
+          "current": 2,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Handcomplete",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            },
+            {
+              "w": 38.203125,
+              "h": 31.375
+            }
+          ]
+        }
+      ],
+      "actions": [
+        "native bid",
+        "native bid",
+        "native bid",
+        "native bid",
+        "native bid",
+        "six-card discard confirmed",
+        "trump confirmed",
+        "all speeds, menu return, Back cancel, native fullscreen enter/exit",
+        "legal card tap",
+        "Last Trick open and close",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap"
+      ],
+      "passed": true,
+      "intelligence": {
+        "status": {
+          "requested": "x1",
+          "active": "x1",
+          "reason": "",
+          "ready": true,
+          "initializationError": "",
+          "lastDecision": {
+            "phase": "play",
+            "engine": "x1",
+            "hand": 47,
+            "seat": 1,
+            "epa": false,
+            "partnerRoute": false
+          },
+          "epa": false,
+          "partnerSeat": null,
+          "hand": 48,
+          "pending": false
+        },
+        "decisions": 30,
+        "fallbacks": []
+      },
+      "toolsTested": true,
+      "lastTested": true,
+      "awardClearance": {
+        "top": 48,
+        "count": 1,
+        "headerBottom": 40
+      },
+      "runtimeTruth": {
+        "page": "846-premium-portrait-20261020-rc3",
+        "script": "846-premium-portrait-20261020-rc3",
+        "marker": "846-premium-portrait-20261020-rc3",
+        "worker": {
+          "build": "846-premium-portrait-20261020-rc3",
+          "cache": "house-of-rooks-846-premium-portrait-20261020-rc3"
+        },
+        "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc3",
+        "coherent": true
+      },
+      "offlineReloadAndDeal": true,
+      "seconds": 35.88
+    },
+    {
+      "label": "393-browser",
+      "errors": [],
+      "phases": [
+        {
+          "phase": "dealing",
+          "current": 1,
+          "mine": 0,
+          "bidder": -1,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 39
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 39
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 39
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.25,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "phase": "bidding",
+          "current": 1,
+          "mine": 0,
+          "bidder": -1,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 39
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 39
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 39
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.25,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "phase": "discard",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 150to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 39
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 39
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 39
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.25,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "phase": "trump",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 150to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 39
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 39
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 39
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.25,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "phase": "play",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 150to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 39
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 39
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 39
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.25,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "phase": "score",
+          "current": 1,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Handcomplete",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 39
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 39
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 39
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.234375,
+              "h": 31
+            },
+            {
+              "w": 43.25,
+              "h": 31
+            }
+          ]
+        }
+      ],
+      "actions": [
+        "native bid",
+        "native bid",
+        "native bid",
+        "native bid",
+        "six-card discard confirmed",
+        "trump confirmed",
+        "all speeds, menu return, Back cancel, native fullscreen enter/exit",
+        "legal card tap",
+        "Last Trick open and close",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap"
+      ],
+      "passed": true,
+      "intelligence": {
+        "status": {
+          "requested": "x1",
+          "active": "x1",
+          "reason": "",
+          "ready": true,
+          "initializationError": "",
+          "lastDecision": {
+            "phase": "play",
+            "engine": "x1",
+            "hand": 46,
+            "seat": 3,
+            "epa": false,
+            "partnerRoute": false
+          },
+          "epa": false,
+          "partnerSeat": null,
+          "hand": 48,
+          "pending": false
+        },
+        "decisions": 30,
+        "fallbacks": []
+      },
+      "toolsTested": true,
+      "lastTested": true,
+      "awardClearance": {
+        "top": 76,
+        "count": 1,
+        "headerBottom": 68
+      },
+      "runtimeTruth": {
+        "page": "846-premium-portrait-20261020-rc3",
+        "script": "846-premium-portrait-20261020-rc3",
+        "marker": "846-premium-portrait-20261020-rc3",
+        "worker": {
+          "build": "846-premium-portrait-20261020-rc3",
+          "cache": "house-of-rooks-846-premium-portrait-20261020-rc3"
+        },
+        "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc3",
+        "coherent": true
+      },
+      "offlineReloadAndDeal": true,
+      "seconds": 36.56
+    },
+    {
+      "label": "393-installed-simulation",
+      "errors": [],
+      "phases": [
+        {
+          "phase": "dealing",
+          "current": 1,
+          "mine": 0,
+          "bidder": -1,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.734375,
+              "h": 34.390625
+            }
+          ]
+        },
+        {
+          "phase": "bidding",
+          "current": 1,
+          "mine": 0,
+          "bidder": -1,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.734375,
+              "h": 34.390625
+            }
+          ]
+        },
+        {
+          "phase": "discard",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 200to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.734375,
+              "h": 34.390625
+            }
+          ]
+        },
+        {
+          "phase": "trump",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 200to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.734375,
+              "h": 34.390625
+            }
+          ]
+        },
+        {
+          "phase": "play",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 200to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.734375,
+              "h": 34.390625
+            }
+          ]
+        },
+        {
+          "phase": "score",
+          "current": 3,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Handcomplete",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.71875,
+              "h": 34.390625
+            },
+            {
+              "w": 41.734375,
+              "h": 34.390625
+            }
+          ]
+        }
+      ],
+      "actions": [
+        "Moon selected without submitting; bidding Menu and Back tested",
+        "native bid",
+        "six-card discard confirmed",
+        "trump confirmed",
+        "all speeds, menu return, Back cancel, native fullscreen enter/exit",
+        "legal card tap",
+        "Last Trick open and close",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap"
+      ],
+      "passed": true,
+      "intelligence": {
+        "status": {
+          "requested": "x1",
+          "active": "legacy",
+          "reason": "Instant-win moon is outside the frozen championship contract rules",
+          "ready": true,
+          "initializationError": "",
+          "lastDecision": {
+            "phase": "play",
+            "engine": "legacy",
+            "hand": 49,
+            "seat": 1
+          },
+          "epa": false,
+          "partnerSeat": null,
+          "hand": 50,
+          "pending": false
+        },
+        "decisions": 0,
+        "fallbacks": [
+          {
+            "hand": 11,
+            "engine": "legacy",
+            "reason": "Instant-win moon is outside the frozen championship contract rules"
+          }
+        ]
+      },
+      "toolsTested": true,
+      "lastTested": true,
+      "awardClearance": {
+        "top": 52,
+        "count": 1,
+        "headerBottom": 44
+      },
+      "runtimeTruth": {
+        "page": "846-premium-portrait-20261020-rc3",
+        "script": "846-premium-portrait-20261020-rc3",
+        "marker": "846-premium-portrait-20261020-rc3",
+        "worker": {
+          "build": "846-premium-portrait-20261020-rc3",
+          "cache": "house-of-rooks-846-premium-portrait-20261020-rc3"
+        },
+        "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc3",
+        "coherent": true
+      },
+      "offlineReloadAndDeal": true,
+      "seconds": 32.41
+    },
+    {
+      "label": "430-browser",
+      "errors": [],
+      "phases": [
+        {
+          "phase": "dealing",
+          "current": 3,
+          "mine": 0,
+          "bidder": -1,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 44
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 44
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 44
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 44,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "phase": "bidding",
+          "current": 0,
+          "mine": 0,
+          "bidder": 3,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 44
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 44
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 44
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 44,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "phase": "discard",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 140to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 44
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 44
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 44
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 44,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "phase": "trump",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 140to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 44
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 44
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 44
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 44,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "phase": "play",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 140to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 44
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 44
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 44
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 44,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "phase": "score",
+          "current": 3,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Handcomplete",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 44
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 44
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 44
+            }
+          ],
+          "speed": [
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 43.984375,
+              "h": 33
+            },
+            {
+              "w": 44,
+              "h": 33
+            }
+          ]
+        }
+      ],
+      "actions": [
+        "native bid",
+        "native bid",
+        "native bid",
+        "native bid",
+        "six-card discard confirmed",
+        "trump confirmed",
+        "all speeds, menu return, Back cancel, native fullscreen enter/exit",
+        "legal card tap",
+        "Last Trick open and close",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap"
+      ],
+      "passed": true,
+      "intelligence": {
+        "status": {
+          "requested": "x1",
+          "active": "x1",
+          "reason": "",
+          "ready": true,
+          "initializationError": "",
+          "lastDecision": {
+            "phase": "play",
+            "engine": "x1",
+            "hand": 38,
+            "seat": 3,
+            "epa": false,
+            "partnerRoute": false
+          },
+          "epa": false,
+          "partnerSeat": null,
+          "hand": 40,
+          "pending": false
+        },
+        "decisions": 24,
+        "fallbacks": []
+      },
+      "toolsTested": true,
+      "lastTested": true,
+      "awardClearance": {
+        "top": 84,
+        "count": 1,
+        "headerBottom": 76
+      },
+      "runtimeTruth": {
+        "page": "846-premium-portrait-20261020-rc3",
+        "script": "846-premium-portrait-20261020-rc3",
+        "marker": "846-premium-portrait-20261020-rc3",
+        "worker": {
+          "build": "846-premium-portrait-20261020-rc3",
+          "cache": "house-of-rooks-846-premium-portrait-20261020-rc3"
+        },
+        "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc3",
+        "coherent": true
+      },
+      "offlineReloadAndDeal": true,
+      "seconds": 35.01
+    },
+    {
+      "label": "430-installed-simulation",
+      "errors": [],
+      "phases": [
+        {
+          "phase": "dealing",
+          "current": 2,
+          "mine": 0,
+          "bidder": -1,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.6875,
+              "h": 37.40625
+            }
+          ]
+        },
+        {
+          "phase": "bidding",
+          "current": 3,
+          "mine": 0,
+          "bidder": 2,
+          "goal": "Biddingin progress",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.6875,
+              "h": 37.40625
+            }
+          ]
+        },
+        {
+          "phase": "discard",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 120to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.6875,
+              "h": 37.40625
+            }
+          ]
+        },
+        {
+          "phase": "trump",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 120to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.6875,
+              "h": 37.40625
+            }
+          ]
+        },
+        {
+          "phase": "play",
+          "current": 0,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Need 120to make bid",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.6875,
+              "h": 37.40625
+            }
+          ]
+        },
+        {
+          "phase": "score",
+          "current": 2,
+          "mine": 0,
+          "bidder": 0,
+          "goal": "Handcomplete",
+          "utility": [
+            {
+              "id": "horRailFullscreenReview",
+              "y": 4
+            },
+            {
+              "id": "btnToggleTopOpts",
+              "y": 4
+            },
+            {
+              "id": "leaveReplaceBtn",
+              "y": 4
+            }
+          ],
+          "speed": [
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.671875,
+              "h": 37.40625
+            },
+            {
+              "w": 45.6875,
+              "h": 37.40625
+            }
+          ]
+        }
+      ],
+      "actions": [
+        "native bid",
+        "native bid",
+        "six-card discard confirmed",
+        "trump confirmed",
+        "all speeds, menu return, Back cancel, native fullscreen enter/exit",
+        "legal card tap",
+        "Last Trick open and close",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap",
+        "legal card tap"
+      ],
+      "passed": true,
+      "intelligence": {
+        "status": {
+          "requested": "x1",
+          "active": "x1",
+          "reason": "",
+          "ready": true,
+          "initializationError": "",
+          "lastDecision": {
+            "phase": "play",
+            "engine": "x1",
+            "hand": 46,
+            "seat": 3,
+            "epa": false,
+            "partnerRoute": false
+          },
+          "epa": false,
+          "partnerSeat": null,
+          "hand": 48,
+          "pending": false
+        },
+        "decisions": 30,
+        "fallbacks": []
+      },
+      "toolsTested": true,
+      "lastTested": true,
+      "awardClearance": {
+        "top": 56,
+        "count": 1,
+        "headerBottom": 48
+      },
+      "runtimeTruth": {
+        "page": "846-premium-portrait-20261020-rc3",
+        "script": "846-premium-portrait-20261020-rc3",
+        "marker": "846-premium-portrait-20261020-rc3",
+        "worker": {
+          "build": "846-premium-portrait-20261020-rc3",
+          "cache": "house-of-rooks-846-premium-portrait-20261020-rc3"
+        },
+        "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc3",
+        "coherent": true
+      },
+      "offlineReloadAndDeal": true,
+      "seconds": 35.19
+    }
+  ],
+  "loader": {
+    "errors": [],
+    "runtimeFiles": 1507,
+    "loadedIdentity": "846-premium-portrait-20261020-rc3",
+    "realOfflineDealToBidding": true,
+    "assetSizes": {
+      "plaque": 600,
+      "console": 941
+    },
+    "textStress": [
+      {
+        "text": "-2000",
+        "textWidth": 29.3125,
+        "boxWidth": 33.359375,
+        "visible": true
+      },
+      {
+        "text": "2000",
+        "textWidth": 25.125,
+        "boxWidth": 33.359375,
+        "visible": true
+      },
+      {
+        "text": "12:59 PM",
+        "textWidth": 42.546875,
+        "boxWidth": 46.515625,
+        "visible": true
+      }
+    ],
+    "layouts": [
+      {
+        "rects": [
+          {
+            "id": "housePremiumMatch1020",
+            "x": 7,
+            "y": 4,
+            "w": 182,
+            "h": 26
+          },
+          {
+            "id": "houseTopSpeedStage1020",
+            "x": 195,
+            "y": 4,
+            "w": 158,
+            "h": 28
+          },
+          {
+            "id": "utilities",
+            "x": 263,
+            "y": 36,
+            "w": 89,
+            "h": 27
+          }
+        ],
+        "overlap": false,
+        "mode": "browser-top",
+        "width": 360,
+        "height": 640
+      },
+      {
+        "rects": [
+          {
+            "id": "housePremiumMatch1020",
+            "x": 7,
+            "y": 4,
+            "w": 251,
+            "h": 36
+          },
+          {
+            "id": "utilities",
+            "x": 263,
+            "y": 4,
+            "w": 89,
+            "h": 27
+          }
+        ],
+        "overlap": false,
+        "mode": "installed-console",
+        "width": 360,
+        "height": 740
+      },
+      {
+        "rects": [
+          {
+            "id": "housePremiumMatch1020",
+            "x": 7,
+            "y": 4,
+            "w": 278,
+            "h": 40
+          },
+          {
+            "id": "utilities",
+            "x": 290,
+            "y": 4,
+            "w": 95,
+            "h": 29
+          }
+        ],
+        "overlap": false,
+        "mode": "installed-console",
+        "width": 393,
+        "height": 852
+      },
+      {
+        "rects": [
+          {
+            "id": "housePremiumMatch1020",
+            "x": 7,
+            "y": 4,
+            "w": 304,
+            "h": 44
+          },
+          {
+            "id": "utilities",
+            "x": 316,
+            "y": 4,
+            "w": 106,
+            "h": 32
+          }
+        ],
+        "overlap": false,
+        "mode": "installed-console",
+        "width": 430,
+        "height": 932
+      }
+    ],
+    "passed": true
+  },
+  "physicalAndroid": false,
+  "deployed": false
+}

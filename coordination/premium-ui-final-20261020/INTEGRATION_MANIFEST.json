@@ -1,104 +1,104 @@
 {
-  "status": "INTEGRATED_BROWSER_QA_BLOCKED_NOT_RELEASE_READY",
-  "sourceMain": "a10cf91",
+  "status": "DELIVERED_BROWSER_VERIFIED_REVIEW_NOT_DEPLOYED",
+  "build": "846-premium-portrait-20261020-rc3",
   "sourceRuntime": "92872799e09a92a9093346345219f6e743e1295f",
-  "integrationCommit": "553f17e758fca804e77c517b25de7930a87687d5",
-  "rollback": "a10cf91d27a9e1b9fa9cf82129c307a4462b11ad",
-  "files": [
-    {
-      "path": "assets/house-premium-console/ASSET_PROVENANCE.json",
+  "sourceMain": "a10cf91d27a9e1b9fa9cf82129c307a4462b11ad",
+  "sourceCommit": "b94fca0a97378d7215b62fb1c263ae1966a1f48e",
+  "rollback": "rollback/premium-ui-pre-integration-20261020",
+  "changedOriginalFiles": {
+    "asset-loading772.js": {
+      "bytes": 13211,
+      "sha256": "69aec912bfb717493b644e68608f054e7cf02d3e8324b5b0e4f627c021eac92f"
+    },
+    "game060.js": {
+      "bytes": 653558,
+      "sha256": "2b7e487257831afdacfd91fe3a5b04a8691da8a99c92d4fe8012532ce1cb84b6"
+    },
+    "hor-version.js": {
+      "bytes": 1372,
+      "sha256": "80e462478f3210fca3fd0b2a3154d6c246e2c99ccf1cba9e27454c4f1805dfc5"
+    },
+    "index.html": {
+      "bytes": 109126,
+      "sha256": "c20758d064e70cabda09d712c9ebd6ea2fdacb57a3551161585a63f8936e3013"
+    },
+    "progression.js": {
+      "bytes": 46252,
+      "sha256": "dbbbde1cf8b83ee89e0e8e6eff5e114e3842182401879039288ab62cb64790bc"
+    },
+    "sw060.js": {
+      "bytes": 70505,
+      "sha256": "f1fe57f511cb3fca638da3cf0f223770654d8b529eb1ba52f8ddbc1538ea36d8"
+    }
+  },
+  "premiumAssets": {
+    "assets/house-premium-console/ASSET_PROVENANCE.json": {
       "bytes": 2907,
       "sha256": "7fe413889c5d1f45fa6c0f710f8dda230cf9d4e8f2c99a518e02f6a048e89491"
     },
-    {
-      "path": "assets/house-premium-console/clock-enamel-inset.png",
+    "assets/house-premium-console/clock-enamel-inset.png": {
       "bytes": 2913,
       "sha256": "93323d83919f41bb4c13200c5764ff5d33551a86e527bdadaa906236a75858dc"
     },
-    {
-      "path": "assets/house-premium-console/goal-enamel-inset.png",
+    "assets/house-premium-console/goal-enamel-inset.png": {
       "bytes": 3564,
       "sha256": "5de28e3807b041e23138005de48d6dcea741bd58c7458d1aa86f22d1b90b526f"
     },
-    {
-      "path": "assets/house-premium-console/score-number-inset.png",
+    "assets/house-premium-console/score-number-inset.png": {
       "bytes": 153,
       "sha256": "f32427fb6225deb27117568a112ccc3ed541ec9bc9d0e86df124f517392d2e20"
     },
-    {
-      "path": "assets/house-premium-console/speed-frame-photo.png",
+    "assets/house-premium-console/speed-frame-photo.png": {
       "bytes": 48115,
       "sha256": "039b7735223d67aa429b5d35a6ea0d377d8cf61a1948625a1ae425e1c468cef2"
     },
-    {
-      "path": "assets/house-premium-console/speed-selected-photo.png",
+    "assets/house-premium-console/speed-selected-photo.png": {
       "bytes": 9809,
       "sha256": "422a5713175d203171e27b06a635a7ccc57dfd50c1564de97cd86da23fdec986"
     },
-    {
-      "path": "assets/house-premium-console/speed-unselected-photo.png",
+    "assets/house-premium-console/speed-unselected-photo.png": {
       "bytes": 7986,
       "sha256": "7689d7b44b5573bee4694ef2effed540e460ed6f8878e701fa530d1c6fa8dd42"
     },
-    {
-      "path": "assets/house-premium-console/top-match-plaque.png",
+    "assets/house-premium-console/top-match-plaque.png": {
       "bytes": 81914,
       "sha256": "9356088486ea42c9f9d00c3eb68a40c022130368bfaba3dd4d5b70758d589004"
     },
-    {
-      "path": "assets/house-premium-console/utility-back.png",
+    "assets/house-premium-console/utility-back.png": {
       "bytes": 9936,
       "sha256": "59303e3825fa2f9b8d962b627b9817d9be922f00e6a7eb509b2390e8feb2e08e"
     },
-    {
-      "path": "assets/house-premium-console/utility-fullscreen.png",
+    "assets/house-premium-console/utility-fullscreen.png": {
       "bytes": 8207,
       "sha256": "f687bf0a2c8d075718e5d68664fed58664335bf7274faed6587587876166085a"
     },
-    {
-      "path": "assets/house-premium-console/utility-menu.png",
+    "assets/house-premium-console/utility-menu.png": {
       "bytes": 8365,
       "sha256": "0768233ddbdb42aaa6ac39f0c21148f34589a2450cf1bf1861a3ff01be549822"
     },
-    {
-      "path": "assets/house-premium-console/walnut-console-live-fields.png",
+    "assets/house-premium-console/walnut-console-live-fields.png": {
       "bytes": 244485,
       "sha256": "90bcee7d0796b63db8fe64cbee08ab76556f5c87d6e0dd447935beaeafe0871a"
-    },
-    {
-      "path": "fullscreen-portrait-review.css",
-      "bytes": 504,
-      "sha256": "0844c1bf9fcbfcca68d36407ad19de3732391ae6c3ec4851ef9e9211956ef439"
-    },
-    {
-      "path": "fullscreen-portrait-review.js",
-      "bytes": 2561,
-      "sha256": "4fbd659c0211573d097e3b8acf740a55a82311db4a7dd4b4dc536a85ddb6bc02"
-    },
-    {
-      "path": "game060.js",
-      "bytes": 653554,
-      "sha256": "03f786e169256d291d4cebf0e107b8354cfe465884a14362e21b08a062dbb98f"
-    },
-    {
-      "path": "house-premium-ui.css",
-      "bytes": 8417,
-      "sha256": "ac6c4cb279735984dd6d1f8cba096e6d0038ebe5d7497b65c0b79581516c149f"
-    },
-    {
-      "path": "house-premium-ui.js",
-      "bytes": 11530,
-      "sha256": "bc7033a0e325a3b050df49cc6390a5ebb51cd55a2baff38f78df7df704a565aa"
-    },
-    {
-      "path": "index.html",
-      "bytes": 108658,
-      "sha256": "9f4634a137c3599440e658d4c3d009efc76627849322a918a6e8c00f66c5fbff"
-    },
-    {
-      "path": "sw060.js",
-      "bytes": 70497,
-      "sha256": "1dcea752ec44a1541a06ef561b3f14cea723d2d1b8c61c0925e30768d826d891"
     }
-  ]
+  },
+  "newUiFiles": {
+    "house-premium-ui.js": {
+      "bytes": 14384,
+      "sha256": "103a1d333f50bf4fbcb16283d33ba3d5763cabb23da42c115c77ed4720e2ce24"
+    },
+    "house-premium-ui.css": {
+      "bytes": 9853,
+      "sha256": "2daecbd89439d176aae49a91df06059221151456ac9a789f7564a1999aa1a370"
+    },
+    "fullscreen-portrait-review.js": {
+      "bytes": 2857,
+      "sha256": "3e04a248b0d11d7c8433cf755bc0934c63aded899be39db2124a55c35f7deee5"
+    },
+    "fullscreen-portrait-review.css": {
+      "bytes": 515,
+      "sha256": "083478541fc477ecb5d0d64659028f1654a13d91a336763b1cfa29447eddab8e"
+    }
+  },
+  "fullManifest": "REVIEW_RELEASE/SOURCE_MANIFEST.json inside delivered ZIP",
+  "deliveryReceipt": "DELIVERY_RECEIPT.json"
 }
