@@ -1,0 +1,227 @@
+{
+  "live": true,
+  "began": 1792478331642,
+  "events": [
+    {
+      "stage": "presentation",
+      "at": 1792478334851
+    },
+    {
+      "stage": "revealStart",
+      "at": 1792478344296
+    },
+    {
+      "stage": "revealEnd",
+      "at": 1792478344296
+    },
+    {
+      "stage": "finished",
+      "at": 1792478346520
+    }
+  ],
+  "samples": [
+    {
+      "phase": "waiting",
+      "nest": false,
+      "nestCards": 0,
+      "bid": false,
+      "at": 1792478331652
+    },
+    {
+      "phase": "dealing",
+      "nest": true,
+      "nestCards": 6,
+      "bid": false,
+      "bids": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "at": 1792478333476
+    },
+    {
+      "phase": "dealing",
+      "nest": false,
+      "nestCards": 0,
+      "bid": false,
+      "bids": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "at": 1792478334882
+    },
+    {
+      "phase": "dealing",
+      "nest": true,
+      "nestCards": 1,
+      "bid": false,
+      "bids": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "at": 1792478340731
+    },
+    {
+      "phase": "dealing",
+      "nest": true,
+      "nestCards": 2,
+      "bid": false,
+      "bids": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "at": 1792478341416
+    },
+    {
+      "phase": "dealing",
+      "nest": true,
+      "nestCards": 3,
+      "bid": false,
+      "bids": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "at": 1792478342303
+    },
+    {
+      "phase": "dealing",
+      "nest": true,
+      "nestCards": 4,
+      "bid": false,
+      "bids": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "at": 1792478342959
+    },
+    {
+      "phase": "dealing",
+      "nest": true,
+      "nestCards": 5,
+      "bid": false,
+      "bids": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "at": 1792478343620
+    },
+    {
+      "phase": "dealing",
+      "nest": true,
+      "nestCards": 6,
+      "bid": false,
+      "bids": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "at": 1792478344302
+    },
+    {
+      "phase": "bidding",
+      "nest": true,
+      "nestCards": 6,
+      "bid": false,
+      "bids": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "at": 1792478346805
+    },
+    {
+      "phase": "bidding",
+      "nest": true,
+      "nestCards": 6,
+      "bid": false,
+      "bids": [
+        null,
+        null,
+        100,
+        null
+      ],
+      "at": 1792478348269
+    },
+    {
+      "phase": "bidding",
+      "nest": true,
+      "nestCards": 6,
+      "bid": true,
+      "bids": [
+        null,
+        null,
+        100,
+        105
+      ],
+      "at": 1792478349937
+    },
+    {
+      "phase": "bidding",
+      "nest": true,
+      "nestCards": 6,
+      "bid": false,
+      "bids": [
+        110,
+        null,
+        100,
+        105
+      ],
+      "at": 1792478350631
+    },
+    {
+      "phase": "bidding",
+      "nest": true,
+      "nestCards": 6,
+      "bid": false,
+      "bids": [
+        110,
+        "pass",
+        100,
+        105
+      ],
+      "at": 1792478352214
+    },
+    {
+      "phase": "bidding",
+      "nest": true,
+      "nestCards": 6,
+      "bid": false,
+      "bids": [
+        110,
+        "pass",
+        "pass",
+        105
+      ],
+      "at": 1792478353817
+    },
+    {
+      "phase": "discard",
+      "nest": false,
+      "nestCards": 0,
+      "bid": false,
+      "bids": [
+        110,
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "at": 1792478355435
+    }
+  ],
+  "errors": []
+}
