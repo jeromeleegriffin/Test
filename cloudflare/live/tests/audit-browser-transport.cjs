@@ -1,5 +1,5 @@
 const {fetchBuffered}=require('./verified-asset-fetch.cjs');
-const fs=require('fs');const {WebSocket}=require('./browser-runtime/node_modules/ws');const {HttpsProxyAgent}=require('./browser-runtime/node_modules/https-proxy-agent/dist/index.js');
+const fs=require('fs');const {WebSocket}=require('../../../../test-runtime/node_modules/ws');const {HttpsProxyAgent}=require('../../../../test-runtime/node_modules/https-proxy-agent/dist/index.js');
 const base='https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev';const agent=new HttpsProxyAgent(process.env.HTTPS_PROXY);
 let assetActive=0;const assetWaiters=[];
 async function acquireAsset(){if(assetActive<6){assetActive++;return;}await new Promise(resolve=>assetWaiters.push(resolve));}

@@ -1,0 +1,4 @@
+PASS claim animation before score at pace 1
+PASS claim animation before score at pace 3
+PASS claim animation before score at pace 99
+{"bids":1,"before":0,"after":{"howls":[{"id":"cloud-moon:FLL3HX3E:1","status":"played"}],"moon":true,"bid":200},"restored":0,"errors":[]}

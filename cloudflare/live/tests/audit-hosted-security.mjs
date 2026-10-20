@@ -1,4 +1,4 @@
-import fs from 'node:fs';import assert from 'node:assert/strict';import {WebSocket} from './browser-runtime/node_modules/ws/wrapper.mjs';import {HttpsProxyAgent} from './browser-runtime/node_modules/https-proxy-agent/dist/index.js';
+import fs from 'node:fs';import assert from 'node:assert/strict';import {WebSocket} from '../../../../test-runtime/node_modules/ws/wrapper.mjs';import {HttpsProxyAgent} from '../../../../test-runtime/node_modules/https-proxy-agent/dist/index.js';
 const base='https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev',agent=new HttpsProxyAgent(process.env.HTTPS_PROXY),results=[];
 const entry=await fetch(base+'/');assert.equal(entry.status,200);const cookie=entry.headers.get('set-cookie').split(';')[0];await entry.arrayBuffer();
 async function api(path,method='GET',body,token,auth=cookie,origin=base){const r=await fetch(base+path,{method,headers:{...(auth?{'Cookie':auth}:{}),...(method!=='GET'?{Origin:origin}:{}),...(token?{Authorization:'Bearer '+token}:{}),...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined});return {status:r.status,data:await r.json()};}

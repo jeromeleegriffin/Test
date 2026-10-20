@@ -1,0 +1,44 @@
+[
+  {
+    "file": "fullscreen-portrait-review.js",
+    "astEquivalent": true,
+    "before": "2bb8b5588edd93c05e6ce1c078f9eef2e551fb19b64fdcdd7e2fb3745901c9ce",
+    "after": "9d2792e679a9e0efe5321e655d272e501e6dd097c7b874d9a84a4ea544bcb15c"
+  },
+  {
+    "file": "game060.js",
+    "astEquivalent": true,
+    "before": "2da593f7a198d0b5717a695fbe6cd8cbf75e555d818cacba3e3a84a6572278fc",
+    "after": "9abeea72902a145ad7a7c18e24cc79581e6a78e35f14f4a797d4a15741d2215a"
+  },
+  {
+    "file": "holder-cues789.js",
+    "astEquivalent": true,
+    "before": "1faa9d592fae867c73bc738e71d87d29d783e4fc6c4f4940b9b12e4ce5145c1d",
+    "after": "f5f2f758ef830633bc8e4e22cff1d9ac4b995122645f39edfe63501e495298c9"
+  },
+  {
+    "file": "house-premium-ui.js",
+    "astEquivalent": true,
+    "before": "27ebef04163085e019c9fddf313cd993df91d2087682b51cb838f480c833cf9f",
+    "after": "88afc1dfd5b76be2e1a5458f734e30d6737191ef27d95ccfbe8342c10cca8c1b"
+  },
+  {
+    "file": "index.html",
+    "astEquivalent": true,
+    "before": "273dc71ba72cb987eada36c0f7478942f216cb43c776945a35831bfda4fbaf4f",
+    "after": "a3112a1937eac6ce6182e7846e87111ea05b7c6c728340914ed5988c1bc63166"
+  },
+  {
+    "file": "menu-approved805.js",
+    "astEquivalent": true,
+    "before": "523ad8e9bb4c8e0125a8a7321b2846eaf5a18b3c2c4f597f9b91584c35091cb6",
+    "after": "364ae0f46013abd28be99b04d5a4d76a3d538f51db2658dc8cdc95d97a0fe7c6"
+  },
+  {
+    "file": "room831.js",
+    "astEquivalent": true,
+    "before": "9afffa085a6fc5c0041a5ea9e3daf2dd5e5d93d58f1922554008b3618d769244",
+    "after": "4270d388528de5e0afa7ff549222ac78757692911ef016b15218918709a0064c"
+  }
+]

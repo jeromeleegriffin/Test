@@ -1,2 +1,2 @@
-const {chromium}=require('playwright');
-exports.launch=()=>chromium.launch({headless:true,executablePath:__dirname+'/browser-runtime/extracted/chromium',args:['--no-sandbox','--disable-dev-shm-usage'],env:{...process.env,LD_LIBRARY_PATH:__dirname+'/browser-runtime/extracted',FONTCONFIG_PATH:__dirname+'/browser-runtime/extracted/fonts'}});
+const {chromium}=require('playwright');const path=require('path');const runtime=path.resolve('browser-runtime');
+exports.launch=()=>chromium.launch({headless:true,executablePath:path.join(runtime,'chromium'),args:['--no-sandbox','--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader'],env:{...process.env,LD_LIBRARY_PATH:runtime+':'+runtime+'/lib',FONTCONFIG_PATH:runtime+'/fonts'}});

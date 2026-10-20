@@ -1,0 +1,14 @@
+{
+  "collection-unit.mjs.log": "PASS complete fourth-card snapshot, normal/bird collection deadlines, score held until collection ends, duplicate safe, early next-hand denied, all reconnect views agree, recent trick retained\n",
+  "pace-unit.mjs.log": "PASS authoritative pace sync, guest denied, invalid pace rejected, measured bot delays, no early action, pending bot turn rescheduled [{\"pace\":1,\"botDelayMs\":1200},{\"pace\":3,\"botDelayMs\":400},{\"pace\":99,\"botDelayMs\":120}]\n",
+  "invalid-actions-unit.mjs.log": "PASS auth/seat theft/private hands, wrong turn, invalid bid/discard/trump/card, duplicate/reused action, presentation lock; rejected actions preserve hand\n",
+  "bot-picker-unit.mjs.log": "PASS bot choice/replace/remove, host auth, human protection, stale request rejection, duplicate portrait prevention, waiting only\n",
+  "rare-rules-unit.mjs.log": "PASS Moon all counters despite lost zero-point trick, missed counter penalty, negative scores, all-pass redeal and forced dealer [{\"negative\":false,\"success\":false,\"scores\":[5,-200]},{\"negative\":false,\"success\":true,\"scores\":[500,0]},{\"negative\":true,\"success\":false,\"scores\":[-295,-500]},{\"negative\":true,\"success\":true,\"scores\":[-300,500]}]\n",
+  "deal-unit.mjs.log": "PASS: bots and humans locked during opening, minimum pause, all-human readiness, stale/unauthorized readiness rejection, disconnected-client deadline fallback, persisted DO alarm wakeup and next-hand opening alarm, closing during the opening remains closed\n",
+  "redeal-unit.mjs.log": "PASS actual all-pass redeal retains hand number, fresh opening identity, stale acknowledgements rejected, all players finish new opening\n",
+  "close-unit.mjs.log": "PASS: host-only/idempotent close, closed room blocks join/rejoin/start, tombstone retained, new table allowed\n",
+  "single-seat-unit.mjs.log": "PASS: single seat, human reservation preserved, duplicate rejected, guest denied, invalid rejected, bulk fill retained\n",
+  "trump-unit.mjs.log": "PASS bot trump is observable, shared stamp lock blocks human/bot play, polling cannot bypass, cards advance individually per alarm\n",
+  "claim-unit.mjs.log": "PASS claim at all speeds: hold, duplicate, early next denied, privacy, reconnect views, reveal after animation\n",
+  "sequence-unit.mjs.log": "PASS opening has no early bots; polling cannot accelerate clock; each DO alarm advances one bid and schedules next; human turn stops bot alarm\n"
+}
