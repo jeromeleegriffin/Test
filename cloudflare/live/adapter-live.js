@@ -174,7 +174,7 @@
     }
     const tablePlayers = mapPlayers(snap);
     const hand = Array.isArray(snap.hand) ? snap.hand.map((card) => ({ ...card })) : [];
-    const viewPhase = snap.phase === "complete" ? "score" : snap.phase === "dealing" ? "shuffling" : snap.phase;
+    const viewPhase = snap.phase === "complete" ? "score" : snap.phase === "dealing" ? "dealing" : snap.phase;
     const hands = [[], [], [], []];
     hands[credentials.seat] = hand.map((card) => ({ ...card }));
     players = tablePlayers;
@@ -648,9 +648,9 @@
   };
   window.hostStartNextHand = function () { return sendAction("next-hand", {}); };
   // Page the approved chooser with a horizontal finger gesture, preserving taps.
-  const botGrid=document.getElementById("botPickerGrid");let botSwipe=null,botSwipeUntil=0;
+  const botGrid=document.getElementById("botPickerGrid");let botSwipe=null,botSwipeUntil=0,botPaging=false;
   botGrid?.addEventListener("touchstart",event=>{const t=event.touches;if(t.length===1)botSwipe={x:t[0].clientX,y:t[0].clientY};else botSwipe=null;},{passive:true});
-  botGrid?.addEventListener("touchend",event=>{const start=botSwipe;botSwipe=null;const t=event.changedTouches[0];if(!start||!t)return;const dx=t.clientX-start.x,dy=t.clientY-start.y;if(Math.abs(dx)<50||Math.abs(dx)<Math.abs(dy)*1.5)return;const nav=document.querySelector("#botPickerModal .house-legacy-nav"),buttons=nav?.querySelectorAll("button"),button=buttons?.[dx<0?1:0];event.preventDefault();botSwipeUntil=Date.now()+500;if(button&&!button.disabled)button.click();},{passive:false});
+  botGrid?.addEventListener("touchend",async event=>{const start=botSwipe;botSwipe=null;const t=event.changedTouches[0];if(!start||!t)return;const dx=t.clientX-start.x,dy=t.clientY-start.y;if(Math.abs(dx)<50||Math.abs(dx)<Math.abs(dy)*1.5)return;const nav=document.querySelector("#botPickerModal .house-legacy-nav"),buttons=nav?.querySelectorAll("button"),button=buttons?.[dx<0?1:0];event.preventDefault();botSwipeUntil=Date.now()+600;if(!button||button.disabled||botPaging)return;botPaging=true;const direction=dx<0?-1:1;try{await botGrid.animate([{transform:"translateX(0)",opacity:1},{transform:`translateX(${direction*25}%)`,opacity:0}],{duration:120,easing:"ease-in",fill:"none"}).finished;button.click();await botGrid.animate([{transform:`translateX(${-direction*25}%)`,opacity:0},{transform:"translateX(0)",opacity:1}],{duration:180,easing:"ease-out",fill:"none"}).finished;}finally{botPaging=false;}},{passive:false});
   botGrid?.addEventListener("touchcancel",()=>{botSwipe=null;},{passive:true});
   botGrid?.addEventListener("click",event=>{if(Date.now()<botSwipeUntil){event.preventDefault();event.stopImmediatePropagation();}},true);
   const nativeShowBidUI=window.showBidUI;
