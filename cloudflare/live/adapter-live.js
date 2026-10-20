@@ -115,7 +115,26 @@
     });
   }
 
+  function paintCloudPace(pace) {
+    const n=[1,3,99].includes(Number(pace))?Number(pace):1;
+    horGamePace=n;document.body.dataset.gamePace=n===99?"max":String(n);document.body.style.setProperty("--hor-pace-factor",String(1/(n===99?20:n)));horPaintGamePace();
+    document.querySelectorAll('#scoreSpeed701 [data-score-pace]').forEach(button=>{button.disabled=!!credentials&&credentials.seat!==0;button.title=button.disabled?"The host controls table speed":"";});
+  }
+  let paceSending=false,pendingCloudPace=null;
+  async function requestCloudPace(value) {
+    if(!credentials||credentials.seat!==0)return;
+    pendingCloudPace=Number(value);if(paceSending)return;paceSending=true;const owner=credentials;
+    try{while(pendingCloudPace!==null&&credentials===owner){const pace=pendingCloudPace;pendingCloudPace=null;const snap=await api(roomPath("pace"),{method:"POST",body:{pace}});if(credentials!==owner)return;receiveSnapshot(snap);localStorage.setItem("horGamePace",String(snap.pace));}}
+    catch(error){pendingCloudPace=null;status("Could not change table speed: "+error.message);await refresh();}finally{paceSending=false;}
+  }
+  const nativePace=window.horSetGamePace;
+  window.horSetGamePace=window.__ghSetGamePace630=function(value){return credentials?requestCloudPace(value):nativePace(value);};
+  window.addEventListener("click",event=>{const button=event.target.closest?.('#scoreSpeed701 [data-score-pace]');if(!button||!credentials)return;event.preventDefault();event.stopImmediatePropagation();if(credentials.seat===0)requestCloudPace(button.dataset.scorePace);},true);
+  const endEffects=window.HOREndHandEffectsV12;
+  if(endEffects){const play=endEffects.play;endEffects.play=function(...args){const result=play.apply(this,args);document.querySelector('#endHandEffectsV12 .end-hand-v12-skip')?.remove();return result;};}
+
   function enterWaiting(snap) {
+    paintCloudPace(snap.pace);
     latest = snap;
     const tablePlayers = mapPlayers(snap);
     players = tablePlayers.filter(Boolean);
@@ -154,9 +173,10 @@
   }
 
   function gameSnapshot(snap) {
-    if(cloudDealOwner && cloudDealOwner.credentials===credentials && cloudDealOwner.hand===snap.handNumber && !cloudDealOwner.done) return;
+    paintCloudPace(snap.pace);
+    if(cloudDealOwner && cloudDealOwner.credentials===credentials && cloudDealOwner.hand===snap.handNumber && (!snap.opening?.id||cloudDealOwner.id===snap.opening.id) && !cloudDealOwner.done) return;
     const restoringCloudView=!presented;
-    const beginDeal=snap.phase==="dealing" && (!cloudDealOwner || cloudDealOwner.credentials!==credentials || cloudDealOwner.hand!==snap.handNumber);
+    const beginDeal=snap.phase==="dealing" && (!cloudDealOwner || cloudDealOwner.credentials!==credentials || cloudDealOwner.hand!==snap.handNumber || !!snap.opening?.id && cloudDealOwner.id!==snap.opening.id);
 
     if (!["score", "complete"].includes(snap.phase)) {
       document.getElementById("scoreModal")?.classList.add("hidden");
@@ -195,7 +215,7 @@
       trumpVoiceEvent790: snap.trump ? "cloud-trump:" + credentials.roomCode + ":" + snap.handNumber + ":" + snap.bidder + ":" + snap.trump : null,
       trumpVoiceRestore790: !presented,
       trumpPresentation833: !!snap.trumpOpening,
-      trumpPresentationMs833: 1950,
+      trumpPresentationMs833: snap.trumpPresentationMs || 1950,
       minBid: 100,
       passCount: snap.passCount || 0,
       bidder: snap.bidder,
@@ -209,7 +229,7 @@
       targetScore: snap.targetScore || 500,
       lastTrickWinner: snap.lastTrickWinner,
       trumpPresentation833: !!snap.trumpOpening,
-      trumpPresentationMs833: 1950,
+      trumpPresentationMs833: snap.trumpPresentationMs || 1950,
       resolvingTrick: !!snap.resolvingTrick,
       paused: false,
       bidStatus: snap.bidStatus || [null, null, null, null],
@@ -224,8 +244,8 @@
       recentTricks: snap.recentTricks || [],
       trumpClaimPlayer: snap.canClaimRemaining ? credentials.seat : null,
       claimDeclined: !!snap.claimDeclined,
-      claimAnimation: null,
-      claimAnimating: false,
+      claimAnimation: snap.claimAnimation||null,
+      claimAnimating: !!snap.claimAnimation,
       resolvingTrickPoints: Number(snap.resolvingTrickPoints)||0,
     };
     const current = game || {};
@@ -250,7 +270,7 @@
       targetScore: view.targetScore,
       lastTrickWinner: view.lastTrickWinner,
       trumpPresentation833: !!snap.trumpOpening,
-      trumpPresentationMs833: 1950,
+      trumpPresentationMs833: snap.trumpPresentationMs || 1950,
       resolvingTrick: !!snap.resolvingTrick,
       paused: false,
       bidStatus: view.bidStatus,
@@ -262,8 +282,8 @@
       handPoints: view.handPoints,
       trumpClaimPlayer: view.trumpClaimPlayer,
       claimDeclined: view.claimDeclined,
-      claimAnimation: null,
-      claimAnimating: false,
+      claimAnimation: snap.claimAnimation||null,
+      claimAnimating: !!snap.claimAnimation,
       resolvingTrickPoints: Number(snap.resolvingTrickPoints)||0,
       hands,
       myHand: hand,
@@ -294,7 +314,7 @@
     }
 
     if(beginDeal) {
-      const owner={credentials,hand:snap.handNumber,done:false};cloudDealOwner=owner;
+      const owner={credentials,hand:snap.handNumber,id:snap.opening?.id,done:false};cloudDealOwner=owner;
       status("Preparing the table…");
       cloudDealTimer=setTimeout(()=>{
         if(credentials!==owner.credentials || cloudDealOwner!==owner)return;
@@ -302,7 +322,7 @@
           if(credentials!==owner.credentials || cloudDealOwner!==owner)return;
           owner.done=true;acknowledgeDeal(owner);
         });
-      },1500);
+      },solScaledDelay(1500,150));
     }
 
     // Presentation observes confirmed public changes; reconnect snapshots are quiet.
@@ -342,7 +362,7 @@
   async function acknowledgeDeal(owner) {
     if(credentials!==owner.credentials || cloudDealOwner!==owner)return;
     try {
-      const snap=await api(roomPath("ready"),{method:"POST",body:{handNumber:owner.hand}});
+      const snap=await api(roomPath("ready"),{method:"POST",body:{handNumber:owner.hand,openingId:owner.id}});
       if(credentials!==owner.credentials || cloudDealOwner!==owner)return;
       if(!latest || snap.revision>=latest.revision) {latest=snap;lastRevision=snap.revision;}
       gameSnapshot(latest);
@@ -472,7 +492,7 @@
     const playerId = ownId();
     const result = await api("/rooms", {
       method: "POST",
-      body: { playerId, displayName: name, avatar: ensurePreferredAvatar(), voice: loadPreferredVoice() },
+      body: { playerId, displayName: name, avatar: ensurePreferredAvatar(), voice: loadPreferredVoice(), pace:horGamePace },
       token: null,
     });
     credentialsFrom(result, playerId);
@@ -542,7 +562,7 @@
     } catch (error) {
       if (["ROOM_NOT_FOUND", "UNAUTHORIZED"].includes(error.message)) {
         localStorage.removeItem(credentialKey);
-        credentials = null;
+        credentials = null;paintCloudPace(Number(localStorage.getItem("horGamePace"))||1);
         return false;
       }
       status("Connection interrupted. Your seat is saved; retrying.");
@@ -554,7 +574,7 @@
   function disconnectCloudRoom() {
     // Disconnect is reversible: keep the server seat and its reconnect credential.
     sessionStorage.setItem("ghr-cloud-disconnected", "1");
-    credentials = null;
+    credentials = null;paintCloudPace(Number(localStorage.getItem("horGamePace"))||1);
     clearTimeout(cloudDealTimer);cloudDealOwner=null;
     clearInterval(timer);
     clearTimeout(socketReconnectTimer);
@@ -566,7 +586,7 @@
   }
   function finishClosedTable() {
     if (!credentials) return;
-    credentials=null; latest=null; queuedAction=null;
+    credentials=null;paintCloudPace(Number(localStorage.getItem("horGamePace"))||1); latest=null; queuedAction=null;
     clearTimeout(cloudDealTimer);cloudDealOwner=null;
     localStorage.removeItem(credentialKey);
     sessionStorage.removeItem("ghr-cloud-disconnected");
