@@ -110,7 +110,12 @@ with sync_playwright() as pw:
                         page.locator('#houseMenu805').wait_for(state='hidden')
                         page.locator('#leaveReplaceBtn').click()
                         assert page.evaluate('document.body.classList.contains("in-game")')
-                        record['actions'].append('all speeds, menu return, Back cancel')
+                        page.locator('#horRailFullscreenReview').click()
+                        page.wait_for_function('!!document.fullscreenElement')
+                        page.screenshot(path=str(OUT / f'{label}-native-fullscreen.png'))
+                        page.locator('#horRailFullscreenReview').click()
+                        page.wait_for_function('!document.fullscreenElement')
+                        record['actions'].append('all speeds, menu return, Back cancel, native fullscreen enter/exit')
                         tools_tested=True
                     if phase == 'play' and not last_tested and page.evaluate('!!getPortraitPreviousTrick()'):
                         page.locator('#portraitLastTrickButton').click()
@@ -138,6 +143,7 @@ with sync_playwright() as pw:
                         page.locator('#scoreModal:not(.hidden)').wait_for(state='visible', timeout=30000)
                         page.wait_for_timeout(1200)
                         page.screenshot(path=str(OUT / f'{label}-score-settled.png'))
+                        record['intelligence']=page.evaluate('''() => ({status:window.HORX1Integration?.status(),decisions:window.HORX1Integration?.metrics.decisions.length,fallbacks:window.HORX1Integration?.metrics.fallbacks})''')
                         record['toolsTested']=tools_tested
                         record['lastTested']=last_tested
                         # Reversible viewport switch keeps the native frozen landscape behavior.
@@ -150,10 +156,25 @@ with sync_playwright() as pw:
                         page.locator('#scoreModalNext').click()
                         page.wait_for_timeout(600)
                         page.screenshot(path=str(OUT / f'{label}-after-score.png'))
+                        page.wait_for_function('!!navigator.serviceWorker.controller', timeout=60000)
+                        truth=page.evaluate('window.HORRuntimeTruth()')
+                        assert truth['coherent'], json.dumps(truth)
+                        record['runtimeTruth']=truth
+                        ctx.set_offline(True)
+                        page.reload(wait_until='domcontentloaded')
+                        page.locator('#soloPracticeBtn').click(timeout=60000)
+                        if page.locator('#tutorialSkip').is_visible(): page.locator('#tutorialSkip').click()
+                        page.wait_for_function('game && game.phase==="bidding"',timeout=60000)
+                        page.screenshot(path=str(OUT / f'{label}-offline-bidding.png'))
+                        record['offlineReloadAndDeal']=True
+                        ctx.set_offline(False)
                         record['passed'] = not errors and tools_tested and last_tested
                         break
                     page.wait_for_timeout(450)
                 record['seconds'] = round(time.monotonic() - start, 2)
+                if not record['passed']:
+                    record['timeoutState']=page.evaluate('''() => ({phase:game?.phase,loader:window.HORAssetLoading772?.inspect(),tour:tourCardOpen(),text:document.body.innerText.slice(-2500)})''')
+                    page.screenshot(path=str(OUT / f'{label}-timeout.png'))
             except Exception as exc:
                 record['failure'] = str(exc)
                 print(label, 'FAIL', str(exc), flush=True)
