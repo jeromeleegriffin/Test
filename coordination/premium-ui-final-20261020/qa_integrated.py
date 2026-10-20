@@ -48,6 +48,7 @@ with sync_playwright() as pw:
                 tools_tested = False
                 last_tested = False
                 previous_phase = None
+                moon_declared = False
                 while time.monotonic() - start < 180:
                     tour = page.locator('#tutorialSkip')
                     if tour.is_visible():
@@ -85,6 +86,23 @@ with sync_playwright() as pw:
                         page.screenshot(path=str(OUT / f'{label}-{phase}.png'))
                         shot.add(phase)
                     if phase == 'bidding' and state['current'] == state['mine']:
+                        if os.getenv('QA_MOON')=='true' and not moon_declared:
+                            target=page.evaluate('maxBid()')
+                            for _ in range(50):
+                                value=page.locator('#bidValue').evaluate('e=>Number(e.value||e.textContent)')
+                                if value>=target: break
+                                page.locator('#bidPlus').click()
+                            assert page.locator('#moonBidPlaque').is_visible()
+                            assert page.evaluate('game.phase')=='bidding', 'Selecting Moon submitted without confirmation'
+                            page.locator('#btnToggleTopOpts').click()
+                            page.locator('#houseMenu805').wait_for(state='visible')
+                            page.locator('#houseMenu805 .visual-close805').click()
+                            page.locator('#leaveReplaceBtn').click()
+                            page.locator('#confirmCancel').click()
+                            page.locator('#confirmSheet').wait_for(state='hidden')
+                            page.screenshot(path=str(OUT / f'{label}-moon-before-confirm.png'))
+                            moon_declared=True
+                            record['actions'].append('Moon selected without submitting; bidding Menu and Back tested')
                         bid = page.locator('#bidConfirm')
                         if bid.is_visible() and bid.is_enabled():
                             bid.click()
