@@ -504,8 +504,8 @@
   "testSiteVerificationNote": "All1502 runtime Git blobs and all15 changed served SHA256 hashes match approved artifact on BOTH sites. Cloud browser reached both lobbies. Installed-device SW/offline upgrade remains unverified.",
   "historicalApprovedVisualDesign": {
     "date": "2026-10-14",
-    "room": "B \u2014 Fireplace Priority",
-    "menu": "A \u2014 slim right overlay",
+    "room": "B — Fireplace Priority",
+    "menu": "A — slim right overlay",
     "sound": "Reviewed Sound & Atmosphere using actual mixer controls",
     "ownerDesignApproved": true,
     "owner805PhoneAccepted": false,
@@ -867,7 +867,7 @@
     "knownSecondaryLabelIssue": {
       "path": "angle-c-characters.js",
       "element": "angleCNotice",
-      "label": "840 \u00b7 Stable discard",
+      "label": "840 · Stable discard",
       "activeRuntime": "845-share-shuffle",
       "recordedNotPatched": true
     },
@@ -975,13 +975,13 @@
     "status": "OWNER_APPROVED_LOCKED",
     "date": "2026-10-16",
     "record": "../coordination/landscape-daniel-017-approved-20261016.md",
-    "scope": "Daniel isolated 0\u201316 review; full-table integration pending",
+    "scope": "Daniel isolated 0–16 review; full-table integration pending",
     "runtime": "017.zip",
     "sha256": "c165dc8c94e0c8e78be931dad438fbdd7dc590ec79bf27a9e92e3be8d99019e7",
     "libraryFileId": "libfile_800a96f61fe081919f8abeada283c649",
     "sourceLibraryFileId": "libfile_7d48cb5a3e288191af77808b9d11be45",
     "deployed": false,
-    "method": "Fixed 68-degree fan for 7\u201316; overlap increases inside fixed finished grip; original card aspect; preserve 0\u20136"
+    "method": "Fixed 68-degree fan for 7–16; overlap increases inside fixed finished grip; original card aspect; preserve 0–6"
   },
   "landscapeFullTableCandidate": {
     "status": "OWNER_APPROVED_LOCKED",
@@ -1229,5 +1229,27 @@
     "onlineX1Integrated": false,
     "publicPagesPromoted": false,
     "sourceEvidenceCommit": "ebc38a37f001b18946df20a524f70f7d361dd841"
+  },
+  "currentCumulativeGamePackage": {
+    "filename": "Griffin_House_Complete_Cumulative_Final_20261020.zip",
+    "bytes": 166774839,
+    "sha256": "3264c8c1ec3ebca83e87d2aa8eebe97c7b7e4a04e52a8d8c27f3c6aff3316cbf",
+    "entries": 1670,
+    "crc": "PASS",
+    "allManifestHashes": "PASS",
+    "library_file_id": "libfile_31c70b5c390481919f5ab8eff6ecc05c",
+    "file_id": "file_000000000ce481f6abedc30775ec581a",
+    "runtime": "846-premium-owner-repair-20261020-r7-cumulative",
+    "nativeBaseCommit": "18cf361be26dd5d65b3c8aa384c2a5434f730a93",
+    "cloudCodeCommit": "93e881c0c3fd61762dd24ffe58b8d8b60d5d44d3",
+    "onlineURL": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
+    "onlineVersion": "b579fde0-d6e1-4a42-b40f-aa85cd3ec7d3",
+    "packagedOfflineHandPassed": true,
+    "packagedNextHandAndLeavePassed": true,
+    "friendsAndEightCharacterInviteDispatchPassed": true,
+    "artVoiceIntelligenceFilesUnchanged": 1386,
+    "publicPagesGameUpdated": false,
+    "document": "coordination/CUMULATIVE_FINAL_ZIP_20261020.json",
+    "sourceEvidenceCommit": "38f52428515277616c06277924b80673a1879505"
   }
 }

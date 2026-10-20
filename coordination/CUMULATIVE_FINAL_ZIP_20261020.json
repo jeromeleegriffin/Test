@@ -1,0 +1,21 @@
+{
+  "filename": "Griffin_House_Complete_Cumulative_Final_20261020.zip",
+  "bytes": 166774839,
+  "sha256": "3264c8c1ec3ebca83e87d2aa8eebe97c7b7e4a04e52a8d8c27f3c6aff3316cbf",
+  "entries": 1670,
+  "crc": "PASS",
+  "allManifestHashes": "PASS",
+  "library_file_id": "libfile_31c70b5c390481919f5ab8eff6ecc05c",
+  "file_id": "file_000000000ce481f6abedc30775ec581a",
+  "runtime": "846-premium-owner-repair-20261020-r7-cumulative",
+  "nativeBaseCommit": "18cf361be26dd5d65b3c8aa384c2a5434f730a93",
+  "cloudCodeCommit": "93e881c0c3fd61762dd24ffe58b8d8b60d5d44d3",
+  "onlineURL": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
+  "onlineVersion": "b579fde0-d6e1-4a42-b40f-aa85cd3ec7d3",
+  "packagedOfflineHandPassed": true,
+  "packagedNextHandAndLeavePassed": true,
+  "friendsAndEightCharacterInviteDispatchPassed": true,
+  "artVoiceIntelligenceFilesUnchanged": 1386,
+  "publicPagesGameUpdated": false,
+  "document": "coordination/CUMULATIVE_FINAL_ZIP_20261020.json"
+}
