@@ -6,22 +6,35 @@
   const buttons = [];
   let messageTimer;
   let changing = false;
-  const safeAndroid = /Android/i.test(navigator.userAgent) || navigator.userAgentData?.platform === 'Android';
-  function fullscreen() { return !!nativeOwner(); }
+  const safeAndroid =
+    /Android/i.test(navigator.userAgent) || navigator.userAgentData?.platform === 'Android';
+  function fullscreen() {
+    return !!nativeOwner();
+  }
   function nativeOwner() {
     let view = window;
-    try { while (view) {
-      if (view.document.fullscreenElement || view.document.webkitFullscreenElement) return view.document;
-      if (view === view.parent) break;
-      view = view.parent;
-    } } catch (_) {}
+    try {
+      while (view) {
+        if (view.document.fullscreenElement || view.document.webkitFullscreenElement)
+          return view.document;
+        if (view === view.parent) break;
+        view = view.parent;
+      }
+    } catch (_) {}
     return null;
   }
-  function fitModeActive() { return document.body.classList.contains('page-fit'); }
-  function fullscreenLabel() { return fullscreen() ? 'Exit full screen' : 'Full screen'; }
+  function fitModeActive() {
+    return document.body.classList.contains('page-fit');
+  }
+  function fullscreenLabel() {
+    return fullscreen() ? 'Exit full screen' : 'Full screen';
+  }
   async function exitNativeForFit() {
     const owner = nativeOwner();
-    if (owner) { const exit = owner.exitFullscreen || owner.webkitExitFullscreen; if (exit) await exit.call(owner); }
+    if (owner) {
+      const exit = owner.exitFullscreen || owner.webkitExitFullscreen;
+      if (exit) await exit.call(owner);
+    }
   }
   function paint() {
     for (const b of buttons) {
@@ -51,7 +64,11 @@
       }
       window.HORManualFullscreen831 = fullscreen();
       clearTimeout(messageTimer);
-      if (!was) { try { screen.orientation?.unlock?.(); } catch (_) {} }
+      if (!was) {
+        try {
+          screen.orientation?.unlock?.();
+        } catch (_) {}
+      }
       paint();
     } catch (_) {
       window.HORManualFullscreen831 = fullscreen();
@@ -71,9 +88,16 @@
       window.HORManualFullscreen831 = false;
       window.syncBrowserFitBtn?.();
       paint();
-    } finally { changing = false; }
+    } finally {
+      changing = false;
+    }
   }
-  window.HORFullscreen831 = { toggle, fitScreen, fitModeActive: () => safeAndroid && fitModeActive(), label: fullscreenLabel };
+  window.HORFullscreen831 = {
+    toggle,
+    fitScreen,
+    fitModeActive: () => safeAndroid && fitModeActive(),
+    label: fullscreenLabel,
+  };
   if (safeAndroid) document.body.classList.add('page-fit');
   for (const id of ['lobby', 'waiting']) {
     const host = $(id);

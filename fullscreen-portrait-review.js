@@ -6,7 +6,7 @@
   const installed = () =>
     Boolean(
       window.HORFullscreen831?.fitModeActive?.() ||
-      document.fullscreenElement ||
+        document.fullscreenElement ||
         document.webkitFullscreenElement ||
         navigator.standalone === true ||
         ['fullscreen', 'standalone', 'minimal-ui'].some(

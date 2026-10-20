@@ -15946,9 +15946,15 @@ function wantLandscapeFullscreen() {
 
 // Legacy viewport/game hooks only repaint controls. Native fullscreen entry/exit
 // belongs to the explicit button controller; never re-enter from resize or a tap.
-function enterLandscapeFullscreen() { syncBrowserFitBtn(); }
-function exitLandscapeFullscreen() { syncBrowserFitBtn(); }
-function syncLandscapeFullscreen() { syncBrowserFitBtn(); }
+function enterLandscapeFullscreen() {
+  syncBrowserFitBtn();
+}
+function exitLandscapeFullscreen() {
+  syncBrowserFitBtn();
+}
+function syncLandscapeFullscreen() {
+  syncBrowserFitBtn();
+}
 
 function syncBrowserFitBtn() {
   const bar = document.getElementById('btnFullscreen');
