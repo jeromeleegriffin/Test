@@ -1,0 +1,5 @@
+page.setViewportSize: Protocol error (Browser.setWindowBounds): To resize minimized/maximized/fullscreen window, restore it to normal state first.
+    at /workspace/scratch/43e36921068b/fullscreen-r5-browser.cjs:2:1316 {
+  log: [],
+  name: 'Error'
+}

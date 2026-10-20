@@ -1,0 +1,1 @@
+PASS R5: passive layout/gesture hooks, one pending native request, one pending exit, browser dismissal never auto-reenters.
