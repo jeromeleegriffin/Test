@@ -2,9 +2,297 @@
   {
     "label": "360-browser",
     "errors": [],
-    "phases": [],
-    "actions": [],
-    "passed": false,
-    "seconds": 180.13
+    "phases": [
+      {
+        "phase": "dealing",
+        "current": 0,
+        "mine": 0,
+        "bidder": -1,
+        "goal": "Biddingin progress",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 36
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 36
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 36
+          }
+        ],
+        "speed": [
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.5,
+            "h": 28
+          }
+        ]
+      },
+      {
+        "phase": "bidding",
+        "current": 0,
+        "mine": 0,
+        "bidder": -1,
+        "goal": "Biddingin progress",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 36
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 36
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 36
+          }
+        ],
+        "speed": [
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.5,
+            "h": 28
+          }
+        ]
+      },
+      {
+        "phase": "discard",
+        "current": 0,
+        "mine": 0,
+        "bidder": 0,
+        "goal": "Need 120to make bid",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 36
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 36
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 36
+          }
+        ],
+        "speed": [
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.5,
+            "h": 28
+          }
+        ]
+      },
+      {
+        "phase": "trump",
+        "current": 0,
+        "mine": 0,
+        "bidder": 0,
+        "goal": "Need 120to make bid",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 36
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 36
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 36
+          }
+        ],
+        "speed": [
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.5,
+            "h": 28
+          }
+        ]
+      },
+      {
+        "phase": "play",
+        "current": 0,
+        "mine": 0,
+        "bidder": 0,
+        "goal": "Need 120to make bid",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 36
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 36
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 36
+          }
+        ],
+        "speed": [
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.5,
+            "h": 28
+          }
+        ]
+      },
+      {
+        "phase": "score",
+        "current": 1,
+        "mine": 0,
+        "bidder": 0,
+        "goal": "Handcomplete",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 36
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 36
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 36
+          }
+        ],
+        "speed": [
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.484375,
+            "h": 28
+          },
+          {
+            "w": 39.5,
+            "h": 28
+          }
+        ]
+      }
+    ],
+    "actions": [
+      "native bid",
+      "native bid",
+      "native bid",
+      "six-card discard confirmed",
+      "trump confirmed",
+      "all speeds, menu return, Back cancel, native fullscreen enter/exit",
+      "legal card tap",
+      "Last Trick open and close",
+      "legal card tap",
+      "legal card tap",
+      "legal card tap",
+      "legal card tap",
+      "legal card tap",
+      "legal card tap",
+      "legal card tap"
+    ],
+    "passed": true,
+    "intelligence": {
+      "status": {
+        "requested": "x1",
+        "active": "x1",
+        "reason": "",
+        "ready": true,
+        "initializationError": "",
+        "lastDecision": {
+          "phase": "play",
+          "engine": "x1",
+          "hand": 39,
+          "seat": 2,
+          "epa": true,
+          "partnerRoute": false
+        },
+        "epa": false,
+        "partnerSeat": null,
+        "hand": 40,
+        "pending": false
+      },
+      "decisions": 24,
+      "fallbacks": []
+    },
+    "toolsTested": true,
+    "lastTested": true,
+    "runtimeTruth": {
+      "page": "846-premium-portrait-20261020-rc1",
+      "script": "846-premium-portrait-20261020-rc1",
+      "marker": "846-premium-portrait-20261020-rc1",
+      "worker": {
+        "build": "846-premium-portrait-20261020-rc1",
+        "cache": "house-of-rooks-846-premium-portrait-20261020-rc1"
+      },
+      "controller": "http://127.0.0.1:8765/sw060.js?v=846-premium-portrait-20261020-rc1",
+      "coherent": true
+    },
+    "offlineReloadAndDeal": true,
+    "seconds": 32.83
   }
 ]
