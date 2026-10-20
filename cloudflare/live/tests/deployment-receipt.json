@@ -1,0 +1,11 @@
+{
+  "worker": "griffin-house-of-rooks-online",
+  "sourceCommit": "01cc60176ea21d5dc5b65488ce254fa4307f1f12",
+  "version": "13374624-c1f0-423b-89e1-0c554dc4e590",
+  "deployment": "21997efa-e187-4abd-bc15-25de467f5fc7",
+  "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+  "sourceReadbackMatches": true,
+  "workersDevEnabled": true,
+  "previewsEnabled": false,
+  "physicalTestingDeferredByOwner": true
+}

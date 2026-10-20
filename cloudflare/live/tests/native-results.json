@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "humans": 2,
+      "target": 100,
+      "hands": 1,
+      "actions": 24,
+      "reconnects": 3,
+      "final": "Team A",
+      "scores": [
+        60,
+        -195
+      ]
+    },
+    {
+      "humans": 4,
+      "target": 100,
+      "hands": 1,
+      "actions": 46,
+      "reconnects": 3,
+      "final": "Team A",
+      "scores": [
+        165,
+        -195
+      ]
+    }
+  ],
+  "errors": []
+}
