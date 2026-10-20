@@ -1,0 +1,15 @@
+{
+  "current": {
+    "isHost": true,
+    "bot": false,
+    "phase": "bidding",
+    "room": "OFFLINE"
+  },
+  "after": {
+    "phase": "play",
+    "current": 2,
+    "bid": 120
+  },
+  "errors": [],
+  "menu": true
+}

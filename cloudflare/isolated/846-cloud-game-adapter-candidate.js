@@ -9,17 +9,20 @@
   // Private 846 adapter, eight-character Cloudflare room codes.
   const codeField = document.getElementById("hor-room-code");
   if (codeField) codeField.maxLength = 8;
-  if (!["797", "805-ownerreview", "846-complete-repairs-20261019"].includes(window.HOR_SCRIPT_BUILD)) {
+  if (!["846-complete-repairs-20261019"].includes(window.HOR_SCRIPT_BUILD)) {
     const notice = document.getElementById("lobbyStatus");
     if (notice) notice.textContent = "This game version has not been verified for private cloud play. Please wait for the test adapter update.";
     // Fail closed rather than silently falling back to browser-hosted rooms.
     for (const name of ["createRoom", "joinRoom", "startGameWithToast"]) window[name] = () => {};
     document.addEventListener("click", event => {
-      if (event.target.closest?.("#createBtn,#joinConfirmBtn,#startBtn")) { event.preventDefault(); event.stopImmediatePropagation(); }
+      if (event.target.closest?.("#friendsToggleBtn,#createBtn,#joinConfirmBtn,#startBtn,#rejoinBtn,#reconnectBtn")) { event.preventDefault(); event.stopImmediatePropagation(); }
     }, true);
     return;
   }
 
+  const native = {};
+  for (const name of ["submitBid", "submitDiscard", "submitTrump", "submitPlay", "startGameWithToast", "clientLeaveReplace", "saveSession", "isBotTurn", "scheduleBot", "runBotAction", "horStartHeartbeat", "horBeginClientReconnect", "horRecordCareerHand", "mergeLifetimeStats", "noteHumanAuction", "noteHumanHandEnd"])
+    native[name] = window[name];
   const credentialKey = "ghr-private-cloud-seat-v1";
   const playerIdKey = "ghr-private-cloud-player-v1";
   let credentials = null;
@@ -30,6 +33,8 @@
   let socketReconnectTimer = null;
   let socketRetryCount = 0;
   let busy = false;
+  let queuedAction = null;
+  let presented = null;
   let lastScoreSignature = "";
   let redealRevision = -1;
 
@@ -41,15 +46,8 @@
     if (el) el.textContent = message;
   };
   const showBotFillStatus = (message, button) => {
-    let el = document.getElementById("ghrBotFillStatus");
-    if (!el) {
-      el = document.createElement("div");
-      el.id = "ghrBotFillStatus";
-      el.setAttribute("role", "status");
-      el.style.cssText = "margin:8px 0;padding:10px 12px;border:1px solid #9b7d42;border-radius:8px;color:#f0dfb6;background:#211a12;font-size:16px;";
-      (button || document.getElementById("cloudFillBotsBtn") || document.getElementById("fillSeatsBtn"))?.insertAdjacentElement("afterend", el);
-    }
-    el.textContent = message;
+    if (button) button.title = message;
+    status(message);
   };
   const ownId = () => {
     let id = localStorage.getItem(playerIdKey);
@@ -80,9 +78,13 @@
 
   function credentialsFrom(result, playerId) {
     sessionStorage.removeItem("ghr-cloud-disconnected");
+    presented = null;
+    window._horCloudWinnerShown = false;
+    window._cloudKittyHand = null;
     credentials = {
       roomCode: result.roomCode || result.roomId,
       seat: Number(result.seat),
+      serverRoomId: result.roomId || null,
       token: result.token,
       playerId,
     };
@@ -106,8 +108,8 @@
         isHost: seat === 0,
         isBot: p.isBot === true,
         bank: 0,
-        avatar: p.avatar || "",
-        voice: p.voice || "silent",
+        avatar: p.avatar || ["cinder", "dagger", "crow", "blaze"][seat],
+        voice: p.voice || "avatar",
       };
     });
   }
@@ -142,42 +144,6 @@
     if (code) code.textContent = credentials.roomCode;
     try { updateWaitingUI(); } catch (_) {}
     const start = document.getElementById("startBtn");
-    let botsButton = document.getElementById("cloudFillBotsBtn");
-    if (!botsButton && start?.parentElement) {
-      botsButton = document.createElement("button");
-      botsButton.id = "cloudFillBotsBtn";
-      botsButton.type = "button";
-      botsButton.className = "btn";
-      botsButton.textContent = "Fill open seats with test bots";
-      start.parentElement.insertBefore(botsButton, start);
-      botsButton.addEventListener("click", async () => {
-        if (!credentials || credentials.seat !== 0) { showBotFillStatus("This phone is not connected as the host. Rejoin the host seat, then try again.", botsButton); return; }
-        if (busy) { showBotFillStatus("The table is finishing another action. Wait a moment, then tap again.", botsButton); return; }
-        busy = true;
-        botsButton.disabled = true;
-        botsButton.textContent = "Adding bots…";
-        showBotFillStatus("Adding test bots to the open seats…", botsButton);
-        try {
-          const snap = await api(roomPath("fill-bots"), { method: "POST", body: {} });
-          latest = snap;
-          lastRevision = snap.revision;
-          enterWaiting(snap);
-          showBotFillStatus("Bots added. The table is ready to start.", botsButton);
-        } catch (error) {
-          showBotFillStatus("Could not add bots: " + error.message, botsButton);
-        } finally {
-          busy = false;
-          botsButton.disabled = false;
-          botsButton.textContent = "Fill open seats with test bots";
-        }
-      });
-    }
-    if (botsButton) {
-      const humanCount = (snap.players || []).filter(player => player?.occupied && !player.isBot).length;
-      const openCount = 4 - (snap.occupiedSeats || []).length;
-      botsButton.classList.toggle("hidden", credentials.seat !== 0 || openCount < 1);
-      botsButton.disabled = openCount < 1;
-    }
     if (start && credentials.seat === 0) {
       start.classList.remove("hidden");
       start.disabled = snap.occupiedSeats?.length !== 4;
@@ -186,6 +152,21 @@
   }
 
   function gameSnapshot(snap) {
+    if (!["score", "complete"].includes(snap.phase)) {
+      document.getElementById("scoreModal")?.classList.add("hidden");
+      document.body.classList.remove("remaining-open");
+    }
+    if (typeof snap.shootMoonEnabled === "boolean") shootMoonEnabled = snap.shootMoonEnabled;
+    if (snap.rules) {
+      includeRed2 = !!snap.rules.includeRed2;
+      includeOnes = !!snap.rules.includeOnes;
+      includeRook = !!snap.rules.includeRook;
+      includeRed1 = !!snap.rules.includeRed1;
+      onesHigh = !!snap.rules.onesHigh;
+      rookLowest = !!snap.rules.rookLowest;
+      specialsAnytime = !!snap.rules.specialsAnytime;
+      mustTrumpWhenVoid = !!snap.rules.mustTrumpWhenVoid;
+    }
     const tablePlayers = mapPlayers(snap);
     const hand = Array.isArray(snap.hand) ? snap.hand.map((card) => ({ ...card })) : [];
     const viewPhase = snap.phase === "complete" ? "score" : snap.phase;
@@ -194,15 +175,19 @@
     players = tablePlayers;
     myIndex = credentials.seat;
     myPeerId = playerIdForSeat(credentials.seat);
-    // The cloud room still has a real host seat. Treating every client as a
-    // guest after dealing hides host controls and reports a false wait state.
-    isHost = credentials.seat === 0;
+    // Host permissions belong to the server credential, not the legacy
+    // browser referee. All dealt cloud views use the native client UI path.
+    isHost = false;
     const view = {
       phase: viewPhase,
+      cloudRevision: snap.revision,
       scores: snap.scores || [0, 0],
       sandbagOverpoints: [0, 0],
       bid: snap.bid || 0,
       highestBid: snap.highestBid,
+      shotTheMoon: !!snap.shotTheMoon,
+      trumpVoiceEvent790: snap.trump ? "cloud-trump:" + credentials.roomCode + ":" + snap.handNumber + ":" + snap.bidder + ":" + snap.trump : null,
+      trumpVoiceRestore790: !presented,
       minBid: 100,
       passCount: snap.passCount || 0,
       bidder: snap.bidder,
@@ -219,9 +204,9 @@
       paused: false,
       bidStatus: snap.bidStatus || [null, null, null, null],
       discardCount: snap.discardCount || 0,
-      nestAuctionOpen: false,
-      revealTopNest: true,
-      nestFlipped: false,
+      nestAuctionOpen: snap.phase === "bidding",
+      revealTopNest: snap.revealTopNest !== false,
+      nestFlipped: snap.phase === "bidding",
       topNestCard: snap.topNestCard || null,
       nestFlipStage: 0,
       widowSpread: snap.widowSpread || [],
@@ -235,10 +220,12 @@
     const current = game || {};
     Object.assign(current, {
       phase: viewPhase,
+      cloudRevision: snap.revision,
       scores: view.scores,
       sandbagOverpoints: view.sandbagOverpoints,
       bid: view.bid,
       highestBid: view.highestBid,
+      shotTheMoon: view.shotTheMoon,
       passCount: view.passCount,
       bidder: view.bidder,
       trump: view.trump,
@@ -255,8 +242,8 @@
       paused: false,
       bidStatus: view.bidStatus,
       discardCount: view.discardCount,
-      nestAuctionOpen: false,
-      nestFlipped: false,
+      nestAuctionOpen: snap.phase === "bidding",
+      nestFlipped: snap.phase === "bidding",
       topNestCard: view.topNestCard,
       widowSpread: view.widowSpread,
       handPoints: view.handPoints,
@@ -276,7 +263,31 @@
       matchResult: snap.matchResult || null,
     });
     game = current;
-    try { applyState(view); } catch (error) { status("Could not draw the current table: " + error.message); }
+    if (snap.phase === "discard" && snap.bidder === credentials.seat &&
+        window._cloudKittyHand !== snap.handNumber) {
+      window._cloudKittyHand = snap.handNumber;
+      window._discardFlowKey = typeof discardFlowIdentity === "function" ? discardFlowIdentity(hand, snap.bidder) : "";
+      window._discardPage = "kitty";
+      window.selectedForDiscard = new Set();
+      window._discardSubmitting = false;
+      window._discardStartReceived = false;
+      window._discardKittyShown = false;
+    }
+    try { applyState(view); if (snap.phase !== "discard") renderHand(false); } catch (error) { status("Could not draw the current table: " + error.message); }
+
+    // Presentation observes confirmed public changes; reconnect snapshots are quiet.
+    if (presented?.hand === snap.handNumber) {
+      for (let seat = 0; seat < 4; seat++) {
+        const value = snap.bidStatus?.[seat];
+        if (value == null || value === presented.bids?.[seat] || tablePlayers[seat]?.isBot) continue;
+        const moon = !!snap.shotTheMoon && seat === snap.bidder;
+        const action = value === "pass" ? "pass" : moon ? "shootMoon" : "bid";
+        window.HORBidVoice801?.receive({event:{id:"cloud-bid:" + credentials.roomCode + ":" + snap.handNumber + ":" + snap.revision + ":" + seat,player:seat,action,amount:Number(value)||0,clip:moon?"moon-"+(snap.handNumber%2+1):undefined}});
+      }
+      if (snap.shotTheMoon && !presented.moon) window.HORMoonHowl?.play("cloud-moon:" + credentials.roomCode + ":" + snap.handNumber);
+      if (snap.phase === "play" && snap.trump && !presented.trump) window.HORTrumpVoice?.chosen(game, playerAvatars);
+    }
+    presented = {hand:snap.handNumber,bids:[...(snap.bidStatus||[])],trump:snap.trump,moon:!!snap.shotTheMoon};
 
     if (snap.lastSummary) {
       const signature = String(snap.handNumber) + ":" + String(snap.revision);
@@ -291,7 +302,7 @@
         wireCloudScoreButton(!!snap.matchResult);
         if (snap.matchResult && !window._horCloudWinnerShown) {
           window._horCloudWinnerShown = true;
-          try { showWinCelebration(snap.matchResult, snap.scores); } catch (_) {}
+          try { showWinCelebration(snap.matchResult === "Team A" ? teamLabel(0) : snap.matchResult === "Team B" ? teamLabel(1) : snap.matchResult, snap.scores); } catch (_) {}
         }
       }
     }
@@ -304,7 +315,8 @@
   function wireCloudScoreButton(isFinal) {
     const next = document.getElementById("scoreModalNext") || document.querySelector("#scoreModal [data-action='next']") || document.querySelector("#scoreModal button:last-of-type");
     if (!next) return;
-    next.textContent = isFinal ? "OK" : "Next Hand";
+    next.textContent = isFinal ? "OK" : credentials.seat === 0 ? "Next Hand" : "Waiting for host";
+    next.disabled = !isFinal && credentials.seat !== 0;
     next.onclick = (event) => {
       event.preventDefault();
       document.getElementById("scoreModal")?.classList.add("hidden");
@@ -323,7 +335,8 @@
   }
 
   function receiveSnapshot(snap) {
-    if (!snap || !Number.isInteger(snap.revision) || snap.revision < lastRevision) return;
+    if (!credentials || !snap || (credentials.serverRoomId && snap.roomId !== credentials.serverRoomId) || !Number.isInteger(snap.revision) || snap.revision < lastRevision) return;
+    if (!credentials.serverRoomId) { credentials.serverRoomId = snap.roomId; localStorage.setItem(credentialKey, JSON.stringify(credentials)); }
     latest = snap;
     if (snap.revision !== lastRevision || lastRevision < 0) {
       lastRevision = snap.revision;
@@ -349,8 +362,10 @@
 
   async function connectSocket() {
     if (!credentials || socket?.readyState === WebSocket.OPEN || socket?.readyState === WebSocket.CONNECTING) return;
+    const owner = credentials;
     try {
       const issued = await api(roomPath("ws-ticket"), { method: "POST", body: {} });
+      if (credentials !== owner) return;
       const endpoint = new URL(roomPath("ws"), window.location.origin);
       endpoint.protocol = endpoint.protocol === "https:" ? "wss:" : "ws:";
       endpoint.searchParams.set("ticket", issued.ticket);
@@ -361,6 +376,7 @@
         setFallbackPolling(false);
       };
       next.onmessage = (event) => {
+        if (credentials !== owner) return;
         try {
           const message = JSON.parse(event.data);
           if (message.type === "snapshot") receiveSnapshot(message.snapshot);
@@ -402,7 +418,7 @@
     const resumeToken = saved?.roomCode === code && saved?.playerId === playerId ? saved.token : null;
     const result = await api("/rooms/" + encodeURIComponent(code) + "/join", {
       method: "POST",
-      body: { playerId, displayName: name, resumeToken },
+      body: { playerId, displayName: name, resumeToken, avatar: ensurePreferredAvatar(), voice: loadPreferredVoice() },
       token: null,
     });
     credentialsFrom({ ...result, roomCode: code }, playerId);
@@ -415,7 +431,7 @@
     const playerId = ownId();
     const result = await api("/rooms", {
       method: "POST",
-      body: { playerId, displayName: name },
+      body: { playerId, displayName: name, avatar: ensurePreferredAvatar(), voice: loadPreferredVoice() },
       token: null,
     });
     credentialsFrom(result, playerId);
@@ -423,7 +439,13 @@
   }
 
   async function sendAction(route, data) {
-    if (!credentials || !latest || busy) return;
+    if (!credentials || !latest) return;
+    if (busy) {
+      // A pushed next turn may arrive before the previous HTTP refresh finishes.
+      // Keep one intention only for that exact authoritative room/hand/revision.
+      queuedAction = {route, data, owner: credentials, revision: latest.revision, hand: latest.handNumber};
+      return;
+    }
     busy = true;
     const body = {
       actionId: crypto.randomUUID(),
@@ -438,31 +460,30 @@
       await refreshAfterAction();
     } finally {
       busy = false;
+      const next = queuedAction;
+      queuedAction = null;
+      if (next && next.owner === credentials && next.revision === latest?.revision && next.hand === latest?.handNumber)
+        queueMicrotask(() => sendAction(next.route, next.data));
     }
   }
 
   async function refreshAfterAction() {
     if (!credentials) return;
-    try {
-      const snap = await api(roomPath("snapshot"));
-      latest = snap;
-      lastRevision = snap.revision;
-      if (snap.phase === "waiting") enterWaiting(snap);
-      else gameSnapshot(snap);
-    } catch (_) {}
+    try { receiveSnapshot(await api(roomPath("snapshot"))); } catch (_) {}
   }
 
   async function startCloudGame() {
     if (!credentials || credentials.seat !== 0) return;
     try {
-      await api(roomPath("start"), { method: "POST", body: {}, token: credentials.token });
+      await api(roomPath("start"), { method: "POST", body: {options: {targetScore: normalizeTargetScore(targetScore), includeRed2, revealTopNest, shootMoonEnabled}}, token: credentials.token });
       await refreshAfterAction();
     } catch (error) { status("Could not start the table: " + error.message); }
   }
 
   async function reconnectCloudRoom() {
     if (sessionStorage.getItem("ghr-cloud-disconnected") === "1") return false;
-    const saved = JSON.parse(localStorage.getItem(credentialKey) || "null");
+    let saved = null;
+    try { saved = JSON.parse(localStorage.getItem(credentialKey) || "null"); } catch (_) { return false; }
     if (!saved || !saved.roomCode || !saved.token) return false;
     credentials = saved;
     roomCode = saved.roomCode;
@@ -501,6 +522,7 @@
     location.reload();
   }
   window.clientLeaveReplace = () => {
+    if (!credentials) return native.clientLeaveReplace?.();
     if (confirm("Leave this screen? Your seat stays reserved so you can rejoin. No bot will replace you.")) disconnectCloudRoom();
   };
   window.leaveTableAfterConfirmation043 = disconnectCloudRoom;
@@ -554,14 +576,19 @@
     const resume = document.getElementById("reconnectBtn");
     if (resume) { resume.classList.remove("hidden"); resume.textContent = "Rejoin your reserved seat"; }
   }
-  window.saveSession = () => {};
+  window.saveSession = (...args) => credentials ? undefined : native.saveSession?.(...args);
   window.createRoom = function () { return createCloudRoom().catch((error) => status(error.message)); };
   window.joinRoom = function () { return joinByCode().catch((error) => status(error.message)); };
-  window.startGameWithToast = function () { return startCloudGame(); };
-  window.submitBid = function (value) { return sendAction("bid", { value: Number(value) }); };
-  window.submitDiscard = function (cardIds) { return sendAction("discard", { cardIds: [...cardIds] }); };
-  window.submitTrump = function (color) { return sendAction("trump", { color }); };
+  window.startGameWithToast = function (...args) { return credentials ? startCloudGame() : native.startGameWithToast?.(...args); };
+  window.submitBid = function (value, opts) {
+    if (!credentials) return native.submitBid?.(value, opts);
+    if (Number(value) !== 0 && isShootMoonBid(Number(value)) && !opts?.moonConfirmed) return;
+    return sendAction("bid", { value: Number(value) });
+  };
+  window.submitDiscard = function (cardIds) { if (!credentials) return native.submitDiscard?.(cardIds); return sendAction("discard", { cardIds: [...cardIds] }); };
+  window.submitTrump = function (color) { if (!credentials) return native.submitTrump?.(color); return sendAction("trump", { color }); };
   window.submitPlay = function (cardId) {
+    if (!credentials) return native.submitPlay?.(cardId);
     if (Date.now() < playLockUntil) return;
     playLockUntil = Date.now() + 450;
     return sendAction("play", { cardId });
@@ -611,16 +638,21 @@
   // Keep ordinary offline play in this copy available when cloud=1 is absent.
   // The cloud branch has no careers, local award writes, or PeerJS seats.
   // Private-test bots are controlled only by the server room reducer.
-  try { window.horRecordCareerHand = () => ({ ok: true, skipped: "private-cloud-test" }); } catch (_) {}
-  try { window.mergeLifetimeStats = () => {}; } catch (_) {}
-  try { window.noteHumanAuction = () => {}; } catch (_) {}
-  try { window.noteHumanHandEnd = () => {}; } catch (_) {}
+  try { window.horRecordCareerHand = (...args) => credentials ? ({ ok: true, skipped: "private-cloud-test" }) : native.horRecordCareerHand?.(...args); } catch (_) {}
+  try { window.mergeLifetimeStats = (...args) => credentials ? undefined : native.mergeLifetimeStats?.(...args); } catch (_) {}
+  try { window.noteHumanAuction = (...args) => credentials ? undefined : native.noteHumanAuction?.(...args); } catch (_) {}
+  try { window.noteHumanHandEnd = (...args) => credentials ? undefined : native.noteHumanHandEnd?.(...args); } catch (_) {}
+  // PeerJS liveness must never evict or replace a cloud seat.
+  clearInterval(horHeartbeatTimer);
+  window.horStartHeartbeat = (...args) => credentials ? undefined : native.horStartHeartbeat?.(...args);
+  window.horBeginClientReconnect = (...args) => credentials ? undefined : native.horBeginClientReconnect?.(...args);
   window.HOR_CLOUD_TEST_ACTIVE = true;
+  window.HORCloudDiagnostics = () => ({busy, queued: !!queuedAction, revision:lastRevision, seat:credentials?.seat ?? null});
   // The Durable Object controls test bots. Prevent the legacy browser bot
   // loop from issuing a second move against the same visible game.
-  window.isBotTurn = () => false;
-  window.scheduleBot = () => {};
-  window.runBotAction = () => {};
+  window.isBotTurn = (...args) => credentials ? false : native.isBotTurn?.(...args);
+  window.scheduleBot = (...args) => credentials ? undefined : native.scheduleBot?.(...args);
+  window.runBotAction = (...args) => credentials ? undefined : native.runBotAction?.(...args);
   status("Private cloud room test ready.");
   reconnectCloudRoom().then((resumed) => {
     if (!resumed) status("Private cloud room test ready. Create a room or join with a code.");

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Negative score Moon is allowed",
+    "pass": true
+  },
+  {
+    "name": "Non-five and stale turn bids rejected",
+    "pass": true
+  },
+  {
+    "name": "Target bounds and boolean options validated",
+    "pass": true
+  },
+  {
+    "name": "Moon takes every counter, permits zero-counter lost trick and wins from negative",
+    "pass": true
+  },
+  {
+    "name": "Moon miss applies ordinary set penalty",
+    "pass": true
+  },
+  {
+    "name": "Approved avatars, voice and options survive start",
+    "pass": true
+  }
+]

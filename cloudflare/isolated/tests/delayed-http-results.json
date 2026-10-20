@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "humans": 2,
+      "target": 100,
+      "hands": 1,
+      "actions": 24,
+      "reconnects": 3,
+      "queuePressure": 16,
+      "final": "Team B",
+      "scores": [
+        -195,
+        145
+      ]
+    }
+  ],
+  "errors": []
+}
