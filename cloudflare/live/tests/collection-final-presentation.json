@@ -1,0 +1,618 @@
+{
+  "live": true,
+  "samples": [
+    {
+      "phase": "waiting",
+      "stamp": false,
+      "stampVisible": false,
+      "statusVisible": false,
+      "statusText": "Thinking…",
+      "at": 1792480488106
+    },
+    {
+      "phase": "dealing",
+      "turn": 3,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": -1,
+      "trick": [],
+      "lock": false,
+      "statusVisible": false,
+      "statusText": "Thinking…",
+      "at": 1792480488434
+    },
+    {
+      "phase": "bidding",
+      "turn": 3,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": -1,
+      "trick": [],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Thinking…",
+      "at": 1792480502115
+    },
+    {
+      "phase": "bidding",
+      "turn": 0,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 3,
+      "trick": [],
+      "lock": false,
+      "statusVisible": false,
+      "statusText": "",
+      "at": 1792480503745
+    },
+    {
+      "phase": "bidding",
+      "turn": 1,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 3,
+      "trick": [],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Thinking…",
+      "at": 1792480504359
+    },
+    {
+      "phase": "bidding",
+      "turn": 2,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 3,
+      "trick": [],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Thinking…",
+      "at": 1792480505617
+    },
+    {
+      "phase": "bidding",
+      "turn": 3,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 2,
+      "trick": [],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Thinking…",
+      "at": 1792480509841
+    },
+    {
+      "phase": "bidding",
+      "turn": 2,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 3,
+      "trick": [],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Thinking…",
+      "at": 1792480511453
+    },
+    {
+      "phase": "bidding",
+      "turn": 3,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 2,
+      "trick": [],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Thinking…",
+      "at": 1792480513058
+    },
+    {
+      "phase": "bidding",
+      "turn": 2,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 3,
+      "trick": [],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Thinking…",
+      "at": 1792480515231
+    },
+    {
+      "phase": "discard",
+      "turn": 3,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 3,
+      "trick": [],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Sorting…",
+      "at": 1792480516227
+    },
+    {
+      "phase": "trump",
+      "turn": 3,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 3,
+      "trick": [],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Picking trump…",
+      "at": 1792480517626
+    },
+    {
+      "phase": "play",
+      "turn": 3,
+      "stamp": true,
+      "stampVisible": true,
+      "trump": "green",
+      "bidder": 3,
+      "trick": [],
+      "lock": true,
+      "statusVisible": false,
+      "statusText": "Picking trump…",
+      "at": 1792480519237
+    },
+    {
+      "phase": "play",
+      "turn": 3,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": "green",
+      "bidder": 3,
+      "trick": [],
+      "lock": true,
+      "statusVisible": false,
+      "statusText": "Picking trump…",
+      "at": 1792480521153
+    },
+    {
+      "phase": "play",
+      "turn": 3,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": "green",
+      "bidder": 3,
+      "trick": [],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Thinking…",
+      "at": 1792480521533
+    },
+    {
+      "phase": "play",
+      "turn": 0,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": "green",
+      "bidder": 3,
+      "trick": [
+        {
+          "player": 3,
+          "id": "green-7"
+        }
+      ],
+      "lock": false,
+      "statusVisible": false,
+      "statusText": "Thinking…",
+      "at": 1792480522686
+    },
+    {
+      "phase": "play",
+      "turn": 1,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": "green",
+      "bidder": 3,
+      "trick": [
+        {
+          "player": 3,
+          "id": "green-7"
+        },
+        {
+          "player": 0,
+          "id": "green-9"
+        }
+      ],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Thinking…",
+      "at": 1792480523117
+    },
+    {
+      "phase": "play",
+      "turn": 2,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": "green",
+      "bidder": 3,
+      "trick": [
+        {
+          "player": 3,
+          "id": "green-7"
+        },
+        {
+          "player": 0,
+          "id": "green-9"
+        },
+        {
+          "player": 1,
+          "id": "green-12"
+        }
+      ],
+      "lock": false,
+      "statusVisible": true,
+      "statusText": "Thinking…",
+      "at": 1792480524268
+    }
+  ],
+  "voices": [
+    {
+      "at": 1792480503707,
+      "id": "cloud-bid:7ZUV2SZY:1:4:3",
+      "duration": 0.5609977324263039,
+      "peak": 0.1705981194972992
+    },
+    {
+      "at": 1792480504341,
+      "id": "cloud-bid:7ZUV2SZY:1:5:0",
+      "duration": 0.5339909297052154,
+      "peak": 0.22482772171497345
+    },
+    {
+      "at": 1792480505602,
+      "id": "cloud-bid:7ZUV2SZY:1:6:1",
+      "duration": 0.75,
+      "peak": 0.3216345012187958
+    },
+    {
+      "at": 1792480509824,
+      "id": "cloud-bid:7ZUV2SZY:1:7:2",
+      "duration": 1.0589795918367346,
+      "peak": 0.2585195302963257
+    },
+    {
+      "at": 1792480511436,
+      "id": "cloud-bid:7ZUV2SZY:1:8:3",
+      "duration": 1.057936507936508,
+      "peak": 0.18772698938846588
+    },
+    {
+      "at": 1792480513044,
+      "id": "cloud-bid:7ZUV2SZY:1:9:2",
+      "duration": 1.225986394557823,
+      "peak": 0.21658581495285034
+    },
+    {
+      "at": 1792480515208,
+      "id": "cloud-bid:7ZUV2SZY:1:10:3",
+      "duration": 1.1239909297052155,
+      "peak": 0.21324945986270905
+    },
+    {
+      "at": 1792480516343,
+      "id": "cloud-bid:7ZUV2SZY:1:11:2",
+      "duration": 0.5339909297052154,
+      "peak": 0.22482772171497345
+    }
+  ],
+  "queue": {
+    "active": null,
+    "pending": [],
+    "log": [
+      {
+        "type": "start",
+        "id": "cloud-bid:7ZUV2SZY:1:4:3"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:7ZUV2SZY:1:4:3"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:7ZUV2SZY:1:5:0"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:7ZUV2SZY:1:5:0"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:7ZUV2SZY:1:6:1"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:7ZUV2SZY:1:6:1"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:7ZUV2SZY:1:7:2"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:7ZUV2SZY:1:7:2"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:7ZUV2SZY:1:8:3"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:7ZUV2SZY:1:8:3"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:7ZUV2SZY:1:9:2"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:7ZUV2SZY:1:9:2"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:7ZUV2SZY:1:10:3"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:7ZUV2SZY:1:10:3"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:7ZUV2SZY:1:11:2"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:7ZUV2SZY:1:11:2"
+      },
+      {
+        "type": "start",
+        "id": "cloud-trump:7ZUV2SZY:1:3:green"
+      },
+      {
+        "type": "end",
+        "id": "cloud-trump:7ZUV2SZY:1:3:green"
+      }
+    ]
+  },
+  "stamp": {
+    "panel": {
+      "left": 126,
+      "right": 2067,
+      "top": 244,
+      "bottom": 466
+    },
+    "plaque": {
+      "cx": 1096.5,
+      "cy": 355,
+      "width": 1000,
+      "height": 169.13946587537092
+    },
+    "tentativeTrump": "green",
+    "choiceKey": "1:3",
+    "ready": true,
+    "running": false,
+    "pending": false,
+    "accepted": "green",
+    "markColor": "green",
+    "visible": false,
+    "trace": [
+      {
+        "event": "faint-table",
+        "detail": true,
+        "t": 13274.199999999255
+      },
+      {
+        "event": "ink-mask",
+        "detail": {
+          "color": "green",
+          "pixels": 9971
+        },
+        "t": 13652.39999999851
+      },
+      {
+        "event": "ink-mask",
+        "detail": {
+          "color": "red",
+          "pixels": 9971
+        },
+        "t": 13657.199999999255
+      },
+      {
+        "event": "ink-mask",
+        "detail": {
+          "color": "yellow",
+          "pixels": 9971
+        },
+        "t": 13693
+      },
+      {
+        "event": "ink-mask",
+        "detail": {
+          "color": "black",
+          "pixels": 9971
+        },
+        "t": 13701.39999999851
+      },
+      {
+        "event": "assets",
+        "detail": true,
+        "t": 13822
+      },
+      {
+        "event": "cancel",
+        "detail": "new-ceremony",
+        "t": 50515.5
+      },
+      {
+        "event": "inked",
+        "detail": {
+          "color": "green",
+          "source": "remote-chooser",
+          "visiblePad": false
+        },
+        "t": 50912.599999997765
+      },
+      {
+        "event": "direction",
+        "detail": {
+          "chooser": 3,
+          "slotId": "slot-right",
+          "direction": "right",
+          "origin": {
+            "x": 335.885986328125,
+            "y": 411.28625
+          },
+          "destination": {
+            "x": 197.67417918753478,
+            "y": 399.22092376182525
+          },
+          "frames": [
+            {
+              "t": 0,
+              "x": 335.885986328125,
+              "y": 411.28625,
+              "h": 12,
+              "sole": 0.8,
+              "scale": 1.0067029590212082
+            },
+            {
+              "t": 0.18,
+              "x": 335.885986328125,
+              "y": 411.28625,
+              "h": 26,
+              "sole": 0.8,
+              "scale": 1.0067029590212082
+            },
+            {
+              "t": 0.25,
+              "x": 335.885986328125,
+              "y": 411.28625,
+              "h": 26,
+              "sole": 0.8,
+              "scale": 1.0067029590212082
+            },
+            {
+              "t": 0.48,
+              "x": 197.67417918753478,
+              "y": 399.22092376182525,
+              "h": 32,
+              "sole": 0.68,
+              "scale": 1
+            },
+            {
+              "t": 0.56,
+              "x": 197.67417918753478,
+              "y": 399.22092376182525,
+              "h": 0,
+              "sole": 0.48,
+              "scale": 1
+            },
+            {
+              "t": 0.63,
+              "x": 197.67417918753478,
+              "y": 399.22092376182525,
+              "h": 0,
+              "sole": 0.48,
+              "scale": 1
+            },
+            {
+              "t": 0.73,
+              "x": 197.67417918753478,
+              "y": 399.22092376182525,
+              "h": 32,
+              "sole": 0.68,
+              "scale": 1
+            },
+            {
+              "t": 0.91,
+              "x": 335.885986328125,
+              "y": 411.28625,
+              "h": 26,
+              "sole": 0.8,
+              "scale": 1.0067029590212082
+            },
+            {
+              "t": 0.98,
+              "x": 335.885986328125,
+              "y": 411.28625,
+              "h": 0,
+              "sole": 0.8,
+              "scale": 1.0067029590212082
+            },
+            {
+              "t": 1,
+              "x": 335.885986328125,
+              "y": 411.28625,
+              "h": 0,
+              "sole": 0.8,
+              "scale": 1.0067029590212082
+            }
+          ],
+          "contactAnchor": {
+            "sourceX": 621,
+            "sourceY": 975
+          },
+          "contactAt": 0.56,
+          "inkAt": 0
+        },
+        "t": 50912.599999997765
+      },
+      {
+        "event": "started",
+        "detail": {
+          "color": "green",
+          "duration": 1950
+        },
+        "t": 50913.5
+      },
+      {
+        "event": "pressed",
+        "detail": {
+          "color": "green",
+          "at": 0.5763589743585907,
+          "height": 0
+        },
+        "t": 52234.39999999851
+      },
+      {
+        "event": "cancel",
+        "detail": "complete",
+        "t": 52873.599999997765
+      },
+      {
+        "event": "complete",
+        "detail": "green",
+        "t": 52881.099999997765
+      }
+    ],
+    "pose": null,
+    "inkColor": null,
+    "maskReady": true
+  },
+  "voicesAllowed": true,
+  "botCardTimes": [
+    {
+      "player": 3,
+      "id": "green-7",
+      "at": 1792480522686
+    },
+    {
+      "player": 1,
+      "id": "green-12",
+      "at": 1792480524268
+    }
+  ],
+  "errors": []
+}
