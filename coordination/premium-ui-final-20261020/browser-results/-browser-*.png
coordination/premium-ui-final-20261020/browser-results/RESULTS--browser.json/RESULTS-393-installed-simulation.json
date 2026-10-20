@@ -1,0 +1,210 @@
+[
+  {
+    "label": "393-installed-simulation",
+    "errors": [],
+    "phases": [
+      {
+        "phase": "dealing",
+        "current": 3,
+        "mine": 0,
+        "bidder": -1,
+        "goal": "Biddingin progress",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 4
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 4
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 4
+          }
+        ],
+        "speed": [
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.734375,
+            "h": 34.390625
+          }
+        ]
+      },
+      {
+        "phase": "bidding",
+        "current": 0,
+        "mine": 0,
+        "bidder": -1,
+        "goal": "Biddingin progress",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 4
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 4
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 4
+          }
+        ],
+        "speed": [
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.734375,
+            "h": 34.390625
+          }
+        ]
+      },
+      {
+        "phase": "discard",
+        "current": 0,
+        "mine": 0,
+        "bidder": 0,
+        "goal": "Need 100to make bid",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 4
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 4
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 4
+          }
+        ],
+        "speed": [
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.734375,
+            "h": 34.390625
+          }
+        ]
+      },
+      {
+        "phase": "trump",
+        "current": 0,
+        "mine": 0,
+        "bidder": 0,
+        "goal": "Need 100to make bid",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 4
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 4
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 4
+          }
+        ],
+        "speed": [
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.734375,
+            "h": 34.390625
+          }
+        ]
+      },
+      {
+        "phase": "play",
+        "current": 0,
+        "mine": 0,
+        "bidder": 0,
+        "goal": "Need 100to make bid",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 4
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 4
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 4
+          }
+        ],
+        "speed": [
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.71875,
+            "h": 34.390625
+          },
+          {
+            "w": 41.734375,
+            "h": 34.390625
+          }
+        ]
+      }
+    ],
+    "actions": [
+      "native bid",
+      "six-card discard confirmed",
+      "trump confirmed"
+    ],
+    "passed": false,
+    "failure": "Locator.click: Timeout 7000ms exceeded.\nCall log:\n  - waiting for locator(\"#horRailFullscreenReview\")\n    - locator resolved to <button type=\"button\" title=\"Exit full screen\" id=\"horRailFullscreenReview\" aria-label=\"Exit full screen\"></button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <dialog open=\"\" id=\"confirmSheet\" aria-labelledby=\"confirmTitle\" aria-describedby=\"confirmBody\" class=\"modal leave-table-confirm\">\u2026</dialog> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <dialog open=\"\" id=\"confirmSheet\" aria-labelledby=\"confirmTitle\" aria-describedby=\"confirmBody\" class=\"modal leave-table-confirm\">\u2026</dialog> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    13 \u00d7 waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <dialog open=\"\" id=\"confirmSheet\" aria-labelledby=\"confirmTitle\" aria-describedby=\"confirmBody\" class=\"modal leave-table-confirm\">\u2026</dialog> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n"
+  }
+]

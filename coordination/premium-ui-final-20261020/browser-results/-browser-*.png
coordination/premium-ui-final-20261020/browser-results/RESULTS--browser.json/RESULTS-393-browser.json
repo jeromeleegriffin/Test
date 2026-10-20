@@ -1,0 +1,10 @@
+[
+  {
+    "label": "393-browser",
+    "errors": [],
+    "phases": [],
+    "actions": [],
+    "passed": false,
+    "failure": "Locator.click: Timeout 7000ms exceeded.\nCall log:\n  - waiting for locator(\"#scoreSpeed701 [data-score-pace=\\\"99\\\"]\")\n    - locator resolved to <button type=\"button\" data-score-pace=\"99\" aria-pressed=\"false\">MAX</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <dialog open=\"\" role=\"dialog\" aria-live=\"polite\" aria-hidden=\"false\" id=\"tutorialOverlay\" aria-label=\"House tour\" aria-labelledby=\"tutorialTitle\" class=\"tutorial-overlay tour-bounded835\">\u2026</dialog> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <dialog open=\"\" role=\"dialog\" aria-live=\"polite\" aria-hidden=\"false\" id=\"tutorialOverlay\" aria-label=\"House tour\" aria-labelledby=\"tutorialTitle\" class=\"tutorial-overlay tour-bounded835\">\u2026</dialog> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    12 \u00d7 waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <dialog open=\"\" role=\"dialog\" aria-live=\"polite\" aria-hidden=\"false\" id=\"tutorialOverlay\" aria-label=\"House tour\" aria-labelledby=\"tutorialTitle\" class=\"tutorial-overlay tour-bounded835\">\u2026</dialog> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n"
+  }
+]

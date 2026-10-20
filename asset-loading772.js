@@ -305,7 +305,8 @@
         } finally {
           replay = false;
         }
-      } catch (_) {} finally {
+      } catch (_) {
+      } finally {
         soloEntryPending = false;
       }
     },

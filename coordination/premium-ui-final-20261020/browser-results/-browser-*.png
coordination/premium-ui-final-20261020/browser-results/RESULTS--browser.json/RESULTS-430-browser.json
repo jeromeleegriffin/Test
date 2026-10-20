@@ -1,0 +1,211 @@
+[
+  {
+    "label": "430-browser",
+    "errors": [],
+    "phases": [
+      {
+        "phase": "dealing",
+        "current": 1,
+        "mine": 0,
+        "bidder": -1,
+        "goal": "Biddingin progress",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 44
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 44
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 44
+          }
+        ],
+        "speed": [
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 44,
+            "h": 33
+          }
+        ]
+      },
+      {
+        "phase": "bidding",
+        "current": 1,
+        "mine": 0,
+        "bidder": -1,
+        "goal": "Biddingin progress",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 44
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 44
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 44
+          }
+        ],
+        "speed": [
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 44,
+            "h": 33
+          }
+        ]
+      },
+      {
+        "phase": "discard",
+        "current": 0,
+        "mine": 0,
+        "bidder": 0,
+        "goal": "Need 120to make bid",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 44
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 44
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 44
+          }
+        ],
+        "speed": [
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 44,
+            "h": 33
+          }
+        ]
+      },
+      {
+        "phase": "trump",
+        "current": 0,
+        "mine": 0,
+        "bidder": 0,
+        "goal": "Need 120to make bid",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 44
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 44
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 44
+          }
+        ],
+        "speed": [
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 44,
+            "h": 33
+          }
+        ]
+      },
+      {
+        "phase": "play",
+        "current": 0,
+        "mine": 0,
+        "bidder": 0,
+        "goal": "Need 120to make bid",
+        "utility": [
+          {
+            "id": "horRailFullscreenReview",
+            "y": 44
+          },
+          {
+            "id": "btnToggleTopOpts",
+            "y": 44
+          },
+          {
+            "id": "leaveReplaceBtn",
+            "y": 44
+          }
+        ],
+        "speed": [
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 43.984375,
+            "h": 33
+          },
+          {
+            "w": 44,
+            "h": 33
+          }
+        ]
+      }
+    ],
+    "actions": [
+      "native bid",
+      "native bid",
+      "six-card discard confirmed",
+      "trump confirmed"
+    ],
+    "passed": false,
+    "failure": "Locator.click: Timeout 7000ms exceeded.\nCall log:\n  - waiting for locator(\"#horRailFullscreenReview\")\n    - locator resolved to <button type=\"button\" title=\"Full screen\" aria-label=\"Full screen\" id=\"horRailFullscreenReview\"></button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <dialog open=\"\" id=\"confirmSheet\" aria-labelledby=\"confirmTitle\" aria-describedby=\"confirmBody\" class=\"modal leave-table-confirm\">\u2026</dialog> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <dialog open=\"\" id=\"confirmSheet\" aria-labelledby=\"confirmTitle\" aria-describedby=\"confirmBody\" class=\"modal leave-table-confirm\">\u2026</dialog> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    13 \u00d7 waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <dialog open=\"\" id=\"confirmSheet\" aria-labelledby=\"confirmTitle\" aria-describedby=\"confirmBody\" class=\"modal leave-table-confirm\">\u2026</dialog> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n"
+  }
+]
