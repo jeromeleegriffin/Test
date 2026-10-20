@@ -36,7 +36,11 @@
       }
       window.HORManualFullscreen831 = fullscreen();
       clearTimeout(messageTimer);
-      if (!was) { try { screen.orientation?.unlock?.(); } catch (_) {} }
+      if (!was) {
+        try {
+          screen.orientation?.unlock?.();
+        } catch (_) {}
+      }
       paint();
     } catch (_) {
       window.HORManualFullscreen831 = fullscreen();

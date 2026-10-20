@@ -143,7 +143,15 @@
     area.dataset.holderReduced = String(reduced());
     area.dataset.holderCue = 'win';
     if (live) live.textContent = 'Trick won';
-    record('win', { key, reduced: reduced(), phase: current.phase, resolving: !!current.resolvingTrick, trickLength: current.trick?.length, winner: current.lastTrickWinner, local });
+    record('win', {
+      key,
+      reduced: reduced(),
+      phase: current.phase,
+      resolving: !!current.resolvingTrick,
+      trickLength: current.trick?.length,
+      winner: current.lastTrickWinner,
+      local,
+    });
     vibrate(reduced() ? 18 : [18, 322, 18]);
     timer = setTimeout(
       () => {
@@ -216,7 +224,13 @@
         pendingWin = key;
         shown = '';
         stopHaptic();
-        record('win-ready', { key, winner: g.lastTrickWinner, local, phase: g.phase, trickLength: g.trick.length });
+        record('win-ready', {
+          key,
+          winner: g.lastTrickWinner,
+          local,
+          phase: g.phase,
+          trickLength: g.trick.length,
+        });
         // The fourth card has resolved and its winner is already authoritative.
         // Start now, in this render frame; never wait for collection or next lead.
         launchWin(key);

@@ -1,0 +1,13 @@
+{
+  "files": [
+    "game060.js",
+    "holder-cues789.js",
+    "house-premium-ui.js",
+    "room831.js",
+    "index.html"
+  ],
+  "javascriptAstEquivalent": true,
+  "htmlInlineScriptsEquivalent": true,
+  "change": "Prettier formatting only; tested ZIP and immutable Worker native source remain exact original R5",
+  "deployed": false
+}

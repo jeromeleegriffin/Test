@@ -62,5 +62,12 @@
     "cloudSourceFiles": 154,
     "deployment": false
   },
-  "unchangedHistoricalCoverage": "Original six full native UI hands, optional rule totals and Moon from R4; R5 fullscreen phone/tablet and native hand results preserved on exact native source. Those are not newly rerun combined online variant tests."
+  "unchangedHistoricalCoverage": "Original six full native UI hands, optional rule totals and Moon from R4; R5 fullscreen phone/tablet and native hand results preserved on exact native source. Those are not newly rerun combined online variant tests.",
+  "repositoryFormattingCloseout": {
+    "files": 5,
+    "javascriptAndInlineHtmlAstEquivalent": true,
+    "htmlStructureEquivalent": true,
+    "fullNpmCheck": "PASS",
+    "testedZipAndPinnedNativeBytesUnchanged": true
+  }
 }
