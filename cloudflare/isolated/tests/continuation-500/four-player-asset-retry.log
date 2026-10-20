@@ -1,0 +1,1575 @@
+NET join 201
+NET join 201
+NET join 201
+NET start 200
+4 PHASE bidding
+4 ACTION 1 bidding 3 4
+NET bid 200
+4 ACTION 2 bidding 0 5
+NET bid 200
+4 ACTION 3 bidding 1 6
+NET bid 200
+4 ACTION 4 bidding 2 7
+NET bid 200
+4 PHASE discard
+4 ACTION 5 discard 3 8
+NET discard 200
+4 PHASE trump
+4 ACTION 6 trump 3 9
+NET trump 200
+4 PHASE play
+4 ACTION 7 play 3 10
+NET play 200
+4 ACTION 8 play 0 11
+NET play 200
+4 ACTION 9 play 1 12
+NET play 200
+4 ACTION 10 play 2 13
+NET play 200
+4 ACTION 11 play 1 14
+NET play 200
+4 ACTION 12 play 2 15
+NET play 200
+4 ACTION 13 play 3 16
+NET play 200
+4 ACTION 14 play 0 17
+NET play 200
+4 ACTION 15 play 0 18
+NET play 200
+4 ACTION 16 play 1 19
+NET play 200
+4 ACTION 17 play 2 20
+NET play 200
+4 ACTION 18 play 3 21
+NET play 200
+4 ACTION 19 play 0 22
+NET play 200
+4 ACTION 20 play 1 23
+NET play 200
+4 ACTION 21 play 2 24
+NET play 200
+4 ACTION 22 play 3 25
+NET play 200
+4 ACTION 23 play 0 26
+NET play 200
+4 ACTION 24 play 1 27
+NET play 200
+4 ACTION 25 play 2 28
+NET play 200
+4 ACTION 26 play 3 29
+NET play 200
+4 ACTION 27 play 0 30
+NET play 200
+4 ACTION 28 play 1 31
+NET play 200
+4 ACTION 29 play 2 32
+NET play 200
+4 ACTION 30 play 3 33
+NET play 200
+4 ACTION 31 play 3 34
+NET play 200
+4 ACTION 32 play 0 35
+NET play 200
+4 ACTION 33 play 1 36
+NET play 200
+4 ACTION 34 play 2 37
+NET play 200
+4 ACTION 35 play 2 38
+NET play 200
+4 ACTION 36 play 3 39
+NET play 200
+4 ACTION 37 play 0 40
+NET play 200
+4 ACTION 38 play 1 41
+NET play 200
+4 ACTION 39 play 2 42
+NET play 200
+4 ACTION 40 play 3 43
+NET play 200
+4 ACTION 41 play 0 44
+NET play 200
+4 ACTION 42 play 1 45
+NET play 200
+4 ACTION 43 play 2 46
+NET play 200
+4 ACTION 44 play 3 47
+NET play 200
+4 ACTION 45 play 0 48
+NET play 200
+4 ACTION 46 play 1 49
+NET play 200
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/avatar-raven-approved.jpg 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/avatar-raven-approved.jpg 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/griffin-icon.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/avatar-raven-approved.jpg 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/avatar-raven-approved.jpg 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/avatar-raven-approved.jpg 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/griffin-icon.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/avatar-raven-approved.jpg 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 2 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/Red2Premium.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-14.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-10.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/avatar-raven-approved.jpg fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/avatar-raven-approved.jpg fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/avatar-raven-approved.jpg fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-6.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-11.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-14.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-10.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-14.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-11.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-12.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/griffin-icon.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-6.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-12.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/Red2Premium.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-10.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/Red2Premium.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-11.png fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 2 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-6.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-12.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/Red2Premium.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-14.png fetch failed
+4 PHASE score
+4 ACTION 47 score 0 50
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 1 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-11.png fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 1 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-12.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/Red2Premium.png fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 1 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-10.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-14.png fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 2 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-6.png fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 2 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-6.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/Red2Premium.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-11.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-12.png fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-14.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-11.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-12.png 2 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/Red2Premium.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-12.png fetch failed
+NET next-hand 200
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hw30/hw30_Trumps_Red.mp3 1 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Black.mp3 1 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Green.mp3 1 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Red.mp3 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-8.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-1.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-14.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-11.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-9.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-5.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Yellow.mp3 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-13.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-12.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-9.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-5.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Black.mp3 1 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Green.mp3 1 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Red.mp3 1 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Yellow.mp3 1 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Black.mp3 2 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Green.mp3 2 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Red.mp3 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-8.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-10.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-7.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-8.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/RookPremium.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-8.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-14.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-10.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-7.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-14.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-9.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-6.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-1.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-14.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-11.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-9.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-5.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Yellow.mp3 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-13.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-12.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-9.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-5.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Black.mp3 2 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Green.mp3 2 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Red.mp3 2 fetch failed
+ASSET_RETRY /cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Yellow.mp3 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-6.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-1.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-7.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-13.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-10.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-11.png 1 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Black.mp3 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Green.mp3 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Red.mp3 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-8.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-10.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-7.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-8.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/RookPremium.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-10.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-8.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-6.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-10.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-14.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-9.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-6.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-8.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-1.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-12.png 1 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-1.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-14.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-11.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-9.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-5.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/voices/full-cast/hw03/hw03_Trumps_Yellow.mp3 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-13.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-12.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/yellow-9.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/yellow-5.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Black.mp3 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Green.mp3 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Red.mp3 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/voices/full-cast/hm10/hm10_Trumps_Yellow.mp3 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-6.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-1.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/green-7.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-13.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-10.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-11.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-7.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-14.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-7.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-12.png 1 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-1.png 1 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/black-10.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/black-7.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/black-8.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/images/RookPremium.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-10.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-8.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-6.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/yellow-10.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/black-14.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/black-9.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-6.png fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-8.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-1.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-12.png 2 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/green-7.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-13.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-10.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/yellow-11.png fetch failed
+ASSET_RETRY /cloud-game/assets/assets/images/Red2Premium.png 2 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/yellow-7.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/yellow-14.png fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/red-7.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/black-12.png 2 fetch failed
+ASSET_RETRY /cloud-game/assets/assets/cards/numbered/yellow-1.png 2 fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/black-1.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/black-12.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/yellow-1.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/yellow-12.png fetch failed
+verified transport fetch failed https://griffin-room-846-private-20261020.jeromeleegriffin.workers.dev/cloud-game/assets/assets/cards/numbered/red-7.png fetch failed
+4 ACTION 48 bidding 2 51
+NET bid 200
+4 ACTION 49 bidding 3 52
+NET bid 200
+4 ACTION 50 bidding 0 53
+NET bid 200
+4 ACTION 51 bidding 1 54
+NET bid 200
+4 ACTION 52 discard 2 55
+NET discard 200
+4 ACTION 53 trump 2 56
+NET trump 200
+4 ACTION 54 play 2 57
+NET play 200
+4 ACTION 55 play 3 58
+NET play 200
+4 ACTION 56 play 0 59
+NET play 200
+4 ACTION 57 play 1 60
+NET play 200
+4 ACTION 58 play 1 61
+NET play 200
+4 ACTION 59 play 2 62
+NET play 200
+4 ACTION 60 play 3 63
+NET play 200
+NET play 200
+4 ACTION 61 play 0 64
+4 ACTION 62 play 3 65
+NET play 200
+4 ACTION 63 play 0 66
+NET play 200
+4 ACTION 64 play 1 67
+NET play 200
+4 ACTION 65 play 2 68
+NET play 200
+4 ACTION 66 play 1 69
+NET play 200
+4 ACTION 67 play 2 70
+NET play 200
+4 ACTION 68 play 3 71
+NET play 200
+4 ACTION 69 play 0 72
+NET play 200
+4 ACTION 70 play 1 73
+NET play 200
+4 ACTION 71 play 2 74
+NET play 200
+4 ACTION 72 play 3 75
+NET play 200
+4 ACTION 73 play 0 76
+NET play 200
+4 ACTION 74 play 1 77
+NET play 200
+4 ACTION 75 play 2 78
+NET play 200
+4 ACTION 76 play 3 79
+NET play 200
+4 ACTION 77 play 0 80
+NET play 200
+4 ACTION 78 play 1 81
+NET play 200
+4 ACTION 79 play 2 82
+NET play 200
+4 ACTION 80 play 3 83
+NET play 200
+4 ACTION 81 play 0 84
+NET play 200
+4 ACTION 82 play 0 85
+NET play 200
+4 ACTION 83 play 1 86
+NET play 200
+4 ACTION 84 play 2 87
+NET play 200
+4 ACTION 85 play 3 88
+NET play 200
+4 ACTION 86 play 2 89
+NET play 200
+4 ACTION 87 play 3 90
+NET play 200
+4 ACTION 88 play 0 91
+NET play 200
+4 ACTION 89 play 1 92
+NET play 200
+4 ACTION 90 play 2 93
+NET play 200
+4 ACTION 91 play 3 94
+NET play 200
+4 ACTION 92 play 0 95
+NET play 200
+4 ACTION 93 play 1 96
+NET play 200
+4 ACTION 94 score 2 97
+NET next-hand 200
+4 ACTION 95 bidding 1 98
+NET bid 200
+4 ACTION 96 bidding 2 99
+NET bid 200
+4 ACTION 97 bidding 3 100
+NET bid 200
+4 ACTION 98 bidding 0 101
+NET bid 200
+4 ACTION 99 discard 1 102
+NET discard 200
+4 ACTION 100 trump 1 103
+NET trump 200
+4 ACTION 101 play 1 104
+NET play 200
+4 ACTION 102 play 2 105
+NET play 200
+4 ACTION 103 play 3 106
+NET play 200
+4 ACTION 104 play 0 107
+NET play 200
+4 ACTION 105 play 2 108
+NET play 200
+4 ACTION 106 play 3 109
+NET play 200
+4 ACTION 107 play 0 110
+NET play 200
+4 ACTION 108 play 1 111
+NET play 200
+4 ACTION 109 play 2 112
+NET play 200
+4 ACTION 110 play 3 113
+NET play 200
+4 ACTION 111 play 0 114
+NET play 200
+4 ACTION 112 play 1 115
+NET play 200
+4 ACTION 113 play 3 116
+NET play 200
+4 ACTION 114 play 0 117
+NET play 200
+4 ACTION 115 play 1 118
+NET play 200
+4 ACTION 116 play 2 119
+NET play 200
+4 ACTION 117 play 3 120
+NET play 200
+4 ACTION 118 play 0 121
+NET play 200
+4 ACTION 119 play 1 122
+NET play 200
+4 ACTION 120 play 2 123
+NET play 200
+4 ACTION 121 play 3 124
+NET play 200
+4 ACTION 122 play 0 125
+NET play 200
+4 ACTION 123 play 1 126
+NET play 200
+4 ACTION 124 play 2 127
+NET play 200
+4 ACTION 125 play 3 128
+NET play 200
+4 ACTION 126 play 0 129
+NET play 200
+4 ACTION 127 play 1 130
+NET play 200
+4 ACTION 128 play 2 131
+NET play 200
+4 ACTION 129 play 0 132
+NET play 200
+4 ACTION 130 play 1 133
+NET play 200
+4 ACTION 131 play 2 134
+NET play 200
+4 ACTION 132 play 3 135
+NET play 200
+4 ACTION 133 play 0 136
+NET play 200
+4 ACTION 134 play 1 137
+NET play 200
+4 ACTION 135 play 2 138
+NET play 200
+4 ACTION 136 play 3 139
+NET play 200
+4 ACTION 137 play 0 140
+NET play 200
+4 ACTION 138 play 1 141
+NET play 200
+4 ACTION 139 play 2 142
+NET play 200
+4 ACTION 140 play 3 143
+NET play 200
+4 ACTION 141 score 2 144
+NET next-hand 200
+4 ACTION 142 bidding 0 145
+NET bid 200
+4 ACTION 143 bidding 1 146
+NET bid 200
+4 ACTION 144 bidding 2 147
+NET bid 200
+4 ACTION 145 bidding 3 148
+NET bid 200
+4 ACTION 146 discard 0 149
+NET discard 200
+4 ACTION 147 trump 0 150
+NET trump 200
+4 ACTION 148 play 0 151
+NET play 200
+4 ACTION 149 play 1 152
+NET play 200
+4 ACTION 150 play 2 153
+NET play 200
+4 ACTION 151 play 3 154
+NET play 200
+4 ACTION 152 play 1 155
+NET play 200
+4 ACTION 153 play 2 156
+NET play 200
+4 ACTION 154 play 3 157
+NET play 200
+4 ACTION 155 play 0 158
+NET play 200
+4 ACTION 156 play 1 159
+NET play 200
+4 ACTION 157 play 2 160
+NET play 200
+4 ACTION 158 play 3 161
+NET play 200
+4 ACTION 159 play 0 162
+NET play 200
+4 ACTION 160 play 1 163
+NET play 200
+4 ACTION 161 play 2 164
+NET play 200
+4 ACTION 162 play 3 165
+NET play 200
+4 ACTION 163 play 0 166
+NET play 200
+4 ACTION 164 play 1 167
+NET play 200
+4 ACTION 165 play 2 168
+NET play 200
+4 ACTION 166 play 3 169
+NET play 200
+4 ACTION 167 play 0 170
+NET play 200
+4 ACTION 168 play 1 171
+NET play 200
+4 ACTION 169 play 2 172
+NET play 200
+4 ACTION 170 play 3 173
+NET play 200
+4 ACTION 171 play 0 174
+NET play 200
+4 ACTION 172 play 1 175
+NET play 200
+4 ACTION 173 play 2 176
+NET play 200
+4 ACTION 174 play 3 177
+NET play 200
+4 ACTION 175 play 0 178
+NET play 200
+4 ACTION 176 play 1 179
+NET play 200
+4 ACTION 177 play 2 180
+NET play 200
+4 ACTION 178 play 3 181
+NET play 200
+4 ACTION 179 play 0 182
+NET play 200
+4 ACTION 180 play 1 183
+NET play 200
+4 ACTION 181 play 2 184
+NET play 200
+4 ACTION 182 play 3 185
+NET play 200
+4 ACTION 183 play 0 186
+NET play 200
+4 ACTION 184 play 1 187
+NET play 200
+4 ACTION 185 play 2 188
+NET play 200
+4 ACTION 186 play 3 189
+NET play 200
+4 ACTION 187 play 0 190
+NET play 200
+4 ACTION 188 score 1 191
+NET next-hand 200
+4 ACTION 189 bidding 3 192
+NET bid 200
+4 ACTION 190 bidding 0 193
+NET bid 200
+4 ACTION 191 bidding 1 194
+NET bid 200
+4 ACTION 192 bidding 2 195
+NET bid 200
+4 ACTION 193 discard 3 196
+NET discard 200
+4 ACTION 194 trump 3 197
+NET trump 200
+4 ACTION 195 play 3 198
+NET play 200
+4 ACTION 196 play 0 199
+NET play 200
+4 ACTION 197 play 1 200
+NET play 200
+4 ACTION 198 play 2 201
+NET play 200
+4 ACTION 199 play 0 202
+NET play 200
+4 ACTION 200 play 1 203
+NET play 200
+4 ACTION 201 play 2 204
+NET play 200
+4 ACTION 202 play 3 205
+NET play 200
+4 ACTION 203 play 0 206
+NET play 200
+4 ACTION 204 play 1 207
+NET play 200
+4 ACTION 205 play 2 208
+NET play 200
+4 ACTION 206 play 3 209
+NET play 200
+4 ACTION 207 play 0 210
+NET play 200
+4 ACTION 208 play 1 211
+NET play 200
+4 ACTION 209 play 2 212
+NET play 200
+4 ACTION 210 play 3 213
+NET play 200
+4 ACTION 211 play 0 214
+NET play 200
+4 ACTION 212 play 1 215
+NET play 200
+4 ACTION 213 play 2 216
+NET play 200
+4 ACTION 214 play 3 217
+NET play 200
+4 ACTION 215 play 0 218
+NET play 200
+4 ACTION 216 play 1 219
+NET play 200
+4 ACTION 217 play 2 220
+NET play 200
+4 ACTION 218 play 3 221
+NET play 200
+4 ACTION 219 play 0 222
+NET play 200
+4 ACTION 220 play 1 223
+NET play 200
+4 ACTION 221 play 2 224
+NET play 200
+4 ACTION 222 play 3 225
+NET play 200
+4 ACTION 223 play 2 226
+NET play 200
+4 ACTION 224 play 3 227
+NET play 200
+4 ACTION 225 play 0 228
+NET play 200
+4 ACTION 226 play 1 229
+NET play 200
+4 ACTION 227 play 2 230
+NET play 200
+4 ACTION 228 play 3 231
+NET play 200
+4 ACTION 229 play 0 232
+NET play 200
+4 ACTION 230 play 1 233
+NET play 200
+4 ACTION 231 play 0 234
+NET play 200
+4 ACTION 232 play 1 235
+NET play 200
+4 ACTION 233 play 2 236
+NET play 200
+4 ACTION 234 play 3 237
+NET play 200
+4 ACTION 235 score 0 238
+NET next-hand 200
+4 ACTION 236 bidding 2 239
+NET bid 200
+4 ACTION 237 bidding 3 240
+NET bid 200
+4 ACTION 238 bidding 0 241
+NET bid 200
+4 ACTION 239 bidding 1 242
+NET bid 200
+4 ACTION 240 discard 2 243
+NET discard 200
+4 ACTION 241 trump 2 244
+NET trump 200
+4 ACTION 242 play 2 245
+NET play 200
+4 ACTION 243 play 3 246
+NET play 200
+4 ACTION 244 play 0 247
+NET play 200
+4 ACTION 245 play 1 248
+NET play 200
+4 ACTION 246 play 1 249
+NET play 200
+4 ACTION 247 play 2 250
+NET play 200
+4 ACTION 248 play 3 251
+NET play 200
+4 ACTION 249 play 0 252
+NET play 200
+4 ACTION 250 play 3 253
+NET play 200
+4 ACTION 251 play 0 254
+NET play 200
+4 ACTION 252 play 1 255
+NET play 200
+4 ACTION 253 play 2 256
+NET play 200
+4 ACTION 254 play 3 257
+NET play 200
+4 ACTION 255 play 0 258
+NET play 200
+4 ACTION 256 play 1 259
+NET play 200
+4 ACTION 257 play 2 260
+NET play 200
+4 ACTION 258 play 1 261
+NET play 200
+4 ACTION 259 play 2 262
+NET play 200
+4 ACTION 260 play 3 263
+NET play 200
+4 ACTION 261 play 0 264
+NET play 200
+4 ACTION 262 play 3 265
+NET play 200
+4 ACTION 263 play 0 266
+NET play 200
+4 ACTION 264 play 1 267
+NET play 200
+4 ACTION 265 play 2 268
+NET play 200
+4 ACTION 266 play 3 269
+NET play 200
+4 ACTION 267 play 0 270
+NET play 200
+4 ACTION 268 play 1 271
+NET play 200
+4 ACTION 269 play 2 272
+NET play 200
+4 ACTION 270 play 3 273
+NET play 200
+4 ACTION 271 play 0 274
+NET play 200
+4 ACTION 272 play 1 275
+NET play 200
+4 ACTION 273 play 2 276
+NET play 200
+4 ACTION 274 play 3 277
+NET play 200
+4 ACTION 275 play 0 278
+NET play 200
+4 ACTION 276 play 1 279
+NET play 200
+4 ACTION 277 play 2 280
+NET play 200
+4 ACTION 278 play 0 281
+NET play 200
+4 ACTION 279 play 1 282
+NET play 200
+4 ACTION 280 play 2 283
+NET play 200
+4 ACTION 281 play 3 284
+NET play 200
+4 ACTION 282 score 2 285
+NET next-hand 200
+4 ACTION 283 bidding 1 286
+NET bid 200
+4 ACTION 284 bidding 2 287
+NET bid 200
+4 ACTION 285 bidding 3 288
+NET bid 200
+4 ACTION 286 bidding 0 289
+NET bid 200
+4 ACTION 287 discard 1 290
+NET discard 200
+4 ACTION 288 trump 1 291
+NET trump 200
+4 ACTION 289 play 1 292
+NET play 200
+4 ACTION 290 play 2 293
+NET play 200
+4 ACTION 291 play 3 294
+NET play 200
+4 ACTION 292 play 0 295
+NET play 200
+4 ACTION 293 play 2 296
+NET play 200
+4 ACTION 294 play 3 297
+NET play 200
+4 ACTION 295 play 0 298
+NET play 200
+4 ACTION 296 play 1 299
+NET play 200
+4 ACTION 297 play 3 300
+NET play 200
+4 ACTION 298 play 0 301
+NET play 200
+4 ACTION 299 play 1 302
+NET play 200
+4 ACTION 300 play 2 303
+NET play 200
+4 ACTION 301 play 3 304
+NET play 200
+4 ACTION 302 play 0 305
+NET play 200
+4 ACTION 303 play 1 306
+NET play 200
+4 ACTION 304 play 2 307
+NET play 200
+4 ACTION 305 play 3 308
+NET play 200
+4 ACTION 306 play 0 309
+NET play 200
+4 ACTION 307 play 1 310
+NET play 200
+4 ACTION 308 play 2 311
+NET play 200
+4 ACTION 309 play 2 312
+NET play 200
+4 ACTION 310 play 3 313
+NET play 200
+4 ACTION 311 play 0 314
+NET play 200
+4 ACTION 312 play 1 315
+NET play 200
+4 ACTION 313 play 3 316
+NET play 200
+4 ACTION 314 play 0 317
+NET play 200
+4 ACTION 315 play 1 318
+NET play 200
+4 ACTION 316 play 2 319
+NET play 200
+4 ACTION 317 play 2 320
+NET play 200
+4 ACTION 318 play 3 321
+NET play 200
+4 ACTION 319 play 0 322
+NET play 200
+4 ACTION 320 play 1 323
+NET play 200
+4 ACTION 321 play 2 324
+NET decline-claim 200
+4 ACTION 322 play 2 325
+NET play 200
+4 ACTION 323 play 3 326
+NET play 200
+4 ACTION 324 play 0 327
+NET play 200
+4 ACTION 325 play 1 328
+NET play 200
+4 ACTION 326 play 2 329
+NET play 200
+4 ACTION 327 play 3 330
+NET play 200
+4 ACTION 328 play 0 331
+NET play 200
+4 ACTION 329 play 1 332
+NET play 200
+4 ACTION 330 score 2 333
+NET next-hand 200
+4 ACTION 331 bidding 0 334
+NET bid 200
+4 ACTION 332 bidding 1 335
+NET bid 200
+4 ACTION 333 bidding 2 336
+NET bid 200
+4 ACTION 334 bidding 3 337
+NET bid 200
+4 ACTION 335 discard 0 338
+NET discard 200
+4 ACTION 336 trump 0 339
+NET trump 200
+4 ACTION 337 play 0 340
+NET play 200
+4 ACTION 338 play 1 341
+NET play 200
+4 ACTION 339 play 2 342
+NET play 200
+4 ACTION 340 play 3 343
+NET play 200
+4 ACTION 341 play 1 344
+NET play 200
+4 ACTION 342 play 2 345
+NET play 200
+4 ACTION 343 play 3 346
+NET play 200
+4 ACTION 344 play 0 347
+NET play 200
+4 ACTION 345 play 3 348
+NET play 200
+4 ACTION 346 play 0 349
+NET play 200
+4 ACTION 347 play 1 350
+NET play 200
+4 ACTION 348 play 2 351
+NET play 200
+4 ACTION 349 play 3 352
+NET play 200
+4 ACTION 350 play 0 353
+NET play 200
+4 ACTION 351 play 1 354
+NET play 200
+4 ACTION 352 play 2 355
+NET play 200
+4 ACTION 353 play 3 356
+NET play 200
+4 ACTION 354 play 0 357
+NET play 200
+4 ACTION 355 play 1 358
+NET play 200
+4 ACTION 356 play 2 359
+NET play 200
+4 ACTION 357 play 3 360
+NET play 200
+4 ACTION 358 play 0 361
+NET play 200
+4 ACTION 359 play 1 362
+NET play 200
+4 ACTION 360 play 2 363
+NET play 200
+4 ACTION 361 play 3 364
+NET play 200
+4 ACTION 362 play 0 365
+NET play 200
+4 ACTION 363 play 1 366
+NET play 200
+4 ACTION 364 play 2 367
+NET play 200
+4 ACTION 365 play 3 368
+NET play 200
+4 ACTION 366 play 0 369
+NET play 200
+4 ACTION 367 play 1 370
+NET play 200
+4 ACTION 368 play 2 371
+NET play 200
+4 ACTION 369 play 3 372
+NET play 200
+4 ACTION 370 play 0 373
+NET play 200
+4 ACTION 371 play 1 374
+NET play 200
+4 ACTION 372 play 2 375
+NET play 200
+4 ACTION 373 play 0 376
+NET play 200
+4 ACTION 374 play 1 377
+NET play 200
+4 ACTION 375 play 2 378
+NET play 200
+4 ACTION 376 play 3 379
+NET play 200
+4 ACTION 377 score 0 380
+NET next-hand 200
+4 ACTION 378 bidding 3 381
+NET bid 200
+4 ACTION 379 bidding 0 382
+NET bid 200
+4 ACTION 380 bidding 1 383
+NET bid 200
+4 ACTION 381 bidding 2 384
+NET bid 200
+4 ACTION 382 discard 3 385
+NET discard 200
+4 ACTION 383 trump 3 386
+NET trump 200
+4 ACTION 384 play 3 387
+NET play 200
+4 ACTION 385 play 0 388
+NET play 200
+4 ACTION 386 play 1 389
+NET play 200
+4 ACTION 387 play 2 390
+NET play 200
+4 ACTION 388 play 2 391
+NET play 200
+4 ACTION 389 play 3 392
+NET play 200
+4 ACTION 390 play 0 393
+NET play 200
+4 ACTION 391 play 1 394
+NET play 200
+4 ACTION 392 play 1 395
+NET play 200
+4 ACTION 393 play 2 396
+NET play 200
+4 ACTION 394 play 3 397
+NET play 200
+4 ACTION 395 play 0 398
+NET play 200
+4 ACTION 396 play 1 399
+NET play 200
+4 ACTION 397 play 2 400
+NET play 200
+4 ACTION 398 play 3 401
+NET play 200
+4 ACTION 399 play 0 402
+NET play 200
+4 ACTION 400 play 1 403
+NET play 200
+4 ACTION 401 play 2 404
+NET play 200
+4 ACTION 402 play 3 405
+NET play 200
+4 ACTION 403 play 0 406
+NET play 200
+4 ACTION 404 play 1 407
+NET play 200
+4 ACTION 405 play 2 408
+NET play 200
+4 ACTION 406 play 3 409
+NET play 200
+4 ACTION 407 play 0 410
+NET play 200
+4 ACTION 408 play 1 411
+NET play 200
+4 ACTION 409 play 2 412
+NET play 200
+4 ACTION 410 play 3 413
+NET play 200
+4 ACTION 411 play 0 414
+NET play 200
+4 ACTION 412 play 3 415
+NET play 200
+4 ACTION 413 play 0 416
+NET play 200
+4 ACTION 414 play 1 417
+NET play 200
+4 ACTION 415 play 2 418
+NET play 200
+4 ACTION 416 play 3 419
+NET play 200
+4 ACTION 417 play 0 420
+NET play 200
+4 ACTION 418 play 1 421
+NET play 200
+4 ACTION 419 play 2 422
+NET play 200
+4 ACTION 420 play 3 423
+NET play 200
+4 ACTION 421 play 0 424
+NET play 200
+4 ACTION 422 play 1 425
+NET play 200
+4 ACTION 423 play 2 426
+NET play 200
+4 ACTION 424 score 0 427
+NET next-hand 200
+4 ACTION 425 bidding 2 428
+NET bid 200
+4 ACTION 426 bidding 3 429
+NET bid 200
+4 ACTION 427 bidding 0 430
+NET bid 200
+4 ACTION 428 bidding 1 431
+NET bid 200
+4 ACTION 429 discard 2 432
+NET discard 200
+4 ACTION 430 trump 2 433
+NET trump 200
+4 ACTION 431 play 2 434
+NET play 200
+4 ACTION 432 play 3 435
+NET play 200
+4 ACTION 433 play 0 436
+NET play 200
+4 ACTION 434 play 1 437
+NET play 200
+4 ACTION 435 play 1 438
+NET play 200
+4 ACTION 436 play 2 439
+NET play 200
+4 ACTION 437 play 3 440
+NET play 200
+4 ACTION 438 play 0 441
+NET play 200
+4 ACTION 439 play 1 442
+NET play 200
+4 ACTION 440 play 2 443
+NET play 200
+4 ACTION 441 play 3 444
+NET play 200
+4 ACTION 442 play 0 445
+NET play 200
+4 ACTION 443 play 1 446
+NET play 200
+4 ACTION 444 play 2 447
+NET play 200
+4 ACTION 445 play 3 448
+NET play 200
+4 ACTION 446 play 0 449
+NET play 200
+4 ACTION 447 play 1 450
+NET play 200
+4 ACTION 448 play 2 451
+NET play 200
+4 ACTION 449 play 3 452
+NET play 200
+4 ACTION 450 play 0 453
+NET play 200
+4 ACTION 451 play 1 454
+NET play 200
+4 ACTION 452 play 2 455
+NET play 200
+4 ACTION 453 play 3 456
+NET play 200
+4 ACTION 454 play 0 457
+NET play 200
+4 ACTION 455 play 1 458
+NET play 200
+4 ACTION 456 play 2 459
+NET play 200
+4 ACTION 457 play 3 460
+NET play 200
+4 ACTION 458 play 0 461
+NET play 200
+4 ACTION 459 play 3 462
+NET decline-claim 200
+4 ACTION 460 play 3 463
+NET play 200
+4 ACTION 461 play 0 464
+NET play 200
+4 ACTION 462 play 1 465
+NET play 200
+4 ACTION 463 play 2 466
+NET play 200
+4 ACTION 464 play 3 467
+NET play 200
+4 ACTION 465 play 0 468
+NET play 200
+4 ACTION 466 play 1 469
+NET play 200
+4 ACTION 467 play 2 470
+NET play 200
+4 ACTION 468 play 3 471
+NET play 200
+4 ACTION 469 play 0 472
+NET play 200
+4 ACTION 470 play 1 473
+NET play 200
+4 ACTION 471 play 2 474
+NET play 200
+4 ACTION 472 score 3 475
+NET next-hand 200
+4 ACTION 473 bidding 1 476
+NET bid 200
+4 ACTION 474 bidding 2 477
+NET bid 200
+4 ACTION 475 bidding 3 478
+NET bid 200
+4 ACTION 476 bidding 0 479
+NET bid 200
+4 ACTION 477 discard 1 480
+NET discard 200
+4 ACTION 478 trump 1 481
+NET trump 200
+4 ACTION 479 play 1 482
+NET play 200
+4 ACTION 480 play 2 483
+NET play 200
+4 ACTION 481 play 3 484
+NET play 200
+4 ACTION 482 play 0 485
+NET play 200
+4 ACTION 483 play 0 486
+NET play 200
+4 ACTION 484 play 1 487
+NET play 200
+4 ACTION 485 play 2 488
+NET play 200
+4 ACTION 486 play 3 489
+NET play 200
+4 ACTION 487 play 3 490
+NET play 200
+4 ACTION 488 play 0 491
+NET play 200
+4 ACTION 489 play 1 492
+NET play 200
+4 ACTION 490 play 2 493
+NET play 200
+4 ACTION 491 play 3 494
+NET play 200
+4 ACTION 492 play 0 495
+NET play 200
+4 ACTION 493 play 1 496
+NET play 200
+4 ACTION 494 play 2 497
+NET play 200
+4 ACTION 495 play 3 498
+NET play 200
+4 ACTION 496 play 0 499
+NET play 200
+4 ACTION 497 play 1 500
+NET play 200
+4 ACTION 498 play 2 501
+NET play 200
+4 ACTION 499 play 3 502
+NET play 200
+4 ACTION 500 play 0 503
+NET play 200
+4 ACTION 501 play 1 504
+NET play 200
+4 ACTION 502 play 2 505
+NET play 200
+4 ACTION 503 play 3 506
+NET play 200
+4 ACTION 504 play 0 507
+NET play 200
+4 ACTION 505 play 1 508
+NET play 200
+4 ACTION 506 play 2 509
+NET play 200
+4 ACTION 507 play 3 510
+NET play 200
+4 ACTION 508 play 0 511
+NET play 200
+4 ACTION 509 play 1 512
+NET play 200
+4 ACTION 510 play 2 513
+NET play 200
+4 ACTION 511 play 1 514
+NET decline-claim 200
+4 ACTION 512 play 1 515
+NET play 200
+4 ACTION 513 play 2 516
+NET play 200
+4 ACTION 514 play 3 517
+NET play 200
+4 ACTION 515 play 0 518
+NET play 200
+4 ACTION 516 play 1 519
+NET play 200
+4 ACTION 517 play 2 520
+NET play 200
+4 ACTION 518 play 3 521
+NET play 200
+4 ACTION 519 play 0 522
+NET play 200
+4 ACTION 520 score 1 523
+NET next-hand 200
+4 ACTION 521 bidding 0 524
+NET bid 200
+4 ACTION 522 bidding 1 525
+NET bid 200
+4 ACTION 523 bidding 2 526
+NET bid 200
+4 ACTION 524 bidding 3 527
+NET bid 200
+4 ACTION 525 discard 0 528
+NET discard 200
+4 ACTION 526 trump 0 529
+NET trump 200
+4 ACTION 527 play 0 530
+NET play 200
+4 ACTION 528 play 1 531
+NET play 200
+4 ACTION 529 play 2 532
+NET play 200
+4 ACTION 530 play 3 533
+NET play 200
+4 ACTION 531 play 3 534
+NET play 200
+4 ACTION 532 play 0 535
+NET play 200
+4 ACTION 533 play 1 536
+NET play 200
+4 ACTION 534 play 2 537
+NET play 200
+4 ACTION 535 play 2 538
+NET play 200
+4 ACTION 536 play 3 539
+NET play 200
+4 ACTION 537 play 0 540
+NET play 200
+4 ACTION 538 play 1 541
+NET play 200
+4 ACTION 539 play 3 542
+NET play 200
+4 ACTION 540 play 0 543
+NET play 200
+4 ACTION 541 play 1 544
+NET play 200
+4 ACTION 542 play 2 545
+NET play 200
+4 ACTION 543 play 3 546
+NET play 200
+4 ACTION 544 play 0 547
+NET play 200
+4 ACTION 545 play 1 548
+NET play 200
+4 ACTION 546 play 2 549
+NET play 200
+4 ACTION 547 play 3 550
+NET play 200
+4 ACTION 548 play 0 551
+NET play 200
+4 ACTION 549 play 1 552
+NET play 200
+4 ACTION 550 play 2 553
+NET play 200
+4 ACTION 551 play 3 554
+NET play 200
+4 ACTION 552 play 0 555
+NET play 200
+4 ACTION 553 play 1 556
+NET play 200
+4 ACTION 554 play 2 557
+NET play 200
+4 ACTION 555 play 0 558
+NET play 200
+4 ACTION 556 play 1 559
+NET play 200
+4 ACTION 557 play 2 560
+NET play 200
+4 ACTION 558 play 3 561
+NET play 200
+4 ACTION 559 play 3 562
+NET play 200
+4 ACTION 560 play 0 563
+NET play 200
+4 ACTION 561 play 1 564
+NET play 200
+4 ACTION 562 play 2 565
+NET play 200
+4 ACTION 563 play 3 566
+NET play 200
+4 ACTION 564 play 0 567
+NET play 200
+4 ACTION 565 play 1 568
+NET play 200
+4 ACTION 566 play 2 569
+NET play 200
+4 ACTION 567 score 3 570
+NET next-hand 200
+4 ACTION 568 bidding 3 571
+NET bid 200
+4 ACTION 569 bidding 0 572
+NET bid 200
+4 ACTION 570 bidding 1 573
+NET bid 200
+4 ACTION 571 bidding 2 574
+NET bid 200
+4 ACTION 572 discard 3 575
+NET discard 200
+4 ACTION 573 trump 3 576
+NET trump 200
+4 ACTION 574 play 3 577
+NET play 200
+4 ACTION 575 play 0 578
+NET play 200
+4 ACTION 576 play 1 579
+NET play 200
+4 ACTION 577 play 2 580
+NET play 200
+4 ACTION 578 play 1 581
+NET play 200
+4 ACTION 579 play 2 582
+NET play 200
+4 ACTION 580 play 3 583
+NET play 200
+4 ACTION 581 play 0 584
+NET play 200
+4 ACTION 582 play 0 585
+NET play 200
+4 ACTION 583 play 1 586
+NET play 200
+4 ACTION 584 play 2 587
+NET play 200
+4 ACTION 585 play 3 588
+NET play 200
+4 ACTION 586 play 0 589
+NET play 200
+4 ACTION 587 play 1 590
+NET play 200
+4 ACTION 588 play 2 591
+NET play 200
+4 ACTION 589 play 3 592
+NET play 200
+4 ACTION 590 play 0 593
+NET play 200
+4 ACTION 591 play 1 594
+NET play 200
+4 ACTION 592 play 2 595
+NET play 200
+4 ACTION 593 play 3 596
+NET play 200
+4 ACTION 594 play 1 597
+NET play 200
+4 ACTION 595 play 2 598
+NET play 200
+4 ACTION 596 play 3 599
+NET play 200
+4 ACTION 597 play 0 600
+NET play 200
+4 ACTION 598 play 3 601
+NET play 200
+4 ACTION 599 play 0 602
+NET play 200
+4 ACTION 600 play 1 603
+NET play 200
+4 ACTION 601 play 2 604
+NET play 200
+4 ACTION 602 play 2 605
+NET play 200
+4 ACTION 603 play 3 606
+NET play 200
+4 ACTION 604 play 0 607
+NET play 200
+4 ACTION 605 play 1 608
+NET play 200
+4 ACTION 606 play 2 609
+NET play 200
+4 ACTION 607 play 3 610
+NET play 200
+4 ACTION 608 play 0 611
+NET play 200
+4 ACTION 609 play 1 612
+NET play 200
+4 ACTION 610 play 2 613
+NET play 200
+4 ACTION 611 play 3 614
+NET play 200
+4 ACTION 612 play 0 615
+NET play 200
+4 ACTION 613 play 1 616
+NET play 200
+4 ACTION 614 score 1 617
+NET next-hand 200
+4 ACTION 615 bidding 2 618
+NET bid 200
+4 ACTION 616 bidding 3 619
+NET bid 200
+4 ACTION 617 bidding 0 620
+NET bid 200
+4 ACTION 618 bidding 1 621
+NET bid 200
+4 ACTION 619 discard 2 622
+NET discard 200
+4 ACTION 620 trump 2 623
+NET trump 200
+4 ACTION 621 play 2 624
+NET play 200
+4 ACTION 622 play 3 625
+NET play 200
+4 ACTION 623 play 0 626
+NET play 200
+4 ACTION 624 play 1 627
+NET play 200
+4 ACTION 625 play 1 628
+NET play 200
+4 ACTION 626 play 2 629
+NET play 200
+4 ACTION 627 play 3 630
+NET play 200
+4 ACTION 628 play 0 631
+NET play 200
+4 ACTION 629 play 0 632
+NET play 200
+4 ACTION 630 play 1 633
+NET play 200
+4 ACTION 631 play 2 634
+NET play 200
+4 ACTION 632 play 3 635
+NET play 200
+4 ACTION 633 play 0 636
+NET play 200
+4 ACTION 634 play 1 637
+NET play 200
+4 ACTION 635 play 2 638
+NET play 200
+4 ACTION 636 play 3 639
+NET play 200
+4 ACTION 637 play 0 640
+NET play 200
+4 ACTION 638 play 1 641
+NET play 200
+4 ACTION 639 play 2 642
+NET play 200
+4 ACTION 640 play 3 643
+NET play 200
+4 ACTION 641 play 1 644
+NET play 200
+4 ACTION 642 play 2 645
+NET play 200
+4 ACTION 643 play 3 646
+NET play 200
+4 ACTION 644 play 0 647
+NET play 200
+4 ACTION 645 play 1 648
+NET play 200
+4 ACTION 646 play 2 649
+NET play 200
+4 ACTION 647 play 3 650
+NET play 200
+4 ACTION 648 play 0 651
+NET play 200
+4 ACTION 649 play 1 652
+NET play 200
+4 ACTION 650 play 2 653
+NET play 200
+4 ACTION 651 play 3 654
+NET play 200
+4 ACTION 652 play 0 655
+NET play 200
+4 ACTION 653 play 2 656
+NET play 200
+4 ACTION 654 play 3 657
+NET play 200
+4 ACTION 655 play 0 658
+NET play 200
+4 ACTION 656 play 1 659
+NET play 200
+4 ACTION 657 play 3 660
+NET play 200
+4 ACTION 658 play 0 661
+NET play 200
+4 ACTION 659 play 1 662
+NET play 200
+4 ACTION 660 play 2 663
+NET play 200
+{"results":[{"humans":4,"target":500,"hands":14,"actions":660,"reconnects":9,"final":"Team B","scores":[-595,-280]}],"errors":[]}
