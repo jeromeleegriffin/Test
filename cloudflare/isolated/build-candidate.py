@@ -35,4 +35,8 @@ s=s[:start]+'var CLOUD_GAME_ADAPTER = '+json.dumps((root/'cloudflare/isolated/84
 s=s.replace('https://jeromeleegriffin.github.io/Test/', 'https://raw.githubusercontent.com/jeromeleegriffin/Test/b3f3928548bc79df5169165b953e458cc68ddc09/')
 s=s.replace('headers.set("cache-control", "public, max-age=300");', 'const mime = {js:"text/javascript",css:"text/css",html:"text/html",json:"application/json",svg:"image/svg+xml",webp:"image/webp",png:"image/png",jpg:"image/jpeg",jpeg:"image/jpeg",mp3:"audio/mpeg",ogg:"audio/ogg",wav:"audio/wav",woff2:"font/woff2",wasm:"application/wasm"}[rawAssetPath.split(".").pop().toLowerCase()]; if (mime) headers.set("content-type", mime); headers.set("cache-control", "public, max-age=300");')
 s=s.replace('    "INVALID_BID",\n', '    "INVALID_BID", "INVALID_OPTIONS", "INVALID_TARGET_SCORE",\n')
+# Cache only immutable public GitHub source bytes, never room/session responses.
+s=s.replace('redirect: "follow"\n        });', 'redirect: "follow",\n          cf: { cacheEverything: true, cacheTtlByStatus: {"200-299": 86400, "300-599": -1} }\n        });')
+s=s.replace('headers.set("cache-control", "public, max-age=300");', 'headers.set("cache-control", upstream.ok ? "public, max-age=300" : "no-store"); headers.set("x-ghr-origin-cache", upstream.headers.get("cf-cache-status") || "UNKNOWN");')
+s=s.replace('index.html", { redirect: "follow" });', 'index.html", { redirect: "follow", cf: {cacheEverything: true, cacheTtlByStatus: {"200-299":86400,"300-599":-1}} });')
 (root/'cloudflare/isolated/worker-candidate.mjs').write_text(s)

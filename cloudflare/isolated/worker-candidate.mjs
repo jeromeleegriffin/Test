@@ -1634,14 +1634,15 @@ var worker_default = {
         const upstream = await fetch(`https://raw.githubusercontent.com/jeromeleegriffin/Test/b3f3928548bc79df5169165b953e458cc68ddc09/${assetPath}`, {
           method: request.method,
           headers: { "accept": request.headers.get("accept") || "*/*" },
-          redirect: "follow"
+          redirect: "follow",
+          cf: { cacheEverything: true, cacheTtlByStatus: {"200-299": 86400, "300-599": -1} }
         });
         const headers = new Headers();
         for (const name of ["content-type", "etag", "last-modified"]) {
           const value = upstream.headers.get(name);
           if (value) headers.set(name, value);
         }
-        const mime = {js:"text/javascript",css:"text/css",html:"text/html",json:"application/json",svg:"image/svg+xml",webp:"image/webp",png:"image/png",jpg:"image/jpeg",jpeg:"image/jpeg",mp3:"audio/mpeg",ogg:"audio/ogg",wav:"audio/wav",woff2:"font/woff2",wasm:"application/wasm"}[rawAssetPath.split(".").pop().toLowerCase()]; if (mime) headers.set("content-type", mime); headers.set("cache-control", "public, max-age=300");
+        const mime = {js:"text/javascript",css:"text/css",html:"text/html",json:"application/json",svg:"image/svg+xml",webp:"image/webp",png:"image/png",jpg:"image/jpeg",jpeg:"image/jpeg",mp3:"audio/mpeg",ogg:"audio/ogg",wav:"audio/wav",woff2:"font/woff2",wasm:"application/wasm"}[rawAssetPath.split(".").pop().toLowerCase()]; if (mime) headers.set("content-type", mime); headers.set("cache-control", upstream.ok ? "public, max-age=300" : "no-store"); headers.set("x-ghr-origin-cache", upstream.headers.get("cf-cache-status") || "UNKNOWN");
         headers.set("x-content-type-options", "nosniff");
         return new Response(request.method === "HEAD" ? null : upstream.body, {
           status: upstream.status,
@@ -1675,7 +1676,7 @@ var worker_default = {
         });
       }
       try {
-        const upstream = await fetch("https://raw.githubusercontent.com/jeromeleegriffin/Test/b3f3928548bc79df5169165b953e458cc68ddc09/index.html", { redirect: "follow" });
+        const upstream = await fetch("https://raw.githubusercontent.com/jeromeleegriffin/Test/b3f3928548bc79df5169165b953e458cc68ddc09/index.html", { redirect: "follow", cf: {cacheEverything: true, cacheTtlByStatus: {"200-299":86400,"300-599":-1}} });
         if (!upstream.ok) return new Response("The private game copy is temporarily unavailable.", { status: 502 });
         const integrated = injectCloudGameAdapter(await upstream.text());
         return secureIntegratedGameHtml(integrated);
