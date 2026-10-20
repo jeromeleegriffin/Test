@@ -1,0 +1,557 @@
+NET join 201
+NET join 201
+NET join 201
+NET start 200
+4 PHASE bidding
+4 ACTION 1 bidding 1 4
+NET bid 200
+4 ACTION 2 bidding 2 5
+NET bid 200
+4 ACTION 3 bidding 3 6
+NET bid 200
+4 ACTION 4 bidding 0 7
+NET bid 200
+4 PHASE discard
+4 ACTION 5 discard 1 8
+NET discard 200
+4 PHASE trump
+4 ACTION 6 trump 1 9
+NET trump 200
+4 PHASE play
+4 ACTION 7 play 1 10
+NET play 200
+4 ACTION 8 play 2 11
+NET play 200
+4 ACTION 9 play 3 12
+NET play 200
+4 ACTION 10 play 0 13
+NET play 200
+4 ACTION 11 play 3 14
+NET play 200
+4 ACTION 12 play 0 15
+NET play 200
+4 ACTION 13 play 1 16
+NET play 200
+4 ACTION 14 play 2 17
+NET play 200
+4 ACTION 15 play 0 18
+NET play 200
+4 ACTION 16 play 1 19
+NET play 200
+4 ACTION 17 play 2 20
+NET play 200
+4 ACTION 18 play 3 21
+NET play 200
+4 ACTION 19 play 2 22
+NET play 200
+4 ACTION 20 play 3 23
+NET play 200
+4 ACTION 21 play 0 24
+NET play 200
+4 ACTION 22 play 1 25
+NET play 200
+4 ACTION 23 play 2 26
+NET play 200
+4 ACTION 24 play 3 27
+NET play 200
+4 ACTION 25 play 0 28
+NET play 200
+4 ACTION 26 play 1 29
+NET play 200
+4 ACTION 27 play 2 30
+NET play 200
+4 ACTION 28 play 3 31
+NET play 200
+4 ACTION 29 play 0 32
+NET play 200
+4 ACTION 30 play 1 33
+NET play 200
+4 ACTION 31 play 2 34
+NET play 200
+4 ACTION 32 play 3 35
+NET play 200
+4 ACTION 33 play 0 36
+NET play 200
+4 ACTION 34 play 1 37
+NET play 200
+4 ACTION 35 play 2 38
+NET play 200
+4 ACTION 36 play 3 39
+NET play 200
+4 ACTION 37 play 0 40
+NET play 200
+4 ACTION 38 play 1 41
+NET play 200
+4 ACTION 39 play 3 42
+NET play 200
+4 ACTION 40 play 0 43
+NET play 200
+4 ACTION 41 play 1 44
+NET play 200
+4 ACTION 42 play 2 45
+NET play 200
+4 ACTION 43 play 3 46
+NET play 200
+4 ACTION 44 play 0 47
+NET play 200
+4 ACTION 45 play 1 48
+NET play 200
+4 ACTION 46 play 2 49
+NET play 200
+4 PHASE score
+4 ACTION 47 score 3 50
+NET next-hand 200
+4 ACTION 48 bidding 0 51
+NET bid 200
+4 ACTION 49 bidding 1 52
+NET bid 200
+4 ACTION 50 bidding 2 53
+NET bid 200
+4 ACTION 51 bidding 3 54
+NET bid 200
+4 ACTION 52 discard 0 55
+NET discard 200
+4 ACTION 53 trump 0 56
+NET trump 200
+4 ACTION 54 play 0 57
+NET play 200
+4 ACTION 55 play 1 58
+NET play 200
+4 ACTION 56 play 2 59
+NET play 200
+4 ACTION 57 play 3 60
+NET play 200
+4 ACTION 58 play 1 61
+NET play 200
+4 ACTION 59 play 2 62
+NET play 200
+4 ACTION 60 play 3 63
+NET play 200
+4 ACTION 61 play 0 64
+NET play 200
+4 ACTION 62 play 3 65
+NET play 200
+4 ACTION 63 play 0 66
+NET play 200
+4 ACTION 64 play 1 67
+NET play 200
+4 ACTION 65 play 2 68
+NET play 200
+4 ACTION 66 play 3 69
+NET play 200
+4 ACTION 67 play 0 70
+NET play 200
+4 ACTION 68 play 1 71
+NET play 200
+4 ACTION 69 play 2 72
+NET play 200
+4 ACTION 70 play 3 73
+NET play 200
+4 ACTION 71 play 0 74
+NET play 200
+4 ACTION 72 play 1 75
+NET play 200
+4 ACTION 73 play 2 76
+NET play 200
+4 ACTION 74 play 1 77
+NET play 200
+4 ACTION 75 play 2 78
+NET play 200
+4 ACTION 76 play 3 79
+NET play 200
+4 ACTION 77 play 0 80
+NET play 200
+4 ACTION 78 play 3 81
+NET play 200
+4 ACTION 79 play 0 82
+NET play 200
+4 ACTION 80 play 1 83
+NET play 200
+4 ACTION 81 play 2 84
+NET play 200
+4 ACTION 82 play 2 85
+NET play 200
+4 ACTION 83 play 3 86
+NET play 200
+4 ACTION 84 play 0 87
+NET play 200
+4 ACTION 85 play 1 88
+NET play 200
+4 ACTION 86 play 2 89
+NET play 200
+4 ACTION 87 play 3 90
+NET play 200
+4 ACTION 88 play 0 91
+NET play 200
+4 ACTION 89 play 1 92
+NET play 200
+4 ACTION 90 play 3 93
+NET play 200
+4 ACTION 91 play 0 94
+NET play 200
+4 ACTION 92 play 1 95
+NET play 200
+4 ACTION 93 play 2 96
+NET play 200
+4 ACTION 94 score 3 97
+NET next-hand 200
+4 ACTION 95 bidding 3 98
+NET bid 200
+4 ACTION 96 bidding 0 99
+NET bid 200
+4 ACTION 97 bidding 1 100
+NET bid 200
+4 ACTION 98 bidding 2 101
+NET bid 200
+4 ACTION 99 discard 3 102
+NET discard 200
+4 ACTION 100 trump 3 103
+NET trump 200
+4 ACTION 101 play 3 104
+NET play 200
+4 ACTION 102 play 0 105
+NET play 200
+4 ACTION 103 play 1 106
+NET play 200
+4 ACTION 104 play 2 107
+NET play 200
+4 ACTION 105 play 1 108
+NET play 200
+4 ACTION 106 play 2 109
+NET play 200
+4 ACTION 107 play 3 110
+NET play 200
+4 ACTION 108 play 0 111
+NET play 200
+4 ACTION 109 play 1 112
+NET play 200
+4 ACTION 110 play 2 113
+NET play 200
+4 ACTION 111 play 3 114
+NET play 200
+4 ACTION 112 play 0 115
+NET play 200
+4 ACTION 113 play 1 116
+NET play 200
+4 ACTION 114 play 2 117
+NET play 200
+4 ACTION 115 play 3 118
+NET play 200
+4 ACTION 116 play 0 119
+NET play 200
+4 ACTION 117 play 0 120
+NET play 200
+4 ACTION 118 play 1 121
+NET play 200
+4 ACTION 119 play 2 122
+NET play 200
+4 ACTION 120 play 3 123
+NET play 200
+4 ACTION 121 play 0 124
+NET play 200
+4 ACTION 122 play 1 125
+NET play 200
+4 ACTION 123 play 2 126
+NET play 200
+4 ACTION 124 play 3 127
+NET play 200
+4 ACTION 125 play 0 128
+NET play 200
+4 ACTION 126 play 1 129
+NET play 200
+4 ACTION 127 play 2 130
+NET play 200
+4 ACTION 128 play 3 131
+NET play 200
+4 ACTION 129 play 1 132
+NET play 200
+4 ACTION 130 play 2 133
+NET play 200
+4 ACTION 131 play 3 134
+NET play 200
+4 ACTION 132 play 0 135
+NET play 200
+4 ACTION 133 play 1 136
+NET play 200
+4 ACTION 134 play 2 137
+NET play 200
+4 ACTION 135 play 3 138
+NET play 200
+4 ACTION 136 play 0 139
+NET play 200
+4 ACTION 137 play 2 140
+NET play 200
+4 ACTION 138 play 3 141
+NET play 200
+4 ACTION 139 play 0 142
+NET play 200
+4 ACTION 140 play 1 143
+NET play 200
+4 ACTION 141 score 2 144
+NET next-hand 200
+4 ACTION 142 bidding 2 145
+NET bid 200
+4 ACTION 143 bidding 3 146
+NET bid 200
+4 ACTION 144 bidding 0 147
+NET bid 200
+4 ACTION 145 bidding 1 148
+NET bid 200
+4 ACTION 146 discard 2 149
+NET discard 200
+4 ACTION 147 trump 2 150
+NET trump 200
+4 ACTION 148 play 2 151
+NET play 200
+4 ACTION 149 play 3 152
+NET play 200
+4 ACTION 150 play 0 153
+NET play 200
+4 ACTION 151 play 1 154
+NET play 200
+4 ACTION 152 play 3 155
+NET play 200
+4 ACTION 153 play 0 156
+NET play 200
+4 ACTION 154 play 1 157
+NET play 200
+4 ACTION 155 play 2 158
+NET play 200
+4 ACTION 156 play 0 159
+NET play 200
+4 ACTION 157 play 1 160
+NET play 200
+4 ACTION 158 play 2 161
+NET play 200
+4 ACTION 159 play 3 162
+NET play 200
+4 ACTION 160 play 0 163
+NET play 200
+4 ACTION 161 play 1 164
+NET play 200
+4 ACTION 162 play 2 165
+NET play 200
+4 ACTION 163 play 3 166
+NET play 200
+4 ACTION 164 play 0 167
+NET decline-claim 200
+4 ACTION 165 play 0 168
+NET play 200
+4 ACTION 166 play 1 169
+NET play 200
+4 ACTION 167 play 2 170
+NET play 200
+4 ACTION 168 play 3 171
+NET play 200
+4 ACTION 169 play 0 172
+NET play 200
+4 ACTION 170 play 1 173
+NET play 200
+4 ACTION 171 play 2 174
+NET play 200
+4 ACTION 172 play 3 175
+NET play 200
+4 ACTION 173 play 0 176
+NET play 200
+4 ACTION 174 play 1 177
+NET play 200
+4 ACTION 175 play 2 178
+NET play 200
+4 ACTION 176 play 3 179
+NET play 200
+4 ACTION 177 play 0 180
+NET play 200
+4 ACTION 178 play 1 181
+NET play 200
+4 ACTION 179 play 2 182
+NET play 200
+4 ACTION 180 play 3 183
+NET play 200
+4 ACTION 181 play 0 184
+NET play 200
+4 ACTION 182 play 1 185
+NET play 200
+4 ACTION 183 play 2 186
+NET play 200
+4 ACTION 184 play 3 187
+NET play 200
+4 ACTION 185 play 0 188
+NET play 200
+4 ACTION 186 play 1 189
+NET play 200
+4 ACTION 187 play 2 190
+NET play 200
+4 ACTION 188 play 3 191
+NET play 200
+4 ACTION 189 score 0 192
+NET next-hand 200
+4 ACTION 190 bidding 1 193
+NET bid 200
+4 ACTION 191 bidding 2 194
+NET bid 200
+4 ACTION 192 bidding 3 195
+NET bid 200
+4 ACTION 193 bidding 0 196
+NET bid 200
+4 ACTION 194 discard 1 197
+NET discard 200
+4 ACTION 195 trump 1 198
+NET trump 200
+4 ACTION 196 play 1 199
+NET play 200
+4 ACTION 197 play 2 200
+NET play 200
+4 ACTION 198 play 3 201
+NET play 200
+4 ACTION 199 play 0 202
+NET play 200
+4 ACTION 200 play 2 203
+NET play 200
+4 ACTION 201 play 3 204
+NET play 200
+4 ACTION 202 play 0 205
+NET play 200
+4 ACTION 203 play 1 206
+NET play 200
+4 ACTION 204 play 3 207
+NET play 200
+4 ACTION 205 play 0 208
+NET play 200
+4 ACTION 206 play 1 209
+NET play 200
+4 ACTION 207 play 2 210
+NET play 200
+4 ACTION 208 play 3 211
+NET play 200
+4 ACTION 209 play 0 212
+NET play 200
+4 ACTION 210 play 1 213
+NET play 200
+4 ACTION 211 play 2 214
+NET play 200
+4 ACTION 212 play 0 215
+NET play 200
+4 ACTION 213 play 1 216
+NET play 200
+4 ACTION 214 play 2 217
+NET play 200
+4 ACTION 215 play 3 218
+NET play 200
+4 ACTION 216 play 0 219
+NET play 200
+4 ACTION 217 play 1 220
+NET play 200
+4 ACTION 218 play 2 221
+NET play 200
+4 ACTION 219 play 3 222
+NET play 200
+4 ACTION 220 play 0 223
+NET play 200
+4 ACTION 221 play 1 224
+NET play 200
+4 ACTION 222 play 2 225
+NET play 200
+4 ACTION 223 play 3 226
+NET play 200
+4 ACTION 224 play 0 227
+NET play 200
+4 ACTION 225 play 1 228
+NET play 200
+4 ACTION 226 play 2 229
+NET play 200
+4 ACTION 227 play 3 230
+NET play 200
+4 ACTION 228 play 1 231
+NET play 200
+4 ACTION 229 play 2 232
+NET play 200
+4 ACTION 230 play 3 233
+NET play 200
+4 ACTION 231 play 0 234
+NET play 200
+4 ACTION 232 play 0 235
+NET play 200
+4 ACTION 233 play 1 236
+NET play 200
+4 ACTION 234 play 2 237
+NET play 200
+4 ACTION 235 play 3 238
+NET play 200
+4 ACTION 236 score 1 239
+NET next-hand 200
+4 ACTION 237 bidding 0 240
+NET bid 200
+4 ACTION 238 bidding 1 241
+NET bid 200
+4 ACTION 239 bidding 2 242
+NET bid 200
+4 ACTION 240 bidding 3 243
+NET bid 200
+4 ACTION 241 discard 0 244
+NET discard 200
+4 ACTION 242 trump 0 245
+NET trump 200
+4 ACTION 243 play 0 246
+NET play 200
+4 ACTION 244 play 1 247
+NET play 200
+4 ACTION 245 play 2 248
+NET play 200
+4 ACTION 246 play 3 249
+NET play 200
+4 ACTION 247 play 3 250
+NET play 200
+4 ACTION 248 play 0 251
+NET play 200
+4 ACTION 249 play 1 252
+NET play 200
+4 ACTION 250 play 2 253
+NET play 200
+4 ACTION 251 play 2 254
+NET play 200
+4 ACTION 252 play 3 255
+NET play 200
+4 ACTION 253 play 0 256
+NET play 200
+4 ACTION 254 play 1 257
+NET play 200
+4 ACTION 255 play 2 258
+NET play 200
+4 ACTION 256 play 3 259
+NET play 200
+4 ACTION 257 play 0 260
+NET play 200
+4 ACTION 258 play 1 261
+NET play 200
+4 ACTION 259 play 2 262
+NET play 200
+4 ACTION 260 play 3 263
+NET play 200
+4 ACTION 261 play 0 264
+NET play 200
+4 ACTION 262 play 1 265
+NET play 200
+4 ACTION 263 play 2 266
+NET play 200
+4 ACTION 264 play 3 267
+NET play 200
+4 ACTION 265 play 0 268
+NET play 200
+4 ACTION 266 play 1 269
+NET play 200
+4 ACTION 267 play 0 270
+NET play 200
+4 ACTION 268 play 1 271
+NET play 200
+4 ACTION 269 play 2 272
+NET play 200
+4 ACTION 270 play 3 273
+NET play 200
+4 ACTION 271 play 3 274
+NET play 200
+4 ACTION 272 play 0 275
+page.waitForFunction: Timeout 10000ms exceeded.
+    at /workspace/scratch/43e36921068b/cloud-ui-full.cjs:27:13 {
+  log: [],
+  name: 'TimeoutError'
+}
