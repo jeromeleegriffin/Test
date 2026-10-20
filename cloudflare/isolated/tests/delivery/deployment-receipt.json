@@ -1,0 +1,12 @@
+{
+  "worker": "griffin-room-846-private-20261020",
+  "sourceCommit": "1a2cacc9d12af3491690491a3569f77badf00f3e",
+  "version": "5cfd6814-3b3b-4916-80e6-1633a7d4449a",
+  "deployment": "06111336-ea90-4691-af6f-328aa91a9277",
+  "namespace": "5b0de759387647e2b07361c360fa89ff",
+  "sourceReadbackMatches": true,
+  "secretBindingRetained": true,
+  "originalDeploymentUnchanged": "b55a14ac-10bd-46e1-a6aa-129d27f56e02",
+  "rollbackSourceCommit": "15a047d7afa47c238ec39f4c0527d3d700f4fedc",
+  "hostedMatchesCompletedAcrossVersions": 12
+}

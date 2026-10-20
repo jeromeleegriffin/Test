@@ -1,0 +1,58 @@
+[
+  {
+    "path": "game060.js",
+    "run": 0,
+    "status": 200,
+    "sha256": "29c8bcdcd1fd4e317f795641839ea8db2494b8609a206c93ccef784c58a1b258",
+    "cache": "REVALIDATED",
+    "mime": "text/javascript"
+  },
+  {
+    "path": "game060.js",
+    "run": 1,
+    "status": 200,
+    "sha256": "29c8bcdcd1fd4e317f795641839ea8db2494b8609a206c93ccef784c58a1b258",
+    "cache": "HIT",
+    "mime": "text/javascript"
+  },
+  {
+    "path": "assets/cards/numbered/red-7.png",
+    "run": 0,
+    "status": 200,
+    "sha256": "bdae1a7b3d797aeb625f11a5c0a902aaa689eea1c02284abfe2fe4ef24dd615e",
+    "cache": "REVALIDATED",
+    "mime": "image/png"
+  },
+  {
+    "path": "assets/cards/numbered/red-7.png",
+    "run": 1,
+    "status": 200,
+    "sha256": "bdae1a7b3d797aeb625f11a5c0a902aaa689eea1c02284abfe2fe4ef24dd615e",
+    "cache": "HIT",
+    "mime": "image/png"
+  },
+  {
+    "path": "assets/images/Red2Premium.png",
+    "run": 0,
+    "status": 200,
+    "sha256": "7f6055ac3a8c6fca6e76d72d40e2e6388d056d9e5261223284d1816b6616ca67",
+    "cache": "REVALIDATED",
+    "mime": "image/png"
+  },
+  {
+    "path": "assets/images/Red2Premium.png",
+    "run": 1,
+    "status": 200,
+    "sha256": "7f6055ac3a8c6fca6e76d72d40e2e6388d056d9e5261223284d1816b6616ca67",
+    "cache": "HIT",
+    "mime": "image/png"
+  },
+  {
+    "name": "missing asset uncached",
+    "status": 404
+  },
+  {
+    "name": "game gate retained",
+    "status": 401
+  }
+]

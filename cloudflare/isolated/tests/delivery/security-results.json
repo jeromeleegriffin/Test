@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Missing gate",
+    "pass": true
+  },
+  {
+    "name": "Wrong gate",
+    "pass": true
+  },
+  {
+    "name": "Missing token",
+    "pass": true
+  },
+  {
+    "name": "Wrong token",
+    "pass": true
+  },
+  {
+    "name": "No unauthenticated socket ticket",
+    "pass": true
+  },
+  {
+    "name": "Wrong player cannot bid",
+    "pass": true
+  },
+  {
+    "name": "Action ID cannot be reused with a changed command",
+    "pass": true
+  },
+  {
+    "name": "Socket ticket is single use",
+    "pass": true
+  }
+]
