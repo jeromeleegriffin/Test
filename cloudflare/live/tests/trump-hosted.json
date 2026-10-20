@@ -1,0 +1,507 @@
+{
+  "live": true,
+  "samples": [
+    {
+      "phase": "waiting",
+      "stamp": false,
+      "stampVisible": false,
+      "at": 1792479124436
+    },
+    {
+      "phase": "dealing",
+      "turn": 1,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": -1,
+      "trick": [],
+      "lock": false,
+      "at": 1792479124755
+    },
+    {
+      "phase": "bidding",
+      "turn": 1,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": -1,
+      "trick": [],
+      "lock": false,
+      "at": 1792479137685
+    },
+    {
+      "phase": "bidding",
+      "turn": 2,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 1,
+      "trick": [],
+      "lock": false,
+      "at": 1792479139343
+    },
+    {
+      "phase": "bidding",
+      "turn": 3,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 2,
+      "trick": [],
+      "lock": false,
+      "at": 1792479140863
+    },
+    {
+      "phase": "bidding",
+      "turn": 0,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 2,
+      "trick": [],
+      "lock": false,
+      "at": 1792479142621
+    },
+    {
+      "phase": "bidding",
+      "turn": 1,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 2,
+      "trick": [],
+      "lock": false,
+      "at": 1792479143069
+    },
+    {
+      "phase": "discard",
+      "turn": 2,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 2,
+      "trick": [],
+      "lock": false,
+      "at": 1792479144533
+    },
+    {
+      "phase": "trump",
+      "turn": 2,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": null,
+      "bidder": 2,
+      "trick": [],
+      "lock": false,
+      "at": 1792479145732
+    },
+    {
+      "phase": "play",
+      "turn": 2,
+      "stamp": true,
+      "stampVisible": true,
+      "trump": "red",
+      "bidder": 2,
+      "trick": [],
+      "lock": true,
+      "at": 1792479146952
+    },
+    {
+      "phase": "play",
+      "turn": 2,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": "red",
+      "bidder": 2,
+      "trick": [],
+      "lock": true,
+      "at": 1792479148885
+    },
+    {
+      "phase": "play",
+      "turn": 2,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": "red",
+      "bidder": 2,
+      "trick": [],
+      "lock": false,
+      "at": 1792479149743
+    },
+    {
+      "phase": "play",
+      "turn": 3,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": "red",
+      "bidder": 2,
+      "trick": [
+        {
+          "player": 2,
+          "id": "green-8"
+        }
+      ],
+      "lock": false,
+      "at": 1792479150969
+    },
+    {
+      "phase": "play",
+      "turn": 0,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": "red",
+      "bidder": 2,
+      "trick": [
+        {
+          "player": 2,
+          "id": "green-8"
+        },
+        {
+          "player": 3,
+          "id": "green-14"
+        }
+      ],
+      "lock": false,
+      "at": 1792479152165
+    },
+    {
+      "phase": "play",
+      "turn": 1,
+      "stamp": false,
+      "stampVisible": false,
+      "trump": "red",
+      "bidder": 2,
+      "trick": [
+        {
+          "player": 2,
+          "id": "green-8"
+        },
+        {
+          "player": 3,
+          "id": "green-14"
+        },
+        {
+          "player": 0,
+          "id": "green-1"
+        }
+      ],
+      "lock": false,
+      "at": 1792479152585
+    }
+  ],
+  "voices": [
+    {
+      "at": 1792479139337,
+      "id": "cloud-bid:KHMG3ZLH:1:4:1",
+      "duration": 0.6899773242630386,
+      "peak": 0.3565058410167694
+    },
+    {
+      "at": 1792479140846,
+      "id": "cloud-bid:KHMG3ZLH:1:5:2",
+      "duration": 1.0589795918367346,
+      "peak": 0.2585195302963257
+    },
+    {
+      "at": 1792479142574,
+      "id": "cloud-bid:KHMG3ZLH:1:6:3",
+      "duration": 0.5339909297052154,
+      "peak": 0.22482772171497345
+    },
+    {
+      "at": 1792479143210,
+      "id": "cloud-bid:KHMG3ZLH:1:7:0",
+      "duration": 0.75,
+      "peak": 0.3216345012187958
+    },
+    {
+      "at": 1792479144522,
+      "id": "cloud-bid:KHMG3ZLH:1:8:1",
+      "duration": 0.75,
+      "peak": 0.3216345012187958
+    }
+  ],
+  "queue": {
+    "active": null,
+    "pending": [],
+    "log": [
+      {
+        "type": "start",
+        "id": "cloud-bid:KHMG3ZLH:1:4:1"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:KHMG3ZLH:1:4:1"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:KHMG3ZLH:1:5:2"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:KHMG3ZLH:1:5:2"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:KHMG3ZLH:1:6:3"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:KHMG3ZLH:1:6:3"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:KHMG3ZLH:1:7:0"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:KHMG3ZLH:1:7:0"
+      },
+      {
+        "type": "start",
+        "id": "cloud-bid:KHMG3ZLH:1:8:1"
+      },
+      {
+        "type": "end",
+        "id": "cloud-bid:KHMG3ZLH:1:8:1"
+      },
+      {
+        "type": "start",
+        "id": "cloud-trump:KHMG3ZLH:1:2:red"
+      },
+      {
+        "type": "end",
+        "id": "cloud-trump:KHMG3ZLH:1:2:red"
+      }
+    ]
+  },
+  "stamp": {
+    "panel": {
+      "left": 126,
+      "right": 2067,
+      "top": 244,
+      "bottom": 466
+    },
+    "plaque": {
+      "cx": 1096.5,
+      "cy": 355,
+      "width": 1000,
+      "height": 169.13946587537092
+    },
+    "tentativeTrump": "red",
+    "choiceKey": "1:2",
+    "ready": true,
+    "running": false,
+    "pending": false,
+    "accepted": "red",
+    "markColor": "red",
+    "visible": false,
+    "trace": [
+      {
+        "event": "ink-mask",
+        "detail": {
+          "color": "green",
+          "pixels": 9971
+        },
+        "t": 7497.5
+      },
+      {
+        "event": "ink-mask",
+        "detail": {
+          "color": "red",
+          "pixels": 9971
+        },
+        "t": 7515.800000000745
+      },
+      {
+        "event": "ink-mask",
+        "detail": {
+          "color": "yellow",
+          "pixels": 9971
+        },
+        "t": 7539.300000000745
+      },
+      {
+        "event": "ink-mask",
+        "detail": {
+          "color": "black",
+          "pixels": 9971
+        },
+        "t": 7550
+      },
+      {
+        "event": "faint-table",
+        "detail": true,
+        "t": 7596.39999999851
+      },
+      {
+        "event": "assets",
+        "detail": true,
+        "t": 7720.10000000149
+      },
+      {
+        "event": "cancel",
+        "detail": "new-ceremony",
+        "t": 38242.39999999851
+      },
+      {
+        "event": "inked",
+        "detail": {
+          "color": "red",
+          "source": "remote-chooser",
+          "visiblePad": false
+        },
+        "t": 38252.39999999851
+      },
+      {
+        "event": "direction",
+        "detail": {
+          "chooser": 2,
+          "slotId": "slot-partner",
+          "direction": "top",
+          "origin": {
+            "x": 179.5390625,
+            "y": 206.275634765625
+          },
+          "destination": {
+            "x": 197.67417918753478,
+            "y": 399.22092376182525
+          },
+          "frames": [
+            {
+              "t": 0,
+              "x": 179.5390625,
+              "y": 206.275634765625,
+              "h": 12,
+              "sole": 0.8,
+              "scale": 0.9
+            },
+            {
+              "t": 0.18,
+              "x": 179.5390625,
+              "y": 206.275634765625,
+              "h": 26,
+              "sole": 0.8,
+              "scale": 0.9
+            },
+            {
+              "t": 0.25,
+              "x": 179.5390625,
+              "y": 206.275634765625,
+              "h": 26,
+              "sole": 0.8,
+              "scale": 0.9
+            },
+            {
+              "t": 0.48,
+              "x": 197.67417918753478,
+              "y": 399.22092376182525,
+              "h": 32,
+              "sole": 0.68,
+              "scale": 1
+            },
+            {
+              "t": 0.56,
+              "x": 197.67417918753478,
+              "y": 399.22092376182525,
+              "h": 0,
+              "sole": 0.48,
+              "scale": 1
+            },
+            {
+              "t": 0.63,
+              "x": 197.67417918753478,
+              "y": 399.22092376182525,
+              "h": 0,
+              "sole": 0.48,
+              "scale": 1
+            },
+            {
+              "t": 0.73,
+              "x": 197.67417918753478,
+              "y": 399.22092376182525,
+              "h": 32,
+              "sole": 0.68,
+              "scale": 1
+            },
+            {
+              "t": 0.91,
+              "x": 179.5390625,
+              "y": 206.275634765625,
+              "h": 26,
+              "sole": 0.8,
+              "scale": 0.9
+            },
+            {
+              "t": 0.98,
+              "x": 179.5390625,
+              "y": 206.275634765625,
+              "h": 0,
+              "sole": 0.8,
+              "scale": 0.9
+            },
+            {
+              "t": 1,
+              "x": 179.5390625,
+              "y": 206.275634765625,
+              "h": 0,
+              "sole": 0.8,
+              "scale": 0.9
+            }
+          ],
+          "contactAnchor": {
+            "sourceX": 621,
+            "sourceY": 975
+          },
+          "contactAt": 0.56,
+          "inkAt": 0
+        },
+        "t": 38252.39999999851
+      },
+      {
+        "event": "started",
+        "detail": {
+          "color": "red",
+          "duration": 1950
+        },
+        "t": 38252.89999999851
+      },
+      {
+        "event": "pressed",
+        "detail": {
+          "color": "red",
+          "at": 0.5672307692307685,
+          "height": 0
+        },
+        "t": 39428.5
+      },
+      {
+        "event": "cancel",
+        "detail": "complete",
+        "t": 40213.800000000745
+      },
+      {
+        "event": "complete",
+        "detail": "red",
+        "t": 40215.800000000745
+      }
+    ],
+    "pose": null,
+    "inkColor": null,
+    "maskReady": true
+  },
+  "voicesAllowed": true,
+  "botCardTimes": [
+    {
+      "player": 2,
+      "id": "green-8",
+      "at": 1792479150969
+    },
+    {
+      "player": 3,
+      "id": "green-14",
+      "at": 1792479152165
+    }
+  ],
+  "errors": []
+}
