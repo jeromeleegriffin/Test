@@ -21,7 +21,7 @@
   }
 
   const native = {};
-  for (const name of ["submitBid", "submitDiscard", "submitTrump", "submitPlay", "startGameWithToast", "clientLeaveReplace", "saveSession", "isBotTurn", "scheduleBot", "runBotAction", "horStartHeartbeat", "horBeginClientReconnect", "horRecordCareerHand", "mergeLifetimeStats", "noteHumanAuction", "noteHumanHandEnd"])
+  for (const name of ["submitBid", "submitDiscard", "submitTrump", "submitPlay", "startGameWithToast", "clientLeaveReplace", "saveSession", "isBotTurn", "scheduleBot", "runBotAction", "horStartHeartbeat", "horBeginClientReconnect", "horRecordCareerHand", "mergeLifetimeStats", "noteHumanAuction", "noteHumanHandEnd", "hostStartNextHand", "hostProcessAllTrumpsClaim", "hostDeclineClaim", "showAllTrumpsClaimUI", "leaveTableAfterConfirmation043", "leaveTableToLobby043", "onWaitSeatClick"])
     native[name] = window[name];
   const credentialKey = "ghr-private-cloud-seat-v1";
   const playerIdKey = "ghr-private-cloud-player-v1";
@@ -525,8 +525,8 @@
     if (!credentials) return native.clientLeaveReplace?.();
     if (confirm("Leave this screen? Your seat stays reserved so you can rejoin. No bot will replace you.")) disconnectCloudRoom();
   };
-  window.leaveTableAfterConfirmation043 = disconnectCloudRoom;
-  window.leaveTableToLobby043 = disconnectCloudRoom;
+  window.leaveTableAfterConfirmation043 = (...args) => credentials ? disconnectCloudRoom() : native.leaveTableAfterConfirmation043?.(...args);
+  window.leaveTableToLobby043 = (...args) => credentials ? disconnectCloudRoom() : native.leaveTableToLobby043?.(...args);
   // Spectator mode is unsupported by the private room server.
   for (const id of ["spectateBtn", "welcomeWatchBtn"]) {
     const button = document.getElementById(id);
@@ -593,8 +593,9 @@
     playLockUntil = Date.now() + 450;
     return sendAction("play", { cardId });
   };
-  window.hostStartNextHand = function () { return sendAction("next-hand", {}); };
+  window.hostStartNextHand = function (...args) { return credentials ? sendAction("next-hand", {}) : native.hostStartNextHand?.(...args); };
   window.onWaitSeatClick = async function (seat) {
+    if (!credentials) return native.onWaitSeatClick?.(seat);
     if (!credentials) { status("Join the room before adding test bots."); return; }
     if (credentials.seat !== 0) { status("Only the host can add test bots."); return; }
     const target = (latest?.players || []).find(player => Number(player?.seat) === Number(seat));
@@ -614,12 +615,13 @@
       busy = false;
     }
   };
-  window.hostProcessAllTrumpsClaim = function () { return sendAction("claim-remaining", {}); };
-  window.hostDeclineClaim = function () { return sendAction("decline-claim", {}); };
+  window.hostProcessAllTrumpsClaim = function (...args) { return credentials ? sendAction("claim-remaining", {}) : native.hostProcessAllTrumpsClaim?.(...args); };
+  window.hostDeclineClaim = function (...args) { return credentials ? sendAction("decline-claim", {}) : native.hostDeclineClaim?.(...args); };
 
   // Replace the existing PeerJS-only claim buttons with the same approved copy,
   // routed through the authoritative room service instead.
-  window.showAllTrumpsClaimUI = function () {
+  window.showAllTrumpsClaimUI = function (...args) {
+    if (!credentials) return native.showAllTrumpsClaimUI?.(...args);
     if (!latest?.canClaimRemaining || latest.currentPlayer !== credentials?.seat) return;
     const panel = document.getElementById("actionPanel");
     if (!panel) return;

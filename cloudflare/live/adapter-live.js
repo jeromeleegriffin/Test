@@ -21,7 +21,7 @@
   }
 
   const native = {};
-  for (const name of ["submitBid", "submitDiscard", "submitTrump", "submitPlay", "startGameWithToast", "clientLeaveReplace", "saveSession", "isBotTurn", "scheduleBot", "runBotAction", "horStartHeartbeat", "horBeginClientReconnect", "horRecordCareerHand", "mergeLifetimeStats", "noteHumanAuction", "noteHumanHandEnd"])
+  for (const name of ["submitBid", "submitDiscard", "submitTrump", "submitPlay", "startGameWithToast", "clientLeaveReplace", "saveSession", "isBotTurn", "scheduleBot", "runBotAction", "horStartHeartbeat", "horBeginClientReconnect", "horRecordCareerHand", "mergeLifetimeStats", "noteHumanAuction", "noteHumanHandEnd", "hostStartNextHand", "hostProcessAllTrumpsClaim", "hostDeclineClaim", "showAllTrumpsClaimUI", "leaveTableAfterConfirmation043", "leaveTableToLobby043", "onWaitSeatClick"])
     native[name] = window[name];
   const credentialKey = "ghr-private-cloud-seat-v1";
   const playerIdKey = "ghr-private-cloud-player-v1";
@@ -606,8 +606,8 @@
     if (credentials.seat===0) {closeCloudTable();return;}
     if (confirm("Leave this screen? Your seat stays reserved so you can rejoin. No bot will replace you.")) disconnectCloudRoom();
   };
-  window.leaveTableAfterConfirmation043 = () => credentials?.seat===0 ? closeCloudTable() : disconnectCloudRoom();
-  window.leaveTableToLobby043 = () => credentials?.seat===0 ? closeCloudTable() : disconnectCloudRoom();
+  window.leaveTableAfterConfirmation043 = (...args) => !credentials ? native.leaveTableAfterConfirmation043?.(...args) : credentials.seat===0 ? closeCloudTable() : disconnectCloudRoom();
+  window.leaveTableToLobby043 = (...args) => !credentials ? native.leaveTableToLobby043?.(...args) : credentials.seat===0 ? closeCloudTable() : disconnectCloudRoom();
   // Spectator mode is unsupported by the private room server.
   for (const id of ["spectateBtn", "welcomeWatchBtn"]) {
     const button = document.getElementById(id);
@@ -675,7 +675,7 @@
     playLockUntil = Date.now() + 450;
     return sendAction("play", { cardId });
   };
-  window.hostStartNextHand = function () { return sendAction("next-hand", {}); };
+  window.hostStartNextHand = function (...args) { return credentials ? sendAction("next-hand", {}) : native.hostStartNextHand?.(...args); };
   // Page the approved chooser with a horizontal finger gesture, preserving taps.
   const botGrid=document.getElementById("botPickerGrid");let botSwipe=null,botSwipeUntil=0,botPaging=false;
   botGrid?.addEventListener("touchstart",event=>{const t=event.touches;if(t.length===1)botSwipe={x:t[0].clientX,y:t[0].clientY};else botSwipe=null;},{passive:true});
@@ -705,7 +705,8 @@
     const remove=document.getElementById("botPickerRemove830");if(remove)remove.onclick=()=>cloudBotSeat(seat,null);
   };
   window.onWaitSeatClick=function(seat){
-    if(!credentials||credentials.seat!==0||latest?.phase!=="waiting")return;
+    if(!credentials)return native.onWaitSeatClick?.(seat);
+    if(credentials.seat!==0||latest?.phase!=="waiting")return;
     const target=latest.players?.find(p=>p.seat===Number(seat));
     if(target?.occupied&&!target.isBot)return;
     window.openBotPicker(Number(seat),!!target?.isBot);
@@ -717,12 +718,13 @@
     if(target?.occupied&&!target.isBot)return;
     event.preventDefault();event.stopImmediatePropagation();window.onWaitSeatClick(seat);
   },true);
-  window.hostProcessAllTrumpsClaim = function () { return sendAction("claim-remaining", {}); };
-  window.hostDeclineClaim = function () { return sendAction("decline-claim", {}); };
+  window.hostProcessAllTrumpsClaim = function (...args) { return credentials ? sendAction("claim-remaining", {}) : native.hostProcessAllTrumpsClaim?.(...args); };
+  window.hostDeclineClaim = function (...args) { return credentials ? sendAction("decline-claim", {}) : native.hostDeclineClaim?.(...args); };
 
   // Replace the existing PeerJS-only claim buttons with the same approved copy,
   // routed through the authoritative room service instead.
-  window.showAllTrumpsClaimUI = function () {
+  window.showAllTrumpsClaimUI = function (...args) {
+    if (!credentials) return native.showAllTrumpsClaimUI?.(...args);
     if (!latest?.canClaimRemaining || latest.currentPlayer !== credentials?.seat) return;
     const panel = document.getElementById("actionPanel");
     if (!panel) return;
