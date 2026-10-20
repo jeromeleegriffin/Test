@@ -289,6 +289,10 @@
     }
     try { applyState(view); if (snap.phase !== "discard") renderHand(false); } catch (error) { status("Could not draw the current table: " + error.message); }
 
+    if(!["bidding","discard","trump"].includes(snap.phase)) {
+      try {setBotThinking(snap.phase==="play"&&!snap.resolvingTrick&&!snap.trumpOpening&&!!tablePlayers[snap.currentPlayer]?.isBot);} catch(_){}
+    }
+
     if(beginDeal) {
       const owner={credentials,hand:snap.handNumber,done:false};cloudDealOwner=owner;
       status("Preparing the table…");
