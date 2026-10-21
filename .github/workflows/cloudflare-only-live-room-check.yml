@@ -1,0 +1,20 @@
+name: Cloudflare-only LIVE migration RoomDO check
+on:
+  push:
+    branches: [work/asset-recovery-20261021]
+    paths:
+      - coordination/qa/cloudflare-only-live-room-check.mjs
+      - .github/workflows/cloudflare-only-live-room-check.yml
+permissions:
+  contents: read
+jobs:
+  dedicated-qa-room:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check coordination/qa/cloudflare-only-live-room-check.mjs
+      - run: node coordination/qa/cloudflare-only-live-room-check.mjs
