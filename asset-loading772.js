@@ -331,7 +331,7 @@
     img.dataset.loadRetry772 = String(n + 1);
     const src = img.getAttribute('src');
     setTimeout(() => {
-      if (img.isConnected && src && !img.complete) img.src = src;
+      if (img.isConnected && src && !img.naturalWidth) img.src = src;
     }, 500 * (n + 1));
   }, true);
   function restoreVisibleArtwork() {
