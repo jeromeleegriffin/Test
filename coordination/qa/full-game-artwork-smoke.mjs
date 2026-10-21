@@ -66,6 +66,21 @@ try {
   const fallbackAfter=await page.evaluate(()=>[...document.querySelectorAll('#qa-real-bird-cards img')].map(img=>({
     cls:img.className,naturalWidth:img.naturalWidth,fallback:getComputedStyle(img.nextElementSibling).display
   })));
+  const settledSources=await page.evaluate(()=>({
+    css:[...document.querySelectorAll('link[rel~=stylesheet]')].filter(x=>/asset-loading772|approved-bid-portrait/.test(x.href)).map(x=>x.href),
+    birds:[...document.querySelectorAll('#qa-real-bird-cards img')].map(x=>x.src)
+  }));
+  await page.evaluate(()=>{
+    window.dispatchEvent(new Event('online'));
+    window.dispatchEvent(new Event('focus'));
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await page.waitForTimeout(200);
+  const afterRepeatedEvents=await page.evaluate(()=>({
+    css:[...document.querySelectorAll('link[rel~=stylesheet]')].filter(x=>/asset-loading772|approved-bid-portrait/.test(x.href)).map(x=>x.href),
+    birds:[...document.querySelectorAll('#qa-real-bird-cards img')].map(x=>x.src)
+  }));
+  assert.deepEqual(afterRepeatedEvents,settledSources,'Successful artwork should not reload on repeated network/focus events');
 
   const data=await page.evaluate(()=>({
     title:document.title,
