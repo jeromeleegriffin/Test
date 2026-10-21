@@ -28,6 +28,21 @@ try {
   assert(data.loader,'Actual game did not initialize asset loader');
   assert(data.birdSelector && data.bid,'Actual game DOM is incomplete');
   assert(data.birdAssetInCss && data.bidAssetInCss,'Critical stylesheets missing');
+  // The card-size check compares the exact same image nodes across forced
+  // fail/recover. Never infer that this tests the complete bidding UI.
+  await page.evaluate(() => {
+    const holder=document.createElement('div');
+    holder.id='recovery-geometry-fixture';
+    holder.style.cssText='position:fixed;left:8px;top:8px;z-index:1000;width:110px;height:155px';
+    holder.innerHTML='<div class="card-face" style="position:relative;width:110px;height:155px"><div class="c-stack numbered-asset-stack"><img class="numbered-card-img" src="assets/cards/numbered/red-10.png" style="display:block;width:100%;height:100%;object-fit:contain" /></div></div>';
+    document.body.append(holder);
+  });
+  await page.locator('#recovery-geometry-fixture img').waitFor();
+  const geometry=await page.locator('#recovery-geometry-fixture img').evaluate(img=>({
+    width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height,naturalWidth:img.naturalWidth
+  }));
+  assert(geometry.width > 50 && geometry.height > 80 && geometry.naturalWidth > 0,'Numbered card image geometry invalid');
+  data.geometry=geometry;
   await page.screenshot({path:'full-game-artwork-smoke.png',fullPage:false});
   console.log(JSON.stringify({pass:true,scope:'Full game bootstrap/DOM/CSS smoke, portrait Chromium with failed bird requests; not a complete gameplay test',data,errors:failures.slice(0,10)},null,2));
 }finally {await browser?.close();server.kill();}
