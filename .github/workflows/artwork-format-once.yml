@@ -25,5 +25,7 @@ jobs:
           git add asset-loading772.js
           if ! git diff --cached --quiet; then
             git commit -m "Format isolated artwork recovery source [skip ci]"
+            git fetch origin work/asset-recovery-20261021
+            git rebase origin/work/asset-recovery-20261021
             git push origin HEAD:work/asset-recovery-20261021
           fi
