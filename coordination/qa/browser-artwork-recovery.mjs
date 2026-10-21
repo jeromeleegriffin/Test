@@ -11,7 +11,12 @@ const browser = await chromium.launch({headless:true, args:['--no-sandbox']});
 const page = await browser.newPage({viewport:{width:390,height:844}});
 const errors = [];
 page.on('pageerror', e => errors.push(e.message));
-const images = new Map([\n ['rook.png', fs.readFileSync('assets/images/RookPremium.png')],\n ['red.png', fs.readFileSync('assets/images/Red2Premium.png')],\n ['card.png', fs.readFileSync('assets/cards/numbered/red-10.png')],\n ['bid.png', fs.readFileSync('assets/bidbox-moon-review/bidbox-approved-scrollwork.png')],\n]);
+const images = new Map([
+ ['rook.png', fs.readFileSync('assets/images/RookPremium.png')],
+ ['red.png', fs.readFileSync('assets/images/Red2Premium.png')],
+ ['card.png', fs.readFileSync('assets/cards/numbered/red-10.png')],
+ ['bid.png', fs.readFileSync('assets/bidbox-moon-review/bidbox-approved-scrollwork.png')],
+]);
 const paths = [
  {cls:'rook-bird-img', path:'/rook.png'},
  {cls:'red2-img', path:'/red.png'},
