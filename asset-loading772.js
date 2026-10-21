@@ -1,4 +1,5 @@
 /* Extends the 772 readiness service; presentation only, no player-state writes. */
+/* Weak-network recovery remains isolated until rendered/device acceptance. */
 (() => {
   'use strict';
   const paths = [
