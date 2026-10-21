@@ -8,7 +8,7 @@ import crypto from 'node:crypto';
 const source=path.resolve(process.argv[2]||'source');
 const work=path.resolve(process.argv[3]||'work');
 const output=path.resolve(process.argv[4]||'cloudflare-dist');
-const assets=path.join(output,'cloud-game','assets');
+const assets=path.join(output,'public','cloud-game','assets');
 const preflight=path.join(output,'audit');
 const frozen='90078a710948c7643caafb18986e34dc71ce7cee';
 const raw='https://raw.githubusercontent.com/jeromeleegriffin/Test/'+frozen+'/';
