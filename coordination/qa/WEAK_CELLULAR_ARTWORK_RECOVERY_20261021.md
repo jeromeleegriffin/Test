@@ -45,3 +45,9 @@ No changes to X1, artwork files, UI geometry, bidding, rooms, sw060.js, or live 
 - Test uses source-extracted artwork-recovery event handlers, four real DOM img elements, and deliberately aborted image requests followed by fulfilled approved source image responses.
 - All four recovered in place; successful-load state cleared; minimum image box dimensions remained stable; zero page errors.
 - Limit: isolated Chromium fixture, not the full game UI and not Android. Delayed CSS loading / tiny-card symptoms still need true full-game throttle test. No production deployment authorized by this isolated result alone.
+
+## Final isolated candidate checks (current branch commit 547f6d3)
+- Source checks: https://github.com/jeromeleegriffin/Test/actions/runs/39643345741 — SUCCESS, including source bindings and Prettier format check.
+- Chromium browser test: https://github.com/jeromeleegriffin/Test/actions/runs/39643345774 — SUCCESS, now using the four real source images independently (RookPremium.png, Red2Premium.png, numbered red-10.png, bidbox-approved-scrollwork.png).
+- These checks validate isolated real Chromium image failures and recovery, not the complete game-renderer integration nor weak-cellular Android OS.
+- Next prerequisite for publication: final full-game/Android visual acceptance, especially tiny numbered-card sizing and any CSS partial load. Live R10 and X1 remain unchanged.
