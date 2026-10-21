@@ -24,6 +24,7 @@ try {
   const beforeStyleRecovery=await page.evaluate(()=>({
     loaderCss:!![...document.styleSheets].find(x=>x.href?.includes('asset-loading772.css')),
     bidCss:!![...document.styleSheets].find(x=>x.href?.includes('approved-bid-portrait.css')),
+    links:[...document.querySelectorAll('link[rel~=stylesheet]')].filter(x=>/asset-loading772|approved-bid-portrait/.test(x.href)).map(x=>({href:x.href,sheet:!!x.sheet,rules:(()=>{try{return x.sheet?.cssRules?.length ?? -1}catch{return -2}})()})),
   }));
   assert(!beforeStyleRecovery.loaderCss && !beforeStyleRecovery.bidCss,'Critical CSS unexpectedly loaded before recovery: '+JSON.stringify({beforeStyleRecovery,cssFailures}));
   stylesRestored=true;
