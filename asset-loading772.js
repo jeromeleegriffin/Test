@@ -312,29 +312,51 @@
     },
     true
   );
-  // Never substitute a different bird or discard its image node after a failure.
-  document.addEventListener(
-    'error',
-    (e) => {
-      const img = e.target;
-      if (
-        !(img instanceof HTMLImageElement) ||
-        !img.matches('.numbered-card-img,.rook-bird-img,.red2-img')
-      )
-        return;
-      const n = Number(img.dataset.loadRetry772 || 0);
-      if (n >= 2) return;
-      img.dataset.loadRetry772 = String(n + 1);
+  // Recover approved artwork in existing DOM nodes after weak-network failures.
+  // Do not replace the image with generic art, modify its geometry, or reload the game.
+  const failedVisibleImages = new Set();
+  const artworkSelector = '.numbered-card-img,.rook-bird-img,.red2-img,.approved-bid-art';
+  document.addEventListener('load', (e) => {
+    if (e.target instanceof HTMLImageElement) {
+      failedVisibleImages.delete(e.target);
+      delete e.target.dataset.loadRetry772;
+    }
+  }, true);
+  document.addEventListener('error', (e) => {
+    const img = e.target;
+    if (!(img instanceof HTMLImageElement) || !img.matches(artworkSelector)) return;
+    failedVisibleImages.add(img);
+    const n = Number(img.dataset.loadRetry772 || 0);
+    if (n >= 2) return;
+    img.dataset.loadRetry772 = String(n + 1);
+    const src = img.getAttribute('src');
+    setTimeout(() => {
+      if (img.isConnected && src && !img.complete) img.src = src;
+    }, 500 * (n + 1));
+  }, true);
+  function restoreVisibleArtwork() {
+    if (navigator.onLine === false) return;
+    for (const img of failedVisibleImages) {
+      if (!img.isConnected) {
+        failedVisibleImages.delete(img);
+        continue;
+      }
       const src = img.getAttribute('src');
-      setTimeout(
-        () => {
-          if (img.isConnected && src) img.src = src;
-        },
-        500 * (n + 1)
-      );
-    },
-    true
-  );
+      if (!src) continue;
+      img.dataset.loadRetry772 = '0';
+      // A fresh URL makes a failed cached request retry over the restored network.
+      const url = new URL(src, document.baseURI);
+      url.searchParams.set('fresh', String(Date.now()));
+      img.src = url.href;
+      failedVisibleImages.delete(img);
+    }
+  }
+  addEventListener('online', restoreVisibleArtwork);
+  addEventListener('focus', restoreVisibleArtwork);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) restoreVisibleArtwork();
+  });
+  navigator.connection?.addEventListener?.('change', restoreVisibleArtwork);
   window.HORAssetLoading772 = {
     image,
     prepare,
