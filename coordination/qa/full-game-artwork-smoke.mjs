@@ -16,8 +16,9 @@ try {
   let cssFailures=0;
   await page.route('**/approved-bid-portrait.css**',r=>stylesRestored?r.continue():(cssFailures++,r.abort('failed')));
   await page.route('**/asset-loading772.css**',r=>stylesRestored?r.continue():(cssFailures++,r.abort('failed')));
-  await page.route('**/assets/images/RookPremium.png**',r=>r.abort('failed'));
-  await page.route('**/assets/images/Red2Premium.png**',r=>r.abort('failed'));
+  let artworkRestored=false;
+  await page.route('**/assets/images/RookPremium.png**',r=>artworkRestored?r.continue():r.abort('failed'));
+  await page.route('**/assets/images/Red2Premium.png**',r=>artworkRestored?r.continue():r.abort('failed'));
   await page.goto(url,{waitUntil:'domcontentloaded',timeout:45000});
   await page.waitForTimeout(3000);
   assert(cssFailures >= 2,'Failed-stylesheet test did not actually block both CSS files');
@@ -38,6 +39,34 @@ try {
   }));
   assert(afterStyleRecovery.loaderCss && afterStyleRecovery.bidCss && afterStyleRecovery.links.every(x=>x.rules>0));
   assert.equal(afterStyleRecovery.navigationCount,1,'Game unexpectedly reloaded on CSS recovery');
+  // Exercise the game's real render function and its built-in text fallbacks.
+  await page.evaluate(() => {
+    const root=document.createElement('div');
+    root.id='qa-real-bird-cards';
+    root.style.cssText='position:fixed;left:10px;top:10px;display:flex;z-index:1000';
+    for(const c of [{id:'rook',color:'rook',rank:0},{id:'red-2',color:'red',rank:2}]) {
+      const item=document.createElement('div');
+      item.className='card-face';
+      item.style.cssText='width:70px;height:100px;position:relative';
+      item.innerHTML=cardInnerHTML(c);
+      root.append(item);
+    }
+    document.body.append(root);
+  });
+  await page.waitForFunction(()=>[...document.querySelectorAll('#qa-real-bird-cards img')].length===2 &&
+    [...document.querySelectorAll('#qa-real-bird-cards img')].every(img=>img.dataset.loadRetry772==='2'),null,{timeout:12000});
+  const fallbackBefore=await page.evaluate(()=>[...document.querySelectorAll('#qa-real-bird-cards img')].map(img=>({
+    cls:img.className,naturalWidth:img.naturalWidth,fallback:getComputedStyle(img.nextElementSibling).display
+  })));
+  assert(fallbackBefore.every(x=>x.naturalWidth===0 && x.fallback!=='none'),'Native bird fallback did not appear');
+  artworkRestored=true;
+  await page.evaluate(()=>window.dispatchEvent(new Event('online')));
+  await page.waitForFunction(()=>[...document.querySelectorAll('#qa-real-bird-cards img')].every(img=>img.naturalWidth>0 &&
+    getComputedStyle(img.nextElementSibling).display==='none'),null,{timeout:12000});
+  const fallbackAfter=await page.evaluate(()=>[...document.querySelectorAll('#qa-real-bird-cards img')].map(img=>({
+    cls:img.className,naturalWidth:img.naturalWidth,fallback:getComputedStyle(img.nextElementSibling).display
+  })));
+
   const data=await page.evaluate(()=>({
     title:document.title,
     loader:!!window.HORAssetLoading772,
@@ -68,5 +97,5 @@ try {
   data.geometryLimitation = data.geometryVisible ? 'Fixture visible' : 'Fixture hidden by native pre-game/loading rules; actual gameplay size not certified';
   data.geometry=geometry;
   await page.screenshot({path:'full-game-artwork-smoke.png',fullPage:false});
-  console.log(JSON.stringify({pass:true,scope:'Actual game bootstrap; both real critical stylesheets aborted then recovered on online event without reload; not Android',beforeStyleRecovery,afterStyleRecovery,data,errors:failures.slice(0,10)},null,2));
+  console.log(JSON.stringify({pass:true,scope:'Actual game bootstrap; both real critical stylesheets aborted then recovered on online event without reload; not Android',beforeStyleRecovery,afterStyleRecovery,fallbackBefore,fallbackAfter,data,errors:failures.slice(0,10)},null,2));
 }finally {await browser?.close();server.kill();}
