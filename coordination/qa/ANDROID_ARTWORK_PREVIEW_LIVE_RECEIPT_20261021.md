@@ -41,3 +41,15 @@ No three-site deployment should occur until owner acceptance and coordinated rol
 - Verified the actual Android-preview Play With Friends click in hosted Chromium: https://github.com/jeromeleegriffin/Test/actions/runs/39664668498 — SUCCESS. The test waited until Preparing the House finished, clicked the real button, intercepted navigation before it could reach the live service, and verified the online Worker destination plus #create=1 intent. Zero live room requests occurred in the test.
 - Normal Play Now also continued to pass: 10 cards decoded and bidding phase reached.
 - This fixes the unresponsive preview button, not the independent in-game multiplayer artwork test. Do not claim the repaired preview image loader was deployed to the live online Worker.
+
+## Single-loading entry correction, 2026-10-21
+
+The previous artwork-preview URL first loaded 100+ native artwork files, then Play With Friends navigated to the real multiplayer Worker which loaded its own assets again. This duplicated downloads because the hosts differ and cannot simply reuse each other's in-memory loading state.
+
+Solution deployed ONLY to `griffin-rooks-art-recovery-test`: root `/` and `/index.html` now serve a lightweight no-artwork choice screen. Play With Friends opens the existing multiplayer Worker directly with `#create=1`; Join by Code preserves the 8-character room code and opens the online Worker; Play Offline opens `/game`, the full native R10 artwork test with repaired `asset-loading772.js`. The choice screen loads zero artwork, external JavaScript, or stylesheets and registers no service worker.
+
+Only one game-loading sequence occurs on each initial path after mode selection. This does not unify the two separate website origins or make artwork downloaded during a later cross-mode switch reusable. That deeper architectural change would require a planned integrated site release.
+
+Cloudflare test-only script deployment `4106e659a14240a88fefe17ab7182274`, unchanged live game assets and room namespace. Hosted end-to-end smoke https://github.com/jeromeleegriffin/Test/actions/runs/39672564477 SUCCESS: normal Play Now on `/game` produced 10 decoded cards, root Play With Friends made only one preview document request then navigated directly to the live multiplayer destination (navigation intercepted in test; no room created), and root Play Offline reached `/game` with the repaired loader initialized. No additional game-artwork requests before choosing Friends.
+
+Physical Android acceptance remains necessary; no real-cellular claim.
