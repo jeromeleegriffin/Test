@@ -141,3 +141,40 @@ Reason: multiple October 19 portrait/fullscreen control ZIPs were delivered afte
 
 
 Explicit successor obligation: reproduce these complete reading, continuity and actual-pixels rules again in your next handoff, startup prompt and Master Brain update; pass the obligation forward forever.
+
+
+## R8 hosted verification and release — 2026-10-21
+
+This section supersedes the R7 runtime status above. Continue from this release; do not restart. The historical R7 ZIP and staging receipts remain preserved evidence, not current deployment instructions.
+
+- Runtime: 846-r8-friends-voices-portrait-20261021.
+- Test runtime commit: 47a3c83b61fd9a927195cf429a9acfe0a0e4e443. Production runtime commit: 0330bcdde34b4fe47587adeda9f6379ce53b1459.
+- Immutable Cloudflare asset source: 7c7eab3c9e1c6e6124da28e403a0d7405ac7c967 in Test.
+- Cloudflare Worker: griffin-house-of-rooks-online. Version 2b037d2a-7232-4a0b-9784-6ccb8fb118d1; deployment f0cdcf6a-75f4-4673-98dc-55d22aed2a9c.
+- Worker SHA-256: 47b07501fd45c952215c324f45f9a73623bc434d2ca714817a3808ddaf920986.
+- Existing namespace bb1bf1c32b68451cbe5db6fee3066fa0, TEST_GATE_KEY secret, ACTION_LIMIT and ENTRY_LIMIT bindings retained. No room storage reset, no paid upgrade, no service-worker clear/unregister.
+- Rollback Cloudflare version: 48f6f945-e54c-4200-bfbd-52bb3e9928b6. Both GitHub repositories have rollback/pre-r8-20261021.
+
+### Repairs preserved
+
+Native associated form submissions with target=_top replace popup/script-only Friends navigation. Explicit create and invite intent takes priority over saved reconnect state. Both index.html and cloudflare-entry.js carry the entry fix. The Worker injects its cloud adapter and uses the matching R8 runtime guard and immutable asset pin. Approved male voice MP3s and cumulative portrait repairs are preserved; no portrait/Bid Dock redesign. X1 files remain intact; this release does not newly integrate X1 into online server bot decisions.
+
+### Actual verification
+
+Before production deployment, an owner-approved Cloudflare Preview ran R8 with separate storage (17f11ebca0d64cac97196089e2f28c24) and an independent test secret. Native browser checks passed: Play With Friends created 42J8LH3Q; Fill seats seated three bots; Start Game, bid 110, received nest, selected six discards, confirmed black trump, played cards, and reloaded/reconnected with the same seat and remaining hand. Native invitation joined a distinct API-created host in HXBW6W7Y, showing 2 of 4 seated.
+
+A temporary preview-only browser test page used the real room HTTP API with distinct generated player identities: four humans completed all 40 card plays to score in EJZZXE7Q; two humans and two bots completed a hand to score in WHYCT377 (20 human card plays). Both tested reconnect with unchanged seat/token/hand and rejected non-host Start Game. Total 255 real network requests. These are simulated clients, not four physical phones. The game/reducer/adapter were unchanged by the temporary test-page route. The route was removed and exact release source restored before production deployment.
+
+After deployment, the live Worker reopened the pre-existing R7 test room and accepted another legal card, proving saved room/hand continuity across this upgrade. Preview URLs were turned OFF again after testing, as authorized. The preview resource is retained but no longer publicly routed.
+
+Local checks: 13 unit suites and 3 entry/routing suites passed; 10 full simulated local matches, 2259 actions, 391 rejoins. Test source checks 39546930668 and 39549227923 passed; Test Pages 39549226534 passed. Production branch source check 39549445116 passed; consult LIVE_RECEIPT.json for final main publication runs.
+
+### Limits and browser failure
+
+Physical Android, independent cellular networks, and listening to every male voice were not verified in this session. The actual ZIP Loader navigation had passed earlier using the preserved native-entry QA ZIP against the prior Worker; the final post-release ZIP replay could not finish because the Cloud Browser's native credential protection stopped browser operations and runtime recovery failed. Do not claim that last replay passed. Static Loader inspection confirms a root index.html requirement and an iframe with no sandbox restriction. Do not clear caches to work around it.
+
+Cloudflare connector access finally succeeded after one accepted authentication request and a direct retry. Prior failures included missing workers-scripts.read scopes; Cloud Browser dashboard login separately returned 403. No quota exhaustion was established. Do not resume repeated Gmail/login/reconnect loops.
+
+### Continuity obligation
+
+Read brain/current.json, this complete Master Brain, its construction authorities, and the release receipt before edits. The working screen wins: inspect the real complete screen and controls at target portrait/landscape sizes; source checks alone are not visual acceptance. Preserve approved art, voices, portrait geometry and Bid Dock. Distinguish Cloud Browser verification from physical Android acceptance, keep rollback checkpoints, and pass these complete reading, continuity and actual-pixels obligations forward in every successor handoff and Master Brain update.

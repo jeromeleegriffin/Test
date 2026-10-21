@@ -9,87 +9,128 @@
   "constructionAuthoritySha256": "b405602e809b1ce470c92aa7189f78d3d7e03448a622061aeb18cdcf62dd2d89",
   "brainVersion": "AG",
   "status": "CURRENT",
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "browse": "versions/AG/index.html",
   "document": "versions/AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
   "manifest": "versions/AG/inventory.json",
   "startupPrompt": "versions/AG/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
   "history": "history.html",
   "previousVersion": "AF",
-  "sha256": "1b79e3a7690d9245f115de853938845222291a9e7a61f18424c1382b342642be",
+  "sha256": "3ce05ae3b30ae15fefecf4cb00056fcb78161bc4b2b2fc992526181f6af2b45f",
   "sha256Scope": "Master Brain AG primary document",
-  "checkpoint": "all-three-r7-cumulative-20261020",
-  "checkpointStatus": "ALL_THREE_DEPLOYED_VERIFIED_OWNER_BUG_CHECK_BASELINE",
-  "latestGameBuild": "846-premium-owner-repair-20261020-r7-cumulative",
+  "checkpoint": "r8-native-friends-20261021",
+  "checkpointStatus": "ALL_THREE_R8_DEPLOYED_CLOUD_GAMEPLAY_VERIFIED_FINAL_ZIP_REPLAY_BLOCKED",
+  "latestGameBuild": "846-r8-friends-voices-portrait-20261021",
   "runtimeStatusAuthority": "currentRuntimeRelease and Master Brain AG; frozen historical fields remain in the previous pointer snapshot",
   "currentRuntimeRelease": {
-    "status": "ALL_THREE_DEPLOYED_VERIFIED_OWNER_BUG_CHECK_BASELINE",
-    "date": "2026-10-20",
-    "runtime": "846-premium-owner-repair-20261020-r7-cumulative",
-    "branch": "work/all-three-sync-20261020",
-    "nativeSourceCommit": "2ef90e8264c4f0e887b8df118a563f61e6d47098",
+    "status": "ALL_THREE_R8_DEPLOYED",
+    "date": "2026-10-21",
+    "runtime": "846-r8-friends-voices-portrait-20261021",
     "test": {
       "url": "https://jeromeleegriffin.github.io/Test/",
-      "runtimeCommit": "2ef90e8264c4f0e887b8df118a563f61e6d47098",
-      "pagesRun": 39492944270,
-      "sourceCheckRun": 39492946214,
+      "runtimeCommit": "47a3c83b61fd9a927195cf429a9acfe0a0e4e443",
+      "pagesRun": 39549226534,
+      "sourceCheckRun": 39549227923,
       "conclusion": "success",
-      "rollbackCommit": "5f0ea0d9a4803fa39caa0a2f5e154c07d0fda911"
+      "rollbackCommit": "61c843aa338a2899ba5582c3c7b42e18a2be84ee"
     },
     "production": {
       "url": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
-      "runtimeCommit": "972a381196259a58016122c3e365e2208a874755",
-      "pagesRun": 39493451844,
-      "sourceCheckRun": 39493453459,
+      "runtimeCommit": "0330bcdde34b4fe47587adeda9f6379ce53b1459",
+      "pagesRun": 39549556090,
+      "sourceCheckRun": 39549556789,
       "conclusion": "success",
-      "rollbackCommit": "c8e78769e1f723e0a01196e28b2f00841928a1f6"
+      "rollbackCommit": "972a381196259a58016122c3e365e2208a874755"
     },
     "cloudflare": {
       "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
       "worker": "griffin-house-of-rooks-online",
-      "version": "48f6f945-e54c-4200-bfbd-52bb3e9928b6",
-      "deployment": "a8e5ec49-818e-436e-9291-5267b0cc105a",
+      "version": "2b037d2a-7232-4a0b-9784-6ccb8fb118d1",
+      "deployment": "f0cdcf6a-75f4-4673-98dc-55d22aed2a9c",
       "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-      "rollbackVersion": "b579fde0-d6e1-4a42-b40f-aa85cd3ec7d3",
+      "rollbackVersion": "48f6f945-e54c-4200-bfbd-52bb3e9928b6",
+      "assetCommit": "7c7eab3c9e1c6e6124da28e403a0d7405ac7c967",
+      "sourceCommit": "47a3c83b61fd9a927195cf429a9acfe0a0e4e443",
+      "workerSha256": "47b07501fd45c952215c324f45f9a73623bc434d2ca714817a3808ddaf920986",
       "roomStorageReset": false,
       "secretRetained": true,
+      "rateBindingsRetained": true,
+      "previewUrlsEnabled": false,
       "paidUpgradePerformed": false
     },
-    "runtimeFileMatchesPerGitSite": 1509,
-    "httpSelectedMatches": {
-      "test": 16,
-      "production": 16,
-      "cloudflare": 15
+    "browserTests": {
+      "nativeCreate": true,
+      "fillThreeBots": true,
+      "start": true,
+      "bid": true,
+      "nestDiscard": true,
+      "trumpConfirm": true,
+      "cardPlay": true,
+      "reloadSameSeatHand": true,
+      "joinIndependentHost": true,
+      "existingLiveR7RoomRetainedAfterR8": true,
+      "independentPhysicalDevices": false
     },
-    "newHostedCloudMatch": {
+    "networkTests": {
+      "scope": "Browser-driven real hosted preview HTTP API; distinct simulated human identities",
+      "requests": 255,
       "results": [
         {
           "humans": 4,
-          "target": 100,
-          "hands": 1,
-          "actions": 46,
-          "reconnects": 3,
-          "final": "Team A",
-          "scores": [
-            80,
-            -195
-          ]
+          "bots": 0,
+          "room": "EJZZXE7Q",
+          "phase": "score",
+          "humanCardPlays": 40,
+          "reconnectSeatHand": true
+        },
+        {
+          "humans": 2,
+          "bots": 2,
+          "room": "WHYCT377",
+          "phase": "score",
+          "humanCardPlays": 20,
+          "reconnectSeatHand": true
         }
       ],
-      "errors": []
+      "nonHostStartRejected": true
     },
-    "newHostedOfflineHands": 2,
-    "newLocalOfflineHands": 1,
-    "physicalAndroidVerified": false,
-    "independentCellularVerified": false,
-    "onlineX1Integrated": false,
-    "sameRuntimeDifferentHostingWrappers": true,
-    "rollbackBranchBothRepos": "rollback/pre-all-three-r7-20261020"
+    "localTests": {
+      "unitSuites": 13,
+      "entryRoutingSuites": 3,
+      "fullMatches": 10,
+      "actions": 2259,
+      "rejoins": 391
+    },
+    "limitations": {
+      "finalPostReleaseZipLoaderReplay": "BLOCKED_BY_CLOUD_BROWSER_NATIVE_CREDENTIAL_RUNTIME; not passed",
+      "earlierPreservedZipNativeNavigation": "PASSED against prior Worker before R8 deployment",
+      "physicalAndroidVerified": false,
+      "independentCellularVerified": false,
+      "onlineX1Integrated": false,
+      "newZipCreated": false
+    },
+    "preview": {
+      "id": "4138dbf219054acca9ba5fcdb249f646",
+      "namespace": "17f11ebca0d64cac97196089e2f28c24",
+      "exactSourceRestoredDeployment": "eca91b1c-40e1-4a5c-87e6-c60497921daf",
+      "temporaryTestPageRemoved": true,
+      "publicRoutingDisabled": true
+    },
+    "rollbackBranchBothRepos": "rollback/pre-r8-20261021"
   },
-  "comprehensiveHandoff": "releases/all-three-r7-cumulative-20261020/COMPREHENSIVE_HANDOFF.txt",
+  "comprehensiveHandoff": "versions/AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
   "threeSiteReleasePolicy": "../coordination/THREE_SITE_RELEASE_POLICY.md",
-  "currentReleaseReceipt": "../coordination/releases/all-three-r7-cumulative-20261020/LIVE_RECEIPT.json",
+  "currentReleaseReceipt": "../coordination/releases/r8-native-friends-20261021/LIVE_RECEIPT.json",
   "currentCumulativeGamePackage": {
+    "status": "No new ZIP built for hosted R8 release. Prior ZIPs are preserved historical artifacts; use currentRuntimeRelease for authoritative source and deploy details.",
+    "nativeSourceCommit": "47a3c83b61fd9a927195cf429a9acfe0a0e4e443"
+  },
+  "previousPointerSnapshot": "../coordination/releases/all-three-r7-cumulative-20261020/PREVIOUS_AF_POINTER.json",
+  "physicalAndroidVerified": false,
+  "independentCellularVerified": false,
+  "onlineX1Integrated": false,
+  "paidUpgradeAuthorized": false,
+  "previousCumulativeGamePackage": {
     "filename": "Griffin_House_Complete_Cumulative_Final_20261020.zip",
     "bytes": 166774839,
     "sha256": "3264c8c1ec3ebca83e87d2aa8eebe97c7b7e4a04e52a8d8c27f3c6aff3316cbf",
@@ -112,10 +153,5 @@
     "sourceEvidenceCommit": "38f52428515277616c06277924b80673a1879505",
     "nativeSourceCommit": "2ef90e8264c4f0e887b8df118a563f61e6d47098",
     "publicationNote": "Cumulative ZIP behavior preserved; equivalent formatting in published source; no new ZIP created."
-  },
-  "previousPointerSnapshot": "../coordination/releases/all-three-r7-cumulative-20261020/PREVIOUS_AF_POINTER.json",
-  "physicalAndroidVerified": false,
-  "independentCellularVerified": false,
-  "onlineX1Integrated": false,
-  "paidUpgradeAuthorized": false
+  }
 }

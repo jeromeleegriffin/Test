@@ -1,3 +1,6 @@
+R8 CONTINUATION UPDATE — 2026-10-21
+The live runtime is now 846-r8-friends-voices-portrait-20261021 on all three hosts. Read brain/current.json and coordination/releases/r8-native-friends-20261021/LIVE_RECEIPT.json, then the complete Master Brain AG including its appended R8 section. Do not restart or repeat the Cloudflare/Gmail authentication loop. Preview URLs have been disabled again. The final post-release ZIP Loader replay was blocked by the browser credential runtime, not recorded as a pass. All full reading/continuity/actual-pixels obligations below remain mandatory.
+
 GRIFFIN HOUSE OF ROOKS — CONTINUE THE VERIFIED THREE-SITE RELEASE
 
 Jerome wants a fresh bug-debugging chat. Do not restart development or deploy an older build. First read https://github.com/jeromeleegriffin/Test/blob/main/brain/current.json and follow its current Master Brain/startup/handoff pointers. Expected checkpoint is AG or newer; verify it because other chats may continue. Read the full H-through-current history and exact inherited authorities as required below.
