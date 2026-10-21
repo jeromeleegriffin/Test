@@ -40,7 +40,13 @@ try{
  await page.screenshot({path:'android-preview-hosted.png'});
  const clickPage=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
  await clickPage.goto(base,{waitUntil:'domcontentloaded',timeout:45000});
- await clickPage.locator('#soloPracticeBtn').click({timeout:20000,force:true});
+ // A normal player waits for the actual Prepare the House loader to finish.
+ await clickPage.waitForFunction(()=>{
+   const l=window.HORAssetLoading772?.inspect();
+   return l && l.done===l.total && l.initialRevealComplete &&
+     !document.documentElement.classList.contains('house-loading');
+ },null,{timeout:45000});
+ await clickPage.locator('#soloPracticeBtn').click({timeout:20000});
  let clickSucceeded=false;
  try {
    await clickPage.waitForFunction(()=>document.body.classList.contains('in-game') && document.querySelectorAll('#myHand > .card-face').length===10 && game?.phase!=='dealing',null,{timeout:22000});
@@ -59,11 +65,11 @@ try{
  console.log(JSON.stringify({clickSucceeded,clickDiagnostics},null,2));
  if (!clickSucceeded) await clickPage.screenshot({path:'android-preview-click-failure.png'});
  const buttonHand=await clickPage.evaluate(()=>({
-   phase:game.phase,
+   phase:game?.phase ?? null,
    cards:document.querySelectorAll('#myHand > .card-face').length,
    decoded:[...document.querySelectorAll('#myHand > .card-face img')].filter(x=>x.naturalWidth>0).length
  }));
- assert.equal(buttonHand.cards,10);
+ assert(clickSucceeded && buttonHand.cards===10,'Normal Play Now did not start a full hand: '+JSON.stringify(clickDiagnostics));
  assert(buttonHand.decoded>=9,'Play Now art failed to load');
  console.log(JSON.stringify({playNowButton:true,buttonHand}));
  await clickPage.close();
