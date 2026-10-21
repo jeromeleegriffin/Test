@@ -1,0 +1,26 @@
+name: Cloudflare-only X1 full-match QA
+on:
+  push:
+    branches: [work/asset-recovery-20261021]
+    paths:
+      - coordination/qa/cloudflare-only-full-match-qa.mjs
+      - .github/workflows/cloudflare-only-full-match-qa.yml
+permissions:
+  contents: read
+jobs:
+  full-match:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check coordination/qa/cloudflare-only-full-match-qa.mjs
+      - run: node coordination/qa/cloudflare-only-full-match-qa.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage-full-x1-${{ github.run_id }}
+          path: x1-evidence/
+          if-no-files-found: ignore
