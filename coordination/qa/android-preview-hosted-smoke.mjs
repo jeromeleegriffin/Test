@@ -22,7 +22,8 @@ try{
  assert(html.ok(),'Game entry unavailable');
  const index=await html.text();
  assert(index.includes('false && \'serviceWorker\' in navigator'),'Preview unexpectedly enables game service worker');
- assert(index.includes('action="#"'),'Preview would send Friends to live host');
+ assert(index.includes('action="https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/"'),'Play With Friends form must point to the working online host');
+ assert(!index.includes('#friendsToggleBtn,#joinBtn,#installAppBtn'),'Friends must not be swallowed by the artwork-test guard');
  await page.goto(base,{waitUntil:'domcontentloaded',timeout:45000});
  await page.waitForFunction(()=>typeof startSoloPractice==='function' && !!window.HORAssetLoading772,null,{timeout:45000});
  const before=await page.evaluate(()=>({ready:!!window.HORAssetLoading772,buttons:!!document.getElementById('soloPracticeBtn'),art:window.HORAssetLoading772.inspect(),serviceWorkerControlled:!!navigator.serviceWorker?.controller}));
@@ -73,4 +74,21 @@ try{
  assert(buttonHand.decoded>=9,'Play Now art failed to load');
  console.log(JSON.stringify({playNowButton:true,buttonHand}));
  await clickPage.close();
+ // Test the actual Friends button while intercepting the destination.
+ // Do NOT create any room or send a request to the real multiplayer Worker.
+ const friendsPage=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
+ const requests=[];
+ await friendsPage.route('https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/**',async route=>{
+   requests.push(route.request().url());
+   await route.fulfill({status:200,contentType:'text/html',body:'<!doctype html><title>Intercepted Friends navigation</title>'});
+ });
+ await friendsPage.goto(base,{waitUntil:'domcontentloaded',timeout:45000});
+ await friendsPage.waitForFunction(()=>typeof startSoloPractice==='function',null,{timeout:45000});
+ await friendsPage.locator('#friendsToggleBtn').click({timeout:20000,force:true});
+ await friendsPage.waitForURL(url=>url.hostname==='griffin-house-of-rooks-online.jeromeleegriffin.workers.dev',{timeout:20000});
+ const friendsNavigation=new URL(friendsPage.url());
+ assert.equal(new URLSearchParams(friendsNavigation.hash.slice(1)).get('create'),'1','Friends must retain create-room intent');
+ assert(requests.length>=1,'Friends did not submit any navigation');
+ console.log(JSON.stringify({friendsButton:'working',destination:friendsNavigation.origin,createIntent:true,networkRequestsToLiveWorker:0}));
+ await friendsPage.close();
 }finally{await browser.close()}
