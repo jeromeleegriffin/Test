@@ -1,0 +1,22 @@
+name: Named Cloud Bots regression
+on:
+  push:
+    branches: [work/asset-recovery-20261021]
+    paths:
+      - cloudflare/live/worker-live.mjs
+      - coordination/qa/named-cloud-bot-qa.mjs
+      - .github/workflows/named-cloud-bot-qa.yml
+permissions:
+  contents: read
+jobs:
+  named-bots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check cloudflare/live/worker-live.mjs
+      - run: node --check coordination/qa/named-cloud-bot-qa.mjs
+      - run: node coordination/qa/named-cloud-bot-qa.mjs
