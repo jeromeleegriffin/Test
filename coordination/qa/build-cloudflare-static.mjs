@@ -44,7 +44,7 @@ function add(src){
   list.push({path:rel,bytes:size,sha256});
 }
 for(const entry of fs.readdirSync(source,{withFileTypes:true})){
-  if(entry.isFile() && rootExtensions.has(path.extname(entry.name).toLowerCase()))add(path.join(source,entry.name));
+  if(entry.isFile() && !entry.name.startsWith('.') && !/^package(?:-lock)?\.json$/.test(entry.name) && rootExtensions.has(path.extname(entry.name).toLowerCase()))add(path.join(source,entry.name));
 }
 for(const folder of runtimeFolders)addFolder(folder);
 if(!list.some(e=>e.path==='index.html'))throw Error('Missing approved root index.html');
