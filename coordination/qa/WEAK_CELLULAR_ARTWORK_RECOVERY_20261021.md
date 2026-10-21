@@ -38,3 +38,10 @@ No changes to X1, artwork files, UI geometry, bidding, rooms, sw060.js, or live 
 - Generic BLACK BIRD/RED 2 text is the intentional fallback defined by polish.js. Image load handlers switch back to approved artwork on successful load.
 - The image-retry candidate does not reload CSS, and therefore does **not** prove that tiny card faces are repaired. Preserve this as a separate browser/network reproduction gate, not a resolved bug.
 - Existing sw060.js network-first stylesheet responses use cached CSS after failed fetch. An actual Android cache population and throttled network replay is still required.
+
+## Chromium browser regression, verified 2026-10-21
+- Github Actions workflow: https://github.com/jeromeleegriffin/Test/actions/runs/39642713997
+- Run completed SUCCESS; Chromium installation, browser test, screenshot artifact upload all succeeded.
+- Test uses source-extracted artwork-recovery event handlers, four real DOM img elements, and deliberately aborted image requests followed by fulfilled approved source image responses.
+- All four recovered in place; successful-load state cleared; minimum image box dimensions remained stable; zero page errors.
+- Limit: isolated Chromium fixture, not the full game UI and not Android. Delayed CSS loading / tiny-card symptoms still need true full-game throttle test. No production deployment authorized by this isolated result alone.
