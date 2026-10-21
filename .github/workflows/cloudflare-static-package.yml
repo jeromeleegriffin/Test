@@ -42,36 +42,8 @@ jobs:
         run: cp work/wrangler.cloudflare-only-stage.jsonc wrangler.cloudflare-only-stage.jsonc
       - name: Validate full static-asset and Durable Object bundle with Wrangler (no deploy)
         run: npx --yes wrangler@4 deploy --dry-run --config wrangler.cloudflare-only-stage.jsonc --outdir cloudflare-dist/qa-bundle
-      - name: Check whether isolated staging credentials are configured
-        id: staging
-        env:
-          CF_STAGE_DEPLOY_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: |
-          if [ -n "$CF_STAGE_DEPLOY_TOKEN" ]; then
-            echo 'can_deploy=true' >> "$GITHUB_OUTPUT"
-            echo 'Isolated staging deployment credentials are configured. Live Cloudflare Worker remains untouched.'
-          else
-            echo 'can_deploy=false' >> "$GITHUB_OUTPUT"
-            echo 'Isolated staging deployment not attempted: the GitHub Actions CLOUDFLARE_API_TOKEN staging secret is not present.'
-          fi
-      - name: Deploy immutable static assets to NEW staging Worker only
-        if: steps.staging.outputs.can_deploy == 'true'
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: 0538bb3699997fa27a701684074b1126
-        run: npx --yes wrangler@4 deploy --config wrangler.cloudflare-only-stage.jsonc
-      - name: Install isolated private-session gate on staging Worker
-        if: steps.staging.outputs.can_deploy == 'true'
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: 0538bb3699997fa27a701684074b1126
-        run: openssl rand -hex 32 | npx --yes wrangler@4 secret put TEST_GATE_KEY --config wrangler.cloudflare-only-stage.jsonc
-      - name: Verify staging Cloudflare origin (requests to room API intercepted)
-        if: steps.staging.outputs.can_deploy == 'true'
-        run: |
-          npm install --no-save --no-package-lock playwright
-          npx playwright install --with-deps chromium
-          node work/coordination/qa/cloudflare-only-stage-smoke.mjs
+      - name: Keep staging deployment in Cloudflare Native Builds
+        run: echo "GitHub Actions is dry-run only; actual isolated deployment is handled by Cloudflare Builds with its existing build token."
       - name: Preserve immutable manifest and Cloudflare-only Worker candidate
         uses: actions/upload-artifact@v4
         with:
