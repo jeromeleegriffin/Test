@@ -38,7 +38,32 @@ async function handle(req) {
     // Keep the native Play With Friends and Join by Code navigation working.
     // These buttons intentionally open the existing online multiplayer Worker.
     // This isolated static artwork preview does not itself host player rooms.
-    const guard=`<script>window.addEventListener('click',function(e){if(e.target.closest?.('#installAppBtn')){e.preventDefault();e.stopImmediatePropagation();}},true);</script>`;
+    const guard=`<script>
+    // The test copy must not swallow the Play With Friends action during boot.
+    // This only navigates to the existing live multiplayer game; no test rooms are created here.
+    window.addEventListener('click',function(e){
+      const b=e.target.closest?.('#friendsToggleBtn,#createBtn,#joinConfirmBtn,#rejoinBtn,#reconnectBtn,#installAppBtn');
+      if(!b)return;
+      if(b.id==='installAppBtn'){e.preventDefault();e.stopImmediatePropagation();return;}
+      const url=new URL('https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/');
+      const name=(document.getElementById('hor-player-name')?.value||'').trim().slice(0,12);
+      const code=(document.getElementById('hor-room-code')?.value||'').trim().toUpperCase();
+      const intent=new URLSearchParams();
+      if(b.id==='joinConfirmBtn'){
+        if(!/^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8}$/.test(code)){
+          e.preventDefault();e.stopImmediatePropagation();
+          const msg=document.getElementById('joinFeedback841');
+          if(msg){msg.hidden=false;msg.textContent='Enter the 8-character room code.';}
+          return;
+        }
+        intent.set('room',code);url.searchParams.set('room',code);
+      } else if(b.id==='friendsToggleBtn'||b.id==='createBtn')intent.set('create','1');
+      if(name)intent.set('name',name);
+      if(intent.size)url.hash=intent.toString();
+      e.preventDefault();e.stopImmediatePropagation();
+      try{window.top.location.assign(url.href);}catch{window.location.assign(url.href);}
+    },true);
+    </script>`;
     html=html.replace('</head>',guard+'</head>');
     headers.set('cache-control','no-store');
     return new Response(req.method==='HEAD'?null:html,{status:200,headers});
