@@ -14,8 +14,8 @@ Workers.dev: enabled; preview-version routes: disabled
 ## Exact sources
 Original game assets + scripts: immutable Test commit 90078a710948c7643caafb18986e34dc71ce7cee
 ONLY asset-loading772.js: repaired, reviewed branch commit 8a9ea83a3e197c48519695181bffcac716ea3cd5
-HTML has a test-only title, the original live Friends-form action is disabled, and only in the test clone service worker registration is disabled to prevent a new 1472-item cache install. Original approved game files and physical card assets remain untouched.
-No private credentials, rate-limit or room bindings. Room API disabled; Play Now offline against three bots only. Test and production sites unaffected.
+HTML has a test-only title and test-only disabled service-worker registration to prevent a new 1472-item cache install. The initially disabled Friends-form action was repaired on this test-only Worker: Play With Friends now explicitly navigates to the existing working online multiplayer Worker, preserving create-room intent. This does NOT run multiplayer inside the artwork-preview Worker. Original approved game files and physical card assets remain untouched.
+No private credentials, rate-limit or room bindings. The preview's own room API stays disabled; Play Now operates offline with three bots, while Play With Friends opens the separate existing live online Worker. Test and production sites unaffected.
 
 ## Hosted tests
 - Latest hosted GitHub Actions check: https://github.com/jeromeleegriffin/Test/actions/runs/39659987165 (SUCCESS)
@@ -30,6 +30,14 @@ Neither GitHub live Test main nor Production repository or other current sites w
 Saved live multiplayer rooms untouched; no service worker cache cleared.
 
 ## Owner validation needed
-Open the test link on Android while on strong Wi-Fi. Wait for Preparing the House to finish, then press Take Your Seat / Play Now. Play a few tricks, optionally turn Wi-Fi off then back on, and verify real bird art/card faces and the full Bid Box recover normally without reload or losing play. This copy is offline-play-only, not a multiplayer or installed-PWA cache test.
+Open the test link on Android while on strong Wi-Fi. Wait for Preparing the House to finish, then press Take Your Seat / Play Now. Play a few tricks, optionally turn Wi-Fi off then back on, and verify real bird art/card faces and the full Bid Box recover normally without reload or losing play. The preview's game is offline-play-only; the Play With Friends button now leads to the existing live multiplayer site, where preview artwork-recovery changes do not yet apply. This is not a multiplayer artwork-recovery or installed-PWA cache test.
 If any problem, send a screenshot and say the step. Do not clear Chrome cache.
 No three-site deployment should occur until owner acceptance and coordinated rollback planning.
+
+## Friends button regression repaired in isolated preview
+- Root cause: First preview version deliberately replaced the native Friends form action with '#', and a capture-phase click blocker prevented Play With Friends from doing anything. That was incorrect UX for this test copy.
+- Initial restoration of form action alone did not make early clicks reliable. An explicit capture-phase action on the test-only HTML routes Play With Friends and join-confirm actions to the existing online Cloudflare Worker. It preserves #create=1 or room-code intent and normal player name, while keeping the test room API disabled.
+- Cloudflare test Worker deployment: d491ab290bb84b92a78349d7c9d16d35, updated 2026-10-21. Live multiplayer Worker was not redeployed.
+- Verified the actual Android-preview Play With Friends click in hosted Chromium: https://github.com/jeromeleegriffin/Test/actions/runs/39664668498 — SUCCESS. The test waited until Preparing the House finished, clicked the real button, intercepted navigation before it could reach the live service, and verified the online Worker destination plus #create=1 intent. Zero live room requests occurred in the test.
+- Normal Play Now also continued to pass: 10 cards decoded and bidding phase reached.
+- This fixes the unresponsive preview button, not the independent in-game multiplayer artwork test. Do not claim the repaired preview image loader was deployed to the live online Worker.
