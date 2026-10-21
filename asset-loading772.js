@@ -385,7 +385,9 @@
       // Chromium may expose an opaque CSSStyleSheet after a failed fetch.
       // Merely checking link.sheet would misclassify that as loaded.
       let rulesReady = false;
-      try { rulesReady = !!link.sheet?.cssRules?.length; } catch {}
+      try {
+        rulesReady = !!link.sheet?.cssRules?.length;
+      } catch {}
       if (rulesReady) continue;
       if (now - Number(link.dataset.lastRecovery772 || 0) < 5000) continue;
       link.dataset.lastRecovery772 = String(now);
