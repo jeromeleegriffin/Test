@@ -2,18 +2,18 @@
   "brainVersion": "AG",
   "parentVersion": "AF",
   "updated": "2026-10-21",
-  "runtime": "846-r8-friends-voices-portrait-20261021",
+  "runtime": "846-r9-audio-recovery-20261021",
   "documentationOnly": true,
   "files": [
     {
       "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
-      "bytes": 23510,
-      "sha256": "7e7344bbbb51aa4321dbefeae9363be420cdd0e53a4340281ca8ec3770b5e4b3"
+      "bytes": 24086,
+      "sha256": "ef0dbaa50737bfc46f58f364226ee120dc281956d937a88d417aa7c518a1c750"
     },
     {
       "path": "files/00_START_HERE/START_HERE.md",
-      "bytes": 26310,
-      "sha256": "3ce05ae3b30ae15fefecf4cb00056fcb78161bc4b2b2fc992526181f6af2b45f"
+      "bytes": 30141,
+      "sha256": "fa57eefad272f492232d16d35791e043e4d27869686945d40bd909a74f1df84a"
     },
     {
       "path": "files/01_MASTER_BANK/CHAT_CONTINUITY_RULE.md",
@@ -27,8 +27,8 @@
     },
     {
       "path": "files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
-      "bytes": 26310,
-      "sha256": "3ce05ae3b30ae15fefecf4cb00056fcb78161bc4b2b2fc992526181f6af2b45f"
+      "bytes": 30141,
+      "sha256": "fa57eefad272f492232d16d35791e043e4d27869686945d40bd909a74f1df84a"
     },
     {
       "path": "files/01_MASTER_BANK/PERMANENT_UI_VISUAL_VERIFICATION_RULE.md",
@@ -66,5 +66,5 @@
       "sha256": "2ff2cccd4659370ee9629c693e89ad989beefdd5e0155d658c5bc84725238cbb"
     }
   ],
-  "currentReleaseReceipt": "../../../coordination/releases/r8-native-friends-20261021/LIVE_RECEIPT.json"
+  "currentReleaseReceipt": "../../../coordination/releases/r9-audio-recovery-20261021/LIVE_RECEIPT.json"
 }

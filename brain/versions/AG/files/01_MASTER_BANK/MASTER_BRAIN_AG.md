@@ -178,3 +178,24 @@ Cloudflare connector access finally succeeded after one accepted authentication 
 ### Continuity obligation
 
 Read brain/current.json, this complete Master Brain, its construction authorities, and the release receipt before edits. The working screen wins: inspect the real complete screen and controls at target portrait/landscape sizes; source checks alone are not visual acceptance. Preserve approved art, voices, portrait geometry and Bid Dock. Distinguish Cloud Browser verification from physical Android acceptance, keep rollback checkpoints, and pass these complete reading, continuity and actual-pixels obligations forward in every successor handoff and Master Brain update.
+
+
+## R9 audio recovery publication — 2026-10-21
+
+This section supersedes the R8 runtime markers above; all R8 repairs and hosted multiplayer evidence remain preserved.
+
+The owner reported that all sounds initially worked and then stopped, including ambience, at normal 1x as well as after trying 3x/MAX. Speed change is not a necessary trigger. The exact state of the owner's phone has not been observed. Source inspection found two independently reproducible recovery defects: main effects/voices recovered suspended contexts but skipped interrupted state and reused closed contexts; ambience trusted its running intent flag even when its actual AudioContext was suspended/interrupted.
+
+R9 changes game060.js to resume non-running open contexts, recreate a closed context, and run whenAudioReady callbacks only after actual running state. cabin-ambience041.js resumes an interrupted/suspended context even if running intent is already true, safely recreates a closed context, and adds context state to its existing inspect diagnostic. Saved sound mute and per-sound volumes are retained. Approved recordings, portrait repairs, Friends navigation, Bid Dock, geometry and gameplay rules are untouched. No audio assets were replaced and no cache/service-worker clear or unregister was performed. Normal build/cache identity is 846-r9-audio-recovery-20261021, including versioned game and cabin script URLs.
+
+The original published code fails the deterministic main interrupted-context test and separately fails the ambience suspended-context test. The repaired candidate passes suspension, interruption, closed-context replacement, rejected-resume retry, background return, stale stop timer protection, no duplicated ambience loops, and preserved mute/volume settings. Entry security, Friends form navigation and entry-intent checks also pass. These are mocked AudioContext regression checks, not audible playback verification.
+
+The owner explicitly instructed publication after being informed that Cloud Browser could not safely resume its native credential state and audible verification was blocked. Do not claim that the owner's sound issue is confirmed resolved. Status: recovery repair deployed; audible/physical Android verification remains pending.
+
+R9 immutable assets: 374bf70223a9df7113d83786cd55f2ee6c25f4ae (Test). Test runtime source: 5ba5b53031bd355875ff36101ec4f7ef9449963b. Production runtime source: 54342d814c7063f808a0e8614b23b9b6f9bbc763. Cloudflare version: 45a7b80b-1f57-43f3-a077-0bb9ee8cac6e; deployment: 1413c173-61f1-4621-8c58-c0d16b92d57a. Worker SHA-256: 8f8693003169c0438c2fe378810ef2f81cfd961adad42a96f12319b38711ca41. Server source is byte-identical to R8 after normalizing only the immutable asset pin and accepted build marker. Production room namespace bb1bf1c32b68451cbe5db6fee3066fa0, secret and rate limits retained; preview URLs remain OFF. No paid upgrade.
+
+Rollback: Cloudflare R8 version 2b037d2a-7232-4a0b-9784-6ccb8fb118d1; GitHub rollback/pre-r9-audio-20261021 in both repositories. The isolated original candidate b0fa6c835090f262e1f468440c528ccf9d981846 remains in work/r8-audio-recovery-20261021. See coordination/releases/r9-audio-recovery-20261021/LIVE_RECEIPT.json for publication checks and current limitations.
+
+Normal online refresh fetches the new scripts; users must reload/reopen the game once to load R9 code. Existing live rooms and saved hands were not reset. Do not reset volume settings to force sound on, and do not substitute new voice recordings for an audio-context recovery issue.
+
+All complete reading, continuity, actual-pixels and permanent successor handoff obligations in this Master Brain remain in force. Preserve this owner authorization, actual test scope, unverified audible playback, rollout identity and rollback references in every successor handoff.

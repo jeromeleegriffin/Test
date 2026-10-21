@@ -1,3 +1,6 @@
+R9 AUDIO RECOVERY RELEASE — 2026-10-21
+Current live build: 846-r9-audio-recovery-20261021 on all three hosts. Read brain/current.json, the R9 LIVE_RECEIPT, and the full Master Brain AG including its appended R9 section. Owner authorized publication despite unavailable Cloud Browser audible verification. Regression/source checks passed; actual sound on the owner's Android phone remains unverified. Do not claim confirmed resolution or reset saved mute/volumes. Preserve R8 Friends/voices/portrait work and all complete reading/actual-pixels/continuity obligations below.
+
 R8 CONTINUATION UPDATE — 2026-10-21
 The live runtime is now 846-r8-friends-voices-portrait-20261021 on all three hosts. Read brain/current.json and coordination/releases/r8-native-friends-20261021/LIVE_RECEIPT.json, then the complete Master Brain AG including its appended R8 section. Do not restart or repeat the Cloudflare/Gmail authentication loop. Preview URLs have been disabled again. The final post-release ZIP Loader replay was blocked by the browser credential runtime, not recorded as a pass. All full reading/continuity/actual-pixels obligations below remain mandatory.
 

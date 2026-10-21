@@ -1,0 +1,74 @@
+{
+  "status": "ALL_THREE_R9_DEPLOYED_SOURCE_VERIFIED_AUDIBLE_VERIFICATION_PENDING",
+  "date": "2026-10-21",
+  "runtime": "846-r9-audio-recovery-20261021",
+  "ownerAuthorizedPublicationDespiteUnavailableAudibleVerification": true,
+  "test": {
+    "url": "https://jeromeleegriffin.github.io/Test/",
+    "runtimeCommit": "5ba5b53031bd355875ff36101ec4f7ef9449963b",
+    "assetCommit": "374bf70223a9df7113d83786cd55f2ee6c25f4ae",
+    "sourceCheckRun": 39551574389,
+    "assetSourceCheckRun": 39551478253,
+    "pagesRun": 39551573815,
+    "conclusion": "success",
+    "rollbackCommit": "bee020d4dd9edd66b391cd3505610c4d8a4e4228"
+  },
+  "production": {
+    "url": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
+    "runtimeCommit": "54342d814c7063f808a0e8614b23b9b6f9bbc763",
+    "sourceCheckRun": 39551600978,
+    "branchSourceCheckRun": 39551522599,
+    "pagesRun": 39551600682,
+    "conclusion": "success",
+    "rollbackCommit": "0330bcdde34b4fe47587adeda9f6379ce53b1459"
+  },
+  "cloudflare": {
+    "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
+    "worker": "griffin-house-of-rooks-online",
+    "version": "45a7b80b-1f57-43f3-a077-0bb9ee8cac6e",
+    "deployment": "1413c173-61f1-4621-8c58-c0d16b92d57a",
+    "assetCommit": "374bf70223a9df7113d83786cd55f2ee6c25f4ae",
+    "sourceCommit": "5ba5b53031bd355875ff36101ec4f7ef9449963b",
+    "workerSha256": "8f8693003169c0438c2fe378810ef2f81cfd961adad42a96f12319b38711ca41",
+    "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "rollbackVersion": "2b037d2a-7232-4a0b-9784-6ccb8fb118d1",
+    "roomStorageReset": false,
+    "secretRetained": true,
+    "rateLimitsRetained": true,
+    "previewUrlsEnabled": false,
+    "paidUpgradePerformed": false
+  },
+  "repair": {
+    "sourceFiles": [
+      "game060.js",
+      "cabin-ambience041.js"
+    ],
+    "approvedAudioAssetsChanged": false,
+    "savedMuteOrVolumesReset": false,
+    "normalCacheIdentityUpdated": true,
+    "serviceWorkerClearedOrUnregistered": false,
+    "originalCodeFailsMainInterruptedRecovery": true,
+    "originalCodeFailsAmbienceSuspendedRecovery": true,
+    "testsPassed": [
+      "main suspended/interrupted/closed context recovery",
+      "ambience suspended/interrupted/closed recovery",
+      "retry rejected resume on later gesture",
+      "background return and stale stop timer protection",
+      "no duplicate ambient loops",
+      "mute and saved volume preservation",
+      "entry security",
+      "native Friends form navigation",
+      "entry create/invite intent"
+    ],
+    "testScope": "Node VM with mocked AudioContext plus source/entry checks; not audible playback"
+  },
+  "limitations": {
+    "exactOwnerDeviceCauseConfirmed": false,
+    "audiblePlaybackVerified": false,
+    "physicalAndroidVerified": false,
+    "cloudBrowser": "Native credential state cannot be safely resumed; documented runtime reset did not recover it.",
+    "userMustReloadToLoadNewScripts": true,
+    "newZipCreated": false
+  },
+  "rollbackBranchBothRepos": "rollback/pre-r9-audio-20261021"
+}
