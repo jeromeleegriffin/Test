@@ -19,7 +19,7 @@ for(const [path,type,marker] of items){
  const contentType=r.headers.get('content-type')||'';
  const text=['javascript','css','html'].includes(type)?buffer.toString('utf8'):'';
  out.push({path,status:r.status,bytes:buffer.length,type:contentType,marker:!!(marker&&text.includes(marker)),firstText:r.ok?'':text.slice(0,120)});
- assert(r.ok(),'Non-200 staging response: '+JSON.stringify(out.at(-1)));
+ assert(r.ok,'Non-200 staging response: '+JSON.stringify(out.at(-1)));
  assert(contentType.includes(type),'Incorrect Cloudflare MIME: '+JSON.stringify(out.at(-1)));
  assert(buffer.length>300,'Unexpectedly empty asset: '+path);
  if(marker)assert(text.includes(marker),'Expected native game source missing: '+path);
