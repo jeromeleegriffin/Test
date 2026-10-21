@@ -331,7 +331,7 @@
     img.dataset.loadRetry772 = String(n + 1);
     const src = img.getAttribute('src');
     setTimeout(() => {
-      if (img.isConnected && src && !img.naturalWidth) img.src = src;
+      if (img.isConnected && src && img.getAttribute('src') === src && !img.naturalWidth) img.src = src;
     }, 500 * (n + 1));
   }, true);
   function restoreVisibleArtwork() {
@@ -343,12 +343,16 @@
       }
       const src = img.getAttribute('src');
       if (!src) continue;
+      if (img.naturalWidth > 0) { failedVisibleImages.delete(img); continue; }
+      const now = Date.now();
+      if (now - Number(img.dataset.lastRecovery772 || 0) < 5000) continue;
+      img.dataset.lastRecovery772 = String(now);
       img.dataset.loadRetry772 = '0';
       // A fresh URL makes a failed cached request retry over the restored network.
       const url = new URL(src, document.baseURI);
       url.searchParams.set('fresh', String(Date.now()));
       img.src = url.href;
-      failedVisibleImages.delete(img);
+      // Retain the failed node until a real load event confirms recovery.
     }
   }
   addEventListener('online', restoreVisibleArtwork);
