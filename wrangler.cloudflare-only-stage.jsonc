@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "griffin-rooks-cloud-only-stage",
+  "main": "./cloudflare-dist/worker-cloud-only.mjs",
+  "compatibility_date": "2026-10-21",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./cloudflare-dist/public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  "durable_objects": {
+    "bindings": [
+      {"name": "ROOMS", "class_name": "RoomDO"}
+    ]
+  },
+  "migrations": [
+    {"tag": "cloud-only-v1", "new_sqlite_classes": ["RoomDO"]}
+  ],
+  "ratelimits": [
+    {"name": "ENTRY_LIMIT", "namespace_id": "14784620261028", "simple": {"limit": 12, "period": 60}},
+    {"name": "ACTION_LIMIT", "namespace_id": "14784620261029", "simple": {"limit": 360, "period": 60}}
+  ],
+  "vars": {
+    "ALLOW_TEST_FIXTURES": "0"
+  }
+}
