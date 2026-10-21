@@ -1,0 +1,28 @@
+name: Hosted Android artwork preview smoke
+on:
+  push:
+    branches: [work/asset-recovery-20261021]
+    paths:
+      - coordination/qa/android-preview-hosted-smoke.mjs
+      - .github/workflows/android-artwork-preview-qa.yml
+permissions:
+  contents: read
+jobs:
+  test-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-save --no-package-lock playwright
+      - run: npx playwright install --with-deps chromium
+      - run: node --check coordination/qa/android-preview-hosted-smoke.mjs
+      - run: node coordination/qa/android-preview-hosted-smoke.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: android-preview-smoke-${{ github.run_id }}
+          path: android-preview-hosted.png
+          if-no-files-found: ignore
