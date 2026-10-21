@@ -36,6 +36,10 @@ jobs:
       - name: Audit exact source and no live deployment
         run: |
           node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('cloudflare-dist/audit/release-manifest.json','utf8'));if(m.assetCount<1400||m.checkedShellDependencies<1400||m.fetchedFromGitHubAtRuntime||!m.noLiveDeploy)process.exit(1);console.log('Cloudflare independent asset package verified: '+m.assetCount+' files, '+m.checkedShellDependencies+' shell checks');"
+      - name: Prepare isolated Cloudflare stage config
+        run: cp work/wrangler.cloudflare-only-stage.jsonc wrangler.cloudflare-only-stage.jsonc
+      - name: Validate full static-asset and Durable Object bundle with Wrangler (no deploy)
+        run: npx --yes wrangler@4 deploy --dry-run --config wrangler.cloudflare-only-stage.jsonc --outdir cloudflare-dist/qa-bundle
       - name: Preserve immutable manifest and Cloudflare-only Worker candidate
         uses: actions/upload-artifact@v4
         with:
