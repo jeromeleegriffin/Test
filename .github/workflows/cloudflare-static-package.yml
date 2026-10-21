@@ -5,6 +5,8 @@ on:
       - work/asset-recovery-20261021
     paths:
       - coordination/qa/build-cloudflare-static.mjs
+      - coordination/qa/cloudflare-only-stage-smoke.mjs
+      - wrangler.cloudflare-only-stage.jsonc
       - .github/workflows/cloudflare-static-package.yml
   workflow_dispatch:
 permissions:
@@ -12,7 +14,7 @@ permissions:
 jobs:
   build-and-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - name: Preserve exact owner-approved R10 immutable game source
         uses: actions/checkout@v4
@@ -40,6 +42,38 @@ jobs:
         run: cp work/wrangler.cloudflare-only-stage.jsonc wrangler.cloudflare-only-stage.jsonc
       - name: Validate full static-asset and Durable Object bundle with Wrangler (no deploy)
         run: npx --yes wrangler@4 deploy --dry-run --config wrangler.cloudflare-only-stage.jsonc --outdir cloudflare-dist/qa-bundle
+      - name: Check whether isolated staging credentials are configured
+        id: staging
+        env:
+          CF_STAGE_DEPLOY_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_STAGE_ROOM_KEY: ${{ secrets.GHR_CLOUDFLARE_STAGE_GATE_KEY }}
+        run: |
+          if [ -n "$CF_STAGE_DEPLOY_TOKEN" ] && [ -n "$CF_STAGE_ROOM_KEY" ]; then
+            echo 'can_deploy=true' >> "$GITHUB_OUTPUT"
+            echo 'Isolated staging deployment credentials are configured. Live Cloudflare Worker remains untouched.'
+          else
+            echo 'can_deploy=false' >> "$GITHUB_OUTPUT"
+            echo 'Isolated staging deployment not attempted: the two GitHub Actions staging secrets are not both present.'
+          fi
+      - name: Deploy immutable static assets to NEW staging Worker only
+        if: steps.staging.outputs.can_deploy == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 0538bb3699997fa27a701684074b1126
+        run: npx --yes wrangler@4 deploy --config wrangler.cloudflare-only-stage.jsonc
+      - name: Install isolated private-session gate on staging Worker
+        if: steps.staging.outputs.can_deploy == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 0538bb3699997fa27a701684074b1126
+          GHR_STAGE_ROOM_KEY: ${{ secrets.GHR_CLOUDFLARE_STAGE_GATE_KEY }}
+        run: printf '%s' "$GHR_STAGE_ROOM_KEY" | npx --yes wrangler@4 secret put TEST_GATE_KEY --config wrangler.cloudflare-only-stage.jsonc
+      - name: Verify staging Cloudflare origin (requests to room API intercepted)
+        if: steps.staging.outputs.can_deploy == 'true'
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+          node work/coordination/qa/cloudflare-only-stage-smoke.mjs
       - name: Preserve immutable manifest and Cloudflare-only Worker candidate
         uses: actions/upload-artifact@v4
         with:
