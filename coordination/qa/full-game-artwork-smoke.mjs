@@ -96,6 +96,28 @@ try {
   data.geometryVisible = geometry.width > 50 && geometry.height > 80;
   data.geometryLimitation = data.geometryVisible ? 'Fixture visible' : 'Fixture hidden by native pre-game/loading rules; actual gameplay size not certified';
   data.geometry=geometry;
+  // Now start a genuine offline game after both stylesheet/image recoveries.
+  await page.evaluate(()=>startSoloPractice());
+  await page.waitForFunction(()=>document.body.classList.contains('in-game') &&
+    document.querySelectorAll('#myHand > .card-face').length>=9,null,{timeout:25000});
+  await page.waitForTimeout(700);
+  const afterRecoveredGameplay=await page.evaluate(()=>{
+    const cards=[...document.querySelectorAll('#myHand > .card-face')];
+    const imgs=cards.map(c=>c.querySelector('img')).filter(Boolean);
+    return {
+      phase:game.phase,
+      count:cards.length,
+      widths:cards.map(c=>Math.round(c.getBoundingClientRect().width)),
+      heights:cards.map(c=>Math.round(c.getBoundingClientRect().height)),
+      loadedImages:imgs.filter(img=>img.naturalWidth>0).length,
+      totalImages:imgs.length,
+      navigationCount:performance.getEntriesByType('navigation').length
+    };
+  });
+  assert(afterRecoveredGameplay.count>=9 && afterRecoveredGameplay.widths.every(w=>w>=20 && w<80),
+    'Real in-game hand sizing failed after CSS restoration: '+JSON.stringify(afterRecoveredGameplay));
+  assert(afterRecoveredGameplay.loadedImages>=8,'Real game hand images did not recover');
+  assert.equal(afterRecoveredGameplay.navigationCount,1,'Reconnection caused a game reload');
   await page.screenshot({path:'full-game-artwork-smoke.png',fullPage:false});
-  console.log(JSON.stringify({pass:true,scope:'Actual game bootstrap; both real critical stylesheets aborted then recovered on online event without reload; not Android',beforeStyleRecovery,afterStyleRecovery,fallbackBefore,fallbackAfter,data,errors:failures.slice(0,10)},null,2));
+  console.log(JSON.stringify({pass:true,scope:'Actual game bootstrap; both real critical stylesheets aborted then recovered on online event without reload; not Android',beforeStyleRecovery,afterStyleRecovery,fallbackBefore,fallbackAfter,afterRecoveredGameplay,data,errors:failures.slice(0,10)},null,2));
 }finally {await browser?.close();server.kill();}
