@@ -13,10 +13,12 @@ function sanitizeAudioReport(body) {
     hidden: b(s?.hidden), inGame: b(s?.inGame),
     phase: ['bidding','dealing','discard','trump','play','score','complete','redeal'].includes(s?.phase) ? s.phase : null,
     muted: b(s?.muted), storedMuted: b(s?.storedMuted),
+    soundOptions: {cards:b(s?.soundOptions?.cards),turn:b(s?.soundOptions?.turn),ticks:b(s?.soundOptions?.ticks)},
     main: s?.main ? {state:state(s.main.state),clock:n(s.main.clock),clockDelta:n(s.main.clockDelta),wallDeltaMs:n(s.main.wallDeltaMs),sampleRate:n(s.main.sampleRate,384000)} : null,
     mixer: s?.mixer ? {...levels(s.mixer),settings:{...levels(s.mixer.settings),voicesMuted:b(s.mixer.settings?.voicesMuted)}} : null,
     cabin: s?.cabin ? {running:b(s.cabin.running),contextState:state(s.cabin.contextState),enabled:b(s.cabin.enabled),unlocked:b(s.cabin.unlocked),allowed:b(s.cabin.allowed),volume:n(s.cabin.volume,100),fireVolume:n(s.cabin.fireVolume,100),busGain:n(s.cabin.busGain,10),timers:n(s.cabin.timers,100),voices:Array.isArray(s.cabin.voices)?s.cabin.voices.slice(0,12).filter(v=>['fire','wind','bird','crickets','owl','wolf','rain'].includes(v?.name)).map(v=>({name:v.name,level:level(v.level)})):[]} : null,
-    voiceQueue: s?.voiceQueue ? {active:b(s.voiceQueue.active),pending:n(s.voiceQueue.pending,100)} : null,
+    voiceQueue: s?.voiceQueue ? {active:b(s.voiceQueue.active),pending:n(s.voiceQueue.pending,100),starts:n(s.voiceQueue.starts,100)} : null,
+    trump: s?.trump ? {playing:b(s.trump.playing),cacheSize:n(s.trump.cacheSize,100),loadFailures:n(s.trump.loadFailures,100)} : null,
     assets: {cabin:b(s?.assets?.cabin),landingBuffers:n(s?.assets?.landingBuffers,20)},
     test: {requested:b(s?.test?.requested),heard:b(s?.test?.heard),state:state(s?.test?.state),clock:n(s?.test?.clock),error:s?.test?.error==='test-unavailable'?'test-unavailable':null},
   }));

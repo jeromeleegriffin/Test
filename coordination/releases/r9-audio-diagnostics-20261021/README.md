@@ -9,3 +9,13 @@ Reports use same-origin signed-session POST, rate and size limits, a strict fiel
 Local diagnostics tests pass: normal entry has no diagnostic injection, invalid IDs rejected, collector parses, private extras removed, CSRF and missing-session POST denied, request size bounded, separate object writes only. Existing entry security regression passes. Actual Cloud Browser UI remains unavailable due native credential state restriction; source and SQL access are verified, not the owner phone.
 
 Next: owner opens the per-session sound-check link, taps Test sound, chooses heard/no sound and plays until failure. Read that report by its ID using the Cloudflare DO SQL query API, identify the observed failure, then implement a targeted repair. Preserve the failed-fix record and do not claim resolution until the symptom is verified.
+
+## Owner screen recording, reviewed 2026-10-21
+
+Preserved attachment: Screen_Recording_20261021_020105_Chrome.mp4 (95.689 seconds, 1080×2340, AAC stereo). Existing progress is retained. Video starts at 1×, changes to 3× around 64 seconds, MAX around 72 seconds and back to 1× around 80 seconds. The symptom predates the speed changes. LAST and the mobile portrait controls exist in the current source; appearance alone does not establish a stale build.
+
+Offline band-limited waveform correlation found the game female Pass clip around 33.37 seconds (normalized correlation 0.628), and the bid-down effect around 15.552 seconds (0.941). These are evidence of intermittent game output, not proof that all voices/effects/ambience work. Other short effect correlations are less conclusive. No audible verification through Cloud Browser is available.
+
+Source investigation: Cloudflare adapter observes confirmed bid and trump changes but does not call notifyCardPlayed or forward the legacy sfx packets. Legacy host play-card execution does call notifyCardPlayed. This is an identified event-path gap; its relationship to all reported symptoms is not yet verified. Do not label it the complete phone cause or deploy an untested repair.
+
+Collector now also reports effect-toggle booleans, queue start counts and trump load-failure counts without event IDs. No approved recordings or portraits are changed. Run `node cloudflare/live/audio-diagnostics/diagnostics-unit.mjs` for the stored source checks.

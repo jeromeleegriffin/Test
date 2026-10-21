@@ -19,6 +19,7 @@
     const cabin = read(() => window.CabinAmbience041?.inspect());
     const mixer = window.HORAudioMixer;
     const voice = read(() => window.HORVoiceQueue?.inspect());
+    const trump = read(() => window.HORTrumpVoice?.getState());
     const frame = {
       sequence: ++sequence, reason, elapsedMs: Math.round(at),
       build: read(() => window.HOR_BUILD), pageBuild: read(() => window.HOR_PAGE_BUILD),
@@ -27,6 +28,7 @@
       phase: read(() => typeof game === 'undefined' ? null : game?.phase),
       muted: read(() => typeof soundMuted === 'undefined' ? null : soundMuted),
       storedMuted: read(() => localStorage.getItem('rookMuted') === '1'),
+      soundOptions: { cards: read(() => soundCard), turn: read(() => soundTurn), ticks: read(() => soundTick) },
       main: ctx ? { state: ctx.state, clock, sampleRate: ctx.sampleRate,
         clockDelta: lastClock === null ? null : +(clock - lastClock).toFixed(4),
         wallDeltaMs: lastAt === null ? null : Math.round(at - lastAt) } : null,
@@ -37,7 +39,8 @@
         enabled: cabin.enabled, unlocked: cabin.unlocked, allowed: cabin.allowed,
         volume: cabin.volume, fireVolume: cabin.fireVolume, busGain: cabin.busGain,
         timers: cabin.timers, voices: cabin.voices } : null,
-      voiceQueue: voice ? { active: !!voice.active, pending: voice.pending.length } : null,
+      voiceQueue: voice ? { active: !!voice.active, pending: voice.pending.length, starts: voice.log.filter(e => e.type === 'start').length } : null,
+      trump: trump ? { playing: trump.playing, cacheSize: trump.cacheSize, loadFailures: trump.history.filter(e => e.type === 'load-failed').length } : null,
       assets: { cabin: !!window.HORCabinSamples,
         landingBuffers: read(() => typeof cardLandingBuffers058 === 'undefined' ? 0 : cardLandingBuffers058.length) },
       test: { ...test },

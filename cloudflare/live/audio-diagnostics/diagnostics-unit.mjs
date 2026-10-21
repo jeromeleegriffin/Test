@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
-const source=fs.readFileSync(new URL('./worker-diagnostics.mjs',import.meta.url),'utf8').replace('import { DurableObject } from "cloudflare:workers";','class DurableObject {constructor(ctx,env){this.ctx=ctx;this.env=env;}}')+'\nexport {sanitizeAudioReport,injectAudioDiagnostics,handleAudioReport,issuePrivateSession};';
+const source=fs.readFileSync(new URL(fs.existsSync(new URL('./worker-live.mjs',import.meta.url)) ? './worker-live.mjs' : '../worker-live.mjs',import.meta.url),'utf8').replace('import { DurableObject } from "cloudflare:workers";','class DurableObject {constructor(ctx,env){this.ctx=ctx;this.env=env;}}')+'\nexport {sanitizeAudioReport,injectAudioDiagnostics,handleAudioReport,issuePrivateSession};';
 const mod=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
 const id='a'.repeat(32), html='<html><head></head><body>Game</body></html>';
 assert.equal(mod.injectAudioDiagnostics(html,new URL('https://test.example/')),html);
