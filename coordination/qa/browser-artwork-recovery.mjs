@@ -11,7 +11,7 @@ const browser = await chromium.launch({headless:true, args:['--no-sandbox']});
 const page = await browser.newPage({viewport:{width:390,height:844}});
 const errors = [];
 page.on('pageerror', e => errors.push(e.message));
-const png = fs.readFileSync('assets/images/RookPremium.png');
+const images = new Map([\n ['rook.png', fs.readFileSync('assets/images/RookPremium.png')],\n ['red.png', fs.readFileSync('assets/images/Red2Premium.png')],\n ['card.png', fs.readFileSync('assets/cards/numbered/red-10.png')],\n ['bid.png', fs.readFileSync('assets/bidbox-moon-review/bidbox-approved-scrollwork.png')],\n]);
 const paths = [
  {cls:'rook-bird-img', path:'/rook.png'},
  {cls:'red2-img', path:'/red.png'},
@@ -20,7 +20,7 @@ const paths = [
 ];
 let connected = false;
 await page.route('https://artwork.qa.test/**', route => connected
- ? route.fulfill({status:200, contentType:'image/png', body:png})
+ ? route.fulfill({status:200, contentType:'image/png', body:images.get(new URL(route.request().url()).pathname.split('/').at(-1))})
  : route.abort('failed'));
 await page.setContent('<html><head><style>.card-face{width:100px;height:145px}.card-face img{width:100%;height:100%;object-fit:contain}</style></head><body></body></html>');
 await page.evaluate(handler => { new Function(handler)(); }, handler);
