@@ -26,17 +26,17 @@ try {
     bidCss:!![...document.styleSheets].find(x=>x.href?.includes('approved-bid-portrait.css')),
     links:[...document.querySelectorAll('link[rel~=stylesheet]')].filter(x=>/asset-loading772|approved-bid-portrait/.test(x.href)).map(x=>({href:x.href,sheet:!!x.sheet,rules:(()=>{try{return x.sheet?.cssRules?.length ?? -1}catch{return -2}})()})),
   }));
-  assert(!beforeStyleRecovery.loaderCss && !beforeStyleRecovery.bidCss,'Critical CSS unexpectedly loaded before recovery: '+JSON.stringify({beforeStyleRecovery,cssFailures}));
+  assert(beforeStyleRecovery.links.length===2 && beforeStyleRecovery.links.every(x=>x.rules<=0),'Critical CSS was actually available before recovery: '+JSON.stringify({beforeStyleRecovery,cssFailures}));
   stylesRestored=true;
   await page.evaluate(()=>window.dispatchEvent(new Event('online')));
-  await page.waitForFunction(()=>[...document.styleSheets].some(x=>x.href?.includes('asset-loading772.css')) &&
-    [...document.styleSheets].some(x=>x.href?.includes('approved-bid-portrait.css')),null,{timeout:12000});
+  await page.waitForFunction(()=>[...document.querySelectorAll('link[rel~=stylesheet]')].filter(x=>/asset-loading772|approved-bid-portrait/.test(x.href)).every(x=>{try{return x.sheet?.cssRules?.length>0}catch{return false}}),null,{timeout:12000});
   const afterStyleRecovery=await page.evaluate(()=>({
     loaderCss:!![...document.styleSheets].find(x=>x.href?.includes('asset-loading772.css')),
     bidCss:!![...document.styleSheets].find(x=>x.href?.includes('approved-bid-portrait.css')),
     navigationCount:performance.getEntriesByType('navigation').length,
+    links:[...document.querySelectorAll('link[rel~=stylesheet]')].filter(x=>/asset-loading772|approved-bid-portrait/.test(x.href)).map(x=>({href:x.href,rules:(()=>{try{return x.sheet?.cssRules?.length??-1}catch{return -2}})()})),
   }));
-  assert(afterStyleRecovery.loaderCss && afterStyleRecovery.bidCss);
+  assert(afterStyleRecovery.loaderCss && afterStyleRecovery.bidCss && afterStyleRecovery.links.every(x=>x.rules>0));
   assert.equal(afterStyleRecovery.navigationCount,1,'Game unexpectedly reloaded on CSS recovery');
   const data=await page.evaluate(()=>({
     title:document.title,
