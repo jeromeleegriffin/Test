@@ -316,24 +316,36 @@
   // Do not replace the image with generic art, modify its geometry, or reload the game.
   const failedVisibleImages = new Set();
   const artworkSelector = '.numbered-card-img,.rook-bird-img,.red2-img,.approved-bid-art';
-  document.addEventListener('load', (e) => {
-    if (e.target instanceof HTMLImageElement) {
-      failedVisibleImages.delete(e.target);
-      delete e.target.dataset.loadRetry772;
-    }
-  }, true);
-  document.addEventListener('error', (e) => {
-    const img = e.target;
-    if (!(img instanceof HTMLImageElement) || !img.matches(artworkSelector)) return;
-    failedVisibleImages.add(img);
-    const n = Number(img.dataset.loadRetry772 || 0);
-    if (n >= 2) return;
-    img.dataset.loadRetry772 = String(n + 1);
-    const src = img.getAttribute('src');
-    setTimeout(() => {
-      if (img.isConnected && src && img.getAttribute('src') === src && !img.naturalWidth) img.src = src;
-    }, 500 * (n + 1));
-  }, true);
+  document.addEventListener(
+    'load',
+    (e) => {
+      if (e.target instanceof HTMLImageElement) {
+        failedVisibleImages.delete(e.target);
+        delete e.target.dataset.loadRetry772;
+      }
+    },
+    true
+  );
+  document.addEventListener(
+    'error',
+    (e) => {
+      const img = e.target;
+      if (!(img instanceof HTMLImageElement) || !img.matches(artworkSelector)) return;
+      failedVisibleImages.add(img);
+      const n = Number(img.dataset.loadRetry772 || 0);
+      if (n >= 2) return;
+      img.dataset.loadRetry772 = String(n + 1);
+      const src = img.getAttribute('src');
+      setTimeout(
+        () => {
+          if (img.isConnected && src && img.getAttribute('src') === src && !img.naturalWidth)
+            img.src = src;
+        },
+        500 * (n + 1)
+      );
+    },
+    true
+  );
   function restoreVisibleArtwork() {
     if (navigator.onLine === false) return;
     for (const img of failedVisibleImages) {
@@ -343,7 +355,10 @@
       }
       const src = img.getAttribute('src');
       if (!src) continue;
-      if (img.naturalWidth > 0) { failedVisibleImages.delete(img); continue; }
+      if (img.naturalWidth > 0) {
+        failedVisibleImages.delete(img);
+        continue;
+      }
       const now = Date.now();
       if (now - Number(img.dataset.lastRecovery772 || 0) < 5000) continue;
       img.dataset.lastRecovery772 = String(now);
