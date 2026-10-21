@@ -5,7 +5,7 @@ const server=spawn('python3',['-m','http.server','8765','--bind','127.0.0.1'],{s
 let browser;
 try {
   browser=await chromium.launch({headless:true,args:['--no-sandbox']});
-  const page=await browser.newPage({viewport:{width:390,height:844}});
+  const page=await browser.newPage({viewport:{width:390,height:844},serviceWorkers:'block'});
   const failures=[];
   page.on('pageerror',e=>failures.push(String(e)));
   const url='http://127.0.0.1:8765/';
@@ -25,7 +25,7 @@ try {
     loaderCss:!![...document.styleSheets].find(x=>x.href?.includes('asset-loading772.css')),
     bidCss:!![...document.styleSheets].find(x=>x.href?.includes('approved-bid-portrait.css')),
   }));
-  assert(!beforeStyleRecovery.loaderCss && !beforeStyleRecovery.bidCss,'Critical CSS unexpectedly loaded before recovery');
+  assert(!beforeStyleRecovery.loaderCss && !beforeStyleRecovery.bidCss,'Critical CSS unexpectedly loaded before recovery: '+JSON.stringify({beforeStyleRecovery,cssFailures}));
   stylesRestored=true;
   await page.evaluate(()=>window.dispatchEvent(new Event('online')));
   await page.waitForFunction(()=>[...document.styleSheets].some(x=>x.href?.includes('asset-loading772.css')) &&
