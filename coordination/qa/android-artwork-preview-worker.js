@@ -35,9 +35,10 @@ async function handle(req) {
     html=html.replace("if ('serviceWorker' in navigator)", "if (false && 'serviceWorker' in navigator)");
     // Explicit preview identity without altering the table artwork.
     html=html.replace('<title>House of Rooks</title>','<title>ARTWORK TEST - House of Rooks</title>');
-    // The preview is solo-only. Never send a tester to the production multiplayer Worker.
-    html=html.replace('action="https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/"','action="#"');
-    const guard=`<script>window.addEventListener('click',function(e){if(e.target.closest?.('#friendsToggleBtn,#joinBtn,#installAppBtn')){e.preventDefault();e.stopImmediatePropagation();}},true);</script>`;
+    // Keep the native Play With Friends and Join by Code navigation working.
+    // These buttons intentionally open the existing online multiplayer Worker.
+    // This isolated static artwork preview does not itself host player rooms.
+    const guard=`<script>window.addEventListener('click',function(e){if(e.target.closest?.('#installAppBtn')){e.preventDefault();e.stopImmediatePropagation();}},true);</script>`;
     html=html.replace('</head>',guard+'</head>');
     headers.set('cache-control','no-store');
     return new Response(req.method==='HEAD'?null:html,{status:200,headers});
