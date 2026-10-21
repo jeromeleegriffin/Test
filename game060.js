@@ -1699,7 +1699,7 @@ let audioCtx = null;
 
 function ensureAudio() {
   if (soundMuted) return null;
-  if (!audioCtx) {
+  if (!audioCtx || audioCtx.state === 'closed') {
     try {
       audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     } catch (e) {
@@ -1707,7 +1707,7 @@ function ensureAudio() {
       return null;
     }
   }
-  if (audioCtx.state === 'suspended') {
+  if (audioCtx.state !== 'running') {
     audioCtx.resume().catch(() => {});
   }
   return audioCtx;
@@ -1724,10 +1724,12 @@ function whenAudioReady(fn) {
       fn(ctx);
     } catch (e) {}
   };
-  if (ctx.state === 'suspended') {
+  if (ctx.state !== 'running') {
     ctx
       .resume()
-      .then(() => run())
+      .then(() => {
+        if (ctx.state === 'running' && !soundMuted) run();
+      })
       .catch(() => {});
     return;
   }
