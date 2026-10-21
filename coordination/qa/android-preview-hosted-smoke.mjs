@@ -1,7 +1,6 @@
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
 const base='https://griffin-rooks-art-recovery-test.jeromeleegriffin.workers.dev/';
-const gameUrl=base+'game';
 const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
 try{
  const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
@@ -19,18 +18,13 @@ try{
  assert(body.includes('restoreUnloadedStylesheets')&&body.includes('failedVisibleImages'));
  const css=await page.request.get(base+'approved-bid-portrait.css',{timeout:25000});
  assert(css.ok(),'Original approved Bid Box CSS missing');
- const entry=await page.request.get(base,{timeout:25000});
- assert(entry.ok());
- const entryHtml=await entry.text();
- assert(entryHtml.includes('choose-friends')&&entryHtml.includes('choose-offline'));
- assert(!entryHtml.includes('asset-loading772.js')&&!entryHtml.includes('serviceWorker.register')&&!entryHtml.includes('<img'),'Choice screen must not preload any game assets');
- const html=await page.request.get(gameUrl,{timeout:25000});
+ const html=await page.request.get(base,{timeout:25000});
  assert(html.ok(),'Game entry unavailable');
  const index=await html.text();
  assert(index.includes('false && \'serviceWorker\' in navigator'),'Preview unexpectedly enables game service worker');
  assert(index.includes('action="https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/"'),'Play With Friends form must point to the working online host');
  assert(!index.includes('#friendsToggleBtn,#joinBtn,#installAppBtn'),'Friends must not be swallowed by the artwork-test guard');
- await page.goto(gameUrl,{waitUntil:'domcontentloaded',timeout:45000});
+ await page.goto(base,{waitUntil:'domcontentloaded',timeout:45000});
  await page.waitForFunction(()=>typeof startSoloPractice==='function' && !!window.HORAssetLoading772,null,{timeout:45000});
  const before=await page.evaluate(()=>({ready:!!window.HORAssetLoading772,buttons:!!document.getElementById('soloPracticeBtn'),art:window.HORAssetLoading772.inspect(),serviceWorkerControlled:!!navigator.serviceWorker?.controller}));
  assert(before.ready && before.buttons && !before.serviceWorkerControlled);
@@ -46,7 +40,7 @@ try{
  console.log(JSON.stringify({pass:true,scope:'Actual isolated Cloudflare artwork preview tested on hosted Chromium/mobile viewport, NOT physical Android.',record,hand,errors:errors.slice(0,12)},null,2));
  await page.screenshot({path:'android-preview-hosted.png'});
  const clickPage=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
- await clickPage.goto(gameUrl,{waitUntil:'domcontentloaded',timeout:45000});
+ await clickPage.goto(base,{waitUntil:'domcontentloaded',timeout:45000});
  // A normal player waits for the actual Prepare the House loader to finish.
  await clickPage.waitForFunction(()=>{
    const l=window.HORAssetLoading772?.inspect();
@@ -80,39 +74,30 @@ try{
  assert(buttonHand.decoded>=9,'Play Now art failed to load');
  console.log(JSON.stringify({playNowButton:true,buttonHand}));
  await clickPage.close();
- // Check zero artwork requests on the lightweight entry before choosing a mode.
- // Intercept external navigation so this test cannot create any real multiplayer room.
+ // Test the actual Friends button while intercepting the destination.
+ // Do NOT create any room or send a request to the real multiplayer Worker.
  const friendsPage=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
- const onlineRequests=[];
+ const requests=[];
  await friendsPage.route('https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/**',async route=>{
-   onlineRequests.push(route.request().url());
-   await route.fulfill({status:200,contentType:'text/html',body:'<!doctype html><title>Navigation safely intercepted</title>'});
+   requests.push(route.request().url());
+   await route.fulfill({status:200,contentType:'text/html',body:'<!doctype html><title>Intercepted Friends navigation</title>'});
  });
- const previewRequests=[];
- friendsPage.on('request',req=>{if(req.url().startsWith(base))previewRequests.push({type:req.resourceType(),url:req.url()});});
- await friendsPage.goto(base,{waitUntil:'load',timeout:45000});
- const entryState=await friendsPage.evaluate(()=>({
-   title:document.title,
-   preloads:performance.getEntriesByType('resource').map(x=>x.name),
-   htmlImages:document.images.length,
-   hasChoice:!!document.getElementById('choose-friends')
- }));
- assert(entryState.hasChoice && entryState.htmlImages===0 && entryState.preloads.length===0,
-  'Entry loaded artwork or scripts before choice: '+JSON.stringify(entryState));
- await friendsPage.locator('#choose-friends').click({timeout:20000});
- await friendsPage.waitForURL(url=>url.hostname==='griffin-house-of-rooks-online.jeromeleegriffin.workers.dev',{timeout:12000});
+ await friendsPage.goto(base,{waitUntil:'domcontentloaded',timeout:45000});
+ await friendsPage.waitForFunction(()=>typeof startSoloPractice==='function',null,{timeout:45000});
+ const beforeFriends=await friendsPage.locator('#friendsToggleBtn').evaluate(b=>({type:b.type,formId:b.form?.id,formAction:b.form?.action,outer:b.outerHTML.slice(0,900),readyState:document.readyState}));
+ await friendsPage.waitForFunction(()=>{
+   const l=window.HORAssetLoading772?.inspect();
+   return l?.initialRevealComplete && l.done===l.total && !document.documentElement.classList.contains('house-loading');
+ },null,{timeout:45000});
+ await friendsPage.locator('#friendsToggleBtn').click({timeout:20000,noWaitAfter:true});
+ let navigated=false;
+ try{await friendsPage.waitForURL(url=>url.hostname==='griffin-house-of-rooks-online.jeromeleegriffin.workers.dev',{timeout:6000,waitUntil:'commit'});navigated=true;}catch{}
+ const afterFriends=await friendsPage.evaluate(()=>({href:location.href,action:document.getElementById('hor-online-navigation')?.action,clickedButtonType:document.getElementById('friendsToggleBtn')?.type,bodyClass:document.body.className,status:document.getElementById('lobbyStatus')?.textContent?.slice(0,220)}));
+ console.log(JSON.stringify({friendsNavigationDebug:{beforeFriends,afterFriends,navigated,requests,errors:errors.slice(-5)}}));
+ assert(navigated,'Friends did not navigate: '+JSON.stringify({beforeFriends,afterFriends,requests}));
  const friendsNavigation=new URL(friendsPage.url());
- assert.equal(new URLSearchParams(friendsNavigation.hash.slice(1)).get('create'),'1');
- assert(onlineRequests.length>=1,'Friends did not navigate');
- assert(previewRequests.length===1,'Preview downloaded assets before Friends: '+JSON.stringify(previewRequests));
- console.log(JSON.stringify({friendsButton:'working',noDoubleLoading:true,previewRequests:previewRequests.length,onlineRequestsIntercepted:onlineRequests.length}));
+ assert.equal(new URLSearchParams(friendsNavigation.hash.slice(1)).get('create'),'1','Friends must retain create-room intent');
+ assert(requests.length>=1,'Friends did not submit any navigation');
+ console.log(JSON.stringify({friendsButton:'working',destination:friendsNavigation.origin,createIntent:true,networkRequestsToLiveWorker:0}));
  await friendsPage.close();
- // Choose offline: exactly one full R10 game load from the preview's /game route.
- const offlineChoice=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
- await offlineChoice.goto(base,{waitUntil:'domcontentloaded'});
- await offlineChoice.locator('#choose-offline').click({timeout:20000});
- await offlineChoice.waitForURL(url=>url.pathname==='/game',{timeout:20000});
- await offlineChoice.waitForFunction(()=>!!window.HORAssetLoading772 && !!document.getElementById('soloPracticeBtn'),null,{timeout:35000});
- console.log(JSON.stringify({offlineChoice:'working',gamePage:offlineChoice.url(),loaderReady:true}));
- await offlineChoice.close();
 }finally{await browser.close()}
