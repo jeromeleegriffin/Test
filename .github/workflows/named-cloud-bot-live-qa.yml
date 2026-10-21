@@ -1,0 +1,20 @@
+name: Named Cloud Bots LIVE QA
+on:
+  push:
+    branches: [work/asset-recovery-20261021]
+    paths:
+      - coordination/qa/named-cloud-bot-live-qa.mjs
+      - .github/workflows/named-cloud-bot-live-qa.yml
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check coordination/qa/named-cloud-bot-live-qa.mjs
+      - run: node coordination/qa/named-cloud-bot-live-qa.mjs
