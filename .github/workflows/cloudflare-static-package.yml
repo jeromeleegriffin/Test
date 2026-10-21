@@ -5,6 +5,7 @@ on:
       - work/asset-recovery-20261021
     paths:
       - coordination/qa/build-cloudflare-static.mjs
+      - wrangler.cloudflare-only-live.jsonc
       - coordination/qa/cloudflare-only-stage-smoke.mjs
       - wrangler.cloudflare-only-stage.jsonc
       - .github/workflows/cloudflare-static-package.yml
@@ -47,7 +48,7 @@ jobs:
       - name: Confirm live namespace values in production config (NO DEPLOY)
         run: |
           cp work/wrangler.cloudflare-only-live.jsonc wrangler.cloudflare-only-live.jsonc
-          node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('wrangler.cloudflare-only-live.jsonc','utf8'));if(c.name!=='griffin-house-of-rooks-online'||c.migrations||c.durable_objects.bindings[0].class_name!=='RoomDO'||c.ratelimits.find(x=>x.name==='ENTRY_LIMIT')?.namespace_id!=='14784620261020'||c.ratelimits.find(x=>x.name==='ACTION_LIMIT')?.namespace_id!=='14784620261021'||!c.secrets.required.includes('TEST_GATE_KEY'))process.exit(1);console.log('Live RoomDO binding, rate-limit IDs and secret requirements pinned and no migration requested');"
+          node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('wrangler.cloudflare-only-live.jsonc','utf8'));if(c.name!=='griffin-house-of-rooks-online'||c.migrations||c.exports?.RoomDO?.storage!=='sqlite'||c.exports?.RoomDO?.type!=='durable-object'||c.durable_objects.bindings[0].class_name!=='RoomDO'||c.ratelimits.find(x=>x.name==='ENTRY_LIMIT')?.namespace_id!=='14784620261020'||c.ratelimits.find(x=>x.name==='ACTION_LIMIT')?.namespace_id!=='14784620261021'||!c.secrets.required.includes('TEST_GATE_KEY'))process.exit(1);console.log('Live RoomDO binding, rate-limit IDs and secret requirements pinned and no migration requested');"
       - name: Dry-run production Worker with Cloudflare-native assets (NO LIVE DEPLOY)
         run: npx --yes wrangler@4 deploy --dry-run --config wrangler.cloudflare-only-live.jsonc --outdir cloudflare-dist/live-qa-bundle
       - name: Preserve immutable manifest and Cloudflare-only Worker candidate
