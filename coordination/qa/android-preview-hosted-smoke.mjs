@@ -84,8 +84,13 @@ try{
  });
  await friendsPage.goto(base,{waitUntil:'domcontentloaded',timeout:45000});
  await friendsPage.waitForFunction(()=>typeof startSoloPractice==='function',null,{timeout:45000});
- await friendsPage.locator('#friendsToggleBtn').click({timeout:20000,force:true});
- await friendsPage.waitForURL(url=>url.hostname==='griffin-house-of-rooks-online.jeromeleegriffin.workers.dev',{timeout:20000});
+ const beforeFriends=await friendsPage.locator('#friendsToggleBtn').evaluate(b=>({type:b.type,formId:b.form?.id,formAction:b.form?.action,outer:b.outerHTML.slice(0,900),readyState:document.readyState}));
+ await friendsPage.locator('#friendsToggleBtn').click({timeout:20000,force:true,noWaitAfter:true});
+ let navigated=false;
+ try{await friendsPage.waitForURL(url=>url.hostname==='griffin-house-of-rooks-online.jeromeleegriffin.workers.dev',{timeout:6000,waitUntil:'commit'});navigated=true;}catch{}
+ const afterFriends=await friendsPage.evaluate(()=>({href:location.href,action:document.getElementById('hor-online-navigation')?.action,clickedButtonType:document.getElementById('friendsToggleBtn')?.type,bodyClass:document.body.className,status:document.getElementById('lobbyStatus')?.textContent?.slice(0,220)}));
+ console.log(JSON.stringify({friendsNavigationDebug:{beforeFriends,afterFriends,navigated,requests,errors:errors.slice(-5)}}));
+ assert(navigated,'Friends did not navigate: '+JSON.stringify({beforeFriends,afterFriends,requests}));
  const friendsNavigation=new URL(friendsPage.url());
  assert.equal(new URLSearchParams(friendsNavigation.hash.slice(1)).get('create'),'1','Friends must retain create-room intent');
  assert(requests.length>=1,'Friends did not submit any navigation');
