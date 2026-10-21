@@ -1,0 +1,30 @@
+{
+  "status": "R9_OWNER_REPORTS_AUDIO_STILL_FAILS_OPT_IN_DIAGNOSTICS_LIVE",
+  "date": "2026-10-21",
+  "sourceCommit": "ebd8dcc7924afe70bea9bcbd4f9d1dcc93b8c9a8",
+  "sourceBranch": "work/r9-audio-diagnostics-20261021",
+  "cloudflareVersion": "2f2dc7d6-90bb-4f99-9443-76041bd6829d",
+  "deployment": "828a0a52-9d8f-4d8a-ae43-d22ae18cb2a4",
+  "workerSha256": "436fb3595828144000944dcba211ec15345a9a1d423815bbea51600fe0fbab43",
+  "exactLiveSourceMatch": true,
+  "gameAssetCommit": "374bf70223a9df7113d83786cd55f2ee6c25f4ae",
+  "rollbackVersion": "45a7b80b-1f57-43f3-a077-0bb9ee8cac6e",
+  "normalGameAssetsChanged": false,
+  "approvedAudioOrPortraitsChanged": false,
+  "roomStorageReset": false,
+  "previewsEnabled": false,
+  "reportId": "a9e644ea034140c79a2bdab4ca54d0e2",
+  "diagnosticObject": "__ghr_audio_diagnostics_v1",
+  "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+  "recording": "Screen_Recording_20261021_020105_Chrome.mp4",
+  "recordingLibraryId": "libfile_2255e1ee1eb08191af548e787015c506",
+  "evidence": "95.689s recording shows 1x before 3x/MAX. Waveform matches game Pass voice at33.37s and bid-down at15.552s. Exact phone cause remains unconfirmed. Cloud adapter lacks legacy card-play sound dispatch; do not treat that as complete diagnosis.",
+  "tests": [
+    "opt-in injection and normal entry unchanged",
+    "signed session and same origin report validation",
+    "strict field whitelist and separate report object",
+    "size and rate limits",
+    "live source exact equality and bindings retained"
+  ],
+  "next": "Open optional sound-check link; Test sound; select heard/no sound; play until symptom; read report through connected Cloudflare SQL API. Do not ask owner to reconnect Cloudflare. Browser native credential runtime remains unavailable."
+}
