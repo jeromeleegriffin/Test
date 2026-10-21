@@ -38,4 +38,17 @@ try{
  assert(!hand.serviceWorkerControlled,'Host preview mistakenly controlled by service worker');
  console.log(JSON.stringify({pass:true,scope:'Actual isolated Cloudflare artwork preview tested on hosted Chromium/mobile viewport, NOT physical Android.',record,hand,errors:errors.slice(0,12)},null,2));
  await page.screenshot({path:'android-preview-hosted.png'});
+ const clickPage=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
+ await clickPage.goto(base,{waitUntil:'domcontentloaded',timeout:45000});
+ await clickPage.locator('#soloPracticeBtn').click({timeout:20000,force:true});
+ await clickPage.waitForFunction(()=>document.body.classList.contains('in-game') && document.querySelectorAll('#myHand > .card-face').length===10 && game?.phase!=='dealing',null,{timeout:55000});
+ const buttonHand=await clickPage.evaluate(()=>({
+   phase:game.phase,
+   cards:document.querySelectorAll('#myHand > .card-face').length,
+   decoded:[...document.querySelectorAll('#myHand > .card-face img')].filter(x=>x.naturalWidth>0).length
+ }));
+ assert.equal(buttonHand.cards,10);
+ assert(buttonHand.decoded>=9,'Play Now art failed to load');
+ console.log(JSON.stringify({playNowButton:true,buttonHand}));
+ await clickPage.close();
 }finally{await browser.close()}
