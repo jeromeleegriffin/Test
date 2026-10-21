@@ -9,7 +9,7 @@
   // Private 846 adapter, eight-character Cloudflare room codes.
   const codeField = document.getElementById("hor-room-code");
   if (codeField) codeField.maxLength = 8;
-  if (!["846-premium-owner-repair-20261020-r7-cumulative"].includes(window.HOR_SCRIPT_BUILD)) {
+  if (!["846-r8-friends-voices-portrait-20261021"].includes(window.HOR_SCRIPT_BUILD)) {
     const notice = document.getElementById("lobbyStatus");
     if (notice) notice.textContent = "This game version has not been verified for private cloud play. Please wait for the test adapter update.";
     // Fail closed rather than silently falling back to browser-hosted rooms.
@@ -759,15 +759,32 @@
   window.scheduleBot = (...args) => credentials ? undefined : native.scheduleBot?.(...args);
   window.runBotAction = (...args) => credentials ? undefined : native.runBotAction?.(...args);
   status("Private cloud room test ready.");
-  reconnectCloudRoom().then((resumed) => {
-    if (!resumed) {
-      const invite=window.GHR_CLOUD_INVITE;
-      if (/^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8}$/.test(invite||"")) {
-        const input=document.getElementById("hor-room-code");if(input)input.value=invite;
-        try{setLobbyJoining(true);}catch(_){}
-        status("Invited to table "+invite+". Enter your name and take your seat.");
-      } else status("Online table ready. Create a room or join with a code.");
+  const requestedName = String(window.GHR_CLOUD_NAME || "").trim().slice(0, 12);
+  const playerNameField = document.getElementById("hor-player-name");
+  if (requestedName && playerNameField) playerNameField.value = requestedName;
+  async function launchCloudEntry() {
+    const invite = window.GHR_CLOUD_INVITE;
+    if (/^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8}$/.test(invite || "")) {
+      const input = document.getElementById("hor-room-code");
+      if (input) input.value = invite;
+      if ((playerNameField?.value || "").trim()) {
+        await joinByCode();
+      } else {
+        try { setLobbyJoining(true); } catch (_) {}
+        status("Invited to table " + invite + ". Enter your name and take your seat.");
+      }
+      return;
     }
-  });
+    if (window.GHR_CLOUD_CREATE) {
+      if (!(playerNameField?.value || "").trim()) {
+        status("Enter your name first, then tap Play With Friends to create a table.");
+        return;
+      }
+      await createCloudRoom();
+      return;
+    }
+    if (!await reconnectCloudRoom()) status("Online table ready. Create a room or join with a code.");
+  }
+  launchCloudEntry().catch(error => status("Could not open online table: " + error.message));
 })();
 

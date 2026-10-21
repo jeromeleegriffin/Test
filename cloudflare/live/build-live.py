@@ -26,7 +26,7 @@ s=s[:start]+'''    const isEntry = ["/", "/index.html", "/cloud-game/index.html"
         session=await issuePrivateSession(env.TEST_GATE_KEY);
       }
       try {
-        const upstream=await fetch("https://raw.githubusercontent.com/jeromeleegriffin/Test/2ef90e8264c4f0e887b8df118a563f61e6d47098/index.html",{redirect:"follow",cf:{cacheEverything:true,cacheTtlByStatus:{"200-299":86400,"300-599":-1}}});
+        const upstream=await fetch("https://raw.githubusercontent.com/jeromeleegriffin/Test/18cf361be26dd5d65b3c8aa384c2a5434f730a93/index.html",{redirect:"follow",cf:{cacheEverything:true,cacheTtlByStatus:{"200-299":86400,"300-599":-1}}});
         if (!upstream.ok) return new Response("The game is temporarily unavailable. Please reload shortly.",{status:502,headers:{"cache-control":"no-store"}});
         const response=secureIntegratedGameHtml(injectCloudGameAdapter(await upstream.text()));
         if (session) response.headers.set("Set-Cookie",`${PRIVATE_SESSION_COOKIE}=${session.token}; Path=/; Max-Age=${Math.floor(PRIVATE_SESSION_MS/1000)}; HttpOnly; Secure; SameSite=Strict`);
@@ -41,7 +41,7 @@ s=s.replace('if (!action) return serveClient(request, env);','if (!action) retur
 a=(root/'cloudflare/live/adapter-live.js').read_text()
 start=s.index('var CLOUD_GAME_ADAPTER = ');end=s.index('\n// worker.mjs\nvar IDLE_ROOM_MS',start)
 s=s[:start]+'var CLOUD_GAME_ADAPTER = '+json.dumps(a)+';\n'+s[end:]
-s=s.replace('history.replaceState(null,"",location.pathname+"?cloud=1");', 'window.GHR_CLOUD_INVITE=new URLSearchParams(location.search).get("room")||"";history.replaceState(null,"",location.pathname+"?cloud=1");')
+s=s.replace('history.replaceState(null,"",location.pathname+"?cloud=1");', '(()=>{const q=new URLSearchParams(location.hash.slice(1)),p=new URLSearchParams(location.search);window.GHR_CLOUD_INVITE=q.get("room")||p.get("room")||"";window.GHR_CLOUD_CREATE=(q.get("create")||p.get("create"))==="1";window.GHR_CLOUD_NAME=(q.get("name")||p.get("name")||"").slice(0,12);history.replaceState(null,"",location.pathname+"?cloud=1")})();')
 s=s.replace('async cleanup(roomId, { now', 'async closeTable(roomId, token) { const room=await this.storage.get(roomId); if(!room)throw Error("ROOM_NOT_FOUND"); if(this.#authorizedSeat(room,token)!==0)throw Error("HOST_ONLY"); if(room.status!=="closed"){room.status="closed";room.closedAt=Date.now();room.lastActivityAt=Date.now();room.revision++;await this.storage.put(roomId,room);}return {status:"closed"}; }\n  async cleanup(roomId, { now')
 s=s.replace('if (!room) throw new Error("ROOM_NOT_FOUND");\n    return room;', 'if (!room) throw new Error("ROOM_NOT_FOUND");\n    if(room.status==="closed")throw Error("ROOM_CLOSED");\n    return room;')
 s=s.replace('var fail = /* @__PURE__ */ __name((error) => {', 'var fail = /* @__PURE__ */ __name((error) => {\n  if(error?.message==="ROOM_CLOSED")return json({error:"ROOM_CLOSED"},410);')
@@ -128,4 +128,5 @@ s=s.replace('opening:room.opening?{handNumber:', 'opening:room.opening?{id:room.
 s=s.replace('async readyForBidding(roomId, token, handNumber)', 'async readyForBidding(roomId, token, handNumber, openingId)')
 s=s.replace('if(room.opening&&!room.opening.readySeats.includes(seat))', 'if(openingId&&room.opening&&openingId!==room.opening.id)throw Error("STALE_DEAL");if(room.opening&&!room.opening.readySeats.includes(seat))')
 s=s.replace('body.handNumber)', 'body.handNumber,body.openingId)')
+s=s.replace('18cf361be26dd5d65b3c8aa384c2a5434f730a93', '2ef90e8264c4f0e887b8df118a563f61e6d47098')
 (root/'cloudflare/live/worker-live.mjs').write_text(s)
