@@ -1,0 +1,20 @@
+name: Deployed Cloudflare-only static QA
+on:
+  push:
+    branches: [work/asset-recovery-20261021]
+    paths:
+      - coordination/qa/cloudflare-stage-direct-assets.mjs
+      - .github/workflows/cloudflare-stage-direct-qa.yml
+permissions:
+  contents: read
+jobs:
+  stage-files:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check coordination/qa/cloudflare-stage-direct-assets.mjs
+      - run: node coordination/qa/cloudflare-stage-direct-assets.mjs
