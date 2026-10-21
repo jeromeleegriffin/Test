@@ -56,4 +56,11 @@ for(const options of [{includeRed2:false},{specialsAnytime:true},{shootMoonEnabl
  const one=x1ExtendedView(s,2,room.x1,0);assert.equal(one.partner,0);assert.deepEqual(one.partnerHand,s.hands[0].map(c=>one.cards.findIndex(d=>d.id===c.id)));
  room.seats[1].isBot=false;room.gameState.players[1].isBot=false;assert.equal(x1EligiblePartner(room,2),null);reports.privacy++;
 }
+// Approved Anchor route: feed the sole-human partner's void, never another hand.
+{
+ const s=ready({shootMoonEnabled:false}),room=roomFor(s),deck=makeDeck(s.settings.rules),card=id=>deck.find(c=>c.id===id);
+ s.currentPlayer=2;s.bidder=2;s.bid=100;s.players[2].avatar='anchor';s.players[2].name='Anchor';s.hands[2]=[card('red-5'),card('green-14')];s.hands[0]=[card('green-1')];
+ for(const seat of [1,3])Object.defineProperty(s.hands,seat,{get(){throw Error('ANCHOR_OPPONENT_READ');}});
+ assert.equal(x1EligiblePartner(room,2),0);assert.equal(api.x1AnchorRoute(s,2,0).id,'red-5');assert.equal(api.x1AnchorRoute(s,2,null),null);
+}
 fs.mkdirSync(new URL('./tests/',import.meta.url),{recursive:true});fs.writeFileSync(new URL('./tests/verification.json',import.meta.url),JSON.stringify(reports,null,2));console.log(JSON.stringify(reports));
