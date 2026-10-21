@@ -1,0 +1,22 @@
+name: Cloudflare-only staged gameplay QA
+on:
+  push:
+    branches: [work/asset-recovery-20261021]
+    paths:
+      - coordination/qa/cloudflare-only-stage-smoke.mjs
+      - .github/workflows/cloudflare-stage-gameplay-qa.yml
+permissions:
+  contents: read
+jobs:
+  hosted:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-save --no-package-lock playwright
+      - run: npx playwright install --with-deps chromium
+      - run: node --check coordination/qa/cloudflare-only-stage-smoke.mjs
+      - run: node coordination/qa/cloudflare-only-stage-smoke.mjs
