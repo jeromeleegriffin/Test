@@ -1,0 +1,47 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "griffin-house-of-rooks-online",
+  "main": "./cloudflare-dist/worker-cloud-only.mjs",
+  "compatibility_date": "2026-10-14",
+  "workers_dev": true,
+  "preview_urls": false,
+  "keep_vars": true,
+  "assets": {
+    "directory": "./cloudflare-dist/public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "ROOMS",
+        "class_name": "RoomDO"
+      }
+    ]
+  },
+  "ratelimits": [
+    {
+      "name": "ENTRY_LIMIT",
+      "namespace_id": "14784620261020",
+      "simple": {
+        "limit": 12,
+        "period": 60
+      }
+    },
+    {
+      "name": "ACTION_LIMIT",
+      "namespace_id": "14784620261021",
+      "simple": {
+        "limit": 360,
+        "period": 60
+      }
+    }
+  ],
+  "secrets": {
+    "required": [
+      "TEST_GATE_KEY"
+    ]
+  }
+}
