@@ -1,0 +1,47 @@
+name: Cloudflare-only R10 asset package
+on:
+  push:
+    branches:
+      - work/asset-recovery-20261021
+    paths:
+      - coordination/qa/build-cloudflare-static.mjs
+      - .github/workflows/cloudflare-static-package.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Preserve exact owner-approved R10 immutable game source
+        uses: actions/checkout@v4
+        with:
+          ref: 90078a710948c7643caafb18986e34dc71ce7cee
+          path: source
+      - name: Get isolated artwork repair and full X1 live Worker source
+        uses: actions/checkout@v4
+        with:
+          ref: work/asset-recovery-20261021
+          path: work
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify tool syntax
+        run: node --check work/coordination/qa/build-cloudflare-static.mjs
+      - name: Stage Cloudflare static content without deploying
+        run: node work/coordination/qa/build-cloudflare-static.mjs source work cloudflare-dist
+      - name: Verify packaged Cloudflare-only X1 worker syntax
+        run: node --check cloudflare-dist/worker-cloud-only.mjs
+      - name: Audit exact source and no live deployment
+        run: |
+          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('cloudflare-dist/audit/release-manifest.json','utf8'));if(m.assetCount<1400||m.checkedShellDependencies<1400||m.fetchedFromGitHubAtRuntime||!m.noLiveDeploy)process.exit(1);console.log('Cloudflare independent asset package verified: '+m.assetCount+' files, '+m.checkedShellDependencies+' shell checks');"
+      - name: Preserve immutable manifest and Cloudflare-only Worker candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-only-static-preflight-${{ github.run_id }}
+          path: |
+            cloudflare-dist/audit/release-manifest.json
+            cloudflare-dist/audit/SHA256SUMS
+            cloudflare-dist/worker-cloud-only.mjs
+          retention-days: 21
