@@ -1,0 +1,29 @@
+name: Isolated artwork recovery Chromium QA
+on:
+  push:
+    branches: [work/asset-recovery-20261021]
+    paths:
+      - asset-loading772.js
+      - coordination/qa/browser-artwork-recovery.mjs
+      - .github/workflows/artwork-recovery-qa.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-art:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-save --no-package-lock playwright
+      - run: npx playwright install --with-deps chromium
+      - run: node coordination/qa/browser-artwork-recovery.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: artwork-qa-${{ github.run_id }}
+          path: artwork-recovery-browser.png
+          if-no-files-found: ignore
