@@ -41,7 +41,23 @@ try{
  const clickPage=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
  await clickPage.goto(base,{waitUntil:'domcontentloaded',timeout:45000});
  await clickPage.locator('#soloPracticeBtn').click({timeout:20000,force:true});
- await clickPage.waitForFunction(()=>document.body.classList.contains('in-game') && document.querySelectorAll('#myHand > .card-face').length===10 && game?.phase!=='dealing',null,{timeout:55000});
+ let clickSucceeded=false;
+ try {
+   await clickPage.waitForFunction(()=>document.body.classList.contains('in-game') && document.querySelectorAll('#myHand > .card-face').length===10 && game?.phase!=='dealing',null,{timeout:22000});
+   clickSucceeded=true;
+ } catch {}
+ const clickDiagnostics=await clickPage.evaluate(()=>({
+   inGame:document.body.classList.contains('in-game'),
+   houseLoading:document.documentElement.classList.contains('house-loading'),
+   gamePhase:typeof game!=='undefined' ? game?.phase:null,
+   visibleCards:document.querySelectorAll('#myHand > .card-face').length,
+   loadingInfo:window.HORAssetLoading772?.inspect(),
+   loadingPanel:document.getElementById('houseLoading')?.textContent?.slice(0,700),
+   lobbyHidden:document.getElementById('lobby')?.classList.contains('hidden'),
+   btnText:document.getElementById('soloPracticeBtn')?.textContent?.slice(0,90)
+ }));
+ console.log(JSON.stringify({clickSucceeded,clickDiagnostics},null,2));
+ if (!clickSucceeded) await clickPage.screenshot({path:'android-preview-click-failure.png'});
  const buttonHand=await clickPage.evaluate(()=>({
    phase:game.phase,
    cards:document.querySelectorAll('#myHand > .card-face').length,
