@@ -371,12 +371,33 @@
       // Retain the failed node until a real load event confirms recovery.
     }
   }
-  addEventListener('online', restoreVisibleArtwork);
-  addEventListener('focus', restoreVisibleArtwork);
+  // An interrupted stylesheet can leave card sizing or approved Bid Box
+  // artwork incomplete even after image downloads resume. Reuse each original
+  // stylesheet link and its cascade position, without injecting CSS or
+  // reloading the game. Also covers errors fired before this script initialized.
+  function restoreUnloadedStylesheets() {
+    if (navigator.onLine === false) return;
+    const now = Date.now();
+    for (const link of document.querySelectorAll('link[rel~="stylesheet"]')) {
+      if (link.sheet || !link.href) continue;
+      const url = new URL(link.href, document.baseURI);
+      if (url.origin !== location.origin) continue;
+      if (now - Number(link.dataset.lastRecovery772 || 0) < 5000) continue;
+      link.dataset.lastRecovery772 = String(now);
+      url.searchParams.set('fresh', String(now));
+      link.href = url.href;
+    }
+  }
+  function restoreNetworkArtworkAndStyles() {
+    restoreVisibleArtwork();
+    restoreUnloadedStylesheets();
+  }
+  addEventListener('online', restoreNetworkArtworkAndStyles);
+  addEventListener('focus', restoreNetworkArtworkAndStyles);
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) restoreVisibleArtwork();
+    if (!document.hidden) restoreNetworkArtworkAndStyles();
   });
-  navigator.connection?.addEventListener?.('change', restoreVisibleArtwork);
+  navigator.connection?.addEventListener?.('change', restoreNetworkArtworkAndStyles);
   window.HORAssetLoading772 = {
     image,
     prepare,
