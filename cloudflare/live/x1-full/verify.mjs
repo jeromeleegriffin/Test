@@ -18,8 +18,8 @@ for(let mask=0;mask<256;mask++){
  reports.ruleConfigurations++;
 }
 // Compare scoring utility to final reducer outcomes, including negative-score Moon.
-for(const moon of [false,true])for(const bidOnly of [false,true])for(const nestTo of ['lastTrick','bidder'])for(const scores of [[0,0],[-120,450]])for(const cut of [0,4,20,40]){
- const s=ready({targetScore:500,bidOnlyScoring:bidOnly,nestGoesTo:nestTo},moon?200:100),deck=makeDeck(s.settings.rules);s.scores=scores.slice();s.shotTheMoon=moon;s.bid=moon?200:100;s.nestCards=deck.slice(40);s.tricksTaken=[deck.slice(0,cut),deck.slice(cut,40)];s.hands=[[],[],[],[]];
+for(const moon of [false,true])for(const bidOnly of [false,true])for(const nestTo of ['lastTrick','bidder'])for(const sandbag of [false,true])for(const scores of [[0,0],[-120,450]])for(const cut of [0,4,20,40]){
+ const s=ready({targetScore:500,bidOnlyScoring:bidOnly,nestGoesTo:nestTo,sandbagging:sandbag},moon?200:100),deck=makeDeck(s.settings.rules);s.scores=scores.slice();s.sandbagOverpoints=[90,90];s.shotTheMoon=moon;s.bid=moon?200:100;s.nestCards=deck.slice(40);s.tricksTaken=[deck.slice(0,cut),deck.slice(cut,40)];s.hands=[[],[],[],[]];
  const done=finishHand(s,1),points=[done.lastSummary.pointsA,done.lastSummary.pointsB],v=x1ExtendedView(s,0,freshOnlineX1(s));const actual=done.matchResult?done.matchResult==='Tie'?0:done.matchResult==='Team A'?10000:-10000:Math.max(-9999,Math.min(9999,done.scores[0]-done.scores[1]));assert.equal(X1_RULES.utility(v,points),actual);reports.scoreComparisons++;
 }
 const cases=[{}, {includeRed2:false}, {includeOnes:false,includeRed2:false,includeRook:false}, {onesHigh:false,rookLowest:true}, {includeRed1:true,red2Points:10}, {specialsAnytime:true,mustTrumpWhenVoid:true}, {nestGoesTo:'bidder',bidOnlyScoring:true}, {openWidow:true}, {handSize:9,minBid:70}];
@@ -55,5 +55,12 @@ for(const options of [{includeRed2:false},{specialsAnytime:true},{shootMoonEnabl
  assert.deepEqual(x1ExtendedView(hidden,1,room.x1),normal);const guarded={...room,gameState:hidden};const decision=chooseOnlineBotAction(guarded,1);assert.notEqual(decision.engine,'legacy',decision.reason);assert.deepEqual(decision.action,chooseOnlineBotAction(room,1).action);assert.equal(x1EligiblePartner(room,2),0);assert.equal(x1EligiblePartner(room,1),null);
  const one=x1ExtendedView(s,2,room.x1,0);assert.equal(one.partner,0);assert.deepEqual(one.partnerHand,s.hands[0].map(c=>one.cards.findIndex(d=>d.id===c.id)));
  room.seats[1].isBot=false;room.gameState.players[1].isBot=false;assert.equal(x1EligiblePartner(room,2),null);reports.privacy++;
+}
+// Approved Anchor route: feed the sole-human partner's void, never another hand.
+{
+ const s=ready({shootMoonEnabled:false}),room=roomFor(s),deck=makeDeck(s.settings.rules),card=id=>deck.find(c=>c.id===id);
+ s.currentPlayer=2;s.bidder=2;s.bid=100;s.players[2].avatar='anchor';s.players[2].name='Anchor';s.hands[2]=[card('red-5'),card('green-14')];s.hands[0]=[card('green-1')];
+ for(const seat of [1,3])Object.defineProperty(s.hands,seat,{get(){throw Error('ANCHOR_OPPONENT_READ');}});
+ assert.equal(x1EligiblePartner(room,2),0);assert.equal(api.x1AnchorRoute(s,2,0).id,'red-5');assert.equal(api.x1AnchorRoute(s,2,null),null);
 }
 fs.mkdirSync(new URL('./tests/',import.meta.url),{recursive:true});fs.writeFileSync(new URL('./tests/verification.json',import.meta.url),JSON.stringify(reports,null,2));console.log(JSON.stringify(reports));

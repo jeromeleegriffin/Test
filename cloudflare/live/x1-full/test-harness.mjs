@@ -6,7 +6,7 @@ const source =
       'import { DurableObject } from "cloudflare:workers";',
       'class DurableObject {constructor(ctx,env){this.ctx=ctx;this.env=env;}}'
     ) +
-  '\nexport {RoomService,createMatch,submitBid,discardCards,chooseTrump,playCard,makeDeck,canPlay,x1PlayInput,x1BidInput,freshOnlineX1,chooseOnlineBotAction,observeOnlineX1,x1CardId,x1Compatible,ONLINE_X1,onlineX1Proof,X1_RULES,x1ExtendedView,x1EligiblePartner,compareCards,cardPoints,effectiveRank,finishHand,normalizeOptions,playerView,isPermanentTrump,x1ActionLegal};';
+  '\nexport {RoomService,createMatch,submitBid,discardCards,chooseTrump,playCard,makeDeck,canPlay,x1PlayInput,x1BidInput,freshOnlineX1,chooseOnlineBotAction,observeOnlineX1,x1CardId,x1Compatible,ONLINE_X1,onlineX1Proof,X1_RULES,x1ExtendedView,x1EligiblePartner,compareCards,cardPoints,effectiveRank,finishHand,normalizeOptions,playerView,isPermanentTrump,x1ActionLegal,x1AnchorRoute};';
 export let api;try {api = await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'));}catch(e){console.error(e.name,e.message);process.exit(1);}
 export function database() {
   const map = new Map();
