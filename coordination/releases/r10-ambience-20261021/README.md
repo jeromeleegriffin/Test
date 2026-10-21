@@ -12,7 +12,7 @@ Native runtime846-r10-ambience-levels-20261021. All three sites must be updated 
 
 ## Verification
 
-Original R9 fails real-PCM graph test at wind−84.3dBFS. Candidate estimates wind−44.3 and fire−55.2 at unchanged defaults. Real preserved PCM traverses actual module-created graph in a simulated AudioContext; validates output/mixer category, gain applied once, bounded curve, repeated tap/recovery no duplicate loops, saved preferences, slider zero/mute, maximum slider headroom and stale-stop cleanup. It is not actual browser audible acceptance. Existing context-recovery, confirmed cloud-card audio, entry/create/invite, privacy and collection/reconnect regressions pass. Local changed-file formatting passes; GitHub source checks pending before publication. Cloud Browser native credential runtime still unavailable; do not repeat authentication loops.
+Original R9 fails real-PCM graph test at wind−84.3dBFS. Candidate estimates wind−44.3 and fire−55.2 at unchanged defaults. Real preserved PCM traverses actual module-created graph in a simulated AudioContext; validates output/mixer category, gain applied once, bounded curve, repeated tap/recovery no duplicate loops, saved preferences, slider zero/mute, maximum slider headroom and stale-stop cleanup. It is not actual browser audible acceptance. Existing context-recovery, confirmed cloud-card audio, entry/create/invite, privacy and collection/reconnect regressions pass. Local changed-file formatting passes; Asset source check39557639452 and production candidate source check39557744220 passed before publication; final main/Pages checks are recorded in LIVE_RECEIPT.json. Cloud Browser native credential runtime still unavailable; do not repeat authentication loops.
 
 ## Release controls
 

@@ -2,18 +2,18 @@
   "brainVersion": "AG",
   "parentVersion": "AF",
   "updated": "2026-10-21",
-  "runtime": "846-r9-audio-recovery-20261021",
+  "runtime": "846-r10-ambience-levels-20261021",
   "documentationOnly": true,
   "files": [
     {
       "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
-      "bytes": 24086,
-      "sha256": "ef0dbaa50737bfc46f58f364226ee120dc281956d937a88d417aa7c518a1c750"
+      "bytes": 25217,
+      "sha256": "c9c1bdda12ae52ead10d4b2d69e509d37caf185971e0e654637f32d81cfccbc5"
     },
     {
       "path": "files/00_START_HERE/START_HERE.md",
-      "bytes": 34338,
-      "sha256": "c8e80ddf05221412809ed59d6f9cbf9101c0961525f4031561263b71d4734dad"
+      "bytes": 38862,
+      "sha256": "152259f70605aff0b6828966084857d8493a0f95e9421745ae6c40465f904913"
     },
     {
       "path": "files/01_MASTER_BANK/CHAT_CONTINUITY_RULE.md",
@@ -27,8 +27,8 @@
     },
     {
       "path": "files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
-      "bytes": 34338,
-      "sha256": "c8e80ddf05221412809ed59d6f9cbf9101c0961525f4031561263b71d4734dad"
+      "bytes": 38862,
+      "sha256": "152259f70605aff0b6828966084857d8493a0f95e9421745ae6c40465f904913"
     },
     {
       "path": "files/01_MASTER_BANK/PERMANENT_UI_VISUAL_VERIFICATION_RULE.md",
@@ -66,5 +66,5 @@
       "sha256": "2ff2cccd4659370ee9629c693e89ad989beefdd5e0155d658c5bc84725238cbb"
     }
   ],
-  "currentReleaseReceipt": "../../../coordination/releases/online-card-audio-20261021/LIVE_RECEIPT.json"
+  "currentReleaseReceipt": "../../../coordination/releases/r10-ambience-20261021/LIVE_RECEIPT.json"
 }

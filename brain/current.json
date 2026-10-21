@@ -16,188 +16,148 @@
   "startupPrompt": "versions/AG/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
   "history": "history.html",
   "previousVersion": "AF",
-  "sha256": "c8e80ddf05221412809ed59d6f9cbf9101c0961525f4031561263b71d4734dad",
+  "sha256": "152259f70605aff0b6828966084857d8493a0f95e9421745ae6c40465f904913",
   "sha256Scope": "Master Brain AG primary document",
-  "checkpoint": "online-card-audio-20261021",
-  "checkpointStatus": "ONLINE_CARD_AUDIO_REPAIR_DEPLOYED_AUDIBLE_ACCEPTANCE_PENDING_AMBIENCE_UNRESOLVED",
-  "latestGameBuild": "846-r9-audio-recovery-20261021",
+  "checkpoint": "r10-ambience-20261021",
+  "checkpointStatus": "ALL_THREE_R10_DEPLOYED_PHONE_AMBIENCE_ACCEPTANCE_PENDING",
+  "latestGameBuild": "846-r10-ambience-levels-20261021",
   "runtimeStatusAuthority": "currentRuntimeRelease and Master Brain AG; frozen historical fields remain in the previous pointer snapshot",
   "currentRuntimeRelease": {
-    "status": "ALL_THREE_R9_DEPLOYED_OWNER_REPORTS_AUDIO_FAILURE",
+    "status": "ALL_THREE_R10_DEPLOYED_PHONE_AMBIENCE_ACCEPTANCE_PENDING",
     "date": "2026-10-21",
-    "runtime": "846-r9-audio-recovery-20261021",
-    "ownerAuthorizedPublicationDespiteUnavailableAudibleVerification": true,
+    "runtime": "846-r10-ambience-levels-20261021",
+    "ownerConfirmedCardSoundsRestored": true,
     "test": {
       "url": "https://jeromeleegriffin.github.io/Test/",
-      "runtimeCommit": "5ba5b53031bd355875ff36101ec4f7ef9449963b",
-      "assetCommit": "374bf70223a9df7113d83786cd55f2ee6c25f4ae",
-      "sourceCheckRun": 39551574389,
-      "assetSourceCheckRun": 39551478253,
-      "pagesRun": 39551573815,
-      "conclusion": "success",
-      "rollbackCommit": "bee020d4dd9edd66b391cd3505610c4d8a4e4228"
+      "runtimeCommit": "a5804a9035b3a2f56b38231cec4ff44da686655f",
+      "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
+      "assetSourceCheck": {
+        "id": 39557639452,
+        "conclusion": "success"
+      },
+      "runs": [
+        {
+          "id": 39557812112,
+          "name": "Source checks",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 39557811988,
+          "name": "pages build and deployment",
+          "status": "in_progress",
+          "conclusion": null
+        }
+      ],
+      "rollbackCommit": "517c308a9aa21e518908344020835a3a00ff8a68",
+      "pages": {
+        "id": 39557811988,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      "sourceCheck": {
+        "id": 39557812112,
+        "conclusion": "success"
+      }
     },
     "production": {
       "url": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
-      "runtimeCommit": "54342d814c7063f808a0e8614b23b9b6f9bbc763",
-      "sourceCheckRun": 39551600978,
-      "branchSourceCheckRun": 39551522599,
-      "pagesRun": 39551600682,
-      "conclusion": "success",
-      "rollbackCommit": "0330bcdde34b4fe47587adeda9f6379ce53b1459"
+      "runtimeCommit": "c52c097473c2476957306c6492c695c4bb6946b7",
+      "branchSourceCheck": {
+        "id": 39557744220,
+        "conclusion": "success"
+      },
+      "runs": [
+        {
+          "id": 39557815019,
+          "name": "Source checks",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 39557814680,
+          "name": "pages build and deployment",
+          "status": "queued",
+          "conclusion": null
+        },
+        {
+          "id": 39557744220,
+          "name": "Source checks",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "rollbackCommit": "70cc652f0a425f2b3428aa3f7db17f1dc36ef0a8",
+      "pages": {
+        "id": 39557814680,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      "sourceCheck": {
+        "id": 39557815019,
+        "conclusion": "success"
+      }
     },
     "cloudflare": {
       "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
       "worker": "griffin-house-of-rooks-online",
-      "version": "60c2b7e7-3787-4b09-be10-d232f988b6d9",
-      "deployment": "c9e04e07-d161-49c8-9be6-977c03b139c4",
-      "assetCommit": "374bf70223a9df7113d83786cd55f2ee6c25f4ae",
-      "sourceCommit": "c13c6c45b085d46c54c7aea6f7c3a2804876b886",
-      "workerSha256": "d5a98946ed196c14f4335dcac2c89de096314f277392ed5cbc53e17827c5d5db",
+      "version": "d4d2ed21-45da-4652-bd09-95ce85b41c12",
+      "deployment": "0567f9b0-2512-43f9-aaa3-a64d0ef42e52",
+      "workerSha256": "a8cb41c717bf1178373e559cc6b36263d45e172474870849f8b0af4e88672eae",
+      "exactServedSourceMatch": true,
+      "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
       "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-      "rollbackVersion": "2f2dc7d6-90bb-4f99-9443-76041bd6829d",
+      "rollbackVersion": "60c2b7e7-3787-4b09-be10-d232f988b6d9",
       "roomStorageReset": false,
-      "secretRetained": true,
-      "rateLimitsRetained": true,
-      "previewUrlsEnabled": false,
-      "paidUpgradePerformed": false,
-      "diagnosticWrapper": {
-        "status": "R9_OWNER_REPORTS_AUDIO_STILL_FAILS_OPT_IN_DIAGNOSTICS_LIVE",
-        "date": "2026-10-21",
-        "sourceCommit": "ebd8dcc7924afe70bea9bcbd4f9d1dcc93b8c9a8",
-        "sourceBranch": "work/r9-audio-diagnostics-20261021",
-        "cloudflareVersion": "2f2dc7d6-90bb-4f99-9443-76041bd6829d",
-        "deployment": "828a0a52-9d8f-4d8a-ae43-d22ae18cb2a4",
-        "workerSha256": "436fb3595828144000944dcba211ec15345a9a1d423815bbea51600fe0fbab43",
-        "exactLiveSourceMatch": true,
-        "gameAssetCommit": "374bf70223a9df7113d83786cd55f2ee6c25f4ae",
-        "rollbackVersion": "45a7b80b-1f57-43f3-a077-0bb9ee8cac6e",
-        "normalGameAssetsChanged": false,
-        "approvedAudioOrPortraitsChanged": false,
-        "roomStorageReset": false,
-        "previewsEnabled": false,
-        "reportId": "a9e644ea034140c79a2bdab4ca54d0e2",
-        "diagnosticObject": "__ghr_audio_diagnostics_v1",
-        "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-        "recording": "Screen_Recording_20261021_020105_Chrome.mp4",
-        "recordingLibraryId": "libfile_2255e1ee1eb08191af548e787015c506",
-        "evidence": "95.689s recording shows 1x before 3x/MAX. Waveform matches game Pass voice at33.37s and bid-down at15.552s. Exact phone cause remains unconfirmed. Cloud adapter lacks legacy card-play sound dispatch; do not treat that as complete diagnosis.",
-        "tests": [
-          "opt-in injection and normal entry unchanged",
-          "signed session and same origin report validation",
-          "strict field whitelist and separate report object",
-          "size and rate limits",
-          "live source exact equality and bindings retained"
-        ],
-        "next": "Open optional sound-check link; Test sound; select heard/no sound; play until symptom; read report through connected Cloudflare SQL API. Do not ask owner to reconnect Cloudflare. Browser native credential runtime remains unavailable."
-      },
-      "baseGameWorkerVersion": "45a7b80b-1f57-43f3-a077-0bb9ee8cac6e",
-      "cardAudioRepair": {
-        "status": "ONLINE_CARD_AUDIO_REPAIR_DEPLOYED_AUDIBLE_ACCEPTANCE_PENDING_AMBIENCE_UNRESOLVED",
-        "date": "2026-10-21",
-        "nativeRuntime": "846-r9-audio-recovery-20261021",
-        "nativeAssetCommit": "374bf70223a9df7113d83786cd55f2ee6c25f4ae",
-        "testSourceCommit": "c13c6c45b085d46c54c7aea6f7c3a2804876b886",
-        "productionSourceCommit": "70cc652f0a425f2b3428aa3f7db17f1dc36ef0a8",
-        "cloudflare": {
-          "worker": "griffin-house-of-rooks-online",
-          "version": "60c2b7e7-3787-4b09-be10-d232f988b6d9",
-          "deployment": "c9e04e07-d161-49c8-9be6-977c03b139c4",
-          "sha256": "d5a98946ed196c14f4335dcac2c89de096314f277392ed5cbc53e17827c5d5db",
-          "exactServedSourceMatch": true,
-          "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-          "rollbackVersion": "2f2dc7d6-90bb-4f99-9443-76041bd6829d",
-          "previewsEnabled": false,
-          "roomStorageReset": false,
-          "secretAndLimitsRetained": true
-        },
-        "rollbackBranchBothRepos": "rollback/pre-card-audio-20261021",
-        "ownerPhoneReportCommit": "ded87ce8e9142553e4e808f8616ecb08aec62316",
-        "repair": [
-          "Warm existing impact WAV loader on cloud reconnect/new hand and trusted tap",
-          "Dispatch original notifyCardPlayed for newest confirmed unseen public card",
-          "Do not replay restored cards or burst catch-up history"
-        ],
-        "tests": [
-          "Original R9 adapter fails zero-buffer reconnect assertion",
-          "Candidate actual snapshot+native audio functions regression passes",
-          "All five existing impact WAVs decode with FFmpeg",
-          "Real Worker asset route with local preserved WAV bytes passes",
-          "Entry/security, collection/reconnect, diagnostics privacy and R9 audio-context regressions pass",
-          "Entire Worker apart from embedded adapter byte-identical to prior diagnostic version"
-        ],
-        "verificationLimit": "AudioContext mocked; real hosted/phone audible acceptance of this repair not yet verified. Cloud Browser native credential runtime unavailable; do not repeat auth loops.",
-        "ambience": {
-          "status": "UNRESOLVED_SOURCE_LEVELS_EXTREMELY_QUIET",
-          "fireSourceRmsDb": -61.2,
-          "windSourceRmsDb": -70.4,
-          "fireEstimatedDefaultOutputDb": -95.2,
-          "windEstimatedDefaultOutputDb": -84.3,
-          "pcmMatchesPreservedWavs": true,
-          "levelsOrRecordingsChanged": false
-        },
-        "approvedMaleVoicesAndPortraitsChanged": false,
-        "nativeGameAssetsChanged": false,
-        "serviceWorkerCleared": false,
-        "newZipCreated": false,
-        "testPagesRuns": [
-          {
-            "id": 39556974941,
-            "name": "pages build and deployment",
-            "status": "in_progress",
-            "conclusion": null
-          }
-        ],
-        "productionPagesRuns": [
-          {
-            "id": 39556977541,
-            "name": "pages build and deployment",
-            "status": "completed",
-            "conclusion": "success"
-          }
-        ]
-      }
+      "secretAndRateLimitsRetained": true,
+      "previewsEnabled": false
     },
+    "rollbackBranchBothRepos": "rollback/pre-r10-ambience-20261021",
     "repair": {
-      "sourceFiles": [
-        "game060.js",
-        "cabin-ambience041.js"
-      ],
-      "approvedAudioAssetsChanged": false,
-      "savedMuteOrVolumesReset": false,
-      "normalCacheIdentityUpdated": true,
-      "serviceWorkerClearedOrUnregistered": false,
-      "originalCodeFailsMainInterruptedRecovery": true,
-      "originalCodeFailsAmbienceSuspendedRecovery": true,
-      "testsPassed": [
-        "main suspended/interrupted/closed context recovery",
-        "ambience suspended/interrupted/closed recovery",
-        "retry rejected resume on later gesture",
-        "background return and stale stop timer protection",
-        "no duplicate ambient loops",
-        "mute and saved volume preservation",
-        "entry security",
-        "native Friends form navigation",
-        "entry create/invite intent"
-      ],
-      "testScope": "Node VM with mocked AudioContext plus source/entry checks; not audible playback"
+      "behavioralFile": "cabin-ambience041.js",
+      "recordingGain": 100,
+      "nominalGainDb": 40,
+      "outputSoftCeiling": 0.45,
+      "existingRecordingsChanged": false,
+      "approvedVoicesOrPortraitsChanged": false,
+      "savedPrefsReset": false,
+      "mainAudioChanged": false,
+      "cardFixPreserved": true,
+      "serviceWorkerCleared": false,
+      "estimatedDefaultOutputRmsDb": {
+        "before": {
+          "wind": -84.3,
+          "fire": -95.2
+        },
+        "after": {
+          "wind": -44.3,
+          "fire": -55.2
+        }
+      },
+      "tests": [
+        "Original R9 fails real-PCM audibility-range assertion",
+        "R10 actual-created graph with real PCM passes corrected RMS estimates, curve/headroom, preferences, zero/mute, max sliders, no duplicate gain and stale stop cleanup",
+        "Context recovery suspended/interrupted/closed/rejected resume/background preserved",
+        "Confirmed online card audio, entry/security/Friends/create/invite, collection/reconnect and diagnostics privacy regressions pass",
+        "Native non-ambience file changes identity only; normalized Worker exactly retains card/server/diagnostic source",
+        "Immutable cabin download exact; both repositories share exact native blob SHAs"
+      ]
     },
     "limitations": {
-      "exactOwnerDeviceCauseConfirmed": false,
-      "audiblePlaybackVerified": false,
-      "physicalAndroidVerified": false,
-      "cloudBrowser": "Native credential state cannot be safely resumed; documented runtime reset did not recover it.",
-      "userMustReloadToLoadNewScripts": true,
+      "physicalAndroidAmbienceVerified": false,
+      "actualAudibleAmbienceVerified": false,
+      "cloudBrowser": "Native credential runtime unavailable; no repeated auth/reconnect loops",
+      "graphTest": "Actual module/PCM, mocked AudioContext and evaluated WaveShaper curve; not a browser listening test",
       "newZipCreated": false
     },
-    "rollbackBranchBothRepos": "rollback/pre-r9-audio-20261021"
+    "next": "Owner refreshes game once, taps to unlock audio and allows 5 seconds for the existing wind/fire fade. Confirm ambience on phone without changing saved sliders."
   },
   "comprehensiveHandoff": "versions/AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
   "threeSiteReleasePolicy": "../coordination/THREE_SITE_RELEASE_POLICY.md",
-  "currentReleaseReceipt": "../coordination/releases/online-card-audio-20261021/LIVE_RECEIPT.json",
+  "currentReleaseReceipt": "../coordination/releases/r10-ambience-20261021/LIVE_RECEIPT.json",
   "currentCumulativeGamePackage": {
-    "status": "No new ZIP created. R9 is published to all three hosts; old ZIPs remain preserved historical artifacts.",
-    "nativeSourceCommit": "5ba5b53031bd355875ff36101ec4f7ef9449963b"
+    "status": "No new ZIP; R10 native game deployed on all three sites. Preserve older ZIPs as historical artifacts.",
+    "nativeSourceCommit": "a5804a9035b3a2f56b38231cec4ff44da686655f"
   },
   "previousPointerSnapshot": "../coordination/releases/all-three-r7-cumulative-20261020/PREVIOUS_AF_POINTER.json",
   "physicalAndroidVerified": false,
@@ -229,112 +189,13 @@
     "publicationNote": "Cumulative ZIP behavior preserved; equivalent formatting in published source; no new ZIP created."
   },
   "pendingAudioRepair": {
-    "status": "ONLINE_CARD_AUDIO_REPAIR_DEPLOYED_AUDIBLE_ACCEPTANCE_PENDING_AMBIENCE_UNRESOLVED",
-    "reported": "2026-10-21",
-    "symptom": "All sound including ambience initially works then stops; also observed at normal 1x, so speed change is not required.",
-    "branch": "work/r8-audio-recovery-20261021",
-    "commit": "b0fa6c835090f262e1f468440c528ccf9d981846",
-    "document": "coordination/releases/r9-audio-diagnostics-20261021/README.md",
-    "tests": "Original code fails interrupted main-audio and suspended ambience recovery tests. Candidate passes context recovery/mute/volume/background tests.",
-    "browserBlocker": "Cloud Browser native credential state cannot be safely resumed; actual playback not verified.",
-    "liveAudioRepairDeployed": true,
-    "releaseCommit": "5ba5b53031bd355875ff36101ec4f7ef9449963b",
-    "cloudflareVersion": "45a7b80b-1f57-43f3-a077-0bb9ee8cac6e",
-    "diagnostics": {
-      "status": "R9_OWNER_REPORTS_AUDIO_STILL_FAILS_OPT_IN_DIAGNOSTICS_LIVE",
-      "date": "2026-10-21",
-      "sourceCommit": "ebd8dcc7924afe70bea9bcbd4f9d1dcc93b8c9a8",
-      "sourceBranch": "work/r9-audio-diagnostics-20261021",
-      "cloudflareVersion": "2f2dc7d6-90bb-4f99-9443-76041bd6829d",
-      "deployment": "828a0a52-9d8f-4d8a-ae43-d22ae18cb2a4",
-      "workerSha256": "436fb3595828144000944dcba211ec15345a9a1d423815bbea51600fe0fbab43",
-      "exactLiveSourceMatch": true,
-      "gameAssetCommit": "374bf70223a9df7113d83786cd55f2ee6c25f4ae",
-      "rollbackVersion": "45a7b80b-1f57-43f3-a077-0bb9ee8cac6e",
-      "normalGameAssetsChanged": false,
-      "approvedAudioOrPortraitsChanged": false,
-      "roomStorageReset": false,
-      "previewsEnabled": false,
-      "reportId": "a9e644ea034140c79a2bdab4ca54d0e2",
-      "diagnosticObject": "__ghr_audio_diagnostics_v1",
-      "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-      "recording": "Screen_Recording_20261021_020105_Chrome.mp4",
-      "recordingLibraryId": "libfile_2255e1ee1eb08191af548e787015c506",
-      "evidence": "95.689s recording shows 1x before 3x/MAX. Waveform matches game Pass voice at33.37s and bid-down at15.552s. Exact phone cause remains unconfirmed. Cloud adapter lacks legacy card-play sound dispatch; do not treat that as complete diagnosis.",
-      "tests": [
-        "opt-in injection and normal entry unchanged",
-        "signed session and same origin report validation",
-        "strict field whitelist and separate report object",
-        "size and rate limits",
-        "live source exact equality and bindings retained"
-      ],
-      "next": "Open optional sound-check link; Test sound; select heard/no sound; play until symptom; read report through connected Cloudflare SQL API. Do not ask owner to reconnect Cloudflare. Browser native credential runtime remains unavailable."
-    },
-    "latestRepair": {
-      "status": "ONLINE_CARD_AUDIO_REPAIR_DEPLOYED_AUDIBLE_ACCEPTANCE_PENDING_AMBIENCE_UNRESOLVED",
-      "date": "2026-10-21",
-      "nativeRuntime": "846-r9-audio-recovery-20261021",
-      "nativeAssetCommit": "374bf70223a9df7113d83786cd55f2ee6c25f4ae",
-      "testSourceCommit": "c13c6c45b085d46c54c7aea6f7c3a2804876b886",
-      "productionSourceCommit": "70cc652f0a425f2b3428aa3f7db17f1dc36ef0a8",
-      "cloudflare": {
-        "worker": "griffin-house-of-rooks-online",
-        "version": "60c2b7e7-3787-4b09-be10-d232f988b6d9",
-        "deployment": "c9e04e07-d161-49c8-9be6-977c03b139c4",
-        "sha256": "d5a98946ed196c14f4335dcac2c89de096314f277392ed5cbc53e17827c5d5db",
-        "exactServedSourceMatch": true,
-        "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-        "rollbackVersion": "2f2dc7d6-90bb-4f99-9443-76041bd6829d",
-        "previewsEnabled": false,
-        "roomStorageReset": false,
-        "secretAndLimitsRetained": true
-      },
-      "rollbackBranchBothRepos": "rollback/pre-card-audio-20261021",
-      "ownerPhoneReportCommit": "ded87ce8e9142553e4e808f8616ecb08aec62316",
-      "repair": [
-        "Warm existing impact WAV loader on cloud reconnect/new hand and trusted tap",
-        "Dispatch original notifyCardPlayed for newest confirmed unseen public card",
-        "Do not replay restored cards or burst catch-up history"
-      ],
-      "tests": [
-        "Original R9 adapter fails zero-buffer reconnect assertion",
-        "Candidate actual snapshot+native audio functions regression passes",
-        "All five existing impact WAVs decode with FFmpeg",
-        "Real Worker asset route with local preserved WAV bytes passes",
-        "Entry/security, collection/reconnect, diagnostics privacy and R9 audio-context regressions pass",
-        "Entire Worker apart from embedded adapter byte-identical to prior diagnostic version"
-      ],
-      "verificationLimit": "AudioContext mocked; real hosted/phone audible acceptance of this repair not yet verified. Cloud Browser native credential runtime unavailable; do not repeat auth loops.",
-      "ambience": {
-        "status": "UNRESOLVED_SOURCE_LEVELS_EXTREMELY_QUIET",
-        "fireSourceRmsDb": -61.2,
-        "windSourceRmsDb": -70.4,
-        "fireEstimatedDefaultOutputDb": -95.2,
-        "windEstimatedDefaultOutputDb": -84.3,
-        "pcmMatchesPreservedWavs": true,
-        "levelsOrRecordingsChanged": false
-      },
-      "approvedMaleVoicesAndPortraitsChanged": false,
-      "nativeGameAssetsChanged": false,
-      "serviceWorkerCleared": false,
-      "newZipCreated": false,
-      "testPagesRuns": [
-        {
-          "id": 39556974941,
-          "name": "pages build and deployment",
-          "status": "in_progress",
-          "conclusion": null
-        }
-      ],
-      "productionPagesRuns": [
-        {
-          "id": 39556977541,
-          "name": "pages build and deployment",
-          "status": "completed",
-          "conclusion": "success"
-        }
-      ]
-    }
+    "status": "ALL_THREE_R10_DEPLOYED_PHONE_AMBIENCE_ACCEPTANCE_PENDING",
+    "ownerConfirmedOtherSoundsRestored": true,
+    "ambienceRepairDeployed": true,
+    "physicalPhoneAmbienceAcceptancePending": true,
+    "document": "coordination/releases/r10-ambience-20261021/README.md",
+    "releaseCommit": "a5804a9035b3a2f56b38231cec4ff44da686655f",
+    "cloudflareVersion": "d4d2ed21-45da-4652-bd09-95ce85b41c12"
   },
   "previousRuntimeRelease": {
     "status": "ALL_THREE_R8_DEPLOYED",

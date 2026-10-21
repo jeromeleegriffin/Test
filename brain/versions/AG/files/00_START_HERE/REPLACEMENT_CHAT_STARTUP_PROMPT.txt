@@ -157,3 +157,7 @@ Reason: multiple October 19 portrait/fullscreen control ZIPs were delivered afte
 
 
 Explicit successor obligation: reproduce these complete reading, continuity and actual-pixels rules again in your next handoff, startup prompt and Master Brain update; pass the obligation forward forever.
+
+
+CURRENT R10 AUDIO CHECKPOINT — 2026-10-21
+Read brain/current.json and the complete current Master Brain AG, including the latest R10 section, before acting. Owner confirms card/game sounds are restored; preserve that repair. R10 corrects the ultraquiet cabin output with recording gain100 and a shared soft ceiling while retaining original PCM and all saved sliders. Native846-r10-ambience-levels-20261021, immutable native assets90078a710948c7643caafb18986e34dc71ce7cee, Test sourcea5804a9035b3a2f56b38231cec4ff44da686655f, production sourcec52c097473c2476957306c6492c695c4bb6946b7, Cloudflare d4d2ed21-45da-4652-bd09-95ce85b41c12. See coordination/releases/r10-ambience-20261021/LIVE_RECEIPT.json for final publication and rollback. Physical phone ambience acceptance remains pending; do not claim all sounds fixed. Cloud Browser native credential runtime is blocked; do not repeat Gmail/Cloudflare reconnect loops. Preserve approved male voices, portraits, working card audio, room data and service workers. Do not restart. All complete reading and permanent visual verification/successor obligations above remain in force.

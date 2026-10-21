@@ -1,0 +1,130 @@
+{
+  "status": "ALL_THREE_R10_DEPLOYED_PHONE_AMBIENCE_ACCEPTANCE_PENDING",
+  "date": "2026-10-21",
+  "runtime": "846-r10-ambience-levels-20261021",
+  "ownerConfirmedCardSoundsRestored": true,
+  "test": {
+    "url": "https://jeromeleegriffin.github.io/Test/",
+    "runtimeCommit": "a5804a9035b3a2f56b38231cec4ff44da686655f",
+    "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
+    "assetSourceCheck": {
+      "id": 39557639452,
+      "conclusion": "success"
+    },
+    "runs": [
+      {
+        "id": 39557812112,
+        "name": "Source checks",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 39557811988,
+        "name": "pages build and deployment",
+        "status": "in_progress",
+        "conclusion": null
+      }
+    ],
+    "rollbackCommit": "517c308a9aa21e518908344020835a3a00ff8a68",
+    "pages": {
+      "id": 39557811988,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "sourceCheck": {
+      "id": 39557812112,
+      "conclusion": "success"
+    }
+  },
+  "production": {
+    "url": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
+    "runtimeCommit": "c52c097473c2476957306c6492c695c4bb6946b7",
+    "branchSourceCheck": {
+      "id": 39557744220,
+      "conclusion": "success"
+    },
+    "runs": [
+      {
+        "id": 39557815019,
+        "name": "Source checks",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 39557814680,
+        "name": "pages build and deployment",
+        "status": "queued",
+        "conclusion": null
+      },
+      {
+        "id": 39557744220,
+        "name": "Source checks",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "rollbackCommit": "70cc652f0a425f2b3428aa3f7db17f1dc36ef0a8",
+    "pages": {
+      "id": 39557814680,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "sourceCheck": {
+      "id": 39557815019,
+      "conclusion": "success"
+    }
+  },
+  "cloudflare": {
+    "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
+    "worker": "griffin-house-of-rooks-online",
+    "version": "d4d2ed21-45da-4652-bd09-95ce85b41c12",
+    "deployment": "0567f9b0-2512-43f9-aaa3-a64d0ef42e52",
+    "workerSha256": "a8cb41c717bf1178373e559cc6b36263d45e172474870849f8b0af4e88672eae",
+    "exactServedSourceMatch": true,
+    "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
+    "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "rollbackVersion": "60c2b7e7-3787-4b09-be10-d232f988b6d9",
+    "roomStorageReset": false,
+    "secretAndRateLimitsRetained": true,
+    "previewsEnabled": false
+  },
+  "rollbackBranchBothRepos": "rollback/pre-r10-ambience-20261021",
+  "repair": {
+    "behavioralFile": "cabin-ambience041.js",
+    "recordingGain": 100,
+    "nominalGainDb": 40,
+    "outputSoftCeiling": 0.45,
+    "existingRecordingsChanged": false,
+    "approvedVoicesOrPortraitsChanged": false,
+    "savedPrefsReset": false,
+    "mainAudioChanged": false,
+    "cardFixPreserved": true,
+    "serviceWorkerCleared": false,
+    "estimatedDefaultOutputRmsDb": {
+      "before": {
+        "wind": -84.3,
+        "fire": -95.2
+      },
+      "after": {
+        "wind": -44.3,
+        "fire": -55.2
+      }
+    },
+    "tests": [
+      "Original R9 fails real-PCM audibility-range assertion",
+      "R10 actual-created graph with real PCM passes corrected RMS estimates, curve/headroom, preferences, zero/mute, max sliders, no duplicate gain and stale stop cleanup",
+      "Context recovery suspended/interrupted/closed/rejected resume/background preserved",
+      "Confirmed online card audio, entry/security/Friends/create/invite, collection/reconnect and diagnostics privacy regressions pass",
+      "Native non-ambience file changes identity only; normalized Worker exactly retains card/server/diagnostic source",
+      "Immutable cabin download exact; both repositories share exact native blob SHAs"
+    ]
+  },
+  "limitations": {
+    "physicalAndroidAmbienceVerified": false,
+    "actualAudibleAmbienceVerified": false,
+    "cloudBrowser": "Native credential runtime unavailable; no repeated auth/reconnect loops",
+    "graphTest": "Actual module/PCM, mocked AudioContext and evaluated WaveShaper curve; not a browser listening test",
+    "newZipCreated": false
+  },
+  "next": "Owner refreshes game once, taps to unlock audio and allows 5 seconds for the existing wind/fire fade. Confirm ambience on phone without changing saved sliders."
+}
