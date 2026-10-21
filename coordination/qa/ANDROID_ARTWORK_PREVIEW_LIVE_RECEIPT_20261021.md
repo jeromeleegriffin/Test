@@ -37,7 +37,7 @@ No three-site deployment should occur until owner acceptance and coordinated rol
 ## Friends button regression repaired in isolated preview
 - Root cause: First preview version deliberately replaced the native Friends form action with '#', and a capture-phase click blocker prevented Play With Friends from doing anything. That was incorrect UX for this test copy.
 - Initial restoration of form action alone did not make early clicks reliable. An explicit capture-phase action on the test-only HTML routes Play With Friends and join-confirm actions to the existing online Cloudflare Worker. It preserves #create=1 or room-code intent and normal player name, while keeping the test room API disabled.
-- Cloudflare test Worker deployment: d491ab290bb84b92a78349d7c9d16d35, updated 2026-10-21. Live multiplayer Worker was not redeployed.
+- Cloudflare test Worker deployment: b5f63794-65ed-45d2-89f6-706412b250e3; worker version d491ab29-0bb8-4b92-a783-49d7c9d16d35, updated 2026-10-21. Live multiplayer Worker was not redeployed.
 - Verified the actual Android-preview Play With Friends click in hosted Chromium: https://github.com/jeromeleegriffin/Test/actions/runs/39664668498 — SUCCESS. The test waited until Preparing the House finished, clicked the real button, intercepted navigation before it could reach the live service, and verified the online Worker destination plus #create=1 intent. Zero live room requests occurred in the test.
 - Normal Play Now also continued to pass: 10 cards decoded and bidding phase reached.
 - This fixes the unresponsive preview button, not the independent in-game multiplayer artwork test. Do not claim the repaired preview image loader was deployed to the live online Worker.
