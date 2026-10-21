@@ -1574,6 +1574,12 @@ var RoomDO = class extends DurableObject {
   }
   async alarm() {
     const task = this.serial.then(async () => {
+      if(await this.ctx.storage.get("__audio_report_only")) {
+        this.ctx.storage.sql.exec("DELETE FROM audio_reports WHERE updated <= ?",Date.now()-60*60*1000);
+        const count=this.ctx.storage.sql.exec("SELECT COUNT(*) AS count FROM audio_reports").toArray()[0].count;
+        if(count)await this.ctx.storage.setAlarm(Date.now()+60*60*1000);else await this.ctx.storage.deleteAlarm();
+        return;
+      }
       await this.service.cleanup(this.roomKey, { maxIdleMs: IDLE_ROOM_MS });
       let room = await this.ctx.storage.get(this.roomKey);
       if(room?.status==="playing"&&(room.opening||room.trumpOpening||room.trickOpening||room.claimOpening||room.botTurn)){await this.service.snapshot(this.roomKey,room.seats.find(p=>p&&!p.isBot).token);await this.#broadcastSnapshots();room=await this.ctx.storage.get(this.roomKey);}
@@ -1591,6 +1597,15 @@ var RoomDO = class extends DurableObject {
     const url = new URL(request.url);
     const token = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "") ?? null;
     try {
+      if (request.method === "POST" && url.pathname === "/audio-report") {
+        const report=sanitizeAudioReport(await request.json());
+        if(!report)return json({error:"INVALID_REPORT"},400);
+        this.ctx.storage.sql.exec("CREATE TABLE IF NOT EXISTS audio_reports(id TEXT PRIMARY KEY,updated INTEGER NOT NULL,payload TEXT NOT NULL)");
+        this.ctx.storage.sql.exec("INSERT INTO audio_reports(id,updated,payload) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET updated=excluded.updated,payload=excluded.payload",report.id,Date.now(),JSON.stringify(report));
+        this.ctx.storage.sql.exec("DELETE FROM audio_reports WHERE id NOT IN (SELECT id FROM audio_reports ORDER BY updated DESC LIMIT 64)");
+        await this.ctx.storage.put("__audio_report_only",true);
+        return json({ok:true});
+      }
       if (request.method === "POST" && url.pathname === "/create") {
         const body = await request.json();
         return json(await this.service.create(this.roomKey, body.playerId, body.displayName, body.avatar, body.voice,body.pace??1), 201);
@@ -1663,6 +1678,7 @@ __name(roomCode, "roomCode");
 var worker_default = {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === "/audio-check/report") return handleAudioReport(request,env);
     const isEntry = ["/", "/index.html", "/cloud-game/index.html", "/cloud-game/game"].includes(url.pathname);
     const isRoom = url.pathname === "/rooms" || url.pathname.startsWith("/rooms/");
     if (["/cloud-game/launch", "/four-player-check"].includes(url.pathname)) return new Response("Not found", {status:404});
@@ -1685,7 +1701,7 @@ var worker_default = {
       try {
         const upstream=await fetch("https://raw.githubusercontent.com/jeromeleegriffin/Test/374bf70223a9df7113d83786cd55f2ee6c25f4ae/index.html",{redirect:"follow",cf:{cacheEverything:true,cacheTtlByStatus:{"200-299":86400,"300-599":-1}}});
         if (!upstream.ok) return new Response("The game is temporarily unavailable. Please reload shortly.",{status:502,headers:{"cache-control":"no-store"}});
-        const response=secureIntegratedGameHtml(injectCloudGameAdapter(await upstream.text()));
+        const response=secureIntegratedGameHtml(injectAudioDiagnostics(injectCloudGameAdapter(await upstream.text()),url));
         if (session) response.headers.set("Set-Cookie",`${PRIVATE_SESSION_COOKIE}=${session.token}; Path=/; Max-Age=${Math.floor(PRIVATE_SESSION_MS/1000)}; HttpOnly; Secure; SameSite=Strict`);
         return response;
       } catch { return new Response("The game is temporarily unavailable. Please reload shortly.",{status:502,headers:{"cache-control":"no-store"}}); }
@@ -1750,7 +1766,7 @@ var worker_default = {
       try {
         const upstream = await fetch("https://raw.githubusercontent.com/jeromeleegriffin/Test/374bf70223a9df7113d83786cd55f2ee6c25f4ae/index.html", { redirect: "follow", cf: {cacheEverything: true, cacheTtlByStatus: {"200-299":86400,"300-599":-1}} });
         if (!upstream.ok) return new Response("The private game copy is temporarily unavailable.", { status: 502 });
-        const integrated = injectCloudGameAdapter(await upstream.text());
+        const integrated = injectAudioDiagnostics(injectCloudGameAdapter(await upstream.text()),url);
         return secureIntegratedGameHtml(integrated);
       } catch {
         return new Response("The private game copy is temporarily unavailable.", { status: 502 });
@@ -1802,3 +1818,52 @@ export {
 //# sourceMappingURL=worker.js.map
 
 
+
+const AUDIO_DIAGNOSTIC_COLLECTOR = "/* Opt-in sound check. No cards, names, room IDs, credentials or device IDs. */\n(() => {\n  'use strict';\n  const id = '__GHR_AUDIO_REPORT_ID__';\n  if (!/^[a-f0-9]{32}$/.test(id)) return;\n  const samples = [];\n  let sequence = 0, lastSent = 0, sending = false, lastClock = null, lastAt = null;\n  let test = { requested: false, heard: null };\n  const panel = document.createElement('aside');\n  panel.style.cssText = 'position:fixed;top:4px;left:50%;transform:translateX(-50%);z-index:2147483647;background:#18251f;color:#fff;border:1px solid #c9ad66;border-radius:8px;padding:7px;font:12px system-ui;max-width:95vw;text-align:center';\n  panel.innerHTML = '<span>Sound check active</span> <button type=\"button\" data-check=\"test\">Test sound</button> <button type=\"button\" data-check=\"yes\" hidden>I hear it</button> <button type=\"button\" data-check=\"no\" hidden>No sound</button><small style=\"display:block\">Only audio state and sound settings are reported.</small>';\n  document.body.appendChild(panel);\n  const label = panel.querySelector('span');\n  const read = fn => { try { return fn(); } catch (_) { return null; } };\n  function sample(reason) {\n    const at = performance.now();\n    const ctx = read(() => typeof audioCtx === 'undefined' ? null : audioCtx);\n    const clock = ctx ? ctx.currentTime : null;\n    const cabin = read(() => window.CabinAmbience041?.inspect());\n    const mixer = window.HORAudioMixer;\n    const voice = read(() => window.HORVoiceQueue?.inspect());\n    const frame = {\n      sequence: ++sequence, reason, elapsedMs: Math.round(at),\n      build: read(() => window.HOR_BUILD), pageBuild: read(() => window.HOR_PAGE_BUILD),\n      scriptBuild: read(() => window.HOR_SCRIPT_BUILD), hidden: document.hidden,\n      inGame: document.body.classList.contains('in-game'),\n      phase: read(() => typeof game === 'undefined' ? null : game?.phase),\n      muted: read(() => typeof soundMuted === 'undefined' ? null : soundMuted),\n      storedMuted: read(() => localStorage.getItem('rookMuted') === '1'),\n      main: ctx ? { state: ctx.state, clock, sampleRate: ctx.sampleRate,\n        clockDelta: lastClock === null ? null : +(clock - lastClock).toFixed(4),\n        wallDeltaMs: lastAt === null ? null : Math.round(at - lastAt) } : null,\n      mixer: mixer ? { master: mixer.level('master'), voices: mixer.level('voices'),\n        gameplay: mixer.level('gameplay'), atmosphere: mixer.level('atmosphere'),\n        character: mixer.level('character'), settings: mixer.settings() } : null,\n      cabin: cabin ? { running: cabin.running, contextState: cabin.contextState,\n        enabled: cabin.enabled, unlocked: cabin.unlocked, allowed: cabin.allowed,\n        volume: cabin.volume, fireVolume: cabin.fireVolume, busGain: cabin.busGain,\n        timers: cabin.timers, voices: cabin.voices } : null,\n      voiceQueue: voice ? { active: !!voice.active, pending: voice.pending.length } : null,\n      assets: { cabin: !!window.HORCabinSamples,\n        landingBuffers: read(() => typeof cardLandingBuffers058 === 'undefined' ? 0 : cardLandingBuffers058.length) },\n      test: { ...test },\n    };\n    lastClock = clock; lastAt = at;\n    samples.push(frame); if (samples.length > 12) samples.shift();\n  }\n  async function send(reason, force = false) {\n    sample(reason);\n    if (sending || (!force && Date.now() - lastSent < 10000)) return;\n    sending = true; lastSent = Date.now();\n    try {\n      const response = await fetch('/audio-check/report', {\n        method: 'POST', headers: { 'Content-Type': 'application/json' },\n        body: JSON.stringify({ id, samples }), cache: 'no-store', keepalive: true,\n      });\n      label.textContent = response.ok ? 'Sound check received · play normally' : 'Sound check could not send';\n    } catch (_) { label.textContent = 'Sound check waiting for connection'; }\n    finally { sending = false; }\n  }\n  panel.querySelector('[data-check=\"test\"]').onclick = async () => {\n    test = { requested: true, heard: null };\n    let ctx;\n    try {\n      const AudioCtx = window.AudioContext || window.webkitAudioContext;\n      ctx = new AudioCtx(); await ctx.resume();\n      test.state = ctx.state;\n      const gain = ctx.createGain(); gain.gain.value = 0.08; gain.connect(ctx.destination);\n      for (const [i, frequency] of [440, 660].entries()) {\n        const oscillator = ctx.createOscillator(); oscillator.frequency.value = frequency;\n        oscillator.connect(gain); oscillator.start(ctx.currentTime + i * 0.3);\n        oscillator.stop(ctx.currentTime + i * 0.3 + 0.18);\n      }\n      setTimeout(() => { test.clock = ctx.currentTime; ctx.close().catch(() => {}); send('test-finished', true); }, 900);\n    } catch (_) { test.error = 'test-unavailable'; }\n    panel.querySelector('[data-check=\"yes\"]').hidden = false;\n    panel.querySelector('[data-check=\"no\"]').hidden = false;\n    send('test-requested', true);\n  };\n  for (const [name, heard] of [['yes', true], ['no', false]]) {\n    panel.querySelector('[data-check=\"' + name + '\"]').onclick = () => { test.heard = heard; send('test-answer', true); };\n  }\n  document.addEventListener('visibilitychange', () => send('visibility', true));\n  document.addEventListener('pointerup', () => setTimeout(() => send('interaction'), 350), { passive: true });\n  const timer = setInterval(() => send('heartbeat'), 10000);\n  setTimeout(() => { clearInterval(timer); send('check-ended', true); }, 15 * 60 * 1000);\n  send('opened', true);\n})();\n";
+function sanitizeAudioReport(body) {
+  if (!body || !/^[a-f0-9]{32}$/.test(body.id || '') || !Array.isArray(body.samples)) return null;
+  const n = (v, max = 1e9) => typeof v === 'number' && Number.isFinite(v) ? Math.max(-max, Math.min(max, v)) : null;
+  const b = v => typeof v === 'boolean' ? v : null;
+  const state = v => ['running', 'suspended', 'interrupted', 'closed', 'not-created'].includes(v) ? v : null;
+  const build = v => typeof v === 'string' && /^[a-zA-Z0-9-]{1,80}$/.test(v) ? v : null;
+  const level = v => typeof v === 'number' && Number.isFinite(v) ? Math.max(0, Math.min(1, v)) : null;
+  const levels = obj => Object.fromEntries(['master', 'voices', 'gameplay', 'atmosphere', 'character'].map(key => [key, level(obj?.[key])]));
+  const samples = body.samples.slice(-12).map(s => ({
+    sequence: n(s?.sequence), elapsedMs: n(s?.elapsedMs),
+    reason: ['opened', 'heartbeat', 'interaction', 'visibility', 'test-requested', 'test-finished', 'test-answer', 'check-ended'].includes(s?.reason) ? s.reason : null,
+    build: build(s?.build), pageBuild: build(s?.pageBuild), scriptBuild: build(s?.scriptBuild),
+    hidden: b(s?.hidden), inGame: b(s?.inGame),
+    phase: ['bidding','dealing','discard','trump','play','score','complete','redeal'].includes(s?.phase) ? s.phase : null,
+    muted: b(s?.muted), storedMuted: b(s?.storedMuted),
+    main: s?.main ? {state:state(s.main.state),clock:n(s.main.clock),clockDelta:n(s.main.clockDelta),wallDeltaMs:n(s.main.wallDeltaMs),sampleRate:n(s.main.sampleRate,384000)} : null,
+    mixer: s?.mixer ? {...levels(s.mixer),settings:{...levels(s.mixer.settings),voicesMuted:b(s.mixer.settings?.voicesMuted)}} : null,
+    cabin: s?.cabin ? {running:b(s.cabin.running),contextState:state(s.cabin.contextState),enabled:b(s.cabin.enabled),unlocked:b(s.cabin.unlocked),allowed:b(s.cabin.allowed),volume:n(s.cabin.volume,100),fireVolume:n(s.cabin.fireVolume,100),busGain:n(s.cabin.busGain,10),timers:n(s.cabin.timers,100),voices:Array.isArray(s.cabin.voices)?s.cabin.voices.slice(0,12).filter(v=>['fire','wind','bird','crickets','owl','wolf','rain'].includes(v?.name)).map(v=>({name:v.name,level:level(v.level)})):[]} : null,
+    voiceQueue: s?.voiceQueue ? {active:b(s.voiceQueue.active),pending:n(s.voiceQueue.pending,100)} : null,
+    assets: {cabin:b(s?.assets?.cabin),landingBuffers:n(s?.assets?.landingBuffers,20)},
+    test: {requested:b(s?.test?.requested),heard:b(s?.test?.heard),state:state(s?.test?.state),clock:n(s?.test?.clock),error:s?.test?.error==='test-unavailable'?'test-unavailable':null},
+  }));
+  return {id:body.id,samples};
+}
+
+async function handleAudioReport(request, env) {
+  const url = new URL(request.url);
+  if (request.method !== 'POST') return json({error:'METHOD_NOT_ALLOWED'},405);
+  if (request.headers.get('origin') !== url.origin) return json({error:'SAME_ORIGIN_REQUIRED'},403);
+  if (!await verifyPrivateSession(cookieValue(request, PRIVATE_SESSION_COOKIE),env.TEST_GATE_KEY)) return json({error:'SESSION_REQUIRED'},401);
+  const rate = env.ACTION_LIMIT;
+  if (!rate) return json({error:'SERVER_CONFIGURATION_REQUIRED'},503);
+  if (!(await rate.limit({key:(request.headers.get('CF-Connecting-IP')||'unknown')+':audio-check'})).success) return json({error:'TOO_MANY_REQUESTS'},429);
+  const text = await request.text();
+  if (text.length > 32768) return json({error:'REPORT_TOO_LARGE'},413);
+  let report;
+  try { report=sanitizeAudioReport(JSON.parse(text)); } catch (_) {}
+  if (!report) return json({error:'INVALID_REPORT'},400);
+  return env.ROOMS.getByName('__ghr_audio_diagnostics_v1').fetch('https://room.local/audio-report',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(report)});
+}
+
+function injectAudioDiagnostics(html, url) {
+  const id=url.searchParams.get('audioCheck');
+  if (!/^[a-f0-9]{32}$/.test(id||'')) return html;
+  const source=AUDIO_DIAGNOSTIC_COLLECTOR.replace('__GHR_AUDIO_REPORT_ID__',id);
+  return html.replace(/<\/body>/i,'<script>'+source+'<\/script></body>');
+}
