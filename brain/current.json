@@ -19,7 +19,7 @@
   "sha256": "3ce05ae3b30ae15fefecf4cb00056fcb78161bc4b2b2fc992526181f6af2b45f",
   "sha256Scope": "Master Brain AG primary document",
   "checkpoint": "r8-native-friends-20261021",
-  "checkpointStatus": "ALL_THREE_R8_DEPLOYED_CLOUD_GAMEPLAY_VERIFIED_FINAL_ZIP_REPLAY_BLOCKED",
+  "checkpointStatus": "ALL_THREE_R8_DEPLOYED_AUDIO_REGRESSION_UNRESOLVED",
   "latestGameBuild": "846-r8-friends-voices-portrait-20261021",
   "runtimeStatusAuthority": "currentRuntimeRelease and Master Brain AG; frozen historical fields remain in the previous pointer snapshot",
   "currentRuntimeRelease": {
@@ -153,5 +153,16 @@
     "sourceEvidenceCommit": "38f52428515277616c06277924b80673a1879505",
     "nativeSourceCommit": "2ef90e8264c4f0e887b8df118a563f61e6d47098",
     "publicationNote": "Cumulative ZIP behavior preserved; equivalent formatting in published source; no new ZIP created."
+  },
+  "pendingAudioRepair": {
+    "status": "CANDIDATE_ONLY_NOT_DEPLOYED_BROWSER_AUDIO_VERIFICATION_BLOCKED",
+    "reported": "2026-10-21",
+    "symptom": "All sound including ambience initially works then stops; also observed at normal 1x, so speed change is not required.",
+    "branch": "work/r8-audio-recovery-20261021",
+    "commit": "b0fa6c835090f262e1f468440c528ccf9d981846",
+    "document": "coordination/releases/r8-audio-recovery-20261021/README.md",
+    "tests": "Original code fails interrupted main-audio and suspended ambience recovery tests. Candidate passes context recovery/mute/volume/background tests.",
+    "browserBlocker": "Cloud Browser native credential state cannot be safely resumed; actual playback not verified.",
+    "liveAudioRepairDeployed": false
   }
 }
