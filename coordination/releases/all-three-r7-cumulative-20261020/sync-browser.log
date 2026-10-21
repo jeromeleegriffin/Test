@@ -1,4 +1,0 @@
-OFFLINE 0 {"phase":"bidding","turn":2,"seat":0,"resolving":false,"claim":false,"stamp":false}
-OFFLINE 50 {"phase":"play","turn":1,"seat":0,"resolving":false,"claim":false,"stamp":false}
-PASS R7 complete native offline hand {"handComplete":true,"plays":7,"errors":[],"nextHandReached":true,"leftToLobby":true}
-PASS actual package lobby, Cloudflare entry/invite, native hand/next/confirmed leave

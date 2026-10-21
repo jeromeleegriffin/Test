@@ -1,3 +1,0 @@
-OFFLINE 0 {"phase":"bidding","turn":0,"seat":0,"resolving":false,"claim":false,"stamp":false}
-OFFLINE 50 {"phase":"play","turn":2,"seat":0,"resolving":false,"claim":false,"stamp":false}
-PASS R7 complete native offline hand {"handComplete":true,"plays":10,"errors":[],"nextHandReached":true,"leftToLobby":true}

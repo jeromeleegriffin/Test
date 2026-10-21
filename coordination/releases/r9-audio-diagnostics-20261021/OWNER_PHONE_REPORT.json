@@ -1,0 +1,993 @@
+{
+  "received": "2026-10-21",
+  "report": {
+    "id": "a9e644ea034140c79a2bdab4ca54d0e2",
+    "samples": [
+      {
+        "sequence": 48,
+        "elapsedMs": 22297,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 19.130666666666666,
+          "clockDelta": 0.2187,
+          "wallDeltaMs": 217,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 49,
+        "elapsedMs": 22504,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 19.336,
+          "clockDelta": 0.2053,
+          "wallDeltaMs": 208,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 50,
+        "elapsedMs": 22696,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 19.528,
+          "clockDelta": 0.192,
+          "wallDeltaMs": 192,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 51,
+        "elapsedMs": 22890,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 19.722666666666665,
+          "clockDelta": 0.1947,
+          "wallDeltaMs": 194,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 52,
+        "elapsedMs": 23087,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 19.92,
+          "clockDelta": 0.1973,
+          "wallDeltaMs": 197,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 53,
+        "elapsedMs": 23305,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 20.138666666666666,
+          "clockDelta": 0.2187,
+          "wallDeltaMs": 217,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 54,
+        "elapsedMs": 24162,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 20.994666666666667,
+          "clockDelta": 0.856,
+          "wallDeltaMs": 857,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 55,
+        "elapsedMs": 24355,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 21.186666666666667,
+          "clockDelta": 0.192,
+          "wallDeltaMs": 193,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 56,
+        "elapsedMs": 25014,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 21.848,
+          "clockDelta": 0.6613,
+          "wallDeltaMs": 659,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 57,
+        "elapsedMs": 26400,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 23.232,
+          "clockDelta": 1.384,
+          "wallDeltaMs": 1385,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 58,
+        "elapsedMs": 27625,
+        "reason": "interaction",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "play",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 24.458666666666666,
+          "clockDelta": 1.2267,
+          "wallDeltaMs": 1225,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      },
+      {
+        "sequence": 59,
+        "elapsedMs": 30323,
+        "reason": "test-answer",
+        "build": "846-r9-audio-recovery-20261021",
+        "pageBuild": "846-r9-audio-recovery-20261021",
+        "scriptBuild": "846-r9-audio-recovery-20261021",
+        "hidden": false,
+        "inGame": true,
+        "phase": "score",
+        "muted": false,
+        "storedMuted": false,
+        "soundOptions": {
+          "cards": true,
+          "turn": true,
+          "ticks": true
+        },
+        "main": {
+          "state": "running",
+          "clock": 27.154666666666667,
+          "clockDelta": 2.696,
+          "wallDeltaMs": 2699,
+          "sampleRate": 48000
+        },
+        "mixer": {
+          "master": 1,
+          "voices": 0.7,
+          "gameplay": 1,
+          "atmosphere": 1,
+          "character": 1,
+          "settings": {
+            "master": 1,
+            "voices": 0.7,
+            "gameplay": 1,
+            "atmosphere": 1,
+            "character": 1,
+            "voicesMuted": false
+          }
+        },
+        "cabin": {
+          "running": true,
+          "contextState": "running",
+          "enabled": true,
+          "unlocked": true,
+          "allowed": true,
+          "volume": 6,
+          "fireVolume": 10,
+          "busGain": 0.20000000298023224,
+          "timers": 5,
+          "voices": [
+            {
+              "name": "fire",
+              "level": 0.10000000149011612
+            },
+            {
+              "name": "wind",
+              "level": 1
+            }
+          ]
+        },
+        "voiceQueue": {
+          "active": false,
+          "pending": 0,
+          "starts": 0
+        },
+        "trump": {
+          "playing": false,
+          "cacheSize": 4,
+          "loadFailures": 0
+        },
+        "assets": {
+          "cabin": true,
+          "landingBuffers": 0
+        },
+        "test": {
+          "requested": true,
+          "heard": true,
+          "state": "running",
+          "clock": 0.688,
+          "error": null
+        }
+      }
+    ]
+  },
+  "interpretation": "Owner heard independent test tone. All retained samples unmuted, audio clocks advancing, card landing buffers0, voice queue starts0. Cabin running with nonzero fire/wind gains; actual cabin audibility unverified. Report may be from reconnect already in play, so zero voice starts alone does not establish a broken voice trigger."
+}
