@@ -7,13 +7,13 @@
   "files": [
     {
       "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
-      "bytes": 25748,
-      "sha256": "cdbfa9014a74e6a9531474dc0afa52686f88e3b327742056698d73d4000bfb65"
+      "bytes": 47299,
+      "sha256": "387aaa0d83986b451da8699ac38622e7c5d830b6161c7568770cec230e4b45f5"
     },
     {
       "path": "files/00_START_HERE/START_HERE.md",
-      "bytes": 40676,
-      "sha256": "ad1bd2f342cf428f98bf75e736808eaa92578fbaaa435f8ca33229344e4cea62"
+      "bytes": 46264,
+      "sha256": "44fa22eb26130d48120898ba49bd0fb2bc04bd34a83cc0d0cf0dea42d5533cbe"
     },
     {
       "path": "files/01_MASTER_BANK/CHAT_CONTINUITY_RULE.md",
@@ -27,8 +27,8 @@
     },
     {
       "path": "files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
-      "bytes": 40676,
-      "sha256": "ad1bd2f342cf428f98bf75e736808eaa92578fbaaa435f8ca33229344e4cea62"
+      "bytes": 46264,
+      "sha256": "44fa22eb26130d48120898ba49bd0fb2bc04bd34a83cc0d0cf0dea42d5533cbe"
     },
     {
       "path": "files/01_MASTER_BANK/PERMANENT_UI_VISUAL_VERIFICATION_RULE.md",
@@ -66,5 +66,6 @@
       "sha256": "2ff2cccd4659370ee9629c693e89ad989beefdd5e0155d658c5bc84725238cbb"
     }
   ],
-  "currentReleaseReceipt": "../../../coordination/releases/r10-ambience-20261021/LIVE_RECEIPT.json"
+  "currentReleaseReceipt": "../../../coordination/releases/online-x1-20261021/LIVE_RECEIPT.json",
+  "onlineIntelligence": "x1-online-v1"
 }

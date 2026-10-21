@@ -1,6 +1,6 @@
 # Banked ideas and current release status — 2026-10-21
 
-Scope: reconcile current Master Brain AG/R10, current banked/pending ledgers, H roadmap and AF history with selected current-source evidence. This is not an exhaustive fresh replay of every historical binary or a new UI/browser acceptance audit. No runtime changed by this status review.
+Scope: current Master Brain AG/R10 plus the online X1 server release, current banked/pending ledgers, H roadmap and AF history. This is not an exhaustive fresh replay of historical attachments or new rendered UI/device acceptance. The owner asked to continue X1 and leave the existing UI alone.
 
 ## Current live baseline
 
@@ -14,15 +14,15 @@ All three player sites have native846-r10-ambience-levels-20261021. See releases
 | Card impacts and other game sounds | Owner confirms restored | Confirmed-card sound bridge and reconnect preload; owner: other sounds are back. |
 | Cabin ambience level | Owner confirms heard on current phone | R10 shared recording gain/ceiling; owner: I hear it. |
 | Approved male voices / portrait repairs | Included and preserved | R8 cumulative release; R9/R10 replace no recordings or artwork. |
-| Bottom/local Lead pill beside name/status | Banked, not completed as requested | banked-ideas/BOTTOM_PLAYER_LEAD_PILL_20261015.json still BANKED_NOT_IMPLEMENTED. Native JS creates a local LEAD tag, but current style057.css explicitly display:none for #slot-me > .seat-lead-tag; that is not delivery of the requested visible name-area pill. No visual repair authorized by this audit. |
+| Bottom/local Lead pill beside name/status | Owner believes fixed; preserve current UI | Owner's latest instruction leaves this and other UI alone. Historical bank/source observations above are not fresh rendered acceptance or authority to redo the approved UI. No change or new visual certification in the X1 release. |
 | Trump-choice longest-color grouping, birds first | Source exists; reconcile old bank and exact acceptance criterion | game060.js has phase-specific fallback sorting; hand-order838.js has preset special-first/color-count logic and preserves manual order. Old landscape bank saying simply NOT_IMPLEMENTED is insufficient current status. Verify actual trump-phase behavior after six discards/manual ordering before closing exact criterion; no fresh browser claim. |
 | Straight-strip holder turn cue pending folder | Superseded recovery source; current implementation exists | Current holder-cues789.css clips cue to center, excludes end caps/backrest; AG later R7 holder repairs supersede 805 recovery status. Do not apply old full CSS over current source. Remaining current-device visual observations go through actual-pixels review. |
-| Online X1 intelligence | Deferred, not integrated | AG explicitly says online uses existing simple server bots; X1 is native/offline. |
+| Online X1 intelligence | Implemented for new standard 46-card hands | Exact frozen engines, own/public input only. Bidding/discard/trump/play hosted-tested. Existing hands stay legacy until next deal; unsupported rules and Moon retain prior server bot. See releases/online-x1-20261021/LIVE_RECEIPT.json. |
 | Complete Cloudflare static-asset hosting migration | Discussed/deferred | Worker still proxies immutable GitHub native assets. Do not call this migration completed merely because multiplayer runs on Cloudflare. |
 | Unity port / alternate poses/materials / other future concepts | Future roadmap, not completed by cumulative release | H/AF preserve them. No new implementation/approval inferred. |
 | Fresh complete downloadable ZIP matching R10 | Not created | Live-first publication retained older archives. Any requested new ZIP must contain functional index.html at root and exact cumulative assets; old bundled Workers must not be deployed. |
-| Broad final acceptance | Still pending | Cross-device/fullscreen/share-sheet/QR-camera, WAN/cellular/long suspension and installed-cache/offline-upgrade checks are not all closed. Limited current-phone audio acceptance is now confirmed. |
+| Broad final acceptance | Partially checked; physical-device/cache acceptance remains separate | X1 release covers real server API reconnect, duplicate retry, ten-minute detached-client catch-up and local actor recreation. Android OS suspension, cross-device/fullscreen/share-sheet/QR-camera, independent WAN/cellular and installed-cache/offline-upgrade checks remain unverified. Current-phone audio is owner-confirmed. |
 
 ## Current conclusion
 
-Caught up on published cumulative repair work and latest audio on the owner's phone. Not every banked idea, future project or final verification item is finished. Older historical notes mix now-implemented work with genuine remaining items; do not use an old NOT_IMPLEMENTED label as the sole authority, and do not mark source presence as actual-screen acceptance. Preserve all historical records. Do not restart completed work or expand this read-only status review into a UI rewrite.
+Published cumulative repairs and owner-confirmed R10 audio are preserved. Online X1 is now integrated for supported standard hands. Not every future concept or physical-device/cache verification item is finished. Older historical notes mix now-implemented work with genuine remaining items; do not use an old NOT_IMPLEMENTED label as the sole authority, and do not mark source presence as actual-screen acceptance. Preserve all historical records. Do not restart completed work or expand the server intelligence task into a UI rewrite.
