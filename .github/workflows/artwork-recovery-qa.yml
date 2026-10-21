@@ -5,6 +5,7 @@ on:
     paths:
       - asset-loading772.js
       - coordination/qa/browser-artwork-recovery.mjs
+      - coordination/qa/full-game-artwork-smoke.mjs
       - .github/workflows/artwork-recovery-qa.yml
   workflow_dispatch:
 permissions:
@@ -21,9 +22,12 @@ jobs:
       - run: npm install --no-save --no-package-lock playwright
       - run: npx playwright install --with-deps chromium
       - run: node coordination/qa/browser-artwork-recovery.mjs
+      - run: node coordination/qa/full-game-artwork-smoke.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: artwork-qa-${{ github.run_id }}
-          path: artwork-recovery-browser.png
+          path: |
+            artwork-recovery-browser.png
+            full-game-artwork-smoke.png
           if-no-files-found: ignore
