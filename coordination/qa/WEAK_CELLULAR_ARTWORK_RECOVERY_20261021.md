@@ -32,3 +32,9 @@ No changes to X1, artwork files, UI geometry, bidding, rooms, sw060.js, or live 
 2. Restore network and confirm each image recovers in place without game reload or intervention.
 3. Test disconnect/reconnect with gameplay and existing offline cached code.
 4. Only after passing, owner approves coordinated three-site deployment. Preserve original R10 rollback and do not clear service-worker caches.
+
+## Follow-up static style/asset audit
+- index.html explicitly references asset-loading772.css and approved-bid-portrait.css. Both are listed in sw060.js SHELL; polish.js and premium Red Two/Black Bird images are also listed. No missing path found in this focused check.
+- Generic BLACK BIRD/RED 2 text is the intentional fallback defined by polish.js. Image load handlers switch back to approved artwork on successful load.
+- The image-retry candidate does not reload CSS, and therefore does **not** prove that tiny card faces are repaired. Preserve this as a separate browser/network reproduction gate, not a resolved bug.
+- Existing sw060.js network-first stylesheet responses use cached CSS after failed fetch. An actual Android cache population and throttled network replay is still required.
