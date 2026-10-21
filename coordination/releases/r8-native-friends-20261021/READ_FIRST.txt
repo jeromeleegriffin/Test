@@ -1,0 +1,19 @@
+GRIFFIN HOUSE OF ROOKS — R8 DEPLOYMENT CHECKPOINT
+
+STAGED, NOT DEPLOYED. Continue; do not restart.
+
+Asset commit: 7c7eab3c9e1c6e6124da28e403a0d7405ac7c967
+Worker source: cloudflare/live/worker-live.mjs
+Build: 846-r8-friends-voices-portrait-20261021
+
+The Worker is pinned to the R8 asset commit. The source preserves existing room reducer, room storage, session secret, rate-limit bindings, approved art, X1 offline files, and 23 approved male voice clips. No room migration or paid upgrade is intended.
+
+Native HTML form submission opens Friends at the top level from the ZIP Loader. Create/join intent takes priority over stale saved-room reconnection; ordinary reload still reconnects. Existing legacy room query links remain supported.
+
+Validation: 13 unit suites, three entry/routing/security suites and ten local simulated complete matches passed. Simulations exercised 2259 actions and 391 rejoins. Earlier Cloud Browser Loader test navigated to the then-live R7 Worker; this is not evidence that the new R8 Worker has been deployed or browser-verified. Physical Android and independent-browser human join remain unverified.
+
+Blocker: Cloudflare connector identity/account discovery succeeded, but Worker settings returns UNAUTHORIZED requesting workers-scripts.read. Reauthentication repeatedly loops. Stop repeating connector reauthentication. Direct dashboard is the next path; Cloud Browser sign-in requires user assistance if credential protection remains active.
+
+Before deployment: inspect the currently deployed version and preserve it for rollback; verify bindings and secret remain in place. Prefer version preview, test room creation/join/fill/gameplay/reload, then deploy the verified version. Do not replace the live server with the older unpinned ZIP Worker.
+
+Main/Test and production GitHub branches are unchanged. Master Brain AG remains the live authority until an actual deployment receipt is recorded.

@@ -1,0 +1,221 @@
+[
+  {
+    "test": "bot-picker-unit.mjs",
+    "exit": 0,
+    "output": "PASS bot choice/replace/remove, host auth, human protection, stale request rejection, duplicate portrait prevention, waiting only\n",
+    "error": ""
+  },
+  {
+    "test": "claim-unit.mjs",
+    "exit": 0,
+    "output": "PASS claim at all speeds: hold, duplicate, early next denied, privacy, reconnect views, reveal after animation\n",
+    "error": ""
+  },
+  {
+    "test": "close-unit.mjs",
+    "exit": 0,
+    "output": "PASS: host-only/idempotent close, closed room blocks join/rejoin/start, tombstone retained, new table allowed\n",
+    "error": ""
+  },
+  {
+    "test": "cloud-entry-intent-unit.mjs",
+    "exit": 0,
+    "output": "PASS: explicit create/join wins over stale saved rooms, missing names remain recoverable, ordinary reload reconnects.\n",
+    "error": ""
+  },
+  {
+    "test": "collection-unit.mjs",
+    "exit": 0,
+    "output": "PASS complete fourth-card snapshot, normal/bird collection deadlines, score held until collection ends, duplicate safe, early next-hand denied, all reconnect views agree, recent trick retained\n",
+    "error": ""
+  },
+  {
+    "test": "deal-unit.mjs",
+    "exit": 0,
+    "output": "PASS: bots and humans locked during opening, minimum pause, all-human readiness, stale/unauthorized readiness rejection, disconnected-client deadline fallback, persisted DO alarm wakeup and next-hand opening alarm, closing during the opening remains closed\n",
+    "error": ""
+  },
+  {
+    "test": "invalid-actions-unit.mjs",
+    "exit": 0,
+    "output": "PASS auth/seat theft/private hands, wrong turn, invalid bid/discard/trump/card, duplicate/reused action, presentation lock; rejected actions preserve hand\n",
+    "error": ""
+  },
+  {
+    "test": "pace-unit.mjs",
+    "exit": 0,
+    "output": "PASS authoritative pace sync, guest denied, invalid pace rejected, measured bot delays, no early action, pending bot turn rescheduled [{\"pace\":1,\"botDelayMs\":1200},{\"pace\":3,\"botDelayMs\":400},{\"pace\":99,\"botDelayMs\":120}]\n",
+    "error": ""
+  },
+  {
+    "test": "rare-rules-unit.mjs",
+    "exit": 0,
+    "output": "PASS Moon all counters despite lost zero-point trick, missed counter penalty, negative scores, all-pass redeal and forced dealer [{\"negative\":false,\"success\":false,\"scores\":[-200,5]},{\"negative\":false,\"success\":true,\"scores\":[0,500]},{\"negative\":true,\"success\":false,\"scores\":[-500,-295]},{\"negative\":true,\"success\":true,\"scores\":[500,-300]}]\n",
+    "error": ""
+  },
+  {
+    "test": "redeal-unit.mjs",
+    "exit": 0,
+    "output": "PASS actual all-pass redeal retains hand number, fresh opening identity, stale acknowledgements rejected, all players finish new opening\n",
+    "error": ""
+  },
+  {
+    "test": "sequence-unit.mjs",
+    "exit": 0,
+    "output": "PASS opening has no early bots; polling cannot accelerate clock; each DO alarm advances one bid and schedules next; human turn stops bot alarm\n",
+    "error": ""
+  },
+  {
+    "test": "single-seat-unit.mjs",
+    "exit": 0,
+    "output": "PASS: single seat, human reservation preserved, duplicate rejected, guest denied, invalid rejected, bulk fill retained\n",
+    "error": ""
+  },
+  {
+    "test": "trump-unit.mjs",
+    "exit": 0,
+    "output": "PASS bot trump is observable, shared stamp lock blocks human/bot play, polling cannot bypass, cards advance individually per alarm\n",
+    "error": ""
+  },
+  {
+    "test": "entry-check.mjs",
+    "exit": 0,
+    "output": "PASS: direct native entry, secure signed cookie, anonymous API denied, forged cookie denied, CSRF denied, rate limits, legacy test routes hidden\n",
+    "error": ""
+  },
+  {
+    "test": "friends-routing-check.mjs",
+    "exit": 0,
+    "output": "PASS: native submit keeps default navigation, targets the top window, carries create/join intent, and matches the cumulative Worker baseline.\n",
+    "error": ""
+  },
+  {
+    "test": "friends-entry-check.mjs",
+    "exit": 0,
+    "output": "PASS: Worker entry preserves create/name/invite intent for adapter startup, then removes those values from the visible URL.\n",
+    "error": ""
+  },
+  {
+    "test": "protocol-regression.mjs",
+    "exit": 0,
+    "output": {
+      "scope": "Local deployed RoomService with structured-clone storage adapter; not Cloudflare or rendered browser",
+      "matches": 10,
+      "actions": 2259,
+      "rejoins": 391,
+      "reports": [
+        {
+          "humans": 2,
+          "bots": 2,
+          "run": 0,
+          "hands": 6,
+          "steps": 284,
+          "scores": [
+            355,
+            640
+          ]
+        },
+        {
+          "humans": 2,
+          "bots": 2,
+          "run": 1,
+          "hands": 4,
+          "steps": 186,
+          "scores": [
+            300,
+            500
+          ]
+        },
+        {
+          "humans": 2,
+          "bots": 2,
+          "run": 2,
+          "hands": 5,
+          "steps": 221,
+          "scores": [
+            530,
+            315
+          ]
+        },
+        {
+          "humans": 2,
+          "bots": 2,
+          "run": 3,
+          "hands": 4,
+          "steps": 178,
+          "scores": [
+            255,
+            545
+          ]
+        },
+        {
+          "humans": 2,
+          "bots": 2,
+          "run": 4,
+          "hands": 5,
+          "steps": 234,
+          "scores": [
+            585,
+            40
+          ]
+        },
+        {
+          "humans": 4,
+          "bots": 0,
+          "run": 0,
+          "hands": 5,
+          "steps": 236,
+          "scores": [
+            285,
+            560
+          ]
+        },
+        {
+          "humans": 4,
+          "bots": 0,
+          "run": 1,
+          "hands": 8,
+          "steps": 376,
+          "scores": [
+            650,
+            40
+          ]
+        },
+        {
+          "humans": 4,
+          "bots": 0,
+          "run": 2,
+          "hands": 7,
+          "steps": 329,
+          "scores": [
+            505,
+            355
+          ]
+        },
+        {
+          "humans": 4,
+          "bots": 0,
+          "run": 3,
+          "hands": 6,
+          "steps": 283,
+          "scores": [
+            505,
+            225
+          ]
+        },
+        {
+          "humans": 4,
+          "bots": 0,
+          "run": 4,
+          "hands": 10,
+          "steps": 471,
+          "scores": [
+            250,
+            615
+          ]
+        }
+      ]
+    },
+    "note": "Test output directory now created by runner."
+  }
+]

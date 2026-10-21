@@ -21,4 +21,4 @@ const a={actionId:crypto.randomUUID(),expectedRevision:own.revision,...payload};
 }
 assert(steps<5000);
 }
-const result={scope:'Local deployed RoomService with structured-clone storage adapter; not Cloudflare or rendered browser',matches:reports.length,actions,rejoins,reports};fs.writeFileSync(new URL('./tests/pace-audit-service-results.json',import.meta.url),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
+const result={scope:'Local deployed RoomService with structured-clone storage adapter; not Cloudflare or rendered browser',matches:reports.length,actions,rejoins,reports};fs.mkdirSync(new URL('./tests/',import.meta.url),{recursive:true});fs.writeFileSync(new URL('./tests/pace-audit-service-results.json',import.meta.url),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
