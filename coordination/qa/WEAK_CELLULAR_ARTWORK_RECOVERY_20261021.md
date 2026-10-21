@@ -57,3 +57,20 @@ No changes to X1, artwork files, UI geometry, bidding, rooms, sw060.js, or live 
 - The isolated four-real-artwork image recovery regression passed, followed by a full native game HTML/DOM/critical CSS bootstrap smoke under failed premium bird request conditions.
 - This improves confidence that the recovery code coexists with the real game. It is not a complete playthrough, does not establish tiny-card geometry under loaded/unloaded CSS, and does not represent physical Android network conditions.
 - No live deployment. Device acceptance remains the final requirement before release.
+
+## Verified production-renderer recovery candidate (2026-10-21, final isolated scope)
+
+- Code change confined to `asset-loading772.js`. The approved artwork, dimensions, card rules, menus, rooms, X1 online v2 and service worker remain unchanged.
+- Real observed failure: on near-zero cellular service when changing from Wi-Fi, premium Red Two and Black Bird showed their existing generic fallback, card faces looked tiny, and the approved Bid Box art loaded incompletely. Returning to Wi-Fi restored the original visuals. The accidental MP4 is not evidence.
+- Root cause found in Chromium: a failed same-origin stylesheet may still expose `link.sheet` while `cssRules` throws a SecurityError. Merely checking `link.sheet` incorrectly marks the failed stylesheet as loaded. The candidate checks usable CSS rules safely and retries the original stylesheet URL in the same DOM position, without new CSS artwork or a page reload.
+- The original native image DOM nodes retry with five-second throttling; success clears failure state, and repeatedly returning to Chrome causes no new image requests after recovery.
+- Isolated source CI: https://github.com/jeromeleegriffin/Test/actions/runs/39654703092 — SUCCESS.
+- Final Chromium QA: https://github.com/jeromeleegriffin/Test/actions/runs/39655606641 — SUCCESS. All three separate browser scripts passed.
+- Final full-game browser evidence:
+  - Both critical native CSS URLs were intentionally aborted; recovery restored 7 rules (approved Bid Box CSS) and 12 rules (card/loader CSS) with navigation count still 1.
+  - Native Black Bird and Red Two text fallbacks appeared on deliberately failed image loads; their real approved artwork loaded later and hid fallback text.
+  - Repeated online, focus and visibility events did not refetch already restored CSS or bird art.
+  - Genuine offline game was started on 390×844 portrait Chromium AFTER the CSS and image disruptions. The actual 10-card hand rendered 32–33 CSS-pixel widths and 46 CSS-pixel heights, all 10 card images decoded, and navigation count remained 1.
+  - A second independent real-hand run verified 10 visible card images and normal dimensions under standard connectivity.
+- Scope limitation: not physical Android, not independent real cellular hardware/OS suspension and not the hosted X1 multiplayer hand. Do not claim those certified. Nothing was deployed or cache-cleared.
+- Release gate: owner review and Android acceptance using a safe owner-accessible candidate. Coordinate all three site updates only with authorization and rollback plan, retaining R10 live until then.
