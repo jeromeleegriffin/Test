@@ -66,6 +66,10 @@ const missing=[...new Set(referenced.filter(p=>!existing.has(p)))];
 if(missing.length)throw Error('Service-worker dependencies absent: '+missing.slice(0,20).join(', '));
 const workerFile=path.join(work,'cloudflare','live','worker-live.mjs');
 let worker=fs.readFileSync(workerFile,'utf8');
+const commonJSOnly="typeof module!=='undefined'?require('./core.js'):root.X1Core";
+if(worker.split(commonJSOnly).length!==2)throw Error('Unexpected X1 runtime CommonJS selection');
+worker=worker.replace(commonJSOnly,'root.X1Core'); // Workers module runtime uses the original global X1 core.
+
 const escapeReg=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 // Replace only the THREE known pinned GitHub runtime fetches, not any API logic.
 const htmlPattern=/fetch\("https:\/\/raw\.githubusercontent\.com\/jeromeleegriffin\/Test\/90078a710948c7643caafb18986e34dc71ce7cee\/index\.html",\s*\{\s*redirect:\s*"follow",\s*cf:\s*\{\s*cacheEverything:\s*true,\s*cacheTtlByStatus:\s*\{\s*"200-299":\s*86400,\s*"300-599":\s*-1\s*\}\s*\}\s*\}\)/g;
