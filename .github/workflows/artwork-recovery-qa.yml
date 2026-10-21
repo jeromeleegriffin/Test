@@ -6,6 +6,7 @@ on:
       - asset-loading772.js
       - coordination/qa/browser-artwork-recovery.mjs
       - coordination/qa/full-game-artwork-smoke.mjs
+      - coordination/qa/actual-gameplay-geometry.mjs
       - .github/workflows/artwork-recovery-qa.yml
   workflow_dispatch:
 permissions:
@@ -23,6 +24,7 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: node coordination/qa/browser-artwork-recovery.mjs
       - run: node coordination/qa/full-game-artwork-smoke.mjs
+      - run: node coordination/qa/actual-gameplay-geometry.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -30,4 +32,5 @@ jobs:
           path: |
             artwork-recovery-browser.png
             full-game-artwork-smoke.png
+            actual-gameplay-geometry.png
           if-no-files-found: ignore
