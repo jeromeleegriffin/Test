@@ -77,7 +77,7 @@ let assetCount=0;
 worker=worker.replace(assetPattern,()=>{assetCount++;return 'env.ASSETS.fetch(new Request(new URL("/cloud-game/assets/" + assetPath,request.url), { method:request.method }))';});
 if(assetCount!==1)throw Error('Expected one GitHub asset proxy; got '+assetCount);
 if(worker.includes(raw)||worker.includes('raw.githubusercontent.com'))throw Error('Runtime worker retains GitHub fetch');
-if(!worker.includes('CLOUD_GAME_ADAPTER')||!worker.includes('class RoomDO'))throw Error('Worker/game intelligence unintentionally stripped');
+if(!worker.includes('CLOUD_GAME_ADAPTER')||!worker.includes('var RoomDO = class extends DurableObject'))throw Error('Worker/game intelligence unintentionally stripped');
 const resultFile=path.join(output,'worker-cloud-only.mjs');
 fs.mkdirSync(output,{recursive:true});
 fs.writeFileSync(resultFile,worker);
