@@ -51,3 +51,9 @@ No changes to X1, artwork files, UI geometry, bidding, rooms, sw060.js, or live 
 - Chromium browser test: https://github.com/jeromeleegriffin/Test/actions/runs/39643345774 — SUCCESS, now using the four real source images independently (RookPremium.png, Red2Premium.png, numbered red-10.png, bidbox-approved-scrollwork.png).
 - These checks validate isolated real Chromium image failures and recovery, not the complete game-renderer integration nor weak-cellular Android OS.
 - Next prerequisite for publication: final full-game/Android visual acceptance, especially tiny numbered-card sizing and any CSS partial load. Live R10 and X1 remain unchanged.
+
+## Full-game Chromium smoke (2026-10-21)
+- Workflow https://github.com/jeromeleegriffin/Test/actions/runs/39652005815 concluded SUCCESS.
+- The isolated four-real-artwork image recovery regression passed, followed by a full native game HTML/DOM/critical CSS bootstrap smoke under failed premium bird request conditions.
+- This improves confidence that the recovery code coexists with the real game. It is not a complete playthrough, does not establish tiny-card geometry under loaded/unloaded CSS, and does not represent physical Android network conditions.
+- No live deployment. Device acceptance remains the final requirement before release.
