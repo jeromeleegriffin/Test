@@ -12,10 +12,31 @@ try {
   let loaded=false;
   for(let i=0;i<20;i++){try{const r=await page.request.get(url,{timeout:1000});if(r.ok()){loaded=true;break}}catch{}await new Promise(r=>setTimeout(r,250))}
   assert(loaded,'Local game server failed to boot');
+  let stylesRestored=false;
+  let cssFailures=0;
+  await page.route('**/approved-bid-portrait.css**',r=>stylesRestored?r.continue():(cssFailures++,r.abort('failed')));
+  await page.route('**/asset-loading772.css**',r=>stylesRestored?r.continue():(cssFailures++,r.abort('failed')));
   await page.route('**/assets/images/RookPremium.png**',r=>r.abort('failed'));
   await page.route('**/assets/images/Red2Premium.png**',r=>r.abort('failed'));
   await page.goto(url,{waitUntil:'domcontentloaded',timeout:45000});
   await page.waitForTimeout(3000);
+  assert(cssFailures >= 2,'Failed-stylesheet test did not actually block both CSS files');
+  const beforeStyleRecovery=await page.evaluate(()=>({
+    loaderCss:!![...document.styleSheets].find(x=>x.href?.includes('asset-loading772.css')),
+    bidCss:!![...document.styleSheets].find(x=>x.href?.includes('approved-bid-portrait.css')),
+  }));
+  assert(!beforeStyleRecovery.loaderCss && !beforeStyleRecovery.bidCss,'Critical CSS unexpectedly loaded before recovery');
+  stylesRestored=true;
+  await page.evaluate(()=>window.dispatchEvent(new Event('online')));
+  await page.waitForFunction(()=>[...document.styleSheets].some(x=>x.href?.includes('asset-loading772.css')) &&
+    [...document.styleSheets].some(x=>x.href?.includes('approved-bid-portrait.css')),null,{timeout:12000});
+  const afterStyleRecovery=await page.evaluate(()=>({
+    loaderCss:!![...document.styleSheets].find(x=>x.href?.includes('asset-loading772.css')),
+    bidCss:!![...document.styleSheets].find(x=>x.href?.includes('approved-bid-portrait.css')),
+    navigationCount:performance.getEntriesByType('navigation').length,
+  }));
+  assert(afterStyleRecovery.loaderCss && afterStyleRecovery.bidCss);
+  assert.equal(afterStyleRecovery.navigationCount,1,'Game unexpectedly reloaded on CSS recovery');
   const data=await page.evaluate(()=>({
     title:document.title,
     loader:!!window.HORAssetLoading772,
@@ -46,5 +67,5 @@ try {
   data.geometryLimitation = data.geometryVisible ? 'Fixture visible' : 'Fixture hidden by native pre-game/loading rules; actual gameplay size not certified';
   data.geometry=geometry;
   await page.screenshot({path:'full-game-artwork-smoke.png',fullPage:false});
-  console.log(JSON.stringify({pass:true,scope:'Full game bootstrap/DOM/CSS smoke, portrait Chromium with failed bird requests; not a complete gameplay test',data,errors:failures.slice(0,10)},null,2));
+  console.log(JSON.stringify({pass:true,scope:'Actual game bootstrap; both real critical stylesheets aborted then recovered on online event without reload; not Android',beforeStyleRecovery,afterStyleRecovery,data,errors:failures.slice(0,10)},null,2));
 }finally {await browser?.close();server.kill();}
