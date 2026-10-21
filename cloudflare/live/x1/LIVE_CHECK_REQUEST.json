@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-21",
+  "purpose": "One fresh production match after verified X1 publication; close only its own test room",
+  "expectedEngine": "x1-online-v1",
+  "expectedNative": "846-r10-ambience-levels-20261021",
+  "workerSha256": "313ed667456754003a054b6506c9c5579d98d16ecb179b9d8465fa954152e6c1",
+  "version": "3c0339df-3396-4784-b50b-05a0b41166ab"
+}
