@@ -1,5 +1,5 @@
 {
-  "status": "ALL_THREE_R10_DEPLOYED_PHONE_AMBIENCE_ACCEPTANCE_PENDING",
+  "status": "ALL_THREE_R10_DEPLOYED_OWNER_CONFIRMED_AUDIO",
   "date": "2026-10-21",
   "runtime": "846-r10-ambience-levels-20261021",
   "ownerConfirmedCardSoundsRestored": true,
@@ -21,8 +21,8 @@
       {
         "id": 39557811988,
         "name": "pages build and deployment",
-        "status": "in_progress",
-        "conclusion": null
+        "status": "completed",
+        "conclusion": "success"
       }
     ],
     "rollbackCommit": "517c308a9aa21e518908344020835a3a00ff8a68",
@@ -53,8 +53,8 @@
       {
         "id": 39557814680,
         "name": "pages build and deployment",
-        "status": "queued",
-        "conclusion": null
+        "status": "completed",
+        "conclusion": "success"
       },
       {
         "id": 39557744220,
@@ -120,11 +120,19 @@
     ]
   },
   "limitations": {
-    "physicalAndroidAmbienceVerified": false,
-    "actualAudibleAmbienceVerified": false,
+    "physicalAndroidAmbienceVerified": true,
+    "actualAudibleAmbienceVerified": true,
     "cloudBrowser": "Native credential runtime unavailable; no repeated auth/reconnect loops",
     "graphTest": "Actual module/PCM, mocked AudioContext and evaluated WaveShaper curve; not a browser listening test",
-    "newZipCreated": false
+    "newZipCreated": false,
+    "audioVerificationMethod": "Owner confirmation, not assistant browser listening"
   },
-  "next": "Owner refreshes game once, taps to unlock audio and allows 5 seconds for the existing wind/fire fade. Confirm ambience on phone without changing saved sliders."
+  "next": "Preserve the working audio. Address separately chosen remaining banked work and verification items; see coordination/BANKED_IDEAS_STATUS_20261021.md.",
+  "ownerPhoneAudioAcceptance": {
+    "date": "2026-10-21",
+    "otherSoundsQuote": "the other sounds are back",
+    "ambienceQuote": "I hear it.",
+    "method": "Owner report in this conversation",
+    "scope": "Current owner phone/session; not exhaustive rare-event, device, roaming or suspension certification"
+  }
 }

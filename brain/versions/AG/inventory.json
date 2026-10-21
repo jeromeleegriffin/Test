@@ -7,13 +7,13 @@
   "files": [
     {
       "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
-      "bytes": 25217,
-      "sha256": "c9c1bdda12ae52ead10d4b2d69e509d37caf185971e0e654637f32d81cfccbc5"
+      "bytes": 25748,
+      "sha256": "cdbfa9014a74e6a9531474dc0afa52686f88e3b327742056698d73d4000bfb65"
     },
     {
       "path": "files/00_START_HERE/START_HERE.md",
-      "bytes": 38862,
-      "sha256": "152259f70605aff0b6828966084857d8493a0f95e9421745ae6c40465f904913"
+      "bytes": 40676,
+      "sha256": "ad1bd2f342cf428f98bf75e736808eaa92578fbaaa435f8ca33229344e4cea62"
     },
     {
       "path": "files/01_MASTER_BANK/CHAT_CONTINUITY_RULE.md",
@@ -27,8 +27,8 @@
     },
     {
       "path": "files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
-      "bytes": 38862,
-      "sha256": "152259f70605aff0b6828966084857d8493a0f95e9421745ae6c40465f904913"
+      "bytes": 40676,
+      "sha256": "ad1bd2f342cf428f98bf75e736808eaa92578fbaaa435f8ca33229344e4cea62"
     },
     {
       "path": "files/01_MASTER_BANK/PERMANENT_UI_VISUAL_VERIFICATION_RULE.md",
