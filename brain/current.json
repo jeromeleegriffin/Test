@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "BRANDED_V40_TWO_COMPLETE_LIVE_MATCH_TESTS_AND_IDENTITY_VISIBILITY_PATCHED; EXTENDED_PHYSICAL_ANDROID_QA_PENDING",
+    "status": "LIVE_V40_TWO_COMPLETE_MATCHES_WEBSOCKET_RESUME_MOBILE_ENTRY_AND_ZERO_DOUBLE_LOAD_QA_PASSED; PHYSICAL_DEVICE_QA_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -2005,7 +2005,7 @@
       "status": "V4_EARLY_RETURN_NATIVE_HANDLER_RESTORED_CODE_AND_LIVE_JS_VERIFIED_DEVICE_LOAD_COUNT_PENDING",
       "worker": "rooks-branded-entry-only-20261022",
       "route": "rooks.jeromegriffin.com/cloud-game/assets/cloudflare-entry.js*",
-      "version": "20261022-v4",
+      "version": "20261022-v6c-invite-identity-visible",
       "change": "Return early when HOR_CLOUD_TEST_ACTIVE is true so native Cloudflare create/join click handler operates in place without whole-page form navigation",
       "rootCause": "v3 override intercepted native capture click and triggered full navigation / duplicate page initialization",
       "preserveOldWorker": true,
@@ -2015,7 +2015,18 @@
       "sourceFile": "coordination/domain-20261022/rooks-branded-entry-v4-single-load.js",
       "brandedCurrentScriptVersion": "20261022-v6c-invite-identity-visible",
       "underlyingNativeHandlerRetained": true,
-      "measuredAndroidLoadCount": false
+      "measuredAndroidLoadCount": false,
+      "mobileChromiumQa": {
+        "viewport": "360x780",
+        "hostRoomCreated": true,
+        "sameDocument": true,
+        "navigationCountUnchanged": true,
+        "beforeResources": 250,
+        "afterResources": 250,
+        "additionalResources": 0,
+        "qaRoomClosed": true,
+        "passed": true
+      }
     },
     "directRoomLink": {
       "date": "2026-10-22",
@@ -2130,11 +2141,10 @@
       "invalidCandidate39": "aefaafd8-a522-4118-ac53-6b3d982591b3 (briefly deployed then rolled back; missing top-level seat-options router)",
       "extendedQaReport": "coordination/domain-20261022/V40_LIVE_RELIABILITY_QA_20261022.md",
       "remainingChecks": [
-        "Owner Android Facebook in-app test",
-        "Multi-minute mobile background suspension and new network resume",
-        "Offline/PWA install/origin migration",
-        "Quantified load/cache performance on physical Android",
-        "Long multi-hand rule regression"
+        "Actual Android Facebook in-app invitation",
+        "Extended network interruption and background/foreground across different physical networks",
+        "True offline/PWA install and saved identity migration",
+        "Multi-hand rare rule and longer-session checks"
       ]
     },
     "mobileInvitationIdentityVisibility": {
