@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "LIVE_V40_SEAT_SELECTION_V7_BRANDED_INVITE_NAME_FIELD_PATCH_BROWSER_VERIFIED_FACEBOOK_ANDROID_RETEST_PENDING",
+    "status": "LIVE_V40_SEAT_SELECTION_BRANDED_V8_SELECTION_CLARITY_AND_NAME_PROMPT_BROWSER_VERIFIED_ANDROID_CONFIRM_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -2230,6 +2230,23 @@
       "approvedFBPicturePreserved": true,
       "source": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/rooks-branded-entry-v7-invite-name-field.js",
       "handoff": "coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md"
+    },
+    "inviteSeatChoiceClarity": {
+      "date": "2026-10-22",
+      "deployed": true,
+      "scope": "rooks.jeromegriffin.com invitation UI only",
+      "version": "20261022-v8-seat-selected",
+      "fixedNamePrompt": "Enter your player name",
+      "removedMisleadingPreviousNameHint": true,
+      "seatChoiceSelectedAppearance": "Gold button, bright 3px border, glow, ✓ SELECTED, partner/opponent explanation and seat-specific confirm button",
+      "seatsStillChosenByExistingAuthoritativeUI": true,
+      "serverStateUnmodified": true,
+      "browserQAVerified": true,
+      "physicalAndroidFacebookRetestPending": true,
+      "approvedFacebookArtworkPreserved": true,
+      "normalGameUIUnaffected": true,
+      "source": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/rooks-branded-entry-v8-seat-selected.js",
+      "rollback": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/rooks-branded-entry-v7-invite-name-field.js"
     }
   },
   "cloudflareCurrentObserved": {
