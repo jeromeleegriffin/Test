@@ -77,7 +77,8 @@ const X1_RULES = (() => {
     if(made&&!v.settings.bidOnlyScoring&&v.settings.sandbagging){const added=Math.floor(Math.max(0,points[b]-v.bid)/10)*10;delta[b]-=Math.floor(((v.sandbagOverpoints?.[b]||0)+added)/100)*100;}
     const scores=v.scores.map((s,i)=>s+delta[i]);
     if(v.moon&&made)scores[b]=Math.max(scores[b],v.settings.targetScore);
-    const result=matchResult(scores,v.settings.targetScore),team=v.seat%2;
+    const moonWinner=made?b:1-b;
+    const result=v.moon?(moonWinner===0?'Team A':'Team B'):matchResult(scores,v.settings.targetScore),team=v.seat%2;
     // A made Moon/terminal win dominates margin, including negative scores.
     if(result)return result==='Tie'?0:(result===(team===0?'Team A':'Team B')?10000:-10000);
     return Math.max(-9999,Math.min(9999,scores[team]-scores[1-team]));
@@ -125,14 +126,16 @@ const X1_RULES = (() => {
     const initialPlan=plan(v,0,false),power=strength(v,v.h,initialPlan.tr),cap=Math.min(limit,Math.max(0,Math.floor((power*.8+v.h.reduce((n,c)=>n+v.cards[c].points,0)*.4)/5)*5));
     let candidates=[0];if(cap>=ask)candidates.push(ask,...[10,15,20].map(n=>v.high+n).filter(n=>n>ask&&n<=Math.min(cap-10,limit)));
     // Moon is evaluated on actual terminal utility, not ordinary point margin.
-    if(v.settings.shootMoonEnabled&&total%5===0&&power>=90)candidates.push(total);
+    // Moon is human-only: this server bot evaluator never offers it.
     if(allowedCandidates)candidates=[...new Set(allowedCandidates)];
+    if(v.settings.shootMoonEnabled)candidates=candidates.filter(c=>c!==total);
+    if(!candidates.includes(0))candidates.unshift(0);
     if(candidates.length===1)return{bid:0,samples:0};
     const input={...v,lengths:Array(4).fill(v.settings.handSize),hiddenNest:v.cards.length-4*v.settings.handSize,nest:[],tc:[],ts:[],played:[],voids:[0,0,0,0]},draw=sampler(input,rng(seed(input)));
     const sums=candidates.map(()=>0),squares=candidates.map(()=>0),samples=128;
     function auction(w,offer){const active=v.passed.map(p=>!p),history=v.history.slice();let high=v.high,bidder=v.bidder;if(offer){high=offer;bidder=v.seat;history.push([v.seat,offer]);}else active[v.seat]=false;
       if(offer===total&&v.settings.shootMoonEnabled)return{bidder,bid:high};
-      for(let s=(v.seat+1)%4,k=0;k<200;k++,s=(s+1)%4){if(bidder>=0&&active.filter(Boolean).length<=1)return{bidder,bid:high};if(!active[s])continue;const view={...v,seat:s,h:w.h[s]},p=plan(view,0,false),ability=Math.min(limit,Math.floor((strength(view,w.h[s],p.tr)*.8+w.h[s].reduce((n,c)=>n+v.cards[c].points,0)*.4)/5)*5);if(ability>=high+5&&high+5<=limit){high+=5;bidder=s;}else active[s]=false;}
+      for(let s=(v.seat+1)%4,k=0;k<200;k++,s=(s+1)%4){if(bidder>=0&&active.filter(Boolean).length<=1)return{bidder,bid:high};if(!active[s])continue;const view={...v,seat:s,h:w.h[s]},p=plan(view,0,false),ability=Math.min(limit,Math.floor((strength(view,w.h[s],p.tr)*.8+w.h[s].reduce((n,c)=>n+v.cards[c].points,0)*.4)/5)*5);if(ability>=high+5&&high+5<=limit-(v.settings.shootMoonEnabled?5:0)){high+=5;bidder=s;}else active[s]=false;}
       return bidder>=0?{bidder,bid:high}:v.settings.screwTheDealer?{bidder:v.dealer,bid:v.settings.minBid}:null;
     }
     for(let i=0;i<samples;i++){const w=draw(),cache=new Map(),values=candidates.map((offer,j)=>{const a=auction(w,offer);if(!a)return 0;const key=a.bidder+':'+a.bid;let out=cache.get(key);if(out===undefined){const h=w.h.map(a=>a.slice()),all=h[a.bidder].concat(w.nest),base={...v,seat:a.bidder,h:all,bidder:a.bidder,bid:a.bid,moon:!!v.settings.shootMoonEnabled&&a.bid===total};const p=plan(base,w.nest.length,false);h[a.bidder]=p.keep;const nest=all.filter(c=>!p.keep.includes(c)),lead=v.settings.leadOrder==='leftOfBidder'?(a.bidder+1)%4:v.settings.leadOrder==='rightOfBidder'?(a.bidder+3)%4:a.bidder;out=rollout({...base,seat:v.seat,tr:p.tr,played:[],tc:[],ts:[],points:[0,0]}, {h,nest},null,{lead}).value;cache.set(key,out);}sums[j]+=out;return out;});for(let j=0;j<values.length;j++){const d=values[j]-values[0];squares[j]+=d*d;}}
@@ -140,3 +143,4 @@ const X1_RULES = (() => {
   }
   return {rules,sampler,utility,rollout,choose,plan,bid,seed};
 })();
+

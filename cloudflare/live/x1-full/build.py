@@ -1,6 +1,8 @@
 from pathlib import Path
 import hashlib,argparse
 root=Path(__file__).parent
+if 'BOT_MOON_FORBIDDEN' in (root.parent/'worker-live.mjs').read_text():
+ raise SystemExit('Historical X1 builder cannot overwrite the human-only Moon policy. Use the current verified Worker and Cloudflare static packaging.')
 parser=argparse.ArgumentParser(description='Extend exact verified online X1 v1; preserve its native R10 and frozen engines')
 parser.add_argument('--base',type=Path,default=root/'base-worker.mjs')
 parser.add_argument('--v1-bridge',type=Path,default=root/'base-bridge.mjs')
@@ -46,3 +48,4 @@ function chooseOnlineBotAction(room,seat) {
 source=base[:-len(old)]+(root/'rules-engine.mjs').read_text()+'\n'+(root/'adapter.mjs').read_text()+'\n'+s+wrapper
 args.output.write_text(source)
 print('Built X1 v2 candidate without changing native R10/HTTP/DO wrapper.')
+

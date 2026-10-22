@@ -57,6 +57,17 @@ fs.copyFileSync(patchFrom,path.join(assets,'asset-loading772.js'));
 const repaired=list.find(e=>e.path==='asset-loading772.js');
 if(!repaired)throw Error('Missing base asset loader');
 repaired.bytes=repair.length;repaired.sha256=crypto.createHash('sha256').update(repair).digest('hex');repaired.patch='work/asset-recovery-20261021';
+// Owner-authorized R11 policy overlays; every other original R10 asset stays pinned.
+const policyFiles=['game060.js','index.html','polish.js','bots.js','x1/integration.js','progression.js','hor-version.js','sw060.js'];
+for(const rel of policyFiles){
+  const bytes=fs.readFileSync(path.join(work,rel));
+  const item=list.find(e=>e.path===rel);
+  if(!item)throw Error('Missing Moon policy base asset: '+rel);
+  fs.copyFileSync(path.join(work,rel),path.join(assets,rel));
+  item.bytes=bytes.length;item.sha256=crypto.createHash('sha256').update(bytes).digest('hex');item.patch='human-only-moon-r11';
+}
+if(!fs.readFileSync(path.join(assets,'game060.js'),'utf8').includes('or lose the match'))throw Error('Moon UI overlay absent');
+if(!fs.readFileSync(path.join(work,'cloudflare/live/worker-live.mjs'),'utf8').includes('BOT_MOON_FORBIDDEN'))throw Error('Moon reducer authority absent');
 const originalSW=fs.readFileSync(path.join(source,'sw060.js'),'utf8');
 const shellRegion=originalSW.match(/const SHELL\s*=\s*\[([\s\S]*?)\];/);
 if(!shellRegion)throw Error('Source has no auditable service-worker shell');
@@ -102,3 +113,4 @@ fs.mkdirSync(preflight,{recursive:true});
 fs.writeFileSync(path.join(preflight,'release-manifest.json'),JSON.stringify(meta,null,2)+'\n');
 fs.writeFileSync(path.join(preflight,'SHA256SUMS'),list.map(x=>x.sha256+'  '+x.path).join('\n')+'\n');
 console.log(JSON.stringify({success:true,assetCount:meta.assetCount,assetMiB:+(meta.assetBytes/1048576).toFixed(2),workerBytes:worker.length,shellValidated:meta.checkedShellDependencies,htmlFetchRewrites:htmlCount,assetFetchRewrites:assetCount,noGitHubRuntime:true,artifact:output},null,2));
+

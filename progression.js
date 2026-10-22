@@ -150,14 +150,14 @@
     },
     {
       'id': 'moon_made',
-      'description': 'Successfully Shoot the Moon.',
+      'description': 'Human-only: capture every point to win the match.',
       'name': 'Moonshiner',
       'stat': 'moonMade',
       'thresholds': [1, 5, 25, 100, 500],
     },
     {
       'id': 'moon_attempts',
-      'description': 'Attempt Shoot the Moon.',
+      'description': 'Attempt a human-only Moon: make it to win the match; miss it to lose the match.',
       'name': 'Moon Chaser',
       'stat': 'moonAttempts',
       'thresholds': [5, 25, 100, 500, 2000],
@@ -1245,3 +1245,4 @@ HORCareerCore.install(window.HORProgression);
     { capture: true, passive: true }
   );
 })();
+

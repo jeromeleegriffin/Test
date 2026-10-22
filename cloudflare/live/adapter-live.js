@@ -9,7 +9,7 @@
   // Private 846 adapter, eight-character Cloudflare room codes.
   const codeField = document.getElementById("hor-room-code");
   if (codeField) codeField.maxLength = 8;
-  if (!["846-r10-ambience-levels-20261021"].includes(window.HOR_SCRIPT_BUILD)) {
+  if (!["846-r10-ambience-levels-20261021","846-r11-human-moon-20261021"].includes(window.HOR_SCRIPT_BUILD)) {
     const notice = document.getElementById("lobbyStatus");
     if (notice) notice.textContent = "This game version has not been verified for private cloud play. Please wait for the test adapter update.";
     // Fail closed rather than silently falling back to browser-hosted rooms.
@@ -104,7 +104,12 @@
       if (!p || p.occupied === false) return null;
       return {
         id: playerIdForSeat(seat),
-        name: p.name || p.displayName || ("Player " + (seat + 1)),
+        // Old active room snapshots can still contain test-era bot names.
+        // Render the already-selected character without mutating a saved room.
+        name: p.isBot === true && /^Test Bot [234]$/.test(p.name || p.displayName || "")
+          ? ({dagger:"Dagger",crow:"Crow",blaze:"Blaze"}[p.avatar] ||
+             ({1:"Dagger",2:"Crow",3:"Blaze"}[seat]) || p.name)
+          : (p.name || p.displayName || ("Player " + (seat + 1))),
         seat,
         team: Number.isInteger(p.team) ? p.team : seat % 2,
         isHost: seat === 0,
@@ -664,7 +669,7 @@
       if (busy) { showBotFillStatus("The table is finishing another action. Wait a moment, then tap again.", button); return; }
       busy = true;
       button.disabled = true;
-      showBotFillStatus("Adding test bots to the open seats…", button);
+      showBotFillStatus("Adding House bots to the open seats…", button);
       api(roomPath("fill-bots"), { method: "POST", body: {} })
         .then(snap => { receiveSnapshot(snap); showBotFillStatus("Bots added. The table is ready to start.", button); })
         .catch(error => showBotFillStatus("Could not add bots: " + error.message, button))
@@ -785,7 +790,7 @@
   window.isBotTurn = (...args) => credentials ? false : native.isBotTurn?.(...args);
   window.scheduleBot = (...args) => credentials ? undefined : native.scheduleBot?.(...args);
   window.runBotAction = (...args) => credentials ? undefined : native.runBotAction?.(...args);
-  status("Private cloud room test ready.");
+  status("Online table ready.");
   const requestedName = String(window.GHR_CLOUD_NAME || "").trim().slice(0, 12);
   const playerNameField = document.getElementById("hor-player-name");
   if (requestedName && playerNameField) playerNameField.value = requestedName;

@@ -280,7 +280,7 @@ function extremeBid(hand, floor, ceiling, nextMin) {
   }
 
   if (typeof isShootMoonBid === 'function' && isShootMoonBid(bid)) {
-    if (!(info.trumpLen >= 7 && info.analysis.rook && info.marks >= 4)) bid = Math.max(0, ceiling - 20);
+    bid = 0; // Moon is human-only, including legacy/fallback bots.
   }
 
   hostProcessBid({ player: seat, value: bid, voiceLine: true });
@@ -710,3 +710,4 @@ function extremePickCard(idx, hand, legal) {
   });
   return pool[0] || legal[0];
 }
+

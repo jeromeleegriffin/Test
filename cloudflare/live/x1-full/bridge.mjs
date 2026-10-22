@@ -117,7 +117,7 @@ function x1BidInput(state, seat, memory) {
     history: memory.history.map((row) => row.slice()),
     scores: state.scores.slice(),
     passed: state.bidStatus.map((x) => x === 'pass'),
-    limit: 200,
+    limit: state.settings.shootMoonEnabled && state.players[seat]?.isBot ? 195 : 200,
     target: state.settings.targetScore,
     revealed:
       state.settings.revealTopNest && state.topNestCard ? x1CardId(state.topNestCard) : null,
@@ -308,13 +308,15 @@ function chooseOnlineBotAction(room,seat) {
    if(d.engine!=="x1")return d;
    if(s.phase==='bidding') {
     if(partner!==null&&s.bidder===partner){const v=x1BidInput(s,seat,m),ask=v.high+5,cap=ONLINE_X1.core.ceiling(v.h,{seat,high:v.high,history:v.history,scores:v.scores});if(cap>=ask){const p=ONLINE_X1.bidding.decide(v);if(![0,ask].includes(p.bid))throw Error('X1_BAD_TAKEOVER');d.action={type:'bid',value:p.bid};}}
-    if(s.settings.shootMoonEnabled){const v=x1ExtendedView(s,seat,m,partner),power=Math.max(...Array.from({length:4},(_,tr)=>X1_RULES.plan({...v,tr},0,false).score));if(power>=90||d.action.value===200){const p=X1_RULES.bid(v,[d.action.value===200?0:d.action.value,200]);d.action={type:'bid',value:p.bid};}}
+    // Owner rule: bots never declare Moon. Native X1 ordinary bidding stays in place.
    }
    if(s.phase==='play'&&partner!==null){const v=x1PlayInput(s,seat,m,partner),p=ONLINE_X1.core.choose(v);const card=s.hands[seat].find(c=>x1CardId(c)===p.card);if(!card)throw Error('X1_PARTNER_SAMPLE');d.action={type:'play',cardId:card.id};}
    d.partnerAssist=partner!==null;
   }
+  if(s.phase==='bidding'&&s.settings.shootMoonEnabled&&d.action.value===makeDeck(s.settings.rules).reduce((n,c)=>n+cardPoints(c,s.settings.rules),0))d.action={type:'bid',value:0};
   if(s.phase==='play'&&!s.shotTheMoon){const card=x1AnchorRoute(s,seat,partner);if(card)d.action={type:'play',cardId:card.id};}
   if(!x1ActionLegal(s,seat,d.action))throw Error('X1_RULE_ACTION_ILLEGAL');
   return {...d,ms:Math.round((performance.now()-started)*100)/100};
  }catch(e){return {action:chooseTestBotAction(s,seat),engine:'legacy',reason:'x1-extension-error:'+e.message,partnerAssist:false};}
 }
+

@@ -1211,10 +1211,10 @@
     const makers = teamLabel(summary.bidderTeam);
     const taken = summary.bidderTeam === 0 ? summary.pointsA : summary.pointsB;
     if (summary.shotMoonResult === 'made')
-      return makers + ' captured every point and shot the Moon — wins the entire game!';
+      return makers + ' captured every point and shot the Moon — wins the match!';
     if (summary.shotMoonResult === 'failed')
       return (
-        makers + ' missed the Moon: −' + summary.bid + '. Opponents score their captured points.'
+        makers + ' missed the Moon — loses the match immediately. Opponents win the match.'
       );
     if (summary.made) {
       if (bidOnlyScoring)
@@ -2140,3 +2140,4 @@
       );
   });
 })();
+

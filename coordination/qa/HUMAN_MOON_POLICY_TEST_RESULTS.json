@@ -1,0 +1,8 @@
+{
+  "checks": 330,
+  "outcomeCases": 48,
+  "naturalAuctions": 500,
+  "decisions": 2572,
+  "botMoonBids": 0,
+  "scope": "Actual online reducer/engines and extracted actual native scoring/permissions; local simulation, not physical-device acceptance"
+}

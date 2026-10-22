@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '846-r10-ambience-levels-20261021';
+const APP_VERSION = '846-r11-human-moon-20261021';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -88,7 +88,7 @@ let openWidow = false;
 let revealTopNest = true;
 /** Test hook: '' | 'rook' | 'red2' — force that card onto the nest reveal */
 /** Shoot the Moon: bidding every counter in the deck is an all-or-nothing
- * bid — make it and win the game outright, miss it and go set as usual */
+ * human-only bid — make it and win the match, miss it and lose the match */
 let shootMoonEnabled = true;
 /** Bot delay: blitz | normal | slow */
 let botSpeed = 'normal';
@@ -1097,12 +1097,17 @@ try {
 let targetScore = 500;
 
 /**
- * A match ends only when a team reaches the positive target or the opposing
+ * Ordinary scoring ends when a team reaches the positive target or the opposing
  * team reaches the matching negative target. For example, a 500-point match
  * may be won at +500 or lost at -500; scores between those bounds are still
- * live.
+ * live. A declared Moon ends the match on success or failure, regardless of scores.
  */
-function getMatchResult(scores, goal) {
+function getMatchResult(scores, goal, outcome = game) {
+  if (outcome?.matchResult) return outcome.matchResult;
+  if (outcome?.shotMoonResult) {
+    const winner = outcome.shotMoonResult === 'made' ? outcome.bidderTeam : 1 - outcome.bidderTeam;
+    return winner === 0 ? 'Team A' : 'Team B';
+  }
   const a = Number(scores?.[0] || 0);
   const b = Number(scores?.[1] || 0);
   const g = Number(goal || 500);
@@ -1120,8 +1125,8 @@ function getMatchResult(scores, goal) {
   return null;
 }
 
-function isMatchOver(scores, goal) {
-  return !!getMatchResult(scores, goal);
+function isMatchOver(scores, goal, outcome = game) {
+  return !!getMatchResult(scores, goal, outcome);
 }
 
 // Experimental polish features are deliberately OFF by default. They can be
@@ -2260,7 +2265,7 @@ function playResultFinish843(summary, match = false) {
   if (match) {
     naturalAwardAt063 = Date.now(); // Keep award toasts from piling applause onto the finish.
     playNatural063('applause', 0.65, 0, 'result', 1);
-  } else if (!getMatchResult(summary.scores, game?.targetScore || targetScore || 500)) {
+  } else if (!getMatchResult(summary.scores, game?.targetScore || targetScore || 500, summary)) {
     playNatural063('clink', 0.32, 0, 'result', 1);
   }
 }
@@ -2899,8 +2904,8 @@ function isShootMoonBid(n) {
 }
 
 function moonBidAllowed(seat) {
-  // A negative score does not restrict Moon bids. getMatchResult owns the losing threshold.
-  return !!shootMoonEnabled;
+  // Only a seated human may declare Moon, including with a negative score.
+  return !!(shootMoonEnabled && players[seat] && !players[seat].isBot);
 }
 
 function bidCeilingFor(seat) {
@@ -6426,7 +6431,7 @@ const BOT_PERSONAS = [
     name: 'Spark',
     style: 'moonDreamer',
     avatar: 'spark',
-    blurb: 'Looks for Shoot the Moon more than the book.',
+    blurb: 'Presses strong hands while leaving Moon bids to humans.',
   },
   {
     name: 'Nettle',
@@ -6476,7 +6481,7 @@ const STYLE_TITLES = {
   eggSitter: 'Egg sitter',
   bidOnce: 'Bids once',
   climbOnly: 'Climb only',
-  moonDreamer: 'Moon dreamer',
+  moonDreamer: 'Bold bidder',
   antiMoon: 'No moon',
   leftHandVoid: 'Through the void',
   partnerSignal: 'Partner’s void',
@@ -6522,7 +6527,7 @@ const STYLE_HABIT = {
   eggSitter: 'never leads a counter',
   bidOnce: 'opens and sits',
   climbOnly: 'only overcalls',
-  moonDreamer: 'eyes the moon',
+  moonDreamer: 'presses strong hands',
   antiMoon: 'won’t climb to 200',
   leftHandVoid: 'leads through LHO',
   partnerSignal: 'leads partner’s void',
@@ -6568,7 +6573,7 @@ const STYLE_HOWTO = {
   eggSitter: 'Leads only non-counters.',
   bidOnce: 'Opens the floor, then never climbs.',
   climbOnly: 'Passes the open. Overcalls later.',
-  moonDreamer: 'Will shoot the moon on a big book.',
+  moonDreamer: 'Bids boldly on a strong hand. Moon is human-only.',
   antiMoon: 'Stops short of 200.',
   leftHandVoid: 'Leads a color LHO already showed void.',
   partnerSignal: 'Leads a color partner is void in.',
@@ -7589,7 +7594,7 @@ function showVariantRules() {
         goal +
         ' points to win. A team at or below −' +
         goal +
-        ' loses; a team reaching the positive target takes precedence. If both reach a target in the same hand, the higher score wins; equal scores tie.'
+        ' loses; a team reaching the positive target takes precedence. If both reach a target in the same hand, the higher score wins; equal scores tie. A human Moon overrides scores: capture every point to win the match, or miss any point to lose the match. Bots cannot declare Moon.'
     ),
     line(
       'Deal & bidding.',
@@ -7668,18 +7673,16 @@ function showVariantRules() {
     ),
     line(
       'Scoring a bid.',
-      'Capture at least the bid in points. Make it: your team scores ' +
+      'For an ordinary bid, capture at least the bid in points. Make it: your team scores ' +
         (bidOnlyScoring ? 'the bid amount only.' : 'all points it captured.') +
         ' Miss it: your team loses the bid amount. Opponents score the points they captured.'
     ),
     line(
       'Shoot the Moon.',
       shootMoonEnabled
-        ? 'Bid all ' +
+        ? 'Human players only; bots cannot Shoot the Moon. Bid all ' +
             total +
-            ' available points. Your team must capture every point; losing a zero-point trick is allowed. Make it: your team wins the entire game immediately. Miss it: your team loses ' +
-            total +
-            ' points and opponents score only the points they captured.'
+            ' available points. Your team must capture every point; losing a zero-point trick is allowed. Make it: your team wins the match immediately. Miss it: your team loses the match immediately, regardless of the scores.'
         : 'Shoot the Moon is OFF at this table.'
     ),
     line(
@@ -8118,6 +8121,7 @@ function hostDealNow() {
   game.bidder = -1;
   game.bid = 0;
   game.shotTheMoon = false;
+  game.matchResult = null;
   // A new hand starts with no called trump.  Clear the previous hand's
   // trump before dealing/rendering so old trump highlights do not leak
   // into the new bidding phase.
@@ -8262,7 +8266,7 @@ function countPassedBids() {
 // the Dealer" house rule the dealer is forced to take the bid at the
 // minimum instead, so the hand keeps moving instead of reshuffling.
 function hostHandleAllPassed() {
-  if (screwTheDealer) {
+  if (screwTheDealer && !(players[game.dealer]?.isBot && isShootMoonBid(minBid || 100))) {
     const d = game.dealer;
     const dname = (players[d] && players[d].name) || 'P' + (d + 1);
     const forcedBid = minBid || 100;
@@ -8516,7 +8520,7 @@ function showBidUI(options = {}) {
   _ltBidSuggested = suggested;
 
   const bidderName = (players[myIndex] && players[myIndex].name) || myName || 'Player';
-  const html = `<div class="moon-bid-plaque" id="moonBidPlaque" hidden role="note"><img src="assets/moon-plaque/concept-a.png" alt="" aria-hidden="true" draggable="false"><div class="moon-bid-copy"><strong id="moonBidPoints"></strong><span>Win the game</span><span id="moonBidLoss"></span></div><div class="moon-bid-mount moon-bid-mount-left" aria-hidden="true"><img src="assets/bidbox-moon-review/gold-connector.png" alt="" draggable="false"></div><div class="moon-bid-mount moon-bid-mount-right" aria-hidden="true"><img src="assets/bidbox-moon-review/gold-connector.png" alt="" draggable="false"></div></div><div class="bid-console-title"><img class="bid-title-griffin-left" src="assets/images/griffin-icon.png?v=635" alt=""><span>PLACE YOUR BID</span><img class="bid-title-griffin-right" src="assets/images/griffin-icon.png?v=635" alt=""></div>
+  const html = `<div class="moon-bid-plaque" id="moonBidPlaque" hidden role="note"><img src="assets/moon-plaque/concept-a.png" alt="" aria-hidden="true" draggable="false"><div class="moon-bid-copy"><strong id="moonBidPoints"></strong><span>Win the match</span><span id="moonBidLoss"></span></div><div class="moon-bid-mount moon-bid-mount-left" aria-hidden="true"><img src="assets/bidbox-moon-review/gold-connector.png" alt="" draggable="false"></div><div class="moon-bid-mount moon-bid-mount-right" aria-hidden="true"><img src="assets/bidbox-moon-review/gold-connector.png" alt="" draggable="false"></div></div><div class="bid-console-title"><img class="bid-title-griffin-left" src="assets/images/griffin-icon.png?v=635" alt=""><span>PLACE YOUR BID</span><img class="bid-title-griffin-right" src="assets/images/griffin-icon.png?v=635" alt=""></div>
       <div class="felt-bid-name">${bidderName}</div>
       <div class="bid-meta" aria-hidden="true"></div>
       <div class="bid-stepper">
@@ -8711,14 +8715,12 @@ function syncMoonBidPlaque(value) {
     return;
   }
   $('moonBidPoints').textContent = value + ' POINTS';
-  $('moonBidLoss').textContent = 'or lose ' + value;
+  $('moonBidLoss').textContent = 'or lose the match';
   plaque.setAttribute(
     'aria-label',
     'Shoot the Moon: capture all ' +
       value +
-      ' points to win the game. Zero-point tricks may be lost. If you miss, your team loses ' +
-      value +
-      ' points; opponents score captured points.'
+      ' points to win the match. Zero-point tricks may be lost. If you miss, your team loses the match immediately. Human players only; bots cannot Shoot the Moon.'
   );
   const confirm = $('bidConfirm');
   if (confirm) confirm.setAttribute('aria-describedby', 'moonBidPlaque');
@@ -8820,7 +8822,7 @@ function submitBid(val, opts) {
   }
   if (value !== 0 && isShootMoonBid(value) && !moonBidAllowed(myIndex)) {
     const ma = $('messageArea');
-    if (ma) ma.textContent = 'Shoot the Moon is turned off for this game.';
+    if (ma) ma.textContent = 'Shoot the Moon is for human players only and must be enabled at this table.';
     return;
   }
   // Selecting the ceiling is not confirmation; callers must represent an intentional tap.
@@ -8865,6 +8867,8 @@ function hostProcessBid(data) {
   }
   // Once you pass, you are out of this auction — ignore further bids from you
   if (hasPassedBid(data.player) && data.value !== 0) return;
+  // A queued decision from an older bot script becomes a legal pass.
+  if (players[data.player]?.isBot && isShootMoonBid(data.value)) data.value = 0;
   if (hasPassedBid(data.player) && data.value === 0) {
     // already passed; skip ahead
     if (!nextActiveBidder()) {
@@ -12081,10 +12085,7 @@ function hostEndHand() {
     game.scores[0] += pointsA;
   }
 
-  // House rule: Shoot the Moon — bid every counter in the deck and, if made,
-  // win the game outright on the spot. A miss is already the ordinary
-  // (large, since the bid itself was huge) set penalty above — no separate
-  // failure handling needed.
+  // Human-only Moon ends the match in either direction, independently of score.
   let shotMoonResult = null;
   if (game.shotTheMoon) {
     if (made) {
@@ -12100,6 +12101,10 @@ function hostEndHand() {
       shotMoonResult = 'failed';
     }
   }
+
+  game.matchResult = shotMoonResult
+    ? (shotMoonResult === 'made' ? bidderTeam : 1 - bidderTeam) === 0 ? 'Team A' : 'Team B'
+    : null;
 
   try {
     botMaybeTableTalk(made ? 'made' : 'set', { prefer: game.bidder });
@@ -12123,8 +12128,8 @@ function hostEndHand() {
         (players[game.bidder] && players[game.bidder].name) || 'P' + (game.bidder + 1);
       const moonMsg =
         shotMoonResult === 'made'
-          ? `${bidderName} shot the moon and wins the game!`
-          : `${bidderName} tried to shoot the moon and missed.`;
+          ? `${bidderName} shot the Moon — their team wins the match!`
+          : `${bidderName} missed the Moon — their team loses the match!`;
       const ma = $('messageArea');
       if (ma) ma.textContent = moonMsg;
       broadcast({ type: 'message', text: moonMsg });
@@ -12143,6 +12148,7 @@ function hostEndHand() {
     scoreDeltaB,
     shotTheMoon: !!game.shotTheMoon,
     shotMoonResult,
+    matchResult: game.matchResult,
 
     nestWinnerName,
     nestPts: nestPtsShown,
@@ -12281,7 +12287,7 @@ function presentCompletedHandV12(summary) {
       window.HORJeromeVoiceLines?.result(summary);
     } catch (e) {}
     const finalScores = summary.scores || game.scores;
-    const winner = getMatchResult(finalScores, game.targetScore || targetScore || 500);
+    const winner = getMatchResult(finalScores, game.targetScore || targetScore || 500, summary);
     if (winner) {
       try {
         mergeLifetimeStats(winner);
@@ -12731,7 +12737,7 @@ function wireScoreModalActions(summary) {
   const modal = $('scoreModal');
   if (!modal || !summary) return;
   const goal = game?.targetScore || targetScore || 300;
-  const gameOver = isMatchOver(summary.scores, goal);
+  const gameOver = isMatchOver(summary.scores, goal, summary);
   const revealBtn = $('scoreModalRevealHands');
   const last3Btn = $('scoreModalLast3');
   const histBtn = $('scoreModalHistory');
@@ -12867,7 +12873,10 @@ function showScoreModal(summary) {
   const took =
     summary.bidderTeam === 0 ? Number(summary.pointsA || 0) : Number(summary.pointsB || 0);
   const bidderDelta = summary.bidderTeam === 0 ? da : db;
-  const resultLine = `${bidderLabel} bid ${formatBidAmount(summary.bid)}, took ${took} → ${bidderDelta >= 0 ? '+' : ''}${bidderDelta}. Nest ${nestPts} to ${nestWinner}. Running total: ${labelA} ${summary.scores[0]} · ${labelB} ${summary.scores[1]} (to ${goal}).`;
+  const matchWinner = getMatchResult(summary.scores, goal, summary);
+  const resultLine = summary.shotMoonResult
+    ? `${bidderLabel} ${summary.shotMoonResult === 'made' ? 'made the Moon and wins the match' : 'missed the Moon and loses the match'} immediately.`
+    : `${bidderLabel} bid ${formatBidAmount(summary.bid)}, took ${took} → ${bidderDelta >= 0 ? '+' : ''}${bidderDelta}. Nest ${nestPts} to ${nestWinner}. Running total: ${labelA} ${summary.scores[0]} · ${labelB} ${summary.scores[1]} (to ${goal}).`;
 
   const nestMarkup = `
     <details class="ghsb-nest" aria-label="Nest cards">
@@ -12889,13 +12898,13 @@ function showScoreModal(summary) {
   body.innerHTML = `
     <div class="scoreboard gh-approved-scoreboard ${summary.made ? 'made-hand' : 'set-hand'}">
       <div class="score-banner ghsb-contract ${summary.made ? 'banner-made' : 'banner-set'}">
-        <span>${escapeHtmlSafe(bidderLabel)} ${summary.made ? 'made the bid' : 'was set'}</span>
+        <span>${escapeHtmlSafe(bidderLabel)} ${summary.shotMoonResult ? (summary.shotMoonResult === 'made' ? 'made the Moon — match won' : 'missed the Moon — match lost') : summary.made ? 'made the bid' : 'was set'}</span>
       </div>
 
 
 
       <div class="ghsb-matchup">
-        <div class="scoreboard-team ghsb-team ghsb-team-a ${summary.scores[0] >= summary.scores[1] ? 'leading' : ''}">
+        <div class="scoreboard-team ghsb-team ghsb-team-a ${matchWinner ? matchWinner === 'Team A' ? 'leading' : '' : summary.scores[0] >= summary.scores[1] ? 'leading' : ''}">
           <img class="ghsb-team-icon ghsb-griffin" src="${griffinIcon}" alt="" draggable="false">
           <div class="ghsb-team-copy">
             <div class="sb-label">${labelA}</div>
@@ -12904,7 +12913,7 @@ function showScoreModal(summary) {
           </div>
         </div>
         <div class="scoreboard-vs ghsb-vs"><span>VS</span></div>
-        <div class="scoreboard-team ghsb-team ghsb-team-b ${summary.scores[1] >= summary.scores[0] ? 'leading' : ''}">
+        <div class="scoreboard-team ghsb-team ghsb-team-b ${matchWinner ? matchWinner === 'Team B' ? 'leading' : '' : summary.scores[1] >= summary.scores[0] ? 'leading' : ''}">
           <div class="ghsb-team-copy">
             <div class="sb-label">${labelB}</div>
             <div class="sb-total">${summary.scores[1]}</div>
@@ -12914,11 +12923,11 @@ function showScoreModal(summary) {
         </div>
       </div>
 
-      <div class="scoreboard-goal ghsb-goal"><span>First to <b>${goal}</b></span></div>
+      <div class="scoreboard-goal ghsb-goal"><span>${summary.shotMoonResult ? 'Moon decides the match' : 'First to <b>' + goal + '</b>'}</span></div>
       <div class="ghsb-summary">Bid ${formatBidAmount(summary.bid)} · <span class="ghsb-trump ghsb-trump-${trumpClass}">${trumpName}</span> trump · Hand ${handHistory.length || 1}</div>
       ${nestMarkup}
       <details class="ghsb-hand-details"><summary>Hand details</summary><div class="scoreboard-detail ghsb-details">
-        <div><b>Bid:</b> ${formatBidAmount(summary.bid)} by ${escapeHtmlSafe(bidderLabel)} <span class="ghsb-made-chip ${summary.made ? 'is-made' : 'is-set'}">${summary.made ? '✓ Made' : '× Set'}</span></div>
+        <div><b>Bid:</b> ${formatBidAmount(summary.bid)} by ${escapeHtmlSafe(bidderLabel)} <span class="ghsb-made-chip ${summary.made ? 'is-made' : 'is-set'}">${summary.shotMoonResult ? (summary.shotMoonResult === 'made' ? '✓ Match won' : '× Match lost') : summary.made ? '✓ Made' : '× Set'}</span></div>
         <div><b>Trump:</b> <span class="ghsb-trump ghsb-trump-${trumpClass}">${trumpName}</span></div>
         <div><b>Counters taken:</b> ${escapeHtmlSafe(labelA)} ${summary.pointsA} · ${escapeHtmlSafe(labelB)} ${summary.pointsB} · total ${totalTaken} / ${deckTotal}</div>
         <div><b>Hands played:</b> ${handHistory.length || 1}</div>
@@ -13021,6 +13030,7 @@ window.flushAfterTour = function () {
 };
 
 function hostStartNextHand() {
+  if (game && getMatchResult(game.scores, game.targetScore || targetScore || 500)) return;
   if (tourCardOpen()) {
     afterTourCard(() => hostStartNextHand());
     return;
@@ -13377,6 +13387,8 @@ function broadcastState() {
     networkHand844: game.networkHand844,
     actionContext844: game.actionContext844,
     scores: game.scores,
+    matchResult: game.matchResult || null,
+    shotTheMoon: !!game.shotTheMoon,
 
     bid: game.bid,
     highestBid: Number.isFinite(Number(game.highestBid)) ? game.highestBid : auctionHigh(),
@@ -13494,6 +13506,8 @@ function applyState(data) {
     networkHand844: data.networkHand844 || game.networkHand844,
     actionContext844: data.actionContext844 || null,
     scores: data.scores,
+    matchResult: data.matchResult || null,
+    shotTheMoon: !!data.shotTheMoon,
 
     bid: data.bid,
     highestBid: (function () {
@@ -16935,10 +16949,10 @@ function updateLandscapeTheater() {
         : game && game.scores
           ? game.scores
           : [0, 0];
-    const isGameOver = isMatchOver(scores, goal);
+    const isGameOver = isMatchOver(scores, goal, endSummary || game);
     if (isLandscape && isScore && endSummary) {
-      const winnerTeam =
-        scores[0] === scores[1] ? 'Tie' : scores[0] > scores[1] ? 'Team A' : 'Team B';
+      const winnerTeam = getMatchResult(scores, goal, endSummary) ||
+        (scores[0] === scores[1] ? 'Tie' : scores[0] > scores[1] ? 'Team A' : 'Team B');
       const nestCards = Array.isArray(endSummary.nestCards) ? endSummary.nestCards : [];
       const revealHands = Array.isArray(endSummary.claimRevealHands)
         ? endSummary.claimRevealHands
@@ -16958,7 +16972,9 @@ function updateLandscapeTheater() {
               <div class="${endSummary.made ? (endSummary.bidderTeam === 1 ? 'lt-hand-winner' : '') : endSummary.bidderTeam === 0 ? 'lt-hand-winner' : ''}"><span>Team B</span><b>${scores[1]}</b><small>${endSummary.scoreDeltaB >= 0 ? '+' : ''}${endSummary.scoreDeltaB || 0} this hand</small></div>
             </div>
             <div class="lt-hand-winner-banner">${
-              endSummary.made
+              endSummary.shotMoonResult
+                ? `Team ${winnerTeam === 'Team A' ? 'A' : 'B'} wins the match — Moon ${endSummary.shotMoonResult}`
+                : endSummary.made
                 ? `Team ${endSummary.bidderTeam === 0 ? 'A' : 'B'} wins the hand — bid made`
                 : `Team ${endSummary.bidderTeam === 0 ? 'B' : 'A'} wins the hand — bid set`
             }</div>
@@ -19098,3 +19114,4 @@ try {
   }
   armRareRaven();
 })();
+
