@@ -2313,6 +2313,16 @@
       "backup": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/rooks-branded-entry-v10a-direct-table-seats.js",
       "handoff": "coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md",
       "ownerRule": "Do not show invitation room code or separate seat-choice form again; use existing waiting room and click-to-sit"
+    },
+    "currentNextChatHandoff": {
+      "asOf": "2026-10-22",
+      "liveGameVersion": "dd4dbc6c-4640-4d84-a91c-15148de87a49",
+      "liveInviteOverride": "20261022-v10a-direct-table-seats",
+      "file": "coordination/domain-20261022/HANDOFF_NEXT_CHAT_V10A_20261022.md",
+      "branch": "work/jeromegriffin-domain-setup-20261022",
+      "authoritativeFor": "Next chat recovery, no restart",
+      "physicalFacebookAndroidAcceptancePending": true,
+      "doNotDeployHistoricalCandidate": true
     }
   },
   "cloudflareCurrentObserved": {
