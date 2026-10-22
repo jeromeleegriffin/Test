@@ -170,3 +170,32 @@ Owner supplied screenshot `84777.jpg` of Facebook Android in-app browser with Ta
 - Do NOT change approved room art/assets, seat sizes, portrait table, Bid Dock, main Rooks engine or original `workers.dev` localStorage.
 - No forced redirects of old shortcuts, no service-worker clearing, no double-loading/second document.
 - Retain one-tap Facebook link with the approved social-preview picture and direct room deep link.
+
+## v10b control ownership and reserved-seat repair — October 22, 2026
+Cloudflare connector access recovered through successful authorization/retry; API reads and the targeted deployment now succeed.
+
+### Proven cause and fix
+The legacy v7 MutationObserver always moved original name/avatar elements whenever lobby classes changed. It ran while v10's real-table preview owned those controls, removing them from the visible dock. A jsdom regression reproduces v10a failure (`ghInviteIdentityV7` instead of `ghGuestIdentityV10`). v10b makes v7 defer while preview controls are connected, and explicitly restores normal ownership on preview exit. No duplicate identity fields.
+The old join confirmation also required a changed token and selected open seat, incorrectly rejecting the backend's valid same-token reserved-seat return. v10b checks saved room/player credentials against an authenticated snapshot, exposes only the existing seat as Return to seat, uses the original native resume choice/joinRoom, and accepts that confirmed saved seat. New guests continue choosing the real open table seats. Failure text survives refresh; original seat disabled states are restored on exit.
+The cancelled preview ignores late availability results.
+
+### Live release
+- Marker: 20261022-v10b-invite-controls-resume
+- Branded Worker: rooks-branded-entry-only-20261022
+- Version: 4b08e30f-21fb-4ac4-97a4-20cf0a52b8ba (100%)
+- Deployment: 6e88e36e-e65f-4508-a756-cd1b8017e1de
+- Exact live source equality verified against the archived release.
+- Main Worker STILL v40 dd4dbc6c-4640-4d84-a91c-15148de87a49 / deployment f1c472f5-f5ee-4ed3-b0f4-877d29e95f5b.
+- Rollback: branded version 8371a14e-e174-40ea-b48e-257ea42c42eb and exact archived v10a. Do not roll back main engine.
+- Worker archive: rooks-branded-entry-v10b-invite-controls-resume.js; readable client: invite-v10b.js; tests: test-invite-v10b.cjs (in this directory). Run with jsdom installed: node test-invite-v10b.cjs invite-v10b.js.
+
+### Validation
+1. Baseline v10a fails ownership regression; v10b passes fresh join, same-token reserved return, swallowed join failure with controls retained/error visible, and cancel restoring one original input.
+2. Temporary service-binding proxy rooks-invite-recovery-stage-20261022 tested the real main game/assets using a different origin for independent guest storage. Only fresh disposable production room YOU20 was used; this was NOT an isolated DO namespace.
+3. Real browser: host created YOU20; QA Guest entered name and selected actual partner seat 2. Both sides showed 2 of 4 seated. The first proxy request was rejected SAME_ORIGIN_REQUIRED because the proxy rewrote request URL; preserving the original request fixed the test proxy without weakening the main server's check. Rejection visibly retained the name/avatar controls and name value.
+4. Guest reopened invitation and used Return to seat; same seat 2 and count 2 confirmed. Final candidate also restored disabled flags to regular room controls.
+5. Post-deployment live branded host reopened YOU20 invitation, entered name and used Return to seat on original seat 0. Normal host controls returned, count stayed 2. No second player allocated.
+6. Host explicitly closed YOU20 through branded confirmation; return to ordinary lobby observed. Temporary proxy deleted successfully. No owner tables used, no asset copies or permanent extra Workers.
+7. Original game engine, ROOMS namespace, game/art/audio assets, secrets, limits, social JPG, old workers.dev entry and browser storage were not modified by this release.
+
+Limits: cloud browser desktop checks and DOM regressions are NOT physical Android Facebook WebView/keyboard, long suspension, full four-person match, or exhaustive network-race certification. Those remain pending. No Facebook post or artwork change.
