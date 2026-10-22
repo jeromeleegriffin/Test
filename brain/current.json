@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "BRANDED_SITE_AND_TWO_FACEBOOK_SHARE_FLOWS_SERVER_VERIFIED_DEVICE_QA_PENDING",
+    "status": "BRANDED_FACEBOOK_SHARE_SPECIFIC_FLOW_DEPLOYED_ANDROID_FB_PREVIEW_QA_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -1982,7 +1982,7 @@
       "roomLandingRetainsCode": true,
       "roomLandingJoinTargetPattern": "https://rooks.jeromegriffin.com/?room=ROOMCODE",
       "shareHandler": "rooks-branded-entry-only-20261022",
-      "shareHandlerVersion": "20261022-v3",
+      "shareHandlerVersion": "20261022-v5a",
       "duplicateLinkAvoidedInSharePayload": true,
       "sourceBackupBranch": "work/jeromegriffin-domain-setup-20261022",
       "sourceReceipt": "coordination/domain-20261022/BRANDED_LAUNCH_QA.md",
@@ -1991,7 +1991,13 @@
       "realFacebookBrandedPreviewVerified": false,
       "originalWorkersDevShareUnchanged": true,
       "legacyStorageUntouched": true,
-      "queryStringGameRootOGNotYetCovered": true
+      "queryStringGameRootOGNotYetCovered": true,
+      "roomInviteFacebookOption": "Dedicated Facebook share link via Facebook sharer.php, linked to branded /r/ROOMCODE page",
+      "otherAppsOption": "Retains native Web Share for Messages/other apps",
+      "copyRoomLinkOption": true,
+      "missingPreviewIssue": "Android native Web Share gave plain-text Facebook status, screenshot 20261022; new Facebook-specific flow deployed but real FB card still unverified",
+      "browserUserAgentMetaVerified": true,
+      "sourceFile": "coordination/domain-20261022/rooks-branded-entry-v5a-facebook-share.js"
     },
     "brandedMultiplayerSingleLoad": {
       "updated": "2026-10-22",
