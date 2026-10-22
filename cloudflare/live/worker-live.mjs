@@ -1697,6 +1697,14 @@ var worker_default = {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === "/audio-check/report") return handleAudioReport(request,env);
+    // Old shortcuts and raw index links must enter the integrated lobby before
+    // any artwork loads. The asset index has no room adapter of its own.
+    if ((request.method === "GET" || request.method === "HEAD") &&
+        ["/cloud-game/assets/", "/cloud-game/assets/index.html"].includes(url.pathname)) {
+      const entry = new URL(request.url);
+      entry.pathname = "/";
+      return new Response(null, {status:302, headers:{location:entry.href,"cache-control":"no-store"}});
+    }
     const isEntry = ["/", "/index.html", "/cloud-game/index.html", "/cloud-game/game"].includes(url.pathname);
     const isRoom = url.pathname === "/rooms" || url.pathname.startsWith("/rooms/");
     if (["/cloud-game/launch", "/four-player-check"].includes(url.pathname)) return new Response("Not found", {status:404});

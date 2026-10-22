@@ -49,6 +49,18 @@ for(const entry of fs.readdirSync(source,{withFileTypes:true})){
 for(const folder of runtimeFolders)addFolder(folder);
 if(!list.some(e=>e.path==='index.html'))throw Error('Missing approved root index.html');
 if(!list.some(e=>e.path==='cloudflare-entry.js'))throw Error('Missing Cloudflare-native entry script');
+// Keep the existing installed-app identity, but launch inside the integrated
+// lobby. Relative ./ previously resolved to the unadapted asset directory.
+const manifestFile=path.join(assets,'manifest.json');
+const manifest=JSON.parse(fs.readFileSync(manifestFile,'utf8'));
+manifest.id='/cloud-game/assets/';
+manifest.start_url='/';
+manifest.scope='/';
+for(const icon of manifest.icons||[])icon.src=new URL(icon.src,'https://game.invalid/cloud-game/assets/').pathname+new URL(icon.src,'https://game.invalid/cloud-game/assets/').search;
+const manifestBytes=Buffer.from(JSON.stringify(manifest,null,2)+'\n');
+fs.writeFileSync(manifestFile,manifestBytes);
+const manifestItem=list.find(e=>e.path==='manifest.json');
+manifestItem.bytes=manifestBytes.length;manifestItem.sha256=crypto.createHash('sha256').update(manifestBytes).digest('hex');manifestItem.patch='integrated-lobby-entry';
 const patchFrom=path.join(work,'asset-loading772.js');
 if(!fs.existsSync(patchFrom))throw Error('Missing isolated artwork recovery patch');
 const repair=fs.readFileSync(patchFrom);
