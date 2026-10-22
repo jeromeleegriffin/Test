@@ -54,6 +54,7 @@ let roomCode = '';
 let players = []; // {id, name, team, isHost}
 let myIndex = -1;
 let game = null; // full game state (only host mutates)
+let tableEpoch043 = 0;
 // Griffin House Rules defaults (other variations available as individual options, off by default)
 let includeRed2 = true;
 let red2Points = 20;
@@ -7712,6 +7713,7 @@ function playToastClink() {
 }
 
 function playTableToast(done) {
+  const ownerEpoch = tableEpoch043;
   const waitingOn = waiting && !waiting.classList.contains('hidden');
   const felt = waitingOn ? $('waitingFelt') : document.querySelector('#gameScreen .table-felt');
   if (felt) {
@@ -7723,6 +7725,7 @@ function playTableToast(done) {
     playToastClink();
   } catch (e) {}
   setTimeout(() => {
+    if (ownerEpoch !== tableEpoch043) return;
     if (felt) felt.classList.remove('toasting');
     if (typeof done === 'function') done();
   }, 1000);
@@ -10983,7 +10986,7 @@ function returnToLobby043() {
     'confirmSheet',
   ])
     $(id)?.classList.add('hidden');
-  document.body.classList.remove('in-game', 'at-table', 'at-welcome', 'offline-play');
+  document.body.classList.remove('in-game', 'at-table', 'at-welcome', 'offline-play', 'dealing035');
   setLobbyJoining(false);
   if (lobby) lobby.classList.remove('hidden');
   const status = $('lobbyStatus');
@@ -16526,6 +16529,7 @@ if (_botPickModal)
     if (e.target === _botPickModal) closeBotPicker();
   });
 function teardownMultiplayerBeforeLobby() {
+  tableEpoch043++;
   window.HORBidVoice801?.stop();
   horCancelLobbyOperation043();
   // Rook520: an intentional Leave is final.  Mark it before closing PeerJS so
@@ -18532,8 +18536,6 @@ function runDealPresentation(fullHand, onDone) {
         mine = 0;
       const step = () => {
         if (token !== dealAnimToken) {
-          stopDealFlights036();
-          document.body.classList.remove('dealing035');
           return;
         }
         if (index >= order.length) {

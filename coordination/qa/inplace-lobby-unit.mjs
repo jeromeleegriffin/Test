@@ -127,6 +127,17 @@ assert(
     'location.'
   )
 );
+let delayed;
+c.setTimeout = fn => { delayed = fn; };
+c.waiting = node('waiting');
+c.document.querySelector = () => null;
+c.playToastClink = () => {};
+vm.runInContext('let tableEpoch043=1;', c);
+vm.runInContext(extract(native, 'playTableToast(done)', '\nfunction startGameWithToast'), c);
+c.done = () => calls.push(['oldToast']);
+vm.runInContext('playTableToast(done);tableEpoch043++;', c);
+delayed();
+assert(!calls.some(x => x[0] === 'oldToast'));
 console.log(
   JSON.stringify({
     sameDocumentReturn: true,
@@ -136,5 +147,6 @@ console.log(
     closedCredentialRemoved: true,
     staleSnapshotIgnored: true,
     oldCloseIgnored: true,
+    oldStartDelayIgnored: true,
   })
 );
