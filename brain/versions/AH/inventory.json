@@ -4,11 +4,11 @@
   "updated": "2026-10-22",
   "documentationOnly": true,
   "canonicalGame": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
-  "canonicalGameVersion": "8fb3ef39-be99-4bc5-b370-7335d4919615",
+  "canonicalGameVersion": "fe21328c-6121-46d8-abf5-e6f2be0ef57e",
   "sourceBranch": "work/asset-recovery-20261021",
   "liveNamedBotsVerified": true,
   "fullOnlineX1": "x1-online-v2",
-  "status": "CLOUDFLARE_R12_HOUSE_TABLE_CONFIRM_VERIFIED",
+  "status": "CLOUDFLARE_R12_GRIFFIN_CONFIRM_DESIGN_VERIFIED",
   "files": [
     {
       "path": "files/00_START_HERE/START_HERE.md"
@@ -60,6 +60,9 @@
     },
     {
       "path": "files/01_MASTER_BANK/LIVE_RECEIPT_TABLE_CONFIRM_20261022.json"
+    },
+    {
+      "path": "files/01_MASTER_BANK/LIVE_RECEIPT_GRIFFIN_CONFIRM_20261022.json"
     }
   ],
   "inheritedBrain": "../AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
@@ -80,7 +83,8 @@
     "coordination/qa/LIVE_RECEIPT_TRUMP_HIGHLIGHT_SOUND_20261022.json",
     "coordination/qa/LIVE_RECEIPT_INPLACE_LOBBY_20261022.json",
     "coordination/qa/LIVE_RECEIPT_NAMED_TABLES_20261022.json",
-    "coordination/qa/LIVE_RECEIPT_TABLE_CONFIRM_20261022.json"
+    "coordination/qa/LIVE_RECEIPT_TABLE_CONFIRM_20261022.json",
+    "coordination/qa/LIVE_RECEIPT_GRIFFIN_CONFIRM_20261022.json"
   ],
   "openIssues": [
     "Physical Android installed app relaunch and weak-cellular/cache acceptance remain to confirm",
@@ -97,7 +101,7 @@
   "nativePolicyOverlayCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
   "humanOnlyMoon": true,
   "failedMoonLosesMatch": true,
-  "documentSha256": "fa02d730fe74ad297b525ab415db13b91fa7767e63e435a7c63392c528b98676",
+  "documentSha256": "02ff0371578e2f1766fc6066104fcad788c0de80ba0329bfd91fbb901b7db5c8",
   "moonDefaultEnabled": false,
   "tactileTrumpFeedback": true,
   "randomBotFill": true,
@@ -105,5 +109,6 @@
   "steadyTrumpShade": true,
   "inplaceLobbyReturn": true,
   "shortNamedTableCodes": true,
-  "houseTableConfirmation": true
+  "houseTableConfirmation": true,
+  "griffinHouseConfirmationDesign": true
 }

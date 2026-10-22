@@ -1,5 +1,17 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## CURRENT GRIFFIN HOUSE CONFIRMATION DESIGN — October 22, 2026
+
+Owner explicitly rejected the previous brown/walnut popup. Its appearance is superseded by the existing Griffin House identity: original Griffin plaque, navy House-menu surface, fine gold border, cream heading, light body text and matching navy/gold buttons. Only scoped styles and plaque markup in index.html changed; confirmation behavior/game logic retained. No original asset file or table/avatar geometry changed.
+
+- LIVE Worker **fe21328c-6121-46d8-abf5-e6f2be0ef57e**, deployment **8e9d4887-20ed-49d9-8d33-170017028ab0**, source **68aa34e3311a6ba0343cfe543323273fcd6aebb9**, production build **f1fa7f10-fb5e-40be-893a-85cbda4a272f**, stage build **f676db37-b5c5-48d9-997f-386960a0dbdd**. Rollback **8fb3ef39-be99-4bc5-b370-7335d4919615**. Runtime R12 and existing script queries unchanged because only root HTML/styles changed.
+- Reuses approved assets/brand835/house-plaque835.png. Scoped table dialog only; unrelated confirmations/menus retain their styles. Compact-height plaque sizing retained. Original PNGs, artwork geometry, audio and saved data unchanged.
+- Stage actual 1363x936 browser: YOU37 navy/gold/crest panel personally inspected; safe initial focus, Keep table retained table, Close table returned directly to lobby without native JS dialog. Exact published HTML, original plaque image and unchanged polish.js bytes verified stage/live. Existing Moon, auction/random-fill, trump, named-code, lobby and confirmation tests pass in builds.
+- Production actual browser: YOU97 showed the navy/gold/crest panel with Keep table focused; confirming closed directly to lobby with no second browser dialog.
+- Preserved single host confirmation, matching guest leave, reserved seats, Escape/cancel/focus restoration, duplicate/stale guards and no second host success popup; no game/server JS changed. All Moon policies, short table codes, no-reload lobby return and prior repairs remain.
+- Screenshot: coordination/qa/evidence/GRIFFIN_HOUSE_CONFIRM_20261022.jpg. Receipt coordination/qa/LIVE_RECEIPT_GRIFFIN_CONFIRM_20261022.json and AH copy. Stage route disabled; only disposable QA table closed. Cloud-browser landscape visual QA does not certify physical Android portrait or installed-app acceptance.
+- Earlier brown/walnut appearance claims below are historical and rejected by owner; keep the current Griffin House navy/gold design.
+
 ## CURRENT SINGLE HOUSE TABLE CONFIRMATION — October 22, 2026
 
 Owner rejected the two generic Chrome popups shown in 84732.jpg/84734.jpg when closing a table. This release replaces the close/leave browser dialogs with a scoped game-styled confirmation.
