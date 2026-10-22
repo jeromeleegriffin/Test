@@ -1,5 +1,17 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## CURRENT CLEAR TRUMP HIGHLIGHT AND TWO SOUNDS — October 22, 2026
+
+This supersedes only the too-subtle selected-pad presentation below. Owner likes the plain press, but requires an obvious steady selected highlight and distinct select/deselect sounds. Do not restore flashing or pulse.
+
+- LIVE Worker **3f5d8428-6caa-48f6-8091-da0d2005f8fc**, deployment **bc619db9-ef72-45aa-9d07-fe26126c7d5c**, source **1f5ec16adf158df70b40858c51a1bfec22fef138**, production build **0a5990b7-9d78-45c4-8770-3085eb97f6bf**, branch work/asset-recovery-20261021. Rollback **a0229e90-3754-4df5-8971-0dad9a2ec27f**. Runtime label remains R12; trump JS/CSS use **846-r12-trump-highlight-sound-20261022**.
+- The approved original ink-face raster still presses once and changes shade. A steady pale-gold edge and tint follows the actual ink polygon, clipped inside the ink surface. Labels, brass case and hit boxes do not light up. No keyframes, blinking, pulse or glow.
+- Tap a color: select it with the existing soft rising bidup735 cue at 0.4. Tap the same selected pad: clear the tentative selection, hide Confirm, and play existing falling biddown735 cue at 0.4. Switching colors selects the new one with only one rising cue, not two sounds. Separate Confirm still submits the choice. Existing pending/running guards and keyboard semantics remain.
+- Sound routes through existing playNatural063 and the mixer, honoring mute, card sound toggle and saved volume controls. Actual WAVs are present, distinct, and exact bytes verified. No synthetic audio or new recordings added.
+- Verification: actual extracted select handler passes all four toggles, distinct cue routing, one cue per tap, switch and pending guard. Existing 395 room/auction checks and 336 Moon checks pass in build. Rendered actual 1363×936 native landscape game: selected/deselected all four pads, personally inspected settled green/black highlights, confirmed black, played Black 1. New JS/CSS exact-byte checked with the new entry query. Actual audible/phone portrait touch acceptance remains unverified; no listening claim.
+- Preserved: random open-seat bot fills, max bid immediately ends auction, portrait labels, optional human Moon DEFAULT OFF, bots never Moon, failed human Moon loses match, original art/audio, X1 v2, entry/install routes, room namespace and saved data. No cache/SW clearing, room reset or reinstall.
+- Receipt: coordination/qa/LIVE_RECEIPT_TRUMP_HIGHLIGHT_SOUND_20261022.json and AH receipt copy. Stage route disabled after QA.
+
 ## CURRENT ROOM, AUCTION AND STEADY TRUMP FIXES — October 22, 2026
 
 This is the current release authority and supersedes the earlier tactile glow/pulse patch below. The owner rejected the double flash and requested a single press plus a steady shade change, and random bots whenever open seats are filled.

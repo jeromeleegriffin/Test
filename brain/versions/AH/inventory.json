@@ -4,11 +4,11 @@
   "updated": "2026-10-22",
   "documentationOnly": true,
   "canonicalGame": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
-  "canonicalGameVersion": "a0229e90-3754-4df5-8971-0dad9a2ec27f",
+  "canonicalGameVersion": "3f5d8428-6caa-48f6-8091-da0d2005f8fc",
   "sourceBranch": "work/asset-recovery-20261021",
   "liveNamedBotsVerified": true,
   "fullOnlineX1": "x1-online-v2",
-  "status": "CLOUDFLARE_R12_ROOM_AUCTION_STEADY_TRUMP_VERIFIED",
+  "status": "CLOUDFLARE_R12_TRUMP_HIGHLIGHT_SOUND_VERIFIED",
   "files": [
     {
       "path": "files/00_START_HERE/START_HERE.md"
@@ -48,6 +48,9 @@
     },
     {
       "path": "files/01_MASTER_BANK/LIVE_RECEIPT_ROOM_AUCTION_20261022.json"
+    },
+    {
+      "path": "files/01_MASTER_BANK/LIVE_RECEIPT_TRUMP_HIGHLIGHT_SOUND_20261022.json"
     }
   ],
   "inheritedBrain": "../AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
@@ -64,7 +67,8 @@
     "coordination/qa/LIVE_RECEIPT_MOON_DEFAULT_OFF_R12.json",
     "coordination/qa/LIVE_RECEIPT_ENTRY_INSTALL_20261022.json",
     "coordination/qa/LIVE_RECEIPT_TRUMP_TACTILE_20261022.json",
-    "coordination/qa/LIVE_RECEIPT_ROOM_AUCTION_20261022.json"
+    "coordination/qa/LIVE_RECEIPT_ROOM_AUCTION_20261022.json",
+    "coordination/qa/LIVE_RECEIPT_TRUMP_HIGHLIGHT_SOUND_20261022.json"
   ],
   "openIssues": [
     "Physical Android installed app relaunch and weak-cellular/cache acceptance remain to confirm",
@@ -81,7 +85,7 @@
   "nativePolicyOverlayCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
   "humanOnlyMoon": true,
   "failedMoonLosesMatch": true,
-  "documentSha256": "f47ff57c4935f55e0088ebd501a8fd536c6e1687afe1573e0813341096105351",
+  "documentSha256": "13cae990d7df632841a016589f2305c9964139fe375407578659bf3ce6029fd4",
   "moonDefaultEnabled": false,
   "tactileTrumpFeedback": true,
   "randomBotFill": true,
