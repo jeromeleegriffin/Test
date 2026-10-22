@@ -1,0 +1,30 @@
+name: Master Brain AH Handoff ZIP
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'brain/versions/AH/**'
+      - 'brain/current.json'
+      - 'brain/tools/build_ah_handoff.py'
+      - '.github/workflows/master-brain-ah-handoff.yml'
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+      - uses: actions/checkout@v4
+        with:
+          ref: work/asset-recovery-20261021
+          path: work
+      - run: python3 main/brain/tools/build_ah_handoff.py main work dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Griffin_House_Master_Brain_AH_Complete_Handoff_20261021
+          path: dist/Griffin_House_Master_Brain_AH_Complete_Handoff_20261021.zip
+          retention-days: 30
