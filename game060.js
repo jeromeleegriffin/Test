@@ -10924,6 +10924,32 @@ function leaveTableAfterConfirmation043() {
 }
 
 function leaveTableToLobby043() {
+  returnToLobby043();
+}
+
+/** Release one table while keeping this document, artwork and audio buffers alive. */
+function returnToLobby043() {
+  dealAnimToken++;
+  clearTimeout(botTimer);
+  botTimer = null;
+  botDue063 = 0;
+  clearTurnTimer();
+  clearInterval(horHeartbeatTimer);
+  clearTimeout(horReconnectTimer);
+  horHeartbeatTimer = horReconnectTimer = null;
+  Object.values(disconnectTimers).forEach(clearTimeout);
+  disconnectTimers = {};
+  clearTimeout(biddingIntroTimer);
+  clearTimeout(yourTurnNotifyTimer);
+  (window.HORRavenFight741?.stopClock || clearTimeout)(captureOverlayTimer);
+  captureCelebrationQueue = [];
+  window._horPendingBidIntro = null;
+  window._horNestFlipTok = (window._horNestFlipTok || 0) + 1;
+  window.HORMoonHowl?.stop();
+  window.HORTrumpVoice?.stop('left-table');
+  stopPresentationSounds035();
+  stopDealFlights036();
+  stopDiscardReturn040();
   forgetRoomSession043();
   try {
     teardownMultiplayerBeforeLobby();
@@ -10931,7 +10957,43 @@ function leaveTableToLobby043() {
     console.error(e);
   }
   forgetRoomSession043();
-  location.reload();
+  hideCelePage();
+  pendingCele = null;
+  hideDiscardOverlay();
+  hideShuffleOverlay();
+  hideWelcomeScreen();
+  hideNoServiceModal();
+  hideInviteSplash();
+  hideBotStyleTip();
+  clearClaimOverlays();
+  clearTrickFlightLayers();
+  clearTrumpBanners();
+  clearTableForShuffle();
+  closeBotPicker();
+  closeHostOptionsModal();
+  for (const id of [
+    'waiting',
+    'game',
+    'scoreModal',
+    'winOverlay',
+    'kittyReceived',
+    'botThinking',
+    'biddingIntro',
+    'captureOverlay',
+    'confirmSheet',
+  ])
+    $(id)?.classList.add('hidden');
+  document.body.classList.remove('in-game', 'at-table', 'at-welcome', 'offline-play');
+  setLobbyJoining(false);
+  if (lobby) lobby.classList.remove('hidden');
+  const status = $('lobbyStatus');
+  if (status) status.textContent = '';
+  const leave = $('leaveBtn');
+  if (leave) leave.textContent = 'Leave table';
+  setLobbyPortraitOrientation();
+  window.HORLanding783?.refresh();
+  updatePracticeBadge();
+  syncLandscapeFullscreen();
 }
 
 /** Sole holder of every remaining trump, or null. */

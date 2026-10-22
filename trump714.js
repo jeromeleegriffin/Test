@@ -871,6 +871,11 @@
       paint(null);
       last = null;
       accepted = null;
+      choiceKey = null;
+      tentativeTrump = null;
+      current = null;
+      dockRef = submitRef = null;
+      updateChoice();
     }
   }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
   window.HORTrump714 = {
