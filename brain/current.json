@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "BRANDED_FB_ROOM_DIRECT_JOIN_CODE_VERIFIED_FRESH_FACEBOOK_APP_TEST_PENDING",
+    "status": "BRANDED_INVITE_NAME_CONFIRMATION_LIVE_SEAT_CHOICE_BACKEND_AND_UI_STAGED_PENDING_INTEGRATION",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -2027,6 +2027,35 @@
       "gameplayWorkerChanged": false,
       "savedPlayerDataChanged": false,
       "facebookProductionAppTapVerified": false
+    },
+    "invitedGuestSeatChoice": {
+      "asOf": "2026-10-22",
+      "liveStatus": "BRANDED_INVITE_REQUIRES_MANUAL_NAME_CONFIRMATION_SEAT_SELECTION_BACKEND_STAGED_NOT_LIVE",
+      "brandedInviteConsentVersion": "20261022-v6-prejoin-consent",
+      "liveConsentTest": "Cloudflare browser saw prompted name and visible join form for simulated invitation; no automatic join with previous nickname",
+      "actualChosenSeatUI": false,
+      "serverSupportsRequestedSeat": false,
+      "backendStagedCandidate": "cloudflare/isolated/seat-selection-worker-candidate-20261022.mjs",
+      "frontendStagedCandidate": "cloudflare/isolated/seat-selection-adapter-candidate-20261022.js",
+      "isolatedUnitPass": true,
+      "isolatedUnitResult": {
+        "host": 0,
+        "seatOptions": 4,
+        "chosenPartner": 2,
+        "conflictRejected": true,
+        "resume": 2,
+        "opponent": 3,
+        "legacy": 1
+      },
+      "stagedSourceVersionCaveat": "GitHub source is older 846-r10; live Cloudflare is 846-r12. Rebase and test with isolated Durable Object before deploying",
+      "testWorkerDeleted": true,
+      "activeGameWorkerUnchanged": true,
+      "doStorageUntouched": true,
+      "gameFbSharePhotoPreserved": true,
+      "noDoubleLoadGuardPreserved": true,
+      "originalWorkersDevUnaffected": true,
+      "handoff": "coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md",
+      "v6Backup": "coordination/domain-20261022/rooks-branded-entry-v6-prejoin-consent.js"
     }
   }
 }
