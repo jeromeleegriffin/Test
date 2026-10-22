@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "LIVE_V40_SEAT_PICKER_BRANDED_V9_MOBILE_PANEL_TOP_ANCHORED_BROWSER_VERIFIED; PHYSICAL_FB_ANDROID_RETEST_PENDING",
+    "status": "BRANDED_V10A_DIRECT_TO_REAL_WAITING_TABLE_LIVE_SMOKE_PASSED; PHYSICAL_FACEBOOK_ANDROID_ACCEPTANCE_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -2281,6 +2281,38 @@
       "source": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/rooks-branded-entry-v9-viewport-safe.js",
       "previousProblematicVersion": "20261022-v8-seat-selected",
       "handoff": "coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md"
+    },
+    "invitationDirectExistingTable": {
+      "date": "2026-10-22",
+      "deployed": true,
+      "version": "20261022-v10a-direct-table-seats",
+      "behavior": "Facebook invitation opens existing approved waiting room as prejoin preview, guest enters name/uses existing avatar chooser, taps Sit here on original table seat, then server reserves exact preferredSeat and enters native room",
+      "noRoomCodeOnInvite": true,
+      "noSeparateSeatForm": true,
+      "noExtraAssetReload": true,
+      "existingWaitingArtAndSeatsUsed": true,
+      "existingServerSeatSelectionUsed": true,
+      "liveSmokePassed": {
+        "guestSeat": 2,
+        "waitingStatus": "2 of 4 seated",
+        "singlePage": true,
+        "roomCodePreserved": true
+      },
+      "browserVisualVerified": {
+        "nameInputVisible": true,
+        "roomCodeHidden": true,
+        "partnerSeatTop": true,
+        "stableSitHereLabels": true,
+        "approvedArtLoaded": true
+      },
+      "originalGameWorkerVersion": "dd4dbc6c-4640-4d84-a91c-15148de87a49",
+      "originalGameStorageUntouched": true,
+      "isolatedWorkersDeleted": true,
+      "cleanupNote": "Two disposable QA rooms were created in production; explicit closure through the tool was blocked. Live game has idle-room expiry logic. Do not claim those rooms were explicitly closed.",
+      "physicalFacebookAndroidRetestPending": true,
+      "backup": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/rooks-branded-entry-v10a-direct-table-seats.js",
+      "handoff": "coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md",
+      "ownerRule": "Do not show invitation room code or separate seat-choice form again; use existing waiting room and click-to-sit"
     }
   },
   "cloudflareCurrentObserved": {
