@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "NEW_BRANDED_DOMAIN_ACTIVE_FACEBOOK_BASE_AND_PLAY_FRIENDS_ENTRY_VERIFIED_PHYSICAL_QA_PENDING",
+    "status": "BRANDED_SITE_AND_TWO_FACEBOOK_SHARE_FLOWS_SERVER_VERIFIED_DEVICE_QA_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -1966,6 +1966,32 @@
     "ownerHomepageApprovedForNow": true,
     "ownerReportedFiveDollarCloudflarePlan": true,
     "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
-    "qaReport": "coordination/domain-20261022/BRANDED_LAUNCH_QA.md"
+    "qaReport": "coordination/domain-20261022/BRANDED_LAUNCH_QA.md",
+    "facebookSharing": {
+      "implementedAt": "2026-10-22",
+      "approvedImage": "https://jeromegriffin.com/images/rooks-v1.jpg",
+      "generalSharePage": "https://jeromegriffin.com/rooks",
+      "generalShareButton": true,
+      "brandedGameRootOG": true,
+      "roomSharePattern": "https://jeromegriffin.com/r/ROOMCODE",
+      "roomCodes": [
+        "ABC12345",
+        "YOU32"
+      ],
+      "roomLandingUsesApprovedImage": true,
+      "roomLandingRetainsCode": true,
+      "roomLandingJoinTargetPattern": "https://rooks.jeromegriffin.com/?room=ROOMCODE",
+      "shareHandler": "rooks-branded-entry-only-20261022",
+      "shareHandlerVersion": "20261022-v3",
+      "duplicateLinkAvoidedInSharePayload": true,
+      "sourceBackupBranch": "work/jeromegriffin-domain-setup-20261022",
+      "sourceReceipt": "coordination/domain-20261022/BRANDED_LAUNCH_QA.md",
+      "serverMetadataVerified": true,
+      "nativeAndroidShareSheetVerified": false,
+      "realFacebookBrandedPreviewVerified": false,
+      "originalWorkersDevShareUnchanged": true,
+      "legacyStorageUntouched": true,
+      "queryStringGameRootOGNotYetCovered": true
+    }
   }
 }
