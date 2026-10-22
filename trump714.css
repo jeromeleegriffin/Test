@@ -198,15 +198,20 @@
   stroke: none;
 }
 /* Feedback follows the approved ink pixels and brass plaque, never their hit boxes. */
-#trumpCase714 .tc-pad:focus,
-#trumpCase714 .tc-confirm:focus {
+body #trumpCase714 .tc-pad:focus,
+body #trumpCase714 .tc-pad:focus-visible,
+body #trumpCase714 .tc-pad[data-selected],
+body #trumpCase714 .tc-confirm:focus {
   outline: none;
   box-shadow: none;
 }
-#trumpCase714 .tc-pad,
-#trumpCase714 .tc-confirm {
+body #trumpCase714 .tc-pad,
+body #trumpCase714 .tc-confirm {
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+}
+body #trumpCase714 .tc-confirm:focus-visible .tc-confirm-hit {
+  stroke: none;
 }
 #trumpCase714 [data-pad='green'] {
   --ink-glow: #0e8f3e;
