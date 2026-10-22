@@ -9,6 +9,13 @@
     black: [11, 11, 11],
   };
   const assetRoot = 'assets/trump714/';
+  // Sample only the ink faces from the approved case raster; brass and labels stay fixed.
+  const inkFaces = {
+    green: '225,286 493,286 480,398 458,415 185,415',
+    red: '583,286 852,286 873,398 853,415 550,415',
+    yellow: '974,286 1238,286 1259,398 1240,415 948,415',
+    black: '1344,286 1587,286 1649,398 1628,415 1340,415',
+  };
   const specs = {
     case: [2069, 760, 57, 136, 1980, 481],
     'lid-inner': [2187, 719, 57, 165, 2081, 412],
@@ -81,7 +88,9 @@
       if (tentativeTrump) {
         confirmGroup.setAttribute('aria-label', 'Confirm ' + tentativeTrump + ' trump');
         confirmGroup.innerHTML =
+          '<g class="tc-confirm-art">' +
           plaqueArt(tentativeTrump) +
+          '</g>' +
           '<rect class="tc-confirm-hit" x="126" y="165" width="1941" height="330" fill="transparent"/>';
       }
     }
@@ -89,6 +98,9 @@
       b.disabled = pending || running;
       b.toggleAttribute('data-selected', b.dataset.trump === tentativeTrump);
       b.setAttribute('aria-pressed', String(b.dataset.trump === tentativeTrump));
+    });
+    root?.querySelectorAll('.tc-pad-surface').forEach((surface) => {
+      surface.toggleAttribute('data-selected', surface.dataset.pad === tentativeTrump);
     });
     if (fallbackDock?.isConnected) {
       fallbackDock.querySelectorAll('[data-trump]').forEach((b) => {
@@ -146,6 +158,15 @@
       '</div><div class="tc-art tc-stamp">' +
       svg('stamp') +
       '</div><div class="tc-access" role="status" aria-live="polite"></div>';
+    const baseSvg = root.querySelector('.tc-base svg');
+    for (const color of colors) {
+      baseSvg.insertAdjacentHTML(
+        'beforeend',
+        `<defs><clipPath id="tc-ink-${color}"><polygon points="${inkFaces[color]}"/></clipPath></defs>` +
+          `<g class="tc-pad-surface" data-pad="${color}"><g class="tc-ink-face">` +
+          `<g clip-path="url(#tc-ink-${color})"><image width="2069" height="760" href="${assetRoot}case.png"/></g></g></g>`
+      );
+    }
     const padGroup = document.createElement('div');
     padGroup.className = 'tc-pads';
     colors.forEach((color) => {
