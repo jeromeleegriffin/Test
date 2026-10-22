@@ -1,0 +1,59 @@
+{
+  "status": "LIVE_TACTILE_TRUMP_FEEDBACK_VERIFIED",
+  "date": "2026-10-22",
+  "runtime": "846-r12-moon-default-off-20261021",
+  "sourceCommit": "c7450638c54b70dd210e40ad3c60deb94f31629a",
+  "workerVersion": "8f2bec5d-52ba-48bc-8baa-873e80bbc568",
+  "deployment": "b8718091-de52-45cd-87ea-0a4ce44e6312",
+  "build": "efe9e162-cdcd-4116-b1f8-cd9d0af44844",
+  "stageBuild": "c73eff69-9d04-469a-af3a-90d3ee8003a7",
+  "rollbackWorker": "80702187-527c-4460-b27c-940c47ab898f",
+  "cancelledInitializationAttempt": "2f2a90c4-2d60-446f-aa58-4ce998d0e887",
+  "files": [
+    "trump714.js",
+    "trump714.css",
+    "coordination/qa/build-cloudflare-static.mjs"
+  ],
+  "behavior": {
+    "ink": "Original case-raster ink faces clipped in SVG; brief press-in, soft selected-color glow; black silver glow",
+    "confirm": "Original brass plaque image/text depress together; hit rectangle does not draw",
+    "confirmationRequired": true,
+    "keyboardAndScreenReaderStatesRetained": true,
+    "reducedMotionStaticFeedback": true
+  },
+  "verification": {
+    "syntaxAndFormatting": true,
+    "actualFunctionConfirmationAndDuplicateGuard": true,
+    "stageActualOfflineHand": "Bid 195, six discards, switch green/red/yellow/black, only final black selected, confirm black, first Black 1 play accepted",
+    "stageExactActualR12AssetURLs": true,
+    "liveExactActualR12AssetURLs": true,
+    "stageAndLiveEntryInstallHTTP": true,
+    "entryRoutingChecks": 31,
+    "buildMoonChecks": 336,
+    "buildNaturalAuctions": 500,
+    "botMoonBids": 0
+  },
+  "preserved": {
+    "roomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "bindingNames": [
+      "ACTION_LIMIT",
+      "ASSETS",
+      "ENTRY_LIMIT",
+      "ROOMS",
+      "TEST_GATE_KEY"
+    ],
+    "compatibilityDate": "2026-10-14",
+    "artworkPNGsChanged": false,
+    "approvedGeometryChanged": false,
+    "audioChanged": false,
+    "serviceWorkerCleared": false,
+    "savedDataCleared": false,
+    "roomStorageReset": false,
+    "stagePublicRouteDisabled": true,
+    "qaServerRoomsCreated": 0
+  },
+  "limitations": [
+    "Rendered cloud-browser verification was landscape; actual phone portrait/touch and reduced-motion device acceptance are not newly certified",
+    "Build label remains R12; Worker version and source commit identify this component patch"
+  ]
+}
