@@ -4,11 +4,11 @@
   "updated": "2026-10-22",
   "documentationOnly": true,
   "canonicalGame": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
-  "canonicalGameVersion": "8f2bec5d-52ba-48bc-8baa-873e80bbc568",
+  "canonicalGameVersion": "a0229e90-3754-4df5-8971-0dad9a2ec27f",
   "sourceBranch": "work/asset-recovery-20261021",
   "liveNamedBotsVerified": true,
   "fullOnlineX1": "x1-online-v2",
-  "status": "CLOUDFLARE_R12_TACTILE_TRUMP_FEEDBACK_VERIFIED",
+  "status": "CLOUDFLARE_R12_ROOM_AUCTION_STEADY_TRUMP_VERIFIED",
   "files": [
     {
       "path": "files/00_START_HERE/START_HERE.md"
@@ -45,6 +45,9 @@
     },
     {
       "path": "files/01_MASTER_BANK/LIVE_RECEIPT_TRUMP_TACTILE_20261022.json"
+    },
+    {
+      "path": "files/01_MASTER_BANK/LIVE_RECEIPT_ROOM_AUCTION_20261022.json"
     }
   ],
   "inheritedBrain": "../AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
@@ -60,11 +63,13 @@
     "coordination/qa/MOON_DEFAULT_OFF_R12_20261021.md",
     "coordination/qa/LIVE_RECEIPT_MOON_DEFAULT_OFF_R12.json",
     "coordination/qa/LIVE_RECEIPT_ENTRY_INSTALL_20261022.json",
-    "coordination/qa/LIVE_RECEIPT_TRUMP_TACTILE_20261022.json"
+    "coordination/qa/LIVE_RECEIPT_TRUMP_TACTILE_20261022.json",
+    "coordination/qa/LIVE_RECEIPT_ROOM_AUCTION_20261022.json"
   ],
   "openIssues": [
     "Physical Android installed app relaunch and weak-cellular/cache acceptance remain to confirm",
-    "Automatic cross-origin XP/settings transfer is not implemented; old local data retained via ?offline=1"
+    "Automatic cross-origin XP/settings transfer is not implemented; old local data retained via ?offline=1",
+    "Owner checks portrait waiting labels and steady trump press on physical phone; actual cloud UI verified landscape only"
   ],
   "evidenceUrls": [
     "https://github.com/jeromeleegriffin/Test/actions/runs/39693134706",
@@ -76,7 +81,10 @@
   "nativePolicyOverlayCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
   "humanOnlyMoon": true,
   "failedMoonLosesMatch": true,
-  "documentSha256": "9baef02bca2bdb4353ea2843470a3e7c1090fb3c637dc06b81af2ae793a2a0e0",
+  "documentSha256": "f47ff57c4935f55e0088ebd501a8fd536c6e1687afe1573e0813341096105351",
   "moonDefaultEnabled": false,
-  "tactileTrumpFeedback": true
+  "tactileTrumpFeedback": true,
+  "randomBotFill": true,
+  "maximumBidEndsAuction": true,
+  "steadyTrumpShade": true
 }

@@ -1,5 +1,19 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## CURRENT ROOM, AUCTION AND STEADY TRUMP FIXES — October 22, 2026
+
+This is the current release authority and supersedes the earlier tactile glow/pulse patch below. The owner rejected the double flash and requested a single press plus a steady shade change, and random bots whenever open seats are filled.
+
+- LIVE Worker **a0229e90-3754-4df5-8971-0dad9a2ec27f**, deployment **c78f0b25-bc36-4afc-b197-2409337877de**, 100%; successful production build **926e4a2a-9664-4b8b-a783-49cda42aa298**, source **37f037520e10b7301d3546db7020e6ca714caa17** on **work/asset-recovery-20261021**. Rollback Worker **8f2bec5d-52ba-48bc-8baa-873e80bbc568**. Runtime label remains **846-r12-moon-default-off-20261021**; five changed assets use cache tag **846-r12-room-auction-20261022**.
+- Trump: removed the keyframe animation, glow and pulse. The original ink-face pixels press down once and hold a steady different shade; active and selected use the same transform/filter, preventing a second release flash. Confirm retains a plain press/dim. Brass/labels stay fixed; keyboard feedback remains. Do not restore the rejected glow.
+- Fill Seats: the server now randomly samples the complete approved manual bot roster using the existing cryptographic unbiased sampler. Names/avatars cannot duplicate occupied players. It fills only empty seats, preserving humans and manual choices. Existing occupied rooms do not reroll.
+- Maximum bid: both native host and online authoritative reducer finish bidding immediately at the deck maximum (200, or 180 for the corresponding deck). No bot passes are needed. Nest transfers exactly once. A normal maximum with Moon OFF is not Shoot the Moon.
+- Waiting labels: occupied portrait labels bottom-anchor above each actor image and wrap upward. Bot actions are shortened to Remove bot / Replace bot. No character art or avatar position/size changed.
+- Verification: 395 new unit checks; 12 deterministic roster variations; 336 Moon checks, 48 outcome cases, 500 natural auctions, zero bot Moon bids. Real stage and production rooms produced distinct random rosters; hosted 200 bid immediately reached discard with 10→16 cards, no duplicate nest. Production five native assets exact-byte verified using the new query; entry/install redirects, manifest and all four icons pass.
+- Actual rendered native game at 1363×936 landscape: maximum 200 immediately showed Kitty Received; selected all four trump colors, confirmed black and played a card; actual Fill Seats selected Jerome/Copper/Hearth and waiting labels were visually inspected. Portrait geometry checked from approved image bounds at 320×480, 390×844, 432×936 and 768×1024 (12 checks, minimum 14 CSS pixels above actor image). **This is not actual Android/portrait/touch visual acceptance**; the available cloud browser exposes no viewport resize. Owner phone check remains open.
+- Preserved: R12 Moon defaults OFF, human-only option, bots prohibited, failed human Moon loses match; full X1 v2, approved artwork/audio, entry/install repairs, room namespace, secrets/limiters, all saved player data. No room reset, cache/SW clearing or reinstall. Only disposable QA rooms were closed. Stage route disabled after verification.
+- Receipt: coordination/qa/LIVE_RECEIPT_ROOM_AUCTION_20261022.json and the AH copy below. Older Worker identities and the original glow receipt remain historical.
+
 ## CURRENT TACTILE TRUMP FEEDBACK — October 22, 2026
 
 This supersedes older current Worker identities below. **Keep all R12 Moon rules and the entry/install repair.** The owner delegated the interaction: selected ink should visibly respond, preferably press in; Confirm should respond similarly, without rectangular selection boxes.

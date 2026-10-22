@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-22",
+  "runtime": "846-r12-moon-default-off-20261021",
+  "assetQuery": "846-r12-room-auction-20261022",
+  "sourceCommit": "37f037520e10b7301d3546db7020e6ca714caa17",
+  "sourceBranch": "work/asset-recovery-20261021",
+  "build": "926e4a2a-9664-4b8b-a783-49cda42aa298",
+  "stageBuild": "9056c425-ff97-4bfe-8681-ddc3692bdb95",
+  "rollbackVersion": "8f2bec5d-52ba-48bc-8baa-873e80bbc568",
+  "changes": {
+    "trumpFeedback": "One press plus steady shade. No animation, glow or pulse. Same transform/shade for active and selected; confirm press retained.",
+    "randomBots": "Uniform cryptographic choice from the full approved roster without duplicate names/avatars; only open seats; manual choices/humans preserved.",
+    "maximumBid": "Maximum (200 or 180 by deck) immediately finishes bidding in both native host and authoritative online reducer. Normal maximum with Moon OFF is not a Moon.",
+    "waitingLabels": "Portrait occupied non-self labels bottom-anchor above actor images and grow upward; concise Remove/Replace bot actions. Artwork/seat geometry unchanged."
+  },
+  "verification": {
+    "unitChecks": 395,
+    "distinctDeterministicRosters": 12,
+    "moonChecks": 336,
+    "moonOutcomeCases": 48,
+    "naturalAuctions": 500,
+    "botMoonBids": 0,
+    "portraitGeometryChecks": 12,
+    "minimumCssPixelGap": 14,
+    "hostedStageRosters": [
+      [
+        "Harrier",
+        "Marcus",
+        "Shade"
+      ],
+      [
+        "Fang",
+        "Harrier",
+        "Ivy"
+      ],
+      [
+        "Copper",
+        "Rafael",
+        "Anchor"
+      ]
+    ],
+    "hostedStageMaximum": {
+      "bid": 200,
+      "phase": "discard",
+      "handBefore": 10,
+      "handAfter": 16,
+      "nestTransferredOnce": true,
+      "moonEnabled": false
+    },
+    "renderedBrowser": {
+      "viewport": "1363x936 landscape",
+      "nativeMax200ToKitty": true,
+      "allFourTrumpSelections": true,
+      "confirmedBlack": true,
+      "firstCardPlayed": true,
+      "waitingFill": [
+        "Jerome",
+        "Copper",
+        "Hearth"
+      ]
+    },
+    "physicalAndroidPortraitVerified": false,
+    "hostedLive": {
+      "base": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev",
+      "rosters": [
+        [
+          "Dice",
+          "Nettle",
+          "Blaze"
+        ],
+        [
+          "Harrier",
+          "Bramble",
+          "Brandy"
+        ],
+        [
+          "Flint",
+          "Ivy",
+          "Barrel"
+        ]
+      ],
+      "auction": {
+        "maximum": 200,
+        "phase": "discard",
+        "winner": 1,
+        "handBefore": 10,
+        "handAfter": 16,
+        "nestTransferredOnce": true,
+        "shootMoonEnabled": false
+      },
+      "scope": "Disposable hosted rooms; no physical Android acceptance"
+    },
+    "liveAssets": {
+      "base": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev",
+      "entryUsesNewQuery": true,
+      "rows": [
+        {
+          "file": "game060.js",
+          "bytes": 654887,
+          "sha256": "b6585eb5c5ce4a56d2325f121b66327eb70ab07e331808b6288ff10d24997ed3",
+          "exact": true
+        },
+        {
+          "file": "friends803.js",
+          "bytes": 7838,
+          "sha256": "456121f6909920da8765ec71469715e72b6edeec43f33035d0f631088755df95",
+          "exact": true
+        },
+        {
+          "file": "friends803.css",
+          "bytes": 19001,
+          "sha256": "eca87359b630aea2a7d550ea1dff592b2fa5733add8b083b6c145592367be284",
+          "exact": true
+        },
+        {
+          "file": "trump714.js",
+          "bytes": 30886,
+          "sha256": "31744801238a8a74ace5520c473bd9eb8ea1703d688abcb420a8707d12986489",
+          "exact": true
+        },
+        {
+          "file": "trump714.css",
+          "bytes": 6900,
+          "sha256": "49e2c0b484c0baf481e3559a423c7eb4616b3eff3a3bf72486f63ed48b66c081",
+          "exact": true
+        }
+      ]
+    },
+    "entryLive": {
+      "base": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev",
+      "rows": [
+        {
+          "path": "/cloud-game/assets/",
+          "status": 302,
+          "redirectBeforeArtwork": true,
+          "inviteRetained": true
+        },
+        {
+          "path": "/cloud-game/assets/index.html",
+          "status": 302,
+          "redirectBeforeArtwork": true,
+          "inviteRetained": true
+        }
+      ],
+      "manifest": {
+        "id": "/cloud-game/assets/",
+        "start_url": "/",
+        "scope": "/",
+        "icons": 4
+      },
+      "installedStartIntegrated": true,
+      "nativePolicy": "R12 retained"
+    }
+  },
+  "preserved": {
+    "moonDefaultOff": true,
+    "humanMoonOption": true,
+    "botsNeverMoon": true,
+    "failedHumanMoonLosesMatch": true,
+    "entryInstallRepair": true,
+    "artwork": true,
+    "audio": true,
+    "x1OnlineV2": true,
+    "roomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "roomReset": false,
+    "serviceWorkerCleared": false,
+    "playerDataCleared": false
+  },
+  "limitations": [
+    "Physical Android portrait/touch acceptance remains unverified; cloud browser supports landscape only.",
+    "Existing seated bots are retained; new fills randomize only open seats."
+  ],
+  "workerVersion": "a0229e90-3754-4df5-8971-0dad9a2ec27f",
+  "deployment": "c78f0b25-bc36-4afc-b197-2409337877de",
+  "bindingsVerified": [
+    {
+      "name": "ACTION_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261021"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "ENTRY_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261020"
+    },
+    {
+      "name": "ROOMS",
+      "type": "durable_object_namespace",
+      "namespace_id": "bb1bf1c32b68451cbe5db6fee3066fa0"
+    },
+    {
+      "name": "TEST_GATE_KEY",
+      "type": "secret_text"
+    }
+  ],
+  "productionVerified": true,
+  "stageRouteDisabled": true
+}
