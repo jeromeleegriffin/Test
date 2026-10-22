@@ -19,7 +19,7 @@ for (const spec of [{humans:1,pace:99,moon:true,anchor:true},{humans:2,pace:99,m
   assert.equal(entry.status, 200, 'Native entry failed');
   cookie = entry.headers.get('set-cookie')?.split(';')[0];
   assert(cookie);
-  assert((await entry.text()).includes('846-r11-human-moon-20261021'));
+  assert((await entry.text()).includes('846-r12-moon-default-off-20261021'));
   async function api(route, method = 'GET', body, token, expected = 200) {
     for (let retry = 0; retry < 4; retry++) {
       requests++;

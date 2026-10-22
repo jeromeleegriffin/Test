@@ -7,7 +7,7 @@
 // It's exchanged during the join handshake so a stale host or joiner (e.g.
 // one still running old cached JS) gets caught and auto-updated instead of
 // silently failing or behaving unpredictably against a mismatched peer.
-const APP_VERSION = '846-r11-human-moon-20261021';
+const APP_VERSION = '846-r12-moon-default-off-20261021';
 window.HOR_SCRIPT_BUILD = APP_VERSION;
 
 function horThisIndex() {
@@ -89,7 +89,7 @@ let revealTopNest = true;
 /** Test hook: '' | 'rook' | 'red2' — force that card onto the nest reveal */
 /** Shoot the Moon: bidding every counter in the deck is an all-or-nothing
  * human-only bid — make it and win the match, miss it and lose the match */
-let shootMoonEnabled = true;
+let shootMoonEnabled = false;
 /** Bot delay: blitz | normal | slow */
 let botSpeed = 'normal';
 let horGamePace = (() => {
@@ -1552,7 +1552,7 @@ function applyGriffinDefaults({ broadcastChange = false } = {}) {
   mustTrumpWhenVoid = false;
   leadOrder = 'bidder';
   misdealOnNoCounters = true;
-  shootMoonEnabled = true;
+  shootMoonEnabled = false;
   recomputeHandAndNest();
   syncOptionsUI();
   if (broadcastChange && isHost) {
@@ -5945,6 +5945,7 @@ function wireRuleOptionControls() {
     () => shootMoonEnabled,
     (v) => {
       shootMoonEnabled = v;
+      window.horSavePrefs?.({ shootMoonEnabled: v, moonPreferenceVersion: 12 });
     }
   );
   const bindChoice = (id, read, write) => {

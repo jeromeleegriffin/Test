@@ -2,8 +2,8 @@
  * Author: Jerome Griffin
  * Copyright (c) 2026 Jerome Griffin / Griffin House
  */
-const BUILD = '846-r11-human-moon-20261021';
-const CACHE = 'house-of-rooks-846-r11-human-moon-20261021';
+const BUILD = '846-r12-moon-default-off-20261021';
+const CACHE = 'house-of-rooks-846-r12-moon-default-off-20261021';
 // Current dependency paths only; cacheLookup handles version query strings.
 const SHELL = [
   './portrait-r8-repairs.css',

@@ -5,8 +5,12 @@ import {api,players} from '../../cloudflare/live/x1-full/test-harness.mjs';
 const {createMatch,makeDeck,freshOnlineX1,chooseOnlineBotAction,submitBid,finishHand,cardPoints,X1_RULES,x1ExtendedView}=api;
 let checks=0;
 function random(seed){let x=seed>>>0;return n=>{x=(x+0x6d2b79f5)>>>0;let t=x;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)%n;};}
-function state(seed,options={},roster=players){const rng=random(seed);return createMatch(roster,{misdealOnNoCounters:false,...options},{dealer:0,shuffle:deck=>{deck=deck.slice();for(let i=deck.length-1;i>0;i--){const j=rng(i+1);[deck[i],deck[j]]=[deck[j],deck[i]];}return deck;}});}
+function state(seed,options={},roster=players){const rng=random(seed);return createMatch(roster,{misdealOnNoCounters:false,shootMoonEnabled:true,...options},{dealer:0,shuffle:deck=>{deck=deck.slice();for(let i=deck.length-1;i>0;i--){const j=rng(i+1);[deck[i],deck[j]]=[deck[j],deck[i]];}return deck;}});}
 function room(s,version='v2'){return{gameState:s,x1:version==='none'?null:{...freshOnlineX1(s),...(version==='v1'?{version:'x1-online-v1'}:{})},seats:s.players.map(p=>({playerId:p.playerId,isBot:p.isBot}))};}
+
+// Default-off does not remove the explicit opt-in or alter existing match settings.
+{const s=createMatch(players,{}, {dealer:0});assert.equal(s.settings.shootMoonEnabled,false);const on=createMatch(players,{shootMoonEnabled:true},{dealer:0});assert.equal(on.settings.shootMoonEnabled,true);const snap=structuredClone(on);assert.equal(snap.settings.shootMoonEnabled,true);checks+=3;}
+
 // Bot prohibition at reducer authority, independent of brain, names or stale code.
 for(const includeRed2 of [true,false])for(const seat of [0,1,2,3]){
  const roster=players.map(p=>({...p,isBot:true}));const s=state(2,{includeRed2},roster);s.currentPlayer=seat;
@@ -21,6 +25,9 @@ for(const version of ['v2','v1','none'])for(const includeRed2 of [true,false])fo
 }
 // Moon settles the match independently of score, target, nest variant or bidder's team.
 const native=fs.readFileSync(new URL('../../game060.js',import.meta.url),'utf8');
+assert(native.includes('let shootMoonEnabled = false;'));
+assert(!/checked[^>]*id="opt-shoot-moon"/.test(fs.readFileSync(new URL('../../index.html',import.meta.url),'utf8')));
+{const prefs=fs.readFileSync(new URL('../../polish.js',import.meta.url),'utf8');const start=prefs.indexOf('    if (p.moonPreferenceVersion === 12');const end=prefs.indexOf('    houseTeamA',start);assert(start>=0&&end>start);for(const [p,expected]of [[{shootMoonEnabled:true},false],[{moonPreferenceVersion:12,shootMoonEnabled:true},true],[{moonPreferenceVersion:12,shootMoonEnabled:false},false]]){const c={p,shootMoonEnabled:false};vm.createContext(c);vm.runInContext(prefs.slice(start,end),c);assert.equal(c.shootMoonEnabled,expected);checks++;}}
 const fn=name=>{const start=native.indexOf('function '+name+'('),end=native.indexOf('\nfunction ',start+1);return native.slice(start,end);};
 const endStart=native.indexOf('function hostEndHand()'),endCut=native.indexOf('  handHistory.push(summary);',endStart);
 const scoring=native.slice(endStart,endCut)+' return summary;\n}';

@@ -568,7 +568,9 @@
       comebackSpecialChance = p.comebackSpecialChance;
     if (typeof p.openWidow === 'boolean') openWidow = p.openWidow;
     if (typeof p.revealTopNest === 'boolean') revealTopNest = p.revealTopNest;
-    if (typeof p.shootMoonEnabled === 'boolean') shootMoonEnabled = p.shootMoonEnabled;
+    // Older saved true values may only reflect the former automatic default.
+    if (p.moonPreferenceVersion === 12 && typeof p.shootMoonEnabled === 'boolean')
+      shootMoonEnabled = p.shootMoonEnabled;
     houseTeamA = asText(p.teamNameA, 'Griffin');
     houseTeamB = asText(p.teamNameB, 'Raven');
     try {
