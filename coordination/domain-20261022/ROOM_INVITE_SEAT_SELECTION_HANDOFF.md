@@ -99,3 +99,28 @@ Outstanding: real two-device Android join via fresh Facebook post and background
 - The active Worker remained `griffin-house-of-rooks-online` v40 `dd4dbc6c-4640-4d84-a91c-15148de87a49`; no production deployment was made in this task.
 - Approved Facebook Rooks OG picture, normal game sharing link, room-specific short links, domain, game assets, DO namespace, secret and rate limit settings preserved.
 - Remaining physical QA: Android Facebook in-app browser link into a real active table, name/voice/avatar confirmation, choosing seat, device suspend/resume, saved data migration from workers.dev shortcuts. These were not simulated by the server-side seat test.
+
+## Facebook Android invitation field bug and branded-only v7 repair — 2026-10-22
+Owner supplied the 25.98-second Android Facebook screen recording `Screen_Recording_20261022_105206_Facebook.mp4`, showing the invite `YOU21`. In the Facebook in-app browser the player-name field was grey/unresponsive, while tapping the `YOU21` room code opened the keyboard and highlighted that code. The small `Change Partner` control also overlapped the `Choose your seat` heading. **This was a client-side invitation layout/focus defect, not failed server-side seat reservation.**
+
+### Cause
+The actual `landing783.js` places name label, `#hor-player-name`, and `.identity-choice` as direct children of `#landingPanel783`. `room830.css` has a joining-mode rule:
+`body #lobby.joining #landingPanel783 > :not(#joinForm):not(#lobbyStatus) {display:none!important}`.
+The room code `#hor-room-code` was still an editable text input. A concurrent branded v6c patch only removed `landing-returning` and was not sufficient to provide a reliable editable name field inside the joining UI.
+
+### Change
+Applied *only* to the branded asset-route Worker `rooks-branded-entry-only-20261022`, currently **v7 `20261022-v7-invite-name-field`**. For invite URLs, it:
+- Reparents **the existing original** name label, input and avatar/voice controls into the active `#joinForm` as `#ghInviteIdentityV7`, preserving their existing game listeners and saved identity behavior rather than creating duplicate inputs.
+- Makes the prefilled room code `#hor-room-code` `readOnly`, `inputmode=none`, `tabindex=-1`, labels it **TABLE CODE · Filled in for you**, and retains the actual room code value for the authoritative join API.
+- Adds narrowly scoped high-contrast accessible name styling, blocks the obsolete Change Partner control from overlapping the invitation screen, and **restores** the original name/avatar controls and room input when Back leaves joining mode.
+- Preserves the v40 seat picker and multiplayer server, original room storage, original `workers.dev` address, Facebook approved JPG, v5a Facebook share chooser, and v4 native in-page no-second-asset-load guard.
+- Full isolated source backup: `coordination/domain-20261022/rooks-branded-entry-v7-invite-name-field.js`.
+
+### Verification
+- Cloudflare Browser Rendering at `https://rooks.jeromegriffin.com/?room=ABC23456` confirmed the original `#hor-player-name` parent is now `#ghInviteIdentityV7`, inside `#joinForm`, with name field accepting focus and a test value. Room input correctly returns `readOnly=true`, `inputmode=none`, holds the untouched invite code.
+- Browser-triggered Back restored `#hor-player-name` to `#landingPanel783`, room input `readOnly=false`, original `inputmode=text`, and removed the temporary invitation group. Normal game launch did not gain any new invitation elements.
+- QA used an intentionally nonexistent room code. Nothing was written to any real room. Live v40 worker still `dd4dbc6c-4640-4d84-a91c-15148de87a49` with `ASSETS, ROOMS, TEST_GATE_KEY, ENTRY_LIMIT, ACTION_LIMIT` bindings.
+- Physical Android keyboard activation inside *Facebook's actual WebView* is NOT YET independently verified after v7. Browser DOM verification cannot replace the owner's next actual tap test. Do not claim the physical Android bug is definitively resolved until the owner confirms.
+
+### Rollback
+Restore `rooks-branded-entry-v6c` if available or the archived `rooks-branded-entry-v6b-prejoin-consent.js` on this isolated override Worker only. Do not redeploy the main game, clear browser storage, modify DO rooms, or touch the approved Facebook art.
