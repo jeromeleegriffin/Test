@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-22",
+  "sourceCommit": "5354cfa8ad1371b9708eb1698de5b6d24db8f82c",
+  "sourceBranch": "work/asset-recovery-20261021",
+  "runtime": "846-r12-moon-default-off-20261021",
+  "assetQuery": "846-r12-inplace-lobby-20261022",
+  "productionBuild": "4b6c9412-5e33-44a7-aadd-18f5d3f1f6c3",
+  "stageBuild": "9f1e6f5f-017d-41dc-a580-f64fc9188826",
+  "stageSource": "ccc459ef9f6c142d74c131bc25c79f7496d505c9",
+  "stageToFinalDifference": "One additional optional cancel of active nest reveal during same cleanup; local lifecycle test passed on final source.",
+  "rollbackVersion": "3f5d8428-6caa-48f6-8091-da0d2005f8fc",
+  "cause": "Native leave reloaded document; cloud guest disconnect reloaded and table closure replaced location. Each restarted initial artwork preparation.",
+  "repair": "Same-document native returnToLobby043 cleans game/network timers, presentation audio/flights/overlays and state, then reveals existing lobby. Cloud leave/close detaches sockets/polling and uses same return. Artwork/decoded audio remain in document.",
+  "raceGuards": [
+    "Old snapshot/action completion cannot repaint new credentials",
+    "Old close response cannot close new table",
+    "Old socket opening/retry cannot attach to new credentials",
+    "Delayed table toast invalidated by lifetime epoch",
+    "Old deal step cannot stop later deal flights",
+    "Trump tentative selection resets on leaving"
+  ],
+  "guestPolicy": "Seat and cloud reconnect credential remain reserved on guest disconnect; host table close removes closed credentials as before.",
+  "tests": {
+    "sameDocumentReturn": true,
+    "repeatedCleanup": true,
+    "cachedArtworkRetained": true,
+    "guestCredentialRetained": true,
+    "closedCredentialRemoved": true,
+    "staleSnapshotIgnored": true,
+    "oldCloseIgnored": true,
+    "oldStartDelayIgnored": true,
+    "roomAuctionChecks": 395,
+    "trumpToggleSoundChecks": true,
+    "moonChecks": 336,
+    "botMoonBids": 0,
+    "stageActualBrowser": {
+      "viewport": "1363x936 landscape",
+      "offlineLeaveDuringDeal": true,
+      "immediateRestartReachedBidding": true,
+      "secondOfflineLeave": true,
+      "onlineHostClosedDisposableTable": true,
+      "noArtworkLoaderOnReturn": true
+    },
+    "liveAssets": {
+      "base": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev",
+      "rows": [
+        {
+          "file": "game060.js",
+          "bytes": 656820,
+          "sha256": "abcfbd225d81c03033f3f98758fcb4f408533da1d27fd9b423cf5fb5da717a84",
+          "exact": true
+        },
+        {
+          "file": "trump714.js",
+          "bytes": 31523,
+          "sha256": "72b598bb2cb8c05882ddd2ae5f1cf163870a62694fd5bc1aedcac2bf9c012fd7",
+          "exact": true
+        }
+      ],
+      "entryUsesNewQuery": true
+    },
+    "liveOfflineLeaveDuringDeal": true,
+    "liveGuestLeftWithoutLoader": true,
+    "liveGuestRejoinedSameSeat": true,
+    "liveGuestHostCloseWithoutLoader": true
+  },
+  "preserved": {
+    "initialStartupLoader": true,
+    "artwork": true,
+    "audioSettingsAndBuffers": true,
+    "careerData": true,
+    "randomBotFill": true,
+    "maximumBidEndsAuction": true,
+    "portraitWaitingLabels": true,
+    "trumpHighlightAndDistinctSounds": true,
+    "moonDefaultOff": true,
+    "humanMoonOption": true,
+    "botsNeverMoon": true,
+    "failedHumanMoonLosesMatch": true,
+    "entryInstallRepair": true,
+    "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "roomReset": false,
+    "serviceWorkerCleared": false
+  },
+  "limitations": [
+    "Cloud browser landscape checks do not certify physical Android, long suspension or offline app reload.",
+    "Initial game opening still prepares artwork; only internal table-to-lobby navigation avoids restart."
+  ],
+  "workerVersion": "c26d2a47-847f-415e-aa87-d9eac536606e",
+  "deployment": "c38a4f53-6803-49d8-bece-8367b6108957",
+  "bindings": [
+    {
+      "name": "ACTION_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261021"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "ENTRY_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261020"
+    },
+    {
+      "name": "ROOMS",
+      "type": "durable_object_namespace",
+      "namespace_id": "bb1bf1c32b68451cbe5db6fee3066fa0"
+    },
+    {
+      "name": "TEST_GATE_KEY",
+      "type": "secret_text"
+    }
+  ],
+  "productionVerified": true
+}

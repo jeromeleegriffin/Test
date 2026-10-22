@@ -1,5 +1,18 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## CURRENT RETURN TO LOBBY WITHOUT ARTWORK RELOAD — October 22, 2026
+
+This is the current release identity. Owner reported Preparing the House/loading artwork every time they left a table. Native leave called location.reload; Cloudflare guest disconnect reloaded and closed-table handling replaced the page.
+
+- LIVE Worker **c26d2a47-847f-415e-aa87-d9eac536606e**, deployment **c38a4f53-6803-49d8-bece-8367b6108957**, source **5354cfa8ad1371b9708eb1698de5b6d24db8f82c**, production build **4b6c9412-5e33-44a7-aadd-18f5d3f1f6c3**, branch work/asset-recovery-20261021. Rollback **3f5d8428-6caa-48f6-8091-da0d2005f8fc**. Game and trump JS query **846-r12-inplace-lobby-20261022**; R12 runtime label retained.
+- Native returnToLobby043 releases the table in the existing document: invalidate deal/toast lifetime, stop bot/turn/network/disconnect timers, voice/presentation sounds and flights, cancel nest/discard effects, close overlays, clear per-table state and show the existing lobby. Original artwork, decoded audio, preferences and career data stay loaded. The initial startup loader remains unchanged.
+- Cloudflare disconnect/closure stops sockets, reconnect timers and polling and calls the same cleanup. Guest seat/reconnect credential remains reserved; closed-table credential is removed. Old snapshots/actions/socket completion and old close responses are guarded against new credentials, so they cannot repaint a later table. Old deal callbacks cannot stop a later deal's flights.
+- Trump state now resets its tentative choice/key/callback on leaving, keeping next match selection clean. Current steady ink highlight and distinct select/deselect sounds remain.
+- Verification: new actual-function lifecycle tests pass repeated cleanup, artwork retention, guest credential retention, closed credential removal, ignored stale snapshot/close/start-delay. Existing 395 auction/random-fill checks, trump toggle/sound checks and 336 Moon checks pass. Stage native browser at 1363×936 left during deal, immediately restarted to bidding, left again, created/closed disposable online host table; all returned directly without artwork loader.
+- Final source adds an optional active nest-reveal cancel beyond the staged candidate; final lifecycle tests and exact live JS bytes passed. **Final production browser** left offline during 1× deal directly to lobby; joined disposable host table as guest, left directly, and rejoined the same seat (2 of 4 seated). No phone/long-suspension/offline reload certification is implied.
+- Preserved: full X1 v2, original artwork/audio, random open-seat bots, maximum bid immediate auction end, portrait labels, Moon defaults OFF/human-only option/bots forbidden/failed human Moon loses match, entry/install routing, namespace/secrets/limiters. No room reset, cache/SW clearing or reinstall.
+- Receipt coordination/qa/LIVE_RECEIPT_INPLACE_LOBBY_20261022.json and AH copy. Stage route disabled. Only disposable QA tables were closed. Earlier release identities below are historical.
+
 ## CURRENT CLEAR TRUMP HIGHLIGHT AND TWO SOUNDS — October 22, 2026
 
 This supersedes only the too-subtle selected-pad presentation below. Owner likes the plain press, but requires an obvious steady selected highlight and distinct select/deselect sounds. Do not restore flashing or pulse.

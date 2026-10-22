@@ -16,13 +16,13 @@
   "startupPrompt": "versions/AH/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
   "history": "history.html",
   "previousVersion": "AG",
-  "sha256Scope": "AH current clear trump highlight/two-sound document; SHA-256 in inventory.json",
-  "checkpoint": "trump-highlight-sound-20261022",
-  "checkpointStatus": "CLOUDFLARE_R12_TRUMP_HIGHLIGHT_SOUND_VERIFIED",
+  "sha256Scope": "AH current same-document lobby-return document; SHA-256 in inventory.json",
+  "checkpoint": "inplace-lobby-20261022",
+  "checkpointStatus": "CLOUDFLARE_R12_INPLACE_LOBBY_VERIFIED",
   "latestGameBuild": "846-r12-moon-default-off-20261021",
-  "runtimeStatusAuthority": "Master Brain AH leading clear trump highlight and two sounds; prior too-subtle shade superseded.",
+  "runtimeStatusAuthority": "Master Brain AH leading return to lobby without artwork reload override.",
   "currentRuntimeRelease": {
-    "status": "CLOUDFLARE_R12_TRUMP_HIGHLIGHT_SOUND_VERIFIED",
+    "status": "CLOUDFLARE_R12_INPLACE_LOBBY_VERIFIED",
     "date": "2026-10-22",
     "runtime": "846-r12-moon-default-off-20261021",
     "ownerConfirmedCardSoundsRestored": true,
@@ -114,15 +114,15 @@
     "cloudflare": {
       "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
       "worker": "griffin-house-of-rooks-online",
-      "version": "3f5d8428-6caa-48f6-8091-da0d2005f8fc",
-      "deployment": "bc619db9-ef72-45aa-9d07-fe26126c7d5c",
+      "version": "c26d2a47-847f-415e-aa87-d9eac536606e",
+      "deployment": "c38a4f53-6803-49d8-bece-8367b6108957",
       "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
       "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-      "rollbackVersion": "a0229e90-3754-4df5-8971-0dad9a2ec27f",
+      "rollbackVersion": "3f5d8428-6caa-48f6-8091-da0d2005f8fc",
       "roomStorageReset": false,
       "secretAndRateLimitsRetained": true,
       "previewsEnabled": false,
-      "sourceCommit": "1f5ec16adf158df70b40858c51a1bfec22fef138",
+      "sourceCommit": "5354cfa8ad1371b9708eb1698de5b6d24db8f82c",
       "onlineBotIntelligence": "x1-online-v2",
       "nativeAudioRepairVersion": "d4d2ed21-45da-4652-bd09-95ce85b41c12",
       "cloudflareOnlyRuntimeAssets": true,
@@ -145,7 +145,7 @@
       "humanOnlyMoon": true,
       "failedMoonLosesMatch": true,
       "nativePolicyOverlayCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
-      "sourceVerification": "Live five changed native assets exact-byte checked at new query; hosted random fills and max-200 discard verified.",
+      "sourceVerification": "Exact final live game/trump JS verified. Actual live offline and guest leave/rejoin/closed-table return pass without loader.",
       "moonDefaultEnabled": false,
       "entryInstallRepair": true,
       "tactileTrumpFeedback": true,
@@ -154,9 +154,10 @@
       "maximumBidEndsAuction": true,
       "steadyTrumpShade": true,
       "trumpGlow": false,
-      "assetQuery": "846-r12-trump-highlight-sound-20261022",
+      "assetQuery": "846-r12-inplace-lobby-20261022",
       "steadyTrumpHighlight": true,
-      "distinctTrumpSelectDeselectSounds": true
+      "distinctTrumpSelectDeselectSounds": true,
+      "inplaceLobbyReturn": true
     },
     "rollbackBranchBothRepos": "rollback/pre-r10-ambience-20261021",
     "repair": {
@@ -197,7 +198,7 @@
       "newZipCreated": false,
       "audioVerificationMethod": "Owner confirmation, not assistant browser listening"
     },
-    "next": "Owner checks selected ink highlight and select/deselect sounds on phone; keep current game rules and prior repairs.",
+    "next": "Owner checks phone leave/restart behavior. Internal table return keeps artwork loaded; normal initial startup loader remains.",
     "ownerPhoneAudioAcceptance": {
       "date": "2026-10-21",
       "otherSoundsQuote": "the other sounds are back",
@@ -210,7 +211,7 @@
   },
   "comprehensiveHandoff": "versions/AH/files/01_MASTER_BANK/MASTER_BRAIN_AH.md",
   "threeSiteReleasePolicy": "../coordination/THREE_SITE_RELEASE_POLICY.md (historical; new Cloudflare-only hosting authorization supersedes automatic three-site synchronization)",
-  "currentReleaseReceipt": "https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/LIVE_RECEIPT_TRUMP_HIGHLIGHT_SOUND_20261022.json",
+  "currentReleaseReceipt": "https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/LIVE_RECEIPT_INPLACE_LOBBY_20261022.json",
   "currentCumulativeGamePackage": {
     "status": "Cloudflare Workers Static Assets LIVE, 1634 original assets, ~211.05 MiB. Original GitHub ZIPs remain historical; AH handoff is documentation-only, not a full game ZIP.",
     "nativeSourceCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
@@ -890,8 +891,8 @@
   "latestOnlineIntelligence": "x1-online-v2",
   "liveMigration": {
     "status": "LIVE_CLOUDFLARE_ONLY",
-    "workerVersion": "3f5d8428-6caa-48f6-8091-da0d2005f8fc",
-    "workerDeployment": "bc619db9-ef72-45aa-9d07-fe26126c7d5c",
+    "workerVersion": "c26d2a47-847f-415e-aa87-d9eac536606e",
+    "workerDeployment": "c38a4f53-6803-49d8-bece-8367b6108957",
     "liveRoomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
     "secretName": "TEST_GATE_KEY",
     "stageWorker": "griffin-rooks-cloud-only-stage",
@@ -1355,6 +1356,123 @@
     "build": "0a5990b7-9d78-45c4-8770-3085eb97f6bf",
     "workerVersion": "3f5d8428-6caa-48f6-8091-da0d2005f8fc",
     "deployment": "bc619db9-ef72-45aa-9d07-fe26126c7d5c",
+    "bindings": [
+      {
+        "name": "ACTION_LIMIT",
+        "type": "ratelimit",
+        "namespace_id": "14784620261021"
+      },
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      },
+      {
+        "name": "ENTRY_LIMIT",
+        "type": "ratelimit",
+        "namespace_id": "14784620261020"
+      },
+      {
+        "name": "ROOMS",
+        "type": "durable_object_namespace",
+        "namespace_id": "bb1bf1c32b68451cbe5db6fee3066fa0"
+      },
+      {
+        "name": "TEST_GATE_KEY",
+        "type": "secret_text"
+      }
+    ],
+    "productionVerified": true
+  },
+  "inplaceLobbyReturn": {
+    "date": "2026-10-22",
+    "sourceCommit": "5354cfa8ad1371b9708eb1698de5b6d24db8f82c",
+    "sourceBranch": "work/asset-recovery-20261021",
+    "runtime": "846-r12-moon-default-off-20261021",
+    "assetQuery": "846-r12-inplace-lobby-20261022",
+    "productionBuild": "4b6c9412-5e33-44a7-aadd-18f5d3f1f6c3",
+    "stageBuild": "9f1e6f5f-017d-41dc-a580-f64fc9188826",
+    "stageSource": "ccc459ef9f6c142d74c131bc25c79f7496d505c9",
+    "stageToFinalDifference": "One additional optional cancel of active nest reveal during same cleanup; local lifecycle test passed on final source.",
+    "rollbackVersion": "3f5d8428-6caa-48f6-8091-da0d2005f8fc",
+    "cause": "Native leave reloaded document; cloud guest disconnect reloaded and table closure replaced location. Each restarted initial artwork preparation.",
+    "repair": "Same-document native returnToLobby043 cleans game/network timers, presentation audio/flights/overlays and state, then reveals existing lobby. Cloud leave/close detaches sockets/polling and uses same return. Artwork/decoded audio remain in document.",
+    "raceGuards": [
+      "Old snapshot/action completion cannot repaint new credentials",
+      "Old close response cannot close new table",
+      "Old socket opening/retry cannot attach to new credentials",
+      "Delayed table toast invalidated by lifetime epoch",
+      "Old deal step cannot stop later deal flights",
+      "Trump tentative selection resets on leaving"
+    ],
+    "guestPolicy": "Seat and cloud reconnect credential remain reserved on guest disconnect; host table close removes closed credentials as before.",
+    "tests": {
+      "sameDocumentReturn": true,
+      "repeatedCleanup": true,
+      "cachedArtworkRetained": true,
+      "guestCredentialRetained": true,
+      "closedCredentialRemoved": true,
+      "staleSnapshotIgnored": true,
+      "oldCloseIgnored": true,
+      "oldStartDelayIgnored": true,
+      "roomAuctionChecks": 395,
+      "trumpToggleSoundChecks": true,
+      "moonChecks": 336,
+      "botMoonBids": 0,
+      "stageActualBrowser": {
+        "viewport": "1363x936 landscape",
+        "offlineLeaveDuringDeal": true,
+        "immediateRestartReachedBidding": true,
+        "secondOfflineLeave": true,
+        "onlineHostClosedDisposableTable": true,
+        "noArtworkLoaderOnReturn": true
+      },
+      "liveAssets": {
+        "base": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev",
+        "rows": [
+          {
+            "file": "game060.js",
+            "bytes": 656820,
+            "sha256": "abcfbd225d81c03033f3f98758fcb4f408533da1d27fd9b423cf5fb5da717a84",
+            "exact": true
+          },
+          {
+            "file": "trump714.js",
+            "bytes": 31523,
+            "sha256": "72b598bb2cb8c05882ddd2ae5f1cf163870a62694fd5bc1aedcac2bf9c012fd7",
+            "exact": true
+          }
+        ],
+        "entryUsesNewQuery": true
+      },
+      "liveOfflineLeaveDuringDeal": true,
+      "liveGuestLeftWithoutLoader": true,
+      "liveGuestRejoinedSameSeat": true,
+      "liveGuestHostCloseWithoutLoader": true
+    },
+    "preserved": {
+      "initialStartupLoader": true,
+      "artwork": true,
+      "audioSettingsAndBuffers": true,
+      "careerData": true,
+      "randomBotFill": true,
+      "maximumBidEndsAuction": true,
+      "portraitWaitingLabels": true,
+      "trumpHighlightAndDistinctSounds": true,
+      "moonDefaultOff": true,
+      "humanMoonOption": true,
+      "botsNeverMoon": true,
+      "failedHumanMoonLosesMatch": true,
+      "entryInstallRepair": true,
+      "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+      "roomReset": false,
+      "serviceWorkerCleared": false
+    },
+    "limitations": [
+      "Cloud browser landscape checks do not certify physical Android, long suspension or offline app reload.",
+      "Initial game opening still prepares artwork; only internal table-to-lobby navigation avoids restart."
+    ],
+    "workerVersion": "c26d2a47-847f-415e-aa87-d9eac536606e",
+    "deployment": "c38a4f53-6803-49d8-bece-8367b6108957",
     "bindings": [
       {
         "name": "ACTION_LIMIT",
