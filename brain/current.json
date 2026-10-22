@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "LIVE_V40_SEAT_SELECTION_ACTIVE_AND_VERIFIED_READ_ONLY; ANDROID_2_DEVICE_QA_PENDING",
+    "status": "LIVE_V40_SEAT_SELECTION_V7_BRANDED_INVITE_NAME_FIELD_PATCH_BROWSER_VERIFIED_FACEBOOK_ANDROID_RETEST_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -2208,6 +2208,28 @@
         "take your seat remains within viewport"
       ],
       "doesNotModifyArtwork": true
+    },
+    "inviteNameFieldFix": {
+      "date": "2026-10-22",
+      "problem": "Facebook Android recording shows room code highlight and keyboard instead of editable player name",
+      "deployedWorker": "rooks-branded-entry-only-20261022",
+      "deployedVersion": "20261022-v7-invite-name-field",
+      "scope": "branded invite ?room=CODE only",
+      "behavior": "Existing name and avatar controls live in active joining form; code remains prefilled readonly with no keyboard; misplaced Change Partner hidden; Back restores original controls",
+      "browserQAVerified": {
+        "nameInsideJoinForm": true,
+        "nameFocusableAndEditable": true,
+        "roomCodeReadonly": true,
+        "roomCodeInputMode": "none",
+        "backRestoresOriginalUI": true,
+        "normalGameUnchanged": true
+      },
+      "physicalAndroidFacebookWebViewRetestPending": true,
+      "gameWorkerVersionObserved": "dd4dbc6c-4640-4d84-a91c-15148de87a49",
+      "gameDOUnchanged": true,
+      "approvedFBPicturePreserved": true,
+      "source": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/rooks-branded-entry-v7-invite-name-field.js",
+      "handoff": "coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md"
     }
   },
   "cloudflareCurrentObserved": {
