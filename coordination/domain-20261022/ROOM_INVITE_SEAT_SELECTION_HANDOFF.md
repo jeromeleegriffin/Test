@@ -90,3 +90,12 @@ A concurrent work stream deployed the seat-choice feature while this isolated-wo
 - **Stop deploying competing copies from other chats** until current Cloudflare deployment ID is compared. Recover by Cloudflare version rollout rather than clearing players' storage, resetting DOs or reuploading artwork.
 
 Outstanding: real two-device Android join via fresh Facebook post and background/resume validation, old origin saved-progress transfer strategy, documentation finalization. Owner has approved homepage appearance for now.
+
+## Production v40 atomic seat test — 2026-10-22
+- After independently discovering production v40 was already deployed, executed one controlled end-to-end **server-side QA against the real production Worker and ROOMS namespace**, not the isolated test namespace. A temporary service-binding Worker was used only to create a fresh QA table, request seat options, race two guest joins for the same partner seat, and close the table.
+- Result: `{"test":"live-v40-explicit-seat","pass":true,"actual":{"roomCreated":true,"roomCodeLength":5,"readOnlyOptions":true,"choiceSeats":[1,2,3],"competingSuccesses":1,"otherError":"SEAT_OCCUPIED","partnerChosen":2,"seatShowsOccupied":true},"cleanedUp":true,"closeStatus":200}`
+- The generated QA table used an automatically allocated short 5-character code, not an owner's existing table; the host explicitly closed it (HTTP 200). No existing room or player storage was changed.
+- Temporary Worker `rooks-live-v40-seat-qa-temporary-20261022` was **deleted** immediately after the passing test. No permanent extra Worker or asset duplication was left behind.
+- The active Worker remained `griffin-house-of-rooks-online` v40 `dd4dbc6c-4640-4d84-a91c-15148de87a49`; no production deployment was made in this task.
+- Approved Facebook Rooks OG picture, normal game sharing link, room-specific short links, domain, game assets, DO namespace, secret and rate limit settings preserved.
+- Remaining physical QA: Android Facebook in-app browser link into a real active table, name/voice/avatar confirmation, choosing seat, device suspend/resume, saved data migration from workers.dev shortcuts. These were not simulated by the server-side seat test.
