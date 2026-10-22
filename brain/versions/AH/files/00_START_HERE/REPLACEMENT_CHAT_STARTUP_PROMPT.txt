@@ -1,3 +1,5 @@
+CURRENT ENTRY/INSTALL REPAIR (2026-10-22): Read leading override in Master Brain AH. Live Worker 80702187-527c-4460-b27c-940c47ab898f, source 68c565ef66dff12a12aeccc57e2d025b91742810. Old GitHub online entry now redirects before its old loader. Cloudflare manifest launches root; old /cloud-game/assets/ app addresses redirect before artwork. Do not clear storage/reinstall. Old local GitHub profiles remain at original origin with ?offline=1; no automatic cross-origin merge. Physical Android relaunch awaits owner confirmation. R12 Moon policy remains default OFF, human option retained, bots prohibited, failed human Moon loses match.
+
 CURRENT R12 OVERRIDE: Shoot the Moon defaults OFF. Keep it available as an explicit human-only option. A made human Moon wins the match; a failed human Moon loses the match regardless of scores. Runtime 846-r12-moon-default-off-20261021, Worker dbe97a44-c515-47bf-a1d5-5096016512a5. Read the leading R12 override in Master Brain AH. Existing room settings and player data are preserved; old GitHub Pages remain historical. Earlier default-ON instructions below are historical.
 
 CURRENT OWNER RULE OVERRIDE — R11, October 21, 2026

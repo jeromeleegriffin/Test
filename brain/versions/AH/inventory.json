@@ -1,14 +1,14 @@
 {
   "brainVersion": "AH",
   "parentVersion": "AG",
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "documentationOnly": true,
   "canonicalGame": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
-  "canonicalGameVersion": "dbe97a44-c515-47bf-a1d5-5096016512a5",
+  "canonicalGameVersion": "80702187-527c-4460-b27c-940c47ab898f",
   "sourceBranch": "work/asset-recovery-20261021",
   "liveNamedBotsVerified": true,
   "fullOnlineX1": "x1-online-v2",
-  "status": "CLOUDFLARE_ONLY_LIVE_MOON_DEFAULT_OFF_R12_VERIFIED",
+  "status": "CLOUDFLARE_ONLY_R12_ENTRY_INSTALL_REPAIR_VERIFIED",
   "files": [
     {
       "path": "files/00_START_HERE/START_HERE.md"
@@ -39,6 +39,9 @@
     },
     {
       "path": "files/01_MASTER_BANK/LIVE_RECEIPT_MOON_DEFAULT_OFF_R12.json"
+    },
+    {
+      "path": "files/01_MASTER_BANK/LIVE_RECEIPT_ENTRY_INSTALL_20261022.json"
     }
   ],
   "inheritedBrain": "../AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
@@ -52,11 +55,12 @@
     "coordination/qa/HUMAN_ONLY_MOON_R11_20261021.md",
     "coordination/qa/LIVE_RECEIPT_HUMAN_MOON_R11.json",
     "coordination/qa/MOON_DEFAULT_OFF_R12_20261021.md",
-    "coordination/qa/LIVE_RECEIPT_MOON_DEFAULT_OFF_R12.json"
+    "coordination/qa/LIVE_RECEIPT_MOON_DEFAULT_OFF_R12.json",
+    "coordination/qa/LIVE_RECEIPT_ENTRY_INSTALL_20261022.json"
   ],
   "openIssues": [
-    "Legacy GitHub link redirects not deployed pending cross-origin player XP/settings transfer",
-    "Physical weak-cellular/installed-PWA cache and four real humans not exhaustively verified"
+    "Physical Android installed app relaunch and weak-cellular/cache acceptance remain to confirm",
+    "Automatic cross-origin XP/settings transfer is not implemented; old local data retained via ?offline=1"
   ],
   "evidenceUrls": [
     "https://github.com/jeromeleegriffin/Test/actions/runs/39693134706",
@@ -68,6 +72,6 @@
   "nativePolicyOverlayCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
   "humanOnlyMoon": true,
   "failedMoonLosesMatch": true,
-  "documentSha256": "73d9975c19397db0b5f00445a7fd9361b69389572fd36793475c7fda6d754e6d",
+  "documentSha256": "ddf58988de24bf5c945c4a26667994dc26d195c04ca26758056f304eb7667d01",
   "moonDefaultEnabled": false
 }

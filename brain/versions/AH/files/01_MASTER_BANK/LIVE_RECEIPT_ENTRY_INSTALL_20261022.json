@@ -1,0 +1,63 @@
+{
+  "status": "LIVE_ENTRY_AND_INSTALL_REPAIR_VERIFIED",
+  "date": "2026-10-22",
+  "runtime": "846-r12-moon-default-off-20261021",
+  "sourceCommit": "68c565ef66dff12a12aeccc57e2d025b91742810",
+  "workerVersion": "80702187-527c-4460-b27c-940c47ab898f",
+  "deployment": "a6a1a7cc-a807-43df-83ef-d38a119ad23e",
+  "build": "e0046fc5-b973-488e-b258-916fe6c8b887",
+  "rollbackVersion": "dbe97a44-c515-47bf-a1d5-5096016512a5",
+  "stageBuild": "1d42662d-d369-4b5b-9eb5-9200afd64958",
+  "legacyEntryCommits": {
+    "Test": "f21411968dda80c96770a3b2138ce144df437558",
+    "Griffin-House-of-Rooks": "ee3e5bf4b9a5fa66ec38e50c765403fe56e4a0fd"
+  },
+  "pagesAndSourceChecks": {
+    "Test": [
+      39707322766,
+      39707323630
+    ],
+    "production": [
+      39707328307,
+      39707329499
+    ]
+  },
+  "fixes": [
+    "Legacy online links redirect in first head script before the old loader",
+    "Installed Cloudflare manifest launches / with root scope; old app ID retained",
+    "Old /cloud-game/assets/ and index.html launch addresses redirect before HTML/artwork; invite query retained",
+    "Four manifest icon URLs retain approved assets at explicit paths"
+  ],
+  "tests": {
+    "routingChecks": 31,
+    "moonChecks": 336,
+    "auctions": 500,
+    "botMoonBids": 0,
+    "stageHostedEntry": true,
+    "liveHostedEntry": true,
+    "stageDefaultOffAndOptInReconnect": true,
+    "renderedOldGitHubEntryToCloudflare": true,
+    "renderedStageAndLiveFriendsLoaderHidden": true,
+    "renderedOldCloudflareInstalledAddress": true,
+    "nativePolicyFilesExact": 7,
+    "loaderMatchesCommittedSource": true,
+    "localLoaderDifference": "One extra terminal newline in local scratch copy; deployed bytes match immutable release source."
+  },
+  "preservation": {
+    "roomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "roomStorageReset": false,
+    "serviceWorkersCleared": false,
+    "playerStorageCleared": false,
+    "localProfilesAutomaticallyMerged": false,
+    "legacyOfflineBypass": "?offline=1",
+    "legacyOfflineRuntime": "Historical R10",
+    "cloudflareRuntime": "R12",
+    "approvedArtworkOrAudioChanged": false,
+    "stagePublicRouteDisabled": true
+  },
+  "limitations": [
+    "Physical Android installation/relaunch still needs owner confirmation",
+    "Existing GitHub profiles stay at their original origin; no automatic cross-origin XP/settings merge",
+    "Offline fallback and routing tested in source VM; real installed offline cache upgrade not recertified"
+  ]
+}
