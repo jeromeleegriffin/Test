@@ -1,3 +1,6 @@
+CURRENT OWNER RULE OVERRIDE — R11, October 21, 2026
+Read the leading R11 override in MASTER_BRAIN_AH.md before older historical checkpoints. Bots may NEVER Shoot the Moon (offline or online). Human Moon success wins the match; failure loses the match regardless of scores. Preserve the human-only policy, full X1 v2, audio, artwork, room namespace and saved data. Canonical runtime 846-r11-human-moon-20261021, live Worker 14ecabff-e4f7-431f-b5bf-1b9fff011143. Old GitHub Pages remain historical R10; do not claim they received R11. No Moon threshold-tuning task remains; owner replaced it with this explicit rule.
+
 GRIFFIN HOUSE OF ROOKS — AH FRESH CHAT STARTUP
 
 Continue, do not restart. The owner requested an extensive handoff and complete master brain update. Read https://github.com/JeromeLeeGriffin/Test/blob/main/brain/current.json, then https://github.com/JeromeLeeGriffin/Test/blob/main/brain/versions/AH/files/01_MASTER_BANK/MASTER_BRAIN_AH.md all the way through (includes the full inherited AG history). Read historical Bank H and all relevant official authorities. AH supersedes earlier deployment claims, not the preserved visual/design rules.

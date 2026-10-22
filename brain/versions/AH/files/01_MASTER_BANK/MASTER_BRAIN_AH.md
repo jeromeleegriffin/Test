@@ -1,4 +1,31 @@
 # Griffin House of Rooks — MASTER BRAIN AH
+
+## CURRENT R11 OVERRIDE — human-only Moon, October 21, 2026
+
+This section supersedes every older Moon policy and R10 runtime statement below. The owner explicitly ordered: **bots may never Shoot the Moon; a failed human Moon loses the match; update every explanatory UI/rule/result text.** Continue this shipped policy; do not resume threshold tuning or re-enable bot Moon bidding.
+
+- Canonical game: https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/
+- Runtime: **846-r11-human-moon-20261021**, full online X1 v2 retained. Worker **14ecabff-e4f7-431f-b5bf-1b9fff011143**, deployment **a7b127e1-ff9b-4baf-9395-6986cee48a13**, 100% traffic. Manual Cloudflare build **8d7a4b3b-ac8b-4609-a6bc-49afb324afb2** succeeded from source **18b784df1b002801293f6e2697a340bdbb412eb7**, branch work/asset-recovery-20261021.
+- All bots are prohibited in offline/native and multiplayer/server play, including legacy/fallback decisions, Red Two-off 180-point decks and stale queued bids. The server rejects bot Moon submissions at reducer authority. Human bids below zero remain allowed when Moon is enabled; selecting Moon alone still does not submit.
+- Made human Moon: bidding team wins the match. Failed human Moon: opponents win the match, regardless of current numeric score or match target. Hand score/deltas are preserved; explicit matchResult drives completion, career winner, portrait/landscape scoreboard, celebration and no-next-hand controls.
+- Updated settings, House Rules, plaque/accessibility, score recaps and obsolete bot-persona promises. Actual rendered plaque reads **Win the match / or lose the match**; approved assets and geometry remain.
+- Cause of reported frequency was established: v2's +10,000 terminal reward versus a few-hundred-point nonterminal failure penalty. Deterministic 500-deal A/B at target 500: v2 Moon in 365 hands versus v1 in 0; target 100: 17 versus 0. These are synthetic auctions, not owner-room telemetry. Owner chose prohibition rather than tuning.
+- Local verification: 330 checks; 48 native/server outcome cases at targets 100/500/1000/2000, both teams and positive/negative scores; 500 natural auctions, 2,572 decisions, **zero bot Moon bids**. Final changed formatted native files pass repository Prettier settings.
+- Hosted staging: two complete matches, 1 human/3 bots and 2 humans/2 bots, Red Two on/off, target 1,000. Failed human Moons ended complete at -200/140 and -180/80. 11 rejoins, 4 duplicate retries, zero fallbacks.
+- Cloud browser rendered offline Moon selection/confirmation and both actual House Rules pages checked. Desktop landscape plaque text fits. Physical Android, long suspension and installed-cache gray checks are not newly certified.
+- Live native eight-file byte comparison passed. Live API acceptance and final receipt are recorded in coordination/qa/LIVE_RECEIPT_HUMAN_MOON_R11.json on the source branch.
+- Live RoomDO **bb1bf1c32b68451cbe5db6fee3066fa0**, rate limits, secret, compatibility date and saved rooms retained. No service-worker clearing, room reset, paid upgrade, avatar/art/voice replacement, or playable ZIP.
+- Static delivery keeps the immutable R10 asset base 90078a710948c7643caafb18986e34dc71ce7cee, adds exactly enumerated R11 native overlays and retains artwork recovery. Historical X1 rebuild helper is guarded against overwriting the new policy.
+- Previous live rollback: 73aa7be6-9dc0-43ee-a267-20e9fe0f1c62; rolling back also restores the prohibited bot-Moon behavior, so use only deliberately.
+- Old GitHub Pages remain historical R10. No redirect, XP/profile/PWA origin migration or old shortcut replacement has been deployed. Use the canonical Cloudflare game for this policy.
+- Next: owner bug review; safe legacy-link/profile/PWA migration and remaining physical connectivity/cache checks. Preserve working audio, X1, named bots and approved artwork.
+
+Detailed implementation and evidence: https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/HUMAN_ONLY_MOON_R11_20261021.md
+
+---
+
+## Historical AH and inherited AG records — superseded where the R11 override differs
+
 ## Authoritative current checkpoint: 2026-10-21, after Cloudflare-only cutover and live bot-label repair
 
 **AH supersedes AG only for the newer facts explicitly recorded here.** The entire AG Master Brain is reproduced after this AH checkpoint as historical/inherited context. Never interpret older statements that Cloudflare still needs GitHub at runtime, online bots are simple non-X1 bots, or the three game servers were updated together as the *current* status. Those statements applied to earlier releases. Brain H through AG, the protected original art, previous releases and permanent continuity rules remain intact.
@@ -376,3 +403,4 @@ Native846-r10-ambience-levels-20261021 and immutable assets90078a710948c7643caaf
 Rollback is Worker3c0339df-3396-4784-b50b-05a0b41166ab and both source branches rollback/pre-full-online-x1-20261021 (Test95ef3ae2825e69eb9cf3727ac48c368960e836da; productionfca7a5506c51f18e36de14977d652827994566b2). Restore through reviewed new source commits, never force-reset main or reset storage. Historical build helpers now refuse to overwrite v2; reproduce with cloudflare/live/x1-full/build.py using the exact immutable v1 base and bridge described in its README. Do not deploy an older ZIP's bundled Worker. No new ZIP was requested or created.
 
 Authoritative receipt/evidence:coordination/releases/full-online-x1-20261021/ and cloudflare/live/x1-full/. Preserve the complete permanent reading, continuity and actual-pixels obligations above verbatim in every successor. Continue from this checkpoint; do not restart or repeat blocked Cloud Browser/Gmail/Cloudflare authorization loops. Remaining future banked concepts and physical-device/cache gray checks are separate from this completed online intelligence expansion.
+

@@ -1,0 +1,162 @@
+{
+  "project": "Griffin House of Rooks",
+  "date": "2026-10-21",
+  "status": "LIVE_VERIFIED",
+  "runtime": "846-r11-human-moon-20261021",
+  "workerVersion": "14ecabff-e4f7-431f-b5bf-1b9fff011143",
+  "deployment": "a7b127e1-ff9b-4baf-9395-6986cee48a13",
+  "sourceCommit": "18b784df1b002801293f6e2697a340bdbb412eb7",
+  "build": "8d7a4b3b-ac8b-4609-a6bc-49afb324afb2",
+  "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+  "canonicalUrl": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
+  "policy": {
+    "botsMayShootMoon": false,
+    "humanMoonMade": "Bidding team wins match",
+    "humanMoonFailed": "Opposing team wins match regardless of scores",
+    "negativeHumanScoreAllowed": true
+  },
+  "local": {
+    "checks": 330,
+    "scoringCases": 48,
+    "auctions": 500,
+    "decisions": 2572,
+    "botMoonBids": 0
+  },
+  "hostedLive": {
+    "target": "live",
+    "scope": "Real Cloudflare HTTP API from Codex local Node; simulated identities, not independent physical devices or rendered browser",
+    "requests": 176,
+    "matches": 2,
+    "reports": [
+      {
+        "moon": true,
+        "includeRed2": true,
+        "humans": 1,
+        "bots": 3,
+        "pace": 99,
+        "phase": "complete",
+        "scores": [
+          -200,
+          125
+        ],
+        "actions": 13,
+        "rejoins": 5,
+        "duplicates": 2,
+        "networkRetries": 0,
+        "elapsedMs": 35043,
+        "intelligence": {
+          "version": "x1-online-v2",
+          "active": "x1-rules",
+          "decisions": {
+            "bid": 2,
+            "discard": 0,
+            "trump": 0,
+            "play": 30
+          },
+          "fallbacks": 0,
+          "lastFallback": null,
+          "lastDecisionMs": 0,
+          "maxDecisionMs": 0,
+          "partnerAssist": false,
+          "partnerDecisions": 11,
+          "ruleDecisions": 30,
+          "handEngineVersion": "x1-online-v2"
+        },
+        "matchResult": "Team B",
+        "shotMoonResult": "failed"
+      },
+      {
+        "moon": true,
+        "includeRed2": false,
+        "humans": 2,
+        "bots": 2,
+        "pace": 99,
+        "phase": "complete",
+        "scores": [
+          -180,
+          130
+        ],
+        "actions": 23,
+        "rejoins": 6,
+        "duplicates": 2,
+        "networkRetries": 0,
+        "elapsedMs": 24334,
+        "intelligence": {
+          "version": "x1-online-v2",
+          "active": "x1-rules",
+          "decisions": {
+            "bid": 1,
+            "discard": 0,
+            "trump": 0,
+            "play": 20
+          },
+          "fallbacks": 0,
+          "lastFallback": null,
+          "lastDecisionMs": 0,
+          "maxDecisionMs": 0,
+          "partnerAssist": false,
+          "partnerDecisions": 0,
+          "ruleDecisions": 21,
+          "handEngineVersion": "x1-online-v2"
+        },
+        "matchResult": "Team B",
+        "shotMoonResult": "failed"
+      }
+    ]
+  },
+  "nativeAssetsExact": [
+    {
+      "path": "game060.js",
+      "bytes": 654791,
+      "sha256": "19b4c4e137c081eb7e40752e14fdfb6f98ae9f501430e51b41b11bd84a9b2716"
+    },
+    {
+      "path": "index.html",
+      "bytes": 109153,
+      "sha256": "4c23a9aa7fd59fd8b23d9b362b10d27d3fa246724a9da1618eb3384f6f0e0cd4"
+    },
+    {
+      "path": "polish.js",
+      "bytes": 70882,
+      "sha256": "ca018f0f896f4699da367710a0771711769a03d501869dfac55d1166d5069531"
+    },
+    {
+      "path": "bots.js",
+      "bytes": 30807,
+      "sha256": "a66d68d0994d77e123fea41c4ead9ba4a935321204a9bb702b132f11c3430442"
+    },
+    {
+      "path": "x1/integration.js",
+      "bytes": 17204,
+      "sha256": "76cf819954f7197ea9bfd6e95af2a4a86ce762b89ef3f4fce2a7d419a4e8259a"
+    },
+    {
+      "path": "progression.js",
+      "bytes": 46337,
+      "sha256": "23278456103c3578553cea7719a3406386b4584e3cc5bfe32f8d4cba5e3fe15f"
+    },
+    {
+      "path": "hor-version.js",
+      "bytes": 1349,
+      "sha256": "a36164dc58e689bacae582fef7fcd95b270d7c41ff6069f6af9f7458b6498f99"
+    },
+    {
+      "path": "sw060.js",
+      "bytes": 70623,
+      "sha256": "bf832afd94a57439cca92d86d28d2e06c692e9d1d448b627e23f1064011ef045"
+    }
+  ],
+  "storageReset": false,
+  "serviceWorkerCleared": false,
+  "roomNamespacePreserved": true,
+  "rateLimitsPreserved": true,
+  "secretRetained": true,
+  "stageRoutingDisabledAfterQA": true,
+  "rollbackVersion": "73aa7be6-9dc0-43ee-a267-20e9fe0f1c62",
+  "oldGitHubPagesUpdated": false,
+  "limitations": [
+    "Simulated identities, not independent physical phones",
+    "Rendered browser verification was desktop landscape on staging; physical Android portrait not recertified",
+    "Installed PWA cache/suspension/weak cellular gray checks remain"
+  ]
+}
