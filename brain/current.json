@@ -16,13 +16,13 @@
   "startupPrompt": "versions/AH/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
   "history": "history.html",
   "previousVersion": "AG",
-  "sha256Scope": "AH current named tables document; SHA-256 in inventory.json",
-  "checkpoint": "named-tables-20261022",
-  "checkpointStatus": "CLOUDFLARE_R12_NAMED_TABLES_VERIFIED",
+  "sha256Scope": "AH current custom table confirmation document; SHA-256 in inventory.json",
+  "checkpoint": "table-confirm-20261022",
+  "checkpointStatus": "CLOUDFLARE_R12_HOUSE_TABLE_CONFIRM_VERIFIED",
   "latestGameBuild": "846-r12-moon-default-off-20261021",
-  "runtimeStatusAuthority": "Master Brain AH leading short host-name table codes override.",
+  "runtimeStatusAuthority": "Master Brain AH leading single House table confirmation override.",
   "currentRuntimeRelease": {
-    "status": "CLOUDFLARE_R12_NAMED_TABLES_VERIFIED",
+    "status": "CLOUDFLARE_R12_HOUSE_TABLE_CONFIRM_VERIFIED",
     "date": "2026-10-22",
     "runtime": "846-r12-moon-default-off-20261021",
     "ownerConfirmedCardSoundsRestored": true,
@@ -114,15 +114,15 @@
     "cloudflare": {
       "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
       "worker": "griffin-house-of-rooks-online",
-      "version": "e5a06e68-e3d3-4735-9b34-e402f22c0313",
-      "deployment": "d2cd309f-6694-4d0a-8cb4-85022dea482c",
+      "version": "8fb3ef39-be99-4bc5-b370-7335d4919615",
+      "deployment": "3bdeb8e9-ffd9-48b8-9843-266f251fc4f2",
       "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
       "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-      "rollbackVersion": "c26d2a47-847f-415e-aa87-d9eac536606e",
+      "rollbackVersion": "e5a06e68-e3d3-4735-9b34-e402f22c0313",
       "roomStorageReset": false,
       "secretAndRateLimitsRetained": true,
       "previewsEnabled": false,
-      "sourceCommit": "8b0da6173fc3b8e3873e44b9e1e5830ff3621597",
+      "sourceCommit": "0aa1a5c56c5c210fbc4ee656268862033bb7fc44",
       "onlineBotIntelligence": "x1-online-v2",
       "nativeAudioRepairVersion": "d4d2ed21-45da-4652-bd09-95ce85b41c12",
       "cloudflareOnlyRuntimeAssets": true,
@@ -160,7 +160,10 @@
       "inplaceLobbyReturn": true,
       "shortNamedTableCodes": true,
       "atomicCodeCollisionRetries": true,
-      "legacyTableCodesRetained": true
+      "legacyTableCodesRetained": true,
+      "houseTableConfirmation": true,
+      "noSecondHostClosePopup": true,
+      "tableConfirmationQuery": "846-r12-table-confirm-20261022"
     },
     "rollbackBranchBothRepos": "rollback/pre-r10-ambience-20261021",
     "repair": {
@@ -201,7 +204,7 @@
       "newZipCreated": false,
       "audioVerificationMethod": "Owner confirmation, not assistant browser listening"
     },
-    "next": "Owner checks new short table codes on phone; all prior game rules and repairs retained.",
+    "next": "Owner checks single House table confirmation on phone; all existing rules and prior repairs retained.",
     "ownerPhoneAudioAcceptance": {
       "date": "2026-10-21",
       "otherSoundsQuote": "the other sounds are back",
@@ -214,7 +217,7 @@
   },
   "comprehensiveHandoff": "versions/AH/files/01_MASTER_BANK/MASTER_BRAIN_AH.md",
   "threeSiteReleasePolicy": "../coordination/THREE_SITE_RELEASE_POLICY.md (historical; new Cloudflare-only hosting authorization supersedes automatic three-site synchronization)",
-  "currentReleaseReceipt": "https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/LIVE_RECEIPT_NAMED_TABLES_20261022.json",
+  "currentReleaseReceipt": "https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/LIVE_RECEIPT_TABLE_CONFIRM_20261022.json",
   "currentCumulativeGamePackage": {
     "status": "Cloudflare Workers Static Assets LIVE, 1634 original assets, ~211.05 MiB. Original GitHub ZIPs remain historical; AH handoff is documentation-only, not a full game ZIP.",
     "nativeSourceCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
@@ -894,8 +897,8 @@
   "latestOnlineIntelligence": "x1-online-v2",
   "liveMigration": {
     "status": "LIVE_CLOUDFLARE_ONLY",
-    "workerVersion": "e5a06e68-e3d3-4735-9b34-e402f22c0313",
-    "workerDeployment": "d2cd309f-6694-4d0a-8cb4-85022dea482c",
+    "workerVersion": "8fb3ef39-be99-4bc5-b370-7335d4919615",
+    "workerDeployment": "3bdeb8e9-ffd9-48b8-9843-266f251fc4f2",
     "liveRoomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
     "secretName": "TEST_GATE_KEY",
     "stageWorker": "griffin-rooks-cloud-only-stage",
@@ -1593,6 +1596,124 @@
     ],
     "workerVersion": "e5a06e68-e3d3-4735-9b34-e402f22c0313",
     "deployment": "d2cd309f-6694-4d0a-8cb4-85022dea482c",
+    "bindings": [
+      {
+        "name": "ACTION_LIMIT",
+        "type": "ratelimit",
+        "namespace_id": "14784620261021"
+      },
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      },
+      {
+        "name": "ENTRY_LIMIT",
+        "type": "ratelimit",
+        "namespace_id": "14784620261020"
+      },
+      {
+        "name": "ROOMS",
+        "type": "durable_object_namespace",
+        "namespace_id": "bb1bf1c32b68451cbe5db6fee3066fa0"
+      },
+      {
+        "name": "TEST_GATE_KEY",
+        "type": "secret_text"
+      }
+    ],
+    "productionVerified": true
+  },
+  "houseTableConfirmation": {
+    "date": "2026-10-22",
+    "sourceCommit": "0aa1a5c56c5c210fbc4ee656268862033bb7fc44",
+    "sourceBranch": "work/asset-recovery-20261021",
+    "runtime": "846-r12-moon-default-off-20261021",
+    "polishQuery": "846-r12-table-confirm-20261022",
+    "stageBuild": "8f85149a-d7ef-4355-a346-f6fdce4f919b",
+    "rollbackVersion": "e5a06e68-e3d3-4735-9b34-e402f22c0313",
+    "request": "Replace the two ugly browser popups on table close with one attractive game-styled confirmation.",
+    "repair": {
+      "host": "One async in-game dialog with table code, Close this table?, concise consequences, Keep table and Close table. Confirm closes table and returns to lobby without a second alert.",
+      "guest": "Matching Leave table / Stay here custom dialog retains reserved-seat explanation. Host closure dismisses outstanding custom confirmation, returns guest to lobby and emits a brief nonmodal House toast.",
+      "presentation": "Scoped walnut gradients, inset brass frame, Georgia heading/body, brass primary and dark green secondary button, dim/blur backdrop. Native dialog top layer/focus trap, default safe-choice focus, Escape cancel and focus restoration.",
+      "guards": "Single active confirmation; single pending close flow; check credential owner after asynchronous confirmation; ignore stale/new-table confirmations; close errors use nonmodal feedback.",
+      "scope": "No global replacement of window.confirm/alert. Shared houseConfirm accepts labels/style/context; missing dialog safely cancels."
+    },
+    "tests": {
+      "customLabels": true,
+      "cancelSafe": true,
+      "escapeSafe": true,
+      "focusRestored": true,
+      "duplicateConfirmBlocked": true,
+      "oneCloseRequest": true,
+      "staleConfirmIgnored": true,
+      "guestCustomConfirm": true,
+      "noBrowserDialogsInCloseFlow": true,
+      "noSecondHostPopup": true,
+      "stageFunctional": {
+        "cancelKeepsTable": "YOU74",
+        "escapeKeepsTable": true,
+        "confirmDirectToLobby": true,
+        "noJsDialogAfterClose": true,
+        "finalStyledHostClosedToLobby": true
+      },
+      "stageFinalAppearance": {
+        "viewport": "1363x936",
+        "walnutAndBrassVerified": true,
+        "clearPrimaryButton": true,
+        "hostDialogBounds": {
+          "width": 420,
+          "height": 269.3
+        },
+        "screenshot": "coordination/qa/evidence/CLOSE_TABLE_PANEL_20261022.jpg"
+      },
+      "stageGuest": {
+        "customDialogShown": true,
+        "reservedSeatCopy": true,
+        "hostClosedWhileGuestDialogOpen": true,
+        "dialogDismissed": true,
+        "briefLobbyNotice": true,
+        "noBrowserAlert": true
+      },
+      "liveAssets": {
+        "base": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev",
+        "customTablePanel": true,
+        "legacyThemeOverridden": true,
+        "exactPolishJs": true,
+        "sha256": "b0000f15cc96e04f2e564afde025a57ff9a4155af7f7554460ffcc13c483d842"
+      },
+      "liveActualBrowser": {
+        "table": "YOU96",
+        "customPanelVisible": true,
+        "safeChoiceFocused": true,
+        "walnutAndBrassVerified": true,
+        "confirmedDirectToLobby": true,
+        "noSecondBrowserDialog": true
+      }
+    },
+    "preserved": {
+      "shortTableCodes": true,
+      "collisionChecks": true,
+      "sameDocumentLobbyReturn": true,
+      "randomBots": true,
+      "maximumBidEndsAuction": true,
+      "trumpHighlightAndTwoSounds": true,
+      "moonDefaultOff": true,
+      "botsNeverMoon": true,
+      "humanMoonOption": true,
+      "failedHumanMoonLosesMatch": true,
+      "originalArtworkAudio": true,
+      "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+      "roomReset": false,
+      "playerDataCleared": false,
+      "serviceWorkerCleared": false
+    },
+    "limitations": [
+      "Actual browser verification uses 1363x936 landscape; physical Android portrait/installed-app appearance remains unverified."
+    ],
+    "productionBuild": "84a35a5f-1e70-4c8c-a78e-1ff1ece4e46c",
+    "workerVersion": "8fb3ef39-be99-4bc5-b370-7335d4919615",
+    "deployment": "3bdeb8e9-ffd9-48b8-9843-266f251fc4f2",
     "bindings": [
       {
         "name": "ACTION_LIMIT",

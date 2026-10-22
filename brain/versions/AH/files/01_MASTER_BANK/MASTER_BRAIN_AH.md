@@ -1,5 +1,20 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## CURRENT SINGLE HOUSE TABLE CONFIRMATION — October 22, 2026
+
+Owner rejected the two generic Chrome popups shown in 84732.jpg/84734.jpg when closing a table. This release replaces the close/leave browser dialogs with a scoped game-styled confirmation.
+
+- LIVE Worker **8fb3ef39-be99-4bc5-b370-7335d4919615**, deployment **3bdeb8e9-ffd9-48b8-9843-266f251fc4f2**, source **0aa1a5c56c5c210fbc4ee656268862033bb7fc44**, production build **84a35a5f-1e70-4c8c-a78e-1ff1ece4e46c**, branch work/asset-recovery-20261021. Rollback **e5a06e68-e3d3-4735-9b34-e402f22c0313**. R12 runtime retained; polish.js query **846-r12-table-confirm-20261022**.
+- Host sees one native HTML dialog in the game: small table code, Close this table?, concise consequence text, dark Keep table and brass Close table. Warm walnut surface, inset brass border, readable Georgia text, dimmed/blurred backdrop. Explicitly scoped precedence over the existing general modal theme (whose exclusions contain two IDs). No artwork, avatars or unrelated menus redesigned.
+- Keep table and Escape cancel; safe choice receives default focus; native dialog traps focus and focus returns on dismissal. One active confirmation/close flow prevents duplicate dialogs/requests. Confirm closes the server table and returns directly to lobby; no redundant host success alert.
+- Guest leave uses matching Leave table / Stay here with reserved-seat copy. When host closes, any open guest confirmation is dismissed, guest returns to lobby and gets a brief nonmodal House notice instead of a browser alert. Credential-owner guard prevents stale async confirmation from closing a newer table.
+- Shared houseConfirm now accepts explicit labels, style kind and table-code context. Missing markup cancels safely. Browser globals are not overridden; unrelated synchronous confirmation behavior was not rewritten.
+- Verification: actual-function tests pass cancel, Escape, labels/context, focus restoration, single active confirmation, one close request, stale-owner confirmation, custom guest flow, no native browser confirm/alert in this flow and no second host popup. Existing named-code, lobby, 395 auction/random-fill, Moon and trump checks pass.
+- Actual staged native browser 1363×936: cancel and Escape retained table YOU74; final walnut/brass panel personally inspected on YOU97 and confirmed directly to lobby without JS dialog. Guest PAN06 showed matching panel; host closed while guest panel open, panel dismissed and brief lobby notice appeared with no browser dialog. Final host dialog bounds 420×269 CSS px.
+- **Production actual game** YOU96 showed intended walnut/brass panel and safe focus; confirming reached lobby with no second browser dialog. Published polish.js exact-byte and injected new panel/precedence checks pass. Screenshot evidence: coordination/qa/evidence/CLOSE_TABLE_PANEL_20261022.jpg (real staged UI, not a runtime asset or generated mockup).
+- Preserved: short named codes/collision handling, same-document lobby return, random bots, max bid ends auction, trump highlight/two sounds, Moon default OFF/human option/bot prohibition/failed-human-Moon match loss, X1 v2, original art/audio, namespace/secrets/limiters and saved data. Stage disabled; only disposable test tables closed; no cache/SW clearing or reinstall.
+- Limits: cloud browser landscape rendering verified, not physical Android/portrait/installed-app acceptance. Receipt coordination/qa/LIVE_RECEIPT_TABLE_CONFIRM_20261022.json and AH copy. Older identities below are historical.
+
 ## CURRENT SHORT HOST-NAME TABLE CODES — October 22, 2026
 
 Owner replaced the proposed two-word names with the first three letters of the host's name plus a number, requiring collision checks against existing tables.
