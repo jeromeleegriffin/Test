@@ -1,0 +1,59 @@
+{
+  "brainVersion": "AH",
+  "parentVersion": "AG",
+  "updated": "2026-10-21",
+  "documentationOnly": true,
+  "canonicalGame": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
+  "canonicalGameVersion": "73aa7be6-9dc0-43ee-a267-20e9fe0f1c62",
+  "sourceBranch": "work/asset-recovery-20261021",
+  "liveNamedBotsVerified": true,
+  "fullOnlineX1": "x1-online-v2",
+  "status": "CLOUDFLARE_ONLY_LIVE_X1_V2_NAMED_BOTS_VERIFIED_MOON_AUDIT_OPEN",
+  "files": [
+    {
+      "path": "files/00_START_HERE/START_HERE.md"
+    },
+    {
+      "path": "files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt"
+    },
+    {
+      "path": "files/01_MASTER_BANK/MASTER_BRAIN_AH.md"
+    },
+    {
+      "path": "files/01_MASTER_BANK/MASTER_BRAIN_AH_ADDENDUM.md"
+    },
+    {
+      "path": "files/01_MASTER_BANK/CHAT_CONTINUITY_RULE.md"
+    },
+    {
+      "path": "files/01_MASTER_BANK/COMPLETE_BANK_READING_RULE.md"
+    },
+    {
+      "path": "files/01_MASTER_BANK/PERMANENT_UI_VISUAL_VERIFICATION_RULE.md"
+    },
+    {
+      "path": "index.html"
+    }
+  ],
+  "inheritedBrain": "../AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
+  "inheritedActualScreens": "../AG/files/03_ACTUAL_SCREENS/",
+  "immutableNativeAssetSource": "90078a710948c7643caafb18986e34dc71ce7cee",
+  "cloudflareDocumentationPaths": [
+    "coordination/qa/CLOUDFLARE_ONLY_LIVE_RELEASE_20261021.md",
+    "coordination/qa/NAMED_CLOUD_BOTS_LIVE_RECEIPT_20261021.md",
+    "coordination/qa/WEAK_CELLULAR_ARTWORK_RECOVERY_20261021.md",
+    "coordination/qa/CLOUDFLARE_STAGE_VERIFIED_20261021.md"
+  ],
+  "openIssues": [
+    "X1 v2 bots shooting the moon unusually frequently; audit, no fix made",
+    "Legacy GitHub link redirects not deployed pending cross-origin player XP/settings transfer",
+    "Physical weak-cellular/installed-PWA cache and four real humans not exhaustively verified"
+  ],
+  "evidenceUrls": [
+    "https://github.com/jeromeleegriffin/Test/actions/runs/39693134706",
+    "https://github.com/jeromeleegriffin/Test/actions/runs/39690549207",
+    "https://github.com/jeromeleegriffin/Test/actions/runs/39690622516",
+    "https://github.com/jeromeleegriffin/Test/actions/runs/39689357218"
+  ],
+  "archiveScope": "Handoff documentation, text history H–AG, source/QA references and selected screenshots. No 211 MiB runtime binary bundle; game remains live on Cloudflare."
+}
