@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "BRANDED_FACEBOOK_SHARE_SPECIFIC_FLOW_DEPLOYED_ANDROID_FB_PREVIEW_QA_PENDING",
+    "status": "BRANDED_FB_ROOM_DIRECT_JOIN_CODE_VERIFIED_FRESH_FACEBOOK_APP_TEST_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -2012,6 +2012,21 @@
       "browserAssetTransferCountsMeasured": false,
       "qaReport": "coordination/domain-20261022/BRANDED_LAUNCH_QA.md",
       "sourceFile": "coordination/domain-20261022/rooks-branded-entry-v4-single-load.js"
+    },
+    "directRoomLink": {
+      "date": "2026-10-22",
+      "enabled": true,
+      "page": "https://jeromegriffin.com/r/ROOMCODE",
+      "browserNavigation": "Auto redirects human browsers to https://rooks.jeromegriffin.com/?room=ROOMCODE, with no intermediate tap",
+      "socialCrawler": "Keeps full OG title/image and branded canonical URL for facebookexternalhit / Facebot and other link preview crawlers",
+      "nonJavascriptFallback": "Join Table button remains on room page",
+      "photo": "https://jeromegriffin.com/images/rooks-v1.jpg",
+      "tests": "Cloudflare browser user agent: facebookexternalhit received correct OG photo and room title; normal Android Chrome agent navigated directly to actual game; nonexistent test code generated ROOM_NOT_FOUND without creating a room",
+      "source": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/jerome-griffin-site-worker.js",
+      "screenshotSeatConcern": "Room view said 2 of 4 seated, host named You and footer You. Waiting-room seats rotate by viewer and local footer You is not a duplicated seat. Still needs two-real-user session test to rule out duplicate name/seat mapping issue",
+      "gameplayWorkerChanged": false,
+      "savedPlayerDataChanged": false,
+      "facebookProductionAppTapVerified": false
     }
   }
 }
