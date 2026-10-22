@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "LIVE_V40_TWO_COMPLETE_MATCHES_WEBSOCKET_RESUME_MOBILE_ENTRY_AND_ZERO_DOUBLE_LOAD_QA_PASSED; PHYSICAL_DEVICE_QA_PENDING",
+    "status": "LIVE_V40_SEAT_SELECTION_ACTIVE_AND_VERIFIED_READ_ONLY; ANDROID_2_DEVICE_QA_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -2073,7 +2073,7 @@
       "v6Backup": "coordination/domain-20261022/rooks-branded-entry-v6-prejoin-consent.js"
     },
     "inviteSeatSelection": {
-      "status": "LIVE_VERSION_40_TWO_FULL_MATCHES_SERVER_RECONNECT_WEBSOCKET_PRIVACY_QA_PASSED; ANDROID_PHYSICAL_OFFLINE_QA_PENDING",
+      "status": "PRODUCTION_V40_DEPLOYED_VERIFIED_BINDINGS_INTACT; LIVE_SEAT_CHOICE_AVAILABLE; PHYSICAL_ANDROID_QA_PENDING",
       "lastWorkDate": "2026-10-22",
       "liveBrandedOverride": "rooks-branded-entry-only-20261022",
       "liveOverrideVersion": "20261022-v6b-prejoin-consent",
@@ -2145,7 +2145,33 @@
         "Extended network interruption and background/foreground across different physical networks",
         "True offline/PWA install and saved identity migration",
         "Multi-hand rare rule and longer-session checks"
-      ]
+      ],
+      "currentVersion": "dd4dbc6c-4640-4d84-a91c-15148de87a49",
+      "currentDeployment": "f1c472f5-f5ee-4ed3-b0f4-877d29e95f5b",
+      "liveSourceBackup": "work/jeromegriffin-domain-setup-20261022/cloudflare/isolated/live-v40-worker-20261022.mjs",
+      "livePreferredSeatSupported": true,
+      "liveSeatOptionsSupported": true,
+      "liveGuestIdentityAndSeatPickerSupported": true,
+      "previousCandidate": "cloudflare/isolated/seat-selection-worker-candidate-20261022.mjs",
+      "isolatedFullGameQA": {
+        "passed": true,
+        "partnerSeat": 2,
+        "occupancy": "2 of 4 seated",
+        "raceLoserError": "SEAT_OCCUPIED",
+        "tokenReconnectPreserved": true
+      },
+      "directFacebookRoomSharePhoto": "https://jeromegriffin.com/images/rooks-v1.jpg",
+      "bindingsVerified": [
+        "ASSETS",
+        "ROOMS",
+        "TEST_GATE_KEY",
+        "ENTRY_LIMIT",
+        "ACTION_LIMIT"
+      ],
+      "physicalAndroidTwoDeviceQaVerified": false,
+      "originalWorkersDevPreserved": true,
+      "newReleaseFromConcurrentWork": true,
+      "lastVerification": "2026-10-22"
     },
     "mobileInvitationIdentityVisibility": {
       "date": "2026-10-22",
@@ -2162,5 +2188,13 @@
       ],
       "doesNotModifyArtwork": true
     }
+  },
+  "cloudflareCurrentObserved": {
+    "date": "2026-10-22",
+    "worker": "griffin-house-of-rooks-online",
+    "version": "dd4dbc6c-4640-4d84-a91c-15148de87a49",
+    "deployment": "f1c472f5-f5ee-4ed3-b0f4-877d29e95f5b",
+    "authoritative": "Cloudflare API",
+    "note": "Overrides prior historical v36 checkpoint; do not redeploy older staged candidate"
   }
 }
