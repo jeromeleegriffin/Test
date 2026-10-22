@@ -31,4 +31,3 @@ window.HORRuntimeTruth = async function () {
       worker.cache === 'house-of-rooks-846-r11-human-moon-20261021',
   };
 };
-

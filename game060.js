@@ -8822,7 +8822,9 @@ function submitBid(val, opts) {
   }
   if (value !== 0 && isShootMoonBid(value) && !moonBidAllowed(myIndex)) {
     const ma = $('messageArea');
-    if (ma) ma.textContent = 'Shoot the Moon is for human players only and must be enabled at this table.';
+    if (ma)
+      ma.textContent =
+        'Shoot the Moon is for human players only and must be enabled at this table.';
     return;
   }
   // Selecting the ceiling is not confirmation; callers must represent an intentional tap.
@@ -12103,7 +12105,9 @@ function hostEndHand() {
   }
 
   game.matchResult = shotMoonResult
-    ? (shotMoonResult === 'made' ? bidderTeam : 1 - bidderTeam) === 0 ? 'Team A' : 'Team B'
+    ? (shotMoonResult === 'made' ? bidderTeam : 1 - bidderTeam) === 0
+      ? 'Team A'
+      : 'Team B'
     : null;
 
   try {
@@ -12904,7 +12908,7 @@ function showScoreModal(summary) {
 
 
       <div class="ghsb-matchup">
-        <div class="scoreboard-team ghsb-team ghsb-team-a ${matchWinner ? matchWinner === 'Team A' ? 'leading' : '' : summary.scores[0] >= summary.scores[1] ? 'leading' : ''}">
+        <div class="scoreboard-team ghsb-team ghsb-team-a ${matchWinner ? (matchWinner === 'Team A' ? 'leading' : '') : summary.scores[0] >= summary.scores[1] ? 'leading' : ''}">
           <img class="ghsb-team-icon ghsb-griffin" src="${griffinIcon}" alt="" draggable="false">
           <div class="ghsb-team-copy">
             <div class="sb-label">${labelA}</div>
@@ -12913,7 +12917,7 @@ function showScoreModal(summary) {
           </div>
         </div>
         <div class="scoreboard-vs ghsb-vs"><span>VS</span></div>
-        <div class="scoreboard-team ghsb-team ghsb-team-b ${matchWinner ? matchWinner === 'Team B' ? 'leading' : '' : summary.scores[1] >= summary.scores[0] ? 'leading' : ''}">
+        <div class="scoreboard-team ghsb-team ghsb-team-b ${matchWinner ? (matchWinner === 'Team B' ? 'leading' : '') : summary.scores[1] >= summary.scores[0] ? 'leading' : ''}">
           <div class="ghsb-team-copy">
             <div class="sb-label">${labelB}</div>
             <div class="sb-total">${summary.scores[1]}</div>
@@ -16951,7 +16955,8 @@ function updateLandscapeTheater() {
           : [0, 0];
     const isGameOver = isMatchOver(scores, goal, endSummary || game);
     if (isLandscape && isScore && endSummary) {
-      const winnerTeam = getMatchResult(scores, goal, endSummary) ||
+      const winnerTeam =
+        getMatchResult(scores, goal, endSummary) ||
         (scores[0] === scores[1] ? 'Tie' : scores[0] > scores[1] ? 'Team A' : 'Team B');
       const nestCards = Array.isArray(endSummary.nestCards) ? endSummary.nestCards : [];
       const revealHands = Array.isArray(endSummary.claimRevealHands)
@@ -16975,8 +16980,8 @@ function updateLandscapeTheater() {
               endSummary.shotMoonResult
                 ? `Team ${winnerTeam === 'Team A' ? 'A' : 'B'} wins the match — Moon ${endSummary.shotMoonResult}`
                 : endSummary.made
-                ? `Team ${endSummary.bidderTeam === 0 ? 'A' : 'B'} wins the hand — bid made`
-                : `Team ${endSummary.bidderTeam === 0 ? 'B' : 'A'} wins the hand — bid set`
+                  ? `Team ${endSummary.bidderTeam === 0 ? 'A' : 'B'} wins the hand — bid made`
+                  : `Team ${endSummary.bidderTeam === 0 ? 'B' : 'A'} wins the hand — bid set`
             }</div>
             <div class="lt-endgame-detail">Bid ${endSummary.bid} · Trump ${COLOR_NAMES[endSummary.trump] || endSummary.trump || '—'} · A ${endSummary.pointsA} pts · B ${endSummary.pointsB} pts</div>
             ${nestCards.length ? `<div class="lt-endgame-nest"><span>Nest — ${endSummary.nestWinnerName || 'Winner'}${endSummary.nestPts ? ' · ' + endSummary.nestPts + ' pts' : ''}</span><div>${nestCards.map((c) => `<span class="lt-endgame-nest-card">${nestCardMarkup(c)}</span>`).join('')}</div></div>` : ''}
@@ -19114,4 +19119,3 @@ try {
   }
   armRareRaven();
 })();
-
