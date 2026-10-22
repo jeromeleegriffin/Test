@@ -1286,8 +1286,27 @@ const ALTERNATE_ADAPTER=`/*
     panel.append(statusEl);
     try {
       const state = await api("/rooms/" + encodeURIComponent(code) + "/seat-options", {token:null});
-      if (state.phase !== "waiting") {
-        statusEl.textContent = "This table is not waiting for new players.";
+      const savedSeatsAvailable = state.phase === "waiting";
+      // The saved token belongs to this browser only. Rejoin never allocates a new seat.
+      let saved=null;
+      try { saved=JSON.parse(localStorage.getItem(credentialKey)||"null"); } catch (_) {}
+      if(saved?.token && saved.roomCode===code && saved.playerId===ownId()){
+        const resume=document.createElement("button");
+        resume.type="button";
+        resume.textContent="Rejoin my reserved seat";
+        resume.style.cssText="display:block;width:100%;margin:7px 0;padding:11px;border:1px solid #c5a36b;border-radius:8px;background:#24394e;color:#f5dfae";
+        resume.addEventListener("click",()=>{
+          chosenInviteSeat=null;
+          window.GHR_PREFERRED_SEAT=undefined;
+          for(const b of panel.querySelectorAll("button"))b.setAttribute("aria-pressed",String(b===resume));
+          confirm.disabled=false;
+        });
+        panel.append(resume);
+      }
+      if (!savedSeatsAvailable) {
+        statusEl.textContent = saved?.token && saved.roomCode === code && saved.playerId === ownId()
+          ? "This table has started. Rejoin your reserved seat."
+          : "This table is not accepting new players.";
         return;
       }
       const names = {1:"Left opponent",2:"Host's partner",3:"Right opponent"};
@@ -1307,22 +1326,6 @@ const ALTERNATE_ADAPTER=`/*
           confirm.disabled = false;
         });
         panel.append(button);
-      }
-      // The saved token belongs to this browser only. Rejoin never allocates a new seat.
-      let saved=null;
-      try { saved=JSON.parse(localStorage.getItem(credentialKey)||"null"); } catch (_) {}
-      if(saved?.token && saved.roomCode===code && saved.playerId===ownId()){
-        const resume=document.createElement("button");
-        resume.type="button";
-        resume.textContent="Rejoin my reserved seat";
-        resume.style.cssText="display:block;width:100%;margin:7px 0;padding:11px;border:1px solid #c5a36b;border-radius:8px;background:#24394e;color:#f5dfae";
-        resume.addEventListener("click",()=>{
-          chosenInviteSeat=null;
-          window.GHR_PREFERRED_SEAT=undefined;
-          for(const b of panel.querySelectorAll("button"))b.setAttribute("aria-pressed",String(b===resume));
-          confirm.disabled=false;
-        });
-        panel.append(resume);
       }
       if (!state.seats.some(x=>x.joinable)) statusEl.textContent = "No seats are currently available. Ask the host to open one.";
     } catch(error) {
