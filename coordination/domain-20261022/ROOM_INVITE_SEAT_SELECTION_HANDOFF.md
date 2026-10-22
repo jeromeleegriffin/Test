@@ -48,3 +48,27 @@ Live prejoin consent resides ONLY in override Worker `rooks-branded-entry-only-2
 ## Still not shipped
 - Full chosen-seat integration is **NOT live**; only confirmation-before-join is live. The server still uses first-available-seat allocation. The safe backend patch must be rebased onto the exact current deployed bundle without overwriting Cloudflare assets, production DO namespace, rate-limit bindings or secret. Verify a complete web gameplay/test-server handshake and UI/DO schema parity before promoting.
 - Facebook OG picture and direct-room deep link are still intact and unchanged. Old player shortcuts must remain operational; there is no forced migration.
+
+## Actual Rooks game UI + isolated Durable Object integration — 2026-10-22
+
+**Do not restart from scratch.** Continuing the saved work after an interrupted connection, we created a full-browser integration staging Worker `rooks-seatflow-isolated-20261022` with a separate SQLite-backed `TestRoom` DO namespace. The Worker:
+- Uses a read-only Cloudflare service binding `GAME` to serve the *actual deployed House of Rooks HTML and assets*. It does **not** copy card, table or audio files and does **not** forward `/rooms` requests to live ROOMS.
+- Replaces only the embedded Cloudflare adapter at response time using the rebased 846-r12 adapter from `cloudflare/isolated/seat-selection-adapter-r12-candidate-20261022.js`.
+- Routes create, join, read-only `seat-options`, and snapshot calls to its own `TEST_ROOMS` namespace. WebSockets are intentionally disabled in this test, which uses the existing fallback polling.
+- Keeps the public game Worker `griffin-house-of-rooks-online`, its DO namespace `bb1bf1c32b68451cbe5db6fee3066fa0`, all assets, secrets and active rooms unchanged.
+
+### Test results (Cloudflare Browser Rendering, actual game page)
+- Worker probe: real game HTML returned, existing `Play With Friends` and `Join by Code` buttons present, 48,833 decoded characters in tested Cloudflare adapter.
+- `/_seatqa` created its own random sandbox room and passed concurrency: exactly one of two guests claiming seat 2 succeeded, other got `SEAT_OCCUPIED`, explicit opponent seat 3 and old-client default seat 1 worked, and token-protected resume stayed in seat 2.
+- Snapshot regression: after seat claims, authorized `GET /snapshot` returned HTTP 200 with `phase:"waiting"`.
+- Real invited browser session at `/?room=B5VJEUSD`: rendered `Choose your seat`, 3 seat buttons, and disabled `Take Your Seat` prior to selection. Browser automation clicked `Host's partner` (seat 2) and the backend reserved that exact seat.
+- A fresh room `C39ZDJRM`: browser selected seat 2, confirmed name `QA Guest`, submitted `Take Your Seat`, and reached the **actual waiting-room screen** (waiting visible, lobby hidden, `TABLE C39ZDJRM`, `2 of 4 seated`). The browser's stored credential seat was 2, and the server's seat state matched.
+- First browser probe saw the reservation but did not capture the waiting-room transition within its earlier short sampling window. The next room did capture successful transition. This is sufficient for isolated proof, **not** proof of reliable Android lifecycle/long suspension behavior.
+- Source is archived at `cloudflare/isolated/seat-selection-full-game-sandbox-20261022.mjs`. The staging URL is `https://rooks-seatflow-isolated-20261022.jeromeleegriffin.workers.dev/` and is **NOT** the real game; staging rooms are disposable.
+
+### Production integration still pending
+- DO methods `join(preferredSeat)`, `seatOptions`, and the client adapter UI are now tested in isolation, but the **live Worker still uses first-available-seat assignment**. Never call seat selection "live" until the original Worker is updated and verified.
+- In the exact *deployed* `worker-cloud-only.js`, all required patch anchors were unique (join signature, seat resolution, snapshot method, join forwarding, DO endpoint, error list, and embedded adapter). The current compiled Worker has 262,729 JS module characters plus a separate source map; a byte-for-byte source audit is preferable to replacing the whole build.
+- Any production upload must use Cloudflare Workers versioning/rollback and preserve `ASSETS` (`keep_assets:true`), the current `ROOMS` namespace/class, `TEST_GATE_KEY` secret, `ENTRY_LIMIT`, `ACTION_LIMIT`, compatibility settings, and original game assets. DO NOT deploy an older GitHub worker source or unverified multipart metadata.
+- Current live branded-only JS override `rooks-branded-entry-only-20261022` version `20261022-v6b-prejoin-consent` keeps name confirmation + approved Facebook sharing. Do not remove it before a safe full integration.
+- Owner's approved Facebook room and regular-game preview imagery still remain on `jeromegriffin.com`; no artwork changes or duplicate asset upload.
