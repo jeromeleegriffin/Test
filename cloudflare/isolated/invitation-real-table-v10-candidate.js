@@ -9,7 +9,7 @@
   const waiting = document.getElementById('waiting');
   const name = document.getElementById('hor-player-name');
   const picker = document.getElementById('horInviteSeatPicker');
-  const options = document.querySelector('#ghInviteIdentityV7 .identity-choice');
+  const options = document.querySelector('#ghInviteIdentityV7 .identity-choice') || document.querySelector('#landingPanel783 .identity-choice');
   const dock = document.getElementById('friendsDock803');
   if (!lobby || !waiting || !name || !picker || !dock || !options) return;
   const css = document.createElement('style');
@@ -61,6 +61,7 @@
   strip.append(message,cancel);
   dock.prepend(strip);
   name.placeholder='Enter your player name';
+  window.GHR_CLOUD_NAME='';
   name.value='';
   let active=true,joining=false,latest=null;
   const names={1:'Left opponent',2:"Host's partner",3:'Right opponent'};
