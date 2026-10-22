@@ -56,12 +56,19 @@ await svc.create('t2','h2','Host2');
 const legacy=await svc.join('t2','l1','LegacyGuest');
 assert.equal(legacy.seat,1);
 
-// Existing host-owned bot seat can be replaced predeal, but not a human.
-const firstPreview=await svc.seatOptions('t2');
-await svc.setBotSeat('t2',(await svc.join('t2','l2','Partner',null,'ember','avatar',2)).token,{seat:3,name:'Crow',expectedRevision:firstPreview.revision+1})
-  .then(()=>assert.fail('Guest must not set bot'),err=>assert.match(err.message,/HOST_ONLY/));
-const current=(await svc.seatOptions('t2')).revision;
-await svc.setBotSeat('t2',(await svc.join('t2','l3','Other',null,'grit','avatar',3)).token,{seat:3,name:'Crow',expectedRevision:current+1})
-  .then(()=>assert.fail('Guest must not replace human'),err=>assert.match(err.message,/HOST_ONLY/));
+// A host-owned bot can be replaced by a human in a chosen seat before the deal.
+const botHost=await svc.create('t3','h3','Host3');
+const botPreview=await svc.seatOptions('t3');
+await svc.setBotSeat('t3',botHost.token,{seat:2,name:'Crow',expectedRevision:botPreview.revision});
+const botOccupied=await svc.seatOptions('t3');
+assert.equal(botOccupied.seats[2].isBot,true);
+assert.equal(botOccupied.seats[2].joinable,true);
+const replacingHuman=await svc.join('t3','human3','HumanPartner',null,'hm01','avatar',2);
+assert.equal(replacingHuman.seat,2);
+const humanSeat=await svc.seatOptions('t3');
+assert.equal(humanSeat.seats[2].name,'HumanPartner');
+assert.equal(humanSeat.seats[2].isBot,false);
+assert.equal(humanSeat.seats[2].joinable,false);
+await assert.rejects(svc.join('t3','anotherHuman','TooLate',null,'hm02','avatar',2),/SEAT_OCCUPIED/);
 
-console.log('PASS: seat selection, availability, occupied-seat rejection, return-seat token safety, invalid seats, legacy join');
+console.log('PASS: chosen seat, safe availability, occupied rejection, invalid seats, token-protected reconnect, legacy path, predeal bot replacement');
