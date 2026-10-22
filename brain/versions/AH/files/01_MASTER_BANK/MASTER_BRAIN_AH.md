@@ -1,5 +1,20 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## CURRENT TACTILE TRUMP FEEDBACK — October 22, 2026
+
+This supersedes older current Worker identities below. **Keep all R12 Moon rules and the entry/install repair.** The owner delegated the interaction: selected ink should visibly respond, preferably press in; Confirm should respond similarly, without rectangular selection boxes.
+
+- LIVE Worker **8f2bec5d-52ba-48bc-8baa-873e80bbc568**, deployment **b8718091-de52-45cd-87ea-0a4ce44e6312**, 100%. Successful production build **efe9e162-cdcd-4116-b1f8-cd9d0af44844** from **c7450638c54b70dd210e40ad3c60deb94f31629a**, branch work/asset-recovery-20261021. Native build label remains **846-r12-moon-default-off-20261021**; this is a component patch.
+- Cause: physical trump controls explicitly drew a selected button box-shadow and a focus stroke around the much larger SVG confirmation hit rectangle. Landscape CSS duplicated these rules. The patch removes the hit-box outlines with scoped precedence over landscape styles and suppresses Android tap highlighting only on these controls.
+- Interaction: the actual approved case.png ink-face pixels are clipped into SVG overlays. The ink surface briefly presses inward, then holds subtle color feedback; black keeps its dark surface with silver feedback. Labels, brass case and geometry stay fixed. Confirm moves/dims only its existing brass plaque artwork and text. Keyboard feedback and aria-pressed/disabled labels remain; reduced motion uses static feedback. No generated screenshot/preview was installed as an asset.
+- Runtime changed only trump714.js and trump714.css, explicitly included by the static packager. Original case, lid, stamp and confirm artwork PNGs, approved portraits, cards, sounds, rules, bids, voice events and timing are untouched. No callback delay or new sound.
+- Stage **c73eff69-9d04-469a-af3a-90d3ee8003a7** passed. Real native offline UI hand: bid 195, discard six, change through all four colors; final DOM contains only black selected and the matching Confirm black label; confirm, then successfully play Black 1. Rendered landscape screenshot has no outer pad/label or confirmation hit-box outline. Actual extracted selection/confirmation functions also preserved separate Confirm, exactly one callback and pending-click blocking.
+- Both live files match exact committed bytes at the actual v=R12 request URLs. Stage and live install/entry HTTP checks passed, all 31 entry routing checks passed, and build verification passed 336 Moon checks / 500 natural auctions / zero bot Moon bids. Physical Android portrait/touch and device reduced-motion behavior are not newly certified by this cloud-browser test.
+- The first production attempt **2f2a90c4-2d60-446f-aa58-4ce998d0e887** stalled in initialization for over five minutes, quota not exhausted; it was cancelled before deployment and retried once. Only the successful build above is live.
+- Live RoomDO **bb1bf1c32b68451cbe5db6fee3066fa0**, ASSETS, both limiter namespaces, TEST_GATE_KEY and compatibility date 2026-10-14 remain. No room reset, profile/cache/service-worker clearing, paid upgrade or new playable ZIP. No server QA rooms were created for this patch; the hand was offline. Stage route is disabled again.
+- Roll back Worker **80702187-527c-4460-b27c-940c47ab898f** on the same namespace if needed. Receipt: coordination/qa/LIVE_RECEIPT_TRUMP_TACTILE_20261022.json on the source branch. Owner can normally refresh from the lobby to load new UI; do not force-refresh or clear storage during an active hand.
+
+
 ## CURRENT ENTRY AND INSTALL REPAIR — October 22, 2026
 
 This section supersedes older statements that GitHub redirects are not deployed. **R12 Moon policy remains unchanged: default OFF, optional for humans, bots prohibited, failed human Moon loses the match.**
