@@ -313,6 +313,7 @@ function applyBid(input, seat, submittedValue, rawOptions = {}) {
     };
     next2.bidStatus[seat] = value;
     if (isMoonBid) return finish(next2, "moon-bid-won-auction");
+    if (value === options.maxBid) return finish(next2, "maximum-bid-won-auction");
     return advanceOrFinish(next2, options, "bid-accepted");
   }
   const next = {
@@ -881,13 +882,15 @@ function validateIdentity(playerId, displayName) {
   if (typeof displayName !== "string" || !displayName.trim() || displayName.length > 40) throw new Error("INVALID_DISPLAY_NAME");
 }
 __name(validateIdentity, "validateIdentity");
+const HOUSE_BOT_PERSONAS = Object.freeze({"Crow":"crow","Blaze":"blaze","Nix":"nix","Titan":"titan","Pike":"pike","Drift":"drift","Dice":"dice","Anchor":"anchor","Wager":"wager","Hollow":"hollow","Ember":"ember","Vex":"vex","Frost":"frost","Fang":"fang","Halo":"halo","Quill":"quill","Bramble":"bramble","Moss":"moss","Emberlyn":"emberlyn","Cinder":"cinder","Gable":"gable","Thistle":"thistle","Marrow":"marrow","Pebble":"pebble","Rookery":"rookery","Sable":"sable","Finch":"finch","Dagger":"dagger","Willow":"willow","Hearth":"hearth","Grit":"grit","Copper":"copper","Moth":"moth","Brandy":"brandy","Flint":"flint","Ivy":"ivy","Shade":"shade","Barrel":"barrel","Spark":"spark","Nettle":"nettle","Cobalt":"cobalt","Ash":"ash","Harrier":"harrier","Claire":"claire","June":"june","Tess":"tess","Marcus":"marcus","Owen":"owen","Daniel":"daniel","Sofia":"sofia","Rafael":"rafael","Samir":"samir","Jerome":"jerome_founder","Rita":"rita"});
 var RoomService = class {
   static {
     __name(this, "RoomService");
   }
-  constructor(storage, { tokenFactory = /* @__PURE__ */ __name(() => crypto.randomUUID(), "tokenFactory") } = {}) {
+  constructor(storage, { tokenFactory = /* @__PURE__ */ __name(() => crypto.randomUUID(), "tokenFactory"), randomIndex = secureRandomIndex } = {}) {
     this.storage = storage;
     this.tokenFactory = tokenFactory;
+    this.randomIndex = randomIndex;
   }
   async create(roomId, hostId, displayName, avatar = "cinder", voice = "avatar", pace = 1) {
     if(![1,3,99].includes(pace))throw Error("INVALID_PACE");
@@ -947,17 +950,13 @@ var RoomService = class {
     const open = room.seats.map((entry, seat) => entry === null ? seat : -1).filter((seat) => seat >= 0);
     if (!open.length) return this.snapshot(roomId, token);
     if(requestedSeat!==undefined){if(!Number.isInteger(requestedSeat)||requestedSeat<1||requestedSeat>3)throw Error("INVALID_SEAT");if(room.seats[requestedSeat]!==null)throw Error("SEAT_OCCUPIED");}
-    // Explicit host bot fill uses named House personas, never test labels.
-    const choices = {
-      1: [["Dagger","dagger"],["Grit","grit"],["Flint","flint"],["Pike","pike"]],
-      2: [["Crow","crow"],["Hearth","hearth"],["Cinder","cinder"],["Willow","willow"]],
-      3: [["Blaze","blaze"],["Brandy","brandy"],["Copper","copper"],["Ivy","ivy"]]
-    };
+    // Use the same approved roster as manual selection, without replacing occupants.
     for (const seat of requestedSeat===undefined?open:[requestedSeat]) {
-      const selected = choices[seat].find(([name,avatar]) =>
+      const available = Object.entries(HOUSE_BOT_PERSONAS).filter(([name,avatar]) =>
         !room.seats.some(p => p && (p.avatar === avatar ||
           p.displayName?.toLowerCase() === name.toLowerCase())));
-      if (!selected) throw Error("NO_UNIQUE_BOT");
+      if (!available.length) throw Error("NO_UNIQUE_BOT");
+      const selected = available[this.randomIndex(available.length)];
       const [name, avatar] = selected;
       room.seats[seat] = {
         playerId: `private-test-bot-${seat}`, // Retain existing internal bot identity.
@@ -1126,7 +1125,7 @@ var RoomService = class {
     const room = await this.#room(roomId);
     return this.#authorizedSeat(room, token);
   }
-  async setBotSeat(roomId,token,{seat,name,expectedRevision}){const room=await this.#room(roomId);if(this.#authorizedSeat(room,token)!==0)throw Error("HOST_ONLY");if(room.status!=="waiting")throw Error("ROOM_NOT_JOINABLE");if(expectedRevision!==room.revision)throw Error("STALE_REVISION");if(!Number.isInteger(seat)||seat<1||seat>3)throw Error("INVALID_SEAT");const old=room.seats[seat];if(old&&!old.isBot)throw Error("HUMAN_SEAT_RESERVED");if(name===null){room.seats[seat]=null;}else{const pool={"Crow":"crow","Blaze":"blaze","Nix":"nix","Titan":"titan","Pike":"pike","Drift":"drift","Dice":"dice","Anchor":"anchor","Wager":"wager","Hollow":"hollow","Ember":"ember","Vex":"vex","Frost":"frost","Fang":"fang","Halo":"halo","Quill":"quill","Bramble":"bramble","Moss":"moss","Emberlyn":"emberlyn","Cinder":"cinder","Gable":"gable","Thistle":"thistle","Marrow":"marrow","Pebble":"pebble","Rookery":"rookery","Sable":"sable","Finch":"finch","Dagger":"dagger","Willow":"willow","Hearth":"hearth","Grit":"grit","Copper":"copper","Moth":"moth","Brandy":"brandy","Flint":"flint","Ivy":"ivy","Shade":"shade","Barrel":"barrel","Spark":"spark","Nettle":"nettle","Cobalt":"cobalt","Ash":"ash","Harrier":"harrier","Claire":"claire","June":"june","Tess":"tess","Marcus":"marcus","Owen":"owen","Daniel":"daniel","Sofia":"sofia","Rafael":"rafael","Samir":"samir","Jerome":"jerome_founder","Rita":"rita"};const avatar=pool[name];if(!Object.prototype.hasOwnProperty.call(pool,name))throw Error("INVALID_BOT");if(room.seats.some((p,i)=>i!==seat&&p&&(p.avatar===avatar||p.displayName===name)))throw Error("BOT_ALREADY_SEATED");room.seats[seat]={playerId:`private-test-bot-${seat}`,displayName:name,avatar,isBot:true,token:null};}room.revision++;room.lastActivityAt=Date.now();await this.storage.put(roomId,room);return this.snapshot(roomId,token);}
+  async setBotSeat(roomId,token,{seat,name,expectedRevision}){const room=await this.#room(roomId);if(this.#authorizedSeat(room,token)!==0)throw Error("HOST_ONLY");if(room.status!=="waiting")throw Error("ROOM_NOT_JOINABLE");if(expectedRevision!==room.revision)throw Error("STALE_REVISION");if(!Number.isInteger(seat)||seat<1||seat>3)throw Error("INVALID_SEAT");const old=room.seats[seat];if(old&&!old.isBot)throw Error("HUMAN_SEAT_RESERVED");if(name===null){room.seats[seat]=null;}else{const pool=HOUSE_BOT_PERSONAS;const avatar=pool[name];if(!Object.prototype.hasOwnProperty.call(pool,name))throw Error("INVALID_BOT");if(room.seats.some((p,i)=>i!==seat&&p&&(p.avatar===avatar||p.displayName===name)))throw Error("BOT_ALREADY_SEATED");room.seats[seat]={playerId:`private-test-bot-${seat}`,displayName:name,avatar,isBot:true,token:null};}room.revision++;room.lastActivityAt=Date.now();await this.storage.put(roomId,room);return this.snapshot(roomId,token);}
   async readyForBidding(roomId, token, handNumber, openingId) {const room=await this.#room(roomId);const seat=this.#authorizedSeat(room,token);if(room.gameState?.handNumber!==handNumber)throw Error("STALE_DEAL");if(openingId&&room.opening&&openingId!==room.opening.id)throw Error("STALE_DEAL");if(room.opening&&!room.opening.readySeats.includes(seat)){room.opening.readySeats.push(seat);await this.storage.put(roomId,room);}await this.#driveBots(roomId);return this.#gameSnapshot(await this.#room(roomId),token);}
   async setPace(roomId,token,pace){const room=await this.#room(roomId);if(this.#authorizedSeat(room,token)!==0)throw Error("HOST_ONLY");if(![1,3,99].includes(pace))throw Error("INVALID_PACE");if(room.pace!==pace){room.pace=pace;room.revision++;room.lastActivityAt=Date.now();delete room.botTurn;await this.storage.put(roomId,room);}await this.#driveBots(roomId);return this.snapshot(roomId,token);}
   async closeTable(roomId, token) { const room=await this.storage.get(roomId); if(!room)throw Error("ROOM_NOT_FOUND"); if(this.#authorizedSeat(room,token)!==0)throw Error("HOST_ONLY"); if(room.status!=="closed"){room.status="closed";room.closedAt=Date.now();room.lastActivityAt=Date.now();room.revision++;await this.storage.put(roomId,room);}return {status:"closed"}; }

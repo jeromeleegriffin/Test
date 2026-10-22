@@ -1,5 +1,19 @@
 /* Owner's reference: 71148.jpg, with spacing/contrast correction from 1791962825071.jpeg. */
 /* Eight sharp shadows outline letters without thinning their light fill. */
+/* Occupied portrait labels grow upward from a clear band above the cast. */
+@media (orientation: portrait) {
+  body #waiting.friends803 .wait-seat.friends-person:not([data-position='me']) {
+    width: 24% !important;
+    transform: translate(-50%, -100%) !important;
+    top: 18.5% !important;
+  }
+  body #waiting.friends803 .wait-seat.friends-person[data-position='top'] {
+    top: 14.5% !important;
+  }
+  body #waiting.friends803 .wait-seat.friends-person:not([data-position='me']) small {
+    white-space: nowrap;
+  }
+}
 #waiting.friends803
   :is(
     .wait-seat,

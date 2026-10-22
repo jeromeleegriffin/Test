@@ -8987,7 +8987,7 @@ function hostProcessBid(data) {
     try {
       noteHumanAuction(data.player, 'bid', data.value);
     } catch (e) {}
-    if (game.shotTheMoon) {
+    if (data.value === maxBid()) {
       finishBidding();
       return;
     }

@@ -79,8 +79,8 @@
               ? matchMedia('(orientation: landscape)').matches
                 ? 'Bot · view career'
                 : isHost
-                  ? 'Bot · tap to remove'
-                  : 'Bot · tap to replace'
+                  ? 'Remove bot'
+                  : 'Replace bot'
               : p.isHost
                 ? 'Host'
                 : 'Friend') +

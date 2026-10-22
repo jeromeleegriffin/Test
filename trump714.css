@@ -213,63 +213,45 @@ body #trumpCase714 .tc-confirm {
 body #trumpCase714 .tc-confirm:focus-visible .tc-confirm-hit {
   stroke: none;
 }
-#trumpCase714 [data-pad='green'] {
-  --ink-glow: #0e8f3e;
-}
-#trumpCase714 [data-pad='red'] {
-  --ink-glow: #e11d2e;
-}
-#trumpCase714 [data-pad='yellow'] {
-  --ink-glow: #ffd51a;
+#trumpCase714 .tc-pad-surface {
+  --ink-shade: 0.82;
 }
 #trumpCase714 [data-pad='black'] {
-  --ink-glow: #ced5df;
+  --ink-shade: 1.35;
 }
 #trumpCase714 .tc-ink-face {
-  transition:
-    transform 110ms ease-out,
-    filter 110ms ease-out;
+  animation: none;
+  transition: none;
 }
-#trumpCase714 .tc-pad-surface[data-selected] .tc-ink-face {
-  transform: translateY(4px);
-  filter: brightness(1.2) saturate(1.12) drop-shadow(0 0 7px var(--ink-glow));
-  animation: tc-ink-press 180ms ease-out;
-}
+#trumpCase714 .tc-pad-surface[data-selected] .tc-ink-face,
 #trumpCase714:has(.tc-pad[data-trump='green']:active) [data-pad='green'] .tc-ink-face,
 #trumpCase714:has(.tc-pad[data-trump='red']:active) [data-pad='red'] .tc-ink-face,
 #trumpCase714:has(.tc-pad[data-trump='yellow']:active) [data-pad='yellow'] .tc-ink-face,
 #trumpCase714:has(.tc-pad[data-trump='black']:active) [data-pad='black'] .tc-ink-face {
-  animation: none;
-  transform: translateY(9px);
-  filter: brightness(0.78);
+  transform: translateY(6px);
+  filter: brightness(var(--ink-shade));
 }
-@keyframes tc-ink-press {
-  0% {
-    transform: translateY(0);
-  }
-  45% {
-    transform: translateY(9px);
-    filter: brightness(0.78);
-  }
-  100% {
-    transform: translateY(4px);
-  }
-}
-#trumpCase714:has(.tc-pad[data-trump='green']:focus-visible) [data-pad='green'] .tc-ink-face,
-#trumpCase714:has(.tc-pad[data-trump='red']:focus-visible) [data-pad='red'] .tc-ink-face,
-#trumpCase714:has(.tc-pad[data-trump='yellow']:focus-visible) [data-pad='yellow'] .tc-ink-face,
-#trumpCase714:has(.tc-pad[data-trump='black']:focus-visible) [data-pad='black'] .tc-ink-face {
-  filter: brightness(1.22) drop-shadow(0 0 9px var(--ink-glow));
+#trumpCase714[data-keyboard]:has(.tc-pad[data-trump='green']:focus-visible)
+  [data-pad='green']:not([data-selected])
+  .tc-ink-face,
+#trumpCase714[data-keyboard]:has(.tc-pad[data-trump='red']:focus-visible)
+  [data-pad='red']:not([data-selected])
+  .tc-ink-face,
+#trumpCase714[data-keyboard]:has(.tc-pad[data-trump='yellow']:focus-visible)
+  [data-pad='yellow']:not([data-selected])
+  .tc-ink-face,
+#trumpCase714[data-keyboard]:has(.tc-pad[data-trump='black']:focus-visible)
+  [data-pad='black']:not([data-selected])
+  .tc-ink-face {
+  filter: brightness(0.94);
 }
 #trumpCase714 .tc-confirm-art {
   transform-box: fill-box;
   transform-origin: center;
-  transition:
-    transform 100ms ease-out,
-    filter 100ms ease-out;
+  transition: none;
 }
-#trumpCase714 .tc-confirm:focus-visible .tc-confirm-art {
-  filter: brightness(1.12) drop-shadow(0 0 5px #e6bd65);
+#trumpCase714[data-keyboard] .tc-confirm:focus-visible .tc-confirm-art {
+  filter: brightness(0.94);
 }
 #trumpCase714 .tc-confirm:active .tc-confirm-art,
 #trumpCase714 .tc-confirm[aria-disabled='true'] .tc-confirm-art {

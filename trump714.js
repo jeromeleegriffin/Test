@@ -148,6 +148,11 @@
     root.hidden = true;
     root.setAttribute('aria-label', 'Choose trump');
     root.setAttribute('role', 'group');
+    root.addEventListener('pointerdown', () => delete root.dataset.keyboard);
+    document.addEventListener('keydown', (e) => {
+      if (!root.hidden && ['Tab', 'Enter', ' ', 'ArrowLeft', 'ArrowRight'].includes(e.key))
+        root.dataset.keyboard = 'true';
+    });
     root.innerHTML =
       '<div class="tc-art tc-lid">' +
       svg('lid-inner') +
