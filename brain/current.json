@@ -7,23 +7,22 @@
   "seatedImageSha256": "0537f1fd1735f087395288bd9c7aa9544727d02a0ad3c2d58d945926a360be31",
   "constructionAuthority": "versions/H/files/01_MASTER_BANK/SCENE_INTEGRATED_SEATED_PLAYER_MASTER_CONSTRUCTION_AUTHORITY_2026-10-05.txt",
   "constructionAuthoritySha256": "b405602e809b1ce470c92aa7189f78d3d7e03448a622061aeb18cdcf62dd2d89",
-  "brainVersion": "AG",
+  "brainVersion": "AH",
   "status": "CURRENT",
   "updated": "2026-10-21",
-  "browse": "versions/AG/index.html",
-  "document": "versions/AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
-  "manifest": "versions/AG/inventory.json",
-  "startupPrompt": "versions/AG/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
+  "browse": "versions/AH/index.html",
+  "document": "versions/AH/files/01_MASTER_BANK/MASTER_BRAIN_AH.md",
+  "manifest": "versions/AH/inventory.json",
+  "startupPrompt": "versions/AH/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
   "history": "history.html",
-  "previousVersion": "AF",
-  "sha256": "533a32591d55120e670049b5cfa1dbbbeafd46eb2dbac0b371a92cd2050a31f3",
-  "sha256Scope": "Master Brain AG primary document",
-  "checkpoint": "full-online-x1-20261021",
-  "checkpointStatus": "ALL_THREE_R10_NATIVE_FULL_ONLINE_X1_VERIFIED",
+  "previousVersion": "AG",
+  "sha256Scope": "AH full Master Brain, hash verified in GitHub Actions handoff build",
+  "checkpoint": "cloudflare-only-live-and-named-bots-20261021",
+  "checkpointStatus": "CLOUDFLARE_ONLY_LIVE_X1_V2_NAMED_BOTS_VERIFIED_MOON_AUDIT_OPEN",
   "latestGameBuild": "846-r10-ambience-levels-20261021",
-  "runtimeStatusAuthority": "currentRuntimeRelease and Master Brain AG; frozen historical fields remain in the previous pointer snapshot",
+  "runtimeStatusAuthority": "Master Brain AH current; earlier AG all-three synchronization is historical",
   "currentRuntimeRelease": {
-    "status": "ALL_THREE_R10_NATIVE_FULL_ONLINE_X1_VERIFIED",
+    "status": "CLOUDFLARE_ONLY_LIVE_X1_V2_NAMED_BOTS_VERIFIED",
     "date": "2026-10-21",
     "runtime": "846-r10-ambience-levels-20261021",
     "ownerConfirmedCardSoundsRestored": true,
@@ -111,19 +110,35 @@
     "cloudflare": {
       "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
       "worker": "griffin-house-of-rooks-online",
-      "version": "f9fd3cd5-67a1-49ae-850d-7c2ca60c1ad7",
-      "deployment": "a319e805-c76c-462b-a18b-c59498a188d9",
-      "workerSha256": "78b9cbe754895bbab04b153c9f5a71a380f948837d5dba82e3ab6915635b99f9",
+      "version": "73aa7be6-9dc0-43ee-a267-20e9fe0f1c62",
+      "deployment": "3bfee3a0-9f9c-4fb3-9725-490459c320ee",
       "exactServedSourceMatch": true,
       "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
       "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-      "rollbackVersion": "3c0339df-3396-4784-b50b-05a0b41166ab",
+      "rollbackVersion": "8b220d87-1d24-4c13-88ad-368c858445b9",
       "roomStorageReset": false,
       "secretAndRateLimitsRetained": true,
       "previewsEnabled": false,
-      "sourceCommit": "539a710617f0114ebdd7ec7dfaccd17956468501",
+      "sourceCommit": "2fac081f2a827b4bfe7c94a48396ba326fd93237",
       "onlineBotIntelligence": "x1-online-v2",
-      "nativeAudioRepairVersion": "d4d2ed21-45da-4652-bd09-95ce85b41c12"
+      "nativeAudioRepairVersion": "d4d2ed21-45da-4652-bd09-95ce85b41c12",
+      "cloudflareOnlyRuntimeAssets": true,
+      "independentOfGitHubAtRuntime": true,
+      "cloudflareStaticAssetFileCount": 1634,
+      "liveBotNames": [
+        "Dagger",
+        "Crow",
+        "Blaze"
+      ],
+      "fullOnlineX1": "x1-online-v2",
+      "sourceBranch": "work/asset-recovery-20261021",
+      "qaRuns": [
+        39693134706,
+        39690549207,
+        39690622516,
+        39689357218
+      ],
+      "gitHubRuntimeAssetFetches": 0
     },
     "rollbackBranchBothRepos": "rollback/pre-r10-ambience-20261021",
     "repair": {
@@ -172,14 +187,16 @@
       "method": "Owner report in this conversation",
       "scope": "Current owner phone/session; not exhaustive rare-event, device, roaming or suspension certification"
     },
-    "serverRollbackBranchBothRepos": "rollback/pre-full-online-x1-20261021"
+    "serverRollbackBranchBothRepos": "rollback/pre-full-online-x1-20261021",
+    "sitePolicy": "Cloudflare-only canonical game, both old GitHub Pages preserved but NOT latest bot-label code; redirect pending data/PWA migration"
   },
-  "comprehensiveHandoff": "versions/AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
-  "threeSiteReleasePolicy": "../coordination/THREE_SITE_RELEASE_POLICY.md",
-  "currentReleaseReceipt": "../coordination/releases/full-online-x1-20261021/LIVE_RECEIPT.json",
+  "comprehensiveHandoff": "versions/AH/files/01_MASTER_BANK/MASTER_BRAIN_AH.md",
+  "threeSiteReleasePolicy": "../coordination/THREE_SITE_RELEASE_POLICY.md (historical; new Cloudflare-only hosting authorization supersedes automatic three-site synchronization)",
+  "currentReleaseReceipt": "https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/NAMED_CLOUD_BOTS_LIVE_RECEIPT_20261021.md",
   "currentCumulativeGamePackage": {
-    "status": "No new ZIP; R10 native game deployed on all three sites. Preserve older ZIPs as historical artifacts.",
-    "nativeSourceCommit": "a5804a9035b3a2f56b38231cec4ff44da686655f"
+    "status": "Cloudflare Workers Static Assets LIVE, 1634 original assets, ~211.05 MiB. Original GitHub ZIPs remain historical; AH handoff is documentation-only, not a full game ZIP.",
+    "nativeSourceCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
+    "cloudflareOnly": true
   },
   "previousPointerSnapshot": "../coordination/releases/all-three-r7-cumulative-20261020/PREVIOUS_AF_POINTER.json",
   "physicalAndroidVerified": false,
@@ -852,5 +869,41 @@
       }
     }
   },
-  "latestOnlineIntelligence": "x1-online-v2"
+  "latestOnlineIntelligence": "x1-online-v2",
+  "liveMigration": {
+    "status": "LIVE_CLOUDFLARE_ONLY",
+    "workerVersion": "73aa7be6-9dc0-43ee-a267-20e9fe0f1c62",
+    "workerDeployment": "3bfee3a0-9f9c-4fb3-9725-490459c320ee",
+    "liveRoomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "secretName": "TEST_GATE_KEY",
+    "stageWorker": "griffin-rooks-cloud-only-stage",
+    "stageRoomNamespace": "73951bbcd9264dd2b5ca1db9b0ac67f7",
+    "githubRuntimeAssetFetches": 0
+  },
+  "legacyGitHubLinks": {
+    "test": "https://jeromeleegriffin.github.io/Test/",
+    "production": "https://jeromeleegriffin.github.io/Griffin-House-of-Rooks/",
+    "redirectDeployed": false,
+    "playerXPTransferReady": false,
+    "installedPWASilentOriginChangePossible": false
+  },
+  "newlyReportedIssues": [
+    {
+      "id": "BOT_MOON_FREQUENCY",
+      "status": "OPEN_NOT_FIXED",
+      "description": "Owner reports online/offline bots seem to Shoot the Moon frequently; online X1 v2 considers Moon via power >=90 plus sampled decisions. Measure before tuning; no fix made."
+    },
+    {
+      "id": "OLD_GITHUB_LINK_MIGRATION",
+      "status": "NOT_DEPLOYED",
+      "description": "Cross-origin XP, achievements, avatars and installed PWA offline data must be protected before old GitHub links redirect."
+    },
+    {
+      "id": "ANDROID_WEAK_CELLULAR",
+      "status": "PARTIAL_QA",
+      "description": "Artwork and stylesheet recovery shipped; physical phone weak-cellular and installed offline caches not comprehensively verified."
+    }
+  ],
+  "preserveOldAllThreeEvidence": "AG X1 v2 three-site baseline remains historical; recent Cloudflare-only and named-bot releases were not deployed to GitHub Pages.",
+  "ownerApprovedCloudflareOnly": true
 }
