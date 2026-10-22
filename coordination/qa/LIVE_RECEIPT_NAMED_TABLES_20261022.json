@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-22",
+  "sourceCommit": "8b0da6173fc3b8e3873e44b9e1e5830ff3621597",
+  "sourceBranch": "work/asset-recovery-20261021",
+  "runtime": "846-r12-moon-default-off-20261021",
+  "productionBuild": "57391679-b6e2-4aee-99f3-6b8ec432bd2c",
+  "stageBuild": "647fa2c1-1ed6-4dda-9194-7e174882c3e5",
+  "rollbackVersion": "c26d2a47-847f-415e-aa87-d9eac536606e",
+  "tableCodeFormat": "First three normalized letters of host display name + normally two digits, e.g. JER42. Short names padded X, no Latin letters falls back TAB. Accented Latin letters normalized.",
+  "collisionPolicy": "Atomically create via serialized RoomDO; ROOM_EXISTS never overwrites an existing room and retries another number. Eight distinct candidates at each of 2/3/4 digits (24 max); bounded 503 if unavailable, other errors returned without retry.",
+  "compatibility": "Existing eight-character codes, saved room credentials, share/QR links and rejoining retained. New routes case-insensitive; join/invite input accepts lowercase, spaces/hyphens. Current tables not renamed.",
+  "tests": {
+    "namePrefixes": true,
+    "uniqueBoundedCandidates": 24,
+    "atomicConcurrentReservation": true,
+    "collisionRetries": true,
+    "existingRoomsUnchanged": true,
+    "closedCodesProtected": true,
+    "shortAndLegacyRoutes": true,
+    "caseInsensitive": true,
+    "guestRejoin": true,
+    "congestionFallback": true,
+    "boundedExhaustion": true,
+    "stageHostedCodes": [
+      "JER25",
+      "JER83",
+      "JER94"
+    ],
+    "stageActualBrowser": {
+      "viewport": "1363x936 landscape",
+      "createdTable": "YOU91",
+      "visibleCodeFits": true,
+      "lowercaseInvite": "jer44",
+      "joinedCorrectTable": "JER44",
+      "guestSeat": 1
+    },
+    "liveHosted": {
+      "base": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev",
+      "results": [
+        {
+          "code": "JER42",
+          "lowercaseWorks": true
+        },
+        {
+          "code": "JER81",
+          "lowercaseWorks": true
+        },
+        {
+          "code": "JER08",
+          "lowercaseWorks": true
+        }
+      ],
+      "threeDistinctCodes": true,
+      "guestRejoin": true,
+      "filledAroundHuman": true
+    },
+    "legacyAcrossDeployment": {
+      "legacyCode": "THRBJQ84",
+      "hostPreserved": true,
+      "oldCodeJoin": true,
+      "oldCodeRejoin": true
+    },
+    "liveEntry": {
+      "newPlaceholder": true,
+      "shortAndLegacyInviteValidator": true,
+      "portableEntryExact": true,
+      "sha256": "4a3f0e1caec9a0209ef75bd2bc59585bd9ea9940f8409aa670b29ddf3491c2ff"
+    }
+  },
+  "preserved": {
+    "sameDocumentLobbyReturn": true,
+    "randomBots": true,
+    "maximumBidEndsAuction": true,
+    "trumpHighlightAndTwoSounds": true,
+    "moonDefaultOff": true,
+    "humanMoonOption": true,
+    "botsNeverMoon": true,
+    "failedHumanMoonLosesMatch": true,
+    "entryInstallRepair": true,
+    "originalArtworkAudio": true,
+    "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "roomReset": false,
+    "serviceWorkerCleared": false
+  },
+  "limitations": [
+    "Physical Android portrait/installed app and long-suspension acceptance not certified.",
+    "Existing tables retain their existing codes; this changes newly created tables."
+  ],
+  "workerVersion": "e5a06e68-e3d3-4735-9b34-e402f22c0313",
+  "deployment": "d2cd309f-6694-4d0a-8cb4-85022dea482c",
+  "bindings": [
+    {
+      "name": "ACTION_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261021"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "ENTRY_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261020"
+    },
+    {
+      "name": "ROOMS",
+      "type": "durable_object_namespace",
+      "namespace_id": "bb1bf1c32b68451cbe5db6fee3066fa0"
+    },
+    {
+      "name": "TEST_GATE_KEY",
+      "type": "secret_text"
+    }
+  ],
+  "productionVerified": true
+}
