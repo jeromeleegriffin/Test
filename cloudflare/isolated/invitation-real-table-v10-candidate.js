@@ -99,7 +99,7 @@
     document.getElementById('friendsHeading803').textContent='Choose your seat';
     document.getElementById('waitingStatus').textContent='Tap an open seat to join';
     // Present the existing table in a fixed host-oriented seating view.
-    const positions={0:'top',1:'left',2:'me',3:'right'};
+    const positions={0:'me',1:'left',2:'top',3:'right'};
     for(const seat of [0,1,2,3]){
       const button=document.getElementById('waitSeat'+seat);
       const state=data.seats.find(x=>Number(x.seat)===seat);
@@ -168,7 +168,7 @@
   // Keep the guest view in sync with the server snapshot, without redrawing art.
   function repaint(){
     if(!active||joining||!latest||waiting.dataset.guestPreview!=='true')return;
-    const positions={0:'top',1:'left',2:'me',3:'right'};
+    const positions={0:'me',1:'left',2:'top',3:'right'};
     for(const seat of [0,1,2,3]){
       const b=document.getElementById('waitSeat'+seat);
       const info=latest.seats?.find(x=>Number(x.seat)===seat);
