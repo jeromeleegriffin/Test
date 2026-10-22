@@ -22,8 +22,16 @@ function home(){
  return layout('Jerome Griffin | Apps & Games','Independent games, software and apps by Jerome Griffin.',root+'/',brandArt,'image/png',body);
 }
 function rooks(){
- const body='<section class="container"><div class="gold">Featured game</div><h1>Griffin House of Rooks</h1><p>Play offline or with friends. No download required.</p><img width="1200" height="630" src="'+rooksArt+'" alt="Approved Griffin House of Rooks Facebook artwork"><div class="buttons"><a class="button" href="'+rooksHost+'">Play House of Rooks</a><a class="button secondary" href="'+oldRooks+'">Original Cloudflare game link</a></div><p class="muted">Game-sharing page. The playable game is hosted separately so updates and player data remain protected.</p></section>';
+ const body='<section class="container"><div class="gold">Featured game</div><h1>Griffin House of Rooks</h1><p>Play offline or with friends. No download required.</p><img width="1200" height="630" src="'+rooksArt+'" alt="Approved Griffin House of Rooks Facebook artwork"><div class="buttons"><a class="button" href="'+rooksHost+'">Play House of Rooks</a><a class="button secondary" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjeromegriffin.com%2Frooks" target="_blank" rel="noopener">Share Game on Facebook</a><a class="button secondary" href="'+oldRooks+'">Original Cloudflare game link</a></div><p class="muted">Game-sharing page. The playable game is hosted separately so updates and player data remain protected.</p></section>';
  return layout('Griffin House of Rooks','Play offline or with friends. No download required.',root+'/rooks',rooksArt,'image/jpeg',body);
+}
+function roomInvite(code){
+  const shareUrl=root+'/r/'+encodeURIComponent(code);
+  const gameUrl=rooksHost+'?room='+encodeURIComponent(code);
+  const title='Griffin House of Rooks | Table '+code;
+  const description='Join my Griffin House of Rooks table. Code: '+code+'. No download required.';
+  const body='<section class="container"><div class="gold">You are invited</div><h1>Take your seat at House of Rooks</h1><p>Join a game with friends. No download required.</p><img width="1200" height="630" src="'+rooksArt+'" alt="Approved Griffin House of Rooks artwork with Grit, Ember and Sofia"><div class="panel" style="margin-top:22px;max-width:650px"><div class="gold">Your table code</div><h2 style="letter-spacing:.13em">'+code+'</h2><p>Use this invitation to join that table. The host needs to leave the table open.</p><div class="buttons"><a class="button" href="'+gameUrl+'">Join Table '+code+' →</a><a class="button secondary" href="/rooks">About the Game</a></div></div></section>';
+  return layout(title,description,shareUrl,rooksArt,'image/jpeg',body);
 }
 function apps(){
  const body='<section class="container"><div class="gold">Software and projects</div><h1>Apps by Jerome Griffin</h1><p>Games are only one part of the picture. This is a home for new tools, utilities, and applications as well as games.</p><div class="grid"><article class="panel"><h2>Griffin House of Rooks</h2><p>Play offline or with friends. No download required.</p><a href="/rooks">Explore Rooks →</a></article><article class="panel"><h2>More apps coming</h2><p>New software will appear here as it is released.</p></article></div></section>';
@@ -78,6 +86,7 @@ addEventListener("fetch",e=>e.respondWith((async()=>{
  if(url.hostname==="apps.jeromegriffin.com")html=apps();
  else if(path==="/"||path==="/index.html")html=home();
  else if(path==="/rooks"||path==="/rooks/")html=rooks();
+ else if(/^\/R\/(?:[A-Z]{3}[0-9]{2,4}|[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8})\/?$/.test(path.toUpperCase()))html=roomInvite(path.split("/")[2].toUpperCase());
  else if(path==="/apps"||path==="/apps/")html=apps();
  else return new Response("Not Found",{status:404});
  return new Response(isHead?null:html,{headers:{"content-type":"text/html; charset=utf-8","cache-control":"public,max-age=120","x-content-type-options":"nosniff"}});
