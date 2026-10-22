@@ -13,18 +13,24 @@
       if (!button) return;
       event.stopImmediatePropagation();
       const url = new URL(online);
-      const code = (field?.value || '').trim().toUpperCase();
+      const code = (field?.value || '').replace(/[\s-]/g, '').toUpperCase();
       const intent = new URLSearchParams();
-      if (button.id === 'joinConfirmBtn' && !/^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8}$/.test(code)) {
+      if (
+        button.id === 'joinConfirmBtn' &&
+        !/^(?:[A-Z]{3}[0-9]{2,4}|[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8})$/.test(code)
+      ) {
         event.preventDefault();
         const feedback = document.getElementById('joinFeedback841');
         if (feedback) {
           feedback.hidden = false;
-          feedback.textContent = 'Enter the 8-character room code.';
+          feedback.textContent = 'Enter the table code, such as JER42.';
         }
         return;
       }
-      if (button.id === 'joinConfirmBtn' && /^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8}$/.test(code)) {
+      if (
+        button.id === 'joinConfirmBtn' &&
+        /^(?:[A-Z]{3}[0-9]{2,4}|[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8})$/.test(code)
+      ) {
         url.searchParams.set('room', code); // Current deployed Worker invite compatibility.
         intent.set('room', code);
         const name = (document.getElementById('hor-player-name')?.value || '').trim().slice(0, 12);

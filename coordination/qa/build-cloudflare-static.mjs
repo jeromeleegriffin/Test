@@ -70,7 +70,7 @@ const repaired=list.find(e=>e.path==='asset-loading772.js');
 if(!repaired)throw Error('Missing base asset loader');
 repaired.bytes=repair.length;repaired.sha256=crypto.createHash('sha256').update(repair).digest('hex');repaired.patch='work/asset-recovery-20261021';
 // Owner-authorized policy and tactile trump feedback; other R10 assets stay pinned.
-const policyFiles=['game060.js','index.html','polish.js','bots.js','x1/integration.js','progression.js','hor-version.js','sw060.js','trump714.js','trump714.css','friends803.js','friends803.css'];
+const policyFiles=['game060.js','index.html','polish.js','bots.js','x1/integration.js','progression.js','hor-version.js','sw060.js','trump714.js','trump714.css','friends803.js','friends803.css','cloudflare-entry.js'];
 for(const rel of policyFiles){
   const bytes=fs.readFileSync(path.join(work,rel));
   const item=list.find(e=>e.path===rel);
