@@ -2334,18 +2334,25 @@
     "note": "Overrides prior historical v36 checkpoint; do not redeploy older staged candidate"
   },
   "invitationRecovery20261022": {
-    "status": "V10B_DEPLOYED_BROWSER_VERIFIED",
+    "status": "V10C_DEPLOYED_MOBILE_DIMENSION_BROWSER_VERIFIED",
     "cloudflareConnection": "Workers reads and targeted deployment successful after authorization retry",
-    "marker": "20261022-v10b-invite-controls-resume",
-    "brandedVersion": "4b08e30f-21fb-4ac4-97a4-20cf0a52b8ba",
-    "brandedDeployment": "6e88e36e-e65f-4508-a756-cd1b8017e1de",
+    "marker": "20261022-v10c-invitation-clarity",
+    "brandedVersion": "5b7304e5-5d0a-4266-9fec-a82a735b41b9",
+    "brandedDeployment": "156db420-fd82-4071-b2ed-03ebd037ee94",
     "mainWorkerVersionPreserved": "dd4dbc6c-4640-4d84-a91c-15148de87a49",
     "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
-    "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md",
+    "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/INVITATION_CLARITY_V10C_HANDOFF.md",
     "independentGuestJoinVerified": true,
     "reservedSeatReturnVerified": true,
     "physicalFacebookAndroidVerified": false,
     "testTableClosed": true,
-    "temporaryProxyRemoved": true
+    "temporaryProxyRemoved": true,
+    "waitingSeatMap": "Fixed host orientation, chosen seat preserved before/after join",
+    "savedRejoin": "Authenticated availability check; closed/missing credentials removed; network uncertainty not represented as open",
+    "phoneViewportChecks": [
+      "390x844",
+      "390x360"
+    ],
+    "additionalRoute": "rooks.jeromegriffin.com/cloud-game/assets/friends803.js*"
   }
 }
