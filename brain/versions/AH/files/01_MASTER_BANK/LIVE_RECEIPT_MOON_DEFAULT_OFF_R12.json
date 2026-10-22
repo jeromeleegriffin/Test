@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-21",
+  "status": "LIVE_VERIFIED",
+  "runtime": "846-r12-moon-default-off-20261021",
+  "version": "dbe97a44-c515-47bf-a1d5-5096016512a5",
+  "deployment": "4b657788-27d9-406c-b03b-481a3938ab3b",
+  "sourceCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
+  "build": "6c40dc12-4fdb-4f0b-906d-a42d07c45c52",
+  "moonDefaultEnabled": false,
+  "optionRetained": true,
+  "humanOnlyMoon": true,
+  "failedHumanMoonLosesMatch": true,
+  "localChecks": 336,
+  "naturalAuctions": 500,
+  "botMoonBids": 0,
+  "stage": {
+    "base": "https://griffin-rooks-cloud-only-stage.jeromeleegriffin.workers.dev",
+    "rows": [
+      {
+        "setting": "omitted-default",
+        "shootMoonEnabled": false,
+        "reconnectSameSeat": true
+      },
+      {
+        "setting": true,
+        "shootMoonEnabled": true,
+        "reconnectSameSeat": true
+      },
+      {
+        "setting": false,
+        "shootMoonEnabled": false,
+        "reconnectSameSeat": true
+      }
+    ],
+    "requests": 19,
+    "scope": "Real hosted API, disposable rooms, simulated identity; no physical phone acceptance"
+  },
+  "live": {
+    "base": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev",
+    "rows": [
+      {
+        "setting": "omitted-default",
+        "shootMoonEnabled": false,
+        "reconnectSameSeat": true
+      },
+      {
+        "setting": true,
+        "shootMoonEnabled": true,
+        "reconnectSameSeat": true
+      },
+      {
+        "setting": false,
+        "shootMoonEnabled": false,
+        "reconnectSameSeat": true
+      }
+    ],
+    "requests": 19,
+    "scope": "Real hosted API, disposable rooms, simulated identity; no physical phone acceptance"
+  },
+  "changedNativeFilesExactByteVerified": 5,
+  "renderedStagingUI": "Checkbox initially unchecked; enabled and disabled by real browser clicks on More table rules page 2",
+  "savedOldDefaultMigration": true,
+  "explicitChoiceRemembered": true,
+  "storedRoomSettingsPreserved": true,
+  "roomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+  "roomReset": false,
+  "serviceWorkerCleared": false,
+  "rateLimitsAndSecretPreserved": true,
+  "stageRoutingDisabledAfterQA": true,
+  "rollbackVersion": "14ecabff-e4f7-431f-b5bf-1b9fff011143",
+  "oldGitHubPagesUpdated": false
+}

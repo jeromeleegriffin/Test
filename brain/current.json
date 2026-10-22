@@ -16,15 +16,15 @@
   "startupPrompt": "versions/AH/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
   "history": "history.html",
   "previousVersion": "AG",
-  "sha256Scope": "AH updated R11 document; current SHA recorded in inventory.json",
-  "checkpoint": "human-only-moon-r11-20261021",
-  "checkpointStatus": "CLOUDFLARE_ONLY_LIVE_HUMAN_MOON_R11_VERIFIED",
-  "latestGameBuild": "846-r11-human-moon-20261021",
-  "runtimeStatusAuthority": "Master Brain AH leading R11 override; older AH/AG runtime and bot-Moon policy statements are historical",
+  "sha256Scope": "AH current R12 document; SHA-256 recorded in inventory.json",
+  "checkpoint": "moon-default-off-r12-20261021",
+  "checkpointStatus": "CLOUDFLARE_ONLY_LIVE_MOON_DEFAULT_OFF_R12_VERIFIED",
+  "latestGameBuild": "846-r12-moon-default-off-20261021",
+  "runtimeStatusAuthority": "Master Brain AH leading R12 override: Moon defaults OFF, optional human-only opt-in retained.",
   "currentRuntimeRelease": {
-    "status": "CLOUDFLARE_ONLY_LIVE_HUMAN_MOON_R11_VERIFIED",
+    "status": "CLOUDFLARE_ONLY_LIVE_MOON_DEFAULT_OFF_R12_VERIFIED",
     "date": "2026-10-21",
-    "runtime": "846-r11-human-moon-20261021",
+    "runtime": "846-r12-moon-default-off-20261021",
     "ownerConfirmedCardSoundsRestored": true,
     "test": {
       "url": "https://jeromeleegriffin.github.io/Test/",
@@ -110,15 +110,15 @@
     "cloudflare": {
       "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
       "worker": "griffin-house-of-rooks-online",
-      "version": "14ecabff-e4f7-431f-b5bf-1b9fff011143",
-      "deployment": "a7b127e1-ff9b-4baf-9395-6986cee48a13",
+      "version": "dbe97a44-c515-47bf-a1d5-5096016512a5",
+      "deployment": "4b657788-27d9-406c-b03b-481a3938ab3b",
       "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
       "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-      "rollbackVersion": "73aa7be6-9dc0-43ee-a267-20e9fe0f1c62",
+      "rollbackVersion": "14ecabff-e4f7-431f-b5bf-1b9fff011143",
       "roomStorageReset": false,
       "secretAndRateLimitsRetained": true,
       "previewsEnabled": false,
-      "sourceCommit": "18b784df1b002801293f6e2697a340bdbb412eb7",
+      "sourceCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
       "onlineBotIntelligence": "x1-online-v2",
       "nativeAudioRepairVersion": "d4d2ed21-45da-4652-bd09-95ce85b41c12",
       "cloudflareOnlyRuntimeAssets": true,
@@ -140,8 +140,9 @@
       "gitHubRuntimeAssetFetches": 0,
       "humanOnlyMoon": true,
       "failedMoonLosesMatch": true,
-      "nativePolicyOverlayCommit": "18b784df1b002801293f6e2697a340bdbb412eb7",
-      "sourceVerification": "Deployed policy functions inspected; eight changed native assets exact-byte verified"
+      "nativePolicyOverlayCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
+      "sourceVerification": "Deployed policy functions inspected; eight changed native assets exact-byte verified",
+      "moonDefaultEnabled": false
     },
     "rollbackBranchBothRepos": "rollback/pre-r10-ambience-20261021",
     "repair": {
@@ -191,11 +192,11 @@
       "scope": "Current owner phone/session; not exhaustive rare-event, device, roaming or suspension certification"
     },
     "serverRollbackBranchBothRepos": "rollback/pre-full-online-x1-20261021",
-    "sitePolicy": "Cloudflare-only R11 canonical; GitHub Pages remain historical R10, redirect pending data/PWA migration."
+    "sitePolicy": "Cloudflare-only R12 canonical; old GitHub Pages remain historical R10."
   },
   "comprehensiveHandoff": "versions/AH/files/01_MASTER_BANK/MASTER_BRAIN_AH.md",
   "threeSiteReleasePolicy": "../coordination/THREE_SITE_RELEASE_POLICY.md (historical; new Cloudflare-only hosting authorization supersedes automatic three-site synchronization)",
-  "currentReleaseReceipt": "https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/LIVE_RECEIPT_HUMAN_MOON_R11.json",
+  "currentReleaseReceipt": "https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/LIVE_RECEIPT_MOON_DEFAULT_OFF_R12.json",
   "currentCumulativeGamePackage": {
     "status": "Cloudflare Workers Static Assets LIVE, 1634 original assets, ~211.05 MiB. Original GitHub ZIPs remain historical; AH handoff is documentation-only, not a full game ZIP.",
     "nativeSourceCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
@@ -875,8 +876,8 @@
   "latestOnlineIntelligence": "x1-online-v2",
   "liveMigration": {
     "status": "LIVE_CLOUDFLARE_ONLY",
-    "workerVersion": "14ecabff-e4f7-431f-b5bf-1b9fff011143",
-    "workerDeployment": "a7b127e1-ff9b-4baf-9395-6986cee48a13",
+    "workerVersion": "dbe97a44-c515-47bf-a1d5-5096016512a5",
+    "workerDeployment": "4b657788-27d9-406c-b03b-481a3938ab3b",
     "liveRoomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
     "secretName": "TEST_GATE_KEY",
     "stageWorker": "griffin-rooks-cloud-only-stage",
@@ -910,18 +911,21 @@
   "preserveOldAllThreeEvidence": "AG X1 v2 three-site baseline remains historical; recent Cloudflare-only and named-bot releases were not deployed to GitHub Pages.",
   "ownerApprovedCloudflareOnly": true,
   "humanMoonPolicy": {
-    "runtime": "846-r11-human-moon-20261021",
-    "workerVersion": "14ecabff-e4f7-431f-b5bf-1b9fff011143",
-    "deployment": "a7b127e1-ff9b-4baf-9395-6986cee48a13",
-    "sourceCommit": "18b784df1b002801293f6e2697a340bdbb412eb7",
-    "build": "8d7a4b3b-ac8b-4609-a6bc-49afb324afb2",
+    "runtime": "846-r12-moon-default-off-20261021",
+    "workerVersion": "dbe97a44-c515-47bf-a1d5-5096016512a5",
+    "deployment": "4b657788-27d9-406c-b03b-481a3938ab3b",
+    "sourceCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
+    "build": "6c40dc12-4fdb-4f0b-906d-a42d07c45c52",
     "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
     "humanOnly": true,
     "failedMoon": "Immediate match loss",
     "localNaturalAuctions": 500,
     "botMoonBids": 0,
     "oldGitHubPagesUpdated": false,
-    "liveMatches": 2,
-    "liveAcceptance": "PASS"
+    "version": "dbe97a44-c515-47bf-a1d5-5096016512a5",
+    "defaultEnabled": false,
+    "optionRetained": true,
+    "defaultOffHostedChecks": "Omitted OFF, explicit ON and explicit OFF, same-seat reconnect all PASS",
+    "priorR11LiveMatches": 2
   }
 }

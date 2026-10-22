@@ -1,3 +1,5 @@
+CURRENT R12 OVERRIDE: Shoot the Moon defaults OFF. Keep it available as an explicit human-only option. A made human Moon wins the match; a failed human Moon loses the match regardless of scores. Runtime 846-r12-moon-default-off-20261021, Worker dbe97a44-c515-47bf-a1d5-5096016512a5. Read the leading R12 override in Master Brain AH. Existing room settings and player data are preserved; old GitHub Pages remain historical. Earlier default-ON instructions below are historical.
+
 CURRENT OWNER RULE OVERRIDE — R11, October 21, 2026
 Read the leading R11 override in MASTER_BRAIN_AH.md before older historical checkpoints. Bots may NEVER Shoot the Moon (offline or online). Human Moon success wins the match; failure loses the match regardless of scores. Preserve the human-only policy, full X1 v2, audio, artwork, room namespace and saved data. Canonical runtime 846-r11-human-moon-20261021, live Worker 14ecabff-e4f7-431f-b5bf-1b9fff011143. Old GitHub Pages remain historical R10; do not claim they received R11. No Moon threshold-tuning task remains; owner replaced it with this explicit rule.
 

@@ -1,5 +1,23 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## CURRENT R12 OVERRIDE — Moon defaults OFF, October 21, 2026
+
+The owner now requests Shoot the Moon **OFF by default**, while retaining it as an optional rule. This supersedes the R11 default-ON assumption; all other R11 rules remain: humans only, made Moon wins the match, failed Moon loses the match regardless of scores.
+
+- Runtime: **846-r12-moon-default-off-20261021** on the canonical Cloudflare game.
+- Native initial settings, reset-to-standard settings, unchecked checkbox and server default settings are OFF. An explicit enabled option remains supported.
+- Old saved true preferences may have come only from the former automatic default, so they do not automatically enable new tables. New explicit checkbox choices are saved with a preference-version marker. No other preferences, player data or active-game settings are cleared.
+- Existing multiplayer matches retain the settings they started with. Reconnect preserves those settings.
+- UI path: Menu → Game Setup → More table rules → page 2 → Allow human players to "Shoot the Moon".
+- Native rendered staging UI verified unchecked initially, enabled by clicking, and disabled again. Real hosted staging checks verified omitted setting OFF, explicit ON, explicit OFF, and same-seat reconnect for all three.
+- Build reran 336 checks, 48 scoring cases and 500 auctions / 2,572 decisions, zero bot Moon bids. Original R11 outcome policy remains intact. Modified native files pass syntax/format checks.
+- Live Worker **dbe97a44-c515-47bf-a1d5-5096016512a5**, deployment **4b657788-27d9-406c-b03b-481a3938ab3b**, source **5be106ed22c2fde73670a01c720124dd4257737c**, build **6c40dc12-4fdb-4f0b-906d-a42d07c45c52** succeeded at 100% traffic. Previous rollback is R11 version 14ecabff-e4f7-431f-b5bf-1b9fff011143. Live default/explicit-on/off checks and exact native-file checks are recorded in LIVE_RECEIPT_MOON_DEFAULT_OFF_R12.json. Old GitHub Pages remain historical; no legacy-link/PWA migration performed.
+
+Earlier R11/AH records below are inherited history where they differ on the default.
+
+---
+
+
 ## CURRENT R11 OVERRIDE — human-only Moon, October 21, 2026
 
 This section supersedes every older Moon policy and R10 runtime statement below. The owner explicitly ordered: **bots may never Shoot the Moon; a failed human Moon loses the match; update every explanatory UI/rule/result text.** Continue this shipped policy; do not resume threshold tuning or re-enable bot Moon bidding.
