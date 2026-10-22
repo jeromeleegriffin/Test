@@ -10953,6 +10953,7 @@ function returnToLobby043() {
   stopPresentationSounds035();
   stopDealFlights036();
   stopDiscardReturn040();
+  window.HORNestReveal838?.cancel();
   forgetRoomSession043();
   try {
     teardownMultiplayerBeforeLobby();
