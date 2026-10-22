@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-22",
+  "sourceCommit": "3497949096ee87856c7a2fd376e74e14ea124b3b",
+  "sourceBranch": "work/asset-recovery-20261021",
+  "runtime": "846-r12-moon-default-off-20261021",
+  "stageBuild": "79485627-8483-48c0-b56e-b9582bf66974",
+  "productionBuild": "72fa40b9-251e-4793-b2c2-6b0a9d7f7696",
+  "rollbackVersion": "fe21328c-6121-46d8-abf5-e6f2be0ef57e",
+  "approvedAsset": {
+    "path": "assets/brand835/griffin-wordmark-20261022.png",
+    "sha256": "eb83500367c7e6b4ed8c8613ca2aa07d33655e9d53665333afd0f762d365901f",
+    "bytes": 1033952,
+    "width": 2172,
+    "height": 724,
+    "transparent": true,
+    "source": "Exact generated logo approved by owner after game-screenshot mockup; no regeneration or pixel edits."
+  },
+  "changes": [
+    "Replace plaque references in portrait landing, landscape lobby/friends branding and table confirmation with approved transparent logo",
+    "Version both room script URLs so existing caches can fetch replacements",
+    "Update existing service-worker shell reference to new PNG; retain cache identity and all existing storage",
+    "Build explicitly overlays both room scripts and adds exact PNG, retaining old plaque for rollback"
+  ],
+  "tests": {
+    "stageAssetsExact": true,
+    "buildChecksPass": true,
+    "stageBrowser": {
+      "viewport": "1363x936 landscape",
+      "tableLogoPersonallyInspected": true,
+      "transparentAgainstBlueFelt": true,
+      "popupLogoPersonallyInspected": true,
+      "transparentAgainstNavy": true,
+      "table": "YOU81",
+      "closeDirectToLobby": true,
+      "noSecondBrowserDialog": true
+    },
+    "liveAssetsExact": true,
+    "liveBrowser": {
+      "viewport": "1363x936 landscape",
+      "tableLogoPersonallyInspected": true,
+      "popupLogoPersonallyInspected": true,
+      "table": "YOU46",
+      "safeChoiceFocused": true,
+      "closeDirectToLobby": true,
+      "noBrowserDialog": true
+    }
+  },
+  "evidence": [
+    "coordination/qa/evidence/GOLD_WORDMARK_TABLE_20261022.jpg",
+    "coordination/qa/evidence/GOLD_WORDMARK_POPUP_20261022.jpg"
+  ],
+  "preserved": {
+    "gameplayAndMoonRules": true,
+    "approvedArtworkExceptOwnerRequestedLogo": true,
+    "avatarAndBidDockGeometry": true,
+    "audio": true,
+    "roomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "roomReset": false,
+    "playerDataCleared": false,
+    "serviceWorkerCleared": false
+  },
+  "stageRouteDisabled": true,
+  "limitations": [
+    "Cloud-browser landscape visual QA completed; physical Android portrait/installed-app acceptance remains unverified."
+  ],
+  "workerVersion": "3df448a2-83f0-4fd0-be97-665a067848de",
+  "deployment": "a05c9b90-4f3e-44de-84a2-b0b22e6504f9",
+  "bindings": [
+    {
+      "name": "ACTION_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261021"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "ENTRY_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261020"
+    },
+    {
+      "name": "ROOMS",
+      "type": "durable_object_namespace",
+      "namespace_id": "bb1bf1c32b68451cbe5db6fee3066fa0"
+    },
+    {
+      "name": "TEST_GATE_KEY",
+      "type": "secret_text"
+    }
+  ],
+  "productionVerified": true
+}

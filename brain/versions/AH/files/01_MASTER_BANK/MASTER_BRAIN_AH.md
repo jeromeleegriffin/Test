@@ -1,5 +1,17 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## CURRENT OWNER-APPROVED GOLD WORDMARK — October 22, 2026
+
+Owner rejected the bulky green/brown framed Griffin sign everywhere, including the new navy close-table dialog. After a transparent logo asset and mockup on the actual phone screenshot were shown, owner approved the new gold griffin + GRIFFIN HOUSE / OF ROOKS wordmark and explicitly authorized updating table and popup. This supersedes old plaque requirements below.
+
+- LIVE Worker **3df448a2-83f0-4fd0-be97-665a067848de**, deployment **a05c9b90-4f3e-44de-84a2-b0b22e6504f9**, runtime source **3497949096ee87856c7a2fd376e74e14ea124b3b**, production build **72fa40b9-251e-4793-b2c2-6b0a9d7f7696**, stage build **79485627-8483-48c0-b56e-b9582bf66974**. Rollback **fe21328c-6121-46d8-abf5-e6f2be0ef57e**. Runtime R12 retained.
+- Actual asset **assets/brand835/griffin-wordmark-20261022.png**, exact approved generation, 2172x724 RGBA, 1,033,952 bytes; SHA-256 **eb83500367c7e6b4ed8c8613ca2aa07d33655e9d53665333afd0f762d365901f**. Transparent space preserved; no regenerated substitute, CSS logo or pixel edits. Original old plaque retained for rollback/cache compatibility.
+- Portrait landing room-approved805.js, landscape lobby/friends room830.js, and index.html table-confirmation image now reference this asset. Both room-script URLs use **846-r12-gold-wordmark-20261022**. Existing SW shell references new image; cache identity and existing player data retained. Builder explicitly overlays both room scripts and adds PNG to immutable native base: 1,635 assets, 222,350,178 bytes in stage build.
+- Actual staged 1363x936 game: gold cutout on blue felt personally inspected; YOU81 close dialog gold cutout on navy personally inspected; confirm returned directly to lobby without native dialog. Stage exact asset bytes, both room scripts and SW reference verified. Existing Moon, auction/random-bot, trump, named-code, lobby and confirmation tests pass.
+- Production actual browser: new gold logo on blue felt and YOU46 navy confirmation personally inspected; safe focus retained and close returned directly to lobby with no second JS dialog. Exact production PNG, both room scripts, SW shell and script-query checks pass.
+- Evidence screenshots **coordination/qa/evidence/GOLD_WORDMARK_TABLE_20261022.jpg** and **coordination/qa/evidence/GOLD_WORDMARK_POPUP_20261022.jpg** show actual rendered game, not generated mockups. Receipt **coordination/qa/LIVE_RECEIPT_GOLD_WORDMARK_20261022.json** and AH copy.
+- All prior gameplay/rules, audio, avatar/Bid Dock geometry, short codes, same-document lobby return, namespace/secrets/limiters and saved data preserved. No room reset, SW/cache clear, reinstall, social share metadata or protected production 531 change. Stage public route disabled after testing. Physical Android portrait/installed-app acceptance remains unverified; cloud browser visually checked landscape.
+
 ## CURRENT GRIFFIN HOUSE CONFIRMATION DESIGN — October 22, 2026
 
 Owner explicitly rejected the previous brown/walnut popup. Its appearance is superseded by the existing Griffin House identity: original Griffin plaque, navy House-menu surface, fine gold border, cream heading, light body text and matching navy/gold buttons. Only scoped styles and plaque markup in index.html changed; confirmation behavior/game logic retained. No original asset file or table/avatar geometry changed.
