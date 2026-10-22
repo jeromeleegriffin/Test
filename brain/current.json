@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "LIVE_V40_SEAT_SELECTION_BRANDED_V8_SELECTION_CLARITY_AND_NAME_PROMPT_BROWSER_VERIFIED_ANDROID_CONFIRM_PENDING",
+    "status": "LIVE_V40_SEAT_PICKER_BRANDED_V9_MOBILE_PANEL_TOP_ANCHORED_BROWSER_VERIFIED; PHYSICAL_FB_ANDROID_RETEST_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -2247,6 +2247,40 @@
       "normalGameUIUnaffected": true,
       "source": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/rooks-branded-entry-v8-seat-selected.js",
       "rollback": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/rooks-branded-entry-v7-invite-name-field.js"
+    },
+    "inviteMobileViewportFix": {
+      "date": "2026-10-22",
+      "deployedVersion": "20261022-v9-viewport-safe",
+      "worker": "rooks-branded-entry-only-20261022",
+      "scope": "branded invites only",
+      "trigger": "Facebook Android screenshot showed player name cut off above oversized vertically centered join panel",
+      "resolution": "Top-anchor invitation form, bound height to mobile viewport, allow internal scrolling only when necessary, reduce margins and order name/locked-code/seats/confirmation/back",
+      "browserChecks": {
+        "viewport414x720": {
+          "panelTop": 8,
+          "nameTop": 42,
+          "panelBottom": 648
+        },
+        "viewport390x650": {
+          "panelTop": 8,
+          "nameTop": 42,
+          "panelBottom": 621
+        },
+        "viewport360x560": {
+          "panelTop": 8,
+          "nameTop": 40,
+          "internalScrollAvailable": true
+        },
+        "nameFocusable": true,
+        "normalGameEntryUntouched": true,
+        "approvedSocialArtIntact": true
+      },
+      "physicalFacebookAndroidRetestPending": true,
+      "gameWorkerUntouched": true,
+      "existingRoomsUntouched": true,
+      "source": "work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/rooks-branded-entry-v9-viewport-safe.js",
+      "previousProblematicVersion": "20261022-v8-seat-selected",
+      "handoff": "coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md"
     }
   },
   "cloudflareCurrentObserved": {
