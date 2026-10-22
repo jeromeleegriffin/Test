@@ -1927,5 +1927,45 @@
       }
     ],
     "productionVerified": true
+  },
+  "customDomainSetup": {
+    "date": "2026-10-22",
+    "status": "NEW_BRANDED_DOMAIN_ACTIVE_FACEBOOK_BASE_AND_PLAY_FRIENDS_ENTRY_VERIFIED_PHYSICAL_QA_PENDING",
+    "domain": "jeromegriffin.com",
+    "homepage": "https://jeromegriffin.com/",
+    "facebookSharePage": "https://jeromegriffin.com/rooks",
+    "appsDirectory": "https://apps.jeromegriffin.com/",
+    "brandedGame": "https://rooks.jeromegriffin.com/",
+    "originalCloudflareGame": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
+    "homepageWorker": "jerome-griffin-site",
+    "preservedOriginalGameWorker": "griffin-house-of-rooks-online",
+    "boundedRoutes": [
+      {
+        "pattern": "rooks.jeromegriffin.com/cloud-game/assets/cloudflare-entry.js*",
+        "worker": "rooks-branded-entry-only-20261022",
+        "id": "db48506eb07a4718b5fd80f402fd8a06"
+      },
+      {
+        "pattern": "rooks.jeromegriffin.com/",
+        "worker": "griffin-og-game-head-stage-20261022",
+        "id": "6010d59a143842a680981bf7ab2aa68e"
+      }
+    ],
+    "brandedRootOgVerified": true,
+    "multiplayerButtonNewHostnameVerified": true,
+    "browserAssetsSample": "11 of 11 success",
+    "inviteQueryUrlOgVerified": false,
+    "facebookRealProductionDebuggerVerified": false,
+    "realAndroidMultiplayerVerified": false,
+    "offlinePwaInstallVerified": false,
+    "oldOriginUserDataMigrated": false,
+    "legacyDataProtected": true,
+    "gameWorkerAndDurableObjectsUnchanged": true,
+    "registrationExpires": "2027-10-22T04:47:05Z",
+    "autoRenew": false,
+    "ownerHomepageApprovedForNow": true,
+    "ownerReportedFiveDollarCloudflarePlan": true,
+    "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
+    "qaReport": "coordination/domain-20261022/BRANDED_LAUNCH_QA.md"
   }
 }
