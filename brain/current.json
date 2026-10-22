@@ -16,13 +16,13 @@
   "startupPrompt": "versions/AH/files/00_START_HERE/REPLACEMENT_CHAT_STARTUP_PROMPT.txt",
   "history": "history.html",
   "previousVersion": "AG",
-  "sha256Scope": "AH current custom table confirmation document; SHA-256 in inventory.json",
-  "checkpoint": "table-confirm-20261022",
-  "checkpointStatus": "CLOUDFLARE_R12_HOUSE_TABLE_CONFIRM_VERIFIED",
+  "sha256Scope": "AH current Griffin House navy/gold confirmation design document; SHA-256 in inventory.json",
+  "checkpoint": "griffin-confirm-design-20261022",
+  "checkpointStatus": "CLOUDFLARE_R12_GRIFFIN_CONFIRM_DESIGN_VERIFIED",
   "latestGameBuild": "846-r12-moon-default-off-20261021",
-  "runtimeStatusAuthority": "Master Brain AH leading single House table confirmation override.",
+  "runtimeStatusAuthority": "Master Brain AH leading Griffin House confirmation design override.",
   "currentRuntimeRelease": {
-    "status": "CLOUDFLARE_R12_HOUSE_TABLE_CONFIRM_VERIFIED",
+    "status": "CLOUDFLARE_R12_GRIFFIN_CONFIRM_DESIGN_VERIFIED",
     "date": "2026-10-22",
     "runtime": "846-r12-moon-default-off-20261021",
     "ownerConfirmedCardSoundsRestored": true,
@@ -114,15 +114,15 @@
     "cloudflare": {
       "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
       "worker": "griffin-house-of-rooks-online",
-      "version": "8fb3ef39-be99-4bc5-b370-7335d4919615",
-      "deployment": "3bdeb8e9-ffd9-48b8-9843-266f251fc4f2",
+      "version": "fe21328c-6121-46d8-abf5-e6f2be0ef57e",
+      "deployment": "8e9d4887-20ed-49d9-8d33-170017028ab0",
       "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
       "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
-      "rollbackVersion": "e5a06e68-e3d3-4735-9b34-e402f22c0313",
+      "rollbackVersion": "8fb3ef39-be99-4bc5-b370-7335d4919615",
       "roomStorageReset": false,
       "secretAndRateLimitsRetained": true,
       "previewsEnabled": false,
-      "sourceCommit": "0aa1a5c56c5c210fbc4ee656268862033bb7fc44",
+      "sourceCommit": "68aa34e3311a6ba0343cfe543323273fcd6aebb9",
       "onlineBotIntelligence": "x1-online-v2",
       "nativeAudioRepairVersion": "d4d2ed21-45da-4652-bd09-95ce85b41c12",
       "cloudflareOnlyRuntimeAssets": true,
@@ -145,7 +145,7 @@
       "humanOnlyMoon": true,
       "failedMoonLosesMatch": true,
       "nativePolicyOverlayCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
-      "sourceVerification": "Exact final live game/trump JS verified. Actual live offline and guest leave/rejoin/closed-table return pass without loader.",
+      "sourceVerification": "Actual stage/live browser navy-gold-crest confirmation and direct lobby return verified; exact HTML/plaque and unchanged polish.js bytes pass.",
       "moonDefaultEnabled": false,
       "entryInstallRepair": true,
       "tactileTrumpFeedback": true,
@@ -163,7 +163,8 @@
       "legacyTableCodesRetained": true,
       "houseTableConfirmation": true,
       "noSecondHostClosePopup": true,
-      "tableConfirmationQuery": "846-r12-table-confirm-20261022"
+      "tableConfirmationQuery": "846-r12-table-confirm-20261022",
+      "tableConfirmationDesign": "Original Griffin plaque, navy House menu panel and gold trim/buttons."
     },
     "rollbackBranchBothRepos": "rollback/pre-r10-ambience-20261021",
     "repair": {
@@ -204,7 +205,7 @@
       "newZipCreated": false,
       "audioVerificationMethod": "Owner confirmation, not assistant browser listening"
     },
-    "next": "Owner checks single House table confirmation on phone; all existing rules and prior repairs retained.",
+    "next": "Owner checks Griffin House navy/gold confirmation on phone; old brown design rejected.",
     "ownerPhoneAudioAcceptance": {
       "date": "2026-10-21",
       "otherSoundsQuote": "the other sounds are back",
@@ -217,7 +218,7 @@
   },
   "comprehensiveHandoff": "versions/AH/files/01_MASTER_BANK/MASTER_BRAIN_AH.md",
   "threeSiteReleasePolicy": "../coordination/THREE_SITE_RELEASE_POLICY.md (historical; new Cloudflare-only hosting authorization supersedes automatic three-site synchronization)",
-  "currentReleaseReceipt": "https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/LIVE_RECEIPT_TABLE_CONFIRM_20261022.json",
+  "currentReleaseReceipt": "https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/LIVE_RECEIPT_GRIFFIN_CONFIRM_20261022.json",
   "currentCumulativeGamePackage": {
     "status": "Cloudflare Workers Static Assets LIVE, 1634 original assets, ~211.05 MiB. Original GitHub ZIPs remain historical; AH handoff is documentation-only, not a full game ZIP.",
     "nativeSourceCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
@@ -897,8 +898,8 @@
   "latestOnlineIntelligence": "x1-online-v2",
   "liveMigration": {
     "status": "LIVE_CLOUDFLARE_ONLY",
-    "workerVersion": "8fb3ef39-be99-4bc5-b370-7335d4919615",
-    "workerDeployment": "3bdeb8e9-ffd9-48b8-9843-266f251fc4f2",
+    "workerVersion": "fe21328c-6121-46d8-abf5-e6f2be0ef57e",
+    "workerDeployment": "8e9d4887-20ed-49d9-8d33-170017028ab0",
     "liveRoomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
     "secretName": "TEST_GATE_KEY",
     "stageWorker": "griffin-rooks-cloud-only-stage",
@@ -1714,6 +1715,96 @@
     "productionBuild": "84a35a5f-1e70-4c8c-a78e-1ff1ece4e46c",
     "workerVersion": "8fb3ef39-be99-4bc5-b370-7335d4919615",
     "deployment": "3bdeb8e9-ffd9-48b8-9843-266f251fc4f2",
+    "bindings": [
+      {
+        "name": "ACTION_LIMIT",
+        "type": "ratelimit",
+        "namespace_id": "14784620261021"
+      },
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      },
+      {
+        "name": "ENTRY_LIMIT",
+        "type": "ratelimit",
+        "namespace_id": "14784620261020"
+      },
+      {
+        "name": "ROOMS",
+        "type": "durable_object_namespace",
+        "namespace_id": "bb1bf1c32b68451cbe5db6fee3066fa0"
+      },
+      {
+        "name": "TEST_GATE_KEY",
+        "type": "secret_text"
+      }
+    ],
+    "productionVerified": true
+  },
+  "griffinConfirmationDesign": {
+    "date": "2026-10-22",
+    "sourceCommit": "68aa34e3311a6ba0343cfe543323273fcd6aebb9",
+    "sourceBranch": "work/asset-recovery-20261021",
+    "runtime": "846-r12-moon-default-off-20261021",
+    "stageBuild": "f676db37-b5c5-48d9-997f-386960a0dbdd",
+    "productionBuild": "f1fa7f10-fb5e-40be-893a-85cbda4a272f",
+    "rollbackVersion": "8fb3ef39-be99-4bc5-b370-7335d4919615",
+    "request": "Owner rejected brown/walnut confirmation; match current Griffin House identity.",
+    "changes": {
+      "scope": "Only index.html scoped table confirmation styles and original plaque markup",
+      "appearance": "Original assets/brand835/house-plaque835.png, navy panel matching current House menus, fine gold frame, cream heading, light body, navy secondary and gold primary buttons.",
+      "behavior": "Single confirmation, safe default focus, cancel/Escape/focus restoration and no second host popup retained; no JS/gameplay changes."
+    },
+    "tests": {
+      "stageActualBrowser": {
+        "viewport": "1363x936 landscape",
+        "table": "YOU37",
+        "crestVisible": true,
+        "navyGoldPersonallyInspected": true,
+        "cancelRetainedTable": true,
+        "confirmDirectToLobby": true,
+        "noBrowserDialog": true
+      },
+      "tableConfirmationUnit": true,
+      "buildMoonChecks": 336,
+      "buildAuctionRandomFillChecks": 395,
+      "stageHosted": {
+        "originalGriffinPlaque": true,
+        "navyAndGold": true,
+        "oldBrownAbsent": true,
+        "confirmationLogicUnchanged": true
+      },
+      "liveHosted": {
+        "originalGriffinPlaque": true,
+        "navyAndGold": true,
+        "oldBrownAbsent": true,
+        "confirmationLogicUnchanged": true
+      },
+      "liveActualBrowser": {
+        "table": "YOU97",
+        "navyGoldCrestVisible": true,
+        "safeChoiceFocused": true,
+        "confirmDirectToLobby": true,
+        "noBrowserDialog": true
+      }
+    },
+    "screenshot": "coordination/qa/evidence/GRIFFIN_HOUSE_CONFIRM_20261022.jpg",
+    "preserved": {
+      "allGameRules": true,
+      "roomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+      "originalArtworkReused": true,
+      "artworkFilesChanged": false,
+      "approvedTableGeometryChanged": false,
+      "savedDataCleared": false,
+      "serviceWorkerCleared": false
+    },
+    "limitations": [
+      "Actual visual QA is cloud-browser landscape; physical Android portrait and installed app acceptance remain unverified."
+    ],
+    "stageRouteDisabled": true,
+    "workerVersion": "fe21328c-6121-46d8-abf5-e6f2be0ef57e",
+    "deployment": "8e9d4887-20ed-49d9-8d33-170017028ab0",
     "bindings": [
       {
         "name": "ACTION_LIMIT",

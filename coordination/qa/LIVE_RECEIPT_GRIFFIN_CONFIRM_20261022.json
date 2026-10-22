@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-22",
+  "sourceCommit": "68aa34e3311a6ba0343cfe543323273fcd6aebb9",
+  "sourceBranch": "work/asset-recovery-20261021",
+  "runtime": "846-r12-moon-default-off-20261021",
+  "stageBuild": "f676db37-b5c5-48d9-997f-386960a0dbdd",
+  "productionBuild": "f1fa7f10-fb5e-40be-893a-85cbda4a272f",
+  "rollbackVersion": "8fb3ef39-be99-4bc5-b370-7335d4919615",
+  "request": "Owner rejected brown/walnut confirmation; match current Griffin House identity.",
+  "changes": {
+    "scope": "Only index.html scoped table confirmation styles and original plaque markup",
+    "appearance": "Original assets/brand835/house-plaque835.png, navy panel matching current House menus, fine gold frame, cream heading, light body, navy secondary and gold primary buttons.",
+    "behavior": "Single confirmation, safe default focus, cancel/Escape/focus restoration and no second host popup retained; no JS/gameplay changes."
+  },
+  "tests": {
+    "stageActualBrowser": {
+      "viewport": "1363x936 landscape",
+      "table": "YOU37",
+      "crestVisible": true,
+      "navyGoldPersonallyInspected": true,
+      "cancelRetainedTable": true,
+      "confirmDirectToLobby": true,
+      "noBrowserDialog": true
+    },
+    "tableConfirmationUnit": true,
+    "buildMoonChecks": 336,
+    "buildAuctionRandomFillChecks": 395,
+    "stageHosted": {
+      "originalGriffinPlaque": true,
+      "navyAndGold": true,
+      "oldBrownAbsent": true,
+      "confirmationLogicUnchanged": true
+    },
+    "liveHosted": {
+      "originalGriffinPlaque": true,
+      "navyAndGold": true,
+      "oldBrownAbsent": true,
+      "confirmationLogicUnchanged": true
+    },
+    "liveActualBrowser": {
+      "table": "YOU97",
+      "navyGoldCrestVisible": true,
+      "safeChoiceFocused": true,
+      "confirmDirectToLobby": true,
+      "noBrowserDialog": true
+    }
+  },
+  "screenshot": "coordination/qa/evidence/GRIFFIN_HOUSE_CONFIRM_20261022.jpg",
+  "preserved": {
+    "allGameRules": true,
+    "roomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "originalArtworkReused": true,
+    "artworkFilesChanged": false,
+    "approvedTableGeometryChanged": false,
+    "savedDataCleared": false,
+    "serviceWorkerCleared": false
+  },
+  "limitations": [
+    "Actual visual QA is cloud-browser landscape; physical Android portrait and installed app acceptance remain unverified."
+  ],
+  "stageRouteDisabled": true,
+  "workerVersion": "fe21328c-6121-46d8-abf5-e6f2be0ef57e",
+  "deployment": "8e9d4887-20ed-49d9-8d33-170017028ab0",
+  "bindings": [
+    {
+      "name": "ACTION_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261021"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "ENTRY_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261020"
+    },
+    {
+      "name": "ROOMS",
+      "type": "durable_object_namespace",
+      "namespace_id": "bb1bf1c32b68451cbe5db6fee3066fa0"
+    },
+    {
+      "name": "TEST_GATE_KEY",
+      "type": "secret_text"
+    }
+  ],
+  "productionVerified": true
+}
