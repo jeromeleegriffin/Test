@@ -4,11 +4,11 @@
   "updated": "2026-10-22",
   "documentationOnly": true,
   "canonicalGame": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
-  "canonicalGameVersion": "fe21328c-6121-46d8-abf5-e6f2be0ef57e",
+  "canonicalGameVersion": "3df448a2-83f0-4fd0-be97-665a067848de",
   "sourceBranch": "work/asset-recovery-20261021",
   "liveNamedBotsVerified": true,
   "fullOnlineX1": "x1-online-v2",
-  "status": "CLOUDFLARE_R12_GRIFFIN_CONFIRM_DESIGN_VERIFIED",
+  "status": "CLOUDFLARE_R12_APPROVED_GOLD_WORDMARK_VERIFIED",
   "files": [
     {
       "path": "files/00_START_HERE/START_HERE.md"
@@ -63,6 +63,9 @@
     },
     {
       "path": "files/01_MASTER_BANK/LIVE_RECEIPT_GRIFFIN_CONFIRM_20261022.json"
+    },
+    {
+      "path": "files/01_MASTER_BANK/LIVE_RECEIPT_GOLD_WORDMARK_20261022.json"
     }
   ],
   "inheritedBrain": "../AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
@@ -84,7 +87,8 @@
     "coordination/qa/LIVE_RECEIPT_INPLACE_LOBBY_20261022.json",
     "coordination/qa/LIVE_RECEIPT_NAMED_TABLES_20261022.json",
     "coordination/qa/LIVE_RECEIPT_TABLE_CONFIRM_20261022.json",
-    "coordination/qa/LIVE_RECEIPT_GRIFFIN_CONFIRM_20261022.json"
+    "coordination/qa/LIVE_RECEIPT_GRIFFIN_CONFIRM_20261022.json",
+    "coordination/qa/LIVE_RECEIPT_GOLD_WORDMARK_20261022.json"
   ],
   "openIssues": [
     "Physical Android installed app relaunch and weak-cellular/cache acceptance remain to confirm",
@@ -101,7 +105,7 @@
   "nativePolicyOverlayCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
   "humanOnlyMoon": true,
   "failedMoonLosesMatch": true,
-  "documentSha256": "02ff0371578e2f1766fc6066104fcad788c0de80ba0329bfd91fbb901b7db5c8",
+  "documentSha256": "8bdb6b6f8efa331fc79ca4900fc9631ddc6b80b6aa318ec08f65a79cd909f827",
   "moonDefaultEnabled": false,
   "tactileTrumpFeedback": true,
   "randomBotFill": true,
@@ -110,5 +114,6 @@
   "inplaceLobbyReturn": true,
   "shortNamedTableCodes": true,
   "houseTableConfirmation": true,
-  "griffinHouseConfirmationDesign": true
+  "griffinHouseConfirmationDesign": true,
+  "approvedGoldWordmark": true
 }
