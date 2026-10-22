@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "LIVE_BRANDED_GAME_SEAT_PICKER_V40_DEPLOYED_TESTED; ANDROID_EXTENDED_QA_PENDING",
+    "status": "BRANDED_FB_SHARE_AND_V40_SEAT_SELECTION_LIVE; EXTENDED_ANDROID_AND_FULL_MATCH_QA_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -2062,7 +2062,7 @@
       "lastWorkDate": "2026-10-22",
       "liveBrandedOverride": "rooks-branded-entry-only-20261022",
       "liveOverrideVersion": "20261022-v6b-prejoin-consent",
-      "liveBehavior": "Incoming room invite preserves room code, requires visitor to explicitly confirm name/avatar, and no longer auto-joins from a remembered or URL-provided player name; the current live backend still assigns first available seat after confirmation.",
+      "liveBehavior": "Incoming room invitations preserve code and require name/avatar confirmation and a specific seat choice; live Version 40 atomically honors the requested open seat, rejects occupied seats, and lets returning players reclaim reserved seats.",
       "isolatedAtomicQa": {
         "passed": true,
         "independentSqliteDO": true,
@@ -2083,10 +2083,10 @@
       "rebasedAdapterBrowserParsePassed": true,
       "backendCandidate": "cloudflare/isolated/seat-selection-worker-candidate-20261022.mjs",
       "isolatedTestWorkersDeleted": true,
-      "originalCloudflareWorkerUntouched": true,
+      "originalCloudflareWorkerUntouched": false,
       "activeDurableObjectDataUntouched": true,
       "fullProductionSeatPickerEnabled": true,
-      "blockedOn": "Safe integration of chosen-seat server patch onto exact deployed runtime with all existing ASSETS, ROOMS, rate-limit and TEST_GATE_KEY bindings preserved, then full UI/DO browser multiplayer QA.",
+      "blockedOn": "Production Version 40 is live and passed targeted HTTP room, WebSocket snapshot, and game UI seat-selection tests. Remaining: owner Android Facebook in-app path, sustained reconnect/background, and complete four-player match.",
       "handoff": "coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md",
       "latestValidatedCandidate": {
         "version": 40,
