@@ -91,6 +91,7 @@ c.localStorage = storage();
 c.paintCloudPace = () => {};
 c.returnToLobby043 = () => calls.push(['cloudLobby']);
 c.alert = () => {};
+c.horToast = () => {};
 vm.runInContext(
   'let credentials={token:"saved",seat:1},cloudDealTimer=8,cloudDealOwner={},timer=9,socketReconnectTimer=10,socket={close(){}},latest={},queuedAction={},busy=true,presented={},lastRevision=99,cloudAudio={},lastScoreSignature="old",redealRevision=4;',
   c
@@ -128,7 +129,9 @@ assert(
   )
 );
 let delayed;
-c.setTimeout = fn => { delayed = fn; };
+c.setTimeout = (fn) => {
+  delayed = fn;
+};
 c.waiting = node('waiting');
 c.document.querySelector = () => null;
 c.playToastClink = () => {};
@@ -137,7 +140,7 @@ vm.runInContext(extract(native, 'playTableToast(done)', '\nfunction startGameWit
 c.done = () => calls.push(['oldToast']);
 vm.runInContext('playTableToast(done);tableEpoch043++;', c);
 delayed();
-assert(!calls.some(x => x[0] === 'oldToast'));
+assert(!calls.some((x) => x[0] === 'oldToast'));
 console.log(
   JSON.stringify({
     sameDocumentReturn: true,

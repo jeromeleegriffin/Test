@@ -742,24 +742,37 @@
     window._whyTimer = setTimeout(() => tip.classList.add('hidden'), 2600);
   }
 
-  function houseConfirm({ title, body, danger }) {
+  let confirmBusy = false;
+  function houseConfirm({ title, body, danger, confirmText, cancelText, kind, tableCode }) {
+    if (confirmBusy) return Promise.resolve(false);
     return new Promise((resolve) => {
       const sheet = $('confirmSheet');
       if (!sheet) {
-        resolve(window.confirm(body || title));
+        resolve(false);
         return;
       }
+      confirmBusy = true;
+      const previousFocus = document.activeElement;
+      sheet.classList.toggle('table-close-confirm', kind === 'table');
+      const context = $('confirmContext');
+      if (context)
+        context.textContent = tableCode ? 'TABLE ' + tableCode : 'GRIFFIN HOUSE OF ROOKS';
       $('confirmTitle').textContent = title || 'Please confirm';
       $('confirmBody').textContent = body || '';
       sheet.classList.toggle('leave-table-confirm', /^Leave this table\?$/i.test(title || ''));
       const ok = $('confirmOk');
+      ok.textContent = confirmText || 'Yes';
+      $('confirmCancel').textContent = cancelText || 'Cancel';
       ok.classList.toggle('danger', danger !== false);
       sheet.classList.remove('hidden');
       if (!sheet.open) sheet.showModal();
       const done = (val) => {
         sheet.close();
         sheet.classList.add('hidden');
-        sheet.classList.remove('leave-table-confirm');
+        sheet.classList.remove('leave-table-confirm', 'table-close-confirm');
+        confirmBusy = false;
+        window.houseDismissConfirm = null;
+        if (previousFocus?.isConnected) previousFocus.focus({ preventScroll: true });
         ok.onclick = null;
         $('confirmCancel').onclick = null;
         sheet.oncancel = null;
@@ -769,6 +782,8 @@
         e.preventDefault();
         done(false);
       };
+      window.houseDismissConfirm = () => done(false);
+      $('confirmCancel').focus({ preventScroll: true });
       ok.onclick = () => done(true);
       $('confirmCancel').onclick = () => done(false);
     });
@@ -1796,6 +1811,9 @@
   window.clientLeaveReplace = async function () {
     const offline = isSoloPractice || roomCode === 'OFFLINE';
     const ok = await houseConfirm({
+      kind: 'table',
+      confirmText: 'Leave table',
+      cancelText: 'Stay here',
       title: offline || isHost ? 'Leave this table?' : 'Leave and seat a bot?',
       body: offline
         ? 'Return to the lobby from this offline game.'

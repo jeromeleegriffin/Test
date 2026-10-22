@@ -480,6 +480,59 @@
     <link rel="stylesheet" href="ui-audit841.css?v=846-r12-moon-default-off-20261021" />
     <link rel="stylesheet" href="fullscreen-portrait-review.css" />
     <link rel="stylesheet" href="house-premium-ui.css" />
+
+    <style id="houseTableConfirmStyle">
+      #confirmContext { display: none; }
+      #confirmSheet.table-close-confirm[open] {
+        display: block !important; position: fixed; inset: 0; margin: auto;
+        width: min(420px, calc(100% - 32px)); height: fit-content;
+        max-height: calc(100dvh - 32px); padding: 0; border: 0;
+        background: transparent; border-radius: 16px; overflow: auto;
+        color: #f6ecd8;
+      }
+      #confirmSheet.table-close-confirm::backdrop {
+        background: rgba(5, 8, 9, .76); backdrop-filter: blur(4px);
+      }
+      #confirmSheet.table-close-confirm .modal-content {
+        width: auto; max-width: none; margin: 0; padding: clamp(22px, 6vw, 32px);
+        border: 1px solid #b49a60; border-radius: 16px;
+        background: radial-gradient(ellipse at top, #76503266, transparent 75%), linear-gradient(145deg, #322015, #1c130e 65%, #302014);
+        box-shadow: inset 0 0 0 4px #120d09, inset 0 0 0 5px #80613988, 0 18px 60px #0009;
+        text-align: center;
+      }
+      #confirmSheet.table-close-confirm #confirmContext {
+        display: block; color: #d6b977; font: 600 11px/1.5 system-ui, sans-serif;
+        letter-spacing: .16em; margin: 0 0 14px;
+      }
+      #confirmSheet.table-close-confirm h2 {
+        margin: 0 0 14px; color: #f4e3b8; font: 700 clamp(26px, 7vw, 32px)/1.15 Georgia, serif;
+      }
+      #confirmSheet.table-close-confirm #confirmBody {
+        margin: 0 auto 26px; color: #dfd3bf; font: 16px/1.5 Georgia, serif;
+        max-width: 30ch; overflow-wrap: normal;
+      }
+      #confirmSheet.table-close-confirm .btn-row {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0;
+      }
+      #confirmSheet.table-close-confirm .btn {
+        width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px;
+        border: 1px solid #a68a52; border-radius: 8px; font: 700 16px/1.2 Georgia, serif;
+        box-shadow: inset 0 1px 0 #fff2, 0 3px 8px #0005; cursor: pointer;
+      }
+      #confirmSheet.table-close-confirm #confirmCancel {
+        order: 0; background: linear-gradient(#25302b, #131c19); color: #f0e6d3;
+      }
+      #confirmSheet.table-close-confirm #confirmOk {
+        order: 1; background: linear-gradient(#dec17d, #b79045); color: #24170c;
+      }
+      #confirmSheet.table-close-confirm .btn:focus-visible { outline: 2px solid #ffe6a2; outline-offset: 3px; }
+      #confirmSheet.table-close-confirm .btn:active { transform: translateY(2px); filter: brightness(.9); }
+      @media (max-height: 420px) {
+        #confirmSheet.table-close-confirm .modal-content { padding: 18px 24px; }
+        #confirmSheet.table-close-confirm #confirmContext { margin-bottom: 8px; }
+        #confirmSheet.table-close-confirm #confirmBody { margin-bottom: 16px; }
+      }
+    </style>
   </head>
   <body class="theme-classic cardback-griffin room-theme-midnight">
     <section id="houseLoading" aria-label="Preparing the House"
@@ -1618,6 +1671,7 @@
       id="confirmSheet"
     >
       <div class="modal-content">
+        <div id="confirmContext" aria-hidden="true"></div>
         <h2 id="confirmTitle">Are you sure?</h2>
         <p class="option-hint" id="confirmBody"></p>
         <div class="btn-row">
@@ -1775,7 +1829,7 @@
     <script src="rook510-avatars.js?v=846-r12-moon-default-off-20261021"></script>
     <script src="rook512-room.js?v=846-r12-moon-default-off-20261021"></script>
     <script src="rook513.js?v=846-r12-moon-default-off-20261021"></script>
-    <script src="polish.js?v=846-r12-moon-default-off-20261021"></script>
+    <script src="polish.js?v=846-r12-table-confirm-20261022"></script>
     <script src="founder-profile785.js?v=846-r12-moon-default-off-20261021"></script>
     <script src="ui-audit841.js?v=846-r12-moon-default-off-20261021"></script>
     <script src="identity-choice.js?v=846-r12-moon-default-off-20261021"></script>
@@ -1846,7 +1900,7 @@
     <script src="menu-approved805.js?v=846-r12-moon-default-off-20261021"></script>
     <script src="angle-c-runtime.js?v=846-r12-moon-default-off-20261021"></script
     ><script src="angle-c-characters.js?v=846-r12-moon-default-off-20261021"></script
-    ><script src="landscape-polish.js?v=846-r12-moon-default-off-20261021"></script
+    ><script src="landscape-polish.js?v=846-r12-table-confirm-20261022"></script
     ><script src="room830.js?v=846-r12-moon-default-off-20261021"></script
     ><script src="room831.js?v=846-r12-moon-default-off-20261021"></script
     ><script src="room832.js?v=846-r12-moon-default-off-20261021"></script

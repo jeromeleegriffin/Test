@@ -8,6 +8,7 @@ node coordination/qa/room-auction-unit.mjs
 node coordination/qa/trump-highlight-unit.mjs
 node coordination/qa/inplace-lobby-unit.mjs
 node coordination/qa/named-tables-unit.mjs
+node coordination/qa/table-confirm-unit.mjs
 mkdir -p cloudflare-approved-src
 git -C cloudflare-approved-src init -q
 git -C cloudflare-approved-src remote add origin https://github.com/JeromeLeeGriffin/Test.git
