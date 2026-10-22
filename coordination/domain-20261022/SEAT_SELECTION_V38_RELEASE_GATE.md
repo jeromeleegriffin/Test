@@ -35,3 +35,18 @@ Rollback if promoted: deploy recorded v36 ID back at 100% (Worker deployment rol
 - Full sandbox: `cloudflare/isolated/seat-selection-full-game-sandbox-20261022.mjs`
 - Current adapter used: `cloudflare/isolated/seat-selection-adapter-r12-candidate-20261022.js`
 - Live branded single-asset override: `rooks-branded-entry-only-20261022`, Version `20261022-v6b-prejoin-consent`; keep until production integration is verified.
+
+## Version 39 improvement and release gate — 2026-10-22
+
+**Do not deploy Version 37 or Version 38.** Both remain undeployed, and **Version 39** is the latest validated candidate. The production Worker continues to run Version 36.
+
+- **Version 39 ID:** `aefaafd8-a522-4118-ac53-6b3d982591b3`. Successfully uploaded via the non-deploying Cloudflare Version API, with `keep_assets:true`, strict inheritance of all five existing bindings, and `exports.RoomDO = {type:"durable-object",storage:"sqlite"}`.
+- Configuration inspection confirms the current production `ROOMS` namespace, asset runtime configuration, rate limits, secret text binding, compatibility date, and Durable Object class metadata remain present.
+- One important reconnection edge was corrected: a returning player with a saved seat token can now tap **Rejoin my reserved seat** even if the table's phase is no longer `waiting`. New players continue to be blocked from claiming seats after the game starts.
+- The corrected actual-r12 client adapter is preserved at `cloudflare/isolated/seat-selection-adapter-r12-reconnect-20261022.js`.
+- Focused UI simulation using the *real extracted* `prepareInvitationSeats()` function passed three cases: started game with valid saved token offers an enabled rejoin; started game without token offers no join; waiting game without token offers three seat choices with no automatic reservation.
+- The isolated full-game sandbox `rooks-seatflow-isolated-20261022` was updated to the corrected adapter; its backend concurrency test and actual waiting-room invitation flow remained working. Its current source is archived at `cloudflare/isolated/seat-selection-full-game-sandbox-20261022.mjs`.
+- Disposable focused test Worker was deleted after the test. The full-game sandbox stays isolated with a separate `TestRoom` SQLite DO namespace and original game assets proxied rather than copied.
+- **Owner approval and final live/Android verification are still required before Version 39 can be promoted.** Do not mistake creating an undeployed version for modifying the live game. The rollback target remains Version 36 ID `3df448a2-83f0-4fd0-be97-665a067848de`.
+
+The high-priority code and server tests now pass. Remaining release validation includes a controlled cross-device session and a post-deploy verification of full gameplay, WebSocket reconnect, player identity, approved social share, and actual Android storage/origin behavior.
