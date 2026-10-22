@@ -5,6 +5,7 @@ set -euo pipefail
 SOURCE_COMMIT=90078a710948c7643caafb18986e34dc71ce7cee
 node coordination/qa/human-moon-policy-unit.mjs
 node coordination/qa/room-auction-unit.mjs
+node coordination/qa/trump-highlight-unit.mjs
 mkdir -p cloudflare-approved-src
 git -C cloudflare-approved-src init -q
 git -C cloudflare-approved-src remote add origin https://github.com/JeromeLeeGriffin/Test.git

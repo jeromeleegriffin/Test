@@ -169,7 +169,8 @@
         'beforeend',
         `<defs><clipPath id="tc-ink-${color}"><polygon points="${inkFaces[color]}"/></clipPath></defs>` +
           `<g class="tc-pad-surface" data-pad="${color}"><g class="tc-ink-face">` +
-          `<g clip-path="url(#tc-ink-${color})"><image width="2069" height="760" href="${assetRoot}case.png"/></g></g></g>`
+          `<g clip-path="url(#tc-ink-${color})"><image width="2069" height="760" href="${assetRoot}case.png"/>` +
+          `<polygon class="tc-selection-highlight" points="${inkFaces[color]}" fill="#fff1bd" fill-opacity=".18" stroke="#ffe7a3" stroke-opacity=".95" stroke-width="8" stroke-linejoin="round"/></g></g></g>`
       );
     }
     const padGroup = document.createElement('div');
@@ -315,11 +316,17 @@
   }
   function select(color) {
     if (pending || running || !colors.includes(color) || !submitRef) return;
-    tentativeTrump = color;
+    const deselected = tentativeTrump === color;
+    tentativeTrump = deselected ? null : color;
+    try {
+      if (typeof playNatural063 === 'function')
+        playNatural063(deselected ? 'biddown735' : 'bidup735', 0.4);
+    } catch (_) {}
     updateChoice();
-    root.querySelector('.tc-access').textContent =
-      color + ' selected. Confirm or choose another color.';
-    log('tentative', color);
+    root.querySelector('.tc-access').textContent = deselected
+      ? color + ' deselected. Choose a trump color.'
+      : color + ' selected. Confirm or choose another color.';
+    log(deselected ? 'deselected' : 'tentative', color);
   }
   function confirmChoice() {
     const color = tentativeTrump;

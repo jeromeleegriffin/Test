@@ -223,6 +223,13 @@ body #trumpCase714 .tc-confirm:focus-visible .tc-confirm-hit {
   animation: none;
   transition: none;
 }
+#trumpCase714 .tc-selection-highlight {
+  visibility: hidden;
+  pointer-events: none;
+}
+#trumpCase714 .tc-pad-surface[data-selected] .tc-selection-highlight {
+  visibility: visible;
+}
 #trumpCase714 .tc-pad-surface[data-selected] .tc-ink-face,
 #trumpCase714:has(.tc-pad[data-trump='green']:active) [data-pad='green'] .tc-ink-face,
 #trumpCase714:has(.tc-pad[data-trump='red']:active) [data-pad='red'] .tc-ink-face,
