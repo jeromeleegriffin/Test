@@ -67,6 +67,9 @@
   const names={1:'Left opponent',2:"Host's partner",3:'Right opponent'};
   function restore(){
     active=false;
+    clearInterval(painter);
+    document.removeEventListener('pointerdown',takeTap,true);
+    document.removeEventListener('click',takeTap,true);
     waiting.removeAttribute('data-guest-preview');
     strip.remove();
     holders.forEach(([node,marker])=>{if(marker.parentNode)marker.parentNode.insertBefore(node,marker);marker.remove()});
@@ -160,6 +163,50 @@
       sit(seat);
     },true);
   }
+
+  // The original waiting-screen controller also refreshes seat markup.
+  // Keep the guest view in sync with the server snapshot, without redrawing art.
+  function repaint(){
+    if(!active||joining||!latest||waiting.dataset.guestPreview!=='true')return;
+    const positions={0:'top',1:'left',2:'me',3:'right'};
+    for(const seat of [0,1,2,3]){
+      const b=document.getElementById('waitSeat'+seat);
+      const info=latest.seats?.find(x=>Number(x.seat)===seat);
+      if(!b||!info)continue;
+      const free=!!info.joinable;
+      if(b.dataset.position!==positions[seat])b.dataset.position=positions[seat];
+      if(b.dataset.previewFree!==String(free))b.dataset.previewFree=String(free);
+      if(b.disabled===free)b.disabled=!free;
+      if(b.classList.contains('friends-empty')!==free)b.classList.toggle('friends-empty',free);
+      if(b.classList.contains('friends-person')===free)b.classList.toggle('friends-person',!free);
+      if(free) {
+        if(b.textContent?.trim()!=='Sit here')b.innerHTML='<span class="friends-seat-choice804">Sit here</span>';
+      }else{
+        if(b.textContent?.trim()!==(info.name||'Occupied')){
+          const label=document.createElement('strong');label.textContent=info.name||'Occupied';
+          b.replaceChildren(label);
+        }
+      }
+    }
+    const title=document.getElementById('friendsHeading803');
+    if(title&&title.textContent!=='Choose your seat')title.textContent='Choose your seat';
+    const status=document.getElementById('waitingStatus');
+    if(status&&status.textContent!=='Tap an open seat to join')status.textContent='Tap an open seat to join';
+  }
+  const painter=setInterval(repaint,300);
+  const takeTap=(e)=>{
+    if(!active||joining||waiting.dataset.guestPreview!=='true')return;
+    const seat=e.target.closest?.('#waitSeat1,#waitSeat2,#waitSeat3');
+    if(!seat||seat.dataset.previewFree!=='true')return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    sit(Number(seat.id.slice(-1)));
+  };
+  // Native room listeners own click events after a person has joined.
+  // Before reservation, capture both touchscreen presses and keyboard clicks.
+  document.addEventListener('pointerdown',takeTap,true);
+  document.addEventListener('click',takeTap,true);
+
   // Reuse the original room-art, rather than rendering another seat list.
   const start=()=>{if(!active)return;refresh()};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});
