@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-22",
+  "sourceCommit": "1f5ec16adf158df70b40858c51a1bfec22fef138",
+  "sourceBranch": "work/asset-recovery-20261021",
+  "runtime": "846-r12-moon-default-off-20261021",
+  "assetQuery": "846-r12-trump-highlight-sound-20261022",
+  "stageBuild": "30c2d46f-286e-44f4-86c8-625a8afdc0c9",
+  "rollbackVersion": "a0229e90-3754-4df5-8971-0dad9a2ec27f",
+  "changes": {
+    "selection": "Steady pale-gold edge and tint clipped to approved original ink face; existing one press and shade retained. No pulse or keyframes.",
+    "deselection": "Tapping selected physical pad clears tentative color and hides Confirm. Switching colors selects new pad in one action.",
+    "audio": "bidup735 at 0.4 for select/switch; biddown735 at 0.4 for deselect; one cue per valid tap; uses playNatural063 existing mute/card volume and audio mixer.",
+    "confirmation": "Separate explicit Confirm still required; pending/running input guards retained."
+  },
+  "tests": {
+    "allFourToggle": true,
+    "distinctSounds": true,
+    "oneSoundPerAction": true,
+    "pendingGuard": true,
+    "roomAuction395Checks": true,
+    "actualNativeBrowser": {
+      "viewport": "1363x936 landscape",
+      "allFourSelectedAndDeselected": true,
+      "greenAndBlackScreenshotsInspected": true,
+      "separateConfirm": true,
+      "blackConfirmed": true,
+      "firstCardPlayed": true
+    },
+    "liveAssets": {
+      "base": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev",
+      "rows": [
+        {
+          "name": "trump714.js",
+          "bytes": 31392,
+          "sha256": "5ac17477ad4058434623b0cb2bda0852989d7cfa584c0b305db68b73f3ee25b5",
+          "exact": true
+        },
+        {
+          "name": "trump714.css",
+          "bytes": 7084,
+          "sha256": "0788849f36345b03f304da68d5f6393ca9b75f9700bf4954ed79e3cd7457e07e",
+          "exact": true
+        },
+        {
+          "name": "bidup735-01.wav",
+          "bytes": 8864,
+          "sha256": "30c6c1b571d75b3e1aa5c082e621c8cee56c03bd7f8baa78a14fe9fd158ee87e"
+        },
+        {
+          "name": "biddown735-01.wav",
+          "bytes": 8864,
+          "sha256": "77bee7f0d7a23dae21cdba0512815c1368c01103da38acb8c761646f1fe2cd71"
+        }
+      ],
+      "newEntryQuery": true
+    }
+  },
+  "preserved": {
+    "randomBotFill": true,
+    "maximumBidEndsAuction": true,
+    "portraitWaitingLabels": true,
+    "moonDefaultOff": true,
+    "humanMoonOption": true,
+    "botsNeverMoon": true,
+    "failedHumanMoonLosesMatch": true,
+    "entryInstallRepair": true,
+    "artworkGeometry": true,
+    "roomNamespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
+    "roomsReset": false,
+    "playerDataCleared": false,
+    "serviceWorkerCleared": false
+  },
+  "limitations": [
+    "Physical phone and actual listening acceptance remain unverified; cloud browser checks visible interaction, code-level sound routing and real distinct WAV availability."
+  ],
+  "build": "0a5990b7-9d78-45c4-8770-3085eb97f6bf",
+  "workerVersion": "3f5d8428-6caa-48f6-8091-da0d2005f8fc",
+  "deployment": "bc619db9-ef72-45aa-9d07-fe26126c7d5c",
+  "bindings": [
+    {
+      "name": "ACTION_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261021"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "ENTRY_LIMIT",
+      "type": "ratelimit",
+      "namespace_id": "14784620261020"
+    },
+    {
+      "name": "ROOMS",
+      "type": "durable_object_namespace",
+      "namespace_id": "bb1bf1c32b68451cbe5db6fee3066fa0"
+    },
+    {
+      "name": "TEST_GATE_KEY",
+      "type": "secret_text"
+    }
+  ],
+  "productionVerified": true
+}
