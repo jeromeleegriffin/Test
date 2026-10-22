@@ -1,0 +1,22 @@
+{
+  "base": "https://griffin-rooks-cloud-only-stage.jeromeleegriffin.workers.dev",
+  "rows": [
+    {
+      "setting": "omitted-default",
+      "shootMoonEnabled": false,
+      "reconnectSameSeat": true
+    },
+    {
+      "setting": true,
+      "shootMoonEnabled": true,
+      "reconnectSameSeat": true
+    },
+    {
+      "setting": false,
+      "shootMoonEnabled": false,
+      "reconnectSameSeat": true
+    }
+  ],
+  "requests": 19,
+  "scope": "Real hosted API, disposable rooms, simulated identity; no physical phone acceptance"
+}

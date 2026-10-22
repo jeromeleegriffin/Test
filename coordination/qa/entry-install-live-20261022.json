@@ -1,0 +1,25 @@
+{
+  "base": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev",
+  "rows": [
+    {
+      "path": "/cloud-game/assets/",
+      "status": 302,
+      "redirectBeforeArtwork": true,
+      "inviteRetained": true
+    },
+    {
+      "path": "/cloud-game/assets/index.html",
+      "status": 302,
+      "redirectBeforeArtwork": true,
+      "inviteRetained": true
+    }
+  ],
+  "manifest": {
+    "id": "/cloud-game/assets/",
+    "start_url": "/",
+    "scope": "/",
+    "icons": 4
+  },
+  "installedStartIntegrated": true,
+  "nativePolicy": "R12 retained"
+}
