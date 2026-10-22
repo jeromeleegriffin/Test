@@ -4,11 +4,11 @@
   "updated": "2026-10-22",
   "documentationOnly": true,
   "canonicalGame": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
-  "canonicalGameVersion": "c26d2a47-847f-415e-aa87-d9eac536606e",
+  "canonicalGameVersion": "e5a06e68-e3d3-4735-9b34-e402f22c0313",
   "sourceBranch": "work/asset-recovery-20261021",
   "liveNamedBotsVerified": true,
   "fullOnlineX1": "x1-online-v2",
-  "status": "CLOUDFLARE_R12_INPLACE_LOBBY_VERIFIED",
+  "status": "CLOUDFLARE_R12_NAMED_TABLES_VERIFIED",
   "files": [
     {
       "path": "files/00_START_HERE/START_HERE.md"
@@ -54,6 +54,9 @@
     },
     {
       "path": "files/01_MASTER_BANK/LIVE_RECEIPT_INPLACE_LOBBY_20261022.json"
+    },
+    {
+      "path": "files/01_MASTER_BANK/LIVE_RECEIPT_NAMED_TABLES_20261022.json"
     }
   ],
   "inheritedBrain": "../AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
@@ -72,7 +75,8 @@
     "coordination/qa/LIVE_RECEIPT_TRUMP_TACTILE_20261022.json",
     "coordination/qa/LIVE_RECEIPT_ROOM_AUCTION_20261022.json",
     "coordination/qa/LIVE_RECEIPT_TRUMP_HIGHLIGHT_SOUND_20261022.json",
-    "coordination/qa/LIVE_RECEIPT_INPLACE_LOBBY_20261022.json"
+    "coordination/qa/LIVE_RECEIPT_INPLACE_LOBBY_20261022.json",
+    "coordination/qa/LIVE_RECEIPT_NAMED_TABLES_20261022.json"
   ],
   "openIssues": [
     "Physical Android installed app relaunch and weak-cellular/cache acceptance remain to confirm",
@@ -89,11 +93,12 @@
   "nativePolicyOverlayCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
   "humanOnlyMoon": true,
   "failedMoonLosesMatch": true,
-  "documentSha256": "6d56caad115aac975720af640138d5b66ca2e08a472e4004b1b4e6415046e024",
+  "documentSha256": "a5317d6452c20c0f9b61592ce497ab0abd1e8e83fb7ca3653269cceb2c274a13",
   "moonDefaultEnabled": false,
   "tactileTrumpFeedback": true,
   "randomBotFill": true,
   "maximumBidEndsAuction": true,
   "steadyTrumpShade": true,
-  "inplaceLobbyReturn": true
+  "inplaceLobbyReturn": true,
+  "shortNamedTableCodes": true
 }

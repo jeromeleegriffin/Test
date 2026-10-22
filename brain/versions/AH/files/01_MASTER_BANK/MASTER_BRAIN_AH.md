@@ -1,5 +1,19 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## CURRENT SHORT HOST-NAME TABLE CODES — October 22, 2026
+
+Owner replaced the proposed two-word names with the first three letters of the host's name plus a number, requiring collision checks against existing tables.
+
+- LIVE Worker **e5a06e68-e3d3-4735-9b34-e402f22c0313**, deployment **d2cd309f-6694-4d0a-8cb4-85022dea482c**, source **8b0da6173fc3b8e3873e44b9e1e5830ff3621597**, production build **57391679-b6e2-4aee-99f3-6b8ec432bd2c**, branch work/asset-recovery-20261021. Rollback **c26d2a47-847f-415e-aa87-d9eac536606e**. Runtime remains R12. Portable entry query **names-20261022-r8-native-friends-1**.
+- New table codes normally have five characters, e.g. **JER42**. First three normalized Latin letters of host display name; accented Latin normalized, short names pad X, no Latin letters uses TAB. Normally two digits, with three/four-digit fallback under congestion. Existing tables keep their codes.
+- Collision safety: reserve through existing serialized RoomDO create; ROOM_EXISTS retries another code and never overwrites the stored room. Eight distinct candidates per numeric width, max 24 tries, then bounded TABLE_NAMES_BUSY/503. Other errors returned directly. No separate check-then-create race, no namespace change, no reset of active rooms. Exact full codes must differ; different prefixes may share a numeric suffix.
+- Routing, invitation entry and portable join accept the short format AND old eight-character codes. Case-insensitive new code routing; join/invite input normalizes spaces/hyphens and case. Join field shows Table code · JER42 and retains room for legacy codes. Share/QR and reconnect semantics preserved.
+- Verification: actual RoomDO concurrent same-code reservation gives distinct results; protected original/closed rooms, collision retries, accent/short/non-Latin prefixes, numeric fallback, bounded exhaustion and non-collision error handling pass. Old/new routes and same guest token/seat resume pass. Existing 395 auction/random-fill, lobby cleanup, 31 entry and build Moon/trump checks passed.
+- Actual staged 1363×936 native UI created **YOU91**; shorter code fits existing bottom dock, artwork/geometry unchanged. Lowercase invitation **jer44** opened **JER44**, guest seat 1. Stage hosted examples JER25/JER83/JER94.
+- Production checks: created **JER42, JER81, JER08**, all distinct; lowercase routing, guest rejoin, fill around human pass. Existing legacy table **THRBJQ84**, created before deployment, retained host and allowed guest join/rejoin after deployment. Exact portable entry asset and new placeholder/short-plus-legacy invitation validator verified. Only disposable QA tables were closed.
+- Preserved all previous rules/repairs: Moon defaults OFF/human-only option/bots prohibited/failed human Moon loses match, full X1 v2, random bots, immediate max-bid auction end, steady trump highlight/two sounds, portrait labels, same-document lobby return, entry/install routing, artwork/audio and saved data. Stage route disabled. Physical Android/portrait/long-suspension acceptance not certified.
+- Receipt coordination/qa/LIVE_RECEIPT_NAMED_TABLES_20261022.json and AH copy. Older release identities below remain historical.
+
 ## CURRENT RETURN TO LOBBY WITHOUT ARTWORK RELOAD — October 22, 2026
 
 This is the current release identity. Owner reported Preparing the House/loading artwork every time they left a table. Native leave called location.reload; Cloudflare guest disconnect reloaded and closed-table handling replaced the page.
