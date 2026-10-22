@@ -50,3 +50,10 @@ Date: 2026-10-22
 - Master Brain `brain/current.json` remains the global release authority. Record Version 40 as active and the v6c branded-only UI override separately.
 - Keep the original old `workers.dev` game address functional; its origin-specific localStorage does not automatically transfer to `rooks.jeromegriffin.com`.
 - To roll back the core game, redeploy v36 by version ID at 100% if confirmed necessary. To revert just the invitation UI visibility change, restore archived branded-only v6b script `coordination/domain-20261022/rooks-branded-entry-v6b-prejoin-consent.js`. Avoid touching core room state.
+
+## Branded Play With Friends double-load regression — 2026-10-22
+- Used Cloudflare Browser Rendering with mobile touch viewport 360×780 against the **actual live branded game**, after its normal full 104/104-image preloader completed.
+- Entered a temporary name and tapped the **actual** `#friendsToggleBtn` control. Native Cloudflare multiplayer handler created a room; the waiting-room screen opened in the **same document**, rather than navigating/reloading the whole game.
+- Results: `loaderCleared:true`, `clicked:true`, `hostCreated:true`, `sameUrl:true`, `navigationCountUnchanged:true`, `waitingVisible:true`, `resourceBefore:250`, `resourceAfter:250`, `additionalResources:0`, `pass:true`.
+- Temporary QA room closed successfully (`closeStatus:200`).
+- This directly verifies the original Play With Friends double-loading regression in the mobile-sized Chromium test. It does not measure bandwidth or startup times on the owner's physical Android or actual Facebook WebView.
