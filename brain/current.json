@@ -1930,7 +1930,7 @@
   },
   "customDomainSetup": {
     "date": "2026-10-22",
-    "status": "BRANDED_FB_SHARE_AND_V40_SEAT_SELECTION_LIVE; EXTENDED_ANDROID_AND_FULL_MATCH_QA_PENDING",
+    "status": "BRANDED_V40_TWO_COMPLETE_LIVE_MATCH_TESTS_AND_IDENTITY_VISIBILITY_PATCHED; EXTENDED_PHYSICAL_ANDROID_QA_PENDING",
     "domain": "jeromegriffin.com",
     "homepage": "https://jeromegriffin.com/",
     "facebookSharePage": "https://jeromegriffin.com/rooks",
@@ -1982,7 +1982,7 @@
       "roomLandingRetainsCode": true,
       "roomLandingJoinTargetPattern": "https://rooks.jeromegriffin.com/?room=ROOMCODE",
       "shareHandler": "rooks-branded-entry-only-20261022",
-      "shareHandlerVersion": "20261022-v5a",
+      "shareHandlerVersion": "20261022-v6c-invite-identity-visible",
       "duplicateLinkAvoidedInSharePayload": true,
       "sourceBackupBranch": "work/jeromegriffin-domain-setup-20261022",
       "sourceReceipt": "coordination/domain-20261022/BRANDED_LAUNCH_QA.md",
@@ -1997,7 +1997,8 @@
       "copyRoomLinkOption": true,
       "missingPreviewIssue": "Android native Web Share gave plain-text Facebook status, screenshot 20261022; new Facebook-specific flow deployed but real FB card still unverified",
       "browserUserAgentMetaVerified": true,
-      "sourceFile": "coordination/domain-20261022/rooks-branded-entry-v5a-facebook-share.js"
+      "sourceFile": "coordination/domain-20261022/rooks-branded-entry-v5a-facebook-share.js",
+      "brandInviteControlsVisibleOnMobileEmulation": true
     },
     "brandedMultiplayerSingleLoad": {
       "updated": "2026-10-22",
@@ -2011,7 +2012,10 @@
       "preserveCleanRoomShare": true,
       "browserAssetTransferCountsMeasured": false,
       "qaReport": "coordination/domain-20261022/BRANDED_LAUNCH_QA.md",
-      "sourceFile": "coordination/domain-20261022/rooks-branded-entry-v4-single-load.js"
+      "sourceFile": "coordination/domain-20261022/rooks-branded-entry-v4-single-load.js",
+      "brandedCurrentScriptVersion": "20261022-v6c-invite-identity-visible",
+      "underlyingNativeHandlerRetained": true,
+      "measuredAndroidLoadCount": false
     },
     "directRoomLink": {
       "date": "2026-10-22",
@@ -2058,7 +2062,7 @@
       "v6Backup": "coordination/domain-20261022/rooks-branded-entry-v6-prejoin-consent.js"
     },
     "inviteSeatSelection": {
-      "status": "LIVE_VERSION_40_SEAT_SELECTION_VERIFIED_SERVER_UI_AND_WEBSOCKET_SMOKE; ANDROID_LONG_SUSPEND_FULL_MATCH_QA_PENDING",
+      "status": "LIVE_VERSION_40_TWO_FULL_MATCHES_SERVER_RECONNECT_WEBSOCKET_PRIVACY_QA_PASSED; ANDROID_PHYSICAL_OFFLINE_QA_PENDING",
       "lastWorkDate": "2026-10-22",
       "liveBrandedOverride": "rooks-branded-entry-only-20261022",
       "liveOverrideVersion": "20261022-v6b-prejoin-consent",
@@ -2104,7 +2108,12 @@
         "productionHttpRoomTestsPassed": true,
         "productionWebSocketSnapshotPassed": true,
         "productionRealGameUIJoinPassed": true,
-        "qaRoomsClosed": true
+        "qaRoomsClosed": true,
+        "full2Human2BotMatchPassed": true,
+        "full4HumanMatchPassed": true,
+        "liveWebsocketReconnectPassed": true,
+        "privateHandsVerified": true,
+        "duplicateActionsIdempotent": true
       },
       "doNotDeployVersion37": "0b8ef900-e73e-4a72-8853-f1c17d43289f (missing RoomDO export)",
       "productionVersionStill": "dd4dbc6c-4640-4d84-a91c-15148de87a49",
@@ -2117,8 +2126,31 @@
       "productionDeploymentId": "f1c472f5-f5ee-4ed3-b0f4-877d29e95f5b",
       "rollbackVersion": "3df448a2-83f0-4fd0-be97-665a067848de",
       "realAndroidLongSuspendQaPending": true,
-      "fullMultiplayerMatchQaPending": true,
-      "invalidCandidate39": "aefaafd8-a522-4118-ac53-6b3d982591b3 (briefly deployed then rolled back; missing top-level seat-options router)"
+      "fullMultiplayerMatchQaPending": false,
+      "invalidCandidate39": "aefaafd8-a522-4118-ac53-6b3d982591b3 (briefly deployed then rolled back; missing top-level seat-options router)",
+      "extendedQaReport": "coordination/domain-20261022/V40_LIVE_RELIABILITY_QA_20261022.md",
+      "remainingChecks": [
+        "Owner Android Facebook in-app test",
+        "Multi-minute mobile background suspension and new network resume",
+        "Offline/PWA install/origin migration",
+        "Quantified load/cache performance on physical Android",
+        "Long multi-hand rule regression"
+      ]
+    },
+    "mobileInvitationIdentityVisibility": {
+      "date": "2026-10-22",
+      "status": "LIVE_BRANDED_ONLY_VERIFIED_IN_360x780_EMULATED_VIEWPORT",
+      "cause": "landing-returning CSS hides name/avatar inputs on invite",
+      "fix": "invited guest removes landing-returning class after original game has initialized; only at branded hostname",
+      "script": "rooks-branded-entry-only-20261022",
+      "sourceFile": "coordination/domain-20261022/rooks-branded-entry-v6c-invite-identity-visible.js",
+      "passedChecks": [
+        "name and avatar shown",
+        "join form visible",
+        "choose seat available",
+        "take your seat remains within viewport"
+      ],
+      "doesNotModifyArtwork": true
     }
   }
 }
