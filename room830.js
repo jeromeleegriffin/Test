@@ -21,7 +21,7 @@
   }
   const brand = document.createElement('div');
   brand.className = 'room-brand830';
-  brand.innerHTML = '<img src="assets/brand835/house-plaque835.png" alt="Griffin House of Rooks">';
+  brand.innerHTML = '<img src="assets/brand835/griffin-wordmark-20261022.png" alt="Griffin House of Rooks">';
   lobby.append(brand);
   if (waiting) {
     const b = brand.cloneNode(true);
@@ -112,3 +112,4 @@
   document.addEventListener('DOMContentLoaded', sync);
   sync();
 })();
+

@@ -70,7 +70,7 @@ const repaired=list.find(e=>e.path==='asset-loading772.js');
 if(!repaired)throw Error('Missing base asset loader');
 repaired.bytes=repair.length;repaired.sha256=crypto.createHash('sha256').update(repair).digest('hex');repaired.patch='work/asset-recovery-20261021';
 // Owner-authorized policy and tactile trump feedback; other R10 assets stay pinned.
-const policyFiles=['game060.js','index.html','polish.js','bots.js','x1/integration.js','progression.js','hor-version.js','sw060.js','trump714.js','trump714.css','friends803.js','friends803.css','cloudflare-entry.js'];
+const policyFiles=['game060.js','index.html','polish.js','bots.js','x1/integration.js','progression.js','hor-version.js','sw060.js','trump714.js','trump714.css','friends803.js','friends803.css','cloudflare-entry.js','room-approved805.js','room830.js'];
 for(const rel of policyFiles){
   const bytes=fs.readFileSync(path.join(work,rel));
   const item=list.find(e=>e.path===rel);
@@ -78,6 +78,12 @@ for(const rel of policyFiles){
   fs.copyFileSync(path.join(work,rel),path.join(assets,rel));
   item.bytes=bytes.length;item.sha256=crypto.createHash('sha256').update(bytes).digest('hex');item.patch=rel.startsWith('trump714.')?'tactile-trump-feedback':'human-only-moon-r11';
 }
+// Owner-approved transparent wordmark; retain old plaque for rollback/cache compatibility.
+const wordmark='assets/brand835/griffin-wordmark-20261022.png';
+const wordmarkBytes=fs.readFileSync(path.join(work,wordmark));
+fs.mkdirSync(path.dirname(path.join(assets,wordmark)),{recursive:true});
+fs.writeFileSync(path.join(assets,wordmark),wordmarkBytes);
+list.push({path:wordmark,bytes:wordmarkBytes.length,sha256:crypto.createHash('sha256').update(wordmarkBytes).digest('hex'),patch:'owner-approved-gold-wordmark'});
 if(!fs.readFileSync(path.join(assets,'game060.js'),'utf8').includes('or lose the match'))throw Error('Moon UI overlay absent');
 if(!fs.readFileSync(path.join(work,'cloudflare/live/worker-live.mjs'),'utf8').includes('BOT_MOON_FORBIDDEN'))throw Error('Moon reducer authority absent');
 const originalSW=fs.readFileSync(path.join(source,'sw060.js'),'utf8');

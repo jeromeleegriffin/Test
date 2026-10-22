@@ -102,7 +102,7 @@ const SHELL = [
   './assets/bidbox-approved/bidbox_complete_blank.png',
   './assets/bidbox-moon-review/bidbox-approved-scrollwork.png',
   './assets/bidbox-moon-review/gold-connector.png',
-  './assets/brand835/house-plaque835.png',
+  './assets/brand835/griffin-wordmark-20261022.png',
   './assets/cardholder/backrest004.png',
   './assets/cardholder/bridge004.png',
   './assets/cardholder/connector050.png',

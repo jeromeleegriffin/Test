@@ -52,7 +52,7 @@
     const branding = document.getElementById('landingBrand783');
     if (branding) {
       const img = document.createElement('img');
-      img.src = 'assets/brand835/house-plaque835.png';
+      img.src = 'assets/brand835/griffin-wordmark-20261022.png';
       img.alt = 'Griffin House of Rooks';
       branding.replaceChildren(img);
       branding.classList.add('room805-brand-ready');
@@ -78,3 +78,4 @@
     document.addEventListener('DOMContentLoaded', init, { once: true });
   else init();
 })();
+
