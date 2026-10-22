@@ -482,61 +482,62 @@
     <link rel="stylesheet" href="house-premium-ui.css" />
 
     <style id="houseTableConfirmStyle">
+      /* Legacy modal exclusions contain two IDs; this one panel must outrank them. */
       #confirmContext { display: none !important; }
-      #confirmSheet.table-close-confirm[open] {
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm[open] {
         display: block !important; position: fixed !important; inset: 0 !important; margin: auto !important;
         width: min(420px, calc(100% - 32px)) !important; height: fit-content !important;
         max-height: calc(100dvh - 32px) !important; padding: 0 !important; border: 0 !important;
         background: transparent !important; border-radius: 16px !important; overflow: auto !important;
         color: #f6ecd8 !important;
       }
-      #confirmSheet.table-close-confirm::backdrop {
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm::backdrop {
         background: rgba(5, 8, 9, .76) !important; backdrop-filter: blur(4px) !important;
       }
-      #confirmSheet.table-close-confirm .modal-content {
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm .modal-content {
         width: auto !important; max-width: none !important; margin: 0 !important; padding: clamp(22px, 6vw, 32px) !important;
         border: 1px solid #b49a60 !important; border-radius: 16px !important;
         background: radial-gradient(ellipse at top, #76503266, transparent 75%), linear-gradient(145deg, #322015, #1c130e 65%, #302014) !important;
         box-shadow: inset 0 0 0 4px #120d09, inset 0 0 0 5px #80613988, 0 18px 60px #0009 !important;
         text-align: center !important;
       }
-      #confirmSheet.table-close-confirm #confirmContext {
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm #confirmContext {
         display: block !important; color: #d6b977 !important; font: 600 11px/1.5 system-ui, sans-serif !important;
         letter-spacing: .16em !important; margin: 0 0 14px !important;
       }
-      #confirmSheet.table-close-confirm h2 {
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm h2 {
         margin: 0 0 14px !important; color: #f4e3b8 !important; font: 700 clamp(26px, 7vw, 32px)/1.15 Georgia, serif !important;
       }
-      #confirmSheet.table-close-confirm #confirmBody {
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm #confirmBody {
         opacity: 1 !important;
         margin: 0 auto 26px !important; color: #dfd3bf !important; font: 16px/1.5 Georgia, serif !important;
         max-width: 30ch !important; overflow-wrap: normal !important;
       }
-      #confirmSheet.table-close-confirm .btn-row {
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm .btn-row {
         display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 12px !important; margin: 0 !important;
       }
-      #confirmSheet.table-close-confirm .btn {
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm .btn {
         width: 100% !important; min-width: 0 !important; min-height: 48px !important; padding: 10px 12px !important;
         border: 1px solid #a68a52 !important; border-radius: 8px !important; font: 700 16px/1.2 Georgia, serif !important;
         box-shadow: inset 0 1px 0 #fff2, 0 3px 8px #0005 !important; cursor: pointer !important;
       }
-      #confirmSheet.table-close-confirm #confirmCancel {
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm #confirmCancel {
         order: 0 !important; background: linear-gradient(#25302b, #131c19) !important; color: #f0e6d3 !important;
       }
-      #confirmSheet.table-close-confirm #confirmOk {
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm #confirmOk {
         order: 1 !important; background: linear-gradient(#dec17d, #b79045) !important; color: #24170c !important;
       }
-      #confirmSheet.table-close-confirm .btn:focus-visible { outline: 2px solid #ffe6a2 !important; outline-offset: 3px !important; }
-      #confirmSheet.table-close-confirm .btn:active { transform: translateY(2px) !important; filter: brightness(.9) !important; }
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm .btn:focus-visible { outline: 2px solid #ffe6a2 !important; outline-offset: 3px !important; }
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm .btn:active { transform: translateY(2px) !important; filter: brightness(.9) !important; }
       @media (max-height: 420px) {
-        #confirmSheet.table-close-confirm .modal-content { padding: 18px 24px !important; }
-        #confirmSheet.table-close-confirm #confirmContext { margin-bottom: 8px !important; }
-        #confirmSheet.table-close-confirm #confirmBody {
+        #confirmSheet#confirmSheet#confirmSheet.table-close-confirm .modal-content { padding: 18px 24px !important; }
+        #confirmSheet#confirmSheet#confirmSheet.table-close-confirm #confirmContext { margin-bottom: 8px !important; }
+        #confirmSheet#confirmSheet#confirmSheet.table-close-confirm #confirmBody {
         opacity: 1 !important; margin-bottom: 16px !important; }
       }
     
-      #confirmSheet.table-close-confirm .modal-content::before,
-      #confirmSheet.table-close-confirm .modal-content::after { display: none !important; }
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm .modal-content::before,
+      #confirmSheet#confirmSheet#confirmSheet.table-close-confirm .modal-content::after { display: none !important; }
 </style>
   </head>
   <body class="theme-classic cardback-griffin room-theme-midnight">
