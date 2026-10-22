@@ -72,3 +72,21 @@ Live prejoin consent resides ONLY in override Worker `rooks-branded-entry-only-2
 - Any production upload must use Cloudflare Workers versioning/rollback and preserve `ASSETS` (`keep_assets:true`), the current `ROOMS` namespace/class, `TEST_GATE_KEY` secret, `ENTRY_LIMIT`, `ACTION_LIMIT`, compatibility settings, and original game assets. DO NOT deploy an older GitHub worker source or unverified multipart metadata.
 - Current live branded-only JS override `rooks-branded-entry-only-20261022` version `20261022-v6b-prejoin-consent` keeps name confirmation + approved Facebook sharing. Do not remove it before a safe full integration.
 - Owner's approved Facebook room and regular-game preview imagery still remain on `jeromegriffin.com`; no artwork changes or duplicate asset upload.
+
+## Live production v40 reconciliation — October 22, 2026
+A concurrent work stream deployed the seat-choice feature while this isolated-work chat was testing it. **Do not redeploy the old staged candidate.** Authoritative Cloudflare GET deployments showed:
+
+- Worker: `griffin-house-of-rooks-online`
+- Deployed v40 version ID: `dd4dbc6c-4640-4d84-a91c-15148de87a49` at 100% traffic
+- Deployment ID: `f1c472f5-f5ee-4ed3-b0f4-877d29e95f5b`
+- Deployment annotation: `v40 seat selection with top-level options route; v36 rollback if critical QA fails.`
+- Full **268,275-character deployed JavaScript module** was fetched in 16 guarded pieces and archived at `cloudflare/isolated/live-v40-worker-20261022.mjs`. This is a source recovery snapshot, not an uploaded ZIP or a second Worker.
+- Current bindings verified intact: `ASSETS` asset binding, `ROOMS` namespace `bb1bf1c32b68451cbe5db6fee3066fa0` (RoomDO), `ENTRY_LIMIT` limit 12/min in namespace `14784620261020`, `ACTION_LIMIT` 360/min in namespace `14784620261021`, and existing `TEST_GATE_KEY` secret_text.
+- The active source contains `preferredSeat` in RoomService.join, read-only seatOptions, atomic `SEAT_OCCUPIED` validation, and an embedded current adapter with `prepareInvitationSeats`. The old source-upload attempt stopped at its extraction guard and did not deploy another version.
+- Browser rendering of `https://rooks.jeromegriffin.com/?room=ABC23456` showed the name/avatar/seat-picker UI, with unavailable room `ROOM_NOT_FOUND` and disabled Take Your Seat. Browser rendering of `https://jeromegriffin.com/r/ABC23456` followed the branded direct-link into that join UI; `https://jeromegriffin.com/rooks` still had the approved OG art.
+- The original sandbox prior to v40 had already passed real game-interface partner-seat join and 2-of-4 waiting room state, isolated simultaneous seat racing, token-protected reconnect, and real DO snapshot read. The live production version includes matching functionality, but **no new two-device physical Android timing/network test was run in this turn**.
+- Do not infer a room exists from its shareable preview. Unknown/expired room codes correctly give ROOM_NOT_FOUND without reserving a seat.
+- The Facebook approved photograph stays at `https://jeromegriffin.com/images/rooks-v1.jpg`. The branded-domain invitation script `rooks-branded-entry-only-20261022` v6b and original workers.dev address remain available.
+- **Stop deploying competing copies from other chats** until current Cloudflare deployment ID is compared. Recover by Cloudflare version rollout rather than clearing players' storage, resetting DOs or reuploading artwork.
+
+Outstanding: real two-device Android join via fresh Facebook post and background/resume validation, old origin saved-progress transfer strategy, documentation finalization. Owner has approved homepage appearance for now.
