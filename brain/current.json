@@ -1992,6 +1992,20 @@
       "originalWorkersDevShareUnchanged": true,
       "legacyStorageUntouched": true,
       "queryStringGameRootOGNotYetCovered": true
+    },
+    "brandedMultiplayerSingleLoad": {
+      "updated": "2026-10-22",
+      "status": "V4_EARLY_RETURN_NATIVE_HANDLER_RESTORED_CODE_AND_LIVE_JS_VERIFIED_DEVICE_LOAD_COUNT_PENDING",
+      "worker": "rooks-branded-entry-only-20261022",
+      "route": "rooks.jeromegriffin.com/cloud-game/assets/cloudflare-entry.js*",
+      "version": "20261022-v4",
+      "change": "Return early when HOR_CLOUD_TEST_ACTIVE is true so native Cloudflare create/join click handler operates in place without whole-page form navigation",
+      "rootCause": "v3 override intercepted native capture click and triggered full navigation / duplicate page initialization",
+      "preserveOldWorker": true,
+      "preserveCleanRoomShare": true,
+      "browserAssetTransferCountsMeasured": false,
+      "qaReport": "coordination/domain-20261022/BRANDED_LAUNCH_QA.md",
+      "sourceFile": "coordination/domain-20261022/rooks-branded-entry-v4-single-load.js"
     }
   }
 }
