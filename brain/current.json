@@ -2056,6 +2056,38 @@
       "originalWorkersDevUnaffected": true,
       "handoff": "coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md",
       "v6Backup": "coordination/domain-20261022/rooks-branded-entry-v6-prejoin-consent.js"
+    },
+    "inviteSeatSelection": {
+      "status": "LIVE_NAME_AVATAR_CONFIRMATION_V6B; ATOMIC_BACKEND_AND_R12_UI_SANDBOX_VERIFIED; FULL_SEAT_SELECTION_NOT_DEPLOYED",
+      "lastWorkDate": "2026-10-22",
+      "liveBrandedOverride": "rooks-branded-entry-only-20261022",
+      "liveOverrideVersion": "20261022-v6b-prejoin-consent",
+      "liveBehavior": "Incoming room invite preserves room code, requires visitor to explicitly confirm name/avatar, and no longer auto-joins from a remembered or URL-provided player name; the current live backend still assigns first available seat after confirmation.",
+      "isolatedAtomicQa": {
+        "passed": true,
+        "independentSqliteDO": true,
+        "hostSeat": 0,
+        "selectableSeats": [
+          1,
+          2,
+          3
+        ],
+        "concurrentClaimsWon": 1,
+        "loserError": "SEAT_OCCUPIED",
+        "rejoinedReservedSeat": 2,
+        "opponentSeat": 3,
+        "legacySeat": 1
+      },
+      "currentReleaseAdapterExtracted": "cloudflare/isolated/current-live-cloud-adapter-20261022.js",
+      "rebasedR12Candidate": "cloudflare/isolated/seat-selection-adapter-r12-candidate-20261022.js",
+      "rebasedAdapterBrowserParsePassed": true,
+      "backendCandidate": "cloudflare/isolated/seat-selection-worker-candidate-20261022.mjs",
+      "isolatedTestWorkersDeleted": true,
+      "originalCloudflareWorkerUntouched": true,
+      "activeDurableObjectDataUntouched": true,
+      "fullProductionSeatPickerEnabled": false,
+      "blockedOn": "Safe integration of chosen-seat server patch onto exact deployed runtime with all existing ASSETS, ROOMS, rate-limit and TEST_GATE_KEY bindings preserved, then full UI/DO browser multiplayer QA.",
+      "handoff": "coordination/domain-20261022/ROOM_INVITE_SEAT_SELECTION_HANDOFF.md"
     }
   }
 }
