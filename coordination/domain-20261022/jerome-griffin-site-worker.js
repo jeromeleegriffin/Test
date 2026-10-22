@@ -31,7 +31,8 @@ function roomInvite(code){
   const title='Griffin House of Rooks | Table '+code;
   const description='Join my Griffin House of Rooks table. Code: '+code+'. No download required.';
   const body='<section class="container"><div class="gold">You are invited</div><h1>Take your seat at House of Rooks</h1><p>Join a game with friends. No download required.</p><img width="1200" height="630" src="'+rooksArt+'" alt="Approved Griffin House of Rooks artwork with Grit, Ember and Sofia"><div class="panel" style="margin-top:22px;max-width:650px"><div class="gold">Your table code</div><h2 style="letter-spacing:.13em">'+code+'</h2><p>Use this invitation to join that table. The host needs to leave the table open.</p><div class="buttons"><a class="button" href="'+gameUrl+'">Join Table '+code+' →</a><a class="button secondary" href="/rooks">About the Game</a></div></div></section>';
-  return layout(title,description,shareUrl,rooksArt,'image/jpeg',body);
+  const autoOpen = '<script>(function(){var ua=navigator.userAgent||"";if(/facebookexternalhit|facebot|twitterbot|slackbot|discordbot|linkedinbot|telegrambot|pinterestbot/i.test(ua))return;window.location.replace('+JSON.stringify(gameUrl)+');})()<'+'/script>';
+  return layout(title,description,shareUrl,rooksArt,'image/jpeg',body+autoOpen);
 }
 function apps(){
  const body='<section class="container"><div class="gold">Software and projects</div><h1>Apps by Jerome Griffin</h1><p>Games are only one part of the picture. This is a home for new tools, utilities, and applications as well as games.</p><div class="grid"><article class="panel"><h2>Griffin House of Rooks</h2><p>Play offline or with friends. No download required.</p><a href="/rooks">Explore Rooks →</a></article><article class="panel"><h2>More apps coming</h2><p>New software will appear here as it is released.</p></article></div></section>';
