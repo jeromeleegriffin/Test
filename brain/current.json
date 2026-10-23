@@ -2441,5 +2441,7 @@
     "newUserSignupsAllowed": true,
     "anonymousSignInsAllowed": false,
     "emailProviderEnabled": true
-  }
+  },
+  "careerHandoff": "versions/AH/files/01_MASTER_BANK/CAREER_QA_HANDOFF_20261023.md",
+  "careerStatus": "STAGED_NOT_DEPLOYED"
 }
