@@ -2,11 +2,11 @@
 
 **Date:** 2026-10-23  
 **Authorization:** The owner said to get all fixes and live updates going. This release is live.  
-**Production:** Cloudflare Worker `griffin-house-of-rooks-online`, v61 `4ab1211d-9bc7-4d9e-a5df-f4c81fa5bf06`, deployment `94c18a13-9f17-466f-808b-c4174f0efe2c`, 100%.
+**Production baseline when first published:** Cloudflare Worker `griffin-house-of-rooks-online`, v61 `4ab1211d-9bc7-4d9e-a5df-f4c81fa5bf06`, deployment `94c18a13-9f17-466f-808b-c4174f0efe2c`, 100%. Current production is v62, recorded below.
 
 ## Signup clarity and name limits
 
-The live Cloud Career Create account form now has a visible, high-contrast player-name input, with the label “Player name (shown in games and leaderboards)” and placeholder “Enter your player name.” Helper text says: “3–12 characters. Start with a letter; use letters, numbers, or _. Game bot names are reserved.” The HTML field and client validation cap names at 12; API validation, Auth metadata, signup trigger, and the Supabase account-name rule also enforce 3–12. This matches the existing game display-name input’s 12-character cap.
+The v61 Cloud Career Create account form had a visible, high-contrast player-name input, with the label “Player name (shown in games and leaderboards)” and placeholder “Enter your player name.” The v61 helper allowed letters, numbers, and underscores. v62 below extends this to internal spaces while retaining the 3–12-character limit and bot-name reservations.
 
 Verification used the live game: Menu → My Career & Awards → Cloud career, saves & recovery → Create account. The field appeared between Email and New password, and the screenshot showed clear white input styling against the navy dialog. The Cloud Career page first opens in sign-in mode; “Create account” switches to signup mode.
 
@@ -22,12 +22,13 @@ Applied migration history confirms:
 
 - `20261023080817` — `rooks_daily_public_leaderboards`
 - `20261023085320` — `player_account_name_limit_12`
+- `20261023090736` — `player_account_names_allow_spaces_v1`
 
 Pre-migration account check found no player rows and no names over 12 characters. The account-name rule now limits player names to 3–12. Daily leaderboard snapshots refresh at 04:15 UTC; the player board ranks by level, the combined fixed bot roster by win percentage. Bot display stats are games played, wins, losses and win percentage only. The schedule consolidates public board output once daily while account-level contributions update on save.
 
 ## Production integrity
 
-The v61 Cloudflare deployment is at 100% and has the original runtime bindings: `ACTION_LIMIT`, `ASSETS`, `CAREER_EMAIL_READY=true`, `ENTRY_LIMIT`, `ROOMS` (namespace `bb1bf1c32b68451cbe5db6fee3066fa0`), and `TEST_GATE_KEY`. Static asset package: 1,635 assets / 222,350,178 bytes. No Durable Object storage reset occurred. A temporary deploy hook and temporary KV namespace used during release work were deleted.
+The current v62 Cloudflare deployment is at 100% and has the original runtime bindings: `ACTION_LIMIT`, `ASSETS`, `CAREER_EMAIL_READY=true`, `ENTRY_LIMIT`, `ROOMS` (namespace `bb1bf1c32b68451cbe5db6fee3066fa0`), and `TEST_GATE_KEY`. Static asset package: 1,635 assets / 222,350,178 bytes. No Durable Object storage reset occurred. A temporary deploy hook and temporary KV namespace used during release work were deleted.
 
 ## Verification
 
@@ -37,40 +38,18 @@ Passed local suites: progressive daily bonus (level 30→50 in 4,815 bonus-only 
 
 - Inspect signup and Cloud Career flow on the owner’s phone, including a Facebook in-app browser.
 - Verify actual confirmation email delivery with a controlled test account.
-- Complete Rita’s verified recovery after her account exists. Her level 16 and human achievement merge procedure is in `HANDOFF.md`; her raw backup is excluded from this ZIP.
+- Rita’s recovery is complete; her verified level-16 career and achievement merge are recorded in `HANDOFF.md`. Her raw backup remains excluded from this ZIP.
 
-## Permanent continuity rule
+## v62 — player names with spaces and recovery verification
 
-PERMANENT, SELF-PERPETUATING CHAT CONTINUITY RULE
+**Date:** 2026-10-23. The owner had already approved the account-name change and production release.
 
-This rule applies to Master Control and every Griffin House specialist chat, now and in the future.
+Player account names now accept internal spaces such as `Jerome Griff`. Leading/trailing whitespace is trimmed, repeated whitespace is collapsed, and names remain 3–12 characters, start with a letter, and otherwise use letters, numbers, underscores, or spaces. The UI, Cloudflare API, signup metadata, and Supabase rule share the same validation. Reserved bot names remain blocked, including punctuation/space variants. Supabase migration `20261023090736 player_account_names_allow_spaces_v1` is applied.
 
-1. When a conversation becomes long or difficult to manage, proactively warn me and recommend a fresh continuation chat before important information is lost.
+The update was built from the current production Worker module and uploaded through Cloudflare’s content-only endpoint, which the Cloudflare API describes as replacing script content without changing config or metadata. Cloudflare created Worker version `d42a6613-7b4d-4b50-a209-0d04e08b7971` (v62) and deployment `35cba8fa-7184-4d56-b3d0-75bde9459a3a`, active at 100%. Post-upload settings matched all six prior bindings: `ACTION_LIMIT`, `ASSETS`, `CAREER_EMAIL_READY`, `ENTRY_LIMIT`, `ROOMS`, and `TEST_GATE_KEY`. The live `/career-api/config` returned `emailReady:true`; a fresh game page loaded. Durable Object room storage was not reset. The content upload did not alter account data.
 
-2. Before switching chats, prepare a complete handoff with the current Master Brain version, GitHub locations, approved decisions, locked designs, unfinished work, rejected attempts, verified game baseline, rollback files, ZIP packages, reference screenshots, restrictions, and next steps.
+Same-account multi-device behavior: two or more devices signed into the same account point to one cloud career record. Career backups are snapshots; local/device histories are not automatically summed. A device can restore the cloud snapshot or deliberately upload its local career, retaining a previous cloud backup. Revision checks reject stale concurrent writes and ask the user to reopen Cloud Career. They prevent silent overwrite but are not a merge of concurrent progress.
 
-3. Provide one complete, ready-to-paste startup prompt for the next chat.
+Rita’s exact confirmed identity was verified before the authorized recovery. Her legacy lifetime record and the separate human “You” record were combined. The pre-recovery save remains as a previous version; bot ledgers were unchanged. The current career is level 16 with 59,000 points, 348 hands, 70 games played / 42 wins, 986 tricks and 31 human achievements across active/retired records (28 active, 3 retired). Revision 4 is current and revision 3 is the recovery point. Her raw source backup and account identifiers are not included here.
 
-4. Every handoff and every new startup prompt MUST reproduce this entire continuity rule and explicitly instruct the next assistant to reproduce it again in its own future handoffs and startup prompts.
-
-5. The next assistant must pass this same obligation to its successor, and that successor must pass it to the next, continuing through every future chat generation. Never allow the rule to disappear from the chain.
-
-6. Preserve the continuity rule in every future Master Brain update. Do not shorten, silently omit, or weaken it.
-
-7. Never rely on chat memory alone. Important decisions must be recorded in durable project documentation through the approved process.
-
-8. At the beginning of every replacement chat, verify the current Master Brain and the inherited handoff before starting work.
-
-IMPLEMENTATION REQUIREMENT:
-
-Store this rule verbatim in Master Brain M.
-
-Reproduce the entire rule verbatim in START HERE and in the ready-to-paste replacement-chat startup prompt.
-
-Instruct every successor to reproduce it verbatim again in its own handoffs, startup prompts, and future Master Brain updates.
-
-Do not replace the rule with a summary or a reference such as "same as before."
-
-
-Successor requirement: preserve this complete rule verbatim in every future handoff, startup prompt, and Master Brain update. Continue from live Worker v61; do not restart.
-
+Verification: rebuilt v50 bundle; `node --check cloud-career/main-v50.mjs`; account-name API tests; client autosave/conflict tests; API security/refresh/rate-limit tests all pass. Production version and bindings were read back, config endpoint verified, and live game loaded. The signup form was not submitted during this particular QA pass. Actual email recipient delivery outside the user-completed signup and physical Facebook Android join/reconnect behavior remain unverified.
