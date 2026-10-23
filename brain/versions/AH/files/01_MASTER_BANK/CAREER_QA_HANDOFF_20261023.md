@@ -19,7 +19,7 @@ Release status: Review/staging only. Nothing here was deployed to Cloudflare or 
 ## Staged files
 
 - cloud-career/career-core-v46.js and career-audit-career-core.js: same new daily bonus policy in cloud and offline career cores.
-- cloud-career/daily-leaderboard-rollups-v1.sql: private player and bot snapshot tables, daily refresh function, sanitized read RPCs, and 04:15 UTC Cron schedule. Requires the current player leaderboard and bot aggregate RPCs first.
+- cloud-career/daily-leaderboard-rollups-v1.sql: private player and bot snapshot tables, private source aggregators, sanitized read RPCs, and 04:15 UTC Cron schedule. Refresh reads career/account/contribution source tables directly and never calls its own public snapshot readers.
 - cloud-career/test-daily-leaderboard-rollups.cjs: 1,000-player and fixed 54-bot-rank snapshot model.
 - cloud-career/main-v50.mjs: rebuilt Worker bundle with the staged career core; it is not deployed.
 - cloud-career/V49_HANDOFF.md: corrected first-sign-in auto-upload behavior plus the staged career status.
@@ -51,7 +51,7 @@ The 25 IDs found in the local human You ledger are: career_points_1, career_poin
 ## Next steps
 
 1. Owner reviews the career QA ZIP and tests the revised login reward and leaderboard designs.
-2. After approval to go live, verify existing player and bot RPCs, pg_cron availability and current RLS/advisors; apply the daily snapshot migration in a controlled deployment, then verify the scheduled job and returned snapshot payloads.
+2. After approval to go live, verify career/account/bot contribution tables, pg_cron availability and current RLS/advisors; apply the daily snapshot migration in a controlled deployment, then verify the scheduled job and returned snapshot payloads.
 3. Deploy Worker v50 only after the owner explicitly authorizes going live. Preserve current R12 runtime/rollback and do not reset the RoomDO namespace.
 4. When Rita registers, verify the account by the exact supplied email and auth identity, preserve the current cloud save as a recovery version, then import the merged backup into only that account. Verify level 16, all achievements and bot stats before confirming completion.
 5. Keep player stats ordered by level; keep bot stats ranked by win percentage. Check the public pages at phone and desktop sizes with no vertical scrolling.
