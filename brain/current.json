@@ -2328,17 +2328,17 @@
   "cloudflareCurrentObserved": {
     "date": "2026-10-23",
     "worker": "griffin-house-of-rooks-online",
-    "version": "c12cae49-cc5b-4bc3-a067-dc164f6bc4f9",
-    "deployment": "c66a45d0-e3c1-4496-b3aa-70eb7030d782",
+    "version": "a9654ccd-71a0-43d2-9834-11d356f0e45b",
+    "deployment": "589d4d43-4b1d-401c-9a43-ef4276d71ba5",
     "authoritative": "Cloudflare API",
-    "note": "Version43 guest leave replacement, visible20-second reconnect countdown, temporary bot takeover and earliest alarm. Existing namespace, assets, bindings and v10g invitation UI preserved; exact source verified."
+    "note": "v44 host recovery, bounded session transport, clean table exits. Existing namespace/assets preserved."
   },
   "invitationRecovery20261022": {
-    "status": "V10G_SIMPLE_RETURN_DEPLOYED_BROWSER_VERIFIED",
+    "status": "V10H_MULTIPLAYER_SHARE_DEPLOYED_VERIFIED",
     "cloudflareConnection": "Workers reads and targeted deployment successful after authorization retry",
-    "marker": "20261022-v10g-simple-return",
-    "brandedVersion": "27544ebd-67e6-47ff-a43b-50cd43a5f267",
-    "brandedDeployment": "1322899a-b24e-4d19-8804-e928fb476a98",
+    "marker": "20261023-v10h-multiplayer-share",
+    "brandedVersion": "c69064cd-52cc-4b69-bf6b-f24668421487",
+    "brandedDeployment": "a25daf5a-8f01-4517-a7f7-0d0de39815e3",
     "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
     "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/SIMPLE_RETURN_V10G_HANDOFF.md",
     "independentGuestJoinVerified": true,
@@ -2353,14 +2353,14 @@
       "390x360"
     ],
     "additionalRoute": "rooks.jeromegriffin.com/cloud-game/assets/friends803.js*",
-    "mainWorkerVersion": "c12cae49-cc5b-4bc3-a067-dc164f6bc4f9",
+    "mainWorkerVersion": "a9654ccd-71a0-43d2-9834-11d356f0e45b",
     "guestSeatMoves": "Tap Move here on empty waiting-room seat; atomic server move releases old seat; reconnect follows new seat",
     "labels": [
       "Host a Table",
       "Join a Table"
     ],
     "invitationFocus": "Explicit Return to table / Go to main menu exit; persistent Host’s partner and Host labels",
-    "botInvitationFix": "Occupied bots visible and unavailable to new invite seat selection; both bots retained with guest in empty seat; existing avatar href preserved across joining",
+    "botInvitationFix": "Occupied bots remain visible; joinable waiting-room bots offer Take this seat",
     "twoBotGuestJoinVerified": true,
     "returnScreen": "Welcome back using authenticated saved name; one Return to table button; no repeated identity form; snapshot avatars; host You placeholder corrected; guest side labels at seats"
   },
@@ -2385,5 +2385,17 @@
     "testTablesClosed": true,
     "temporaryWorkerRemoved": true,
     "openPageNote": "One reload needed for existing tabs to receive new client controls"
+  },
+  "multiplayerAudit20261023": {
+    "status": "V44_V10H_DEPLOYED_VERIFIED",
+    "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/MULTIPLAYER_V44_SHARE_HANDOFF.md",
+    "simulatedMatches": 72,
+    "simulatedHands": 257,
+    "independentBrowserSessionsVerified": true,
+    "physicalFacebookAndroidVerified": false,
+    "logo": "Existing gold Griffin192 dialog and512 social previews",
+    "nativeAndroidGlobe": "OS-controlled; not claimed fixed",
+    "testTablesClosed": true,
+    "temporaryWorkersRemoved": true
   }
 }
