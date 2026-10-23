@@ -1,0 +1,15 @@
+# Host/join labels and guest seat moves — October 22, 2026 (US Eastern)
+
+Owner approved Host a Table and Join a Table, and moving to a different open seat before the host starts. Continued v10c, no restart.
+
+LIVE main Worker: griffin-house-of-rooks-online version 42, 1ce5f0cc-0893-4c18-830d-e1dc2652bf55, deployment 232b1d26-a00b-49ee-9dd3-54d7da93477c. Source archived as worker-v41-seat-moves.mjs (filename represents implementation; Cloudflare version41 upload was not deployed because explicit RoomDO export declaration was required; same source uploaded as version42 with exports.RoomDO={type:durable-object,storage:sqlite}). Existing namespace bb1bf1c32b68451cbe5db6fee3066fa0, assets, secret binding, limits, compat date, migration tag v1 all preserved. No storage migration.
+
+LIVE UI Worker: rooks-branded-entry-only-20261022 marker 20261022-v10d-host-join-seat-moves; version cb0e1016-8f27-4572-af73-838c7032ce60, deployment fa2a97cd-b0ac-4f8a-a9b7-a9376242b97a. Same exact two asset routes as v10c. Archived rooks-branded-entry-v10d-seat-moves.js. Exact source read-back checked for main and UI.
+
+Server /move-seat POST: authenticated guest only, waiting phase only, seat1-3 only, destination truly empty, expected revision checked. One persisted room update moves full player record and clears old seat. DO's existing serial request queue ensures competing requests cannot win the same seat. Host remains seat0. No moves after game begins, no human/bot displacement. Same token remains valid. viewerSeat in snapshots synchronizes saved browser seat, identity and host flag, including WebSocket updates and reconnect.
+
+UI: labels Host a Table / Join a Table preserve existing handlers; guest empty seats show touch-sized Move here controls. Fixed waiting room host-oriented map remains. Original invitation direct-to-table flow, keyboard fixes, stale rejoin validation retained. Art, avatar geometry, Bid Dock and gameplay rules unchanged.
+
+Verification: real RoomDO class with mocked storage tests atomic competing requests, released old seat, retained identity/token, rejoin, auth rejection, host-seat restriction, invalid seat, stale revision and started-game lock. Prior eight invitation/resume regression cases pass. Generated browser adapter syntax checked. Browser host on branded origin and independent guest via temporary service-bound QA origin, 390x844: guest joins top seat2, moves left seat1, host sees same update and2/4, reload invitation returns left reservation, rejoins, moves right seat3, automatic reconnect keeps right seat. Final mobile screenshot shows Move here buttons. Closed disposable YOU05 through host UI; both returned to lobby with new labels. Temporary rooks-seat-move-qa Worker removed. Physical Facebook Android WebView not directly tested.
+
+Recovery: source branch work/jeromegriffin-domain-setup-20261022; main brain/current.json updated. Main source filename worker-v41-seat-moves.mjs corresponds to deployed Cloudflare version42. Rollback must retain explicit existing RoomDO export declaration, keep_assets and all bindings; do not remove namespace or restore older whole-game assets.
