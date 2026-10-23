@@ -2,15 +2,15 @@
  let user=null,revision=0,busy=false,linked=false,lastHash='',linkedActor='',panel,status,actions;
  const P=()=>window.HORProgression,core=()=>P()?.core;
  const hash=()=>core().digest(core().collect());
- const api=async(path,body)=>{const r=await fetch('/career-api/'+path,{method:body?'POST':'GET',headers:body?{'content-type':'application/json'}:{},body:body?JSON.stringify(body):undefined,cache:'no-store'});const x=await r.json();if(!r.ok){if(r.status===401||r.status===409)linked=false;throw Error(x.error||'Cloud connection unavailable')}return x};
+ const api=async(path,body)=>{const r=await fetch('/career-api/'+path,{method:body?'POST':'GET',headers:body?{'content-type':'application/json'}:{},body:body?JSON.stringify(body):undefined,cache:'no-store',signal:AbortSignal.timeout(30000)});const x=await r.json();if(!r.ok){if(r.status===401||r.status===409)linked=false;throw Error(x.error||'Cloud connection unavailable')}return x};
  const tell=t=>{if(status)status.textContent=t};
  const button=(label,fn)=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.style.cssText='display:block;width:100%;padding:12px;margin:9px 0;background:#17334a;color:white;border:1px solid #c8ab68;border-radius:8px;cursor:pointer';b.onclick=async()=>{if(busy)return;busy=true;b.disabled=true;try{await fn()}catch(e){tell(e.message)}finally{busy=false;b.disabled=false}};actions.append(b);return b};
  const summary=b=>{try{const s=JSON.parse(b.data.horCareerStateV2);return `${s.identity.displayName}: ${s.records.human.stats.points||0} points, ${s.records.human.stats.gamesPlayed||0} games`}catch{return 'Saved career'}};
  function remember(){linkedActor=core().read()?.identity.id;localStorage.setItem('horCloudLinkV1',JSON.stringify({user:user.id,actor:core().read()?.identity.id,revision,hash:lastHash}))}
- async function save(){const payload=P().protection.buildBackup(),captured=core().digest(payload.data);const r=await api('save',{payload,revision});revision=r.revision;lastHash=captured;linked=true;remember();tell('Saved to your account. Changes on this device will save automatically while the game is open.')}
+ async function save(){const payload=P().protection.buildBackup(),captured=core().digest(payload.data);const r=await api('save',{payload,revision,userId:user.id});revision=r.revision;lastHash=captured;linked=true;remember();tell('Saved to your account. Changes on this device will save automatically while the game is open.')}
  async function restore(payload){core().validateBackup(payload);const expected=hash();if(!confirm('Use '+summary(payload)+' on this device? Your current career will be preserved as a safety backup.'))return;
  P().protection.restoreBackupObject(payload,{expectedLocalHash:expected});linked=false;localStorage.removeItem('horCloudLinkV1');tell('Career recovered. Reloading…');location.reload()}
- async function signedIn(){actions.replaceChildren();const rows=await api('current'),current=rows[0];revision=current?.revision||0;
+ async function signedIn(){actions.replaceChildren();const rows=await api('current'),current=rows[0];if(revision!==(current?.revision||0))linked=false;revision=current?.revision||0;
  tell('Signed in as '+user.email+'. '+(current?'Cloud: '+summary(current.payload)+'.':'No cloud save yet.'));
  button(current?'Save this device’s career to my account':'Start cloud saving from this device',async()=>{if(current&&!confirm('Save '+summary(P().protection.buildBackup())+' to this account? The previous cloud save stays in recovery history.'))return;await save()});
  if(current)button('Use my cloud career on this device',()=>restore(current.payload));
