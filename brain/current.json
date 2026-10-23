@@ -2397,5 +2397,13 @@
     "nativeAndroidGlobe": "OS-controlled; not claimed fixed",
     "testTablesClosed": true,
     "temporaryWorkersRemoved": true
+  },
+  "careerRestore20261023": {
+    "status": "DEPLOYED_LEGACY_STARTER_REPAIR",
+    "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
+    "handoff": "coordination/domain-20261022/CAREER_RESTORE_V45_HANDOFF.md",
+    "originalBackupUnchanged": true,
+    "phoneRestorePending": true,
+    "onlineAccrualGuardStillPending": true
   }
 }
