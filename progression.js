@@ -571,7 +571,9 @@ HORCareerCore.install(window.HORProgression);
     );
   }
   function enqueue(ev) {
-    if (!localAward(ev)) return;
+    // Daily login rewards are issued by the local career core itself. Their notice must not
+    // be filtered by the match-award identity gate used for achievements and game awards.
+    if (ev?.kind !== 'daily-bonus' && !localAward(ev)) return;
     // 020 isolated landscape: retain awards until the scoring/discard screen closes.
     if (
       document.body.classList.contains('angle-c-runtime') &&
@@ -599,7 +601,7 @@ HORCareerCore.install(window.HORProgression);
       state.queue.length
     ) {
       const ev = state.queue.shift();
-      if (!localAward(ev)) continue;
+      if (ev?.kind !== 'daily-bonus' && !localAward(ev)) continue;
       state.active++;
       const h = host(),
         d = document.createElement('div');
@@ -629,7 +631,8 @@ HORCareerCore.install(window.HORProgression);
       if (major && ev.kind !== 'level' && prefs.sound && window.horPlayAwardCrowd041)
         window.horPlayAwardCrowd041();
       else tone();
-      const ms = prefs.mode === 'minimal' ? 1500 : major ? 3200 : 2400;
+      const ms =
+        ev.kind === 'daily-bonus' ? 4600 : prefs.mode === 'minimal' ? 1500 : major ? 3200 : 2400;
       d.__presentationTimer741 = (window.HORRavenFight741?.later || setTimeout)(() => {
         d.classList.add('hide');
         d.__presentationTimer741 = (window.HORRavenFight741?.later || setTimeout)(() => {
@@ -1237,7 +1240,8 @@ HORCareerCore.install(window.HORProgression);
           title: 'Already received today',
           subtitle: 'Your next bonus is waiting tomorrow.',
         };
-    window.setTimeout(() => P.presentation?.enqueue(notice), 900);
+    // Let the lobby finish its initial reveal before showing the small daily notice.
+    window.setTimeout(() => P.presentation?.enqueue(notice), 1600);
     if (result.awarded && result.leveledUp)
       window.setTimeout(
         () =>
