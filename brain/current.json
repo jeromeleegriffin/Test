@@ -2432,10 +2432,14 @@
     "emailReadyBinding": false,
     "accountFlowMockTestsPassed": true,
     "realDeliveryTestPending": true,
-    "setupBlocker": "Send Email Auth Hook is saved and enabled in Supabase; matching Worker secret is active. Keep CAREER_EMAIL_READY=false pending authorized real delivery/account test and verification of email-confirmation settings.",
+    "setupBlocker": "Email provider and confirmation settings verified; Send Email hook enabled and Worker secret active. Actual recipient delivery and account end-to-end testing remain pending owner-authorized account test. CAREER_EMAIL_READY stays false.",
     "emailHookEnabled": true,
     "emailWorkerDeployment": "6c875359-33f2-4941-a836-db3510a83b9f",
     "emailWorkerVersion": "998ff471-5b7c-410b-85ef-68de2130d223",
-    "emailHookVerifiedBy": "Owner screenshot: Auth Hooks lists Send Email hook as ENABLED, 2026-10-23"
+    "emailHookVerifiedBy": "Owner screenshot: Auth Hooks lists Send Email hook as ENABLED, 2026-10-23",
+    "emailConfirmationEnabled": true,
+    "newUserSignupsAllowed": true,
+    "anonymousSignInsAllowed": false,
+    "emailProviderEnabled": true
   }
 }
