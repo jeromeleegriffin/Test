@@ -2334,13 +2334,13 @@
     "note": "Version42 guest seat switching; same existing DO namespace, assets and bindings. Explicit exports.RoomDO sqlite declaration required."
   },
   "invitationRecovery20261022": {
-    "status": "V10F_BOT_OCCUPANCY_DEPLOYED_BROWSER_VERIFIED",
+    "status": "V10G_SIMPLE_RETURN_DEPLOYED_BROWSER_VERIFIED",
     "cloudflareConnection": "Workers reads and targeted deployment successful after authorization retry",
-    "marker": "20261022-v10f-bot-occupancy",
-    "brandedVersion": "b2b586fc-86b1-4a08-b67b-ce04a8c7bb66",
-    "brandedDeployment": "333f9df0-7453-4391-8065-486ea951b142",
+    "marker": "20261022-v10g-simple-return",
+    "brandedVersion": "27544ebd-67e6-47ff-a43b-50cd43a5f267",
+    "brandedDeployment": "1322899a-b24e-4d19-8804-e928fb476a98",
     "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
-    "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/BOT_OCCUPANCY_V10F_HANDOFF.md",
+    "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/SIMPLE_RETURN_V10G_HANDOFF.md",
     "independentGuestJoinVerified": true,
     "reservedSeatReturnVerified": true,
     "physicalFacebookAndroidVerified": false,
@@ -2361,6 +2361,7 @@
     ],
     "invitationFocus": "Explicit Return to table / Go to main menu exit; persistent Host’s partner and Host labels",
     "botInvitationFix": "Occupied bots visible and unavailable to new invite seat selection; both bots retained with guest in empty seat; existing avatar href preserved across joining",
-    "twoBotGuestJoinVerified": true
+    "twoBotGuestJoinVerified": true,
+    "returnScreen": "Welcome back using authenticated saved name; one Return to table button; no repeated identity form; snapshot avatars; host You placeholder corrected; guest side labels at seats"
   }
 }
