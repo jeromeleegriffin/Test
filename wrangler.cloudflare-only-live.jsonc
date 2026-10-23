@@ -44,5 +44,13 @@
       "type": "durable-object",
       "storage": "sqlite"
     }
+  },
+  "vars": {
+    "CAREER_EMAIL_READY": "true"
+  },
+  "secrets": {
+    "required": [
+      "TEST_GATE_KEY"
+    ]
   }
 }
