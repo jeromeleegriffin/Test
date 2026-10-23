@@ -1205,6 +1205,57 @@ HORCareerCore.install(window.HORProgression);
   try {
     window.dispatchEvent(new CustomEvent('hor-career-ready', { detail: { mode: mode() } }));
   } catch (e) {}
+  // Automatically award one bonus on the first game start of the player's local day.
+  // Keep the notice in the existing compact House toast system; there is no claim button.
+  try {
+    const now = new Date(),
+      day =
+        now.getFullYear() +
+        '-' +
+        String(now.getMonth() + 1).padStart(2, '0') +
+        '-' +
+        String(now.getDate()).padStart(2, '0'),
+      result = P.core.applyDailyLoginBonus(day),
+      state = P.core.read(),
+      careerRef = P.core.digest(state.identity.id).slice(0, 16);
+    const notice = result.awarded
+      ? {
+          human: true,
+          careerRef,
+          kind: 'daily-bonus',
+          icon: '☀️',
+          kicker: 'Daily Bonus',
+          title: '+' + result.amount.toLocaleString() + ' Career Points',
+          subtitle: 'Added automatically for today.',
+        }
+      : {
+          human: true,
+          careerRef,
+          kind: 'daily-bonus',
+          icon: '☀️',
+          kicker: 'Daily Bonus',
+          title: 'Already received today',
+          subtitle: 'Your next bonus is waiting tomorrow.',
+        };
+    window.setTimeout(() => P.presentation?.enqueue(notice), 900);
+    if (result.awarded && result.leveledUp)
+      window.setTimeout(
+        () =>
+          P.presentation?.enqueue({
+            human: true,
+            careerRef,
+            kind: 'level',
+            icon: '★',
+            kicker: 'Level Up',
+            title: 'Level ' + result.level + ' — ' + result.title,
+            subtitle: 'Your daily bonus brought you to the next level.',
+            major: result.level % 5 === 0,
+          }),
+        2200
+      );
+  } catch (e) {
+    console.warn('Daily login bonus could not be applied.', e);
+  }
 })();
 
 /* Build 461 targeted Android/Samsung persona-avatar long-press guard.
