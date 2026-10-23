@@ -54,6 +54,11 @@
   const PREFIX = ['horCareerLedgerV1:', 'horProgressV1:', 'horBotRelationshipV1:'];
   const copy = (x) => JSON.parse(JSON.stringify(x));
   const plain = (x) => !!x && typeof x === 'object' && !Array.isArray(x);
+  function validDayKey(value) {
+    if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+    const date = new Date(value + 'T00:00:00Z');
+    return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value;
+  }
   const now = () => new Date().toISOString();
   const uuid = () =>
     root.crypto.randomUUID
@@ -196,6 +201,14 @@
         !Number.isFinite(Date.parse(s.updatedAt))
       )
         throw Error('Invalid Career v2 state');
+      if (
+        s.dailyLoginBonus !== undefined &&
+        (!plain(s.dailyLoginBonus) ||
+          !validDayKey(s.dailyLoginBonus.date) ||
+          !int(s.dailyLoginBonus.amount) ||
+          s.dailyLoginBonus.amount < 100)
+      )
+        throw Error('Invalid daily login bonus');
       for (const [key, r] of Object.entries(s.records)) {
         if (
           !plain(r) ||
@@ -489,6 +502,35 @@
       if (avatar !== undefined) s.records.human.avatar = avatar;
       commit(s);
       return s;
+    }
+    function applyDailyLoginBonus(date) {
+      if (!validDayKey(date))
+        throw Error('Invalid daily bonus date');
+      const s = migrate();
+      if (s.dailyLoginBonus?.date >= date)
+        return { awarded: false, alreadyAwarded: true, amount: s.dailyLoginBonus.amount, date };
+      const human = s.records.human,
+        before = P.levelFor(human.stats.points || 0),
+        gap =
+          before.nextThreshold == null
+            ? 0
+            : Math.max(0, before.nextThreshold - (human.stats.points || 0)),
+        amount = 100 + Math.round(gap * 0.05);
+      human.stats.points = (human.stats.points || 0) + amount;
+      s.dailyLoginBonus = { date, amount };
+      commit(s);
+      const after = P.levelFor(human.stats.points);
+      return {
+        awarded: true,
+        alreadyAwarded: false,
+        amount,
+        date,
+        points: human.stats.points,
+        level: after.level,
+        previousLevel: before.level,
+        leveledUp: after.level > before.level,
+        title: after.title,
+      };
     }
     function ledgerRead(type, id) {
       const s = read();
@@ -1031,6 +1073,7 @@
       activate,
       rename,
       recordHand,
+      applyDailyLoginBonus,
       collect,
       validateBackup,
       recover,
