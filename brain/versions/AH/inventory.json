@@ -66,6 +66,10 @@
     },
     {
       "path": "files/01_MASTER_BANK/LIVE_RECEIPT_GOLD_WORDMARK_20261022.json"
+    },
+    {
+      "path": "files/01_MASTER_BANK/CUSTOM_AVATAR_LIKENESS_AND_TABLE_PROMPT_20261023.md",
+      "purpose": "Owner-managed photo avatar creation prompt, likeness and actual table-fit procedure"
     }
   ],
   "inheritedBrain": "../AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",

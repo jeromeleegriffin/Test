@@ -1,5 +1,12 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## CUSTOM AVATAR CREATION PROMPT — October 23, 2026
+
+Owner requested a durable, extensive reusable prompt preserving the original person's appearance and producing correctly framed left/top/right seated assets. Read [Custom avatar likeness and table master prompt](CUSTOM_AVATAR_LIKENESS_AND_TABLE_PROMPT_20261023.md) before any future photo-based character work. It consolidates the approved H seating/occlusion authority, 774/775/779 production lessons and existing Z shirt-repair prompts. Preserve the original appearance, age, hairline, facial hair, expression, body proportions and clothing colors; use the original photo for every pose; default hands in lap; validate real alpha and actual table masks at unchanged approved avatar size. A prompt does not guarantee identity or table fit; inspect likeness and real portrait/landscape rail intersections before acceptance. Repair only the demonstrated defect in an accepted set.
+
+Owner shelved customer-facing paid automatic generation because of unpredictable retries. Proposed alternative: owner-managed email/photo request, manual artwork creation/review here and separately authorized game integration. Donation terms/private distribution are not implemented. No new image generated, game build reserved, runtime/asset changed, billing configured or game deployed by this documentation update. Historical construction authorities and all permanent reading/continuity/visual-verification rules below remain unchanged. This is a scoped documentation update, not a claim that every historical binary was reopened or a new avatar visually validated.
+
+
 ## CURRENT OWNER-APPROVED GOLD WORDMARK — October 22, 2026
 
 Owner rejected the bulky green/brown framed Griffin sign everywhere, including the new navy close-table dialog. After a transparent logo asset and mockup on the actual phone screenshot were shown, owner approved the new gold griffin + GRIFFIN HOUSE / OF ROOKS wordmark and explicitly authorized updating table and popup. This supersedes old plaque requirements below.

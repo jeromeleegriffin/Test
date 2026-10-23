@@ -2486,5 +2486,13 @@
     "userCanEnableIndividually": true,
     "savedPreferencesPreserved": true,
     "workerVersion": "4ab1211d-9bc7-4d9e-a5df-f4c81fa5bf06"
+  },
+  "customAvatarCreation": {
+    "document": "versions/AH/files/01_MASTER_BANK/CUSTOM_AVATAR_LIKENESS_AND_TABLE_PROMPT_20261023.md",
+    "updated": "2026-10-23",
+    "status": "MANUAL_OWNER_WORKFLOW_PROMPT_SAVED",
+    "automaticPaidGeneration": "SHELVED_BY_OWNER",
+    "originalIdentityReferenceRequiredForEveryPose": true,
+    "actualTableFitReviewRequired": true
   }
 }
