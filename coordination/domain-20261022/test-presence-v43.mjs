@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 const source=fs.readFileSync('main-v43.mjs','utf8').replace('import { DurableObject } from "cloudflare:workers";', 'class DurableObject {constructor(ctx,env){this.ctx=ctx;this.env=env;}}');
-fs.writeFileSync('main-v43-test.mjs',source+'\nexport { CLOUD_GAME_ADAPTER };');
-const {RoomDO,CLOUD_GAME_ADAPTER}=await import('./main-v43-test.mjs');
+fs.writeFileSync('main-v43-test.mjs',source+'\nexport { CLOUD_GAME_ADAPTER, chooseTestBotAction };');
+const {RoomDO,CLOUD_GAME_ADAPTER,chooseTestBotAction}=await import('./main-v43-test.mjs');
 new Function(CLOUD_GAME_ADAPTER);
 let now=Date.now();Date.now=()=>now;
 function setup(){
@@ -60,3 +60,18 @@ let connection=(await t.api('snapshot',undefined,t.host.token)).body.connections
 now+=1000;connection=(await t.api('snapshot',undefined,t.host.token)).body.connections[0];assert.equal(connection.remainingMs,19000);
 await t.api('presence',{},t.guest.token);assert.deepEqual((await t.api('snapshot',undefined,t.host.token)).body.connections,[]);
 console.log('PASS socket close starts full 20-second countdown, time decreases, reconnect clears notice');
+
+t=await table();await t.api('start',{},t.host.token);await t.api('leave',{},t.guest.token);
+state=t.data.get('test-room');await t.api('ready',{handNumber:1,openingId:state.opening.id},t.host.token);
+const phases=new Set();let steps=0;
+while(steps++<200){
+ state=t.data.get('test-room');phases.add(state.gameState.phase);
+ if(['score','complete'].includes(state.gameState.phase))break;
+ if(state.opening||state.botTurn||state.trumpOpening||state.trickOpening||state.claimOpening){await t.fire();continue;}
+ assert.equal(state.gameState.currentPlayer,0,'server must schedule every bot turn');
+ const action=chooseTestBotAction(state.gameState,0);
+ const response=await t.api(action.type,{...action,actionId:'full-hand-'+steps,expectedRevision:state.revision},t.host.token);
+ assert.equal(response.status,200,JSON.stringify(response.body));
+}
+assert.ok(steps<200,'hand must finish');assert.ok(phases.has('bidding')&&phases.has('discard')&&phases.has('trump')&&phases.has('play'));
+console.log('PASS full hand after guest leaves: bidding, nest discard, trump, card play and scoring complete');
