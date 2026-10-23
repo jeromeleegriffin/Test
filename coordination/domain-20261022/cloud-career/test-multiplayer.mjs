@@ -32,7 +32,7 @@ for(let run=0;run<24;run++){
   if(['score','complete'].includes(state.phase)){
    hands++;const ev=state.career.events.at(-1),prior=state.career.events.at(-2);
    for(let i=0;i<4;i++){
-    const delta=ev.stats[i].points-(prior?.stats[i]?.points||0);assert.equal(delta,i%2?ev.summary.pointsB:ev.summary.pointsA);
+    const delta=(ev.stats[i].points||0)-(prior?.stats[i]?.points||0);assert.equal(delta,i%2?ev.summary.pointsB:ev.summary.pointsA);
     assert.equal(ev.stats[i].hands,ev.hand);
     if(!players[i].isBot&&i!==3){const x=cores[i].recordHand({...ev,localPeerId:'career-seat-'+i,isHost:i===0});assert.ok(x.ok);const before=cores[i].stable(cores[i].read());cores[i].recordHand({...ev,localPeerId:'career-seat-'+i,isHost:i===0});assert.equal(cores[i].stable(cores[i].read()),before)}
    }
