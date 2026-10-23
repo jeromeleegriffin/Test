@@ -28,7 +28,7 @@
   const storedFire = saved('rookFireVolume758');
   let fireVolume =
     storedFire === null ? DEFAULT_FIRE_VOLUME : Math.max(0, Math.min(100, Number(storedFire) || 0));
-  let owlsEnabled = saved('rookOwls758') !== '0';
+  let owlsEnabled = saved('rookOwls758') === '1';
   const defaults = {
     wind: 100,
     bird: 100,
