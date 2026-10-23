@@ -22,7 +22,7 @@
       return null;
     }
   };
-  let enabled = saved('rookCabinAmbience041') !== '0';
+  let enabled = saved('rookCabinAmbience041') === '1';
   const stored = saved('rookCabinVolume041');
   let volume = stored === null ? 6 : Math.max(0, Math.min(100, Number(stored) || 0));
   const storedFire = saved('rookFireVolume758');
