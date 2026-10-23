@@ -2407,7 +2407,7 @@
     "onlineAccrualGuardStillPending": false
   },
   "cloudCareer20261023": {
-    "status": "V49_ACCOUNT_EMAIL_CODE_DEPLOYED_DISABLED_PENDING_SUPABASE_DASHBOARD_SIGNIN",
+    "status": "V49_ACCOUNT_EMAIL_CODE_DEPLOYED_DISABLED_SEND_EMAIL_HOOK_ENABLED_DELIVERY_TEST_PENDING",
     "supabaseProject": "gxojarpfaxloyzbsptqg",
     "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
     "handoff": "coordination/domain-20261022/cloud-career/V49_HANDOFF.md",
@@ -2422,16 +2422,20 @@
     "hostedCareerTestPassed": true,
     "accountsDeferredByOwner": true,
     "accountEmailCodePrepared": true,
-    "emailDeliveryConfigured": false,
-    "sendEmailHookPending": true,
+    "emailDeliveryConfigured": true,
+    "sendEmailHookPending": false,
     "emailSenderDomain": "accounts.jeromegriffin.com",
     "emailSenderDNSReady": true,
     "emailWorker": "griffin-career-email",
-    "emailWorkerSecretConfigured": false,
+    "emailWorkerSecretConfigured": true,
     "emailHookEndpoint": "https://griffin-career-email.jeromeleegriffin.workers.dev/auth-email",
     "emailReadyBinding": false,
     "accountFlowMockTestsPassed": true,
     "realDeliveryTestPending": true,
-    "setupBlocker": "Supabase Auth settings not exposed by plugin. Project Auth Hooks dashboard redirects to sign-in. Secure browserAuth needed; accounts remain deferred."
+    "setupBlocker": "Send Email Auth Hook is saved and enabled in Supabase; matching Worker secret is active. Keep CAREER_EMAIL_READY=false pending authorized real delivery/account test and verification of email-confirmation settings.",
+    "emailHookEnabled": true,
+    "emailWorkerDeployment": "6c875359-33f2-4941-a836-db3510a83b9f",
+    "emailWorkerVersion": "998ff471-5b7c-410b-85ef-68de2130d223",
+    "emailHookVerifiedBy": "Owner screenshot: Auth Hooks lists Send Email hook as ENABLED, 2026-10-23"
   }
 }
