@@ -2414,7 +2414,7 @@
     "supabaseProject": "gxojarpfaxloyzbsptqg",
     "sourceBranch": "work/asset-recovery-20261021",
     "handoff": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md",
-    "realPlayerAccounts": 0,
+    "realPlayerAccounts": 1,
     "emailReady": true,
     "signupNameFieldVisible": true,
     "signupNameMinLength": 3,
@@ -2426,7 +2426,8 @@
     "firstConfirmedSignInUploadsExistingCareer": true,
     "actualEmailRecipientDeliveryVerified": false,
     "accountSignupFlowEndToEndVerified": false,
-    "ritaAccountRecoveryPending": true
+    "ritaAccountRecoveryPending": true,
+    "accountIdentityChecked": false
   },
   "careerHandoff": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md",
   "careerStatus": "LIVE_V61_CLOUDCAREER_DAILY_LEADERBOARDS_AND_AMBIENT_DEFAULTS",
@@ -2459,7 +2460,10 @@
     "accountCreatedDuringVerification": false,
     "recipientEmailDeliveryVerified": false,
     "physicalFacebookAndroidVerified": false,
-    "addendum": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md"
+    "addendum": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md",
+    "playerAccountRows": 1,
+    "accountIdentityChecked": false,
+    "noAccountCreatedDuringVerification": true
   },
   "ambientDefaults20261023": {
     "status": "LIVE",
