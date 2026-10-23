@@ -34,8 +34,8 @@ Nest card stayed face down, bidding appeared much later at 100. Guest Rosa was n
 - Actual Cloudflare isolated namespace: readiness/nest timing, explicit leave/retry, absence takeover and reconnect all passed.
 - Browser native game: countdown visibly decreased, then bot label/takeover; bidding continued.
 - Phone390x844 visual check passed; screenshot rooks-countdown-verified.jpg shows9s countdown.
-- Production exact source/settings/version readback passed; browser entry shows countdown node/new leave copy. Production smoke room YOU22 created, bots filled, game started.
+- Production exact source/settings/version readback passed; browser entry shows countdown node/new leave copy. Production smoke room YOU22 created, bots filled, game started; nest revealed and bidding advanced to host; then table closed successfully through host confirmation.
 - Physical Facebook Android in-app browser not available; no claim of device-specific verification.
 
 ## Cleanup / continuation
-QA Worker rooks-presence-qa created for this release; remove after final checks. Only test-owned rooms were used. Never close the owner's table. If interruption occurs, finish closing production smoke room YOU22 and QA demo via their UI; archive final cleanup result in brain/current.json.
+All test rooms closed, including production smoke room YOU22 and isolated mobile demo. Temporary QA Worker rooks-presence-qa removed after checks. Only test-owned rooms were used. Owner table untouched. Already-open pages need one reload to receive the new client countdown/leave behavior; server code is deployed.
