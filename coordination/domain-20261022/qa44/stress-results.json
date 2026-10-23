@@ -1,0 +1,15 @@
+{
+  "matches": 36,
+  "passed": 36,
+  "totalActions": 4819,
+  "totalHands": 121,
+  "coverage": {
+    "bidding": 1068,
+    "discard": 122,
+    "trump": 123,
+    "play": 6562,
+    "score": 196,
+    "complete": 49
+  },
+  "failures": []
+}
