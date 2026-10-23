@@ -114,8 +114,8 @@
     "cloudflare": {
       "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
       "worker": "griffin-house-of-rooks-online",
-      "version": "4ab1211d-9bc7-4d9e-a5df-f4c81fa5bf06",
-      "deployment": "94c18a13-9f17-466f-808b-c4174f0efe2c",
+      "version": "d42a6613-7b4d-4b50-a209-0d04e08b7971",
+      "deployment": "35cba8fa-7184-4d56-b3d0-75bde9459a3a",
       "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
       "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
       "rollbackVersion": "fe21328c-6121-46d8-abf5-e6f2be0ef57e",
@@ -167,7 +167,10 @@
       "tableConfirmationDesign": "Approved transparent gold Griffin House wordmark on navy; old framed plaque replaced.",
       "approvedGoldWordmark": "assets/brand835/griffin-wordmark-20261022.png",
       "roomBrandQuery": "846-r12-gold-wordmark-20261022",
-      "currentWrapperRelease": "v61"
+      "currentWrapperRelease": "v62",
+      "spaceNameMigration": "20261023090736",
+      "signupNamesAllowInternalSpaces": true,
+      "ritaRecoveryVerified": true
     },
     "rollbackBranchBothRepos": "rollback/pre-r10-ambience-20261021",
     "repair": {
@@ -218,7 +221,7 @@
     },
     "serverRollbackBranchBothRepos": "rollback/pre-full-online-x1-20261021",
     "sitePolicy": "Canonical Cloudflare R12; legacy GitHub online entry redirects before artwork, historical offline retained via ?offline=1.",
-    "runtimeStatusAuthority": "Master Brain AH for approved R12 game baseline; LIVE_RELEASE_ADDENDUM_20261023.md for v61 Cloud Career and ambient-default changes."
+    "runtimeStatusAuthority": "Master Brain AH with v62 Cloud Career addendum; v62 preserves R12 runtime and all original Worker bindings."
   },
   "comprehensiveHandoff": "versions/AH/files/01_MASTER_BANK/MASTER_BRAIN_AH.md",
   "threeSiteReleasePolicy": "../coordination/THREE_SITE_RELEASE_POLICY.md (historical; new Cloudflare-only hosting authorization supersedes automatic three-site synchronization)",
@@ -2410,7 +2413,7 @@
     "onlineAccrualGuardStillPending": false
   },
   "cloudCareer20261023": {
-    "status": "V61_ACCOUNT_NAME_LIMIT_AND_DAILY_LEADERBOARDS_LIVE",
+    "status": "V62_PLAYER_ACCOUNT_NAMES_ALLOW_SPACES_AND_RITA_RECOVERY_VERIFIED",
     "supabaseProject": "gxojarpfaxloyzbsptqg",
     "sourceBranch": "work/asset-recovery-20261021",
     "handoff": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md",
@@ -2426,22 +2429,28 @@
     "firstConfirmedSignInUploadsExistingCareer": true,
     "actualEmailRecipientDeliveryVerified": false,
     "accountSignupFlowEndToEndVerified": false,
-    "ritaAccountRecoveryPending": true,
-    "accountIdentityChecked": false
+    "ritaAccountRecoveryPending": false,
+    "accountIdentityChecked": true,
+    "signupNameAllowsInternalSpaces": true,
+    "nameNormalization": "Trim and collapse whitespace; 3–12 chars; first letter; letters, numbers, underscores, spaces; bot names reserved",
+    "spaceNameMigration": "20261023090736",
+    "ritaLevel": 16,
+    "ritaRecoveryVerified": true,
+    "multiDeviceSameAccount": "One cloud career snapshot; explicit restore/upload choice across devices; stale revision writes are rejected; no automatic sum/merge"
   },
   "careerHandoff": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md",
-  "careerStatus": "LIVE_V61_CLOUDCAREER_DAILY_LEADERBOARDS_AND_AMBIENT_DEFAULTS",
+  "careerStatus": "LIVE_V62_PLAYER_NAME_SPACES_RITA_RECOVERY_VERIFIED",
   "latestReleaseAddendum": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md",
   "previousCareerHandoff": "versions/AH/files/01_MASTER_BANK/CAREER_QA_HANDOFF_20261023.md",
   "latestCareerLeaderboardRelease": {
     "date": "2026-10-23",
     "status": "LIVE",
     "worker": "griffin-house-of-rooks-online",
-    "workerVersion": "4ab1211d-9bc7-4d9e-a5df-f4c81fa5bf06",
-    "deployment": "94c18a13-9f17-466f-808b-c4174f0efe2c",
+    "workerVersion": "d42a6613-7b4d-4b50-a209-0d04e08b7971",
+    "deployment": "35cba8fa-7184-4d56-b3d0-75bde9459a3a",
     "deploymentPercent": 100,
     "cloudCareerConfig": "emailReady:true",
-    "signupName": "Visible editable player name; 3–12 characters; bot names reserved",
+    "signupName": "3–12 characters; internal spaces allowed; bot names reserved",
     "accountNameLimitMigration": "20261023085320",
     "dailyLeaderboardMigration": "20261023080817",
     "dailyRefreshUTC": "04:15",
@@ -2462,8 +2471,13 @@
     "physicalFacebookAndroidVerified": false,
     "addendum": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md",
     "playerAccountRows": 1,
-    "accountIdentityChecked": false,
-    "noAccountCreatedDuringVerification": true
+    "accountIdentityChecked": true,
+    "noAccountCreatedDuringVerification": true,
+    "accountNameSpacesMigration": "20261023090736",
+    "multiDeviceCareer": "one cloud record per account; explicit restore/upload, stale saves rejected, no auto-merge",
+    "ritaRecoveryVerified": true,
+    "ritaLevel": 16,
+    "actualEmailRecipientDeliveryVerified": false
   },
   "ambientDefaults20261023": {
     "status": "LIVE",
