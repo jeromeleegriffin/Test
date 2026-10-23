@@ -2328,20 +2328,19 @@
   "cloudflareCurrentObserved": {
     "date": "2026-10-22",
     "worker": "griffin-house-of-rooks-online",
-    "version": "dd4dbc6c-4640-4d84-a91c-15148de87a49",
-    "deployment": "f1c472f5-f5ee-4ed3-b0f4-877d29e95f5b",
+    "version": "1ce5f0cc-0893-4c18-830d-e1dc2652bf55",
+    "deployment": "232b1d26-a00b-49ee-9dd3-54d7da93477c",
     "authoritative": "Cloudflare API",
-    "note": "Overrides prior historical v36 checkpoint; do not redeploy older staged candidate"
+    "note": "Version42 guest seat switching; same existing DO namespace, assets and bindings. Explicit exports.RoomDO sqlite declaration required."
   },
   "invitationRecovery20261022": {
-    "status": "V10C_DEPLOYED_MOBILE_DIMENSION_BROWSER_VERIFIED",
+    "status": "V10D_AND_MAIN_V42_DEPLOYED_SEAT_MOVES_VERIFIED",
     "cloudflareConnection": "Workers reads and targeted deployment successful after authorization retry",
-    "marker": "20261022-v10c-invitation-clarity",
-    "brandedVersion": "5b7304e5-5d0a-4266-9fec-a82a735b41b9",
-    "brandedDeployment": "156db420-fd82-4071-b2ed-03ebd037ee94",
-    "mainWorkerVersionPreserved": "dd4dbc6c-4640-4d84-a91c-15148de87a49",
+    "marker": "20261022-v10d-host-join-seat-moves",
+    "brandedVersion": "cb0e1016-8f27-4572-af73-838c7032ce60",
+    "brandedDeployment": "fa2a97cd-b0ac-4f8a-a9b7-a9376242b97a",
     "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
-    "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/INVITATION_CLARITY_V10C_HANDOFF.md",
+    "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/HOST_JOIN_SEAT_MOVES_V10D_HANDOFF.md",
     "independentGuestJoinVerified": true,
     "reservedSeatReturnVerified": true,
     "physicalFacebookAndroidVerified": false,
@@ -2353,6 +2352,12 @@
       "390x844",
       "390x360"
     ],
-    "additionalRoute": "rooks.jeromegriffin.com/cloud-game/assets/friends803.js*"
+    "additionalRoute": "rooks.jeromegriffin.com/cloud-game/assets/friends803.js*",
+    "mainWorkerVersion": "1ce5f0cc-0893-4c18-830d-e1dc2652bf55",
+    "guestSeatMoves": "Tap Move here on empty waiting-room seat; atomic server move releases old seat; reconnect follows new seat",
+    "labels": [
+      "Host a Table",
+      "Join a Table"
+    ]
   }
 }
