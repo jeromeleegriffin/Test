@@ -31,10 +31,11 @@ async function careerApi(request,env){
   let token=cookie(CA);const refresh=cookie(CR);
   if(route==='logout'&&request.method==='POST'){if(token)await upstream('/auth/v1/logout?scope=local','POST',{},token).catch(()=>{});clear();return reply({ok:true})}
   let auth=token?await upstream('/auth/v1/user','GET',undefined,token):null;
-  if((!auth||auth.status===401)&&refresh){const r=await upstream('/auth/v1/token?grant_type=refresh_token','POST',{refresh_token:refresh});if(r.ok){saveSession(r.data);token=r.data.access_token;auth={ok:true,data:r.data.user}}}
+  if((!auth||auth.status===401)&&refresh){const r=await upstream('/auth/v1/token?grant_type=refresh_token','POST',{refresh_token:refresh});if(r.ok){saveSession(r.data);token=r.data.access_token;auth={ok:true,data:r.data.user}}else auth=r;}
   if(!auth?.ok){if(!auth||auth.status===401)clear();return reply({error:'Sign in to use your cloud career.'},auth?.status>=500?503:401)}
   if(!auth.data.email_confirmed_at||auth.data.is_anonymous)return reply({error:'A confirmed player account is required.'},403);
   if(route==='session'&&request.method==='GET')return reply({user:{id:auth.data.id,email:auth.data.email}});
+  if(route==='save'&&body.userId!==auth.data.id)return reply({error:'The signed-in account changed. Reopen Cloud Career before saving.'},409);
   let r;
   if(route==='save'&&request.method==='POST')r=await upstream('/rest/v1/rpc/rooks_save_career','POST',{p_payload:body.payload,p_expected_revision:body.revision,p_restore_revision:null},token);
   else if(route==='current'&&request.method==='GET')r=await upstream('/rest/v1/rooks_careers?select=revision,display_name,payload,updated_at','GET',undefined,token);
