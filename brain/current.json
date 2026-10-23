@@ -2326,12 +2326,12 @@
     }
   },
   "cloudflareCurrentObserved": {
-    "date": "2026-10-22",
+    "date": "2026-10-23",
     "worker": "griffin-house-of-rooks-online",
-    "version": "1ce5f0cc-0893-4c18-830d-e1dc2652bf55",
-    "deployment": "232b1d26-a00b-49ee-9dd3-54d7da93477c",
+    "version": "c12cae49-cc5b-4bc3-a067-dc164f6bc4f9",
+    "deployment": "c66a45d0-e3c1-4496-b3aa-70eb7030d782",
     "authoritative": "Cloudflare API",
-    "note": "Version42 guest seat switching; same existing DO namespace, assets and bindings. Explicit exports.RoomDO sqlite declaration required."
+    "note": "Version43 guest leave replacement, visible20-second reconnect countdown, temporary bot takeover and earliest alarm. Existing namespace, assets, bindings and v10g invitation UI preserved; exact source verified."
   },
   "invitationRecovery20261022": {
     "status": "V10G_SIMPLE_RETURN_DEPLOYED_BROWSER_VERIFIED",
@@ -2353,7 +2353,7 @@
       "390x360"
     ],
     "additionalRoute": "rooks.jeromegriffin.com/cloud-game/assets/friends803.js*",
-    "mainWorkerVersion": "1ce5f0cc-0893-4c18-830d-e1dc2652bf55",
+    "mainWorkerVersion": "c12cae49-cc5b-4bc3-a067-dc164f6bc4f9",
     "guestSeatMoves": "Tap Move here on empty waiting-room seat; atomic server move releases old seat; reconnect follows new seat",
     "labels": [
       "Host a Table",
@@ -2363,5 +2363,27 @@
     "botInvitationFix": "Occupied bots visible and unavailable to new invite seat selection; both bots retained with guest in empty seat; existing avatar href preserved across joining",
     "twoBotGuestJoinVerified": true,
     "returnScreen": "Welcome back using authenticated saved name; one Return to table button; no repeated identity form; snapshot avatars; host You placeholder corrected; guest side labels at seats"
+  },
+  "guestPresenceRecovery20261023": {
+    "status": "V43_DEPLOYED_VERIFIED",
+    "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/PRESENCE_COUNTDOWN_V43_HANDOFF.md",
+    "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
+    "source": "coordination/domain-20261022/worker-v43-presence-countdown.mjs",
+    "explicitLeave": "Immediate permanent bot, current hand/score retained, token revoked",
+    "disconnect": "Socket close20-second reconnect countdown; silent heartbeat loss detected after10 seconds then20-second window; temporary bot with same cards and reconnect token",
+    "countdown": "Visible live seconds then Bot playing for Rosa; clears on reconnect",
+    "nest": "All-ready deal alarm uses minimum animation deadline rather than25-second maximum",
+    "verification": [
+      "isolated Cloudflare checks",
+      "390x844 phone countdown screenshot",
+      "complete simulated hand after guest replacement",
+      "existing seat-move regressions",
+      "production YOU22 nest/bidding smoke",
+      "exact deployed source and binding readback"
+    ],
+    "physicalFacebookAndroidVerified": false,
+    "testTablesClosed": true,
+    "temporaryWorkerRemoved": true,
+    "openPageNote": "One reload needed for existing tabs to receive new client controls"
   }
 }
