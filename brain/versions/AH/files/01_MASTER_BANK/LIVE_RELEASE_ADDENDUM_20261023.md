@@ -10,7 +10,7 @@ The v61 Cloud Career Create account form had a visible, high-contrast player-nam
 
 Verification used the live game: Menu → My Career & Awards → Cloud career, saves & recovery → Create account. The field appeared between Email and New password, and the screenshot showed clear white input styling against the navy dialog. The Cloud Career page first opens in sign-in mode; “Create account” switches to signup mode.
 
-No registration form was submitted and no account was created during this verification. Supabase currently reports one player-account row; its identity was not inspected and must not be assumed to be Rita. Live `/career-api/config` returned `emailReady:true`; actual email recipient delivery and end-to-end confirmed signup/login remain unverified.
+That paragraph records the v61 UI check only: no form was submitted in that pass, and the single player row was not yet checked. During the later v62 recovery, Rita’s confirmed account was identified and her recovery completed as described below. The live `/career-api/config` returned `emailReady:true`; no separate email-delivery test was performed beyond Rita’s completed registration.
 
 ## Ambient defaults
 
