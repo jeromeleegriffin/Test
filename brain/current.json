@@ -23,7 +23,7 @@
   "runtimeStatusAuthority": "Master Brain AH leading owner-approved gold wordmark override.",
   "currentRuntimeRelease": {
     "status": "CLOUDFLARE_R12_APPROVED_GOLD_WORDMARK_VERIFIED",
-    "date": "2026-10-22",
+    "date": "2026-10-23",
     "runtime": "846-r12-moon-default-off-20261021",
     "ownerConfirmedCardSoundsRestored": true,
     "test": {
@@ -114,8 +114,8 @@
     "cloudflare": {
       "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
       "worker": "griffin-house-of-rooks-online",
-      "version": "3df448a2-83f0-4fd0-be97-665a067848de",
-      "deployment": "a05c9b90-4f3e-44de-84a2-b0b22e6504f9",
+      "version": "4ab1211d-9bc7-4d9e-a5df-f4c81fa5bf06",
+      "deployment": "94c18a13-9f17-466f-808b-c4174f0efe2c",
       "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
       "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
       "rollbackVersion": "fe21328c-6121-46d8-abf5-e6f2be0ef57e",
@@ -166,7 +166,8 @@
       "tableConfirmationQuery": "846-r12-table-confirm-20261022",
       "tableConfirmationDesign": "Approved transparent gold Griffin House wordmark on navy; old framed plaque replaced.",
       "approvedGoldWordmark": "assets/brand835/griffin-wordmark-20261022.png",
-      "roomBrandQuery": "846-r12-gold-wordmark-20261022"
+      "roomBrandQuery": "846-r12-gold-wordmark-20261022",
+      "currentWrapperRelease": "v61"
     },
     "rollbackBranchBothRepos": "rollback/pre-r10-ambience-20261021",
     "repair": {
@@ -216,13 +217,14 @@
       "scope": "Current owner phone/session; not exhaustive rare-event, device, roaming or suspension certification"
     },
     "serverRollbackBranchBothRepos": "rollback/pre-full-online-x1-20261021",
-    "sitePolicy": "Canonical Cloudflare R12; legacy GitHub online entry redirects before artwork, historical offline retained via ?offline=1."
+    "sitePolicy": "Canonical Cloudflare R12; legacy GitHub online entry redirects before artwork, historical offline retained via ?offline=1.",
+    "runtimeStatusAuthority": "Master Brain AH for approved R12 game baseline; LIVE_RELEASE_ADDENDUM_20261023.md for v61 Cloud Career and ambient-default changes."
   },
   "comprehensiveHandoff": "versions/AH/files/01_MASTER_BANK/MASTER_BRAIN_AH.md",
   "threeSiteReleasePolicy": "../coordination/THREE_SITE_RELEASE_POLICY.md (historical; new Cloudflare-only hosting authorization supersedes automatic three-site synchronization)",
   "currentReleaseReceipt": "https://github.com/JeromeLeeGriffin/Test/blob/work/asset-recovery-20261021/coordination/qa/LIVE_RECEIPT_GOLD_WORDMARK_20261022.json",
   "currentCumulativeGamePackage": {
-    "status": "Cloudflare Workers Static Assets LIVE, 1634 original assets, ~211.05 MiB. Original GitHub ZIPs remain historical; AH handoff is documentation-only, not a full game ZIP.",
+    "status": "Cloudflare Workers Static Assets LIVE, 1,635 assets / 222,350,178 bytes. Original game bundle is production hosted; career handoff ZIP is documentation/source/tests, not the full game.",
     "nativeSourceCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
     "cloudflareOnly": true
   },
@@ -2328,10 +2330,11 @@
   "cloudflareCurrentObserved": {
     "date": "2026-10-23",
     "worker": "griffin-house-of-rooks-online",
-    "version": "efc50ff0-0333-48b1-9ac5-acdc8b7f5cc9",
-    "deployment": "5aebe45f-6e18-4165-8663-c37b60e7745a",
-    "authoritative": "Cloudflare API",
-    "note": "v49 gated account signup and email recovery preparation. v48 game/DO/core unchanged."
+    "version": "4ab1211d-9bc7-4d9e-a5df-f4c81fa5bf06",
+    "deployment": "94c18a13-9f17-466f-808b-c4174f0efe2c",
+    "percentage": 100,
+    "authoritative": "Cloudflare deployments API",
+    "note": "v61 live; preserves R12 game/static assets and production bindings"
   },
   "invitationRecovery20261022": {
     "status": "V10H_MULTIPLAYER_SHARE_DEPLOYED_VERIFIED",
@@ -2407,41 +2410,63 @@
     "onlineAccrualGuardStillPending": false
   },
   "cloudCareer20261023": {
-    "status": "V49_ACCOUNT_EMAIL_CODE_DEPLOYED_DISABLED_SEND_EMAIL_HOOK_ENABLED_DELIVERY_TEST_PENDING",
+    "status": "V61_ACCOUNT_NAME_LIMIT_AND_DAILY_LEADERBOARDS_LIVE",
     "supabaseProject": "gxojarpfaxloyzbsptqg",
-    "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
-    "handoff": "coordination/domain-20261022/cloud-career/V49_HANDOFF.md",
-    "databaseIsolationAndRecoveryTestsPassed": true,
+    "sourceBranch": "work/asset-recovery-20261021",
+    "handoff": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md",
     "realPlayerAccounts": 0,
-    "realAccountEndToEndTestPending": true,
-    "smtpPending": false,
-    "publicSignupAndPasswordResetPending": true,
-    "onlineCareerAccrualStillPending": false,
-    "wifeLevel16AdjustmentPending": true,
-    "newTableAndClientReloadRequired": true,
-    "hostedCareerTestPassed": true,
-    "accountsDeferredByOwner": true,
-    "accountEmailCodePrepared": true,
-    "emailDeliveryConfigured": true,
-    "sendEmailHookPending": false,
-    "emailSenderDomain": "accounts.jeromegriffin.com",
-    "emailSenderDNSReady": true,
-    "emailWorker": "griffin-career-email",
-    "emailWorkerSecretConfigured": true,
-    "emailHookEndpoint": "https://griffin-career-email.jeromeleegriffin.workers.dev/auth-email",
-    "emailReadyBinding": false,
-    "accountFlowMockTestsPassed": true,
-    "realDeliveryTestPending": true,
-    "setupBlocker": "Email provider and confirmation settings verified; Send Email hook enabled and Worker secret active. Actual recipient delivery and account end-to-end testing remain pending owner-authorized account test. CAREER_EMAIL_READY stays false.",
-    "emailHookEnabled": true,
-    "emailWorkerDeployment": "6c875359-33f2-4941-a836-db3510a83b9f",
-    "emailWorkerVersion": "998ff471-5b7c-410b-85ef-68de2130d223",
-    "emailHookVerifiedBy": "Owner screenshot: Auth Hooks lists Send Email hook as ENABLED, 2026-10-23",
-    "emailConfirmationEnabled": true,
-    "newUserSignupsAllowed": true,
-    "anonymousSignInsAllowed": false,
-    "emailProviderEnabled": true
+    "emailReady": true,
+    "signupNameFieldVisible": true,
+    "signupNameMinLength": 3,
+    "signupNameMaxLength": 12,
+    "botNamesReserved": true,
+    "accountNameLimitMigration": "20261023085320",
+    "dailyLeaderboardMigration": "20261023080817",
+    "dailySnapshotsRefreshUTC": "04:15",
+    "firstConfirmedSignInUploadsExistingCareer": true,
+    "actualEmailRecipientDeliveryVerified": false,
+    "accountSignupFlowEndToEndVerified": false,
+    "ritaAccountRecoveryPending": true
   },
-  "careerHandoff": "versions/AH/files/01_MASTER_BANK/CAREER_QA_HANDOFF_20261023.md",
-  "careerStatus": "STAGED_NOT_DEPLOYED"
+  "careerHandoff": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md",
+  "careerStatus": "LIVE_V61_CLOUDCAREER_DAILY_LEADERBOARDS_AND_AMBIENT_DEFAULTS",
+  "latestReleaseAddendum": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md",
+  "previousCareerHandoff": "versions/AH/files/01_MASTER_BANK/CAREER_QA_HANDOFF_20261023.md",
+  "latestCareerLeaderboardRelease": {
+    "date": "2026-10-23",
+    "status": "LIVE",
+    "worker": "griffin-house-of-rooks-online",
+    "workerVersion": "4ab1211d-9bc7-4d9e-a5df-f4c81fa5bf06",
+    "deployment": "94c18a13-9f17-466f-808b-c4174f0efe2c",
+    "deploymentPercent": 100,
+    "cloudCareerConfig": "emailReady:true",
+    "signupName": "Visible editable player name; 3–12 characters; bot names reserved",
+    "accountNameLimitMigration": "20261023085320",
+    "dailyLeaderboardMigration": "20261023080817",
+    "dailyRefreshUTC": "04:15",
+    "staticAssetCount": 1635,
+    "staticAssetBytes": 222350178,
+    "bindings": [
+      "ACTION_LIMIT",
+      "ASSETS",
+      "CAREER_EMAIL_READY=true",
+      "ENTRY_LIMIT",
+      "ROOMS",
+      "TEST_GATE_KEY"
+    ],
+    "durableObjectStorageReset": false,
+    "testedLocally": true,
+    "accountCreatedDuringVerification": false,
+    "recipientEmailDeliveryVerified": false,
+    "physicalFacebookAndroidVerified": false,
+    "addendum": "versions/AH/files/01_MASTER_BANK/LIVE_RELEASE_ADDENDUM_20261023.md"
+  },
+  "ambientDefaults20261023": {
+    "status": "LIVE",
+    "cabinAmbienceDefault": false,
+    "rareOwlCallsDefault": false,
+    "userCanEnableIndividually": true,
+    "savedPreferencesPreserved": true,
+    "workerVersion": "4ab1211d-9bc7-4d9e-a5df-f4c81fa5bf06"
+  }
 }
