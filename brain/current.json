@@ -9,7 +9,7 @@
   "constructionAuthoritySha256": "b405602e809b1ce470c92aa7189f78d3d7e03448a622061aeb18cdcf62dd2d89",
   "brainVersion": "AH",
   "status": "CURRENT",
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "browse": "versions/AH/index.html",
   "document": "versions/AH/files/01_MASTER_BANK/MASTER_BRAIN_AH.md",
   "manifest": "versions/AH/inventory.json",
@@ -2328,10 +2328,10 @@
   "cloudflareCurrentObserved": {
     "date": "2026-10-23",
     "worker": "griffin-house-of-rooks-online",
-    "version": "d9e0e952-eff9-4ab9-a9c4-da62bf657f82",
-    "deployment": "d7b2886e-28d0-4d0e-9359-ef2be2f3726a",
+    "version": "efc50ff0-0333-48b1-9ac5-acdc8b7f5cc9",
+    "deployment": "5aebe45f-6e18-4165-8663-c37b60e7745a",
     "authoritative": "Cloudflare API",
-    "note": "v48 multiplayer career recording for new tables and safe cloud saves; existing tables preserved."
+    "note": "v49 gated account signup and email recovery preparation. v48 game/DO/core unchanged."
   },
   "invitationRecovery20261022": {
     "status": "V10H_MULTIPLAYER_SHARE_DEPLOYED_VERIFIED",
@@ -2407,19 +2407,31 @@
     "onlineAccrualGuardStillPending": false
   },
   "cloudCareer20261023": {
-    "status": "V48_MULTIPLAYER_CAREERS_AND_CLOUD_SAVE_CODE_DEPLOYED_ACCOUNTS_DEFERRED_BY_OWNER",
+    "status": "V49_ACCOUNT_EMAIL_CODE_DEPLOYED_DISABLED_PENDING_SUPABASE_DASHBOARD_SIGNIN",
     "supabaseProject": "gxojarpfaxloyzbsptqg",
     "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
-    "handoff": "coordination/domain-20261022/CLOUD_CAREER_V48_HANDOFF.md",
+    "handoff": "coordination/domain-20261022/cloud-career/V49_HANDOFF.md",
     "databaseIsolationAndRecoveryTestsPassed": true,
     "realPlayerAccounts": 0,
     "realAccountEndToEndTestPending": true,
-    "smtpPending": true,
+    "smtpPending": false,
     "publicSignupAndPasswordResetPending": true,
     "onlineCareerAccrualStillPending": false,
     "wifeLevel16AdjustmentPending": true,
     "newTableAndClientReloadRequired": true,
     "hostedCareerTestPassed": true,
-    "accountsDeferredByOwner": true
+    "accountsDeferredByOwner": true,
+    "accountEmailCodePrepared": true,
+    "emailDeliveryConfigured": false,
+    "sendEmailHookPending": true,
+    "emailSenderDomain": "accounts.jeromegriffin.com",
+    "emailSenderDNSReady": true,
+    "emailWorker": "griffin-career-email",
+    "emailWorkerSecretConfigured": false,
+    "emailHookEndpoint": "https://griffin-career-email.jeromeleegriffin.workers.dev/auth-email",
+    "emailReadyBinding": false,
+    "accountFlowMockTestsPassed": true,
+    "realDeliveryTestPending": true,
+    "setupBlocker": "Supabase Auth settings not exposed by plugin. Project Auth Hooks dashboard redirects to sign-in. Secure browserAuth needed; accounts remain deferred."
   }
 }
