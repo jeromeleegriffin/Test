@@ -59,4 +59,5 @@ jobs:
             cloudflare-dist/audit/release-manifest.json
             cloudflare-dist/audit/SHA256SUMS
             cloudflare-dist/worker-cloud-only.mjs
+            cloudflare-dist/public/
           retention-days: 21
