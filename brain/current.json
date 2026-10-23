@@ -2328,10 +2328,10 @@
   "cloudflareCurrentObserved": {
     "date": "2026-10-23",
     "worker": "griffin-house-of-rooks-online",
-    "version": "a9654ccd-71a0-43d2-9834-11d356f0e45b",
-    "deployment": "589d4d43-4b1d-401c-9a43-ef4276d71ba5",
+    "version": "76f44cbf-1e84-495f-8247-fe30655cae98",
+    "deployment": "0a1670b1-f9e3-43d4-b434-652cc3776d61",
     "authoritative": "Cloudflare API",
-    "note": "v44 host recovery, bounded session transport, clean table exits. Existing namespace/assets preserved."
+    "note": "Private cloud career backup foundation; multiplayer engine and namespace retained."
   },
   "invitationRecovery20261022": {
     "status": "V10H_MULTIPLAYER_SHARE_DEPLOYED_VERIFIED",
@@ -2405,5 +2405,18 @@
     "originalBackupUnchanged": true,
     "phoneRestorePending": true,
     "onlineAccrualGuardStillPending": true
+  },
+  "cloudCareer20261023": {
+    "status": "PRIVATE_SAVE_FOUNDATION_DEPLOYED_PUBLIC_ROLLOUT_INCOMPLETE",
+    "supabaseProject": "gxojarpfaxloyzbsptqg",
+    "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
+    "handoff": "coordination/domain-20261022/CLOUD_CAREER_SETUP_HANDOFF.md",
+    "databaseIsolationAndRecoveryTestsPassed": true,
+    "realPlayerAccounts": 0,
+    "realAccountEndToEndTestPending": true,
+    "smtpPending": true,
+    "publicSignupAndPasswordResetPending": true,
+    "onlineCareerAccrualStillPending": true,
+    "wifeLevel16AdjustmentPending": true
   }
 }
