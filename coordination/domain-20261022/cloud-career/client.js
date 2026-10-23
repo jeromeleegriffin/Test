@@ -1,5 +1,5 @@
 (()=>{'use strict';
- let user=null,revision=0,busy=false,linked=false,lastHash='',linkedActor='',panel,status,actions;
+ let user=null,revision=0,busy=false,linked=false,lastHash='',linkedActor='',panel,status,actions,emailReady=false;
  const P=()=>window.HORProgression,core=()=>P()?.core;
  const hash=()=>core().digest(core().collect());
  const api=async(path,body)=>{const r=await fetch('/career-api/'+path,{method:body?'POST':'GET',headers:body?{'content-type':'application/json'}:{},body:body?JSON.stringify(body):undefined,cache:'no-store',signal:AbortSignal.timeout(30000)});const x=await r.json();if(!r.ok){if(r.status===401||r.status===409)linked=false;throw Error(x.error||'Cloud connection unavailable')}return x};
@@ -22,9 +22,30 @@
  function login(){actions.replaceChildren();tell('Sign in to save your career and achievements across devices. You can keep playing without an account.');
  const form=document.createElement('form');actions.append(form);const email=document.createElement('input'),password=document.createElement('input');email.setAttribute('aria-label','Email');password.setAttribute('aria-label','Password');email.type='email';email.placeholder='Email';email.autocomplete='username';password.type='password';password.placeholder='Password';password.autocomplete='current-password';for(const input of [email,password]){input.required=true;input.style.cssText='box-sizing:border-box;width:100%;padding:12px;margin:6px 0';form.append(input)}
  const sign=button('Sign in',async()=>{if(!form.reportValidity())return;const r=await api('login',{email:email.value.trim(),password:password.value});password.value='';user=r.user;linked=false;await signedIn()});form.onsubmit=e=>{e.preventDefault();sign.click()};
- const note=document.createElement('p');note.textContent='Player accounts are currently set up by Griffin House of Rooks. Public registration and email password recovery are not enabled yet.';actions.append(note);
+ if(emailReady){button('Create a cloud account',()=>accountForm('signup',email.value.trim()));button('Forgot password?',()=>accountForm('recover',email.value.trim()));button('I already have an email code',()=>{const address=email.value.trim();actions.replaceChildren();tell('Which code did you request?');button('Confirm my email',()=>accountForm('confirm-email',address));button('Reset my password',()=>accountForm('reset-password',address));button('Back to sign in',login)})}
+ else{const note=document.createElement('p');note.textContent='Cloud account signup and email recovery are being prepared. Your career and achievements keep saving on this device.';actions.append(note)}
  }
- async function open(){if(!core())return alert('Career is still loading. Please try again in a moment.');if(!panel){panel=document.createElement('dialog');panel.style.cssText='position:fixed;inset:0;margin:auto;box-sizing:border-box;max-width:440px;width:94vw;max-height:90vh;overflow:auto;background:#10283c;color:#fff;border:2px solid #c8ab68;border-radius:12px;padding:20px;font:16px system-ui';const title=document.createElement('h2');title.textContent='Cloud Career';panel.append(title);status=document.createElement('p');status.setAttribute('role','status');panel.append(status);actions=document.createElement('div');panel.append(actions);const close=document.createElement('button');close.textContent='Back to game';close.style.cssText='padding:12px;margin-top:10px';close.onclick=()=>panel.close();panel.append(close);document.body.append(panel)}panel.showModal();tell('Connecting…');try{user=(await api('session')).user;await signedIn()}catch(e){login();tell(e.message)}}
+ function accountForm(mode,address=''){
+  actions.replaceChildren();linked=false;
+  const verify=mode==='confirm-email'||mode==='reset-password',reset=mode==='reset-password';
+  tell(mode==='signup'?'Create an optional cloud account. Your current career stays on this device until you choose to back it up.':mode==='recover'?'Enter your account email to receive a password-reset code.':reset?'Enter the recovery code from your email and choose a new password.':'Enter the confirmation code from your email.');
+  const form=document.createElement('form');actions.append(form);
+  const field=(label,type,autocomplete)=>{const input=document.createElement('input');input.type=type;input.required=true;input.autocomplete=autocomplete;input.placeholder=label;input.setAttribute('aria-label',label);input.style.cssText='box-sizing:border-box;width:100%;padding:12px;margin:6px 0';form.append(input);return input};
+  const email=field('Email','email','username');email.value=address;email.maxLength=254;
+  let code,password,repeat;
+  if(verify){code=field('Email code','text','one-time-code');code.inputMode='numeric';code.pattern='[0-9]{6,10}';code.maxLength=10}
+  if(mode==='signup'||reset){password=field('New password (12+ characters)','password','new-password');password.minLength=12;password.maxLength=128;repeat=field('Repeat new password','password','new-password');repeat.minLength=12;repeat.maxLength=128}
+  const submit=button(mode==='signup'?'Send confirmation code':mode==='recover'?'Send recovery code':reset?'Save new password':'Confirm email',async()=>{
+   if(!form.reportValidity())return;if(password&&password.value!==repeat.value)throw Error('The passwords do not match.');
+   const result=await api(mode,{email:email.value.trim(),...(code?{code:code.value.trim()}:{}),...(password?{password:password.value}:{})});
+   if(password){password.value='';repeat.value=''}if(code)code.value='';
+   if(mode==='signup')accountForm('confirm-email',email.value.trim());else if(mode==='recover')accountForm('reset-password',email.value.trim());else{if(reset){user=null;localStorage.removeItem('horCloudLinkV1')}login()}
+   tell(result.message);
+  });form.onsubmit=e=>{e.preventDefault();submit.click()};
+  if(verify)button('Request a new code',async()=>{if(!email.reportValidity())return;const result=await api(reset?'recover':'resend-confirmation',{email:email.value.trim()});tell(result.message)});
+  button('Back to sign in',login);
+ }
+ async function open(){if(!core())return alert('Career is still loading. Please try again in a moment.');if(!panel){panel=document.createElement('dialog');panel.style.cssText='position:fixed;inset:0;margin:auto;box-sizing:border-box;max-width:440px;width:94vw;max-height:90vh;overflow:auto;background:#10283c;color:#fff;border:2px solid #c8ab68;border-radius:12px;padding:20px;font:16px system-ui';const title=document.createElement('h2');title.textContent='Cloud Career';panel.append(title);status=document.createElement('p');status.setAttribute('role','status');panel.append(status);actions=document.createElement('div');panel.append(actions);const close=document.createElement('button');close.textContent='Back to game';close.style.cssText='padding:12px;margin-top:10px';close.onclick=()=>panel.close();panel.append(close);document.body.append(panel)}panel.showModal();tell('Connecting…');emailReady=false;try{emailReady=(await api('config')).emailReady===true;user=(await api('session')).user;await signedIn()}catch(e){login();tell(e.message)}}
  window.GHRCloudCareer={open};
  function install(){for(const h of document.querySelectorAll('h1,h2,h3'))if(h.textContent.trim()==='My Career & Awards'){const parent=h.closest('#houseDetails805')?.querySelector('.house-content')||h.parentElement;if(!parent.querySelector('[data-cloud-career]')){const b=document.createElement('button');b.dataset.cloudCareer='1';b.textContent='Cloud career, saves & recovery';b.className='house-action';b.style.cssText='padding:12px;cursor:pointer;color:inherit';b.onclick=open;parent.append(b)}}}
  new MutationObserver(install).observe(document.documentElement,{childList:true,subtree:true});install();

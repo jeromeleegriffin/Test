@@ -14,7 +14,10 @@ async function careerApi(request,env){
  try{
   if(!['GET','POST'].includes(request.method))return reply({error:'Method not allowed'},405);
   if(request.method==='POST'&&(request.headers.get('origin')!==url.origin||!request.headers.get('content-type')?.startsWith('application/json')))return reply({error:'Open Cloud Career from this game to continue.'},403);
-  const bucket=route==='login'?env.ENTRY_LIMIT:env.ACTION_LIMIT;
+  const emailRoutes=['signup','recover','resend-confirmation','confirm-email','reset-password'];
+  if(route==='config'&&request.method==='GET')return reply({emailReady:env.CAREER_EMAIL_READY==='true'});
+  if(emailRoutes.includes(route)&&env.CAREER_EMAIL_READY!=='true')return reply({error:'Email signup and password recovery are still being set up. Your career stays on this device.'},503);
+  const bucket=route==='login'||emailRoutes.includes(route)?env.ENTRY_LIMIT:env.ACTION_LIMIT;
   if(!bucket||!(await bucket.limit({key:'career:'+route+':'+(request.headers.get('CF-Connecting-IP')||'unknown')})).success)return reply({error:'Please wait a minute and try again.'},429);
   let body={};if(request.method==='POST'){
    if(Number(request.headers.get('content-length')||0)>2200000)return reply({error:'Backup too large'},413);
@@ -22,6 +25,33 @@ async function careerApi(request,env){
    const bytes=new Uint8Array(size);let at=0;for(const p of parts){bytes.set(p,at);at+=p.length}try{body=JSON.parse(new TextDecoder().decode(bytes))}catch{return reply({error:'Invalid request'},400)}
   }
   const saveSession=(s)=>{set(CA,s.access_token,Math.min(s.expires_in||3600,3600));set(CR,s.refresh_token,2592000)};
+  if(emailRoutes.includes(route)&&request.method==='POST'){
+   const email=typeof body.email==='string'?body.email.trim():'';
+   if(email.length>254||!/^\S+@\S+\.\S+$/.test(email))return reply({error:'Enter a valid email address.'},400);
+   const needsPassword=route==='signup'||route==='reset-password';
+   if(needsPassword&&(typeof body.password!=='string'||body.password.length<12||body.password.length>128))return reply({error:'Use a password between 12 and 128 characters.'},400);
+   if(route==='signup'||route==='recover'||route==='resend-confirmation'){
+    const r=await upstream(route==='signup'?'/auth/v1/signup':route==='recover'?'/auth/v1/recover':'/auth/v1/resend','POST',route==='signup'?{email,password:body.password}:route==='resend-confirmation'?{email,type:'signup'}:{email});
+    // Never turn an accidentally disabled email-confirmation setting into a login.
+    if(r.ok&&r.data.access_token){await upstream('/auth/v1/logout?scope=local','POST',{},r.data.access_token).catch(()=>{});return reply({error:'Account confirmation needs attention. Please try again later.'},503)}
+    if(!r.ok&&(r.status===429||r.status>=500))return reply({error:'Email is temporarily unavailable. Please wait a few minutes and try again.'},r.status===429?429:503);
+    // Identical response for existing/unknown accounts; no account enumeration.
+    return reply({ok:true,message:route==='recover'?'If an account exists for this email, a recovery code will arrive shortly.':'If this email needs confirmation, a code will arrive shortly. Already registered? Sign in or use Forgot password.'});
+   }
+   if(typeof body.code!=='string'||!/^\d{6,10}$/.test(body.code))return reply({error:'Enter the code from your email.'},400);
+   const verified=await upstream('/auth/v1/verify','POST',{email,token:body.code,type:route==='reset-password'?'recovery':'email'});
+   if(!verified.ok||!verified.data.access_token)return reply({error:'That code is invalid or expired. Request a new code and try again.'},400);
+   const session=verified.data;
+   if(route==='reset-password'){
+    const changed=await upstream('/auth/v1/user','PUT',{password:body.password},session.access_token);
+    await upstream('/auth/v1/logout?scope=global','POST',{},session.access_token).catch(()=>{});
+    clear();
+    if(!changed.ok)return reply({error:'Password could not be changed. Request a new recovery code and try a different password.'},400);
+    return reply({ok:true,message:'Password changed. Sign in with your new password. Your saved career is unchanged.'});
+   }
+   await upstream('/auth/v1/logout?scope=local','POST',{},session.access_token).catch(()=>{});
+   return reply({ok:true,message:'Email confirmed. Sign in to choose which career to back up.'});
+  }
   if(route==='login'&&request.method==='POST'){
    if(typeof body.email!=='string'||typeof body.password!=='string'||body.email.length>254||body.password.length>1024)return reply({error:'Enter your email and password.'},400);
    const r=await upstream('/auth/v1/token?grant_type=password','POST',{email:body.email,password:body.password});
