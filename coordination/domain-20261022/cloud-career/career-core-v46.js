@@ -886,6 +886,7 @@
       const explicitCloud = cloudRecovery && cloudRecovery.expectedLocalHash === digest(before);
       if (cloudRecovery && !explicitCloud) throw Error('Local career changed; review recovery again');
       if (explicitCloud) {
+        for (const key of Object.keys(after)) if (!(key in x.data)) delete after[key];
         const safety = JSON.stringify(buildBackup());
         storage.setItem('horBeforeCloudRecoveryV1', safety);
         if (storage.getItem('horBeforeCloudRecoveryV1') !== safety) throw Error('Could not preserve current career');
@@ -1006,7 +1007,7 @@
         recoveryCode: friendlyCode(),
         lastBackupAt: storage.getItem('horLastCareerBackupV1'),
         localProgressionEnabled: mode() === 'local',
-        recovery: 'Exported backup file required; no cloud lookup exists',
+        recovery: 'Recover from your exported backup file, or sign in through Cloud Career to use an existing cloud save',
       };
     }
     function downloadBackup() {
@@ -1027,7 +1028,7 @@
       download(
         'GRIFFIN HOUSE OF ROOKS\n' +
           (s.recoveryCode || 'No local reference code assigned.') +
-          '\nAn exported Career Backup file is required. A code cannot retrieve erased browser data. No cloud lookup exists.',
+          '\nThis local reference code cannot retrieve erased browser data. Use an exported Career Backup file, or sign in through Cloud Career to recover an existing cloud save.',
         'Griffin-Rook-Recovery-Information.txt',
         'text/plain'
       );
