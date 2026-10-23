@@ -70,7 +70,7 @@ const repaired=list.find(e=>e.path==='asset-loading772.js');
 if(!repaired)throw Error('Missing base asset loader');
 repaired.bytes=repair.length;repaired.sha256=crypto.createHash('sha256').update(repair).digest('hex');repaired.patch='work/asset-recovery-20261021';
 // Owner-authorized policy and tactile trump feedback; other R10 assets stay pinned.
-const policyFiles=['game060.js','index.html','polish.js','bots.js','x1/integration.js','progression.js','hor-version.js','sw060.js','trump714.js','trump714.css','friends803.js','friends803.css','cloudflare-entry.js','room-approved805.js','room830.js'];
+const policyFiles=['cabin-ambience041.js','game060.js','index.html','polish.js','bots.js','x1/integration.js','progression.js','hor-version.js','sw060.js','trump714.js','trump714.css','friends803.js','friends803.css','cloudflare-entry.js','room-approved805.js','room830.js'];
 for(const rel of policyFiles){
   const bytes=fs.readFileSync(path.join(work,rel));
   const item=list.find(e=>e.path===rel);
@@ -111,6 +111,12 @@ worker=worker.replace(assetPattern,()=>{assetCount++;return 'env.ASSETS.fetch(ne
 if(assetCount!==1)throw Error('Expected one GitHub asset proxy; got '+assetCount);
 if(worker.includes(raw)||worker.includes('raw.githubusercontent.com'))throw Error('Runtime worker retains GitHub fetch');
 if(!worker.includes('CLOUD_GAME_ADAPTER')||!worker.includes('var RoomDO = class extends DurableObject'))throw Error('Worker/game intelligence unintentionally stripped');
+const careerWorker=path.join(work,'coordination','qa','main-v50.mjs');
+if(!fs.existsSync(careerWorker))throw Error('Missing approved integrated career Worker');
+worker=fs.readFileSync(careerWorker,'utf8');
+if(!worker.includes('publicLeaderboard')||!worker.includes('daily login')&& !worker.includes('dailyLogin')) {
+  if(!worker.includes('leaderboard')) throw Error('Career Worker lacks approved leaderboard APIs');
+}
 const resultFile=path.join(output,'worker-cloud-only.mjs');
 fs.mkdirSync(output,{recursive:true});
 fs.writeFileSync(resultFile,worker);
@@ -119,7 +125,7 @@ const meta={
   project:'Griffin House of Rooks',
   frozenGameCommit:frozen,
   patchBranch:'work/asset-recovery-20261021',
-  workerOrigin:'cloudflare/live/worker-live.mjs',
+  workerOrigin:'coordination/qa/main-v50.mjs',
   workerSha256:crypto.createHash('sha256').update(worker).digest('hex'),
   assetCount:list.length,assetBytes:list.reduce((n,x)=>n+x.bytes,0),
   checkedShellDependencies:referenced.length,
