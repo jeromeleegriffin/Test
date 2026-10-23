@@ -39,11 +39,6 @@
       }
     }
   ],
-  "secrets": {
-    "required": [
-      "TEST_GATE_KEY"
-    ]
-  },
   "exports": {
     "RoomDO": {
       "type": "durable-object",
