@@ -1,7 +1,7 @@
 {
   "brainVersion": "AH",
   "parentVersion": "AG",
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "documentationOnly": true,
   "canonicalGame": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
   "canonicalGameVersion": "3df448a2-83f0-4fd0-be97-665a067848de",
@@ -93,7 +93,10 @@
   "openIssues": [
     "Physical Android installed app relaunch and weak-cellular/cache acceptance remain to confirm",
     "Automatic cross-origin XP/settings transfer is not implemented; old local data retained via ?offline=1",
-    "Owner checks portrait waiting labels and steady trump press on physical phone; actual cloud UI verified landscape only"
+    "Owner checks portrait waiting labels and steady trump press on physical phone; actual cloud UI verified landscape only",
+    "Owner test of the staged career review ZIP and adjusted daily-login reward",
+    "Rita must register before her verified account can receive the merged recovery backup",
+    "Daily leaderboard SQL and v50 Worker remain staged pending explicit go-live authorization"
   ],
   "evidenceUrls": [
     "https://github.com/jeromeleegriffin/Test/actions/runs/39693134706",
@@ -115,5 +118,12 @@
   "shortNamedTableCodes": true,
   "houseTableConfirmation": true,
   "griffinHouseConfirmationDesign": true,
-  "approvedGoldWordmark": true
+  "approvedGoldWordmark": true,
+  "careerCheckpoint": {
+    "status": "STAGED_NOT_DEPLOYED",
+    "handoff": "files/01_MASTER_BANK/CAREER_QA_HANDOFF_20261023.md",
+    "dailyBonus": "50 + 0.5% next-level gap; streak +5% capped 1.25x; 4,815 daily-only claims from level 30 to 50",
+    "publicLeaderboards": "Daily 04:15 UTC snapshots; player rows ranked by level; bots by win percentage",
+    "ritaRecovery": "Await verified account; merged supplied backup plan, level floor 59000 XP"
+  }
 }
