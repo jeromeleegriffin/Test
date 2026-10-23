@@ -114,8 +114,8 @@
     "cloudflare": {
       "url": "https://griffin-house-of-rooks-online.jeromeleegriffin.workers.dev/",
       "worker": "griffin-house-of-rooks-online",
-      "version": "d42a6613-7b4d-4b50-a209-0d04e08b7971",
-      "deployment": "35cba8fa-7184-4d56-b3d0-75bde9459a3a",
+      "version": "085f65d1-adb8-4119-b62f-e83de4a9790b",
+      "deployment": "1a604d7a-36c4-498e-8555-e0efcd198780",
       "assetCommit": "90078a710948c7643caafb18986e34dc71ce7cee",
       "namespace": "bb1bf1c32b68451cbe5db6fee3066fa0",
       "rollbackVersion": "fe21328c-6121-46d8-abf5-e6f2be0ef57e",
@@ -170,7 +170,9 @@
       "currentWrapperRelease": "v62",
       "spaceNameMigration": "20261023090736",
       "signupNamesAllowInternalSpaces": true,
-      "ritaRecoveryVerified": true
+      "ritaRecoveryVerified": true,
+      "isaPartnerFirstBot": true,
+      "isaSourceAddendum": "versions/AH/files/01_MASTER_BANK/ISA_PARTNER_FIRST_BOT_LIVE_20261023.md"
     },
     "rollbackBranchBothRepos": "rollback/pre-r10-ambience-20261021",
     "repair": {
@@ -2333,11 +2335,10 @@
   "cloudflareCurrentObserved": {
     "date": "2026-10-23",
     "worker": "griffin-house-of-rooks-online",
-    "version": "4ab1211d-9bc7-4d9e-a5df-f4c81fa5bf06",
-    "deployment": "94c18a13-9f17-466f-808b-c4174f0efe2c",
+    "version": "085f65d1-adb8-4119-b62f-e83de4a9790b",
+    "deployment": "1a604d7a-36c4-498e-8555-e0efcd198780",
     "percentage": 100,
-    "authoritative": "Cloudflare deployments API",
-    "note": "v61 live; preserves R12 game/static assets and production bindings"
+    "note": "ISA partner-first addition on preserved v62; private backup contains exact tested source; preserve in concurrent releases"
   },
   "invitationRecovery20261022": {
     "status": "V10H_MULTIPLAYER_SHARE_DEPLOYED_VERIFIED",
@@ -2493,6 +2494,21 @@
     "status": "MANUAL_OWNER_WORKFLOW_PROMPT_SAVED",
     "automaticPaidGeneration": "SHELVED_BY_OWNER",
     "originalIdentityReferenceRequiredForEveryPose": true,
-    "actualTableFitReviewRequired": true
+    "actualTableFitReviewRequired": true,
+    "friendlyExpressionsAllowed": true,
+    "naturalUnretouchedFaceRequired": true
+  },
+  "isaPartnerFirstBot": {
+    "date": "2026-10-23",
+    "status": "LIVE_VERIFIED",
+    "displayName": "ISA",
+    "avatar": "isa",
+    "style": "partnerFirst",
+    "document": "versions/AH/files/01_MASTER_BANK/ISA_PARTNER_FIRST_BOT_LIVE_20261023.md",
+    "workerVersion": "085f65d1-adb8-4119-b62f-e83de4a9790b",
+    "deployment": "1a604d7a-36c4-498e-8555-e0efcd198780",
+    "privateSourceBackup": "ISA_Partner_First_Bot_Release_Source_20261023.zip",
+    "publicSourceBackup": "NOT_PUSHED_AUTOMATIC_APPROVAL_REVIEW_BLOCKED",
+    "physicalAndroidVerified": false
   }
 }

@@ -70,6 +70,10 @@
     {
       "path": "files/01_MASTER_BANK/CUSTOM_AVATAR_LIKENESS_AND_TABLE_PROMPT_20261023.md",
       "purpose": "Owner-managed photo avatar creation prompt, likeness and actual table-fit procedure"
+    },
+    {
+      "path": "files/01_MASTER_BANK/ISA_PARTNER_FIRST_BOT_LIVE_20261023.md",
+      "purpose": "ISA live release, validation and private source recovery"
     }
   ],
   "inheritedBrain": "../AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",

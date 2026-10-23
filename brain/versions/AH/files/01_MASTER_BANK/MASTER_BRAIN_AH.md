@@ -1,5 +1,10 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## ISA PARTNER-FIRST BOT — LIVE October 23, 2026
+
+Read [ISA live release and source recovery](ISA_PARTNER_FIRST_BOT_LIVE_20261023.md) before any next Worker release. Owner-approved ISA is selectable with partnerFirst behavior; version 085f65d1-adb8-4119-b62f-e83de4a9790b is live at 100%. Three poses were inspected in actual portrait/landscape renders; original geometry, room namespace, asset package and all six bindings were preserved. Do not replace this module with the older v62 during concurrent layout work. Private source/art backup is ISA_Partner_First_Bot_Release_Source_20261023.zip; public GitHub source upload was blocked by automatic approval review and was not retried. Current source recovery, verification limits and prompt corrections are in the addendum. All prior permanent rules and unrelated releases below remain preserved.
+
+
 ## CUSTOM AVATAR CREATION PROMPT — October 23, 2026
 
 Owner requested a durable, extensive reusable prompt preserving the original person's appearance and producing correctly framed left/top/right seated assets. Read [Custom avatar likeness and table master prompt](CUSTOM_AVATAR_LIKENESS_AND_TABLE_PROMPT_20261023.md) before any future photo-based character work. It consolidates the approved H seating/occlusion authority, 774/775/779 production lessons and existing Z shirt-repair prompts. Preserve the original appearance, age, hairline, facial hair, expression, body proportions and clothing colors; use the original photo for every pose; default hands in lap; validate real alpha and actual table masks at unchanged approved avatar size. A prompt does not guarantee identity or table fit; inspect likeness and real portrait/landscape rail intersections before acceptance. Repair only the demonstrated defect in an accepted set.
