@@ -504,8 +504,7 @@
       return s;
     }
     function applyDailyLoginBonus(date) {
-      if (!validDayKey(date))
-        throw Error('Invalid daily bonus date');
+      if (!validDayKey(date)) throw Error('Invalid daily bonus date');
       const s = migrate();
       if (s.dailyLoginBonus?.date >= date)
         return { awarded: false, alreadyAwarded: true, amount: s.dailyLoginBonus.amount, date };
@@ -902,7 +901,12 @@
         !!s &&
         !Object.keys(s.receipts).length &&
         !Object.keys(s.matches).length &&
-        !Object.keys(s.sources).length &&
+        Object.entries(s.sources).every(([key, row]) =>
+          key.startsWith("legacy:") && plain(row) &&
+          Object.entries(row).every(([k, v]) =>
+            typeof v === "number" ? v === 0 : ["isBot", "avatar", "botStyle"].includes(k)
+          )
+        ) &&
         !s.conflicts.length &&
         Object.values(s.records).every(
           (r) =>
@@ -915,12 +919,20 @@
         )
       );
     }
-    function restoreBackupObject(input) {
+    function restoreBackupObject(input, cloudRecovery = null) {
       recover();
       const x = validateBackup(copy(input)),
         before = collect(),
         after = { ...before, ...x.data };
-      let current = read();
+      const explicitCloud = cloudRecovery && cloudRecovery.expectedLocalHash === digest(before);
+      if (cloudRecovery && !explicitCloud) throw Error('Local career changed; review recovery again');
+      if (explicitCloud) {
+        for (const key of Object.keys(after)) if (!(key in x.data)) delete after[key];
+        const safety = JSON.stringify(buildBackup());
+        storage.setItem('horBeforeCloudRecoveryV1', safety);
+        if (storage.getItem('horBeforeCloudRecoveryV1') !== safety) throw Error('Could not preserve current career');
+      }
+      let current = explicitCloud ? null : read();
       const incoming = x.data[KEY] ? parse(x.data[KEY]) : null,
         starter = emptyStarter(current);
       if (starter) current = null;
@@ -930,7 +942,7 @@
       }
       const ownId = current?.identity.id || storage.getItem(ACTOR),
         newId = incoming?.identity.id || x.data[ACTOR];
-      if (!starter && ownId && newId && ownId !== newId)
+      if (!explicitCloud && !starter && ownId && newId && ownId !== newId)
         throw Error('Identity conflict: this backup belongs to a different local career');
       if (current) {
         if (!incoming)
@@ -964,12 +976,24 @@
           )
             throw Error('Backup would roll back career history');
         }
-      } else if (!starter && before.rookLifetimeStats) {
+      } else if (!explicitCloud && !starter && before.rookLifetimeStats) {
         const a = parse(before.rookLifetimeStats),
           b = parse(x.data.rookLifetimeStats || '{}');
         for (const [name, r] of Object.entries(a))
           if (!b[name] || !dominates(numeric(b[name]), numeric(r)))
             throw Error('Older legacy backup: current progress preserved');
+      }
+      // Old exports omit the selected name. Do not bind Rita's history to a new
+      // destination's default You identity when exactly one named human exists.
+      if (!incoming && !x.data.horLandingIdentityV1 && !x.data.griffinHousePlayerName) {
+        const humans = Object.entries(parse(x.data.rookLifetimeStats || '{}'))
+          .filter(([name, row]) => !row.isBot && !['you','host','player'].includes(name.trim().toLowerCase()));
+        if (humans.length === 1) {
+          const [name, row] = humans[0];
+          after.griffinHousePlayerName = name;
+          after.horLandingIdentityV1 = JSON.stringify({ ...parse(after.horLandingIdentityV1 || '{}'), name });
+          if (typeof row.avatar === 'string') after.griffinHousePlayerAvatar = row.avatar;
+        }
       }
       validateBackup({ ...x, data: after, version: 1 });
       const j = {
@@ -1024,7 +1048,7 @@
         recoveryCode: friendlyCode(),
         lastBackupAt: storage.getItem('horLastCareerBackupV1'),
         localProgressionEnabled: mode() === 'local',
-        recovery: 'Exported backup file required; no cloud lookup exists',
+        recovery: 'Recover from your exported backup file, or sign in through Cloud Career to use an existing cloud save',
       };
     }
     function downloadBackup() {
@@ -1045,7 +1069,7 @@
       download(
         'GRIFFIN HOUSE OF ROOKS\n' +
           (s.recoveryCode || 'No local reference code assigned.') +
-          '\nAn exported Career Backup file is required. A code cannot retrieve erased browser data. No cloud lookup exists.',
+          '\nThis local reference code cannot retrieve erased browser data. Use an exported Career Backup file, or sign in through Cloud Career to recover an existing cloud save.',
         'Griffin-Rook-Recovery-Information.txt',
         'text/plain'
       );
