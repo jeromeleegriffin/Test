@@ -2334,13 +2334,13 @@
     "note": "Version42 guest seat switching; same existing DO namespace, assets and bindings. Explicit exports.RoomDO sqlite declaration required."
   },
   "invitationRecovery20261022": {
-    "status": "V10E_INVITATION_FOCUS_DEPLOYED_BROWSER_VERIFIED",
+    "status": "V10F_BOT_OCCUPANCY_DEPLOYED_BROWSER_VERIFIED",
     "cloudflareConnection": "Workers reads and targeted deployment successful after authorization retry",
-    "marker": "20261022-v10e-invitation-focus",
-    "brandedVersion": "78186dd8-d108-41db-97dd-2247d2d3e3ad",
-    "brandedDeployment": "29ab83a0-5d44-4577-bb3c-a73fabd354d7",
+    "marker": "20261022-v10f-bot-occupancy",
+    "brandedVersion": "b2b586fc-86b1-4a08-b67b-ce04a8c7bb66",
+    "brandedDeployment": "333f9df0-7453-4391-8065-486ea951b142",
     "sourceBranch": "work/jeromegriffin-domain-setup-20261022",
-    "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/INVITATION_FOCUS_V10E_HANDOFF.md",
+    "handoff": "https://github.com/JeromeLeeGriffin/Test/blob/work/jeromegriffin-domain-setup-20261022/coordination/domain-20261022/BOT_OCCUPANCY_V10F_HANDOFF.md",
     "independentGuestJoinVerified": true,
     "reservedSeatReturnVerified": true,
     "physicalFacebookAndroidVerified": false,
@@ -2359,6 +2359,8 @@
       "Host a Table",
       "Join a Table"
     ],
-    "invitationFocus": "Explicit Return to table / Go to main menu exit; persistent Host’s partner and Host labels"
+    "invitationFocus": "Explicit Return to table / Go to main menu exit; persistent Host’s partner and Host labels",
+    "botInvitationFix": "Occupied bots visible and unavailable to new invite seat selection; both bots retained with guest in empty seat; existing avatar href preserved across joining",
+    "twoBotGuestJoinVerified": true
   }
 }
