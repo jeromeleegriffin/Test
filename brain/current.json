@@ -2510,5 +2510,37 @@
     "privateSourceBackup": "ISA_Partner_First_Bot_Release_Source_20261023.zip",
     "publicSourceBackup": "NOT_PUSHED_AUTOMATIC_APPROVAL_REVIEW_BLOCKED",
     "physicalAndroidVerified": false
+  },
+  "spadesProject": {
+    "asOf": "2026-10-25",
+    "status": "BUILD_AUTHORIZED_FROZEN_X1_V02",
+    "document": "versions/AH/files/01_MASTER_BANK/SPADES_BUILD_AUTHORIZED_20261025.md",
+    "separateFromRook": true,
+    "workingTitle": "Griffin House of Spades",
+    "rulesId": "CLASSIC_PARTNERS_V1",
+    "schemaVersion": "1.0.0",
+    "agent": "X1-Spades-PF-20261024-v0.2",
+    "agentSha256": "be8f79e32dafaa8279a3d6d470e580a8acfe3313d395be66ccb9e88576a44f36",
+    "development": {
+      "x1Wins": 24,
+      "grokWins": 8,
+      "matches": 32,
+      "independentBlocks": 4
+    },
+    "freshValidation": {
+      "x1Wins": 24,
+      "grokWins": 8,
+      "matches": 32,
+      "independentBlocks": 4,
+      "seedsRetired": true
+    },
+    "comparisonPackageLibraryId": "libfile_970b274e4a248191aac964db7bb68580",
+    "handoffFilename": "Griffin_Spades_Complete_Build_Handoff_20261025.zip",
+    "next": "Build isolated offline human-plus-three-X1 review game; browser/device/human-partnership QA; multiplayer later.",
+    "moreGrokWorkRequired": false,
+    "assistedSolo": "DEFERRED",
+    "playableUiImplemented": false,
+    "publicDeploymentAuthorized": false,
+    "rookRuntimeModified": false
   }
 }
