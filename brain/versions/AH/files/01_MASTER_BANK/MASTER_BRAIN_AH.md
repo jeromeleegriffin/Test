@@ -1,5 +1,10 @@
 # Griffin House of Rooks — MASTER BRAIN AH
 
+## SPADES PROJECT — BUILD HANDOFF October 25, 2026
+
+Read [Spades build authorization, frozen X1 results and recovery](SPADES_BUILD_AUTHORIZED_20261025.md). Jerome approved a separate classic partnership Spades game using frozen X1 v0.2 and suitable existing assets. X1 won 24–8 in development and 24–8 on fresh validation against Grok v0.5. The complete build handoff includes source, rules, research, evidence and assets. This authorizes the isolated game build, not replacement or deployment of Rook. No further Grok cycle is required. Physical-device/browser integration and human partner acceptance remain ahead. All Rook authorities and permanent instructions below remain unchanged.
+
+
 ## ISA PARTNER-FIRST BOT — LIVE October 23, 2026
 
 Read [ISA live release and source recovery](ISA_PARTNER_FIRST_BOT_LIVE_20261023.md) before any next Worker release. Owner-approved ISA is selectable with partnerFirst behavior; version 085f65d1-adb8-4119-b62f-e83de4a9790b is live at 100%. Three poses were inspected in actual portrait/landscape renders; original geometry, room namespace, asset package and all six bindings were preserved. Do not replace this module with the older v62 during concurrent layout work. Private source/art backup is ISA_Partner_First_Bot_Release_Source_20261023.zip; public GitHub source upload was blocked by automatic approval review and was not retried. Current source recovery, verification limits and prompt corrections are in the addendum. All prior permanent rules and unrelated releases below remain preserved.
