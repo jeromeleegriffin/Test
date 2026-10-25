@@ -74,6 +74,10 @@
     {
       "path": "files/01_MASTER_BANK/ISA_PARTNER_FIRST_BOT_LIVE_20261023.md",
       "purpose": "ISA live release, validation and private source recovery"
+    },
+    {
+      "path": "files/01_MASTER_BANK/SPADES_BUILD_AUTHORIZED_20261025.md",
+      "sha256": "cebc0020e78690cec0f635ebc2b1a281287b03d21d3cbd75213dd6b82635f7a8"
     }
   ],
   "inheritedBrain": "../AG/files/01_MASTER_BANK/MASTER_BRAIN_AG.md",
@@ -116,7 +120,7 @@
   "nativePolicyOverlayCommit": "5be106ed22c2fde73670a01c720124dd4257737c",
   "humanOnlyMoon": true,
   "failedMoonLosesMatch": true,
-  "documentSha256": "8bdb6b6f8efa331fc79ca4900fc9631ddc6b80b6aa318ec08f65a79cd909f827",
+  "documentSha256": "8f134cd6b5f06f265f091253cc4844397c80b0a6581d34aca8f8851571ebb73a",
   "moonDefaultEnabled": false,
   "tactileTrumpFeedback": true,
   "randomBotFill": true,
@@ -133,5 +137,11 @@
     "dailyBonus": "50 + 0.5% next-level gap; streak +5% capped 1.25x; 4,815 daily-only claims from level 30 to 50",
     "publicLeaderboards": "Daily 04:15 UTC snapshots; player rows ranked by level; bots by win percentage",
     "ritaRecovery": "Await verified account; merged supplied backup plan, level floor 59000 XP"
+  },
+  "spadesBuildCheckpoint": {
+    "asOf": "2026-10-25",
+    "document": "files/01_MASTER_BANK/SPADES_BUILD_AUTHORIZED_20261025.md",
+    "status": "BUILD_AUTHORIZED_FROZEN_X1_V02",
+    "scope": "Separate Spades project, documentation only; Rook release fields preserved."
   }
 }
