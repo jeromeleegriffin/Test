@@ -2541,6 +2541,8 @@
     "assistedSolo": "DEFERRED",
     "playableUiImplemented": false,
     "publicDeploymentAuthorized": false,
-    "rookRuntimeModified": false
+    "rookRuntimeModified": false,
+    "handoffLibraryId": "libfile_8a41ae035ebc8191b66f32e29c1a90b5",
+    "handoffBytes": 15687487
   }
 }
