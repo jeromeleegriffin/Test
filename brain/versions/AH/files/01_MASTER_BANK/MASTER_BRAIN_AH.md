@@ -1,3 +1,7 @@
+## Unity poker video and approved library room — October 28, 2026
+
+Read [the owner-approved poker video study and room direction](POKER_GAMEPLAY_VIDEO_REFERENCE_20261028.md) for the Griffin House Hold'em Unity project. It records the intentional video reference, timestamped hand/action/effect observations, original Griffin adaptations, approved native library concept, banked menus, preservation requirements and verification limits. Video/screenshots/account values remain local. This is poker documentation, not authorization to replace browser Rook or deploy Cloudflare changes. All prior Master Brain history and permanent reading, continuity, actual-pixels and successor obligations below remain intact.
+
 # Griffin House of Rooks — MASTER BRAIN AH
 
 ## SPADES PROJECT — BUILD HANDOFF October 25, 2026
