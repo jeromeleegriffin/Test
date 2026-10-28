@@ -1,3 +1,17 @@
+## Latest owner correction and native room checkpoint — October 28, 2026
+
+Owner now says REMOVE THE RUG and use beautiful hardwood floors. This supersedes all earlier rug approvals and rug-fit work below. Both poker/lounge rug instances are hidden; original artwork/files retained. Current scene uses existing photographic hardwood grain/normal maps with a scene-specific satin finish and native foot-contact shading on the wood floor. Continue the approved library-room concept; the owner explicitly said the current background is not yet like the photo and expects further realism, not a completion claim. Owner also authorizes routine reversible work/checks autonomously without repeated questions; no unrelated deletion, paid purchase or publication is implied.
+
+Native additive joinery now has a solid milled arch, softened pilasters, stepped bookcase crowns, raised lounge wall panels, coffers, turned plant pedestals, existing plants/lanterns and native glazed pottery. Original lodge FBX and artwork preserved. Source/rollback: Backups/2026-10-28-LodgeGrounding-16; Tools/CharacterStudio/Scripts/build_library_joinery.py and ApprovedLibraryJoinery.blend. This is native geometry, not a generated room backdrop.
+
+Independent room camera stays level in both orientations. Portrait camera was outside the floor and showed roof/floor voids; moved inside the existing room, retained room-layer ceilings and adjusted portrait lens shift. Six actual native camera-stack views now have no prior voids; checks at1600x1000,1920x1080,2400x1080,900x1600,1080x1920,1080x2400 verify all16foot-pad corners project onto the hardwood floor. GroundingViewVerification.txt16:48:35Z:0failures, C#failureFalse, contactShaderErrorFalse. Captures are room/asset renders, not complete live phone HUD acceptance. Earlier rug-fit failures remain archived; do not report them as latest failures.
+
+Latest live Unity run16:43Z completed3practice showdowns, cash showdown, bet/raise/fold/all-in, Menu/Return, repeated NewHand, one rebuy, cash seating/reentry and repeated leave/accounting. All58raw current-account preferences restored exactly; independent Unity-child account check16:48:37Z true. Hardwood-only visual changes followed that live run and passed compilation/render checks. Current APK rebuild is in progress: consult latest AndroidBuild.txt and artifact hash before claiming a new phone deliverable. No physical Android touch/performance/notch/rotation acceptance.
+
+GitHub memory upload/link is now owner-authorized and completed: notes creation57ac9905f33e5092e68ab7e443ffc5b9b3d6e41c; MasterBrain link0f6ec1565be644624359e8fb2f912b4054b9e83e. Earlier blocking notes are historical. Video/screenshots/private account values remain local. Preserve full prior content and permanent reading, continuity, actual-pixels and successor obligations below and pass them forward again.
+
+---
+
 # Griffin House Hold'em — owner video and approved room, 2026-10-28
 
 This is the Unity POKER project at C:/Users/jerom/Griffin Poker, Unity6000.6.1f1. It does not authorize changes to browser Rook, obsolete Unity Rook or live Cloudflare deployment. Continue newer local work; never restore old numbered packages over repairs.
