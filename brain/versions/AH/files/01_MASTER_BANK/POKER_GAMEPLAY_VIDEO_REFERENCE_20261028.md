@@ -1,3 +1,16 @@
+## October28 — Correction26/27: original Rook shuffle and natural early bot actions
+This supersedes pass25's mandatory20sec bot wait and eight-packet shuffle approximation.
+Owner explicitly rejected that shuffle and requested the original Rook shuffle.
+Source inspected: current known browser staging game.js/style.css in Rook712-Test, original unchanged.
+Native Unity Canvas/RawImage uses existing Griffin card-back texture: five cards, original staggered .45/.45/.50/.42/.48sec cycles and .00/.05/.10/.08/.12sec delays, reverse cards2/4, original +/-18px /12degree ease-in-out movement and1.6sec presentation. One original1.53sec Rook audio phrase, no doubled sound or additional native packet animation. No browser/CSS runtime or new artwork. Duplicate underlying shuffle label hidden.
+KEEP bot countdown displays:20sec human-compatible deadline, with varied earlier actions, mostly .65–3.1sec and occasional3.15–5sec plus modest public wager pressure. Independent presentation RNG, no hidden cards or decision/transaction changes.
+Verified Unity6000.6.1f1:3practice hands (2showdowns/1rebuy),1complete cash showdown, bet/raise/fold/all-in, repeatNewHand, ReturnToHand, portrait sizing/cancel, landscape/portrait public cards and chip/card/pot clearance.35distinct planned early pauses;12314countdown and1883actual rendered arc changes;3034river-only public showdown privacy samples.40deal/15board/10public-flip cues, actualUnityaudiooutput nonzero. All58exactpre-test preferences restored and independently verified. C1main408lines/12companions preserved. Initial duration-test failure preserved in backup and corrected; finalrun passed.
+Backups:2026-10-28-HumanPacing-26 and2026-10-28-RookShuffle-27. Proof:StabilityReports/VideoReference-20261028/NativePlayProof27. Exact changed files:ChangedFiles-27.json. Room not final/reference-exact, physicalphone and memory/performance acceptance remain unverified.
+
+APK27 verified: October28 9:18PMEastern,0build errors;175418523bytes,SHA25656ADF4B52D0DB16AFEA1602BB15F04D1E4377238F53E5767CF9AAB4A96B10636. Same package/certificate;810archiveentries CRCpassed, new shuffle/pacing methods verified in APK. Update existing app without clearing storage. No physicalphone test. Editor returned to native scene/PCquality/PlayOFF/one coordinator/listener; external postbuild check all58original account preferences match exactly. No private account values, media or APK uploaded.
+
+---
+
 ## October28 — Pass25: human-speed opponents, Rook sounds and original Griffin hand effects
 Owner requested slower opponent timers matching the human, chip/card clipping repairs, another study of the supplied recording, Rook card/shuffle sounds, and Griffin versions of the hand-play effects.
 
